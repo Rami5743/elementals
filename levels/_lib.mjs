@@ -1,6 +1,6 @@
 // Shared helpers for the solution scripts in this folder.
 // They are ordinary generators: every yield is one tick of input bits.
-import { IN_DOWN, IN_INTERACT, IN_JUMP, IN_LEFT, IN_RIGHT, TILE } from '../kit.mjs';
+import { IN_DOWN, IN_INTERACT, IN_JUMP, IN_LEFT, IN_RIGHT, PHYSIQUE, TILE } from '../kit.mjs';
 import { go, jump, until, wait } from '../kit.mjs';
 
 /** Jump straight up, e.g. for a gem two tiles overhead. */
@@ -35,7 +35,7 @@ export function* waitStill(c, id, still = 10, max = 3000) {
 export function* climbAboard(c, partner) {
   for (let t = 0; t < 4 || !c.me.grounded; t++) {
     const p = c.player(partner);
-    const d = p.x + p.w / 2 - c.cx;
+    const d = p.x + PHYSIQUE[partner].w / 2 - c.cx;
     yield (t < 16 ? IN_JUMP : 0) | (Math.abs(d) < 2 ? 0 : d > 0 ? IN_RIGHT : IN_LEFT);
     if (t > 240) throw new Error(`${c.me.element} never came down onto ${partner}`);
   }
@@ -89,4 +89,4 @@ export function* glideTo(c, x, max = 600) {
   throw new Error(`${c.me.element} never landed gliding to ${x}`);
 }
 
-export { go, jump, until, wait, IN_DOWN, IN_INTERACT, IN_JUMP, IN_LEFT, IN_RIGHT, TILE };
+export { go, jump, until, wait, PHYSIQUE, IN_DOWN, IN_INTERACT, IN_JUMP, IN_LEFT, IN_RIGHT, TILE };
