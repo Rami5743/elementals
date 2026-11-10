@@ -49,7 +49,7 @@ function card(l) {
         </header>
         <p class="blurb">${esc(l.description ?? '')}</p>
         <p class="tags"><span class="tag ${l.meta.challenge === 'motor' ? 'motor' : 'mind'}" title="${esc(ch.note)}">${ch.label}</span><span class="tag par">par ${seconds(l.parTicks)}</span></p>
-        <p class="links"><a class="play" href="${esc(l.link)}">Play</a><a class="file" href="packed/${esc(l.id)}.elementals.json" download>level file</a></p>
+        <p class="links"><a class="play" href="${esc(l.link)}" target="_blank" rel="noopener">Play</a><a class="file" href="packed/${esc(l.id)}.elementals.json" download>level file</a></p>
       </article>`;
 }
 
