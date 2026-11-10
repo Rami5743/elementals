@@ -104,3 +104,14 @@ export function* climbOnto(c, partner) {
     throw new Error(`${c.me.element} is not on ${partner} (bottom=${c.bottom}, ${partner} top=${p.y})`);
   }
 }
+
+/** Hop toward tile `x`: a hop beats a belt that a walk cannot, even under a one-tile roof. */
+export function* hopAlong(c, x, max = 2400) {
+  const goal = x * TILE + TILE / 2;
+  for (let t = 0; t < max; t++) {
+    const d = goal - c.cx;
+    if (Math.abs(d) < 10) return;
+    yield (d > 0 ? IN_RIGHT : IN_LEFT) | (c.me.grounded ? IN_JUMP : 0);
+  }
+  throw new Error(`${c.me.element} could not hop to ${x} (at ${c.tx.toFixed(1)})`);
+}
