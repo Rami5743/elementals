@@ -1,8 +1,8 @@
 {
- "id": "lantern_hall",
- "name": "Lantern Hall",
+ "id": "shoulders",
+ "name": "Shoulders",
  "order": 1000,
- "description": "A dark hall and a river of lava. Only Fire wades it, and it can take a passenger.",
+ "description": "The turbine is five tiles up. Air jumps 3.75 of them.",
  "supports": [
   [
    "fire",
@@ -11,12 +11,11 @@
    "air"
   ]
  ],
- "parTicks": 4200,
- "dark": true,
+ "parTicks": 3600,
  "hints": [
-  "Water puts out the flames at the near end.",
-  "Fire wades the lava, and whoever stands on its head rides over the surface.",
-  "Air can jump the lava. Only Air can reach the turbine on the far side."
+  "Water puts out the flames; Fire melts the ice.",
+  "Only Air spins a turbine \u2014 but this one is out of even its reach.",
+  "Stand on somebody first."
  ],
  "tiles": [
   "########################################",
@@ -29,25 +28,25 @@
   "########################################",
   "########################################",
   "########################################",
-  "#.....#...................#............#",
-  "#.....#...................#............#",
-  "#.....#...................#............#",
-  "#.....#...................#............#",
+  "#.....#...................#.#..........#",
+  "#.....#...................#.#..........#",
+  "#.....#...................#.#..........#",
+  "#.....#...................#.#..........#",
   "#......................................#",
   "#......................................#",
   "#......................................#",
-  "################LLLL#############...####",
-  "################################.......#",
-  "################################.......#",
+  "##############################...#######",
+  "#############################..........#",
+  "#############################..........#",
   "########################################",
   "########################################"
  ],
  "spawns": {
-  "water": [
+  "fire": [
    1,
    16
   ],
-  "fire": [
+  "air": [
    2,
    16
   ],
@@ -55,7 +54,7 @@
    3,
    16
   ],
-  "air": [
+  "water": [
    4,
    16
   ]
@@ -65,36 +64,36 @@
    "type": "sign",
    "x": 8,
    "y": 12,
-   "text": "Fire wades. Others ride."
+   "text": "Higher than Air jumps."
   },
   {
    "type": "gem",
    "element": "water",
-   "x": 2,
+   "x": 5,
    "y": 15
   },
   {
    "type": "gem",
    "element": "neutral",
-   "x": 12,
-   "y": 16
-  },
-  {
-   "type": "gem",
-   "element": "fire",
-   "x": 18,
+   "x": 10,
    "y": 16
   },
   {
    "type": "gem",
    "element": "air",
-   "x": 20,
-   "y": 12
+   "x": 12,
+   "y": 13
   },
   {
    "type": "gem",
    "element": "earth",
-   "x": 30,
+   "x": 18,
+   "y": 16
+  },
+  {
+   "type": "gem",
+   "element": "fire",
+   "x": 24,
    "y": 16
   },
   {
@@ -107,8 +106,8 @@
   {
    "id": "spinner",
    "type": "turbine",
-   "x": 21,
-   "y": 12,
+   "x": 12,
+   "y": 11,
    "targets": [
     "gate"
    ]
@@ -122,11 +121,24 @@
    "latch": true
   },
   {
+   "id": "ice",
+   "type": "ice",
+   "x": 28,
+   "y": 14,
+   "h": 3
+  },
+  {
    "id": "boards",
    "type": "cracked",
-   "x": 33,
+   "x": 30,
    "y": 17,
    "w": 3
+  },
+  {
+   "type": "exit",
+   "element": "fire",
+   "x": 30,
+   "y": 18
   },
   {
    "type": "exit",
@@ -142,14 +154,8 @@
   },
   {
    "type": "exit",
-   "element": "fire",
-   "x": 36,
-   "y": 18
-  },
-  {
-   "type": "exit",
    "element": "earth",
-   "x": 38,
+   "x": 36,
    "y": 18
   }
  ]
