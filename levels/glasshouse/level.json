@@ -1,0 +1,186 @@
+{
+ "id": "glasshouse",
+ "name": "Glasshouse",
+ "order": 1000,
+ "description": "The shuttle runs on a plate at the dead end, and the crate behind the flames is the only thing that will hold it.",
+ "supports": [
+  [
+   "fire",
+   "water",
+   "earth"
+  ]
+ ],
+ "parTicks": 3600,
+ "hints": [
+  "Water puts out the flames; the crate behind them belongs on the plate at the dead end.",
+  "Only Fire melts the ice in front of the shuttle.",
+  "The plate up in the loft is heavy: that is the boulder's job."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "###################===##################",
+  "###################...##################",
+  "###################...##################",
+  "###################...##################",
+  "###################...##################",
+  "#.......#........#.....................#",
+  "#.......#........#.....................#",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "###################...##################",
+  "########################################"
+ ],
+ "spawns": {
+  "fire": [
+   11,
+   19
+  ],
+  "water": [
+   12,
+   19
+  ],
+  "earth": [
+   13,
+   19
+  ]
+ },
+ "entities": [
+  {
+   "type": "sign",
+   "x": 9,
+   "y": 15,
+   "text": "The shuttle runs on that plate."
+  },
+  {
+   "type": "sign",
+   "x": 22,
+   "y": 7,
+   "text": "This plate is heavy."
+  },
+  {
+   "type": "gem",
+   "element": "water",
+   "x": 6,
+   "y": 19
+  },
+  {
+   "type": "gem",
+   "element": "fire",
+   "x": 11,
+   "y": 18
+  },
+  {
+   "type": "gem",
+   "element": "neutral",
+   "x": 20,
+   "y": 14
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 24,
+   "y": 9
+  },
+  {
+   "id": "hold",
+   "type": "plate",
+   "x": 2,
+   "y": 19,
+   "w": 2,
+   "targets": [
+    "lift"
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "box",
+   "x": 5,
+   "y": 19
+  },
+  {
+   "id": "flames",
+   "type": "firewall",
+   "x": 8,
+   "y": 17,
+   "h": 3
+  },
+  {
+   "id": "ice",
+   "type": "ice",
+   "x": 17,
+   "y": 17,
+   "h": 3
+  },
+  {
+   "id": "lift",
+   "type": "elevator",
+   "x": 19,
+   "y": 20,
+   "w": 3,
+   "path": [
+    [
+     19,
+     20
+    ],
+    [
+     19,
+     10
+    ]
+   ],
+   "mode": "loop",
+   "pause": 180
+  },
+  {
+   "id": "weigh",
+   "type": "plate",
+   "x": 26,
+   "y": 9,
+   "w": 2,
+   "weight": "heavy",
+   "targets": [
+    "gate"
+   ]
+  },
+  {
+   "id": "bould",
+   "type": "boulder",
+   "x": 30,
+   "y": 9
+  },
+  {
+   "id": "gate",
+   "type": "door",
+   "x": 32,
+   "y": 6,
+   "h": 4
+  },
+  {
+   "type": "exit",
+   "element": "fire",
+   "x": 34,
+   "y": 8
+  },
+  {
+   "type": "exit",
+   "element": "water",
+   "x": 36,
+   "y": 8
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 38,
+   "y": 8
+  }
+ ]
+}
