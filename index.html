@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elementals Levels</title>
+<meta name="description" content="Fan-made co-op levels for Elementals: open a link and the level is in your My Levels.">
+<style>
+:root {
+  --bg: #f6f4ef; --card: #fffdf8; --ink: #22201c; --muted: #6d675d;
+  --line: #e2ddd2; --accent: #c2410c; --accent-ink: #fff;
+  --mind: #1d5c54; --mind-bg: #d8ece8; --motor: #8a3d12; --motor-bg: #fbe3d2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15140f; --card: #1f1d18; --ink: #ece7dc; --muted: #9c948a;
+    --line: #322e27; --accent: #f97316; --accent-ink: #1a1008;
+    --mind: #8fd6ca; --mind-bg: #16302c; --motor: #f0ab7a; --motor-bg: #35211400;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15140f; --card: #1f1d18; --ink: #ece7dc; --muted: #9c948a;
+  --line: #322e27; --accent: #f97316; --accent-ink: #1a1008;
+  --mind: #8fd6ca; --mind-bg: #16302c; --motor: #f0ab7a; --motor-bg: #352114;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.wrap { max-width: 1040px; margin: 0 auto; padding: 48px 16px 80px; }
+header.top { border-bottom: 1px solid var(--line); padding-bottom: 28px; margin-bottom: 36px; }
+h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 10px; letter-spacing: -0.02em; }
+.lede { color: var(--muted); max-width: 62ch; margin: 0 0 18px; }
+.how { max-width: 62ch; margin: 0; padding-left: 20px; color: var(--muted); font-size: 15px; }
+.how li { margin: 4px 0; }
+h2 { font-size: 20px; margin: 44px 0 16px; display: flex; align-items: baseline; gap: 10px; }
+.count { font-size: 13px; font-weight: 500; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.level { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.level header { display: flex; justify-content: space-between; align-items: start; gap: 8px; }
+h3 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
+.who { margin: 0; font-size: 15px; white-space: nowrap; letter-spacing: 1px; }
+.blurb { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+.tags { margin: 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 12px; border-radius: 999px; padding: 2px 9px; border: 1px solid transparent; }
+.tag.mind { color: var(--mind); background: var(--mind-bg); }
+.tag.motor { color: var(--motor); background: var(--motor-bg); }
+.tag.par { color: var(--muted); border-color: var(--line); }
+.links { margin: 0; display: flex; gap: 10px; align-items: center; }
+a.play {
+  background: var(--accent); color: var(--accent-ink); text-decoration: none;
+  font-weight: 600; font-size: 14px; padding: 7px 16px; border-radius: 999px;
+}
+a.play:hover { filter: brightness(1.08); }
+a.file { color: var(--muted); font-size: 13px; text-decoration: none; border-bottom: 1px solid var(--line); }
+a.file:hover { color: var(--ink); }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Elementals Levels</h1>
+    <p class="lede">Co-op puzzle levels for <strong>Elementals</strong>, made with the Level Kit. Every level has been run against the game's own simulation: it is solvable, every gem is reachable within par, and no player is a passenger.</p>
+    <ol class="how">
+      <li>Open a level's <strong>Play</strong> link. The game loads with the level added to <em>My Levels</em> in that browser.</li>
+      <li>Pick the group of elements the level is made for, and have each player press Interact on their controls.</li>
+      <li>Links accumulate: open several and they all stay in <em>My Levels</em>.</li>
+    </ol>
+  </header>
+    <section>
+      <h2>2 players <span class="count">1</span></h2>
+      <div class="grid">
+      <article class="level">
+        <header>
+          <h3>The Ferry</h3>
+          <p class="who"><span class="el fire" title="fire">🔥</span><span class="el water" title="water">💧</span></p>
+        </header>
+        <p class="blurb">Water can cross the pool. Fire can open the gate in the middle of it.</p>
+        <p class="tags"><span class="tag mind" title="Thinking, not reflexes: the moves are comfortable.">Puzzle</span><span class="tag par">par 25 s</span></p>
+        <p class="links"><a class="play" href="https://elementals-8iap.onrender.com/#level=e1.7VjNjts2EH4VQj002Sruejf7E-fUHgIEaHtoA-SwWSS0RFusJdIlqXiNYIE-RJ-wT9JvZijZ3t0kLVqgl_hgWxI5v998M9SHYuFDp1MxK0xrOuOSbuOT1rw3bVEW702I1rtiNi2LYH7rbTCRL2TB7ENha-xMjXm7MCFsscXpzuDWq8aoF_mWD7UJ2HZ8fFwWtYlVsOvEYovXOpmgKu1UFXyMCpLU2vt2ol5AFz_wa-P4_hJrlZX_na3r1ii_UDZNoCL267UPCcZdXRULbMW9Dckurq_LYq3DK1utyPQzsqGxjpcWrKQOfuPiIJm0l2reJ6XVWsdo3BIWeqfY1K-jaoyuVbDwQ-m5f294V-zDQleGTCHPbZXNjUm7epTNFpVq0xio9a7dHuggZ4PRVZN9IkGLFuHk_YvgXSKHSVDtfYB6SEH2xLJJAUeTbSlBV8VXf_MDNV-W_v9LJ_c_u3vjvy9L_4OlD-3-h0v3P6_Hz7_CAGo3rjVoiDiV-Wt29bScPsN9obHZ1Tld3pYFKNomy2X-oUjbNbFttEsHdTfF7KQstkRz4AJzQ6w-8KjzScWN7Sbqu8_yWh22k-K2fEj8PfkvQXWdaVNkKiJt4G5hrdoe8NOewKXpIC83HFxnxoaCKeiZFFx8YrUzfQqa-hNtOJcNl5_YICEUB2D5KJ-bF_H0WxA2nuftckGLszGXaBm4GrcIK-82kPkb3WaLTu_vyuvMjU0f8fv09L4b95bv-XE6uk2YiL7tqaMKKHJzPmjLWQg3h8P-iN3GwCt09SRN8uwYWbZu3Us_vTo_Lk-uS-DxGN_wbnqO3wu54icn_B-ZmF7SL9-byr2zcoqfS1mB4NOjszN59kwWTkXw-SUu8UuP6f6l3L6QqyyO_8MEujgTs04u5VG-2l_3gMEiDdFjU8_3HLsQX0jR9fUtwoKKoSorvlLjMKMevRuD-u6x-vP3P2RO-UYw_sa9cUdHL10Kvu4rE2dHR1RR1i2p0KjXh-R2xaaHmUenvUcYRlRrMWvVpcLwoPpI-6H2jRvrFsv03LY2bTFMoOfTJKJDPSEDphN1dPRLBsQEFrCFjV9H1a-5Hi2KFSVCNtEw4YwOaq7daiJeYExpVzDL81NTL3nOGmajN04ptiuPNhEzR_tclPzad9CCOcUfsMpOLpGLx2iF-Uukk0T1SKzgoibDWAUmq7AbmpSFxxSlgbgaY5dNKlX0ojrpFc1JmJCGUWv7OJtJnt8ZoFjDOKRxAhZwQ-ZPHsxo6qS4H86bVOQymkIzOZ4DX6rWaMyQgYxSPRha4gR7ku-rBqaRFNJINglfYso7DAxUSVQWOSEfizMnSKK0oAk444kDDyqwtVoG32Mv7QeyKJs0cw767oKBIIe4l_KAI096xlQfAOIjI2naeBlLS0XEQfeAsB4pIglLTyHwrI1WSRBZwcK3rd8gvXeWwSjG8wnh-WePwZbALA4ADaQTsceYjn1sF0UGPQlZ622Eu_kMkdfuoDNsWJntDJokUfupd4hw4x84fHAq7qNirzrEW6SdN5O0pRENnAClI56EpWfPTsmz181WydAfUQMgjajRfeEpkQ6XBx5MjxWP9mqD_lwyPuBPYgdRZKdP6GlmDTlJwcpyzN_ONbJCARt0kiKX8XfZSPj6tn0iVcUwp3KrwCKdUyfHzHRDqeVhgo8qg2sjZMtdtAAuY1khZRymp4ZqXzIIdJoA5kl82mFnx3ocM8pIYxVzWK5Cz5jr8kMSmjEZvF8wF4znSbKQUr4zZ9DPPlAFciIZP6zCZWMlm93ecWx34uLKzkoGlA8FAdkT9Q61Xq3eIXIOeOwiG87iKxQktuGUmHocsWdsjxhDFWqAGjeWR1bh0MgDIegwVeSOAI1l5NYDHQ8IYgUiBxT1PhPRjvIJh08Jh5wBh0mvSYS-zw-J9w6_nICR1AGvqBc8ALJtbAjg33qEHb-IvJg1EGRNLEQ4k_QDfhmNkGRuEDbgd8Otcgj8ABgBOhohchXJ8_3jtsTI-R1guIrhFA7ieIS1uYo42QJF8pALEijSgnF9Y5-T0ftMgSZDAvuI8UBkDF2ZOZT1c4TPKMI_2JXBpoW2bY_3KOxnMBUt5YL_0YLju9zsiYrvd1J6VwGG5ljmRsdFxyY2OnTgiMhBTBhW9FJbR5zfrngEQa84EDa2WGEuqlEtwwpWaiQKKc0vRw7aAYxPGFckEDxsPj_I-7qFXnhaB5xoxmqmQwQUBEgDdGgIQL38hPLYESprYIFcfXNI92A5GBbBw2l20ET3So9ehCyJtqmhLb2n7GJVMB1cRHMeWUFcaJE3UCmaLqJXrcaDi9SUEDUnn6BCfIRasPJ-BrWImz02IbKU2Sc0bDV49VQRKlH2EdAJKEISNW99hYKk5H5PBDbXIVi8UmODTzKl0zusynzLrghYpYUH7CV7mfGQBTW9oJ59l_EG2soBoxGMXHbwqWptN4cpLOHu9EmiHw10pZfBmPiYwT86P_c3eBHm-xYOUQ5aHgW12_L7K1Ge05eVoxDgONxDjMyaNFDFgbkAAwab5tYicYYGAEX6xG4M09BYb4kt2xo1gC9qwbvXgVSR46tC0sCgm2_ZcTLl0dAroYXwD_zoXYPsbJKxMIuiyUZ6UWYMsm5uKk01va9B2INIbUzOiELaRYP7wdy413lASaZd0Cu9BFGHb1pXoJRpcfsX">Play</a><a class="file" href="packed/the_ferry.elementals.json" download>level file</a></p>
+      </article>
+      </div>
+    </section>
+  <footer>
+    <p><span class="tag mind">Puzzle</span> is solved by thinking; the moves are comfortable.
+       <span class="tag motor">Puzzle + hands</span> also asks you to hit a window or a jump.</p>
+    <p>Built with the Elementals Level Kit. Sources, design notes and solution scripts are in this repository.</p>
+  </footer>
+</div>
+</body>
+</html>

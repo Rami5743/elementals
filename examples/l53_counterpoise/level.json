@@ -1,0 +1,208 @@
+{
+ "id": "l53_counterpoise",
+ "name": "Counterpoise",
+ "order": 53,
+ "description": "It takes everyone to lift what only two of them can move.",
+ "supports": [
+  [
+   "fire",
+   "water",
+   "earth",
+   "air"
+  ]
+ ],
+ "parTicks": 3600,
+ "hints": [
+  "The boulder and the crate weigh 4. All four of you on the left pan weigh 5, and that sends them up past the ledge. Press Down on the bridge to drop onto the pan.",
+  "Everyone off: they stay on the ledge. Fire melts the ice at the mouth of the tunnel.",
+  "Water's pad freezes the strip in the tunnel. The boulder goes to the far plate and the crate to the near one, and both together open the gate."
+ ],
+ "tiles": [
+  "########################################",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#.....................############.....#",
+  "#......................................#",
+  "#...........=====......................#",
+  "#................=====##WWWW############",
+  "############..........##################",
+  "############..........##################",
+  "############..........##################",
+  "############..........##################",
+  "############..........##################",
+  "########################################",
+  "########################################"
+ ],
+ "spawns": {
+  "fire": [
+   5,
+   14
+  ],
+  "water": [
+   7,
+   14
+  ],
+  "earth": [
+   3,
+   14
+  ],
+  "air": [
+   9,
+   14
+  ]
+ },
+ "entities": [
+  {
+   "id": "scale",
+   "type": "seesaw",
+   "x": 12,
+   "y": 15,
+   "w": 10,
+   "range": 2.375
+  },
+  {
+   "id": "post",
+   "type": "door",
+   "x": 17,
+   "y": 16,
+   "h": 4
+  },
+  {
+   "id": "crate",
+   "type": "box",
+   "x": 18,
+   "y": 14
+  },
+  {
+   "id": "boulder",
+   "type": "boulder",
+   "x": 21,
+   "y": 14
+  },
+  {
+   "id": "ice",
+   "type": "ice",
+   "x": 22,
+   "y": 12,
+   "h": 2
+  },
+  {
+   "id": "pad",
+   "type": "freezepad",
+   "x": 15,
+   "y": 12,
+   "targets": [
+    "pool"
+   ]
+  },
+  {
+   "id": "pool",
+   "type": "pool",
+   "x": 24,
+   "y": 14,
+   "w": 4,
+   "duration": 420
+  },
+  {
+   "id": "plate",
+   "type": "plate",
+   "x": 28,
+   "y": 13,
+   "targets": [
+    "gate"
+   ]
+  },
+  {
+   "id": "hp",
+   "type": "plate",
+   "x": 30,
+   "y": 13,
+   "weight": "heavy",
+   "targets": [
+    "gate"
+   ]
+  },
+  {
+   "id": "gate",
+   "type": "door",
+   "x": 33,
+   "y": 12,
+   "h": 2,
+   "required": 2
+  },
+  {
+   "type": "exit",
+   "element": "fire",
+   "x": 35,
+   "y": 12
+  },
+  {
+   "type": "exit",
+   "element": "water",
+   "x": 36,
+   "y": 12
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 37,
+   "y": 12
+  },
+  {
+   "type": "exit",
+   "element": "air",
+   "x": 38,
+   "y": 12
+  },
+  {
+   "type": "gem",
+   "element": "fire",
+   "x": 14,
+   "y": 12
+  },
+  {
+   "type": "gem",
+   "element": "water",
+   "x": 25,
+   "y": 13
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 6,
+   "y": 14
+  },
+  {
+   "type": "gem",
+   "element": "air",
+   "x": 12,
+   "y": 12
+  },
+  {
+   "type": "gem",
+   "element": "neutral",
+   "x": 34,
+   "y": 13
+  },
+  {
+   "type": "sign",
+   "x": 2,
+   "y": 6,
+   "text": "Boulder 3, crate 1. Earth 2, everyone else 1."
+  },
+  {
+   "type": "sign",
+   "x": 2,
+   "y": 7,
+   "text": "What goes up past a ledge stays there."
+  }
+ ]
+}
