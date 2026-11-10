@@ -49,7 +49,7 @@ const earth = function* (c) {
 
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
-  level: 'quarry',
+  level: 'undermine',
   sets: [{ elements: ['fire', 'earth'], scripts: { fire, earth } }],
   roles: {
     'fire,earth': {

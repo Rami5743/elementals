@@ -1,6 +1,6 @@
 {
- "id": "foundry",
- "name": "Foundry",
+ "id": "draught",
+ "name": "Draught",
  "order": 1000,
  "description": "The draught runs on a heavy plate, and only one of you can start it.",
  "supports": [

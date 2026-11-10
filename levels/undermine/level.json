@@ -1,6 +1,6 @@
 {
- "id": "quarry",
- "name": "Quarry",
+ "id": "undermine",
+ "name": "Undermine",
  "order": 1000,
  "description": "The plate wants something heavy that stays. The boulder is walled in on the gallery.",
  "supports": [
@@ -12,7 +12,7 @@
  "parTicks": 2700,
  "hints": [
   "Only Fire melts the ice in the passage.",
-  "The boulder is wedged against a post, so it cannot be pushed anywhere — but look at the floor under it.",
+  "The boulder is wedged against a post, so it cannot be pushed anywhere \u2014 but look at the floor under it.",
   "Earth's ground pound is Down while in mid-air."
  ],
  "tiles": [

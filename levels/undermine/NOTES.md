@@ -1,4 +1,4 @@
-# Quarry (`quarry`) — Fire + Earth
+# Undermine (`undermine`) — Fire + Earth
 
 **Introduces:** the ground pound as a way to move something, not just to break a floor. The
 boulder cannot be pushed anywhere, so the floor under it has to go instead.

@@ -50,7 +50,7 @@ const fire = function* (c) {
 
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
-  level: 'foundry',
+  level: 'draught',
   sets: [{ elements: ['fire', 'earth', 'air'], scripts: { fire, earth, air } }],
   roles: {
     'air,earth,fire': {

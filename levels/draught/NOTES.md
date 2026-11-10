@@ -1,4 +1,4 @@
-# Foundry (`foundry`) — Fire + Earth + Air
+# Draught (`draught`) — Fire + Earth + Air
 
 **Introduces:** a heavy plate that has to stay down for good, so the boulder — not a player —
 becomes the machine's switch.
