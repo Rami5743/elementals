@@ -35,6 +35,84 @@ for (const id of ids) {
 
 levels.sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0) || a.id.localeCompare(b.id));
 
+// ---- thumbnails -----------------------------------------------------------
+// One SVG map per level, drawn straight from its tiles and entities. Runs of
+// identical tiles are merged into single rects to keep the files small.
+
+const TILE_FILL = {
+  '#': '#403a30', '/': '#403a30', '\\': '#403a30',
+  '=': '#6d6353',
+  L: '#d0492b', W: '#2f80d2', M: '#7b5c37', V: '#7b5cd2', S: '#6e8e2b',
+};
+const SOLID_FILL = {
+  door: '#8b8069', ice: '#a8dcf0', firewall: '#e87a30', cracked: '#59513f',
+  box: '#b48d52', boulder: '#726d64', elevator: '#8b8069', belt: '#4b4b4b',
+  seesaw: '#8b8069',
+};
+const ELEMENT_FILL = { fire: '#f26540', water: '#3fa3f0', earth: '#a97c45', air: '#b4dced', neutral: '#e8dfb8' };
+const AIR_FILL = '#17150f';
+
+/** The first row worth drawing: everything above it is solid rock. */
+function thumbTop(level) {
+  let top = 0;
+  while (top < 20 && [...level.tiles[top]].every((ch) => ch === '#')) top++;
+  return Math.max(0, top - 1);                       // keep one row of ceiling
+}
+
+function thumbSvg(level, top) {
+  const h = 22 - top;
+  const out = [`<rect x="0" y="${top}" width="40" height="${h}" fill="${AIR_FILL}"/>`];
+  level.tiles.forEach((row, y) => {
+    let x = 0;
+    while (x < 40) {
+      const ch = row[x] ?? '.';
+      const fill = TILE_FILL[ch];
+      if (!fill) { x++; continue; }
+      let w = 1;
+      while (x + w < 40 && (row[x + w] ?? '.') === ch) w++;
+      const h = ch === '=' ? 0.28 : 1;
+      out.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`);
+      x += w;
+    }
+  });
+  for (const e of level.entities ?? []) {
+    const w = e.w ?? 1, h = e.h ?? 1;
+    const [px, py] = e.type === 'elevator' && e.path?.length ? e.path[0] : [e.x, e.y];
+    if (SOLID_FILL[e.type]) {
+      const th = e.type === 'elevator' ? 0.5 : e.type === 'seesaw' ? 0.4 : h;
+      out.push(`<rect x="${px}" y="${py}" width="${w}" height="${th}" fill="${SOLID_FILL[e.type]}"/>`);
+    } else if (e.type === 'plate' || e.type === 'freezepad') {
+      const fill = e.type === 'freezepad' ? '#a8dcf0' : '#9a8f78';
+      out.push(`<rect x="${px}" y="${py + 0.7}" width="${w}" height="0.3" fill="${fill}"/>`);
+    } else if (e.type === 'fan') {
+      out.push(`<rect x="${px}" y="${py}" width="${w}" height="${h}" fill="#c9d8e8" opacity="0.14"/>`);
+    } else if (e.type === 'pool') {
+      // the water tiles already show; nothing to add
+    } else if (e.type === 'exit') {
+      const fill = ELEMENT_FILL[e.element] ?? '#ccc';
+      out.push(`<rect x="${px + 0.1}" y="${py}" width="0.8" height="2" fill="${fill}" opacity="0.55"/>`);
+    } else if (e.type === 'gem') {
+      const fill = ELEMENT_FILL[e.element] ?? ELEMENT_FILL.neutral;
+      out.push(`<circle cx="${px + 0.5}" cy="${py + 0.5}" r="0.24" fill="${fill}"/>`);
+    } else if (e.type === 'torch' || e.type === 'lever' || e.type === 'button' || e.type === 'turbine') {
+      out.push(`<rect x="${px + 0.25}" y="${py + 0.25}" width="0.5" height="0.5" fill="#d9c98a"/>`);
+    }
+  }
+  for (const [el, pos] of Object.entries(level.spawns ?? {})) {
+    if (!level.supports[0].includes(el)) continue;
+    out.push(`<circle cx="${pos[0] + 0.5}" cy="${pos[1] + 0.55}" r="0.38" fill="${ELEMENT_FILL[el]}"/>`);
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 ${top} 40 ${h}" shape-rendering="crispEdges">\n${out.join('\n')}\n</svg>\n`;
+}
+
+const THUMBS = path.join(ROOT, 'thumbs');
+fs.mkdirSync(THUMBS, { recursive: true });
+for (const l of levels) {
+  l.thumbTop = thumbTop(l);
+  fs.writeFileSync(path.join(THUMBS, `${l.id}.svg`), thumbSvg(l, l.thumbTop));
+}
+
+
 const esc = (s) => String(s).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
 const seconds = (t) => `${Math.round((t ?? 3600) / 60)} s`;
 const sizeOf = (l) => l.supports[0].length;
@@ -47,7 +125,7 @@ function card(l) {
           <h3>${esc(l.name)}</h3>
           <p class="who">${group.map((e) => `<span class="el ${e}" title="${e}">${ELEMENT_ICON[e]}</span>`).join('')}</p>
         </header>
-        <p class="blurb">${esc(l.description ?? '')}</p>
+        <img class="map" src="thumbs/${esc(l.id)}.svg" alt="Map of ${esc(l.name)}" width="40" height="${22 - l.thumbTop}" loading="lazy" decoding="async">
         <p class="tags"><span class="tag ${l.meta.challenge === 'motor' ? 'motor' : 'mind'}" title="${esc(ch.note)}">${ch.label}</span><span class="tag par">par ${seconds(l.parTicks)}</span></p>
         <p class="links"><a class="play" href="${esc(l.link)}" target="_blank" rel="noopener">Play</a><a class="file" href="packed/${esc(l.id)}.elementals.json" download>level file</a></p>
       </article>`;
@@ -107,7 +185,7 @@ h2 { font-size: 20px; margin: 44px 0 16px; display: flex; align-items: baseline;
 .level header { display: flex; justify-content: space-between; align-items: start; gap: 8px; }
 h3 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
 .who { margin: 0; font-size: 15px; white-space: nowrap; letter-spacing: 1px; }
-.blurb { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+.map { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); background: #17150f; }
 .tags { margin: 0; display: flex; gap: 6px; flex-wrap: wrap; }
 .tag { font-size: 12px; border-radius: 999px; padding: 2px 9px; border: 1px solid transparent; }
 .tag.mind { color: var(--mind); background: var(--mind-bg); }
