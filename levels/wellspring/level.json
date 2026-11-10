@@ -1,0 +1,149 @@
+{
+ "id": "wellspring",
+ "name": "Wellspring",
+ "order": 1000,
+ "description": "The shuttle only runs while the heavy plate is down, and Earth has errands.",
+ "supports": [
+  [
+   "water",
+   "earth"
+  ]
+ ],
+ "parTicks": 3600,
+ "hints": [
+  "The plate is heavy: Water standing on it does nothing at all.",
+  "Water on the pad up on the gallery freezes the pool in the hall.",
+  "The boulder weighs enough to hold the plate once Earth is done with it."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#####===################################",
+  "#.............................##########",
+  "#.............................##########",
+  "#.............................##########",
+  "#.............................##########",
+  "#.............................##########",
+  "#.............................##########",
+  "#.............................##########",
+  "#.............................##########",
+  "#####...##########WWWWWMMM##############",
+  "########################################"
+ ],
+ "spawns": {
+  "earth": [
+   13,
+   19
+  ],
+  "water": [
+   15,
+   19
+  ]
+ },
+ "entities": [
+  {
+   "type": "sign",
+   "x": 9,
+   "y": 15,
+   "text": "This plate is heavy. One player is not enough."
+  },
+  {
+   "type": "sign",
+   "x": 12,
+   "y": 9,
+   "text": "Water on the pad freezes the pool below."
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 24,
+   "y": 19
+  },
+  {
+   "type": "gem",
+   "element": "water",
+   "x": 14,
+   "y": 10
+  },
+  {
+   "type": "gem",
+   "element": "neutral",
+   "x": 20,
+   "y": 19
+  },
+  {
+   "id": "lift",
+   "type": "elevator",
+   "x": 5,
+   "y": 20,
+   "w": 3,
+   "path": [
+    [
+     5,
+     20
+    ],
+    [
+     5,
+     11
+    ]
+   ],
+   "mode": "loop",
+   "pause": 180
+  },
+  {
+   "id": "weigh",
+   "type": "plate",
+   "x": 9,
+   "y": 19,
+   "w": 2,
+   "weight": "heavy",
+   "targets": [
+    "lift"
+   ]
+  },
+  {
+   "id": "pool",
+   "type": "pool",
+   "x": 18,
+   "y": 20,
+   "w": 5,
+   "duration": 600
+  },
+  {
+   "id": "pad",
+   "type": "freezepad",
+   "x": 12,
+   "y": 10,
+   "targets": [
+    "pool"
+   ]
+  },
+  {
+   "id": "bould",
+   "type": "boulder",
+   "x": 28,
+   "y": 19
+  },
+  {
+   "type": "exit",
+   "element": "water",
+   "x": 16,
+   "y": 9
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 10,
+   "y": 9
+  }
+ ]
+}
