@@ -1,6 +1,13 @@
 # Elementals Levels
 
-Fan-made co-op levels for **Elementals**, built with the Elementals Level Kit.
+Thirty fan-made co-op levels for **Elementals**, built with the Elementals Level Kit —
+ten for two players, ten for three and ten for all four. Every one of them passes
+`node kit.mjs check`: it is solvable by the recorded solution, every gem is taken within par,
+nobody dies, and the level cannot be finished while any one player waits in their door.
+
+About a third of them are tagged **Puzzle + hands**: the solution still has to be worked out,
+but a jump, a boost or a timed window also has to be hit. The rest are tagged **Puzzle** — the
+moves in those are comfortable and the difficulty is all in the plan.
 
 The published index is **[index.html](index.html)** — serve it with GitHub Pages
 (*Settings → Pages → Deploy from a branch → `main` / `/ (root)`*) and every level gets a
