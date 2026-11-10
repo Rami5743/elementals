@@ -1,0 +1,203 @@
+{
+ "id": "deep_shaft",
+ "name": "Deep Shaft",
+ "order": 1000,
+ "description": "Ten tiles of shaft, a crate to hold the switch, and a vault under the loft.",
+ "supports": [
+  [
+   "fire",
+   "water",
+   "earth",
+   "air"
+  ]
+ ],
+ "parTicks": 4800,
+ "hints": [
+  "The crate behind the ice belongs on the plate at the dead end: that is what runs the shuttle.",
+  "Only Air reaches the turbine that opens the way to the shuttle.",
+  "Up in the loft: Water for the flames, Earth for the floor over the vault."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#################====#########...#######",
+  "#################....#######...........#",
+  "#################....#######...........#",
+  "#################....#######...........#",
+  "#################....###################",
+  "#......#.......#.......................#",
+  "#......#.......#.......................#",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#################....###################",
+  "########################################"
+ ],
+ "spawns": {
+  "fire": [
+   9,
+   19
+  ],
+  "air": [
+   10,
+   19
+  ],
+  "earth": [
+   11,
+   19
+  ],
+  "water": [
+   12,
+   19
+  ]
+ },
+ "entities": [
+  {
+   "type": "sign",
+   "x": 1,
+   "y": 15,
+   "text": "The shuttle runs on that plate."
+  },
+  {
+   "type": "sign",
+   "x": 18,
+   "y": 7,
+   "text": "Flames, then floor."
+  },
+  {
+   "type": "gem",
+   "element": "fire",
+   "x": 5,
+   "y": 18
+  },
+  {
+   "type": "gem",
+   "element": "air",
+   "x": 18,
+   "y": 13
+  },
+  {
+   "type": "gem",
+   "element": "neutral",
+   "x": 21,
+   "y": 9
+  },
+  {
+   "type": "gem",
+   "element": "water",
+   "x": 24,
+   "y": 9
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 28,
+   "y": 9
+  },
+  {
+   "id": "hold",
+   "type": "plate",
+   "x": 1,
+   "y": 19,
+   "w": 2,
+   "targets": [
+    "lift"
+   ]
+  },
+  {
+   "id": "crate",
+   "type": "box",
+   "x": 4,
+   "y": 19
+  },
+  {
+   "id": "ice",
+   "type": "ice",
+   "x": 7,
+   "y": 17,
+   "h": 3
+  },
+  {
+   "id": "spinner",
+   "type": "turbine",
+   "x": 10,
+   "y": 15,
+   "targets": [
+    "g1"
+   ]
+  },
+  {
+   "id": "g1",
+   "type": "door",
+   "x": 15,
+   "y": 17,
+   "h": 3,
+   "latch": true
+  },
+  {
+   "id": "lift",
+   "type": "elevator",
+   "x": 17,
+   "y": 20,
+   "w": 4,
+   "path": [
+    [
+     17,
+     20
+    ],
+    [
+     17,
+     10
+    ]
+   ],
+   "mode": "loop",
+   "pause": 180
+  },
+  {
+   "id": "flames",
+   "type": "firewall",
+   "x": 25,
+   "y": 6,
+   "h": 4
+  },
+  {
+   "id": "boards",
+   "type": "cracked",
+   "x": 30,
+   "y": 10,
+   "w": 3
+  },
+  {
+   "type": "exit",
+   "element": "fire",
+   "x": 29,
+   "y": 12
+  },
+  {
+   "type": "exit",
+   "element": "air",
+   "x": 31,
+   "y": 12
+  },
+  {
+   "type": "exit",
+   "element": "water",
+   "x": 33,
+   "y": 12
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 35,
+   "y": 12
+  }
+ ]
+}

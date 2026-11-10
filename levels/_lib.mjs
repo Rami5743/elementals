@@ -90,3 +90,17 @@ export function* glideTo(c, x, max = 600) {
 }
 
 export { go, jump, until, wait, PHYSIQUE, IN_DOWN, IN_INTERACT, IN_JUMP, IN_LEFT, IN_RIGHT, TILE };
+
+/** Climb onto a narrower partner (Air): brakes as it closes, so it lands on top rather than past. */
+export function* climbOnto(c, partner) {
+  for (let t = 0; t < 4 || !c.me.grounded; t++) {
+    const p = c.player(partner);
+    const want = p.x + PHYSIQUE[partner].w / 2 - c.cx - c.me.vx * 6;
+    yield (t < 16 ? IN_JUMP : 0) | (Math.abs(want) < 3 ? 0 : want > 0 ? IN_RIGHT : IN_LEFT);
+    if (t > 240) throw new Error(`${c.me.element} never came down onto ${partner}`);
+  }
+  const p = c.player(partner);
+  if (c.bottom !== p.y) {
+    throw new Error(`${c.me.element} is not on ${partner} (bottom=${c.bottom}, ${partner} top=${p.y})`);
+  }
+}
