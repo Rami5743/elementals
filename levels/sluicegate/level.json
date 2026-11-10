@@ -1,0 +1,171 @@
+{
+ "id": "sluicegate",
+ "name": "Sluicegate",
+ "order": 1000,
+ "description": "The sluice is open for five seconds at a time, and the water has to be ice first.",
+ "supports": [
+  [
+   "water",
+   "earth",
+   "air"
+  ]
+ ],
+ "parTicks": 3000,
+ "hints": [
+  "Water on the pad turns the sluice to ice; it stays ice for ten seconds after.",
+  "Only Air reaches the turbine, and the gate stays open five seconds after it is spun.",
+  "Earth is the slow one: send Earth through first, and spin again for the other two."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "#...........#..................#.......#",
+  "#...........#..................#.......#",
+  "#...........#..................#.......#",
+  "#...........#..................#.......#",
+  "#...........#..................#.......#",
+  "#...........#..................#.......#",
+  "#...........#..................#.......#",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#############WWWWWWWW###################",
+  "########################################"
+ ],
+ "spawns": {
+  "water": [
+   7,
+   19
+  ],
+  "earth": [
+   10,
+   19
+  ],
+  "air": [
+   5,
+   19
+  ]
+ },
+ "entities": [
+  {
+   "type": "sign",
+   "x": 1,
+   "y": 12,
+   "text": "Only Air can reach this."
+  },
+  {
+   "type": "sign",
+   "x": 22,
+   "y": 12,
+   "text": "This plate is heavy."
+  },
+  {
+   "type": "gem",
+   "element": "water",
+   "x": 6,
+   "y": 18
+  },
+  {
+   "type": "gem",
+   "element": "neutral",
+   "x": 16,
+   "y": 19
+  },
+  {
+   "type": "gem",
+   "element": "air",
+   "x": 18,
+   "y": 16
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 28,
+   "y": 18
+  },
+  {
+   "id": "spinner",
+   "type": "turbine",
+   "x": 4,
+   "y": 15,
+   "duration": 300,
+   "targets": [
+    "sluice"
+   ]
+  },
+  {
+   "id": "pad",
+   "type": "freezepad",
+   "x": 8,
+   "y": 19,
+   "targets": [
+    "pool"
+   ]
+  },
+  {
+   "id": "sluice",
+   "type": "door",
+   "x": 12,
+   "y": 17,
+   "h": 3
+  },
+  {
+   "id": "pool",
+   "type": "pool",
+   "x": 13,
+   "y": 20,
+   "w": 8,
+   "duration": 600
+  },
+  {
+   "id": "weigh",
+   "type": "plate",
+   "x": 25,
+   "y": 19,
+   "w": 2,
+   "weight": "heavy",
+   "targets": [
+    "g2"
+   ]
+  },
+  {
+   "id": "bould",
+   "type": "boulder",
+   "x": 22,
+   "y": 19
+  },
+  {
+   "id": "g2",
+   "type": "door",
+   "x": 31,
+   "y": 17,
+   "h": 3
+  },
+  {
+   "type": "exit",
+   "element": "water",
+   "x": 33,
+   "y": 18
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 35,
+   "y": 18
+  },
+  {
+   "type": "exit",
+   "element": "air",
+   "x": 37,
+   "y": 18
+  }
+ ]
+}
