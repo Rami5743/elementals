@@ -66,8 +66,10 @@ Write these down first:
    backwards, or done in an order that looks wrong.
 5. **The plausible wrong plan** and the stateable reason it fails.
 
-Hold the design to `references/difficulty.md`. The target is the hardest levels of the campaign and
-beyond: these are not meant to be a gentle addition to the set.
+Hold the design to `references/difficulty.md`, which is a list of hard requirements, not advice.
+The two that kill most drafts: **at most one element barrier in the whole level**, and **the
+recorded solution has to run for at least 40 seconds**. A corridor with one barrier per player is
+the shape to throw away, however good the central idea is.
 
 ## 5. Build it
 
@@ -137,6 +139,9 @@ landed, say in NOTES.md what you tried to invent first and why it did not work.
    `{ "order": N, "challenge": "mind"|"motor", "core": "<tag>", "ideas": ["<key>", …] }`.
    Order numbering: 1xx for two players, 2xx for three, 3xx for four; take the next free number.
 3. Regenerate and commit:
+
+Before publishing, read the solve time `check` prints. **Under 20 seconds, go back to step 4** —
+the level is too small, and the fix is another phase of the puzzle, not a longer walk.
 
 ```bash
 node kit.mjs check <id>
