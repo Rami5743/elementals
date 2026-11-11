@@ -2646,25 +2646,30 @@
   "groups": [
    "fire+water"
   ],
-  "parTicks": 2400,
+  "parTicks": 3600,
   "dark": false,
   "challenge": "mind",
-  "core": "belt-sorts-objects-people-hop",
+  "core": "the-belt-is-the-only-hand-in-the-level",
   "ideas": [
-   "belt-cargo"
+   "no-hands-for-cargo",
+   "belt-cargo",
+   "hold-switch",
+   "twist-self-block",
+   "twist-order",
+   "machine-strands-operator"
   ],
   "order": 107,
-  "line": "a belt as a one-way street for objects. People beat a belt by hopping; a crate cannot hop, so the belt decides where the crate goes.",
+  "line": "a boulder in a group with no Earth in it. Fire and Water cannot shift a boulder at all — it is a wall with a handle on it, and the belt is the only hand in the level.",
   "tokens": [
    "ent:belt",
-   "ent:box",
+   "ent:boulder",
    "ent:button",
    "ent:door",
-   "ent:ice",
    "ent:plate",
-   "opt:belt:reverse",
+   "ent:torch",
    "opt:belt:walkable",
-   "opt:button:hold"
+   "opt:button:hold",
+   "opt:required:2"
   ]
  },
  {

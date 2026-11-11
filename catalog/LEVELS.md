@@ -54,10 +54,10 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: a landing made of ice that starts melting the moment you leave the pad that froze it. The draught carries a pair, but slowly, and the whole climb is spent inside a countdown that you started yourself.
   - ideas: fan-passenger, freeze-bridge, twist-sacrifice
   - features: ent:box ent:door ent:fan ent:firewall ent:freezepad ent:lever ent:plate ent:pool opt:invert:fan opt:latch opt:pool-timed tile:water
-- **Conveyor** `conveyor` (2p: fire+water) core=`belt-sorts-objects-people-hop` challenge=mind par=2400
-  - idea: a belt as a one-way street for objects. People beat a belt by hopping; a crate cannot hop, so the belt decides where the crate goes.
-  - ideas: belt-cargo
-  - features: ent:belt ent:box ent:button ent:door ent:ice ent:plate opt:belt:reverse opt:belt:walkable opt:button:hold
+- **Conveyor** `conveyor` (2p: fire+water) core=`the-belt-is-the-only-hand-in-the-level` challenge=mind par=3600
+  - idea: a boulder in a group with no Earth in it. Fire and Water cannot shift a boulder at all — it is a wall with a handle on it, and the belt is the only hand in the level.
+  - ideas: no-hands-for-cargo, belt-cargo, hold-switch, twist-self-block, twist-order, machine-strands-operator
+  - features: ent:belt ent:boulder ent:button ent:door ent:plate ent:torch opt:belt:walkable opt:button:hold opt:required:2
 - **Lantern** `lantern` (2p: fire+air) core=`glide-with-a-passenger-in-the-dark` challenge=motor par=2400 dark
   - idea: gliding with a passenger, in the dark.
   - ideas: dark, glide-passenger

@@ -275,7 +275,7 @@ Entities:
   X  exit_a       exit       at (4,18)  air
 ```
 
-## Conveyor (`conveyor`) — 2p, core `belt-sorts-objects-people-hop`
+## Conveyor (`conveyor`) — 2p, core `the-belt-is-the-only-hand-in-the-level`
 
 ```
 Conveyor (conveyor) for fire+water
@@ -295,31 +295,33 @@ Conveyor (conveyor) for fire+water
 11  ########################################
 12  ########################################
 13  ########################################
-14  #....#........#........................#
-15  #....#........#........................#
-16  #....#........#........................#
-17  #....D........#........................#
-18  #X.X.D..*.*...I..*.....................#
-19  #X.X.D.@.@.b..I...x...........ppp......#
-20  ####################<<<<<<<<<<##########
+14  ########################################
+15  ########################################
+16  ######.......................D.........#
+17  #....D.......................D.........#
+18  #X.X.D.*.........#############...*.....#
+19  #X.X.D..@.b......pp.ppppp*.O......@.t..#
+20  ###################<<<<<<<<<<<##########
 21  ########################################
 
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
-Spawns (@): water (7,19)  fire (9,19)
+Spawns (@): water (8,19)  fire (34,19)
 Entities:
-  "  sign_0       sign       at (6,15)  "Hold the button: the belt turns around."
-  "  sign_1       sign       at (21,15)  "A crate cannot hop. You can."
-  *  gem_2        gem        at (8,18)  water
-  *  gem_3        gem        at (10,18)  neutral
-  *  gem_4        gem        at (17,18)  fire
-  D  gate         door       at (5,17)  1x3  <- weigh
-  X  exit_6       exit       at (1,18)  water
-  X  exit_7       exit       at (3,18)  fire
-  b  knob         button     at (11,19)  -> belt  mode hold
-  I  ice          ice        at (14,18)  1x2
-  x  crate        box        at (18,19)
-  >  belt         belt       at (20,20)  10x1  <- knob  mode reverse  speed -2
-  p  weigh        plate      at (30,19)  3x1  -> gate
+  "  sign_0       sign       at (7,17)  "Held: the belt runs left."
+  "  sign_1       sign       at (31,17)  "No hand moves a boulder."
+  D  gate         door       at (5,17)  1x3  <- weigh, beacon (needs 2)
+  X  exit_3       exit       at (1,18)  water
+  X  exit_4       exit       at (3,18)  fire
+  b  knob         button     at (10,19)  -> belt  mode hold
+  >  belt         belt       at (19,20)  11x1  <- knob  speed -2
+  O  bould        boulder    at (27,19)
+  p  trip         plate      at (20,19)  5x1  -> bypass
+  p  weigh        plate      at (17,19)  2x1  -> gate
+  D  bypass       door       at (29,16)  1x2  <- trip
+  t  beacon       torch      at (36,19)  -> gate
+  *  gem_12       gem        at (7,18)  water
+  *  gem_13       gem        at (33,18)  fire
+  *  gem_14       gem        at (25,19)  neutral
 ```
 
 ## Lantern (`lantern`) — 2p, core `glide-with-a-passenger-in-the-dark`
