@@ -2519,11 +2519,14 @@
   "parTicks": 3000,
   "dark": false,
   "challenge": "motor",
-  "core": "one-stone-two-plates-on-one-belt",
+  "core": "the-stone-has-to-come-home-before-the-driver-can-leave",
   "ideas": [
    "belt-reverse",
    "low-roof-no-jump",
-   "twist-order"
+   "twist-order",
+   "twist-undo",
+   "machine-strands-operator",
+   "lock-per-element"
   ],
   "order": 309,
   "line": "The belt is not a floor you walk on, it is a vehicle you ride — and the one who decides where it takes you is standing still at the other end of the level. The second turn of the screw is that the line carries freight as well as passengers, there is only one piece of freight, and the two plates that want it are at opposite ends. The second half of the insight is that you cannot jump off wherever you like: the roof is one tile high everywhere except at the three hatches, so the only question that matters is *when* you jump.",
@@ -2538,7 +2541,6 @@
    "opt:belt:blocks-all",
    "opt:belt:reverse",
    "opt:heavy-plate",
-   "opt:latch",
    "opt:wide-door"
   ]
  },

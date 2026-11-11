@@ -78,8 +78,8 @@ const air = function* (c) {
   yield* go(c, 1);                                       // on the turbine: the belt runs right
   c.flag('driving');
   yield* waitFlag(c, 'earth_home');
-  yield* until(c, () => c.ent('air_gate').s.open > 0, 0, 600, 'its own way home, which the far plate opens');
-  yield* go(c, 3);
+  yield* go(c, 3);                                       // off the turbine: the line runs back, and
+  yield* until(c, () => c.ent('air_gate').s.open > 0, 0, 900, 'the stone to come home to the near plate');
   for (let t = 0; t < 24; t++) yield IN_JUMP;            // up its own shaft
   yield* until(c, () => c.bottom <= 14 * TILE, IN_RIGHT, 120, 'the air alcove');
   yield* go(c, 4);
@@ -95,7 +95,7 @@ export const solutions = {
       earth: 'The only one who can shift the boulder onto the heavy plate that unlocks the three hatches.',
       fire: 'Melts the ice that shuts the loading corridor.',
       water: 'Puts out the flames behind the ice.',
-      air: 'Stands on the turbine: the belt only runs toward the alcoves while Air drives it.',
+      air: 'Stands on the turbine: the belt only runs toward the alcoves while Air drives it — and its own door needs the stone back at the near end, so it has to stop driving to get out.',
     },
   },
 };

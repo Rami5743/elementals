@@ -1544,7 +1544,7 @@ Entities:
   X  exit_e       exit       at (31,18)  earth
 ```
 
-## Cargo (`cargo`) — 4p, core `one-stone-two-plates-on-one-belt`
+## Cargo (`cargo`) — 4p, core `the-stone-has-to-come-home-before-the-driver-can-leave`
 
 ```
 Cargo (cargo) for fire+water+earth+air
@@ -1566,7 +1566,7 @@ Cargo (cargo) for fire+water+earth+air
 13  ##..X##########...X##...X##...X#########
 14  ###D#....IF####...X##...X##...X#########
 15  #........IF####DD####DD####DD###########
-16  #T@@Opp@@IF.*......*.....*........pp####
+16  #T@@Opp@@IFpp......*.....*......pp######
 17  ###########<<<<<<<<<<<<<<<<<<<<<<<######
 18  ########################################
 19  ########################################
@@ -1580,14 +1580,14 @@ Entities:
   T  drive        turbine    at (1,16)  -> belt
   O  rock_1       boulder    at (4,16)
   p  weigh        plate      at (5,16)  2x1  -> hatch_f, hatch_w  weight heavy
-  p  weigh2       plate      at (34,16)  2x1  -> hatch_e, air_gate  weight heavy
-  D  air_gate     door       at (3,14)  <- weigh2  latch
+  p  weigh2       plate      at (32,16)  2x1  -> hatch_e  weight heavy
+  D  air_gate     door       at (3,14)  <- weigh3
   I  icewall      ice        at (9,14)  1x3
   F  flames       firewall   at (10,14)  1x3
   >  belt         belt       at (11,17)  23x1  <- drive  mode reverse  speed -5
-  D  hatch_f      door       at (15,15)  2x1  <- weigh  latch
-  D  hatch_w      door       at (21,15)  2x1  <- weigh  latch
-  D  hatch_e      door       at (27,15)  2x1  <- weigh2  latch
+  D  hatch_f      door       at (15,15)  2x1  <- weigh
+  D  hatch_w      door       at (21,15)  2x1  <- weigh
+  D  hatch_e      door       at (27,15)  2x1  <- weigh2
   *  gem_f        gem        at (12,16)  fire
   *  gem_w        gem        at (19,16)  water
   *  gem_e        gem        at (25,16)  earth
@@ -1596,6 +1596,7 @@ Entities:
   X  exit_f       exit       at (18,13)  fire
   X  exit_w       exit       at (24,13)  water
   X  exit_e       exit       at (30,13)  earth
+  p  weigh3       plate      at (11,16)  2x1  -> air_gate  weight heavy
 ```
 
 ## Finale (`finale`) — 4p, core `four-locks-one-tower`

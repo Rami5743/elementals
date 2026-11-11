@@ -21,10 +21,16 @@ default direction is **left**, back into the loading chamber. It only runs
    the way.
 6. With Fire and Water home, **Earth** shoves the stone off the near plate and onto the line. The
    first two hatches shut behind it — they are no longer needed — and the stone rides the length of
-   the hall onto the far plate, which opens the third hatch and, with it, the shaft above Air's
-   corner of the chamber. Earth boards behind the stone and takes that hatch.
-7. Air leaves the turbine last, walks to its shaft and jumps. Only Air's 120 px jump reaches it; it
-   takes its gem on the way up and steps into its door.
+   the hall onto the far plate at 32, where the wall holds it. That opens the third hatch. Earth
+   boards behind the stone and takes it.
+7. Air's own shaft is wired to a third plate — at the **near** end of the line, where the stone
+   rests when nothing drives the belt. So Air cannot open its door while it is driving: it has to
+   step off the turbine, let the line run back and carry the stone home to the near plate, and only
+   then jump its shaft. It takes its gem on the way up.
+
+   Nothing of this is reversible by a single player: step off the turbine while Earth is still
+   riding and Earth is carried back to the loading chamber (no harm, but the trip is wasted), and
+   a player who goes through its own door is out of the level for good.
 
 ## Why each player is needed
 
