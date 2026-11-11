@@ -83,3 +83,12 @@ export const TERRAIN = [
   ['tall-shaft', [], 'A vertical shaft several storeys deep.'],
   ['two-storeys', [], 'An upper and a lower route that see each other but do not connect.'],
 ];
+
+// Coined while building the six levels of 2026-11-11.
+Object.assign(IDEAS, {
+  'two-is-not-heavy': { kind: 'spine', note: 'A heavy plate takes max(mass), not the sum: two light players standing on it together do nothing, so the weight has to be fetched.' },
+  'switch-in-mid-flight': { kind: 'spine', note: 'A plate hanging in the air over a gap, armed only by passing through it mid-jump.' },
+  'door-pushes-you-through': { kind: 'spine', note: 'A closing door pushes a player down through a one-way tile — the only way down there, and you cannot do it to yourself.' },
+  'climb-then-steer': { kind: 'spine', note: 'In an updraft you rise only while you do not steer, so leaving at the right floor means giving up the climb at the right moment.' },
+  'trip-plate-in-the-shaft': { kind: 'spine', note: 'A plate hanging in a lift shaft, pressed by the rider for as long as the lift takes to carry them past it.' },
+});
