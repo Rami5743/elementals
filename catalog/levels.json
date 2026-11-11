@@ -3396,6 +3396,38 @@
   ]
  },
  {
+  "id": "tripwire",
+  "name": "Tripwire",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3600,
+  "dark": false,
+  "challenge": "motor",
+  "core": "the-ride-past-the-switch-is-the-window",
+  "ideas": [
+   "trip-plate-in-the-shaft",
+   "lift-loop"
+  ],
+  "order": 312,
+  "line": "a switch hanging in a lift shaft. Nothing can stand on it, and the lift itself does not press it — only a rider does, and only for as long as the lift takes to carry them past it.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:firewall",
+   "ent:ice",
+   "ent:plate",
+   "ent:turbine",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:latch"
+  ]
+ },
+ {
   "id": "undermine",
   "name": "Undermine",
   "source": "mine",

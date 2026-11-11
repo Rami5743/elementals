@@ -1681,3 +1681,53 @@ Entities:
   X  exit_e       exit       at (32,15)  earth
   X  exit_a       exit       at (31,15)  air
 ```
+
+## Tripwire (`tripwire`) — 4p, core `the-ride-past-the-switch-is-the-window`
+
+```
+Tripwire (tripwire) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ##.....X.###############################
+ 7  ##....*X.###############################
+ 8  ##..####################################
+ 9  ##..####################################
+10  ##..####################################
+11  ##..####################################
+12  ##pp####################################
+13  ##..####################################
+14  #....D.......F..I...D.............######
+15  #....D....X..F..I.X.D..........X..######
+16  #....D@@@@XT*F.*I.X.D.....*....X..######
+17  ##EE####################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (6,16)  fire (7,16)  water (8,16)  air (9,16)
+Entities:
+  "  sign_0       sign       at (14,14)  "It opens while the lift goes by, and only then."
+  E  hoist        elevator   at (2,17)  2x1  mode loop  speed 0.5  pause 90  path (2,17)-(2,8)
+  p  trip         plate      at (2,12)  2x1  -> gate  weight heavy
+  D  shaft_gate   door       at (5,14)  1x3  <- spin  latch
+  T  spin         turbine    at (11,16)  -> shaft_gate
+  F  flames       firewall   at (13,14)  1x3
+  I  icewall      ice        at (16,14)  1x3
+  D  gate         door       at (20,14)  1x3  <- trip
+  *  gem_e        gem        at (6,7)  earth
+  *  gem_a        gem        at (12,16)  air
+  *  gem_w        gem        at (15,16)  water
+  *  gem_f        gem        at (26,16)  fire
+  X  exit_e       exit       at (7,6)  earth
+  X  exit_f       exit       at (31,15)  fire
+  X  exit_w       exit       at (18,15)  water
+  X  exit_a       exit       at (10,15)  air
+```
