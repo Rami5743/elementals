@@ -256,10 +256,10 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: a lift used as a jack. It is not transport: its job is to carry a boulder up the shaft and hold it against a plate hanging in the ceiling, and to stay there for the rest of the level.
   - ideas: lift-press, twist-order
   - features: ent:boulder ent:door ent:elevator ent:firewall ent:ice ent:lever ent:plate opt:elevator:powered opt:heavy-plate
-- **Thermal Stair** `thermal_stair` (3p: fire+water+air) core=`leaving-the-draught-is-what-stops-the-climb` challenge=motor par=3600
-  - idea: climbing a draught you can only leave sideways. In this simulation a rider gains height only while they are not steering, so pressing a direction is both how you get out of the shaft and how you stop going up. The two ways out are at different heights, and one of them is a window you have to take.
-  - ideas: climb-then-steer
-  - features: ent:door ent:fan ent:firewall ent:ice ent:lever opt:fan:lifts-air opt:latch
+- **Thermal Stair** `thermal_stair` (3p: fire+water+air) core=`one-seat-lift-only-goes-up-so-ride-it-twice` challenge=motor par=3600
+  - idea: a draught that only goes up, a lift that carries exactly one passenger, and two switches on two floors that two different elements have to work — so the ride has to be made twice, in the right order, with a nine-second clock at the end.
+  - ideas: climb-then-steer, fan-passenger, glide-dismount, one-way-drop, timed-window, twist-order
+  - features: ent:button ent:door ent:fan ent:firewall ent:torch opt:button-timed opt:button:timed opt:fan:lifts-air opt:latch
 
 ## 3 players — campaign (27)
 

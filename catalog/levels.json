@@ -3356,18 +3356,25 @@
   "parTicks": 3600,
   "dark": false,
   "challenge": "motor",
-  "core": "leaving-the-draught-is-what-stops-the-climb",
+  "core": "one-seat-lift-only-goes-up-so-ride-it-twice",
   "ideas": [
-   "climb-then-steer"
+   "climb-then-steer",
+   "fan-passenger",
+   "glide-dismount",
+   "one-way-drop",
+   "timed-window",
+   "twist-order"
   ],
   "order": 212,
-  "line": "climbing a draught you can only leave sideways. In this simulation a rider gains height only while they are not steering, so pressing a direction is both how you get out of the shaft and how you stop going up. The two ways out are at different heights, and one of them is a window you have to take.",
+  "line": "a draught that only goes up, a lift that carries exactly one passenger, and two switches on two floors that two different elements have to work — so the ride has to be made twice, in the right order, with a nine-second clock at the end.",
   "tokens": [
+   "ent:button",
    "ent:door",
    "ent:fan",
    "ent:firewall",
-   "ent:ice",
-   "ent:lever",
+   "ent:torch",
+   "opt:button-timed",
+   "opt:button:timed",
    "opt:fan:lifts-air",
    "opt:latch"
   ]

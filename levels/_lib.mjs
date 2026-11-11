@@ -115,3 +115,14 @@ export function* hopAlong(c, x, max = 2400) {
   }
   throw new Error(`${c.me.element} could not hop to ${x} (at ${c.tx.toFixed(1)})`);
 }
+
+/** Stay on a partner's head while they walk or ride: steer to keep centred over them. */
+export function* rideAlong(c, partner, done, max = 1800) {
+  for (let t = 0; t < max; t++) {
+    if (done()) return;
+    const p = c.player(partner);
+    const d = p.x + PHYSIQUE[partner].w / 2 - c.cx;
+    yield Math.abs(d) < 2 ? 0 : d > 0 ? IN_RIGHT : IN_LEFT;
+  }
+  throw new Error(`${c.me.element} could not stay on ${partner}`);
+}

@@ -1085,7 +1085,7 @@ Entities:
   X  exit_f       exit       at (29,8)  fire
 ```
 
-## Thermal Stair (`thermal_stair`) — 3p, core `leaving-the-draught-is-what-stops-the-climb`
+## Thermal Stair (`thermal_stair`) — 3p, core `one-seat-lift-only-goes-up-so-ride-it-twice`
 
 ```
 Thermal Stair (thermal_stair) for fire+water+air
@@ -1095,8 +1095,8 @@ Thermal Stair (thermal_stair) for fire+water+air
  1  ########################################
  2  ########################################
  3  ########################################
- 4  ########^^^^.....#######################
- 5  ########^^^^..l..#######################
+ 4  ########^^^^.F...#######################
+ 5  ########^^^^.Fb..#######################
  6  ########^^^^####.#######################
  7  ########^^^^####.#######################
  8  ########^^^^####.#######################
@@ -1104,11 +1104,11 @@ Thermal Stair (thermal_stair) for fire+water+air
 10  ####....^^^^####.#######################
 11  ####....^^^^####.#######################
 12  ####....^^^^####.#######################
-13  ####.l*.^^^^####.#######################
-14  ########^^^^####.#######################
-15  #.......^^^^......I.F...D...D.....######
-16  #.......^^^^......I.F.*.D...D..XXX######
-17  #.@.@.@.^^^^*.....I.F...D...D..XXX######
+13  ####.t*.^^^^####.#######################
+14  ####.###^^^^####.#######################
+15  #.......^^^^............D...D.....######
+16  #.......^^^^..........*.D...D..XXX######
+17  #.@.@.@.^^^^*...........D...D..XXX######
 18  ########################################
 19  ########################################
 20  ########################################
@@ -1117,14 +1117,13 @@ Thermal Stair (thermal_stair) for fire+water+air
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
 Spawns (@): water (2,17)  fire (4,17)  air (6,17)
 Entities:
-  "  sign_0       sign       at (1,15)  "Steer, and you stop climbing."
+  "  sign_0       sign       at (1,16)  "Steer, and the climb stops."
   ^  wind         fan        at (8,4)  4x14  strength 0.9
-  l  low_pull     lever      at (5,13)  -> g1
-  l  high_pull    lever      at (14,5)  -> g2
-  I  icewall      ice        at (18,15)  1x3
-  F  flames       firewall   at (20,15)  1x3
-  D  g1           door       at (24,15)  1x3  <- low_pull  latch
-  D  g2           door       at (28,15)  1x3  <- high_pull  latch
+  t  low_torch    torch      at (5,13)  -> g1
+  b  high_press   button     at (14,5)  -> g2  mode timed  duration 540
+  F  flames       firewall   at (13,4)  1x2
+  D  g1           door       at (24,15)  1x3  <- low_torch  latch
+  D  g2           door       at (28,15)  1x3  <- high_press
   *  gem_a        gem        at (6,13)  air
   *  gem_f        gem        at (12,17)  fire
   *  gem_w        gem        at (22,16)  water
