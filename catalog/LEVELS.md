@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 75 campaign levels, 33 in this repo.
+Totals: 75 campaign levels, 34 in this repo.
 
 
 ## 2 players — this repo (12)
@@ -210,7 +210,7 @@ Totals: 75 campaign levels, 33 in this repo.
   - hints: Fire stands at the near end of the lava, right past the plates. Earth pushes the first boulder down: it rolls over the sludge and stops against Fire, on the far plate. / Earth pushes the second one down. It stops against the first, on the near plate, and both gates open.
   - features: ent:boulder ent:door ent:plate opt:heavy-plate opt:required:2 tile:lava tile:slope tile:sludge
 
-## 3 players — this repo (11)
+## 3 players — this repo (12)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -256,6 +256,10 @@ Totals: 75 campaign levels, 33 in this repo.
   - idea: a lift used as a jack. It is not transport: its job is to carry a boulder up the shaft and hold it against a plate hanging in the ceiling, and to stay there for the rest of the level.
   - ideas: lift-press, twist-order
   - features: ent:boulder ent:door ent:elevator ent:firewall ent:ice ent:lever ent:plate opt:elevator:powered opt:heavy-plate
+- **Thermal Stair** `thermal_stair` (3p: fire+water+air) core=`leaving-the-draught-is-what-stops-the-climb` challenge=motor par=3600
+  - idea: climbing a draught you can only leave sideways. In this simulation a rider gains height only while they are not steering, so pressing a direction is both how you get out of the shaft and how you stop going up. The two ways out are at different heights, and one of them is a window you have to take.
+  - ideas: climb-then-steer
+  - features: ent:door ent:fan ent:firewall ent:ice ent:lever opt:fan:lifts-air opt:latch
 
 ## 3 players — campaign (27)
 

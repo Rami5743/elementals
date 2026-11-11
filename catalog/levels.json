@@ -3303,6 +3303,35 @@
   ]
  },
  {
+  "id": "thermal_stair",
+  "name": "Thermal Stair",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+air"
+  ],
+  "parTicks": 3600,
+  "dark": false,
+  "challenge": "motor",
+  "core": "leaving-the-draught-is-what-stops-the-climb",
+  "ideas": [
+   "climb-then-steer"
+  ],
+  "order": 212,
+  "line": "climbing a draught you can only leave sideways. In this simulation a rider gains height only while they are not steering, so pressing a direction is both how you get out of the shaft and how you stop going up. The two ways out are at different heights, and one of them is a window you have to take.",
+  "tokens": [
+   "ent:door",
+   "ent:fan",
+   "ent:firewall",
+   "ent:ice",
+   "ent:lever",
+   "opt:fan:lifts-air",
+   "opt:latch"
+  ]
+ },
+ {
   "id": "treadmill",
   "name": "Treadmill",
   "source": "mine",
