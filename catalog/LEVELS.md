@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 75 campaign levels, 30 in this repo.
+Totals: 75 campaign levels, 31 in this repo.
 
 
-## 2 players — this repo (10)
+## 2 players — this repo (11)
 
 - **Dismount** `dismount` (2p: fire+air) core=`step-off-a-glide-in-mid-air` challenge=motor par=2400
   - idea: jumping off Air in mid-flight. A glide only ever descends, so the one place a passenger can reach that Air cannot is above the glide line — and only during the first second of it, while Air is still carrying its own jump upward.
@@ -70,6 +70,10 @@ Totals: 75 campaign levels, 30 in this repo.
   - idea: a turbine driving two gates at once, so the corridor between them has to be run.
   - ideas: shared-switch-two-gates, timed-window
   - features: ent:boulder ent:door ent:plate ent:turbine opt:heavy-plate opt:turbine-timed tile:mud
+- **Ballast Run** `ballast_run` (2p: fire+water) core=`two-light-players-are-not-one-heavy-one` challenge=mind par=2400
+  - idea: a heavy plate in a level with nobody heavy in it. A plate's load is the *largest* mass standing on it, never the sum, so two players on it together weigh exactly as much as one — which is to say, not enough.
+  - ideas: two-is-not-heavy, belt-cargo
+  - features: ent:belt ent:boulder ent:door ent:firewall ent:ice ent:plate ent:torch opt:belt:walkable opt:heavy-plate opt:latch
 
 ## 2 players — campaign (32)
 

@@ -2507,6 +2507,39 @@
   ]
  },
  {
+  "id": "ballast_run",
+  "name": "Ballast Run",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 2400,
+  "dark": false,
+  "challenge": "mind",
+  "core": "two-light-players-are-not-one-heavy-one",
+  "ideas": [
+   "two-is-not-heavy",
+   "belt-cargo"
+  ],
+  "order": 111,
+  "line": "a heavy plate in a level with nobody heavy in it. A plate's load is the *largest* mass standing on it, never the sum, so two players on it together weigh exactly as much as one — which is to say, not enough.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:firewall",
+   "ent:ice",
+   "ent:plate",
+   "ent:torch",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch"
+  ]
+ },
+ {
   "id": "cargo",
   "name": "Cargo",
   "source": "mine",

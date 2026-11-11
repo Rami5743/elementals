@@ -85,7 +85,9 @@ const seenIdeas = new Set(ideasHere.flatMap((l) => l.ideas));
 const seenIdeaPairs = new Set(ideasHere.flatMap((l) => pairsOf(l.ideas)));
 const newIdeas = myIdeas.filter((i) => !seenIdeas.has(i));
 const newIdeaPairs = pairsOf(myIdeas).filter((p) => !seenIdeaPairs.has(p));
-const coined = myIdeas.filter((i) => !IDEAS[i]);
+const usedAnywhere = new Set(others.flatMap((l) => l.ideas ?? []));
+const invented = myIdeas.filter((i) => !usedAnywhere.has(i));   // no other level anywhere uses it
+const unregistered = myIdeas.filter((i) => !IDEAS[i]);
 const contains = ideasHere.filter((l) => myIdeas.length && myIdeas.every((i) => l.ideas.includes(i)));
 
 console.log(`${level.name} (${level.id}) — ${sizes.join('/')} players, ${mine.length} features`);
@@ -94,7 +96,8 @@ console.log(`ideas:    ${myIdeas.join(', ') || '(none — add "ideas" to meta.js
 console.log(`features: ${mine.join(' ')}   (context only — repeating ingredients is free)`);
 console.log(`\nideas new at ${sizes.join('/')} players (${newIdeas.length}): ${newIdeas.join(', ') || '(none)'}`);
 console.log(`idea pairings new at ${sizes.join('/')} players (${newIdeaPairs.length}): ${newIdeaPairs.join(', ') || '(none)'}`);
-if (coined.length) console.log(`coined here, in no other level anywhere: ${coined.join(', ')}  (add them to tools/ideas.mjs)`);
+if (invented.length) console.log(`used by no other level anywhere: ${invented.join(', ')}`);
+if (unregistered.length) console.log(`not in tools/ideas.mjs yet — add them: ${unregistered.join(', ')}`);
 
 console.log(`\nlevels at the same player count that share an idea:`);
 const sharers = sameCount.filter((l) => l.ideas?.some((i) => myIdeas.includes(i)));
@@ -141,10 +144,10 @@ if (problems.length) {
   console.log('FAIL: change the idea or its combination — not the wording.');
 } else {
   // Three ways to clear the gate, in the order they are worth having.
-  const tier = coined.length
-    ? `PASS (invented): ${coined.join(', ')} — an idea no level anywhere has used. This is what to aim for.`
+  const tier = invented.length
+    ? `PASS (invented): ${invented.join(', ')} — an idea no other level anywhere uses. This is what to aim for.`
     : newIdeas.length
-      ? `PASS (new here): ${newIdeas.join(', ')} — already in the vocabulary, but no ${sizes.join('/')}-player level had used it.`
+      ? `PASS (new here): ${newIdeas.join(', ')} — used elsewhere in the repo, but by no ${sizes.join('/')}-player level.`
       : `PASS (recycled): nothing new, only a combination no ${sizes.join('/')}-player level has together (${newIdeaPairs.slice(0, 3).join('; ')}). This is the fallback, not the target — say in NOTES.md what you tried to invent first and why it did not work.`;
   console.log(tier);
   if (warnings.length) console.log('Read the warnings above and justify the core in NOTES.md.');
