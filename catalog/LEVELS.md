@@ -224,10 +224,10 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: a button that opens two things — the gate the others have to run, and the floor the presser is standing on. Pressing it is not a favour somebody does from safety; it is how that player leaves the upper hall, and it starts everyone's clock at the same moment.
   - ideas: twist-self-block, timed-window
   - features: ent:boulder ent:button ent:door ent:firewall ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:wide-door
-- **Draught** `draught` (3p: fire+earth+air) core=`boulder-as-a-permanent-switch` challenge=mind par=2100
-  - idea: a heavy plate that has to stay down for good, so the boulder — not a player — becomes the machine's switch.
-  - ideas: object-as-permanent-switch
-  - features: ent:boulder ent:door ent:fan ent:plate ent:torch opt:heavy-plate
+- **Draught** `draught` (3p: fire+earth+air) core=`the-weight-that-powers-the-climb-locks-the-climbers-in` challenge=mind par=2100
+  - idea: a boulder that is the only weight that will hold a draught open, a loft gate wired against that same weight, and a hatch that only a torch at the top of the shaft opens — so the three of them have to take turns being stuck.
+  - ideas: object-as-permanent-switch, counterweight-you-must-remove, invert-door, twist-stranding, twist-order, fan-passenger
+  - features: ent:boulder ent:door ent:fan ent:plate ent:torch opt:heavy-plate opt:invert:door
 - **Sluicegate** `sluicegate` (3p: water+earth+air) core=`two-timers-that-must-overlap` challenge=mind par=3000
   - idea: two timers that have to overlap — a sluice that stays open five seconds and a stretch of water that stays frozen ten.
   - ideas: twist-two-clocks, freeze-bridge

@@ -2769,19 +2769,25 @@
   "parTicks": 2100,
   "dark": false,
   "challenge": "mind",
-  "core": "boulder-as-a-permanent-switch",
+  "core": "the-weight-that-powers-the-climb-locks-the-climbers-in",
   "ideas": [
-   "object-as-permanent-switch"
+   "object-as-permanent-switch",
+   "counterweight-you-must-remove",
+   "invert-door",
+   "twist-stranding",
+   "twist-order",
+   "fan-passenger"
   ],
   "order": 203,
-  "line": "a heavy plate that has to stay down for good, so the boulder — not a player — becomes the machine's switch.",
+  "line": "a boulder that is the only weight that will hold a draught open, a loft gate wired against that same weight, and a hatch that only a torch at the top of the shaft opens — so the three of them have to take turns being stuck.",
   "tokens": [
    "ent:boulder",
    "ent:door",
    "ent:fan",
    "ent:plate",
    "ent:torch",
-   "opt:heavy-plate"
+   "opt:heavy-plate",
+   "opt:invert:door"
   ]
  },
  {

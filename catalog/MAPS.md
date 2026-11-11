@@ -698,7 +698,7 @@ Entities:
   X  exit_14      exit       at (32,18)  air
 ```
 
-## Draught (`draught`) — 3p, core `boulder-as-a-permanent-switch`
+## Draught (`draught`) — 3p, core `the-weight-that-powers-the-climb-locks-the-climbers-in`
 
 ```
 Draught (draught) for fire+earth+air
@@ -722,25 +722,25 @@ Draught (draught) for fire+earth+air
 15  #...............^^^...........#........#
 16  #...............^^^...........#........#
 17  #...............^^^...........D........#
-18  #...........*...^^^...........D..X.....#
-19  #.....pp..O.@@@.^^^...........D..X.....#
+18  #.....*.........^^^...........D..X.....#
+19  #..@@.@...O.....^^^........pp.D..X.....#
 20  ########################################
 21  ########################################
 
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
-Spawns (@): earth (12,19)  fire (13,19)  air (14,19)
+Spawns (@): fire (3,19)  air (4,19)  earth (6,19)
 Entities:
-  "  sign_0       sign       at (2,16)  "This plate is heavy, and it has to stay down."
-  "  sign_1       sign       at (23,5)  "Fire lights the torch."
-  *  gem_2        gem        at (12,18)  earth
+  "  sign_0       sign       at (19,16)  "Held: draught on."
+  "  sign_1       sign       at (21,5)  "Fire lights it."
+  *  gem_2        gem        at (6,18)  earth
   *  gem_3        gem        at (17,12)  neutral
   *  gem_4        gem        at (22,7)  air
   *  gem_5        gem        at (25,7)  fire
-  p  weigh        plate      at (6,19)  2x1  -> updraft  weight heavy
+  p  weigh        plate      at (27,19)  2x1  -> updraft, gate  weight heavy
   O  bould        boulder    at (10,19)
   ^  updraft      fan        at (16,4)  3x16  <- weigh
-  t  beacon       torch      at (21,7)  -> gate, hatch
-  D  gate         door       at (27,4)  1x4  <- beacon
+  t  beacon       torch      at (21,7)  -> hatch
+  D  gate         door       at (27,4)  1x4  <- weigh  invert
   D  hatch        door       at (30,17)  1x3  <- beacon
   X  exit_12      exit       at (31,6)  fire
   X  exit_13      exit       at (33,6)  air
