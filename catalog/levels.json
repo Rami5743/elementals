@@ -3268,21 +3268,30 @@
   "groups": [
    "fire+water"
   ],
-  "parTicks": 2400,
+  "parTicks": 3600,
   "dark": false,
   "challenge": "mind",
-  "core": "freeze-pad-and-a-tunnel-too-low-to-ride",
+  "core": "two-pools-one-pad-never-ice-together",
   "ideas": [
    "freeze-bridge",
-   "low-roof-no-jump"
+   "freeze-invert",
+   "invert-door",
+   "hold-switch",
+   "twist-order",
+   "twist-undo"
   ],
   "order": 105,
-  "line": "the freeze pad, and a tunnel too low to ride through.",
+  "line": "two pools fed by one pad, one of them inverted, so they are never ice at the same time — and an errand at the far end that has to be run and then *undone*, because the way out is back where you started.",
   "tokens": [
+   "ent:door",
    "ent:freezepad",
-   "ent:ice",
+   "ent:plate",
    "ent:pool",
+   "ent:torch",
+   "opt:invert:pool",
+   "opt:latch",
    "opt:pool-timed",
+   "opt:required:2",
    "tile:water"
   ]
  },

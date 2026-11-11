@@ -182,7 +182,7 @@ Entities:
   X  exit_11      exit       at (37,18)  earth
 ```
 
-## Thaw (`thaw`) — 2p, core `freeze-pad-and-a-tunnel-too-low-to-ride`
+## Thaw (`thaw`) — 2p, core `two-pools-one-pad-never-ice-together`
 
 ```
 Thaw (thaw) for fire+water
@@ -198,32 +198,35 @@ Thaw (thaw) for fire+water
  7  ########################################
  8  ########################################
  9  ########################################
-10  #.............#.############...........#
-11  #.............#.############...........#
-12  #.............#.############...........#
-13  #.............#.############...........#
-14  #.............#.############...........#
-15  #.............#.############...........#
-16  #.............#.############...........#
-17  #.............#.############...........#
-18  #.....*.......I.############....*..X.X.#
-19  #...@.@.......I.....*.........f....X.X.#
-20  ################WWWWWWWWWWWW############
+10  ########################################
+11  ########################################
+12  #.......#..............................#
+13  #.......#..............................#
+14  #.......#..............................#
+15  #.......#..............................#
+16  #.......#..............................#
+17  #.......D..............................#
+18  #..X.X..D...............*............*.#
+19  #..X.X..D.@.@..........f.....p.*....t..#
+20  ##############WWWWWWWW####WWWWWWWW######
 21  ########################################
 
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
-Spawns (@): fire (6,19)  water (4,19)
+Spawns (@): water (10,19)  fire (12,19)
 Entities:
-  "  sign_0       sign       at (2,15)  "Water on a freeze pad turns the pool to ice."
-  "  sign_1       sign       at (2,13)  "The pad is on the far side. Someone has to swim."
-  *  gem_2        gem        at (6,18)  fire
-  *  gem_3        gem        at (20,19)  water
-  *  gem_4        gem        at (32,18)  neutral
-  I  ice          ice        at (14,18)  1x2
-  W  pool         pool       at (16,20)  12x1  <- pad  duration 480
-  f  pad          freezepad  at (30,19)  -> pool
-  X  exit_8       exit       at (35,18)  water
-  X  exit_9       exit       at (37,18)  fire
+  "  sign_0       sign       at (10,17)  "The way out is here."
+  "  sign_1       sign       at (22,17)  "On: ice behind. Off: ice ahead."
+  W  poolA        pool       at (14,20)  8x1  <- pad  duration 240
+  W  poolB        pool       at (26,20)  8x1  <- pad  duration 60  invert
+  f  pad          freezepad  at (23,19)  -> poolA, poolB
+  p  latchplate   plate      at (29,19)  -> gate
+  t  beacon       torch      at (36,19)  -> gate
+  D  gate         door       at (8,17)  1x3  <- latchplate, beacon (needs 2)  latch
+  *  gem_8        gem        at (24,18)  neutral
+  *  gem_9        gem        at (31,19)  water
+  *  gem_10       gem        at (37,18)  fire
+  X  exit_11      exit       at (3,18)  water
+  X  exit_12      exit       at (5,18)  fire
 ```
 
 ## Updraft Duet (`updraft_duet`) — 2p, core `the-landing-melts-from-the-moment-you-leave-the-pad`

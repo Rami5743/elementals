@@ -46,10 +46,10 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: the ground pound as a way to move something, not just to break a floor. The boulder cannot be pushed anywhere, so the floor under it has to go instead.
   - ideas: pound-to-move
   - features: ent:boulder ent:cracked ent:door ent:ice ent:plate opt:heavy-plate tile:mud
-- **Thaw** `thaw` (2p: fire+water) core=`freeze-pad-and-a-tunnel-too-low-to-ride` challenge=mind par=2400
-  - idea: the freeze pad, and a tunnel too low to ride through.
-  - ideas: freeze-bridge, low-roof-no-jump
-  - features: ent:freezepad ent:ice ent:pool opt:pool-timed tile:water
+- **Thaw** `thaw` (2p: fire+water) core=`two-pools-one-pad-never-ice-together` challenge=mind par=3600
+  - idea: two pools fed by one pad, one of them inverted, so they are never ice at the same time — and an errand at the far end that has to be run and then *undone*, because the way out is back where you started.
+  - ideas: freeze-bridge, freeze-invert, invert-door, hold-switch, twist-order, twist-undo
+  - features: ent:door ent:freezepad ent:plate ent:pool ent:torch opt:invert:pool opt:latch opt:pool-timed opt:required:2 tile:water
 - **Updraft Duet** `updraft_duet` (2p: water+air) core=`the-landing-melts-from-the-moment-you-leave-the-pad` challenge=motor par=5400
   - idea: a landing made of ice that starts melting the moment you leave the pad that froze it. The draught carries a pair, but slowly, and the whole climb is spent inside a countdown that you started yourself.
   - ideas: fan-passenger, freeze-bridge, twist-sacrifice

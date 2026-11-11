@@ -58,7 +58,15 @@ a lower bank buys roughly another tile.
   3.2–3.4 stops Fire and Water too; above 3.4 nobody walks against it.
 - `mode: "reverse"` runs always and flips direction while its signal is on. Without `reverse` it
   runs only while on, and a stopped belt is an ordinary floor.
-- Crates and boulders ride belts.
+- Crates and boulders ride belts, and an object on a belt stops the tick the belt stops — so a
+  belt wired to a `hold` button is a way of parking cargo on a chosen tile.
+- **Only Earth can push a boulder.** Measured: Fire pressed into one for 600 ticks and it did
+  not move a pixel. In a group without Earth a boulder is pure wall — and a machine (belt,
+  lift, closing door) is then the only thing that can move it at all. Crates, by contrast,
+  anybody pushes.
+- **A boulder in a one-tile-high corridor is an absolute barrier**, even to a hopping player:
+  measured, Fire could not get past one with jump held. A boulder in open ground is hopped over
+  without a thought, so if a boulder is meant to block, put a roof one tile above it.
 
 ## Fans
 

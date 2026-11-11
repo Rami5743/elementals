@@ -1,34 +1,55 @@
-# Thaw (`thaw`) — Fire + Water
+# Thaw — notes
 
-**Introduces:** the freeze pad, and a tunnel too low to ride through.
+**Brings together:** two pools fed by one pad, one of them inverted, so they are never ice at
+the same time — and an errand at the far end that has to be run and then *undone*, because the
+way out is back where you started.
 
-1. **Solution.** Fire hops up for its gem and melts the ice that shuts the near bank, then steps
-   back out of the way. Water walks past, swims the twelve-tile tunnel over the pool — taking its
-   own gem on the way — and climbs out onto the far bank, where it stands on the freeze pad. The
-   pool turns to ice, Fire walks the tunnel dry-shod and goes to its door past Water. Water leaves
-   the pad, hops up for the neutral gem and takes the near door.
+## The intended solution
 
-2. **Roles.** Fire opens the near bank. Water is the swimmer and the freezer; it has to make the
-   crossing once by itself before either of them can make it twice.
+Left to right: the exit gate at 8 with both exits behind it, the starting hall, pool A (14–21),
+the island with the pad at 23, pool B (26–33), and the far hall with the torch at 36.
 
-3. **Why each is necessary.** Fire dies in the pool and the tunnel is one tile high, so it cannot
-   be carried through on Water's head either — riding needs two tiles of headroom. The only way
-   Fire crosses is frozen water, and only Water on the pad freezes it. Equally, the ice at column
-   14 is the only way onto the tunnel and only Fire melts it. `check` confirms both: with Fire
-   parked in its door Water never gets past the ice, and with Water parked in its door the pool
-   never freezes.
+The pad is Water's alone. Standing on it freezes A; stepping off it freezes B (B is inverted,
+and refreezes the instant the pad is released). A keeps its ice for 240 ticks after the pad is
+left; B loses its ice 60 ticks after the pad is pressed.
 
-4. **The insight.** The obvious answer — Water carries Fire — is deliberately taken away by the
-   height of the tunnel, which leaves the pad as the only crossing. The pad is on the wrong side,
-   so the swim has to happen first and alone.
+The gate needs two things at once: the plate at 29 — out on pool B — and the torch at 36. It
+**latches**, so it only has to be true once.
 
-5. **Likely failures and recovery.** Fire stepping into the pool before it is frozen drowns and
-   restarts the level; the water is in plain sight and the sign says so. Otherwise nothing can be
-   lost. The pool stays frozen for eight seconds after Water steps off the pad, so Fire is never
-   racing, and Water can step back on at any time.
+1. Water crosses A (its own water, it does not need ice) and stands on the pad. A freezes.
+2. Fire crosses A to the island.
+3. Water steps off onto the neutral gem at 24. B freezes.
+4. Fire crosses B to the far hall, lights the torch and takes the fire gem — there will be no
+   second trip out here. Water walks out onto the ice of B and stands on the plate at 29.
+5. Torch and plate together: the gate latches open, four screens away.
+6. Fire comes back over B while it is still ice. Only then does Water go back to the pad, which
+   freezes A again and thaws B behind Fire.
+7. Fire crosses A home; Water follows over the ice, and both go out through the gate.
 
-- **Shortcuts considered and blocked.** The tunnel roof runs from row 10 to the roof of the level
-  over every pool tile, so there is no route above the water and no room for a stack of two
-  inside it. The ice is two tiles with rock to the roof above it. There is no crate or boulder
-  anywhere, so nothing can be floated across as a stepping stone, and the pool is twelve tiles
-  wide against Fire's three-tile jump over a liquid.
+## Roles
+
+- **Water** — the pad answers to nobody else, so every change of state is Water's, and Water
+  is the only one who can wait out on pool B holding the plate.
+- **Fire** — the only one who can light the torch, and the only one for whom ice is the
+  difference between a floor and a death.
+
+## Why each is necessary
+
+Without Water no pool is ever ice and Fire never leaves the starting hall. Without Fire the
+torch is never lit and the gate never latches, however long Water stands on the plate.
+
+## The insight
+
+One pad, two pools, and they are opposites: every step Water takes opens one road and closes
+the other. So the far end is not a destination but an errand — the gate has to be made to latch
+while you are out there, because the way home is the way you came.
+
+## Likely failures and recovery
+
+- **Going back to the pad while Fire is still in the far hall.** B thaws and Fire is cut off.
+  Step off the pad again and it refreezes: nothing is lost.
+- **Coming home before the torch is lit.** The gate never latched, so the whole trip has to be
+  made again. The sign at 10 says where the way out is, before anyone sets off.
+- **Leaving the fire gem.** It is in the far hall, and the far hall is visited once.
+- **Waiting on the island for the ice to come back.** It will not: A is ice only while the pad
+  is pressed, and the pad is four tiles away across the island.
