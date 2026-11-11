@@ -2962,20 +2962,27 @@
   "groups": [
    "fire+air"
   ],
-  "parTicks": 2400,
+  "parTicks": 3600,
   "dark": true,
   "challenge": "motor",
-  "core": "glide-with-a-passenger-in-the-dark",
+  "core": "the-switch-is-halfway-so-the-ride-ends-halfway",
   "ideas": [
    "dark",
-   "glide-passenger"
+   "glide-passenger",
+   "glide-dismount",
+   "machine-strands-operator",
+   "twist-stranding",
+   "hold-switch"
   ],
   "order": 108,
-  "line": "gliding with a passenger, in the dark.",
+  "line": "a glide across sludge in the dark, a passenger who has to get off halfway, and a pillar in the middle of the gap that nobody can leave on their own.",
   "tokens": [
    "dark",
    "ent:door",
+   "ent:elevator",
+   "ent:plate",
    "ent:torch",
+   "opt:elevator:powered",
    "tile:sludge"
   ]
  },

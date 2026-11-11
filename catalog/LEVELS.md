@@ -58,10 +58,10 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: a boulder in a group with no Earth in it. Fire and Water cannot shift a boulder at all — it is a wall with a handle on it, and the belt is the only hand in the level.
   - ideas: no-hands-for-cargo, belt-cargo, hold-switch, twist-self-block, twist-order, machine-strands-operator
   - features: ent:belt ent:boulder ent:button ent:door ent:plate ent:torch opt:belt:walkable opt:button:hold opt:required:2
-- **Lantern** `lantern` (2p: fire+air) core=`glide-with-a-passenger-in-the-dark` challenge=motor par=2400 dark
-  - idea: gliding with a passenger, in the dark.
-  - ideas: dark, glide-passenger
-  - features: dark ent:door ent:torch tile:sludge
+- **Lantern** `lantern` (2p: fire+air) core=`the-switch-is-halfway-so-the-ride-ends-halfway` challenge=motor par=3600 dark
+  - idea: a glide across sludge in the dark, a passenger who has to get off halfway, and a pillar in the middle of the gap that nobody can leave on their own.
+  - ideas: dark, glide-passenger, glide-dismount, machine-strands-operator, twist-stranding, hold-switch
+  - features: dark ent:door ent:elevator ent:plate ent:torch opt:elevator:powered tile:sludge
 - **Wellspring** `wellspring` (2p: water+earth) core=`freeze-pad-worked-from-above` challenge=mind par=3600
   - idea: a shuttle lift on a heavy plate, and a freeze pad worked from above to open a route down below.
   - ideas: trigger-from-above, freeze-bridge

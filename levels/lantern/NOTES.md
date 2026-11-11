@@ -1,35 +1,53 @@
-# Lantern (`lantern`) — Fire + Air
+# Lantern — notes
 
-**Introduces:** gliding with a passenger, in the dark.
+**Brings together:** a glide across sludge in the dark, a passenger who has to get off halfway,
+and a pillar in the middle of the gap that nobody can leave on their own.
 
-1. **Solution.** Air climbs the four two-tile steps to the launch ledge and stands at its edge.
-   Fire follows, takes its gem at the top and climbs onto Air's head. Air walks off the ledge and
-   holds Jump: the pair glide the length of the sludge river, collecting the neutral gem on the
-   line, and land on the far bank. Fire steps off, walks to the torch and lights it; the torch
-   opens the gate, and both walk through to their doors. Air hops up for its own gem on the way.
+## The intended solution
 
-2. **Roles.** Air is the only way across. Fire is the only light and the only key: nothing else
-   lights a torch.
+The level is dark: only the lit torch shows anything, so the shape of the gap has to be learned
+on the way. From left to right: a staircase up to a ledge at row 11 (x 11–14), a sludge pit
+(15–29), a pillar standing in it at 20–22 with the torch on top, and the far hall (30–38) with
+a plate at 31, the exit gate at 35, and both exits behind it.
 
-3. **Why each is necessary.** Thirteen tiles of sludge kill everyone and there is no floor, ledge
-   or object over them, so the crossing is a glide and only Air glides. The gate on the far bank
-   is four tiles with rock to the roof above it, and its only input is the torch. `check` confirms
-   both counterfactuals.
+- The torch on the pillar is the only input to the gate.
+- The plate at 31 drives a shuttle that runs along row 17 between 29 and 23 — out to the
+  pillar while someone stands on the plate, home again when they step off.
 
-4. **The insight.** Height is distance. The staircase is not there to be climbed for its own sake
-   — the four steps buy the altitude that turns a glide into a crossing, and the neutral gem is
-   placed on the line a good launch takes.
+1. Both climb the staircase. Fire takes its gem at the top and climbs onto Air.
+2. Air runs off the ledge and glides. Air alone could cross the whole pit, but the torch is
+   halfway across, so Fire steps off above the pillar and steers down onto it.
+3. Air glides on, taking the neutral gem on the second half of the descent, lands in the far
+   hall and takes the air gem.
+4. Fire lights the torch. The gate at 35 opens — but Fire is on a pillar in a sludge pit with
+   no way off it.
+5. Air stands on the plate. The shuttle runs out to the pillar; Fire steps aboard; Air steps
+   off and the shuttle carries Fire home.
 
-5. **Likely failures and recovery.** This is the level where the hands matter. Leaving the ledge
-   without holding Jump drops the pair into the sludge and restarts; so does stepping off Air's
-   head in mid-air. Both are instant and obvious rather than slow and confusing, and the staircase
-   is a few seconds from the spawn, so a retry is cheap. The level is dark, so the sludge is best
-   read from the torchlight and the glow of the characters — the launch ledge itself is lit by
-   nothing, which is part of the ask.
+## Roles
 
-- **Shortcuts considered and blocked.** The sludge spans every column between the two banks at
-  floor level and there is nothing to push into it, so it cannot be bridged. The staircase tops
-  out at the launch ledge, thirteen tiles short of the far bank: a boost would not cross it and
-  there is no second player able to throw Fire anyway, since a boost needs the thrower to stay
-  behind. The gate's only input is the torch, and the torch is four tiles clear of the gate so
-  that nobody can brush it on the way through.
+- **Air** — the only one who can cross the sludge at all, the ride for the first half, and the
+  only one who can call the shuttle back for the passenger it left behind.
+- **Fire** — the only one who can light the torch, and the torch is the whole gate.
+
+## Why each is necessary
+
+Fire cannot cross a pit of sludge without a glide, and Air cannot light a torch. Air can reach
+the far hall alone and get nothing: the gate stays shut.
+
+## The insight
+
+The ride is not to the far side. The switch is in the middle of the gap, so the glide has to be
+spent on getting the passenger to the middle — and the price of that is a partner marooned on a
+pillar, who can only be fetched from the far side he opened the way to.
+
+## Likely failures and recovery
+
+- **Riding all the way across.** Both land in the far hall with a shut gate and no way back to
+  the pillar: a restart. In the dark this is the easy mistake, which is why the pillar is three
+  tiles wide and the drop can be steered.
+- **Stepping off too early.** A passenger who does nothing is carried along, so getting off is
+  a deliberate act; do it over the pit and it is sludge. Steer toward the torch, not away.
+- **Standing on the plate and waiting.** The shuttle only comes back when the plate is free —
+  Air has to leave it once Fire is aboard, not before.
+- **Climbing the stair in the dark.** Every step is two tiles; nothing there can kill you.
