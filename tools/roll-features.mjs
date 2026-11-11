@@ -4,10 +4,10 @@
 //   node tools/roll-features.mjs 3            # three-player level
 //   node tools/roll-features.mjs 4 --seed 17  # reproducible roll
 //
-// The IDEA and the TWIST are what the level has to be new in — they are drawn with a bias away
-// from whatever this player count has already used. The SUPPORTS and TERRAIN are only ingredients:
-// repeating those is free, and they are rolled purely to stop the same four props being reached
-// for every time.
+// The target is always to INVENT an idea that is not in tools/ideas.mjs at all. The rolled IDEA
+// and TWIST are the fallback for when nothing comes, drawn with a bias away from whatever this
+// player count has already used. The SUPPORTS and TERRAIN are only ingredients: repeating those is
+// free, and they are rolled purely to stop the same four props being reached for every time.
 import fs from 'node:fs';
 import path from 'node:path';
 import { IDEAS, SUPPORTS, TERRAIN } from './ideas.mjs';
@@ -53,7 +53,12 @@ const line = (label, it, withTally) => {
 };
 
 console.log(`roll for a ${players}-player level  (seed ${shown}; ${mineHere.length} of this repo's levels play at ${players})\n`);
-console.log('--- this is what has to be new ---');
+console.log(`--- first, try to invent ---
+          Before taking the roll, spend a minute on the question it cannot answer: what could this
+          level be about that no key in tools/ideas.mjs describes? Something the simulation does
+          that nobody has built on yet. An invented idea is the best outcome every time; the roll
+          below is the fallback for when nothing comes.\n`);
+console.log('--- fallback: build on this ---');
 for (const it of spine) line('IDEA', it, true);
 for (const it of twist) line('TWIST', it, true);
 console.log('\n--- ingredients: free to repeat, rolled only for variety ---');
@@ -69,6 +74,7 @@ console.log(`\ncores already taken at ${players} players:`);
 for (const l of mineHere) console.log(`  ${l.core ?? '?'}  (${(l.ideas ?? []).join(' + ')})`);
 
 console.log(`
-Re-roll as often as you like. The level has to end up with either an idea nobody of this player
-count has used, or a pairing of old ideas that no level of this player count has together —
-node tools/novelty.mjs <id> is what checks it.`);
+Re-roll as often as you like. In order of what is worth having: an idea invented here and added to
+tools/ideas.mjs; an idea no level of this player count has used; and, only if neither comes, a
+pairing of old ideas that no level of this player count has together. node tools/novelty.mjs <id>
+says which of the three you ended up with.`);

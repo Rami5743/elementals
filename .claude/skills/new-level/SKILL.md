@@ -26,9 +26,15 @@ The rule the user set: **levels for the same player count must differ in their i
 level may be very close to a 3-player level; two 3-player levels may not be close to each other.
 
 What has to be new is the *idea*, not the parts. Reusing ice walls, turbines, cracked floors,
-heavy plates and the same liquids is free and always will be — nobody notices the props. Reusing an
-old idea is fine too, as long as the level brings either a new idea or a combination of old ideas
-that no level of this player count has together.
+heavy plates and the same liquids is free and always will be — nobody notices the props.
+
+**Aim to invent an idea every time.** In order of what is worth having:
+
+1. An idea that is in no level anywhere — something this simulation does that nothing has been
+   built on yet. Add the key to `tools/ideas.mjs` when you coin one. This is the target.
+2. An idea already in the vocabulary that no level of this player count has used.
+3. Only if neither comes: a combination of old ideas that no level of this player count has
+   together. This is the fallback, and NOTES.md should say what you tried to invent first.
 
 ## 3. Roll the ingredients
 
@@ -36,14 +42,14 @@ that no level of this player count has together.
 node tools/roll-features.mjs <players>
 ```
 
-It rolls an **idea** and a **twist** — the parts that have to be new, drawn with a bias away from
-what this player count has already used — plus two supports and a terrain, which are only
-ingredients and are rolled for variety, not as a rule. It also prints every idea and core tag
-already taken at this player count. Re-roll as often as you like before committing to one; swap
-anything you have a reason to swap, and say so in NOTES.md.
+Before reading the roll, spend a minute on the question it cannot answer: *what could this level be
+about that no key in `tools/ideas.mjs` describes?* Re-read `references/engine-facts.md` and look for
+a behaviour nothing has been built on. That is the first thing to try every time.
 
-The vocabulary lives in `tools/ideas.mjs`. **Coining a new key is the best outcome**: an idea that
-is not in that table is, by definition, one nothing else has used. Add it to the table when you do.
+The roll is the fallback. It gives an **idea** and a **twist**, drawn with a bias away from what
+this player count has already used, plus two supports and a terrain, which are only ingredients and
+are rolled for variety, not as a rule. It also prints every idea and core tag already taken here.
+Re-roll as often as you like; swap anything you have a reason to swap, and say so in NOTES.md.
 
 ## 4. Design on paper, before any JSON
 
@@ -109,6 +115,11 @@ It reads `meta.json`'s `ideas` and fails only on ideas:
 
 Ingredient overlap is printed for context and is **never** a reason to fail. A level made of exactly
 the same props as its neighbour is fine if the idea is somewhere else.
+
+It also says *how* the level got through: `PASS (invented)` for an idea new to the vocabulary,
+`PASS (new here)` for one no level of this player count had used, `PASS (recycled)` for a fresh
+combination of old ideas. The third is allowed but is the weakest result — if that is where you
+landed, say in NOTES.md what you tried to invent first and why it did not work.
 
 - **FAIL** — change the idea or its combination. Do not reword the description to get past it.
 - **REVIEW** — allowed; say in NOTES.md why the core is not the neighbour's core.

@@ -137,6 +137,16 @@ else {
 console.log('');
 for (const w of warnings) console.log(`  ! ${w}`);
 for (const p of problems) console.log(`  x ${p}`);
-if (!problems.length) console.log(warnings.length ? 'REVIEW: the idea is new here; read the warnings and justify the core in NOTES.md.' : 'PASS: the idea, or the combination of ideas, is new at this player count.');
-else console.log('FAIL: change the idea or its combination — not the wording.');
+if (problems.length) {
+  console.log('FAIL: change the idea or its combination — not the wording.');
+} else {
+  // Three ways to clear the gate, in the order they are worth having.
+  const tier = coined.length
+    ? `PASS (invented): ${coined.join(', ')} — an idea no level anywhere has used. This is what to aim for.`
+    : newIdeas.length
+      ? `PASS (new here): ${newIdeas.join(', ')} — already in the vocabulary, but no ${sizes.join('/')}-player level had used it.`
+      : `PASS (recycled): nothing new, only a combination no ${sizes.join('/')}-player level has together (${newIdeaPairs.slice(0, 3).join('; ')}). This is the fallback, not the target — say in NOTES.md what you tried to invent first and why it did not work.`;
+  console.log(tier);
+  if (warnings.length) console.log('Read the warnings above and justify the core in NOTES.md.');
+}
 process.exit(problems.length ? 1 : 0);

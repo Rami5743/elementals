@@ -67,9 +67,10 @@ Use `--fast` to rebuild the page from the existing links without re-running the 
 window or a jump). `order` sorts the cards on the page: 1xx for two players, 2xx for three, 3xx for
 four. `core` is a short tag for the level's central idea and must be unique among the levels for the
 same player count. `ideas` lists what the level is built from, in the vocabulary of
-`tools/ideas.mjs`: a new level needs an idea no level of its player count has used, or a pairing of
-old ideas that none of them has together. Repeating *ingredients* — the same ice walls, turbines and
-cracked floors — is free. `tools/novelty.mjs` checks all of this.
+`tools/ideas.mjs`. The aim is to invent an idea for each new level and add its key to that table;
+failing that, use one no level of the same player count has used; and only failing that, a new
+pairing of old ideas. Repeating *ingredients* — the same ice walls, turbines and cracked floors —
+is free. `tools/novelty.mjs` checks this and says which of the three a level managed.
 
 ## Adding a level
 
