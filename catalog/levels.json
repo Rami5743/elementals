@@ -3117,6 +3117,37 @@
   ]
  },
  {
+  "id": "slipstream",
+  "name": "Slipstream",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 2700,
+  "dark": false,
+  "challenge": "motor",
+  "core": "a-switch-only-something-airborne-can-press",
+  "ideas": [
+   "switch-in-mid-flight",
+   "quorum"
+  ],
+  "order": 112,
+  "line": "a switch hanging in the air over a chasm. Plates read whatever overlaps them, and this one overlaps nothing that can stand on it — the only way to press it is to be in flight.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:ice",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "sluicegate",
   "name": "Sluicegate",
   "source": "mine",

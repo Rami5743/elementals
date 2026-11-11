@@ -497,6 +497,52 @@ Entities:
   X  exit_w       exit       at (35,15)  water
 ```
 
+## Slipstream (`slipstream`) — 2p, core `a-switch-only-something-airborne-can-press`
+
+```
+Slipstream (slipstream) for fire+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  #....................###################
+10  #...D.....I...p.............D.....######
+11  #.X.D.....I.................D..X..######
+12  #.X.D...pp*O@@........*.....D..X..######
+13  ###########!##..########################
+14  ##############..########################
+15  ##############..########################
+16  ##############..########################
+17  ##############..########################
+18  ##############..########################
+19  ##############SS########################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (12,12)  fire (13,12)
+Entities:
+  "  sign_0       sign       at (1,10)  "Two switches, and one of them is in the air."
+  !  post         checkpoint at (11,12)
+  D  gate_e       door       at (4,10)  1x3  <- weigh, arm (needs 2)  latch
+  I  icewall      ice        at (10,10)  1x3
+  O  rock_1       boulder    at (11,12)
+  p  weigh        plate      at (8,12)  2x1  -> vault, gate_e  weight heavy
+  p  arm          plate      at (14,10)  -> vault, gate_e
+  D  vault        door       at (28,10)  1x3  <- weigh, arm (needs 2)  latch
+  *  gem_e        gem        at (10,12)  earth
+  *  gem_f        gem        at (22,12)  fire
+  X  exit_e       exit       at (2,11)  earth
+  X  exit_f       exit       at (31,11)  fire
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```
