@@ -1027,6 +1027,54 @@ Entities:
   X  exit_w       exit       at (32,12)  water
 ```
 
+## Jackshaft (`jackshaft`) — 3p, core `a-lift-that-presses-instead-of-carrying`
+
+```
+Jackshaft (jackshaft) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  #####################........X.#########
+ 9  #####################pp...*..X.#########
+10  #####################..#################
+11  #####################..#################
+12  #####################..#################
+13  #.....D...I.F..........#################
+14  #.X.X.D...I.F..........#################
+15  #.X.X.D.*.I.F.l@@@*O...#################
+16  #####################EE#################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (15,15)  water (16,15)  earth (17,15)
+Entities:
+  "  sign_0       sign       at (1,13)  "Whoever holds the ceiling down stays up there."
+  D  vault        door       at (6,13)  1x3  <- squash
+  I  icewall      ice        at (10,13)  1x3
+  F  flames       firewall   at (12,13)  1x3
+  l  pull         lever      at (14,15)  -> hoist
+  O  rock_1       boulder    at (19,15)
+  E  hoist        elevator   at (21,16)  2x1  <- pull  mode powered  speed 1.5  path (21,16)-(21,10)
+  p  squash       plate      at (21,9)  2x1  -> vault  weight heavy
+  *  gem_w        gem        at (8,15)  water
+  *  gem_e        gem        at (18,15)  earth
+  *  gem_f        gem        at (26,9)  fire
+  X  exit_w       exit       at (2,14)  water
+  X  exit_e       exit       at (4,14)  earth
+  X  exit_f       exit       at (29,8)  fire
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

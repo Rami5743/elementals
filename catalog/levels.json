@@ -2877,6 +2877,38 @@
   ]
  },
  {
+  "id": "jackshaft",
+  "name": "Jackshaft",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 3000,
+  "dark": false,
+  "challenge": "mind",
+  "core": "a-lift-that-presses-instead-of-carrying",
+  "ideas": [
+   "lift-press",
+   "twist-order"
+  ],
+  "order": 211,
+  "line": "a lift used as a jack. It is not transport: its job is to carry a boulder up the shaft and hold it against a plate hanging in the ceiling, and to stay there for the rest of the level.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:firewall",
+   "ent:ice",
+   "ent:lever",
+   "ent:plate",
+   "opt:elevator:powered",
+   "opt:heavy-plate"
+  ]
+ },
+ {
   "id": "lantern",
   "name": "Lantern",
   "source": "mine",

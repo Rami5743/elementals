@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 75 campaign levels, 32 in this repo.
+Totals: 75 campaign levels, 33 in this repo.
 
 
 ## 2 players — this repo (12)
@@ -210,7 +210,7 @@ Totals: 75 campaign levels, 32 in this repo.
   - hints: Fire stands at the near end of the lava, right past the plates. Earth pushes the first boulder down: it rolls over the sludge and stops against Fire, on the far plate. / Earth pushes the second one down. It stops against the first, on the near plate, and both gates open.
   - features: ent:boulder ent:door ent:plate opt:heavy-plate opt:required:2 tile:lava tile:slope tile:sludge
 
-## 3 players — this repo (10)
+## 3 players — this repo (11)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -252,6 +252,10 @@ Totals: 75 campaign levels, 32 in this repo.
   - idea: The grating looks like a hole you cannot use. It is: you can fall through it, but the thing you need to get down there cannot. The lid is not a gate in this level, it is a press — the only machine in the hall that pushes downward.
   - ideas: one-way-press, twist-backwards
   - features: ent:boulder ent:door ent:firewall ent:ice ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch tile:one-way
+- **Jackshaft** `jackshaft` (3p: fire+water+earth) core=`a-lift-that-presses-instead-of-carrying` challenge=mind par=3000
+  - idea: a lift used as a jack. It is not transport: its job is to carry a boulder up the shaft and hold it against a plate hanging in the ceiling, and to stay there for the rest of the level.
+  - ideas: lift-press, twist-order
+  - features: ent:boulder ent:door ent:elevator ent:firewall ent:ice ent:lever ent:plate opt:elevator:powered opt:heavy-plate
 
 ## 3 players — campaign (27)
 
