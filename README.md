@@ -22,6 +22,13 @@ play link people can open straight into their own *My Levels*.
 | `levels/_lib.mjs` | Helpers shared by the solution scripts |
 | `packed/<id>.elementals.json` | The packed bundle players import in *My Levels → Import file* |
 | `tools/build.mjs` | Checks and packs every level, then regenerates `index.html` |
+| `tools/catalog.mjs` | Regenerates `catalog/` from `levels/` and `catalog/campaign.json` |
+| `tools/novelty.mjs` | How close a level is to everything else for the same player count |
+| `tools/roll-features.mjs` | A random set of ingredients for the next level |
+| `catalog/LEVELS.md` | Every level — these 30 and the campaign's 75 — with its idea and features |
+| `catalog/MAPS.md` | The map and wiring of each of these 30 levels |
+| `catalog/levels.json` | The same data for scripts; `campaign.json` is the built-in levels' fingerprints |
+| `.claude/skills/new-level/` | The skill that designs, checks and publishes a new level |
 | `kit.mjs`, `docs/`, `examples/`, `types/` | The Level Kit, unchanged |
 
 ## Working on a level
@@ -48,8 +55,18 @@ Use `--fast` to rebuild the page from the existing links without re-running the 
 ## Per-level `meta.json`
 
 ```json
-{ "order": 101, "challenge": "mind" }
+{ "order": 101, "challenge": "mind", "core": "crate-substitutes-for-the-plate-holder" }
 ```
 
 `challenge` is `mind` (solved by thinking; comfortable moves) or `motor` (also asks you to hit a
-window or a jump). `order` sorts the cards on the page.
+window or a jump). `order` sorts the cards on the page: 1xx for two players, 2xx for three, 3xx for
+four. `core` is a short tag for the level's central idea, and must be unique among the levels for
+the same player count — `tools/novelty.mjs` checks it.
+
+## Adding a level
+
+Invoke the `new-level` skill, or follow `.claude/skills/new-level/SKILL.md` by hand. In short: read
+`catalog/LEVELS.md` for the player count you are building for, roll ingredients with
+`node tools/roll-features.mjs <n>`, design the core before the map, build and `check` it, clear
+`node tools/novelty.mjs <id>`, then run `tools/build.mjs` and `tools/catalog.mjs` so the level
+reaches both the page and the catalogue.

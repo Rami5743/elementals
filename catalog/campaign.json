@@ -1,0 +1,2495 @@
+[
+ {
+  "order": 1,
+  "id": "t01_first_steps",
+  "name": "First Steps",
+  "dark": false,
+  "supports": [
+   "fire+water"
+  ],
+  "parTicks": 1500,
+  "description": "Plates, gates and levers. One holds the door, the other opens the way.",
+  "hints": [
+   "Stand on the plate to open the lower gate.",
+   "The lever behind the lower gate opens both gates for good."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "W"
+  ],
+  "entities": {
+   "plate": 1,
+   "door": 2,
+   "lever": 1
+  },
+  "options": []
+ },
+ {
+  "order": 2,
+  "id": "t02_hot_and_cold",
+  "name": "Hot & Cold",
+  "dark": false,
+  "supports": [
+   "fire+water",
+   "fire+earth",
+   "fire+air",
+   "water+earth",
+   "water+air",
+   "earth+air",
+   "fire+water+earth",
+   "fire+water+air",
+   "fire+earth+air",
+   "water+earth+air",
+   "fire+water+earth+air"
+  ],
+  "parTicks": 1800,
+  "description": "Each element wades through its own liquid to a lever that opens someone else's door.",
+  "hints": [
+   "Each lane has a pool of one element's liquid. Only that element can cross it.",
+   "Your lever opens a partner's gate, and theirs opens yours.",
+   "Press Down to drop through a wooden ledge, or fall down the gap on the left of the tower."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "door": 32,
+   "lever": 4
+  },
+  "options": []
+ },
+ {
+  "order": 3,
+  "id": "t03_lend_a_hand",
+  "name": "Lend a Hand",
+  "dark": false,
+  "supports": [
+   "fire+water",
+   "fire+water+earth",
+   "fire+water+earth+air"
+  ],
+  "parTicks": 2100,
+  "description": "A human ladder up the cliff, then an elevator for whoever stayed below.",
+  "hints": [
+   "The cliff is too high to jump. Water stands in the pool at its foot, and Fire jumps onto Water's head.",
+   "The lever up top moves the elevator. Ride it before the lever is pulled."
+  ],
+  "palette": [
+   "W"
+  ],
+  "entities": {
+   "lever": 3,
+   "elevator": 3,
+   "plate": 3,
+   "firewall": 2,
+   "ice": 3,
+   "fan": 3,
+   "door": 3,
+   "text": 2,
+   "exit": 2,
+   "torch": 2,
+   "turbine": 1,
+   "freezepad": 1,
+   "cracked": 1,
+   "belt": 1,
+   "box": 1,
+   "boulder": 1,
+   "seesaw": 1,
+   "button": 1,
+   "pool": 1
+  },
+  "options": [
+   "belt speed 2",
+   "button dur 180",
+   "button:timed",
+   "elevator:loop",
+   "fan .9",
+   "fan 2.7",
+   "heavy plate",
+   "required:2",
+   "seesaw range 2"
+  ]
+ },
+ {
+  "order": 4,
+  "id": "l04_ice_and_flame",
+  "name": "Ice & Flame",
+  "dark": false,
+  "supports": [
+   "fire+water"
+  ],
+  "parTicks": 2100,
+  "description": "Two tunnels, two barriers. Each of you can only clear the other's way.",
+  "hints": [
+   "Fire can melt the ice in the lower tunnel. Water can douse the flames at the end of the upper tunnel.",
+   "Fire goes through the lava tunnel, Water through the water tunnel."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "W"
+  ],
+  "entities": {
+   "ice": 1,
+   "firewall": 1
+  },
+  "options": []
+ },
+ {
+  "order": 5,
+  "id": "l05_box_relay",
+  "name": "Box Relay",
+  "dark": false,
+  "supports": [
+   "fire+water"
+  ],
+  "parTicks": 2400,
+  "description": "A box, a pool and a plate that has to be held at just the right moment.",
+  "hints": [
+   "Only Water can cross the pool, but a box can be pushed across it.",
+   "A box makes a good step. And someone has to hold the plate on the ledge while Water goes home."
+  ],
+  "palette": [
+   "W"
+  ],
+  "entities": {
+   "plate": 1,
+   "door": 2,
+   "box": 1,
+   "lever": 1
+  },
+  "options": []
+ },
+ {
+  "order": 6,
+  "id": "l06_torchlight",
+  "name": "Torchlight",
+  "dark": true,
+  "supports": [
+   "fire+water"
+  ],
+  "parTicks": 3300,
+  "description": "Light the way. Torches power the lift, ice bridges the pool.",
+  "hints": [
+   "Water: hold Interact on the button in the water corridor. Fire's tunnel door stays open while you hold it.",
+   "Two torches power the lift in the corner. Only Fire can light them: one is in the lava tunnel, one up high.",
+   "Water's freeze pad turns the big pool into ice for a while."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "W"
+  ],
+  "entities": {
+   "elevator": 1,
+   "torch": 2,
+   "door": 1,
+   "button": 1,
+   "freezepad": 1,
+   "pool": 1
+  },
+  "options": [
+   "button:hold",
+   "elevator speed 2",
+   "elevator:loop",
+   "pool dur 360",
+   "required:2"
+  ]
+ },
+ {
+  "order": 7,
+  "id": "l07_heavy_hearted",
+  "name": "Heavy Hearted",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 2700,
+  "description": "Only Earth is heavy enough to tip the seesaw, but Earth needs help to get started.",
+  "hints": [
+   "Fire can melt the ice that traps Earth and the boulder.",
+   "The boulder holds the heavy plate for good, and that plate opens Water's gate.",
+   "Stand on one end of the seesaw while Earth jumps on the other."
+  ],
+  "palette": [
+   "="
+  ],
+  "entities": {
+   "boulder": 1,
+   "ice": 1,
+   "plate": 1,
+   "seesaw": 1,
+   "firewall": 1,
+   "door": 1
+  },
+  "options": [
+   "heavy plate",
+   "seesaw range 4"
+  ]
+ },
+ {
+  "order": 8,
+  "id": "l08_fault_line",
+  "name": "Fault Line",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 1800,
+  "description": "Smash through the floor, then hold three plates at once.",
+  "hints": [
+   "The cracked floor is under the ice. Fire melts, Earth pounds (jump, then press Down).",
+   "All three plates below must be held at the same time. Each one can only be reached by one of you."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "W"
+  ],
+  "entities": {
+   "ice": 1,
+   "cracked": 1,
+   "plate": 3,
+   "door": 1
+  },
+  "options": [
+   "heavy plate",
+   "latch",
+   "required:3"
+  ]
+ },
+ {
+  "order": 9,
+  "id": "l09_updraft",
+  "name": "Updraft",
+  "dark": false,
+  "supports": [
+   "fire+water+air"
+  ],
+  "parTicks": 1800,
+  "description": "A torch wakes the fan; the fan carries Air where nobody else can go.",
+  "hints": [
+   "The fan only blows once the torch is lit, and only Air is light enough to ride it.",
+   "Water's freeze pad turns the pool into a bridge for Fire."
+  ],
+  "palette": [
+   "=",
+   "W"
+  ],
+  "entities": {
+   "freezepad": 1,
+   "pool": 1,
+   "torch": 1,
+   "fan": 1,
+   "lever": 1,
+   "door": 1,
+   "firewall": 1
+  },
+  "options": [
+   "fan .9",
+   "pool dur 240"
+  ]
+ },
+ {
+  "order": 10,
+  "id": "l10_four_corners",
+  "name": "Four Corners",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 1800,
+  "description": "Everyone to their own corner. The vault opens only when all four plates are held at once.",
+  "hints": [
+   "Each corner plate can only be reached or held by one element.",
+   "Hold all four plates at the same time. The trapdoor in the middle stays open after that."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "W"
+  ],
+  "entities": {
+   "fan": 1,
+   "plate": 4,
+   "door": 1
+  },
+  "options": [
+   "heavy plate",
+   "latch",
+   "required:4"
+  ]
+ },
+ {
+  "order": 11,
+  "id": "l11_windmill",
+  "name": "Windmill",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 2700,
+  "description": "A chain reaction: every element powers the next.",
+  "hints": [
+   "Freeze the pool, light the torch, ride the wind, spin the turbine.",
+   "The turbine powers the lift only while Air keeps it spinning. Hover at the edge of the updraft until Earth is done.",
+   "The boulder up top belongs on the heavy plate below."
+  ],
+  "palette": [
+   "=",
+   "W"
+  ],
+  "entities": {
+   "freezepad": 1,
+   "pool": 1,
+   "torch": 1,
+   "fan": 1,
+   "turbine": 1,
+   "elevator": 1,
+   "boulder": 1,
+   "plate": 1,
+   "door": 1,
+   "firewall": 1
+  },
+  "options": [
+   "elevator speed 2",
+   "heavy plate",
+   "pool dur 300"
+  ]
+ },
+ {
+  "order": 12,
+  "id": "l12_convergence",
+  "name": "Convergence",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "The finale: crack, drop, burn, blow, freeze and douse. In the right order.",
+  "hints": [
+   "Earth can't reach the cracked platform alone. Give them a boost.",
+   "The boulder belongs on the heavy plate below the platform.",
+   "Torch, fan, lever: then freeze the pool so everyone can cross."
+  ],
+  "palette": [
+   "=",
+   "W"
+  ],
+  "entities": {
+   "cracked": 1,
+   "boulder": 1,
+   "plate": 1,
+   "door": 2,
+   "torch": 1,
+   "fan": 1,
+   "freezepad": 1,
+   "pool": 1,
+   "lever": 1,
+   "firewall": 1
+  },
+  "options": [
+   "heavy plate",
+   "pool dur 300"
+  ]
+ },
+ {
+  "order": 13,
+  "id": "l13_mudworks",
+  "name": "Mudworks",
+  "dark": false,
+  "supports": [
+   "fire+earth"
+  ],
+  "parTicks": 3600,
+  "description": "Earth wades where Fire can't; Fire climbs where Earth can't. Swap favours three times.",
+  "hints": [
+   "Fire can reach the ledge by jumping off Earth's head.",
+   "The torch powers the lift on the far side of the mud.",
+   "Earth's weight opens the walkway gate. Fire's door needs one more boost."
+  ],
+  "palette": [
+   "=",
+   "M"
+  ],
+  "entities": {
+   "torch": 1,
+   "elevator": 1,
+   "plate": 1,
+   "door": 1,
+   "ice": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "elevator:loop",
+   "heavy plate",
+   "latch"
+  ]
+ },
+ {
+  "order": 14,
+  "id": "l14_crosswind",
+  "name": "Crosswind",
+  "dark": false,
+  "supports": [
+   "water+air"
+  ],
+  "parTicks": 1800,
+  "description": "Mist for Air, water for Water, sludge for nobody. Air will have to carry a passenger.",
+  "hints": [
+   "Only Air can wade through mist. The turbine beyond it powers Water's lift.",
+   "The freeze pad on the upper floor freezes the tunnel below it.",
+   "Nobody survives sludge. Water can ride on Air's head while Air glides."
+  ],
+  "palette": [
+   "=",
+   "S",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "elevator": 1,
+   "fan": 1,
+   "turbine": 1,
+   "freezepad": 1,
+   "pool": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "pool dur 240"
+  ]
+ },
+ {
+  "order": 15,
+  "id": "l15_bellows",
+  "name": "Bellows",
+  "dark": false,
+  "supports": [
+   "fire+air"
+  ],
+  "parTicks": 1800,
+  "description": "Fire lights the way for Air, Air holds the door for Fire. Back and forth, five times.",
+  "hints": [
+   "The fan only blows while the torch burns.",
+   "The button up on the block opens the corridor door for a few seconds. Be ready.",
+   "The turbine powers the lift to Fire's door. Air's door is behind the ice."
+  ],
+  "palette": [
+   "L"
+  ],
+  "entities": {
+   "torch": 1,
+   "fan": 1,
+   "button": 1,
+   "door": 2,
+   "lever": 1,
+   "turbine": 1,
+   "elevator": 1,
+   "ice": 1
+  },
+  "options": [
+   "button dur 300",
+   "button:timed",
+   "elevator speed 1.5"
+  ]
+ },
+ {
+  "order": 16,
+  "id": "l16_riverbed",
+  "name": "Riverbed",
+  "dark": false,
+  "supports": [
+   "water+earth"
+  ],
+  "parTicks": 1800,
+  "description": "Water takes the high road and Earth the low road. Each one keeps the other's road open.",
+  "hints": [
+   "The freeze pad on the upper lane freezes the pool on the lower lane.",
+   "Earth's heavy plate opens the gate on the upper lane.",
+   "Water can douse the flames from the exit hall. Then Earth's weight lifts Water to the shelf."
+  ],
+  "palette": [
+   "=",
+   "M",
+   "W"
+  ],
+  "entities": {
+   "freezepad": 1,
+   "pool": 1,
+   "plate": 1,
+   "door": 1,
+   "firewall": 1,
+   "seesaw": 1
+  },
+  "options": [
+   "heavy plate",
+   "latch",
+   "pool dur 300",
+   "seesaw range 4"
+  ]
+ },
+ {
+  "order": 17,
+  "id": "l17_dust_devil",
+  "name": "Dust Devil",
+  "dark": false,
+  "supports": [
+   "earth+air"
+  ],
+  "parTicks": 2100,
+  "description": "Earth is the ladder, the pusher and the hammer. Air is the key and the wind.",
+  "hints": [
+   "The ledge is a little too high for Air alone. Jump from Earth's head.",
+   "The boulder belongs on the heavy plate.",
+   "Only Air can wade the mist to the turbine. Only Earth can break the cracked floor above the fan."
+  ],
+  "palette": [
+   "V"
+  ],
+  "entities": {
+   "lever": 1,
+   "door": 2,
+   "boulder": 1,
+   "plate": 1,
+   "elevator": 1,
+   "turbine": 1,
+   "fan": 1,
+   "cracked": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 18,
+  "id": "l18_kiln",
+  "name": "Kiln",
+  "dark": false,
+  "supports": [
+   "fire+earth+air"
+  ],
+  "parTicks": 2700,
+  "description": "An airlock that needs two of four switches, a seesaw, and a torch that sends the wind upward.",
+  "hints": [
+   "The airlock opens when any two of its four switches are on. Two of them are on the far side.",
+   "Earth's weight on the seesaw lifts a partner to the shelf.",
+   "The torch on the shelf powers the fan beside the block."
+  ],
+  "palette": [
+   "=",
+   "L"
+  ],
+  "entities": {
+   "plate": 2,
+   "fan": 2,
+   "door": 1,
+   "torch": 2,
+   "lever": 1,
+   "seesaw": 1,
+   "ice": 1
+  },
+  "options": [
+   "heavy plate",
+   "required:2",
+   "seesaw range 4"
+  ]
+ },
+ {
+  "order": 19,
+  "id": "l19_floodgate",
+  "name": "Floodgate",
+  "dark": false,
+  "supports": [
+   "water+earth+air"
+  ],
+  "parTicks": 2400,
+  "description": "A seesaw that only works in pairs, a frozen tunnel, and a bridge that exists only while someone holds it.",
+  "hints": [
+   "Two equal weights keep the seesaw level. Earth outweighs anyone.",
+   "Air's turbine upstairs powers Earth's lift.",
+   "The bridge over the sludge only appears while a plate is held. There is a plate on each side."
+  ],
+  "palette": [
+   "=",
+   "S",
+   "W"
+  ],
+  "entities": {
+   "seesaw": 1,
+   "elevator": 1,
+   "turbine": 1,
+   "freezepad": 1,
+   "pool": 1,
+   "plate": 2,
+   "door": 1,
+   "firewall": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "heavy plate",
+   "invert(door)",
+   "pool dur 300",
+   "seesaw range 2"
+  ]
+ },
+ {
+  "order": 20,
+  "id": "l20_clockwork",
+  "name": "Clockwork",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 1800,
+  "description": "Four buttons in four corners, each behind another element's lock. Press them together.",
+  "hints": [
+   "Water clears Fire's tunnel, Fire clears Water's tunnel and lights the torch for Air's fan.",
+   "Air's turbine powers Earth's lift.",
+   "Each button only stays pressed for a moment. Count down together and press at the same time."
+  ],
+  "palette": [
+   "L",
+   "M",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "firewall": 1,
+   "ice": 1,
+   "torch": 1,
+   "fan": 1,
+   "turbine": 1,
+   "elevator": 1,
+   "button": 4,
+   "door": 1
+  },
+  "options": [
+   "button dur 90",
+   "button:timed",
+   "elevator speed 1.5",
+   "latch",
+   "required:4"
+  ]
+ },
+ {
+  "order": 21,
+  "id": "l21_thunderhead",
+  "name": "Thunderhead",
+  "dark": true,
+  "supports": [],
+  "parTicks": 2400,
+  "description": "In the dark, across the ice, over the sludge and up into the clouds.",
+  "hints": [
+   "The first torch powers both the fan and the lift.",
+   "Only the fan reaches the lever on the cloud. Freeze the tunnel for the others.",
+   "Air can carry Fire over the sludge. The torch on the far side does the rest."
+  ],
+  "palette": [
+   "S",
+   "W"
+  ],
+  "entities": {
+   "torch": 2,
+   "fan": 2,
+   "elevator": 1,
+   "lever": 1,
+   "door": 2,
+   "freezepad": 1,
+   "pool": 1,
+   "firewall": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "elevator:loop",
+   "invert(door)",
+   "pool dur 300"
+  ]
+ },
+ {
+  "order": 22,
+  "id": "l22_heartstone",
+  "name": "Heartstone",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "The grand finale: three chambers, every element needed in each.",
+  "hints": [
+   "Douse, light, blow, lift, pound: the boulder belongs on the heavy plate.",
+   "Earth's weight lifts Fire to the second torch. The high step freezes the tunnel.",
+   "Air can carry Earth over the sludge. Earth's weight raises the bridge and powers the last fan."
+  ],
+  "palette": [
+   "=",
+   "S",
+   "W"
+  ],
+  "entities": {
+   "torch": 2,
+   "firewall": 1,
+   "fan": 2,
+   "turbine": 1,
+   "elevator": 1,
+   "cracked": 1,
+   "boulder": 1,
+   "plate": 2,
+   "door": 3,
+   "seesaw": 1,
+   "freezepad": 1,
+   "pool": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "heavy plate",
+   "invert(door)",
+   "pool dur 360",
+   "required:2",
+   "seesaw range 4"
+  ]
+ },
+ {
+  "order": 23,
+  "id": "l23_foundry",
+  "name": "Foundry",
+  "dark": false,
+  "supports": [
+   "fire+water"
+  ],
+  "parTicks": 1500,
+  "description": "Two crates, two pools, one gate. Every crate is needed twice, in the right order.",
+  "hints": [
+   "Push a crate into the pool your partner can't cross: it becomes a stepping stone.",
+   "A crate left on a plate holds it down for good.",
+   "The hut gate needs both plates held at once, and whoever goes in last can't hold one."
+  ],
+  "palette": [
+   "L",
+   "W"
+  ],
+  "entities": {
+   "box": 2,
+   "plate": 2,
+   "door": 1
+  },
+  "options": [
+   "required:2"
+  ]
+ },
+ {
+  "order": 24,
+  "id": "l24_quarry",
+  "name": "Quarry",
+  "dark": false,
+  "supports": [
+   "earth+air"
+  ],
+  "parTicks": 2400,
+  "description": "Two boulders, three heavy plates, two turbines and one long way down. Park every boulder before you leave it behind.",
+  "hints": [
+   "A boulder on a heavy plate keeps a fan running for good. Air will need that fan later, when Earth is far away.",
+   "The first turbine lifts Earth upstairs.",
+   "Upstairs, park the second boulder before you leave: Air needs the gate open twice."
+  ],
+  "palette": [
+   "M",
+   "V"
+  ],
+  "entities": {
+   "turbine": 2,
+   "elevator": 2,
+   "boulder": 2,
+   "plate": 3,
+   "fan": 2,
+   "door": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 25,
+  "id": "l25_undercurrent",
+  "name": "Undercurrent",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 2100,
+  "description": "Fire and Water carry each other through their pools, there and back and there again, while Earth walks the floor above them.",
+  "hints": [
+   "Earth holds the heavy plate while the others go through. Earth's way is up the ledges.",
+   "Stand on your partner's head: they can walk you through their own liquid.",
+   "The torch opens Earth's door upstairs, and the freeze pad freezes Earth's pool. Water has to be carried back to the pad."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M",
+   "W"
+  ],
+  "entities": {
+   "plate": 2,
+   "door": 3,
+   "freezepad": 1,
+   "ice": 1,
+   "firewall": 1,
+   "torch": 1,
+   "pool": 1,
+   "cracked": 1
+  },
+  "options": [
+   "heavy plate",
+   "pool dur 240"
+  ]
+ },
+ {
+  "order": 26,
+  "id": "l26_gondola",
+  "name": "Gondola",
+  "dark": false,
+  "supports": [
+   "water+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "One gondola, four switches, three passengers. It only moves while two switches are on, and it comes back as soon as they aren't.",
+  "hints": [
+   "The gondola moves while any two of its switches are on: the turbine, the two heavy plates and the light plate.",
+   "Whoever holds a switch can't ride. Think about who has to go first, and who has to go last.",
+   "Everyone off the switches sends the gondola back."
+  ],
+  "palette": [
+   "S",
+   "V"
+  ],
+  "entities": {
+   "turbine": 1,
+   "plate": 3,
+   "elevator": 1,
+   "firewall": 1
+  },
+  "options": [
+   "elevator speed 2",
+   "heavy plate",
+   "required:2"
+  ]
+ },
+ {
+  "order": 27,
+  "id": "l27_airship",
+  "name": "Airship",
+  "dark": false,
+  "supports": [
+   "fire+earth+air"
+  ],
+  "parTicks": 1800,
+  "description": "Air can glide a whole tower of friends over the sludge on its head. There is no flight back.",
+  "hints": [
+   "Air can glide with passengers stacked on its head. Once across, nobody can get back up.",
+   "Fire melts the way in. Earth smashes the cracked floor, and the boulder falls with Earth onto the heavy plate below.",
+   "The torch starts the chimney fan. Air can carry Fire up it, slowly."
+  ],
+  "palette": [
+   "S"
+  ],
+  "entities": {
+   "ice": 1,
+   "cracked": 1,
+   "boulder": 1,
+   "plate": 1,
+   "torch": 1,
+   "fan": 1,
+   "door": 1
+  },
+  "options": [
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 28,
+  "id": "l28_lighthouse",
+  "name": "Lighthouse",
+  "dark": true,
+  "supports": [],
+  "parTicks": 3,
+  "description": "A dark tower, four floors high. Light a torch on every floor and lift each other to the lamp.",
+  "hints": [
+   "Douse the flames and light the first torch: the lift starts.",
+   "The pool is too wide for Fire and Air. Freeze it. The second torch starts Air's fan.",
+   "Air's turbine raises the lift and opens its hatches. The lamp torch opens Air's way to the top."
+  ],
+  "palette": [
+   "V",
+   "W"
+  ],
+  "entities": {
+   "firewall": 2,
+   "torch": 3,
+   "elevator": 2,
+   "freezepad": 1,
+   "pool": 1,
+   "fan": 2,
+   "turbine": 1,
+   "door": 3
+  },
+  "options": [
+   "elevator speed 1.5",
+   "elevator:loop",
+   "pool dur 240"
+  ]
+ },
+ {
+  "order": 29,
+  "id": "l29_bucket_brigade",
+  "name": "Bucket Brigade",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3600,
+  "description": "Pass one crate through lava, water, mud and mist. Each of you can only carry it through your own.",
+  "hints": [
+   "Each tunnel is one element's liquid: only that element can push the crate through it.",
+   "Water douses Fire's way out, Fire's torch opens Water's way and runs the lift, Air's lever opens Earth's tunnel, Earth's heavy plate opens Air's.",
+   "The crate on the last plate opens the floor under every exit door."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "box": 1,
+   "firewall": 1,
+   "torch": 1,
+   "door": 7,
+   "elevator": 1,
+   "lever": 1,
+   "plate": 2
+  },
+  "options": [
+   "elevator speed 1.5",
+   "elevator:loop",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 30,
+  "id": "l30_interlock",
+  "name": "Interlock",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3600,
+  "description": "Four sealed quarters, four airlocks. Each airlock's switch is in someone else's hands, and so is every way home.",
+  "hints": [
+   "An airlock's switch opens its outer door and shuts its inner one. Step in, then have the switch turned off.",
+   "Air's turbine lets Fire in, Fire's lever lets Water in, Water's plate lets Earth in, and Earth's plate lets Air in.",
+   "Then the favours go back the other way: freeze, weigh, spin and light."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "turbine": 2,
+   "door": 9,
+   "lever": 1,
+   "plate": 2,
+   "torch": 1,
+   "pool": 1,
+   "freezepad": 1,
+   "elevator": 1,
+   "fan": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "heavy plate",
+   "invert(door)",
+   "pool dur 240"
+  ]
+ },
+ {
+  "order": 31,
+  "id": "l31_eclipse",
+  "name": "Eclipse",
+  "dark": true,
+  "supports": [],
+  "parTicks": 3600,
+  "description": "In the dark: a boulder only a two-key lift can reach, a crate that is a stone and then a key, and a vault that needs four keys at once.",
+  "hints": [
+   "The lift needs the torch and the turbine together. Earth rides it up to the boulder, and the boulder holds gate 1 open.",
+   "The crate is a stepping stone in the mud first, and the vault's fourth key after.",
+   "The vault needs the crate, the torch, the lever and the turbine all on at the same moment. Then it stays open."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "firewall": 1,
+   "torch": 2,
+   "turbine": 2,
+   "elevator": 1,
+   "boulder": 1,
+   "plate": 2,
+   "door": 2,
+   "box": 1,
+   "lever": 1
+  },
+  "options": [
+   "elevator speed 2",
+   "heavy plate",
+   "latch",
+   "required:2",
+   "required:4"
+  ]
+ },
+ {
+  "order": 32,
+  "id": "l32_elementarium",
+  "name": "Elementarium",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 5400,
+  "description": "The finale. Four wings, each sealed by one element's liquid, each holding a key that its owner can't win alone. Carry a friend in, work together, carry them out.",
+  "hints": [
+   "Each wing is behind its owner's liquid. Ride in on the owner's head: your own liquid is safe for a passenger.",
+   "Fire needs a ladder to its torch. Water's lever is behind lava. Earth's lift needs a turbine. Air's crate is behind flames.",
+   "The vault opens when all four keys are on: torch, lever, boulder and crate."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "torch": 1,
+   "lever": 1,
+   "boulder": 1,
+   "turbine": 1,
+   "elevator": 1,
+   "plate": 2,
+   "firewall": 1,
+   "box": 1,
+   "door": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "heavy plate",
+   "latch",
+   "required:4"
+  ]
+ },
+ {
+  "order": 33,
+  "id": "l33_ferryman",
+  "name": "Ferryman",
+  "dark": false,
+  "supports": [
+   "earth+air",
+   "water+earth+air",
+   "fire+water+earth+air"
+  ],
+  "parTicks": 4200,
+  "description": "A one-seat gondola that crosses while enough switches are on and comes back when they aren't. Some of you start on the wrong side, and so does the crate.",
+  "hints": [
+   "The gondola holds one player, crate or boulder. It goes to the far side while enough switches are on (2, 3 or 4, one per player) and comes back as soon as there aren't.",
+   "Parked boulders and crates count as switches. Someone may have to ride back just to move one.",
+   "The crate belongs in the pit on the far side: the gate to the far exits needs it. Push it from the step behind the far stop."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "S"
+  ],
+  "entities": {
+   "elevator": 3,
+   "button": 2,
+   "turbine": 1,
+   "boulder": 1,
+   "plate": 4,
+   "box": 1,
+   "door": 1
+  },
+  "options": [
+   "button:hold",
+   "elevator speed 2",
+   "heavy plate",
+   "required:2",
+   "required:3",
+   "required:4",
+   "turbine dur 0"
+  ]
+ },
+ {
+  "order": 34,
+  "id": "l34_battering_ram",
+  "name": "Battering Ram",
+  "dark": false,
+  "supports": [
+   "water+air"
+  ],
+  "parTicks": 1800,
+  "description": "Nobody here can push a boulder. The wall can.",
+  "hints": [
+   "The plate on the shelf drives a long steel ram out of the wall. Stay out of its way, and step on the plate to see what it does.",
+   "The ram stays out only while something holds it there. There is a second switch on the far side.",
+   "Only Air can reach the far lever. Water can then walk over the ram, and needs Air's head to climb the block."
+  ],
+  "palette": [
+   "S",
+   "V"
+  ],
+  "entities": {
+   "door": 2,
+   "boulder": 1,
+   "plate": 2,
+   "lever": 1,
+   "firewall": 1
+  },
+  "options": [
+   "heavy plate",
+   "invert(door)"
+  ]
+ },
+ {
+  "order": 35,
+  "id": "l35_hod_carrier",
+  "name": "Hod Carrier",
+  "dark": false,
+  "supports": [
+   "fire+air"
+  ],
+  "parTicks": 2700,
+  "description": "A crate has to cross a gorge. Crates can't fly. Air can, with one on its head.",
+  "hints": [
+   "A crate that falls on someone's head stays there, and goes where they go. Air can glide with it.",
+   "Only one of you can push the crate off its ledge, and the other has to be underneath at that moment.",
+   "Low ceilings scrape off whatever you are carrying. The fan on the far side is the way back up."
+  ],
+  "palette": [
+   "=",
+   "S"
+  ],
+  "entities": {
+   "box": 1,
+   "torch": 1,
+   "fan": 1,
+   "plate": 1,
+   "door": 1,
+   "ice": 1
+  },
+  "options": []
+ },
+ {
+  "order": 36,
+  "id": "l36_thermals",
+  "name": "Thermals",
+  "dark": false,
+  "supports": [
+   "fire+earth"
+  ],
+  "parTicks": 3600,
+  "description": "This updraft could never lift Fire. But jump into it, and you come down much later.",
+  "hints": [
+   "Earth's way across is the mud tunnel. Its plate on the far side starts the big fan.",
+   "With the fan on, Fire falls slowly: take a running jump into the updraft and keep going right.",
+   "Fire's shelf needs Earth's head, and Earth's walkway needs Fire. The torch starts the lift."
+  ],
+  "palette": [
+   "M",
+   "S"
+  ],
+  "entities": {
+   "fan": 1,
+   "plate": 1,
+   "torch": 1,
+   "elevator": 1,
+   "ice": 1,
+   "cracked": 1
+  },
+  "options": [
+   "elevator:loop",
+   "fan 1.54",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 37,
+  "id": "l37_jack",
+  "name": "Jack",
+  "dark": false,
+  "supports": [
+   "water+earth"
+  ],
+  "parTicks": 2100,
+  "description": "These bridges sink as soon as you let go. Unless something is in the way.",
+  "hints": [
+   "Each bridge sinks into the sludge unless its plate is held, so whoever holds the plate can't cross it.",
+   "Lifts never crush anything: they stop on whatever is underneath them. Raise the bridge first, then slide the crate under it.",
+   "A bridge stopped by a crate sits low, but you can jump down to it and back up on the far side. The second bridge works the same way, with the boulder."
+  ],
+  "palette": [
+   "=",
+   "M",
+   "S",
+   "W"
+  ],
+  "entities": {
+   "elevator": 2,
+   "plate": 2,
+   "box": 1,
+   "boulder": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "heavy plate",
+   "invert(elevator)"
+  ]
+ },
+ {
+  "order": 38,
+  "id": "l38_ballast",
+  "name": "Ballast",
+  "dark": false,
+  "supports": [
+   "fire+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "For once, someone has to lift Earth. Fire and Air together are only just as heavy.",
+  "hints": [
+   "Earth has to get on the seesaw first. Only then does the left end rise level with the block.",
+   "Fire and Air on the left end only balance Earth. Bring the crate along too.",
+   "Earth's end has to go all the way up for Earth to reach the top floor."
+  ],
+  "palette": [
+   "=",
+   "M"
+  ],
+  "entities": {
+   "seesaw": 1,
+   "door": 2,
+   "box": 1,
+   "plate": 1,
+   "ice": 1,
+   "torch": 1,
+   "fan": 1,
+   "cracked": 1
+  },
+  "options": [
+   "heavy plate",
+   "seesaw range 4"
+  ]
+ },
+ {
+  "order": 39,
+  "id": "l39_thin_ice",
+  "name": "Thin Ice",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 2100,
+  "description": "A bridge of ice, a bridge of flames, and two friends who must not touch them. Then something has to fall at exactly the right moment.",
+  "hints": [
+   "Fire melts the ice bridge by touching it and Water puts out the flame bridge. A passenger doesn't touch the bridge.",
+   "The hatch only opens while Earth stands on its plate, and Earth can't cross it while it is open.",
+   "Melting the ice plug drops the boulder and opens the gate, but it also leaves a pit too wide for Earth. Who has to be where first?"
+  ],
+  "palette": [
+   "L",
+   "S"
+  ],
+  "entities": {
+   "ice": 2,
+   "firewall": 2,
+   "plate": 2,
+   "door": 2,
+   "boulder": 1
+  },
+  "options": [
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 40,
+  "id": "l40_tidewater",
+  "name": "Tidewater",
+  "dark": false,
+  "supports": [
+   "water+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "One freeze pad, two pools, and they take turns: the moment one freezes, the other thaws.",
+  "hints": [
+   "The pad freezes the first pool and thaws the second. Step off and they swap, about a second later.",
+   "The fan in the middle is on until Earth stands on the plate in the far room. Air can't get down to the lever against it.",
+   "With the fan on, Water floats over the gap in a running jump, like Fire on Thermals."
+  ],
+  "palette": [
+   "=",
+   "M",
+   "W"
+  ],
+  "entities": {
+   "freezepad": 1,
+   "pool": 2,
+   "fan": 1,
+   "plate": 1,
+   "lever": 1,
+   "door": 1
+  },
+  "options": [
+   "fan 1.54",
+   "heavy plate",
+   "invert(fan)",
+   "invert(pool)",
+   "pool dur 60"
+  ]
+ },
+ {
+  "order": 41,
+  "id": "l41_chimney_sweep",
+  "name": "Chimney Sweep",
+  "dark": false,
+  "supports": [
+   "fire+water+air"
+  ],
+  "parTicks": 4200,
+  "description": "Two hatches, two fans, and only a passenger on Air's head can reach them. Air will be making a lot of trips.",
+  "hints": [
+   "Air carrying someone rises slowly in a fan, and the passenger's head touches the hatch first. Who puts out flames, and who melts ice?",
+   "The gaps in the floors are only for going down. Air glides down them to fetch the next passenger.",
+   "The plate on the first floor hangs in mid-air, under the slab. A fan can press Air up against it, for as long as Air stays."
+  ],
+  "palette": [],
+  "entities": {
+   "torch": 2,
+   "fan": 3,
+   "firewall": 2,
+   "ice": 1,
+   "plate": 1,
+   "door": 1
+  },
+  "options": []
+ },
+ {
+  "order": 42,
+  "id": "l42_keystone",
+  "name": "Keystone",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 2700,
+  "description": "One boulder, passed from hand to hand across the map. This time Earth doesn't touch it.",
+  "hints": [
+   "The boulder sits on a block of ice. Whoever stands underneath when it melts ends up carrying it.",
+   "Air can glide with the boulder on its head. A low ceiling scrapes it off.",
+   "The plate behind the lintel slides a bridge out for the others. Earth's way down is through the floor."
+  ],
+  "palette": [
+   "=",
+   "S"
+  ],
+  "entities": {
+   "firewall": 2,
+   "ice": 2,
+   "boulder": 1,
+   "plate": 1,
+   "door": 2,
+   "lever": 1,
+   "cracked": 1
+  },
+  "options": [
+   "heavy plate",
+   "invert(door)"
+  ]
+ },
+ {
+  "order": 43,
+  "id": "l43_grand_works",
+  "name": "Grand Works",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 4500,
+  "description": "A bridge that needs a prop, a shaft that needs a thermal, and a seesaw that needs nearly everyone.",
+  "hints": [
+   "The bridge sinks unless it is held up. Earth holds it while Fire slides the crate under it from the lava tunnel.",
+   "Water opens the way to the torch. With the fan on, Fire and Water float over the shaft, and Air can carry Earth.",
+   "Only Earth fits through the mud. Then it takes all three of the others on the left end to lift Earth up to the plate that opens the gate."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M",
+   "S"
+  ],
+  "entities": {
+   "elevator": 1,
+   "plate": 2,
+   "box": 1,
+   "firewall": 1,
+   "torch": 1,
+   "fan": 1,
+   "seesaw": 1,
+   "door": 2
+  },
+  "options": [
+   "elevator speed 1.5",
+   "fan 1.54",
+   "heavy plate",
+   "invert(elevator)",
+   "seesaw range 2"
+  ]
+ },
+ {
+  "order": 44,
+  "id": "l44_flue",
+  "name": "Flue",
+  "dark": false,
+  "supports": [
+   "fire+earth"
+  ],
+  "parTicks": 1800,
+  "description": "A gale strong enough for Fire, and for Fire with a passenger.",
+  "hints": [
+   "Earth's boulder on the heavy plate keeps the fan running. Earth can't ride it alone.",
+   "Fire can ride this fan up by itself. The torch up there opens Earth's gate, and the gap beside the ledge is the way back down.",
+   "Earth climbs onto Fire's head. Fire walks into the fan and carries Earth up."
+  ],
+  "palette": [],
+  "entities": {
+   "boulder": 1,
+   "plate": 2,
+   "fan": 1,
+   "door": 2,
+   "torch": 1,
+   "ice": 1
+  },
+  "options": [
+   "fan 2.7",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 45,
+  "id": "l45_leap_of_faith",
+  "name": "Leap of Faith",
+  "dark": false,
+  "supports": [
+   "fire+air"
+  ],
+  "parTicks": 1500,
+  "description": "A crag too high to fly to, and too far to jump to.",
+  "hints": [
+   "Fire rides on Air's head. Air takes a run off the plateau and glides.",
+   "A passenger can still jump. Halfway over the gorge, Fire jumps off Air's head, up through the crag.",
+   "If you land on the far bank together, nobody can get back up to the crag: restart. The torch on the crag starts the fan on the far bank."
+  ],
+  "palette": [
+   "=",
+   "S"
+  ],
+  "entities": {
+   "torch": 1,
+   "fan": 1,
+   "lever": 1,
+   "ice": 1,
+   "door": 1
+  },
+  "options": []
+ },
+ {
+  "order": 46,
+  "id": "l46_dumbwaiter",
+  "name": "Dumbwaiter",
+  "dark": false,
+  "supports": [
+   "water+earth"
+  ],
+  "parTicks": 2100,
+  "description": "A lift can carry a boulder past a ledge. The ledge keeps it.",
+  "hints": [
+   "Earth pushes the boulder onto the lift and Water holds the plate. The lift goes too high to push the boulder off it.",
+   "Step off the plate. The lift sinks through the one-way ledge, and the boulder stays on it.",
+   "Do it again at the second shaft. The heavy plate on the top floor wants the boulder, so that Earth is free to walk through the gate."
+  ],
+  "palette": [
+   "="
+  ],
+  "entities": {
+   "boulder": 1,
+   "elevator": 2,
+   "plate": 4,
+   "door": 2
+  },
+  "options": [
+   "elevator speed 2.5",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 47,
+  "id": "l47_stamp_mill",
+  "name": "Stamp Mill",
+  "dark": false,
+  "supports": [
+   "water+air"
+  ],
+  "parTicks": 3,
+  "description": "A crate can't fall through a grate. It can be hit through one.",
+  "hints": [
+   "Air pushes the crate over the mist to the end of the top floor. When Water stands on the plate downstairs, the stamp comes down.",
+   "Water pushes the crate back along the middle floor, through the water. Air, downstairs by then, spins the turbine, and the second stamp comes down.",
+   "Press Down on a grate to drop through it. Water's freeze pad lets Air cross the water."
+  ],
+  "palette": [
+   "=",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "box": 1,
+   "door": 5,
+   "plate": 2,
+   "turbine": 1,
+   "freezepad": 1,
+   "pool": 1,
+   "firewall": 1
+  },
+  "options": [
+   "invert(door)",
+   "pool dur 300"
+  ]
+ },
+ {
+  "order": 48,
+  "id": "l48_long_haul",
+  "name": "Long Haul",
+  "dark": false,
+  "supports": [
+   "earth+air"
+  ],
+  "parTicks": 2700,
+  "description": "One turbine, one boulder, one flight.",
+  "hints": [
+   "The turbine drives the lift and the stamp at once. Let the lift down to leave the boulder on the ledge.",
+   "The boulder has to reach the grate, and the stamp has to hit it through. Keep out of the turbine until it is there.",
+   "Earth flies on Air's head from the top of the tower, and jumps off in mid-flight up through the crag."
+  ],
+  "palette": [
+   "=",
+   "S"
+  ],
+  "entities": {
+   "boulder": 1,
+   "elevator": 1,
+   "turbine": 1,
+   "door": 4,
+   "plate": 2
+  },
+  "options": [
+   "elevator speed 2.5",
+   "heavy plate",
+   "invert(door)"
+  ]
+ },
+ {
+  "order": 49,
+  "id": "l49_relay",
+  "name": "Relay",
+  "dark": false,
+  "supports": [
+   "fire+earth+air"
+  ],
+  "parTicks": 2100,
+  "description": "A river of two halves, and nobody who can wade both.",
+  "hints": [
+   "The tunnel is too low for Air to glide. Air rides on Fire's head through the lava.",
+   "Air steps off on the sill. Earth wades over from the far side and Air climbs on.",
+   "Air's turbine lifts Fire to the top floor, and Fire's torch starts Air's fan. Earth's plate and Air's plate open each other's gates."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M"
+  ],
+  "entities": {
+   "elevator": 1,
+   "turbine": 1,
+   "torch": 1,
+   "fan": 1,
+   "plate": 2,
+   "door": 2
+  },
+  "options": [
+   "elevator speed 2.5",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 50,
+  "id": "l50_assay",
+  "name": "Assay",
+  "dark": false,
+  "supports": [
+   "water+earth+air"
+  ],
+  "parTicks": 2400,
+  "description": "A scale that opens a gate, and a boulder that nobody can weigh alone.",
+  "hints": [
+   "The plate floats over the right pan. Whatever is on that pan touches it only when the scale is level.",
+   "Earth and one partner on the left pan balance the boulder. The third goes through the gate.",
+   "Up on the walkway is a crate. Dropped onto the left pan, it takes Earth's place on the scale, so Earth can go through too."
+  ],
+  "palette": [
+   "="
+  ],
+  "entities": {
+   "seesaw": 1,
+   "boulder": 1,
+   "box": 1,
+   "plate": 1,
+   "door": 1
+  },
+  "options": [
+   "heavy plate",
+   "seesaw range 2"
+  ]
+ },
+ {
+  "order": 51,
+  "id": "l51_three_stage",
+  "name": "Three Stage",
+  "dark": false,
+  "supports": [
+   "fire+water+air"
+  ],
+  "parTicks": 3,
+  "description": "Three ledges too high for two players.",
+  "hints": [
+   "Stand on each other's heads, all three, and jump from the bottom up. The top player flies about 11 tiles.",
+   "Only Water can stand in the pool, so Water is the bottom of the stack under Fire's ledge. Under Water's ledge the bottom is Fire.",
+   "Walk off the end of a ledge to come down, not over the liquid. Water crosses the lava on Fire's head."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "torch": 1,
+   "firewall": 1,
+   "lever": 2,
+   "door": 1
+  },
+  "options": [
+   "required:3"
+  ]
+ },
+ {
+  "order": 52,
+  "id": "l52_ore_run",
+  "name": "Ore Run",
+  "dark": false,
+  "supports": [
+   "fire+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "A boulder on the wrong side of the river, and a lever on the wrong side of the boulder.",
+  "hints": [
+   "Air crosses the river the way it did in the Relay, and spins the turbine on the walkway.",
+   "Let the lift down to leave the boulder on the ledge. Earth pushes it along the walkway to the grate.",
+   "Fire's lever brings the stamp down. The boulder on the vault plate opens Fire's gate on the top floor, and Fire's plate and torch take the others home."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M"
+  ],
+  "entities": {
+   "boulder": 1,
+   "elevator": 1,
+   "turbine": 1,
+   "door": 4,
+   "lever": 1,
+   "plate": 2,
+   "torch": 1,
+   "fan": 1
+  },
+  "options": [
+   "elevator speed 2.5",
+   "heavy plate",
+   "invert(door)"
+  ]
+ },
+ {
+  "order": 53,
+  "id": "l53_counterpoise",
+  "name": "Counterpoise",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3600,
+  "description": "It takes everyone to lift what only two of them can move.",
+  "hints": [
+   "The boulder and the crate weigh 4. All four of you on the left pan weigh 5, and that sends them up past the ledge. Press Down on the bridge to drop onto the pan.",
+   "Everyone off: they stay on the ledge. Fire melts the ice at the mouth of the tunnel.",
+   "Water's pad freezes the strip in the tunnel. The boulder goes to the far plate and the crate to the near one, and both together open the gate."
+  ],
+  "palette": [
+   "=",
+   "W"
+  ],
+  "entities": {
+   "seesaw": 1,
+   "door": 2,
+   "box": 1,
+   "boulder": 1,
+   "ice": 1,
+   "freezepad": 1,
+   "pool": 1,
+   "plate": 2
+  },
+  "options": [
+   "heavy plate",
+   "pool dur 420",
+   "required:2",
+   "seesaw range 2"
+  ]
+ },
+ {
+  "order": 54,
+  "id": "l54_quorum",
+  "name": "Quorum",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 2700,
+  "description": "Gates that open for the right number, and shut again for too many.",
+  "hints": [
+   "Each gate is two doors. One opens when enough plates are held, and the other shuts when too many are. Each of you has a plate, down your own lane.",
+   "Air wades the mist and waits at the first gate. Two on plates opens it, and then one has to step off for the second.",
+   "All three plates open the last gate. The lever behind it opens the gates at the end of the lanes."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "M",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "plate": 3,
+   "door": 8,
+   "lever": 1
+  },
+  "options": [
+   "heavy plate",
+   "invert(door)",
+   "required:1",
+   "required:2",
+   "required:3"
+  ]
+ },
+ {
+  "order": 55,
+  "id": "l55_last_word",
+  "name": "Last Word",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "A gale, a leap, a bridge, and a gate that can count.",
+  "hints": [
+   "The gale needs Fire's torch and the boulder on the plate. Everyone but Earth rides it alone, and Earth rides on Fire's head.",
+   "Water rides on Air's head and jumps off in mid-flight onto the crag. The lever behind the flames slides the bridge out.",
+   "The last gate wants exactly 2. Two hold the near plates while two go through. Those two stand on the far plates, in their own doorways, and the first two step off."
+  ],
+  "palette": [
+   "=",
+   "S"
+  ],
+  "entities": {
+   "boulder": 1,
+   "plate": 5,
+   "torch": 1,
+   "fan": 1,
+   "firewall": 2,
+   "lever": 1,
+   "door": 3
+  },
+  "options": [
+   "fan 2.7",
+   "heavy plate",
+   "invert(door)",
+   "required:2",
+   "required:3"
+  ]
+ },
+ {
+  "order": 56,
+  "id": "l56_portcullis",
+  "name": "Portcullis",
+  "dark": false,
+  "supports": [
+   "fire+water",
+   "fire+water+earth",
+   "fire+water+earth+air"
+  ],
+  "parTicks": 1800,
+  "description": "Each plate is far from its gate. Somebody has to keep the gate from shutting.",
+  "hints": [
+   "Nobody can run from a plate to its gate before it shuts.",
+   "One stands under the gate while the other holds the plate. When the plate is let go, the gate comes down onto the head of whoever is under it and waits.",
+   "Run up right behind your partner and go through together. Only Water can hold the first plate and only Fire the second.",
+   "With Earth: Earth holds the heavy plate too, and rides across the lava on Fire's head. With Air: only Air can stand on the mist to hold its plate, and Air is too short to hold a gate up for anyone else."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "V",
+   "W"
+  ],
+  "entities": {
+   "plate": 4,
+   "door": 4
+  },
+  "options": [
+   "heavy plate",
+   "required:2"
+  ]
+ },
+ {
+  "order": 57,
+  "id": "l57_low_bow",
+  "name": "Low Bow",
+  "dark": false,
+  "supports": [
+   "earth+air"
+  ],
+  "parTicks": 2400,
+  "description": "A gate stops at the height of whoever holds it up.",
+  "hints": [
+   "A gate that comes down onto Air stops lower than Earth is tall. So Earth waits under the first gate, and Air holds the plate and runs up behind it.",
+   "Only Earth is heavy enough for the second plate, so Air has to wait under the second gate.",
+   "Air with the crate on its head is taller than Earth. Earth pushes the crate off the shelf onto Air."
+  ],
+  "palette": [
+   "M",
+   "V"
+  ],
+  "entities": {
+   "plate": 2,
+   "door": 2,
+   "box": 1
+  },
+  "options": [
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 58,
+  "id": "l58_catch_the_lift",
+  "name": "Catch the Lift",
+  "dark": false,
+  "supports": [
+   "fire+earth"
+  ],
+  "parTicks": 1800,
+  "description": "The button is a long way from the lift, and the lift doesn't wait.",
+  "hints": [
+   "Only Fire can stand in the lava to press the button. The lift starts up at once.",
+   "Earth rides the lift from the start. Fire runs for the staircase and jumps onto the lift from a ledge before it climbs out of reach.",
+   "At the top, Earth's weight opens Fire's gate."
+  ],
+  "palette": [
+   "=",
+   "L"
+  ],
+  "entities": {
+   "button": 1,
+   "elevator": 1,
+   "plate": 1,
+   "door": 1
+  },
+  "options": [
+   "button dur 480",
+   "button:timed",
+   "elevator speed 1.1",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 59,
+  "id": "l59_furnace_line",
+  "name": "Furnace Line",
+  "dark": false,
+  "supports": [
+   "water+air"
+  ],
+  "parTicks": 2400,
+  "description": "A belt carries the boulder to the furnace. You have about ten seconds.",
+  "hints": [
+   "Once the boulder is on the belt, the clock is running. The lever behind the flames turns the belt round.",
+   "The ledge is three tiles up. Air jumps it, and Water jumps it from Air's head. Only Water can douse the flames.",
+   "Turned round, the belt drops the boulder onto the heavy plate in the pit at its far end, and the plate opens your doors."
+  ],
+  "palette": [
+   "S"
+  ],
+  "entities": {
+   "lever": 2,
+   "door": 3,
+   "boulder": 1,
+   "belt": 1,
+   "firewall": 1,
+   "plate": 1
+  },
+  "options": [
+   "belt speed 1",
+   "belt:reverse",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 60,
+  "id": "l60_relay",
+  "name": "Relay",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 2400,
+  "description": "Each of you holds a bridge for someone, then runs when they press.",
+  "hints": [
+   "Water's plate holds Fire's bridge out, and Earth's plate holds Water's.",
+   "When Fire presses its button, Water's gate opens for a moment. Water has to run for it straight away.",
+   "Then Water presses its button and Earth runs. Each button drops whoever presses it into their own doorway."
+  ],
+  "palette": [
+   "=",
+   "M",
+   "S",
+   "W"
+  ],
+  "entities": {
+   "plate": 2,
+   "door": 6,
+   "button": 2
+  },
+  "options": [
+   "button dur 190",
+   "button dur 230",
+   "button:timed",
+   "heavy plate",
+   "invert(door)"
+  ]
+ },
+ {
+  "order": 61,
+  "id": "l61_sorting_yard",
+  "name": "Sorting Yard",
+  "dark": false,
+  "supports": [
+   "water+earth+air"
+  ],
+  "parTicks": 2400,
+  "description": "Two loads come down one belt and have to go opposite ways.",
+  "hints": [
+   "The upper belt runs only while Earth stands on the heavy plate and Water's lever is on.",
+   "The lower belt takes everything to the left. Air climbs the tower to the lever that turns it round.",
+   "Let the crate fall off the left end, then turn the belt round before the boulder gets there."
+  ],
+  "palette": [
+   "=",
+   "S",
+   "W"
+  ],
+  "entities": {
+   "plate": 3,
+   "lever": 2,
+   "belt": 2,
+   "box": 1,
+   "boulder": 1,
+   "door": 1
+  },
+  "options": [
+   "belt speed -1.5",
+   "belt speed 1.5",
+   "belt:reverse",
+   "heavy plate",
+   "required:2"
+  ]
+ },
+ {
+  "order": 62,
+  "id": "l62_updraft",
+  "name": "Updraft",
+  "dark": false,
+  "supports": [
+   "fire+water+air"
+  ],
+  "parTicks": 2400,
+  "description": "A gale that blows for a few seconds, and a long way to the top.",
+  "hints": [
+   "Only Air can press the button in the mist. Fire and Water wait in the shaft and the gale carries them up.",
+   "Air has to run to the shaft and ride the gale up before it dies.",
+   "At the top, Fire melts the ice in front of Water's door and Water douses the flames in front of the others'."
+  ],
+  "palette": [
+   "=",
+   "V"
+  ],
+  "entities": {
+   "button": 1,
+   "fan": 1,
+   "ice": 1,
+   "firewall": 1
+  },
+  "options": [
+   "button dur 300",
+   "button:timed",
+   "fan 2.7"
+  ]
+ },
+ {
+  "order": 63,
+  "id": "l63_two_high",
+  "name": "Two High",
+  "dark": false,
+  "supports": [
+   "fire+earth+air"
+  ],
+  "parTicks": 2400,
+  "description": "Air has to bring the crate through on its head, and one of you isn't tall enough to hold the gate.",
+  "hints": [
+   "The crate has to reach the plate on the high ledge, and only Air can jump up there. Air carries it on its head: Earth pushes it off the shelf onto Air.",
+   "Only Air can stand in the mist to hold the far plate, crate and all. A gate that comes down onto one of you stops too low for Air and the crate.",
+   "Fire stands on Earth's head under the gate. Then the gate stops twice as high, and Air runs up behind them with the crate."
+  ],
+  "palette": [
+   "L",
+   "S",
+   "V"
+  ],
+  "entities": {
+   "plate": 2,
+   "box": 1,
+   "door": 2
+  },
+  "options": []
+ },
+ {
+  "order": 64,
+  "id": "l64_paternoster",
+  "name": "Paternoster",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "Two lifts, two buttons, each on the wrong side.",
+  "hints": [
+   "Each button raises the lift on the other side. Earth waits on the left lift and Air on the right one.",
+   "Fire and Water press at the same moment and each runs for the lift near them. It is already rising.",
+   "At the top, Air glides Fire over the chasm. Earth's weight opens the last gate. Someone taller than Air holds it up for Earth."
+  ],
+  "palette": [
+   "L",
+   "S",
+   "W"
+  ],
+  "entities": {
+   "button": 2,
+   "elevator": 2,
+   "plate": 1,
+   "door": 1
+  },
+  "options": [
+   "button dur 560",
+   "button:timed",
+   "elevator speed .9",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 65,
+  "id": "l65_last_shift",
+  "name": "Last Shift",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "A boulder on its way to the furnace, two plates, and a gate that hardly opens.",
+  "hints": [
+   "Only Fire can reach the start lever. Once the boulder is on the belt, Water has to climb onto the ledge from a partner's head, douse the flames and turn the belt round.",
+   "The first gate needs the boulder on one heavy plate and Earth on the other. Then it stays open.",
+   "Only Air can press the last button, and the gate opens only for a moment. Water rides on Earth's head at the front, and Fire stays under the gate so that it comes down on its head while Air runs up behind."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "S",
+   "V"
+  ],
+  "entities": {
+   "lever": 2,
+   "door": 4,
+   "boulder": 1,
+   "belt": 1,
+   "firewall": 1,
+   "plate": 2,
+   "button": 1
+  },
+  "options": [
+   "belt speed 1",
+   "belt:reverse",
+   "button dur 24",
+   "button:timed",
+   "heavy plate",
+   "latch",
+   "required:2"
+  ]
+ },
+ {
+  "order": 66,
+  "id": "l66_rockslide",
+  "name": "Rockslide",
+  "dark": false,
+  "supports": [
+   "fire+earth",
+   "water+earth",
+   "earth+air"
+  ],
+  "parTicks": 1200,
+  "description": "A boulder that rolls, a plate it rolls past, and a partner in its way.",
+  "hints": [
+   "Only Earth can push the boulder off the hilltop. Once it rolls, nobody can catch up with it.",
+   "Wait on the far side of the heavy plate, between the plate and the pit. The boulder stops against you, on the plate."
+  ],
+  "palette": [
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "boulder": 1,
+   "plate": 1,
+   "door": 1
+  },
+  "options": [
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 67,
+  "id": "l67_ferry",
+  "name": "Ferry",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 1800,
+  "description": "A boulder takes one of you through the tunnel. The others need a bridge.",
+  "hints": [
+   "Water puts out the flames in front of the boulder. Then Fire stands on the boulder and Earth pushes it down the slope.",
+   "The boulder rolls over the sludge in the tunnel with Fire on top. Fire lights the torch on the far side, and the bridge closes over the sludge."
+  ],
+  "palette": [
+   "/",
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "boulder": 1,
+   "firewall": 1,
+   "door": 1,
+   "torch": 1
+  },
+  "options": [
+   "invert(door)"
+  ]
+ },
+ {
+  "order": 68,
+  "id": "l68_stepping_stone",
+  "name": "Stepping Stone",
+  "dark": false,
+  "supports": [
+   "fire+earth",
+   "water+earth"
+  ],
+  "parTicks": 1500,
+  "description": "Uphill with a boulder, so that it can roll down into the lake.",
+  "hints": [
+   "Earth can push the boulder up the slope. The way over the crest has to be opened first: Fire melts the ice, or Water puts out the flames.",
+   "Over the crest, the boulder rolls down into the lake and stops in the middle of it. Jump onto it and on to the far bank."
+  ],
+  "palette": [
+   "/",
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "boulder": 1,
+   "ice": 1,
+   "firewall": 1
+  },
+  "options": []
+ },
+ {
+  "order": 69,
+  "id": "l69_express",
+  "name": "Express",
+  "dark": false,
+  "supports": [
+   "fire+earth"
+  ],
+  "parTicks": 1200,
+  "description": "A gate at the bottom of a long slope opens for three seconds. Earth is slow, the boulder isn't.",
+  "hints": [
+   "Earth stands on the boulder. Then Fire presses the button in the lava: the belt carries the boulder through the hatch, and it rolls all the way down with Earth on top.",
+   "Past the gate, Earth jumps off onto the step and stands on the heavy plate. That opens the way to Fire's door, up at the top."
+  ],
+  "palette": [
+   "L",
+   "\\"
+  ],
+  "entities": {
+   "button": 1,
+   "belt": 1,
+   "boulder": 1,
+   "door": 3,
+   "plate": 1
+  },
+  "options": [
+   "belt speed 3",
+   "button dur 190",
+   "button:timed",
+   "heavy plate",
+   "latch"
+  ]
+ },
+ {
+  "order": 70,
+  "id": "l70_brake",
+  "name": "Brake",
+  "dark": false,
+  "supports": [
+   "fire+earth",
+   "water+earth"
+  ],
+  "parTicks": 2400,
+  "description": "A lift that comes and goes, and a boulder that has to be on it.",
+  "hints": [
+   "The partner stands on the slope near the bottom. Earth pushes the boulder off the hilltop, and it stops against the partner.",
+   "When the lift stops at this side of the pit, the partner jumps back over the boulder. It rolls slowly onto the lift and stays there.",
+   "Earth rides across behind the boulder and pushes it off onto the heavy plate, which opens the gate."
+  ],
+  "palette": [
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "boulder": 1,
+   "elevator": 1,
+   "plate": 1,
+   "door": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "elevator:loop",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 71,
+  "id": "l71_domino",
+  "name": "Domino",
+  "dark": false,
+  "supports": [
+   "fire+earth"
+  ],
+  "parTicks": 1500,
+  "description": "Two boulders, two plates in the sludge, and a little lava to stand in.",
+  "hints": [
+   "Fire stands at the near end of the lava, right past the plates. Earth pushes the first boulder down: it rolls over the sludge and stops against Fire, on the far plate.",
+   "Earth pushes the second one down. It stops against the first, on the near plate, and both gates open."
+  ],
+  "palette": [
+   "L",
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "boulder": 2,
+   "plate": 2,
+   "door": 2
+  },
+  "options": [
+   "heavy plate",
+   "required:2"
+  ]
+ },
+ {
+  "order": 72,
+  "id": "l72_hoist",
+  "name": "Hoist",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 2400,
+  "description": "A boulder to hold the plate, a gale to lift Earth, and two barriers at the top.",
+  "hints": [
+   "Water waits between the heavy plate and the pit. Earth pushes the boulder off the hilltop, and it stops against Water, on the plate.",
+   "With the boulder on the plate, the gale blows. Earth stands on Fire's head, and Fire carries it up the shaft. Water rides up too.",
+   "At the top, Water puts out the flames and Fire melts the ice."
+  ],
+  "palette": [
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "boulder": 1,
+   "plate": 1,
+   "fan": 1,
+   "firewall": 1,
+   "ice": 1
+  },
+  "options": [
+   "fan 2.7",
+   "heavy plate"
+  ]
+ },
+ {
+  "order": 73,
+  "id": "l73_flash",
+  "name": "Flash",
+  "dark": false,
+  "supports": [
+   "water+earth+air"
+  ],
+  "parTicks": 1800,
+  "description": "A boulder rolls over a plate nobody else can reach, and the gate opens for a moment.",
+  "hints": [
+   "Air turns the turbine on the deck, and the hatch in front of the boulder opens for good.",
+   "Water waits right next to the gate. Earth pushes the boulder down into the trench: as it rolls over the heavy plate, the gate opens for a moment, and Water steps under it.",
+   "The gate comes down on Water's head and waits there. Earth lines up right behind her and Air behind Earth, and they walk through together."
+  ],
+  "palette": [
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "boulder": 1,
+   "turbine": 1,
+   "door": 2,
+   "plate": 1
+  },
+  "options": [
+   "heavy plate",
+   "latch"
+  ]
+ },
+ {
+  "order": 74,
+  "id": "l74_convoy",
+  "name": "Convoy",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3,
+  "description": "Two boulders, two riders, one tunnel of sludge, and the way home for those who stay behind.",
+  "hints": [
+   "Nobody can cross the sludge in the tunnel except on a boulder, or Air in a long glide. Fire and Water each ride one, and Earth pushes them off the hill one after the other.",
+   "The second boulder stops against the first: Water walks over the first one to the far bank.",
+   "Fire's torch opens the way home for Earth and Air. Water puts out the flames in front of Fire's door, and Air's turbine opens Water's door."
+  ],
+  "palette": [
+   "/",
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "boulder": 2,
+   "torch": 1,
+   "door": 2,
+   "firewall": 1,
+   "turbine": 1
+  },
+  "options": [
+   "latch"
+  ]
+ },
+ {
+  "order": 75,
+  "id": "l75_avalanche",
+  "name": "Avalanche",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3600,
+  "description": "The finale. A boulder down a long slope, someone running ahead of it, a gale, and everyone's door in someone else's hands.",
+  "hints": [
+   "Air turns the turbine while Fire presses the button in the lava: the belt starts and the hatch opens. Earth rides the boulder; Earth on foot is far too slow for the gate at the bottom.",
+   "Water runs down the slope just ahead of the boulder, through the gate, and stops past the heavy plate. The boulder stops against her, on the plate, and the gale starts.",
+   "Water carries Earth up the gale. Water puts out the flames, and Earth's weight on the plate up there opens the gate in front of Fire's and Air's doors, back at the top."
+  ],
+  "palette": [
+   "L",
+   "S",
+   "\\"
+  ],
+  "entities": {
+   "button": 1,
+   "turbine": 1,
+   "belt": 1,
+   "boulder": 1,
+   "door": 3,
+   "plate": 2,
+   "fan": 1,
+   "firewall": 1
+  },
+  "options": [
+   "belt speed 3",
+   "button dur 200",
+   "button:timed",
+   "fan 2.7",
+   "heavy plate",
+   "latch",
+   "required:2"
+  ]
+ }
+]
