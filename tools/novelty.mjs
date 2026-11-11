@@ -1,5 +1,9 @@
 #!/usr/bin/env node
-// How close is a level to everything that already exists for the same player count?
+// Is this level's IDEA new for its player count?
+//
+// Ingredients are not the test: two levels may use the same ice walls, turbines and cracked floors
+// all day. What has to be new is the idea, or — if every idea in it has been used before — the
+// combination of them.
 //
 //   node tools/novelty.mjs <id>            # a level in levels/
 //   node tools/novelty.mjs <path.json>     # a draft level file
@@ -9,6 +13,7 @@
 // a 2-player level may reuse a 3-player level's idea.
 import fs from 'node:fs';
 import path from 'node:path';
+import { IDEAS } from './ideas.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const arg = process.argv[2];
@@ -48,6 +53,7 @@ function tokensOf(l) {
 }
 
 const mine = tokensOf(level);
+const myIdeas = meta.ideas ?? [];
 const sizes = [...new Set(level.supports.map((g) => g.length))];
 const jaccard = (a, b) => {
   const B = new Set(b), inter = a.filter((x) => B.has(x)).length;
@@ -72,26 +78,32 @@ const scored = others.map((l) => ({ ...l, j: weighted(mine, l.tokens), plain: ja
   .sort((a, b) => b.j - a.j);
 const sameCount = scored.filter((l) => l.same);
 
-// features nobody of this player count has used before
-const seenHere = new Set(sameCount.flatMap((l) => l.tokens));
-const fresh = mine.filter((t) => !seenHere.has(t));
-
-// pairs of features nobody of this player count has ever put in the same level: the combination
-// can be new even when every ingredient has been used before
-const pairsOf = (ts) => { const out = []; for (let i = 0; i < ts.length; i++) for (let j = i + 1; j < ts.length; j++) out.push(ts[i] + ' + ' + ts[j]); return out; };
-const seenPairs = new Set(sameCount.flatMap((l) => pairsOf(l.tokens)));
-const freshPairs = pairsOf(mine).filter((p) => !seenPairs.has(p));
+// ideas, and combinations of ideas, that no level of this player count has used
+const pairsOf = (ts) => { const s = [...ts].sort(), out = []; for (let i = 0; i < s.length; i++) for (let j = i + 1; j < s.length; j++) out.push(s[i] + ' + ' + s[j]); return out; };
+const ideasHere = sameCount.filter((l) => l.ideas?.length);
+const seenIdeas = new Set(ideasHere.flatMap((l) => l.ideas));
+const seenIdeaPairs = new Set(ideasHere.flatMap((l) => pairsOf(l.ideas)));
+const newIdeas = myIdeas.filter((i) => !seenIdeas.has(i));
+const newIdeaPairs = pairsOf(myIdeas).filter((p) => !seenIdeaPairs.has(p));
+const coined = myIdeas.filter((i) => !IDEAS[i]);
+const contains = ideasHere.filter((l) => myIdeas.length && myIdeas.every((i) => l.ideas.includes(i)));
 
 console.log(`${level.name} (${level.id}) — ${sizes.join('/')} players, ${mine.length} features`);
 console.log(`core tag: ${meta.core ? '`' + meta.core + '`' : '(none — add "core" to meta.json)'}`);
-console.log(`features: ${mine.join(' ')}`);
-console.log(`\nnew at ${sizes.join('/')} players — features (${fresh.length}): ${fresh.join(' ') || '(none)'}`);
-console.log(`new at ${sizes.join('/')} players — pairings (${freshPairs.length}): ${freshPairs.slice(0, 6).join(', ')}${freshPairs.length > 6 ? ', …' : ''}`);
+console.log(`ideas:    ${myIdeas.join(', ') || '(none — add "ideas" to meta.json)'}`);
+console.log(`features: ${mine.join(' ')}   (context only — repeating ingredients is free)`);
+console.log(`\nideas new at ${sizes.join('/')} players (${newIdeas.length}): ${newIdeas.join(', ') || '(none)'}`);
+console.log(`idea pairings new at ${sizes.join('/')} players (${newIdeaPairs.length}): ${newIdeaPairs.join(', ') || '(none)'}`);
+if (coined.length) console.log(`coined here, in no other level anywhere: ${coined.join(', ')}  (add them to tools/ideas.mjs)`);
 
-console.log(`\nnearest at the same player count (overlap weighted by how rare each feature is):`);
-for (const l of sameCount.slice(0, 8)) {
+console.log(`\nlevels at the same player count that share an idea:`);
+const sharers = sameCount.filter((l) => l.ideas?.some((i) => myIdeas.includes(i)));
+for (const l of sharers) console.log(`  ${l.name} (${l.id}) core=${l.core} — shares: ${l.ideas.filter((i) => myIdeas.includes(i)).join(', ')}`);
+if (!sharers.length) console.log('  (none — every idea in this level is new at this player count)');
+
+console.log(`\nnearest by ingredients, for context only — never a reason to fail:`);
+for (const l of sameCount.slice(0, 4)) {
   console.log(`  ${l.j.toFixed(2)} (raw ${l.plain.toFixed(2)})  ${l.source === 'mine' ? '*' : ' '} ${l.name} (${l.id})${l.core ? ' core=' + l.core : ''}`);
-  console.log(`         shared: ${mine.filter((t) => l.tokens.includes(t)).join(' ') || '(none)'}`);
 }
 const crossTop = scored.filter((l) => !l.same).slice(0, 3);
 if (crossTop.length) {
@@ -102,10 +114,13 @@ if (crossTop.length) {
 // ---- verdict ----------------------------------------------------------------
 const problems = [], warnings = [];
 const worst = sameCount[0];
-if (worst && worst.j >= 0.62) problems.push(`weighted feature overlap ${worst.j.toFixed(2)} with ${worst.name} — this is a rearrangement, not a new level`);
-else if (worst && worst.j >= 0.45) warnings.push(`weighted feature overlap ${worst.j.toFixed(2)} with ${worst.name} — the parts are nearly the same set, so the core had better not be`);
-if (fresh.length < 2 && freshPairs.length < 8) {
-  problems.push(`${fresh.length} new feature(s) and ${freshPairs.length} new pairing(s) at this player count; want 2 new features, or 8 pairings no level of this count has together`);
+if (worst && worst.plain >= 0.9) warnings.push(`built from almost exactly ${worst.name}'s parts (${worst.plain.toFixed(2)}) — fine in itself, but make sure the idea really is somewhere else`);
+if (!myIdeas.length) problems.push('meta.json has no "ideas" list — name the ideas this level is built from');
+else {
+  for (const l of contains) problems.push(`every idea in this level is already in ${l.name} (${l.ideas.join(', ')}) — it brings nothing new`);
+  if (!contains.length && !newIdeas.length && !newIdeaPairs.length) {
+    problems.push('no new idea at this player count, and no pairing of ideas that some level here does not already have together');
+  }
 }
 if (!meta.core) problems.push('meta.json has no "core" tag');
 else {
@@ -122,6 +137,6 @@ else {
 console.log('');
 for (const w of warnings) console.log(`  ! ${w}`);
 for (const p of problems) console.log(`  x ${p}`);
-if (!problems.length) console.log(warnings.length ? 'REVIEW: mechanically acceptable, but read the warnings and justify the core in NOTES.md.' : 'PASS: nothing of this player count is close to it.');
-else console.log('FAIL: change the design, not the description.');
+if (!problems.length) console.log(warnings.length ? 'REVIEW: the idea is new here; read the warnings and justify the core in NOTES.md.' : 'PASS: the idea, or the combination of ideas, is new at this player count.');
+else console.log('FAIL: change the idea or its combination — not the wording.');
 process.exit(problems.length ? 1 : 0);

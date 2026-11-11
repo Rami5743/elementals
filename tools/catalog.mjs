@@ -81,7 +81,7 @@ for (const id of fs.readdirSync(path.join(ROOT, 'levels')).sort()) {
     sizes: [...new Set(level.supports.map((g) => g.length))].sort(),
     groups: level.supports.map((g) => g.join('+')),
     parTicks: level.parTicks ?? 3600, dark: !!level.dark,
-    challenge: meta.challenge ?? '?', core: meta.core ?? '', order: meta.order ?? level.order,
+    challenge: meta.challenge ?? '?', core: meta.core ?? '', ideas: meta.ideas ?? [], order: meta.order ?? level.order,
     line: coreLine(notes), tokens: tokensOfOwn(level),
   });
 }
@@ -104,6 +104,7 @@ const entry = (l) => {
   if (l.dark) bits.push('dark');
   const out = [bits.join(' ')];
   if (l.line) out.push(`  - idea: ${esc(l.line)}`);
+  if (l.ideas?.length) out.push(`  - ideas: ${l.ideas.join(', ')}`);
   if (l.hints?.length) out.push(`  - hints: ${l.hints.map(esc).join(' / ')}`);
   out.push(`  - features: ${l.tokens.join(' ')}`);
   return out.join('\n');
@@ -123,9 +124,14 @@ against every level that already exists. Read it before designing anything.
   not.
 - \`idea\` is the level's one-line core: for campaign levels it is the game's own description, for
   this repo's levels it is the "Introduces"/"The insight" line from its NOTES.md.
+- \`ideas\` is what the level is *about*, in the vocabulary of \`tools/ideas.mjs\`. This is what
+  novelty is judged on: a new level needs an idea nobody of its player count has used, or a pairing
+  of old ideas that no level of its player count has together. \`node tools/novelty.mjs <id>\`
+  checks it.
 - \`features\` is a normalised token set (entity types, wiring options, liquid and one-way tiles,
-  darkness). \`node tools/novelty.mjs <id>\` compares these mechanically.
-- \`core\` is this repo's short tag for the central idea; it must be unique among levels of the
+  darkness). It is context only — **repeating ingredients is free**, and never a reason to reject a
+  level.
+- \`core\` is this repo's one-line tag for the central idea; it must be unique among levels of the
   same player count.
 - Campaign entries carry no map: the kit ships only four of the 75 built-in levels, so the rest
   are described here by idea, hints and feature inventory. Maps of this repo's own levels are in

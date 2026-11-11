@@ -55,13 +55,21 @@ Use `--fast` to rebuild the page from the existing links without re-running the 
 ## Per-level `meta.json`
 
 ```json
-{ "order": 101, "challenge": "mind", "core": "crate-substitutes-for-the-plate-holder" }
+{
+  "order": 101,
+  "challenge": "mind",
+  "core": "crate-substitutes-for-the-plate-holder",
+  "ideas": ["object-as-permanent-switch", "hold-switch"]
+}
 ```
 
 `challenge` is `mind` (solved by thinking; comfortable moves) or `motor` (also asks you to hit a
 window or a jump). `order` sorts the cards on the page: 1xx for two players, 2xx for three, 3xx for
-four. `core` is a short tag for the level's central idea, and must be unique among the levels for
-the same player count — `tools/novelty.mjs` checks it.
+four. `core` is a short tag for the level's central idea and must be unique among the levels for the
+same player count. `ideas` lists what the level is built from, in the vocabulary of
+`tools/ideas.mjs`: a new level needs an idea no level of its player count has used, or a pairing of
+old ideas that none of them has together. Repeating *ingredients* — the same ice walls, turbines and
+cracked floors — is free. `tools/novelty.mjs` checks all of this.
 
 ## Adding a level
 

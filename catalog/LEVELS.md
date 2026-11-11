@@ -11,9 +11,14 @@ against every level that already exists. Read it before designing anything.
   not.
 - `idea` is the level's one-line core: for campaign levels it is the game's own description, for
   this repo's levels it is the "Introduces"/"The insight" line from its NOTES.md.
+- `ideas` is what the level is *about*, in the vocabulary of `tools/ideas.mjs`. This is what
+  novelty is judged on: a new level needs an idea nobody of its player count has used, or a pairing
+  of old ideas that no level of its player count has together. `node tools/novelty.mjs <id>`
+  checks it.
 - `features` is a normalised token set (entity types, wiring options, liquid and one-way tiles,
-  darkness). `node tools/novelty.mjs <id>` compares these mechanically.
-- `core` is this repo's short tag for the central idea; it must be unique among levels of the
+  darkness). It is context only — **repeating ingredients is free**, and never a reason to reject a
+  level.
+- `core` is this repo's one-line tag for the central idea; it must be unique among levels of the
   same player count.
 - Campaign entries carry no map: the kit ships only four of the 75 built-in levels, so the rest
   are described here by idea, hints and feature inventory. Maps of this repo's own levels are in
@@ -27,33 +32,43 @@ Totals: 75 campaign levels, 30 in this repo.
 
 - **Dismount** `dismount` (2p: fire+air) core=`step-off-a-glide-in-mid-air` challenge=motor par=2400
   - idea: jumping off Air in mid-flight. A glide only ever descends, so the one place a passenger can reach that Air cannot is above the glide line — and only during the first second of it, while Air is still carrying its own jump upward.
+  - ideas: glide-dismount
   - features: ent:door ent:lever
 - **Upstream** `upstream` (2p: fire+earth) core=`hopping-beats-a-belt-too-fast-to-walk` challenge=motor par=3000
   - idea: beating a belt that is faster than you are. Walking against this belt gains nobody anything — it runs at 3.3 pixels a tick against Fire's 3.2 and Earth's 2.6 — but a hop breaks contact with it for a moment, and a string of hops crosses the whole tunnel even under a roof one tile high.
+  - ideas: hop-beats-belt, low-roof-no-jump
   - features: ent:belt ent:boulder ent:door ent:ice ent:plate opt:belt:blocks-fire-water opt:heavy-plate
 - **Service Lift** `service_lift` (2p: fire+water) core=`crate-substitutes-for-the-plate-holder` challenge=mind par=2700
   - idea: a plate that powers a lift, and a crate used as a permanent substitute for the player who would otherwise have to stay behind holding it.
+  - ideas: object-as-permanent-switch, hold-switch
   - features: ent:box ent:elevator ent:ice ent:plate tile:one-way
 - **Undermine** `undermine` (2p: fire+earth) core=`pound-the-floor-to-move-the-boulder` challenge=mind par=2700
   - idea: the ground pound as a way to move something, not just to break a floor. The boulder cannot be pushed anywhere, so the floor under it has to go instead.
+  - ideas: pound-to-move
   - features: ent:boulder ent:cracked ent:door ent:ice ent:plate opt:heavy-plate tile:mud
 - **Thaw** `thaw` (2p: fire+water) core=`freeze-pad-and-a-tunnel-too-low-to-ride` challenge=mind par=2400
   - idea: the freeze pad, and a tunnel too low to ride through.
+  - ideas: freeze-bridge, low-roof-no-jump
   - features: ent:freezepad ent:ice ent:pool opt:pool-timed tile:water
 - **Updraft Duet** `updraft_duet` (2p: water+air) core=`fan-lifts-air-carrying-a-passenger` challenge=mind par=1800
   - idea: carrying a passenger up a fan. The chimney's updraft is the default strength: it lifts Air easily, Water not at all, and Air with one passenger slowly but surely.
+  - ideas: fan-passenger
   - features: ent:fan ent:firewall
 - **Conveyor** `conveyor` (2p: fire+water) core=`belt-sorts-objects-people-hop` challenge=mind par=2400
   - idea: a belt as a one-way street for objects. People beat a belt by hopping; a crate cannot hop, so the belt decides where the crate goes.
+  - ideas: belt-cargo
   - features: ent:belt ent:box ent:button ent:door ent:ice ent:plate opt:belt:reverse opt:belt:walkable opt:button:hold
 - **Lantern** `lantern` (2p: fire+air) core=`glide-with-a-passenger-in-the-dark` challenge=motor par=2400 dark
   - idea: gliding with a passenger, in the dark.
+  - ideas: dark, glide-passenger
   - features: dark ent:door ent:torch tile:sludge
 - **Wellspring** `wellspring` (2p: water+earth) core=`freeze-pad-worked-from-above` challenge=mind par=3600
   - idea: a shuttle lift on a heavy plate, and a freeze pad worked from above to open a route down below.
+  - ideas: trigger-from-above, freeze-bridge
   - features: ent:boulder ent:elevator ent:freezepad ent:plate ent:pool opt:elevator:loop opt:heavy-plate opt:pool-timed tile:mud tile:one-way tile:water
 - **Windlass** `windlass` (2p: earth+air) core=`one-turbine-two-gates-a-corridor-to-run` challenge=motor par=2700
   - idea: a turbine driving two gates at once, so the corridor between them has to be run.
+  - ideas: shared-switch-two-gates, timed-window
   - features: ent:boulder ent:door ent:plate ent:turbine opt:heavy-plate opt:turbine-timed tile:mud
 
 ## 2 players — campaign (32)
@@ -191,33 +206,43 @@ Totals: 75 campaign levels, 30 in this repo.
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
+  - ideas: lift-corner-path
   - features: ent:boulder ent:elevator ent:firewall ent:ice ent:plate opt:elevator:loop opt:heavy-plate tile:sludge
 - **Aqueduct** `aqueduct` (3p: fire+water+air) core=`mutual-stranding-machines` challenge=mind par=2400
   - idea: two machines, each of which strands the player who runs it, arranged so that they free each other.
+  - ideas: machine-strands-operator, twist-stranding
   - features: ent:elevator ent:fan ent:firewall ent:ice ent:lever ent:plate tile:one-way
 - **The Drop** `the_drop` (3p: water+earth+air) core=`button-opens-the-gate-and-your-own-floor` challenge=motor par=3600
   - idea: a button that opens two things — the gate the others have to run, and the floor the presser is standing on. Pressing it is not a favour somebody does from safety; it is how that player leaves the upper hall, and it starts everyone's clock at the same moment.
+  - ideas: twist-self-block, timed-window
   - features: ent:boulder ent:button ent:door ent:firewall ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:wide-door
 - **Draught** `draught` (3p: fire+earth+air) core=`boulder-as-a-permanent-switch` challenge=mind par=2100
   - idea: a heavy plate that has to stay down for good, so the boulder — not a player — becomes the machine's switch.
+  - ideas: object-as-permanent-switch
   - features: ent:boulder ent:door ent:fan ent:plate ent:torch opt:heavy-plate
 - **Sluicegate** `sluicegate` (3p: water+earth+air) core=`two-timers-that-must-overlap` challenge=mind par=3000
   - idea: two timers that have to overlap — a sluice that stays open five seconds and a stretch of water that stays frozen ten.
+  - ideas: twist-two-clocks, freeze-bridge
   - features: ent:boulder ent:door ent:freezepad ent:plate ent:pool ent:turbine opt:heavy-plate opt:pool-timed opt:turbine-timed tile:water
 - **Pillars** `pillars` (3p: fire+water+earth) core=`human-ladder-to-a-three-tile-shelf` challenge=mind par=3000
   - idea: the plain human ladder. A jump clears two tiles; a jump from a partner's head clears three, and the shelf is at three.
+  - ideas: head-stack
   - features: ent:boulder ent:door ent:firewall ent:ice ent:lever ent:plate opt:heavy-plate
 - **Signal Fire** `signal_fire` (3p: fire+water+air) core=`torch-wired-to-an-inverted-bridge` challenge=motor par=3000 dark
   - idea: a bridge that is only there while a torch burns — a wide door wired to the torch and inverted, so lighting the torch closes it across the chasm.
+  - ideas: torch-bridge, invert-door
   - features: dark ent:door ent:firewall ent:torch opt:invert:door opt:wide-door tile:sludge
 - **Cistern** `cistern` (3p: fire+water+earth) core=`two-plates-held-by-objects-not-players` challenge=mind par=3600
   - idea: a gate that wants two plates down at the same time, so neither of them can be a player — both have to be held by something that stays.
+  - ideas: object-as-permanent-switch, quorum
   - features: ent:boulder ent:box ent:door ent:firewall ent:ice ent:plate opt:heavy-plate opt:required:2 tile:water
 - **Gangway** `gangway` (3p: fire+earth+air) core=`the-lift-is-the-floor` challenge=mind par=3000
   - idea: Every other lift in the game is a thing you wait for. This one is the ground you are standing on. Sending it up is not free — it takes the road away, so whoever is going to need that road has to be on the right side of it first, and whoever is going up has to already be aboard.
+  - ideas: lift-as-floor, twist-self-block
   - features: ent:cracked ent:door ent:elevator ent:ice ent:lever ent:turbine opt:elevator:powered opt:latch tile:sludge
 - **Letterbox** `letterbox` (3p: fire+water+earth) core=`closing-door-presses-through-a-grating` challenge=mind par=3000
   - idea: The grating looks like a hole you cannot use. It is: you can fall through it, but the thing you need to get down there cannot. The lid is not a gate in this level, it is a press — the only machine in the hall that pushes downward.
+  - ideas: one-way-press, twist-backwards
   - features: ent:boulder ent:door ent:firewall ent:ice ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch tile:one-way
 
 ## 3 players — campaign (27)
@@ -335,33 +360,43 @@ Totals: 75 campaign levels, 30 in this repo.
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
+  - ideas: lock-per-element, head-stack
   - features: ent:cracked ent:door ent:firewall ent:ice ent:lever ent:turbine opt:latch
 - **Shoulders** `shoulders` (4p: fire+water+earth+air) core=`turbine-just-above-airs-jump` challenge=mind par=3600
   - idea: a switch that only Air can work, placed where Air cannot get. The turbine hangs five tiles above the floor; Air's jump is measured at 3.75 tiles and nothing else in the game answers to a turbine at all, so the one player who can use it is the one who needs a leg up.
+  - ideas: turbine-out-of-reach, head-stack
   - features: ent:cracked ent:door ent:firewall ent:ice ent:turbine opt:latch
 - **Cataract** `cataract` (4p: fire+water+earth+air) core=`one-ford-then-a-lock-each` challenge=mind par=3600
   - idea: a ford that one player makes passable for the other three, with three more locks behind it, one for each of them.
+  - ideas: freeze-bridge, lock-per-element
   - features: ent:cracked ent:door ent:freezepad ent:ice ent:pool ent:turbine opt:latch opt:pool-timed tile:water
 - **Headroom** `headroom` (4p: fire+water+earth+air) core=`low-roof-scrapes-a-carried-boulder` challenge=mind par=4200
   - idea: carrying a boulder on your head and letting a low roof take it off again. Anything that falls on a player stays there and travels with them; a ceiling one tile above the floor scrapes it straight off, which makes the mouth of a tunnel a place you can put something down precisely.
+  - ideas: boulder-carry, low-roof-no-jump
   - features: ent:boulder ent:door ent:ice ent:plate ent:turbine opt:heavy-plate opt:latch tile:water
 - **Drill** `drill` (4p: fire+water+earth+air) core=`chained-pounds-through-offset-hatches` challenge=motor par=3000
   - idea: A ground pound is usually something you do to the floor you are standing on. Here it is something you do three times in a row, each time from a ledge that is not above the next one. Lining up matters: Earth is 26 px wide, and if half of it is resting on the rock beside the hatch, the pound lands on stone and nothing breaks.
+  - ideas: pound-chain
   - features: ent:cracked ent:door ent:firewall ent:ice ent:turbine opt:latch
 - **Causeway** `causeway` (4p: fire+water+earth+air) core=`floating-boulder-plugs-the-channel` challenge=mind par=3000
   - idea: Water is not only something to avoid — it holds things up. A boulder pushed into the channel floats, and because the bank is exactly one tile above the water, it floats *flush*: the thing you were treating as a hazard becomes the last plank of the bridge. The low roof is what makes you look for a floor instead of a jump.
+  - ideas: boulder-float, low-roof-no-jump
   - features: ent:boulder ent:door ent:firewall ent:ice ent:turbine opt:latch tile:water
 - **Lofts** `lofts` (4p: fire+water+earth+air) core=`one-wind-three-different-outcomes` challenge=mind par=3000
   - idea: Everyone looks at the same wind and sees a different machine. The second half of it is Air's: steering is what stops you climbing. Hold right and the wind just carries you across like Fire. Let go, and it takes you to the top.
+  - ideas: fan-band
   - features: ent:boulder ent:door ent:fan ent:firewall ent:ice ent:plate ent:turbine opt:fan:hang-time opt:heavy-plate opt:latch opt:required:2 tile:sludge
 - **Treadmill** `treadmill` (4p: fire+water+earth+air) core=`belt-speed-tuned-to-exclude-earth` challenge=mind par=3000
   - idea: The belt is not an obstacle to be timed or avoided — it is a *speed test*, set exactly between Earth's legs and everyone else's. The moment you notice Earth cannot gain a pixel on it, the question stops being "how do we get Earth across" and becomes "what can Earth do down there that we cannot do up here".
+  - ideas: belt-filter
   - features: ent:belt ent:cracked ent:door ent:firewall ent:ice ent:lever ent:turbine opt:belt:blocks-earth opt:latch
 - **Cargo** `cargo` (4p: fire+water+earth+air) core=`belt-ride-steered-by-a-partner` challenge=motor par=3000
   - idea: The belt is not a floor you walk on, it is a vehicle you ride — and the one who decides where it takes you is standing still at the other end of the level. The second half of the insight is that you cannot jump off wherever you like: the roof is one tile high everywhere except at the three hatches, so the only question that matters is *when* you jump.
+  - ideas: belt-reverse, low-roof-no-jump
   - features: ent:belt ent:boulder ent:door ent:firewall ent:ice ent:plate ent:turbine opt:belt:blocks-all opt:belt:reverse opt:heavy-plate opt:latch opt:wide-door
 - **Finale** `finale` (4p: fire+water+earth+air) core=`four-locks-one-tower` challenge=motor par=4800
   - idea: a turbine only Air can reach, a ford only Water can freeze, a shelf that takes three players to reach, and a vault only Earth can open.
+  - ideas: lock-per-element, head-stack, freeze-bridge
   - features: ent:cracked ent:door ent:freezepad ent:ice ent:lever ent:pool ent:turbine opt:latch opt:pool-timed tile:water
 
 ## 4 players — campaign (21)

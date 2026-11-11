@@ -2490,6 +2490,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "mutual-stranding-machines",
+  "ideas": [
+   "machine-strands-operator",
+   "twist-stranding"
+  ],
   "order": 202,
   "line": "two machines, each of which strands the player who runs it, arranged so that they free each other.",
   "tokens": [
@@ -2516,6 +2520,10 @@
   "dark": false,
   "challenge": "motor",
   "core": "belt-ride-steered-by-a-partner",
+  "ideas": [
+   "belt-reverse",
+   "low-roof-no-jump"
+  ],
   "order": 309,
   "line": "The belt is not a floor you walk on, it is a vehicle you ride — and the one who decides where it takes you is standing still at the other end of the level. The second half of the insight is that you cannot jump off wherever you like: the roof is one tile high everywhere except at the three hatches, so the only question that matters is *when* you jump.",
   "tokens": [
@@ -2547,6 +2555,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "one-ford-then-a-lock-each",
+  "ideas": [
+   "freeze-bridge",
+   "lock-per-element"
+  ],
   "order": 302,
   "line": "a ford that one player makes passable for the other three, with three more locks behind it, one for each of them.",
   "tokens": [
@@ -2575,6 +2587,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "floating-boulder-plugs-the-channel",
+  "ideas": [
+   "boulder-float",
+   "low-roof-no-jump"
+  ],
   "order": 304,
   "line": "Water is not only something to avoid — it holds things up. A boulder pushed into the channel floats, and because the bank is exactly one tile above the water, it floats *flush*: the thing you were treating as a hazard becomes the last plank of the bridge. The low roof is what makes you look for a floor instead of a jump.",
   "tokens": [
@@ -2601,6 +2617,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "two-plates-held-by-objects-not-players",
+  "ideas": [
+   "object-as-permanent-switch",
+   "quorum"
+  ],
   "order": 208,
   "line": "a gate that wants two plates down at the same time, so neither of them can be a player — both have to be held by something that stays.",
   "tokens": [
@@ -2629,6 +2649,9 @@
   "dark": false,
   "challenge": "mind",
   "core": "belt-sorts-objects-people-hop",
+  "ideas": [
+   "belt-cargo"
+  ],
   "order": 107,
   "line": "a belt as a one-way street for objects. People beat a belt by hopping; a crate cannot hop, so the belt decides where the crate goes.",
   "tokens": [
@@ -2657,6 +2680,9 @@
   "dark": false,
   "challenge": "motor",
   "core": "step-off-a-glide-in-mid-air",
+  "ideas": [
+   "glide-dismount"
+  ],
   "order": 101,
   "line": "jumping off Air in mid-flight. A glide only ever descends, so the one place a passenger can reach that Air cannot is above the glide line — and only during the first second of it, while Air is still carrying its own jump upward.",
   "tokens": [
@@ -2678,6 +2704,9 @@
   "dark": false,
   "challenge": "mind",
   "core": "boulder-as-a-permanent-switch",
+  "ideas": [
+   "object-as-permanent-switch"
+  ],
   "order": 203,
   "line": "a heavy plate that has to stay down for good, so the boulder — not a player — becomes the machine's switch.",
   "tokens": [
@@ -2703,6 +2732,9 @@
   "dark": false,
   "challenge": "motor",
   "core": "chained-pounds-through-offset-hatches",
+  "ideas": [
+   "pound-chain"
+  ],
   "order": 303,
   "line": "A ground pound is usually something you do to the floor you are standing on. Here it is something you do three times in a row, each time from a ledge that is not above the next one. Lining up matters: Earth is 26 px wide, and if half of it is resting on the rock beside the hatch, the pound lands on stone and nothing breaks.",
   "tokens": [
@@ -2728,6 +2760,11 @@
   "dark": false,
   "challenge": "motor",
   "core": "four-locks-one-tower",
+  "ideas": [
+   "lock-per-element",
+   "head-stack",
+   "freeze-bridge"
+  ],
   "order": 310,
   "line": "a turbine only Air can reach, a ford only Water can freeze, a shelf that takes three players to reach, and a vault only Earth can open.",
   "tokens": [
@@ -2757,6 +2794,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "the-lift-is-the-floor",
+  "ideas": [
+   "lift-as-floor",
+   "twist-self-block"
+  ],
   "order": 209,
   "line": "Every other lift in the game is a thing you wait for. This one is the ground you are standing on. Sending it up is not free — it takes the road away, so whoever is going to need that road has to be on the right side of it first, and whoever is going up has to already be aboard.",
   "tokens": [
@@ -2785,6 +2826,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "low-roof-scrapes-a-carried-boulder",
+  "ideas": [
+   "boulder-carry",
+   "low-roof-no-jump"
+  ],
   "order": 302,
   "line": "carrying a boulder on your head and letting a low roof take it off again. Anything that falls on a player stays there and travels with them; a ceiling one tile above the floor scrapes it straight off, which makes the mouth of a tunnel a place you can put something down precisely.",
   "tokens": [
@@ -2812,6 +2857,10 @@
   "dark": true,
   "challenge": "motor",
   "core": "glide-with-a-passenger-in-the-dark",
+  "ideas": [
+   "dark",
+   "glide-passenger"
+  ],
   "order": 108,
   "line": "gliding with a passenger, in the dark.",
   "tokens": [
@@ -2835,6 +2884,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "closing-door-presses-through-a-grating",
+  "ideas": [
+   "one-way-press",
+   "twist-backwards"
+  ],
   "order": 210,
   "line": "The grating looks like a hole you cannot use. It is: you can fall through it, but the thing you need to get down there cannot. The lid is not a gate in this level, it is a press — the only machine in the hall that pushes downward.",
   "tokens": [
@@ -2864,6 +2917,9 @@
   "dark": false,
   "challenge": "mind",
   "core": "one-wind-three-different-outcomes",
+  "ideas": [
+   "fan-band"
+  ],
   "order": 305,
   "line": "Everyone looks at the same wind and sees a different machine. The second half of it is Air's: steering is what stops you climbing. Hold right and the wind just carries you across like Fire. Let go, and it takes you to the top.",
   "tokens": [
@@ -2895,6 +2951,9 @@
   "dark": false,
   "challenge": "mind",
   "core": "human-ladder-to-a-three-tile-shelf",
+  "ideas": [
+   "head-stack"
+  ],
   "order": 205,
   "line": "the plain human ladder. A jump clears two tiles; a jump from a partner's head clears three, and the shelf is at three.",
   "tokens": [
@@ -2921,6 +2980,10 @@
   "dark": false,
   "challenge": "motor",
   "core": "one-lock-per-element",
+  "ideas": [
+   "lock-per-element",
+   "head-stack"
+  ],
   "order": 301,
   "line": "four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.",
   "tokens": [
@@ -2947,6 +3010,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "crate-substitutes-for-the-plate-holder",
+  "ideas": [
+   "object-as-permanent-switch",
+   "hold-switch"
+  ],
   "order": 103,
   "line": "a plate that powers a lift, and a crate used as a permanent substitute for the player who would otherwise have to stay behind holding it.",
   "tokens": [
@@ -2971,6 +3038,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "turbine-just-above-airs-jump",
+  "ideas": [
+   "turbine-out-of-reach",
+   "head-stack"
+  ],
   "order": 301,
   "line": "a switch that only Air can work, placed where Air cannot get. The turbine hangs five tiles above the floor; Air's jump is measured at 3.75 tiles and nothing else in the game answers to a turbine at all, so the one player who can use it is the one who needs a leg up.",
   "tokens": [
@@ -2996,6 +3067,10 @@
   "dark": true,
   "challenge": "motor",
   "core": "torch-wired-to-an-inverted-bridge",
+  "ideas": [
+   "torch-bridge",
+   "invert-door"
+  ],
   "order": 206,
   "line": "a bridge that is only there while a torch burns — a wide door wired to the torch and inverted, so lighting the torch closes it across the chasm.",
   "tokens": [
@@ -3022,6 +3097,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "two-timers-that-must-overlap",
+  "ideas": [
+   "twist-two-clocks",
+   "freeze-bridge"
+  ],
   "order": 204,
   "line": "two timers that have to overlap — a sluice that stays open five seconds and a stretch of water that stays frozen ten.",
   "tokens": [
@@ -3051,6 +3130,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "freeze-pad-and-a-tunnel-too-low-to-ride",
+  "ideas": [
+   "freeze-bridge",
+   "low-roof-no-jump"
+  ],
   "order": 105,
   "line": "the freeze pad, and a tunnel too low to ride through.",
   "tokens": [
@@ -3075,6 +3158,9 @@
   "dark": false,
   "challenge": "mind",
   "core": "shuttle-whose-path-turns-a-corner",
+  "ideas": [
+   "lift-corner-path"
+  ],
   "order": 201,
   "line": "a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.",
   "tokens": [
@@ -3102,6 +3188,10 @@
   "dark": false,
   "challenge": "motor",
   "core": "button-opens-the-gate-and-your-own-floor",
+  "ideas": [
+   "twist-self-block",
+   "timed-window"
+  ],
   "order": 202,
   "line": "a button that opens two things — the gate the others have to run, and the floor the presser is standing on. Pressing it is not a favour somebody does from safety; it is how that player leaves the upper hall, and it starts everyone's clock at the same moment.",
   "tokens": [
@@ -3130,6 +3220,9 @@
   "dark": false,
   "challenge": "mind",
   "core": "belt-speed-tuned-to-exclude-earth",
+  "ideas": [
+   "belt-filter"
+  ],
   "order": 306,
   "line": "The belt is not an obstacle to be timed or avoided — it is a *speed test*, set exactly between Earth's legs and everyone else's. The moment you notice Earth cannot gain a pixel on it, the question stops being \"how do we get Earth across\" and becomes \"what can Earth do down there that we cannot do up here\".",
   "tokens": [
@@ -3158,6 +3251,9 @@
   "dark": false,
   "challenge": "mind",
   "core": "pound-the-floor-to-move-the-boulder",
+  "ideas": [
+   "pound-to-move"
+  ],
   "order": 104,
   "line": "the ground pound as a way to move something, not just to break a floor. The boulder cannot be pushed anywhere, so the floor under it has to go instead.",
   "tokens": [
@@ -3184,6 +3280,9 @@
   "dark": false,
   "challenge": "mind",
   "core": "fan-lifts-air-carrying-a-passenger",
+  "ideas": [
+   "fan-passenger"
+  ],
   "order": 106,
   "line": "carrying a passenger up a fan. The chimney's updraft is the default strength: it lifts Air easily, Water not at all, and Air with one passenger slowly but surely.",
   "tokens": [
@@ -3205,6 +3304,10 @@
   "dark": false,
   "challenge": "motor",
   "core": "hopping-beats-a-belt-too-fast-to-walk",
+  "ideas": [
+   "hop-beats-belt",
+   "low-roof-no-jump"
+  ],
   "order": 102,
   "line": "beating a belt that is faster than you are. Walking against this belt gains nobody anything — it runs at 3.3 pixels a tick against Fire's 3.2 and Earth's 2.6 — but a hop breaks contact with it for a moment, and a string of hops crosses the whole tunnel even under a roof one tile high.",
   "tokens": [
@@ -3231,6 +3334,10 @@
   "dark": false,
   "challenge": "mind",
   "core": "freeze-pad-worked-from-above",
+  "ideas": [
+   "trigger-from-above",
+   "freeze-bridge"
+  ],
   "order": 109,
   "line": "a shuttle lift on a heavy plate, and a freeze pad worked from above to open a route down below.",
   "tokens": [
@@ -3261,6 +3368,10 @@
   "dark": false,
   "challenge": "motor",
   "core": "one-turbine-two-gates-a-corridor-to-run",
+  "ideas": [
+   "shared-switch-two-gates",
+   "timed-window"
+  ],
   "order": 110,
   "line": "a turbine driving two gates at once, so the corridor between them has to be run.",
   "tokens": [

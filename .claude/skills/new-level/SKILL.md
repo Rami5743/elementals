@@ -22,9 +22,13 @@ Read the sections of `catalog/LEVELS.md` for **this player count** — both this
 the campaign's. That is the bar for novelty. `catalog/MAPS.md` has the maps of this repo's levels
 if you want to see how a shape was laid out.
 
-The rule the user set: **levels for the same player count must differ materially from each other.**
-A 2-player level may be very close to a 3-player level; two 3-player levels may not be close to
-each other. Reusing an old idea is fine; reusing an old *combination* is not.
+The rule the user set: **levels for the same player count must differ in their ideas.** A 2-player
+level may be very close to a 3-player level; two 3-player levels may not be close to each other.
+
+What has to be new is the *idea*, not the parts. Reusing ice walls, turbines, cracked floors,
+heavy plates and the same liquids is free and always will be — nobody notices the props. Reusing an
+old idea is fine too, as long as the level brings either a new idea or a combination of old ideas
+that no level of this player count has together.
 
 ## 3. Roll the ingredients
 
@@ -32,19 +36,24 @@ each other. Reusing an old idea is fine; reusing an old *combination* is not.
 node tools/roll-features.mjs <players>
 ```
 
-It picks a spine, two supports, a terrain and a twist, biased away from what this player count has
-already seen, and lists the core tags already taken. Re-roll as often as you like before you commit
-to one; you may swap at most one rolled ingredient for a reason you state in NOTES.md. The point of
-the roll is that the feature mix should not be chosen by habit — this repo's early levels nearly all
-used ice + flames + turbine + cracked floor, and that is exactly what to stop doing.
+It rolls an **idea** and a **twist** — the parts that have to be new, drawn with a bias away from
+what this player count has already used — plus two supports and a terrain, which are only
+ingredients and are rolled for variety, not as a rule. It also prints every idea and core tag
+already taken at this player count. Re-roll as often as you like before committing to one; swap
+anything you have a reason to swap, and say so in NOTES.md.
+
+The vocabulary lives in `tools/ideas.mjs`. **Coining a new key is the best outcome**: an idea that
+is not in that table is, by definition, one nothing else has used. Add it to the table when you do.
 
 ## 4. Design on paper, before any JSON
 
 Write these down first:
 
 1. **The core, in one sentence** — what a player could tell a friend after finishing. Then a short
-   kebab-case `core` tag for it. Check the tag against the taken cores for this player count; if it
-   is a rephrasing of one of them, the design is not new, whatever the feature list says.
+   kebab-case `core` tag for it, and the two or three `ideas` (keys from `tools/ideas.mjs`) the
+   level is built from. Check both against what this player count has already used: if the core is
+   a rephrasing of an existing one, or every idea in the list is already together in one existing
+   level, the design is not new yet.
 2. **Each player's job**, and why no one else could do it.
 3. **The forced order**, and why it is not readable off the map.
 4. **The twist**: the step that is counter-intuitive — something must be undone, given up, used
@@ -91,15 +100,21 @@ call it done, walk through each of these and write the answer in NOTES.md:
 node tools/novelty.mjs <id>
 ```
 
-It reports the weighted feature overlap with every level of the same player count, the features
-that are new at this player count, and a verdict.
+It reads `meta.json`'s `ideas` and fails only on ideas:
 
-- **FAIL** — change the design. Do not reword the description to get past it.
-- **REVIEW** — allowed, but say in NOTES.md why the core is not the neighbour's core.
-- It cannot judge ideas, only parts. You still have to answer honestly: *if someone played this
-  straight after the nearest level, would it feel like the same puzzle?*
-- Most of the levels already in the repo do **not** pass this gate: their ideas differ but their
-  ingredients repeat. That is the bar being raised, not a bug in the tool.
+- every idea in the level is already together in one existing level of this player count, or
+- there is no idea new here **and** no pairing of ideas that some level here does not already have
+  together, or
+- the `core` tag duplicates one.
+
+Ingredient overlap is printed for context and is **never** a reason to fail. A level made of exactly
+the same props as its neighbour is fine if the idea is somewhere else.
+
+- **FAIL** — change the idea or its combination. Do not reword the description to get past it.
+- **REVIEW** — allowed; say in NOTES.md why the core is not the neighbour's core.
+- The tool compares the tags you wrote. It cannot tell whether you tagged honestly, so still answer
+  for yourself: *if someone played this straight after the nearest level, would it feel like the
+  same puzzle?*
 
 ## 8. Publish
 
@@ -107,7 +122,8 @@ that are new at this player count, and a verdict.
    `## The intended solution`, `## Why each player is needed`, `## The insight`, `## Likely failures
    and how players recover`, `## Shortcuts that were closed`, and `## Kinship with the campaign`
    naming the nearest campaign level and what is different about this one.
-2. `levels/<id>/meta.json` — `{ "order": N, "challenge": "mind"|"motor", "core": "<tag>" }`.
+2. `levels/<id>/meta.json` —
+   `{ "order": N, "challenge": "mind"|"motor", "core": "<tag>", "ideas": ["<key>", …] }`.
    Order numbering: 1xx for two players, 2xx for three, 3xx for four; take the next free number.
 3. Regenerate and commit:
 
