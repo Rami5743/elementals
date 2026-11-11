@@ -3571,19 +3571,23 @@
   "parTicks": 2700,
   "dark": false,
   "challenge": "motor",
-  "core": "one-turbine-two-gates-a-corridor-to-run",
+  "core": "an-airlock-you-must-stock-before-it-seals",
   "ideas": [
+   "stock-before-it-seals",
    "shared-switch-two-gates",
-   "timed-window"
+   "invert-door",
+   "timed-window",
+   "object-as-permanent-switch",
+   "twist-setup"
   ],
   "order": 110,
-  "line": "a turbine driving two gates at once, so the corridor between them has to be run.",
+  "line": "an airlock whose two gates are never open together, a turbine you can only reach from the wrong side of it, and a boulder that has to be inside the lock with you *and* is the only thing that will hold the last gate open for two.",
   "tokens": [
    "ent:boulder",
    "ent:door",
    "ent:plate",
    "ent:turbine",
-   "opt:heavy-plate",
+   "opt:invert:door",
    "opt:turbine-timed",
    "tile:mud"
   ]

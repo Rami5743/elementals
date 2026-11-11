@@ -410,7 +410,7 @@ Entities:
   X  exit_11      exit       at (10,9)  earth
 ```
 
-## Windlass (`windlass`) — 2p, core `one-turbine-two-gates-a-corridor-to-run`
+## Windlass (`windlass`) — 2p, core `an-airlock-you-must-stock-before-it-seals`
 
 ```
 Windlass (windlass) for earth+air
@@ -427,34 +427,34 @@ Windlass (windlass) for earth+air
  8  ########################################
  9  ########################################
 10  ########################################
-11  #.........#.............#......#.......#
-12  #.........#.............#......#.......#
-13  #.........#.............#......#.......#
-14  #.........#.............#......#.......#
-15  #.........#.........*...#......#.......#
-16  #..T......#.............#......#.......#
-17  #.........D.............D......D.......#
-18  #.........D.......*.....D......D.X.X...#
-19  #.@.....@.D...*.........D.pp.O.D.X.X...#
-20  #############MMM########################
+11  #.........#.............#........#.....#
+12  #.........#.............#........#.....#
+13  #.........#.............#........#.....#
+14  #.........#.............#........#.....#
+15  #.........#.............#........#.....#
+16  #..T....*.#.............#........#.....#
+17  #.........D.............D........D.....#
+18  #.........D.......*.....D........D.X.X.#
+19  #.@.O..@..D...*.........D...pp...D.X.X.#
+20  #############MMM####MMM#################
 21  ########################################
 
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
-Spawns (@): earth (8,19)  air (2,19)
+Spawns (@): earth (2,19)  air (7,19)
 Entities:
-  "  sign_0       sign       at (1,13)  "Air spins it: both gates open."
-  "  sign_1       sign       at (25,13)  "This plate is heavy."
+  "  sign_0       sign       at (1,13)  "Air spins it."
+  "  sign_1       sign       at (26,13)  "Something must stay on it."
   *  gem_2        gem        at (14,19)  earth
   *  gem_3        gem        at (18,18)  neutral
-  *  gem_4        gem        at (20,15)  air
+  *  gem_4        gem        at (8,16)  air
   T  spinner      turbine    at (3,16)  -> g1, g2  duration 360
   D  g1           door       at (10,17)  1x3  <- spinner
-  D  g2           door       at (24,17)  1x3  <- spinner
-  p  weigh        plate      at (26,19)  2x1  -> g3  weight heavy
-  O  bould        boulder    at (29,19)
-  D  g3           door       at (31,17)  1x3  <- weigh
-  X  exit_11      exit       at (33,18)  earth
-  X  exit_12      exit       at (35,18)  air
+  D  g2           door       at (24,17)  1x3  <- spinner  invert
+  p  weigh        plate      at (28,19)  2x1  -> g3  weight light
+  O  bould        boulder    at (4,19)
+  D  g3           door       at (33,17)  1x3  <- weigh
+  X  exit_11      exit       at (35,18)  earth
+  X  exit_12      exit       at (37,18)  air
 ```
 
 ## Counterweight (`counterweight`) — 2p, core `the-weight-holding-the-gate-is-the-weight-you-need`

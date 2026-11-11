@@ -66,10 +66,10 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: a shuttle lift on a heavy plate, and a freeze pad worked from above to open a route down below.
   - ideas: trigger-from-above, freeze-bridge
   - features: ent:boulder ent:elevator ent:freezepad ent:plate ent:pool opt:elevator:loop opt:heavy-plate opt:pool-timed tile:mud tile:one-way tile:water
-- **Windlass** `windlass` (2p: earth+air) core=`one-turbine-two-gates-a-corridor-to-run` challenge=motor par=2700
-  - idea: a turbine driving two gates at once, so the corridor between them has to be run.
-  - ideas: shared-switch-two-gates, timed-window
-  - features: ent:boulder ent:door ent:plate ent:turbine opt:heavy-plate opt:turbine-timed tile:mud
+- **Windlass** `windlass` (2p: earth+air) core=`an-airlock-you-must-stock-before-it-seals` challenge=motor par=2700
+  - idea: an airlock whose two gates are never open together, a turbine you can only reach from the wrong side of it, and a boulder that has to be inside the lock with you *and* is the only thing that will hold the last gate open for two.
+  - ideas: stock-before-it-seals, shared-switch-two-gates, invert-door, timed-window, object-as-permanent-switch, twist-setup
+  - features: ent:boulder ent:door ent:plate ent:turbine opt:invert:door opt:turbine-timed tile:mud
 - **Counterweight** `counterweight` (2p: water+earth) core=`the-weight-holding-the-gate-is-the-weight-you-need` challenge=mind par=5400
   - idea: a gate held open by the weight of the one thing the rest of the level needs. Taking the stone off the plate is both the only way forward and the thing that cuts the hall in two with your partner on the far side.
   - ideas: counterweight-you-must-remove, twist-stranding, one-way-press
