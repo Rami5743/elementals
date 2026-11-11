@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 75 campaign levels, 34 in this repo.
+Totals: 75 campaign levels, 35 in this repo.
 
 
 ## 2 players — this repo (12)
@@ -372,7 +372,7 @@ Totals: 75 campaign levels, 34 in this repo.
   - hints: Air turns the turbine on the deck, and the hatch in front of the boulder opens for good. / Water waits right next to the gate. Earth pushes the boulder down into the trench: as it rolls over the heavy plate, the gate opens for a moment, and Water steps under it. / The gate comes down on Water's head and waits there. Earth lines up right behind her and Air behind Earth, and they walk through together.
   - features: ent:boulder ent:door ent:plate ent:turbine opt:heavy-plate opt:latch tile:slope tile:sludge
 
-## 4 players — this repo (10)
+## 4 players — this repo (11)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -414,6 +414,10 @@ Totals: 75 campaign levels, 34 in this repo.
   - idea: a turbine only Air can reach, a ford only Water can freeze, a shelf that takes three players to reach, and a vault only Earth can open.
   - ideas: lock-per-element, head-stack, freeze-bridge
   - features: ent:cracked ent:door ent:freezepad ent:ice ent:lever ent:pool ent:turbine opt:latch opt:pool-timed tile:water
+- **One Through** `one_through` (4p: fire+water+earth+air) core=`a-lock-that-lets-exactly-one-of-you-past` challenge=mind par=3600
+  - idea: a lock that wants three keys held at the same time, in a level with four players. It does not latch, so the three who hold it cannot also walk through it — exactly one of you can, and which one is decided by the keys, not by you.
+  - ideas: send-one-through, quorum
+  - features: ent:door ent:firewall ent:ice ent:lever ent:plate ent:turbine opt:heavy-plate opt:latch opt:required:3 tile:one-way
 
 ## 4 players — campaign (21)
 

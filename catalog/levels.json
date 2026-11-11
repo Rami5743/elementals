@@ -3003,6 +3003,39 @@
   ]
  },
  {
+  "id": "one_through",
+  "name": "One Through",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3600,
+  "dark": false,
+  "challenge": "mind",
+  "core": "a-lock-that-lets-exactly-one-of-you-past",
+  "ideas": [
+   "send-one-through",
+   "quorum"
+  ],
+  "order": 311,
+  "line": "a lock that wants three keys held at the same time, in a level with four players. It does not latch, so the three who hold it cannot also walk through it — exactly one of you can, and which one is decided by the keys, not by you.",
+  "tokens": [
+   "ent:door",
+   "ent:firewall",
+   "ent:ice",
+   "ent:lever",
+   "ent:plate",
+   "ent:turbine",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "pillars",
   "name": "Pillars",
   "source": "mine",

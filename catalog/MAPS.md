@@ -1630,3 +1630,54 @@ Entities:
   X  exit_16      exit       at (36,18)  air
   X  exit_17      exit       at (38,18)  earth
 ```
+
+## One Through (`one_through`) — 4p, core `a-lock-that-lets-exactly-one-of-you-past`
+
+```
+One Through (one_through) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  ########################################
+11  ########################################
+12  ########################################
+13  ########################################
+14  #....F.............###..I...........####
+15  #....F..............D...I......XXXX.####
+16  #*pp.F@@p@.@T..*.*..D.*.I...l..XXXX.####
+17  ####.########################==#########
+18  ####.D.........................#########
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (6,16)  fire (7,16)  earth (9,16)  air (11,16)
+Entities:
+  "  sign_0       sign       at (1,14)  "Three hands. There are four of you."
+  p  p3           plate      at (2,16)  2x1  -> lock
+  F  flames       firewall   at (5,14)  1x3
+  p  p1           plate      at (8,16)  2x1  -> lock  weight heavy
+  T  p2           turbine    at (12,16)  -> lock
+  D  lock         door       at (20,15)  1x2  <- p3, p1, p2 (needs 3)
+  I  icewall      ice        at (24,14)  1x3
+  l  pull         lever      at (28,16)  -> bypass
+  D  bypass       door       at (5,18)  <- pull  latch
+  *  gem_w        gem        at (1,16)  water
+  *  gem_e        gem        at (15,16)  earth
+  *  gem_a        gem        at (17,16)  air
+  *  gem_f        gem        at (22,16)  fire
+  X  exit_f       exit       at (34,15)  fire
+  X  exit_w       exit       at (33,15)  water
+  X  exit_e       exit       at (32,15)  earth
+  X  exit_a       exit       at (31,15)  air
+```
