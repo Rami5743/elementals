@@ -1,36 +1,57 @@
-# Dismount (`dismount`) — Fire + Air
+# Dismount — notes
 
-**Introduces:** jumping off Air in mid-flight. A glide only ever descends, so the one place a
-passenger can reach that Air cannot is above the glide line — and only during the first second of
-it, while Air is still carrying its own jump upward.
+**Brings together:** a jump taken from a partner's head in mid-flight, a lava channel only Fire
+can wade, and one lever that has to be thrown *and then thrown back*, because it drives two
+things that are never both useful at once.
 
-1. **Solution.** Air climbs the three two-tile steps to the launch ledge and waits at its edge.
-   Fire follows, takes its gem on the top step and climbs onto Air's head. Air jumps off the ledge
-   and holds Jump, so it rises and then glides east across the hall. About a second and a third
-   into the flight — while the pair are still high and already ten tiles out — Fire jumps off Air's
-   head, clears the lip of the gallery and lands on it. Air glides on and lands on the floor,
-   where it hops up for its own gem. Fire takes the neutral gem on the gallery and pulls the
-   lever; the gate at the far end opens and both walk to their doors.
+## The intended solution
 
-2. **Roles.** Air is the only one who can leave the ground at all and the only way Fire gets out
-   over the hall. Fire is the only one who can reach the gallery, and the only one who can pull
-   the lever.
+The hall runs the width of the map. A staircase of two-tile steps climbs to a launch ledge at
+6–8 (feet at row 14). A gallery — a rock slab at row 11 — runs from 18 to 31, nine rows above
+the floor and out of anyone's reach from below. The floor is cut by lava at 28–31, which Fire
+wades and Air cannot touch. The exits are past a gate at 33.
 
-3. **Why each is necessary.** The gallery is three tiles above the launch ledge and ten tiles out
-   from it. Air's own jump reaches 3.75 tiles up but only about four tiles along, and a glide
-   never gains height, so Air cannot get there however it tries. Fire, carried most of the way and
-   then jumping from Air's head, can. `check` confirms both counterfactuals.
+The lever on the gallery drives both the shaft platform at 16–17 **and** the gate, the gate
+**inverted**: lever down, platform at the bottom and the gate open; lever up, platform at the
+gallery and the gate shut.
 
-4. **The insight.** Height and distance are spent from the same budget. Jump off too early and you
-   are high over nothing; too late and you are level with the gallery's face instead of its floor.
+1. Both climb the staircase. Fire takes its gem on the ledge and climbs onto Air.
+2. Air runs off the ledge; a glide only goes down, so the height is spent at once. While Air is
+   still climbing out of its jump, Fire jumps off its head and lands on the gallery.
+3. Air brakes its glide short of the lava and lands in the hall, then climbs onto the platform
+   at the foot of the shaft.
+4. Fire takes the neutral gem, goes to the lever and throws it **once Air is aboard**: the
+   platform carries Air up to the gallery, and the gate shuts.
+5. Air walks the gallery, takes the air gem and steps off its right end at 32 — beyond the
+   lava — and lands in front of the shut gate.
+6. Fire throws the lever back. The gate opens; Fire walks the gallery and drops down after Air.
 
-5. **Likely failures and recovery.** The measured window is about twenty ticks wide — roughly a
-   third of a second, from 70 to 90 ticks after Air leaves the ledge. Missing it drops Fire on the
-   open floor with nothing lost: it walks back to the steps and the pair try again. Nothing in the
-   level is deadly and nothing can be spent.
+## Roles
 
-- **Shortcuts considered and blocked.** The gallery's left face is ten tiles from the launch
-  ledge, so no jump from it reaches, and its own face is three tiles above a floor that is six
-  tiles below that — far outside any jump from the hall. The gate at the end is three tiles with
-  rock to the roof above it, and the lever on the gallery is its only input. The tunnel under the
-  steps keeps the ground route open, so nothing is sealed off by the staircase.
+- **Air** — the only one who can carry Fire high enough to reach the gallery, and the only one
+  who cannot cross the lava, so the gallery is its road as well.
+- **Fire** — the only one who can be dropped on the gallery, so the only one who can work the
+  lever; and the only one for whom the lava is a floor.
+
+## Why each is necessary
+
+Air cannot reach the gallery by itself and cannot pass the lava on the floor: without Fire at
+the lever it never gets up and never gets out. Fire cannot get onto the gallery without a jump
+from Air's head.
+
+## The insight
+
+The lever is wired against itself: it is the only way up and, while it is thrown, the only way
+out is shut. So it is not a switch you throw at the end but one you throw twice — and between
+the two throws your partner has to have crossed the whole gallery.
+
+## Likely failures and recovery
+
+- **Throwing the lever before Air is on the platform.** The platform goes up empty. Throw it
+  again; it comes back down.
+- **Throwing it back while Air is still on the gallery.** Nothing bad: the gallery does not
+  move. But the platform leaves, so Air must use the right-hand end, past the lava.
+- **Gliding too far.** The lava is at the end of the hall and a glide carries a long way; steer
+  out of it before landing. This is the one place in the level where Air can die.
+- **Jumping off Air too late.** Fire lands in the hall instead of on the gallery and the climb
+  has to be done again — nothing is lost but the stairs.

@@ -30,10 +30,10 @@ Totals: 75 campaign levels, 36 in this repo.
 
 ## 2 players — this repo (12)
 
-- **Dismount** `dismount` (2p: fire+air) core=`step-off-a-glide-in-mid-air` challenge=motor par=2400
-  - idea: jumping off Air in mid-flight. A glide only ever descends, so the one place a passenger can reach that Air cannot is above the glide line — and only during the first second of it, while Air is still carrying its own jump upward.
-  - ideas: glide-dismount
-  - features: ent:door ent:lever
+- **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
+  - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
+  - ideas: glide-dismount, head-stack, invert-door, twist-undo, shared-switch-two-gates, liquid-lane
+  - features: ent:door ent:elevator ent:lever opt:elevator:powered opt:invert:door tile:lava
 - **Upstream** `upstream` (2p: fire+earth) core=`hopping-beats-a-belt-too-fast-to-walk` challenge=motor par=3000
   - idea: beating a belt that is faster than you are. Walking against this belt gains nobody anything — it runs at 3.3 pixels a tick against Fire's 3.2 and Earth's 2.6 — but a hop breaks contact with it for a moment, and a string of hops crosses the whole tunnel even under a roof one tile high.
   - ideas: hop-beats-belt, low-roof-no-jump

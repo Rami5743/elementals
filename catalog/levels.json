@@ -2747,18 +2747,27 @@
   "groups": [
    "fire+air"
   ],
-  "parTicks": 2400,
+  "parTicks": 3600,
   "dark": false,
   "challenge": "motor",
-  "core": "step-off-a-glide-in-mid-air",
+  "core": "one-lever-that-must-be-thrown-twice-to-get-anyone-out",
   "ideas": [
-   "glide-dismount"
+   "glide-dismount",
+   "head-stack",
+   "invert-door",
+   "twist-undo",
+   "shared-switch-two-gates",
+   "liquid-lane"
   ],
   "order": 101,
-  "line": "jumping off Air in mid-flight. A glide only ever descends, so the one place a passenger can reach that Air cannot is above the glide line — and only during the first second of it, while Air is still carrying its own jump upward.",
+  "line": "a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.",
   "tokens": [
    "ent:door",
-   "ent:lever"
+   "ent:elevator",
+   "ent:lever",
+   "opt:elevator:powered",
+   "opt:invert:door",
+   "tile:lava"
   ]
  },
  {
