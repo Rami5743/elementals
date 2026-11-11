@@ -50,10 +50,10 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: the freeze pad, and a tunnel too low to ride through.
   - ideas: freeze-bridge, low-roof-no-jump
   - features: ent:freezepad ent:ice ent:pool opt:pool-timed tile:water
-- **Updraft Duet** `updraft_duet` (2p: water+air) core=`fan-lifts-air-carrying-a-passenger` challenge=mind par=1800
-  - idea: carrying a passenger up a fan. The chimney's updraft is the default strength: it lifts Air easily, Water not at all, and Air with one passenger slowly but surely.
-  - ideas: fan-passenger
-  - features: ent:fan ent:firewall
+- **Updraft Duet** `updraft_duet` (2p: water+air) core=`the-landing-melts-from-the-moment-you-leave-the-pad` challenge=motor par=5400
+  - idea: a landing made of ice that starts melting the moment you leave the pad that froze it. The draught carries a pair, but slowly, and the whole climb is spent inside a countdown that you started yourself.
+  - ideas: fan-passenger, freeze-bridge, twist-sacrifice
+  - features: ent:box ent:door ent:fan ent:firewall ent:freezepad ent:lever ent:plate ent:pool opt:invert:fan opt:latch opt:pool-timed tile:water
 - **Conveyor** `conveyor` (2p: fire+water) core=`belt-sorts-objects-people-hop` challenge=mind par=2400
   - idea: a belt as a one-way street for objects. People beat a belt by hopping; a crate cannot hop, so the belt decides where the crate goes.
   - ideas: belt-cargo

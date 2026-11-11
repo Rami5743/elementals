@@ -226,7 +226,7 @@ Entities:
   X  exit_9       exit       at (37,18)  fire
 ```
 
-## Updraft Duet (`updraft_duet`) — 2p, core `fan-lifts-air-carrying-a-passenger`
+## Updraft Duet (`updraft_duet`) — 2p, core `the-landing-melts-from-the-moment-you-leave-the-pad`
 
 ```
 Updraft Duet (updraft_duet) for water+air
@@ -236,37 +236,43 @@ Updraft Duet (updraft_duet) for water+air
  1  ########################################
  2  ########################################
  3  ########################################
- 4  #...........................#..........#
- 5  #................^^^........#..........#
- 6  #................^^^....X...F..X.......#
- 7  #................^^^*...X...F..X.......#
- 8  #################^^^####################
- 9  #################^^^####################
-10  #################^^^####################
-11  #################^^^####################
-12  #################^^^####################
-13  #################^^^####################
-14  #################^^^####################
-15  #................^^^...................#
-16  #................^^^...................#
-17  #................^^^...................#
-18  #................^^^...................#
-19  #.........*.@.@..^^^...................#
-20  ########################################
+ 4  ########################################
+ 5  #################^^^......F.......######
+ 6  #################^^^......F.......######
+ 7  #################^^^......F.x.l*..######
+ 8  #################^^^WWWW#########D######
+ 9  #################^^^....#########.######
+10  #################^^^....#########.######
+11  #################^^^....#########.######
+12  #################^^^....#########.######
+13  #################^^^....#########.######
+14  #################^^^....#########.######
+15  #################^^^....#########.######
+16  #################^^^....#########.######
+17  #.....D..........^^^..............######
+18  #.X.X.D..........^^^..............######
+19  #.X*X.D...f.@.@..^^^............pp######
+20  ############!###########################
 21  ########################################
 
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
-Spawns (@): air (14,19)  water (12,19)
+Spawns (@): water (12,19)  air (14,19)
 Entities:
-  "  sign_0       sign       at (2,16)  "Air rides the updraft. So does its passenger."
-  "  sign_1       sign       at (9,5)  "Only Water puts out flames."
-  *  gem_2        gem        at (10,19)  water
-  *  gem_3        gem        at (18,12)  neutral
-  *  gem_4        gem        at (20,7)  air
-  ^  updraft      fan        at (17,5)  3x15
-  F  flames       firewall   at (28,6)  1x2
-  X  exit_7       exit       at (24,6)  water
-  X  exit_8       exit       at (31,6)  air
+  "  sign_0       sign       at (2,17)  "The ice up there starts melting when you leave the pad."
+  D  gate         door       at (6,17)  1x3  <- weigh  latch
+  f  pad          freezepad  at (10,19)  -> shelf
+  ^  wind         fan        at (17,5)  3x15  <- pull  invert
+  W  shelf        pool       at (20,8)  4x1  <- pad  duration 900
+  F  flames       firewall   at (26,5)  1x3
+  x  crate        box        at (28,7)
+  l  pull         lever      at (30,7)  -> wind, chute_door
+  D  chute_door   door       at (33,8)  <- pull  latch
+  p  weigh        plate      at (32,19)  2x1  -> gate
+  *  gem_w        gem        at (3,19)  water
+  !  post         checkpoint at (12,19)
+  *  gem_a        gem        at (31,7)  air
+  X  exit_w       exit       at (2,18)  water
+  X  exit_a       exit       at (4,18)  air
 ```
 
 ## Conveyor (`conveyor`) — 2p, core `belt-sorts-objects-people-hop`

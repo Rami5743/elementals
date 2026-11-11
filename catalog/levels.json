@@ -3467,18 +3467,30 @@
   "groups": [
    "water+air"
   ],
-  "parTicks": 1800,
+  "parTicks": 5400,
   "dark": false,
-  "challenge": "mind",
-  "core": "fan-lifts-air-carrying-a-passenger",
+  "challenge": "motor",
+  "core": "the-landing-melts-from-the-moment-you-leave-the-pad",
   "ideas": [
-   "fan-passenger"
+   "fan-passenger",
+   "freeze-bridge",
+   "twist-sacrifice"
   ],
   "order": 106,
-  "line": "carrying a passenger up a fan. The chimney's updraft is the default strength: it lifts Air easily, Water not at all, and Air with one passenger slowly but surely.",
+  "line": "a landing made of ice that starts melting the moment you leave the pad that froze it. The draught carries a pair, but slowly, and the whole climb is spent inside a countdown that you started yourself.",
   "tokens": [
+   "ent:box",
+   "ent:door",
    "ent:fan",
-   "ent:firewall"
+   "ent:firewall",
+   "ent:freezepad",
+   "ent:lever",
+   "ent:plate",
+   "ent:pool",
+   "opt:invert:fan",
+   "opt:latch",
+   "opt:pool-timed",
+   "tile:water"
   ]
  },
  {
