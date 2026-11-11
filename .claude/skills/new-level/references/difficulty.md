@@ -24,9 +24,10 @@ is holding something.
 A level clears the bar when all of these are true. Write the answers down in NOTES.md before
 building, and if one of them is missing the design is not finished.
 
-0. **Size.** The recorded solution runs for at least **40 seconds** of simulated play (`check`
-   prints it). Under 20 seconds the level is a corridor whatever else is true of it. Par is at
-   least 2.5× the solution.
+0. **Size.** The recorded solution runs for at least **20 seconds** of simulated play (`check`
+   prints it), and 30 or more is the mark to aim at. Duration is only a smell test — the
+   requirements below are the real bar — but a solution under 20 seconds has never yet been
+   anything but a corridor. Par is at least 2.5× the solution.
 
 1. **Eight or more steps that depend on each other**, in **at least three distinct states of the
    map** — after step 3 the level is a different place from the one you started in, and again later.

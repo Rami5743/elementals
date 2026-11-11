@@ -451,10 +451,10 @@ Entities:
   X  exit_12      exit       at (35,18)  air
 ```
 
-## Ballast Run (`ballast_run`) — 2p, core `two-light-players-are-not-one-heavy-one`
+## Counterweight (`counterweight`) — 2p, core `the-weight-holding-the-gate-is-the-weight-you-need`
 
 ```
-Ballast Run (ballast_run) for fire+water
+Counterweight (counterweight) for water+earth
     0         1         2         3         
     0123456789012345678901234567890123456789
  0  ########################################
@@ -470,77 +470,81 @@ Ballast Run (ballast_run) for fire+water
 10  ########################################
 11  ########################################
 12  ########################################
-13  ########################################
-14  #...........F.....I..............D.....#
-15  #...........F.....I..............D.XX..#
-16  #..@.@..O.*.F..*..I...t......ppp.D.XX..#
-17  ########>>>>>>>>>>>>>>>>>>>>>###########
-18  ########################################
+13  #.............DD.....D..F...........D.##
+14  #.............DD.....D..F...........D.##
+15  #.............DD.....D..F.......X...DX##
+16  #.pp....@.O.@.DD...*.D..F..*..l.X...DX##
+17  ###########========##############==#####
+18  ###########...pp.....D.............#####
 19  ########################################
 20  ########################################
 21  ########################################
 
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
-Spawns (@): fire (3,16)  water (5,16)
+Spawns (@): water (8,16)  earth (12,16)
 Entities:
-  "  sign_0       sign       at (1,14)  "Heavier than the two of you."
-  O  rock_1       boulder    at (8,16)
-  >  line         belt       at (8,17)  21x1  <- lamp  speed 2
-  F  flames       firewall   at (12,14)  1x3
-  I  icewall      ice        at (18,14)  1x3
-  t  lamp         torch      at (22,16)  -> line
-  p  weigh        plate      at (29,16)  3x1  -> vault  weight heavy
-  D  vault        door       at (33,14)  1x3  <- weigh  latch
-  *  gem_f        gem        at (10,16)  fire
-  *  gem_w        gem        at (15,16)  water
-  X  exit_f       exit       at (36,15)  fire
-  X  exit_w       exit       at (35,15)  water
+  "  sign_0       sign       at (1,13)  "The gate is open because the stone is where it is."
+  p  hold         plate      at (2,16)  2x1  -> gate_a  weight heavy
+  O  rock_1       boulder    at (10,16)
+  D  lid          door       at (14,13)  2x4  <- lid_pull  invert
+  D  gate_a       door       at (21,13)  1x4  <- hold
+  F  flames       firewall   at (24,13)  1x4
+  l  lid_pull     lever      at (30,16)  -> lid
+  p  vaultkey     plate      at (14,18)  2x1  -> vault, gate_b  weight heavy
+  D  gate_b       door       at (21,18)  <- vaultkey  latch
+  D  vault        door       at (36,13)  1x4  <- vaultkey  latch
+  *  gem_e        gem        at (19,16)  earth
+  *  gem_w        gem        at (27,16)  water
+  X  exit_w       exit       at (32,15)  water
+  X  exit_e       exit       at (37,15)  earth
 ```
 
-## Slipstream (`slipstream`) — 2p, core `a-switch-only-something-airborne-can-press`
+## Crosswire (`crosswire`) — 2p, core `the-far-end-of-the-crossing-is-built-while-you-fly`
 
 ```
-Slipstream (slipstream) for fire+earth
+Crosswire (crosswire) for fire+air
     0         1         2         3         
     0123456789012345678901234567890123456789
  0  ########################################
  1  ########################################
  2  ########################################
  3  ########################################
- 4  ########################################
- 5  ########################################
- 6  ########################################
- 7  ########################################
- 8  ########################################
- 9  #....................###################
-10  #...D.....I...p.............D.....######
-11  #.X.D.....I.................D..X..######
-12  #.X.D...pp*O@@........*.....D..X..######
-13  ###########!##..########################
-14  ##############..########################
-15  ##############..########################
-16  ##############..########################
-17  ##############..########################
-18  ##############..########################
-19  ##############SS########################
+ 4  ##########^^^^..............D.##########
+ 5  ##########^^^^..l..........*D.##########
+ 6  ##########^^^^###############.##########
+ 7  ####......^^^^^^^^^^^^................##
+ 8  ####......^^^^^^D^^^^^................##
+ 9  ####......^^^^^^D^^^^^................##
+10  ####......^^^^^^D^^^^^................##
+11  ####X.....^^^^^^D^^^^^...............X##
+12  ####X@@.T.^^^^^^D^^^^^........!.*.l..X##
+13  ##########^^^^^^^^^^^^DDDD####!#########
+14  ##########^^^^^^^^^^^^##################
+15  ##########^^^^^^^^^^^^##################
+16  ##########^^^^^^^^^^^^##################
+17  ##########SSSSSSSSSSSS##################
+18  ########################################
+19  ########################################
 20  ########################################
 21  ########################################
 
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
-Spawns (@): earth (12,12)  fire (13,12)
+Spawns (@): fire (5,12)  air (6,12)
 Entities:
-  "  sign_0       sign       at (1,10)  "Two switches, and one of them is in the air."
-  !  post         checkpoint at (11,12)
-  D  gate_e       door       at (4,10)  1x3  <- weigh, arm (needs 2)  latch
-  I  icewall      ice        at (10,10)  1x3
-  O  rock_1       boulder    at (11,12)
-  p  weigh        plate      at (8,12)  2x1  -> vault, gate_e  weight heavy
-  p  arm          plate      at (14,10)  -> vault, gate_e
-  D  vault        door       at (28,10)  1x3  <- weigh, arm (needs 2)  latch
-  *  gem_e        gem        at (10,12)  earth
-  *  gem_f        gem        at (22,12)  fire
-  X  exit_e       exit       at (2,11)  earth
-  X  exit_f       exit       at (31,11)  fire
+  "  sign_0       sign       at (4,10)  "One lever, two things, opposite ways."
+  !  post         checkpoint at (30,12)
+  T  starter      turbine    at (8,12)  -> wind, updraught
+  ^  wind         fan        at (10,7)  12x10  <- starter  strength 1.54  latch
+  ^  updraught    fan        at (10,4)  4x3  <- starter  strength 1.2  latch
+  l  flip         lever      at (16,5)  -> shutter, perch
+  D  shutter      door       at (16,8)  1x5  <- flip  invert
+  D  perch        door       at (22,13)  4x1  <- flip  invert
+  D  cage         door       at (28,4)  1x2  <- release
+  l  release      lever      at (34,12)  -> cage
+  *  gem_a        gem        at (27,5)  air
+  *  gem_f        gem        at (32,12)  fire
+  X  exit_f       exit       at (4,11)  fire
+  X  exit_a       exit       at (37,11)  air
 ```
 
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`

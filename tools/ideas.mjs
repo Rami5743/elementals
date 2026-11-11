@@ -91,5 +91,7 @@ Object.assign(IDEAS, {
   'door-pushes-you-through': { kind: 'spine', note: 'A closing door pushes a player down through a one-way tile — the only way down there, and you cannot do it to yourself.' },
   'climb-then-steer': { kind: 'spine', note: 'In an updraft you rise only while you do not steer, so leaving at the right floor means giving up the climb at the right moment.' },
   'trip-plate-in-the-shaft': { kind: 'spine', note: 'A plate hanging in a lift shaft, pressed by the rider for as long as the lift takes to carry them past it.' },
+  'partner-builds-your-landing': { kind: 'spine', note: 'The place you are going to does not exist yet: a partner has to put it there while you are already in the air.' },
+  'counterweight-you-must-remove': { kind: 'spine', note: 'A gate held open by the weight of the very thing the rest of the level needs, so going on means shutting it.' },
   'send-one-through': { kind: 'spine', note: 'A lock that needs every hand but one held on it, so exactly one player can pass — and has to open the way back for the rest from the far side.' },
 });

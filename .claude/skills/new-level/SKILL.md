@@ -141,7 +141,8 @@ landed, say in NOTES.md what you tried to invent first and why it did not work.
 3. Regenerate and commit:
 
 Before publishing, read the solve time `check` prints. **Under 20 seconds, go back to step 4** —
-the level is too small, and the fix is another phase of the puzzle, not a longer walk.
+the level is too small, and the fix is another phase of the puzzle, not a longer walk. Thirty
+seconds or more is the mark to aim at.
 
 ```bash
 node kit.mjs check <id>

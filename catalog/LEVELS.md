@@ -70,14 +70,14 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: a turbine driving two gates at once, so the corridor between them has to be run.
   - ideas: shared-switch-two-gates, timed-window
   - features: ent:boulder ent:door ent:plate ent:turbine opt:heavy-plate opt:turbine-timed tile:mud
-- **Ballast Run** `ballast_run` (2p: fire+water) core=`two-light-players-are-not-one-heavy-one` challenge=mind par=2400
-  - idea: a heavy plate in a level with nobody heavy in it. A plate's load is the *largest* mass standing on it, never the sum, so two players on it together weigh exactly as much as one — which is to say, not enough.
-  - ideas: two-is-not-heavy, belt-cargo
-  - features: ent:belt ent:boulder ent:door ent:firewall ent:ice ent:plate ent:torch opt:belt:walkable opt:heavy-plate opt:latch
-- **Slipstream** `slipstream` (2p: fire+earth) core=`a-switch-only-something-airborne-can-press` challenge=motor par=2700
-  - idea: a switch hanging in the air over a chasm. Plates read whatever overlaps them, and this one overlaps nothing that can stand on it — the only way to press it is to be in flight.
-  - ideas: switch-in-mid-flight, quorum
-  - features: ent:boulder ent:door ent:ice ent:plate opt:heavy-plate opt:latch opt:required:2 tile:sludge
+- **Counterweight** `counterweight` (2p: water+earth) core=`the-weight-holding-the-gate-is-the-weight-you-need` challenge=mind par=5400
+  - idea: a gate held open by the weight of the one thing the rest of the level needs. Taking the stone off the plate is both the only way forward and the thing that cuts the hall in two with your partner on the far side.
+  - ideas: counterweight-you-must-remove, twist-stranding, one-way-press
+  - features: ent:boulder ent:door ent:firewall ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch tile:one-way
+- **Crosswire** `crosswire` (2p: fire+air) core=`the-far-end-of-the-crossing-is-built-while-you-fly` challenge=motor par=5400
+  - idea: a crossing whose far end does not exist when you set off. One lever drives two doors the opposite way round, and it has to be thrown twice — both times while Fire is in mid-air and can no longer do anything about it.
+  - ideas: partner-builds-your-landing, twist-stranding
+  - features: ent:door ent:fan ent:lever ent:turbine opt:fan:hang-time opt:invert:door opt:latch opt:wide-door tile:sludge
 
 ## 2 players — campaign (32)
 
