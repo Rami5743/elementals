@@ -36,7 +36,10 @@ const earth = function* (c) {
   yield* until(c, () => c.ent('weigh').s.on === 1, 0, 300, 'the cargo onto the plate');
   c.flag('cargo');
   yield* waitFlag(c, 'water_home');
-  yield* bound(c, 8);                                    // over the boulder
+  // the far hatch wants the same stone, and the only way to it is the line itself —
+  // which takes the stone off the near plate and shuts the first two hatches behind it
+  yield* until(c, () => c.ent('rock_1').s.x >= 11 * TILE, IN_RIGHT, 900, 'the stone onto the line');
+  yield* until(c, () => c.ent('weigh2').s.on === 1, 0, 1800, 'the stone onto the far plate');
   yield* board(c);
   yield* ride(c, 27, 30);
   c.flag('earth_home');
@@ -75,6 +78,7 @@ const air = function* (c) {
   yield* go(c, 1);                                       // on the turbine: the belt runs right
   c.flag('driving');
   yield* waitFlag(c, 'earth_home');
+  yield* until(c, () => c.ent('air_gate').s.open > 0, 0, 600, 'its own way home, which the far plate opens');
   yield* go(c, 3);
   for (let t = 0; t < 24; t++) yield IN_JUMP;            // up its own shaft
   yield* until(c, () => c.bottom <= 14 * TILE, IN_RIGHT, 120, 'the air alcove');

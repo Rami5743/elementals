@@ -8,8 +8,9 @@ it is one tile high, so you cannot even jump while you are under it. The belt's
 default direction is **left**, back into the loading chamber. It only runs
 **right**, toward the three alcoves, while Air stands on the turbine.
 
-1. **Earth** shoves the boulder one tile right, onto the heavy plate. The plate
-   is latched, so the three hatches in the belt's roof stay open from then on.
+1. **Earth** shoves the boulder one tile right, onto the near heavy plate. That opens the first two
+   hatches in the belt's roof — and only those two. The third wants the same stone, on a plate at
+   the far end of the line.
 2. **Fire** melts the ice that shuts the loading corridor.
 3. **Water** puts out the flames behind the ice, then steps back out of the
    corridor.
@@ -18,27 +19,31 @@ default direction is **left**, back into the loading chamber. It only runs
    right. Each jumps as it passes under its own hatch, holding right, and comes
    down on the alcove floor just past the opening. Their gems sit on the belt on
    the way.
-6. Air leaves the turbine last — the belt goes back to running left, which no
-   longer matters — walks to the shaft above its own corner of the chamber and
-   jumps. Only Air's 120 px jump reaches that shaft; it takes its gem on the way
-   up and steps right into its door.
+6. With Fire and Water home, **Earth** shoves the stone off the near plate and onto the line. The
+   first two hatches shut behind it — they are no longer needed — and the stone rides the length of
+   the hall onto the far plate, which opens the third hatch and, with it, the shaft above Air's
+   corner of the chamber. Earth boards behind the stone and takes that hatch.
+7. Air leaves the turbine last, walks to its shaft and jumps. Only Air's 120 px jump reaches it; it
+   takes its gem on the way up and steps into its door.
 
 ## Why each player is needed
 
-- **Earth** is the only one who can move the boulder, and the plate is heavy, so
-  no one else can hold it. Without it the hatches never open and the belt is just
-  a corridor with a roof.
+- **Earth** is the only one who can move the boulder, and both plates are heavy, so no one else can
+  hold either. There is one stone and two plates that want it, which is what forces the order: the
+  first two riders have to be through before the stone can go anywhere.
 - **Fire** melts the ice; **Water** puts out the flames. Both barriers are three
   tiles tall under a rock ceiling, so neither can be jumped.
-- **Air** is the drive. The belt only runs toward the alcoves while Air is on the
-  turbine, and all three hatches are to the right of the boarding point, so a
-  belt running left never reaches any of them. Air's own shaft is four tiles up,
-  past everyone else's jump.
+- **Air** is the drive. The belt only runs toward the alcoves while Air is on the turbine, and all
+  three hatches are to the right of the boarding point, so a belt running left never reaches any of
+  them. Air is also the last one out: its shaft only opens when the stone reaches the far plate, and
+  the stone only gets there on a belt Air is driving.
 
 ## The insight
 
 The belt is not a floor you walk on, it is a vehicle you ride — and the one who
-decides where it takes you is standing still at the other end of the level. The
+decides where it takes you is standing still at the other end of the level. The second turn of the
+screw is that the line carries freight as well as passengers, there is only one piece of freight,
+and the two plates that want it are at opposite ends. The
 second half of the insight is that you cannot jump off wherever you like: the
 roof is one tile high everywhere except at the three hatches, so the only
 question that matters is *when* you jump.

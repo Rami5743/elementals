@@ -1537,7 +1537,7 @@ Entities:
   X  exit_e       exit       at (31,18)  earth
 ```
 
-## Cargo (`cargo`) — 4p, core `belt-ride-steered-by-a-partner`
+## Cargo (`cargo`) — 4p, core `one-stone-two-plates-on-one-belt`
 
 ```
 Cargo (cargo) for fire+water+earth+air
@@ -1557,9 +1557,9 @@ Cargo (cargo) for fire+water+earth+air
 11  ########################################
 12  ##.*X###################################
 13  ##..X##########...X##...X##...X#########
-14  ###.#....IF####...X##...X##...X#########
+14  ###D#....IF####...X##...X##...X#########
 15  #........IF####DD####DD####DD###########
-16  #T@@Opp@@IF.*......*.....*........######
+16  #T@@Opp@@IF.*......*.....*........pp####
 17  ###########<<<<<<<<<<<<<<<<<<<<<<<######
 18  ########################################
 19  ########################################
@@ -1572,13 +1572,15 @@ Entities:
   "  sign_0       sign       at (1,15)  "Air drives."
   T  drive        turbine    at (1,16)  -> belt
   O  rock_1       boulder    at (4,16)
-  p  weigh        plate      at (5,16)  2x1  -> hatch_f, hatch_w, hatch_e  weight heavy
+  p  weigh        plate      at (5,16)  2x1  -> hatch_f, hatch_w  weight heavy
+  p  weigh2       plate      at (34,16)  2x1  -> hatch_e, air_gate  weight heavy
+  D  air_gate     door       at (3,14)  <- weigh2  latch
   I  icewall      ice        at (9,14)  1x3
   F  flames       firewall   at (10,14)  1x3
   >  belt         belt       at (11,17)  23x1  <- drive  mode reverse  speed -5
   D  hatch_f      door       at (15,15)  2x1  <- weigh  latch
   D  hatch_w      door       at (21,15)  2x1  <- weigh  latch
-  D  hatch_e      door       at (27,15)  2x1  <- weigh  latch
+  D  hatch_e      door       at (27,15)  2x1  <- weigh2  latch
   *  gem_f        gem        at (12,16)  fire
   *  gem_w        gem        at (19,16)  water
   *  gem_e        gem        at (25,16)  earth

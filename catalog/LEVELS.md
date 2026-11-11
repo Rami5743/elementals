@@ -406,9 +406,9 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: The belt is not an obstacle to be timed or avoided — it is a *speed test*, set exactly between Earth's legs and everyone else's. The moment you notice Earth cannot gain a pixel on it, the question stops being "how do we get Earth across" and becomes "what can Earth do down there that we cannot do up here".
   - ideas: belt-filter
   - features: ent:belt ent:cracked ent:door ent:firewall ent:ice ent:lever ent:turbine opt:belt:blocks-earth opt:latch
-- **Cargo** `cargo` (4p: fire+water+earth+air) core=`belt-ride-steered-by-a-partner` challenge=motor par=3000
-  - idea: The belt is not a floor you walk on, it is a vehicle you ride — and the one who decides where it takes you is standing still at the other end of the level. The second half of the insight is that you cannot jump off wherever you like: the roof is one tile high everywhere except at the three hatches, so the only question that matters is *when* you jump.
-  - ideas: belt-reverse, low-roof-no-jump
+- **Cargo** `cargo` (4p: fire+water+earth+air) core=`one-stone-two-plates-on-one-belt` challenge=motor par=3000
+  - idea: The belt is not a floor you walk on, it is a vehicle you ride — and the one who decides where it takes you is standing still at the other end of the level. The second turn of the screw is that the line carries freight as well as passengers, there is only one piece of freight, and the two plates that want it are at opposite ends. The second half of the insight is that you cannot jump off wherever you like: the roof is one tile high everywhere except at the three hatches, so the only question that matters is *when* you jump.
+  - ideas: belt-reverse, low-roof-no-jump, twist-order
   - features: ent:belt ent:boulder ent:door ent:firewall ent:ice ent:plate ent:turbine opt:belt:blocks-all opt:belt:reverse opt:heavy-plate opt:latch opt:wide-door
 - **Finale** `finale` (4p: fire+water+earth+air) core=`four-locks-one-tower` challenge=motor par=4800
   - idea: a turbine only Air can reach, a ford only Water can freeze, a shelf that takes three players to reach, and a vault only Earth can open.
