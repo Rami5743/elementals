@@ -20,13 +20,23 @@ Read, in this order: `CLAUDE.md`, `AGENTS.md`, `catalog/LEVELS.md` (at least the
 the three player counts), and `.claude/skills/new-level/SKILL.md`. Everything the agents build
 must go through that skill; you are not inventing a different procedure here.
 
-Then set the two clocks, with the `send_later` tool of the claude-code-remote server:
+Then set your clocks. **What actually keeps you running is the agents themselves**: a background
+agent completing re-invokes you, and with three chains alive something finishes every 20–40
+minutes. The timers below are a safety net for the case where all three are busy at once.
 
-- **23:00 Israel time** — message: `WIND DOWN: stop spawning, follow section 5 of ops/MONDAY_LEVEL_NIGHT.md`.
-- **every 30 minutes** — message: `HEARTBEAT: check the three chains (section 4)`. Re-arm the
-  next heartbeat each time one fires; stop re-arming after the wind-down message.
+Set them with whichever of these the session actually has — do not assume, check your tool list:
 
-The heartbeats are what keep you alive between agent completions, so do not skip them.
+- the claude-code-remote `send_later` tool, if it is there: a one-shot
+  `WIND DOWN: follow section 5 of ops/MONDAY_LEVEL_NIGHT.md` at 23:00 Israel time, and a
+  30-minute `HEARTBEAT: check the three chains (section 4)` that you re-arm each time it fires;
+- otherwise a background shell command, which needs nothing but Bash: `Bash` with
+  `run_in_background: true` and `sleep 1800; echo HEARTBEAT` re-invokes you when it exits, and
+  `sleep <seconds until 23:00>; echo WIND DOWN` does the same for the wind-down. Re-arm the
+  heartbeat each time one fires, and stop re-arming after the wind-down.
+
+Either way, **check the wall clock (`date`) every time you wake**: that, not a timer firing, is
+what tells you the window has closed. A timer that never arrives must not keep the night going
+past 23:00, and a timer you could not set is not a reason to skip the run.
 
 ## 1. The three chains
 
