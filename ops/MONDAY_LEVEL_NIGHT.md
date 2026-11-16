@@ -77,7 +77,7 @@ the agent takes the next free number.
 One agent invocation builds **one** level and then returns. As soon as it returns you merge and
 spawn the next one for that chain, so the chain never idles for more than a minute.
 
-Spawn with the `Agent` tool: `subagent_type: "claude"`, `run_in_background: true`,
+Spawn with the `Agent` tool: `subagent_type: "claude"`, **`run_in_background: true`**,
 `isolation: "worktree"` (each agent gets its own checkout, so three can build at once), and a
 prompt built from this template:
 
@@ -107,6 +107,14 @@ prompt built from this template:
 
 Record, for each running agent: chain, agent name/id, the level it is on, and the time you
 spawned it.
+
+`run_in_background: true` is not a preference, it is the whole design. A blocking `Agent` call
+parks your own thread inside the call for the twenty to forty minutes the level takes, and while
+it is parked you merge nothing, push nothing and — this is the part that bites — read no messages,
+so nobody can tell you that something is wrong. On the first run this is exactly what happened:
+three levels were built, every push failed with 403, and three messages explaining the fix sat
+unread for over an hour. If you ever notice that you have been inside a single tool call for more
+than a minute or two, that is the bug, not the work.
 
 ## 3. Merging a finished level
 
