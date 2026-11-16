@@ -1,4 +1,4 @@
-"""Refresh catalog/campaign.json from the published game.
+r"""Refresh catalog/campaign.json from the published game.
 
 The game is at https://elementals-8iap.onrender.com/ ; its index.html names one bundle under
 assets/, which carries every campaign level as a JS object literal. This reads that bundle with a
