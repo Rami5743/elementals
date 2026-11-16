@@ -101,7 +101,7 @@ if (unregistered.length) console.log(`not in tools/ideas.mjs yet — add them: $
 
 console.log(`\nlevels at the same player count that share an idea:`);
 const sharers = sameCount.filter((l) => l.ideas?.some((i) => myIdeas.includes(i)));
-for (const l of sharers) console.log(`  ${l.name} (${l.id}) core=${l.core} — shares: ${l.ideas.filter((i) => myIdeas.includes(i)).join(', ')}`);
+for (const l of sharers) console.log(`  ${l.name} (${l.id})${l.core ? " core=" + l.core : " [campaign]"} — shares: ${l.ideas.filter((i) => myIdeas.includes(i)).join(', ')}`);
 if (!sharers.length) console.log('  (none — every idea in this level is new at this player count)');
 
 console.log(`\nnearest by ingredients, for context only — never a reason to fail:`);

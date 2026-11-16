@@ -83,36 +83,17 @@
    "W"
   ],
   "entities": {
-   "lever": 3,
-   "elevator": 3,
-   "plate": 3,
-   "firewall": 2,
-   "ice": 3,
-   "fan": 3,
-   "door": 3,
-   "text": 2,
-   "exit": 2,
-   "torch": 2,
-   "turbine": 1,
-   "freezepad": 1,
-   "cracked": 1,
-   "belt": 1,
-   "box": 1,
-   "boulder": 1,
-   "seesaw": 1,
-   "button": 1,
-   "pool": 1
+   "lever": 2,
+   "elevator": 2,
+   "plate": 1,
+   "firewall": 1,
+   "ice": 1,
+   "fan": 1,
+   "door": 1
   },
   "options": [
-   "belt speed 2",
-   "button dur 180",
-   "button:timed",
-   "elevator:loop",
-   "fan .9",
-   "fan 2.7",
    "heavy plate",
-   "required:2",
-   "seesaw range 2"
+   "required:2"
   ]
  },
  {
@@ -370,7 +351,7 @@
   "supports": [
    "fire+water+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "The finale: crack, drop, burn, blow, freeze and douse. In the right order.",
   "hints": [
    "Earth can't reach the cracked platform alone. Give them a boost.",
@@ -682,7 +663,9 @@
   "id": "l21_thunderhead",
   "name": "Thunderhead",
   "dark": true,
-  "supports": [],
+  "supports": [
+   "fire+water+air"
+  ],
   "parTicks": 2400,
   "description": "In the dark, across the ice, over the sludge and up into the clouds.",
   "hints": [
@@ -719,7 +702,7 @@
   "supports": [
    "fire+water+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "The grand finale: three chambers, every element needed in each.",
   "hints": [
    "Douse, light, blow, lift, pound: the boulder belongs on the heavy plate.",
@@ -858,7 +841,7 @@
   "supports": [
    "water+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "One gondola, four switches, three passengers. It only moves while two switches are on, and it comes back as soon as they aren't.",
   "hints": [
    "The gondola moves while any two of its switches are on: the turbine, the two heavy plates and the light plate.",
@@ -917,8 +900,10 @@
   "id": "l28_lighthouse",
   "name": "Lighthouse",
   "dark": true,
-  "supports": [],
-  "parTicks": 3,
+  "supports": [
+   "fire+water+air"
+  ],
+  "parTicks": 3000,
   "description": "A dark tower, four floors high. Light a torch on every floor and lift each other to the lamp.",
   "hints": [
    "Douse the flames and light the first torch: the lift starts.",
@@ -1027,7 +1012,9 @@
   "id": "l31_eclipse",
   "name": "Eclipse",
   "dark": true,
-  "supports": [],
+  "supports": [
+   "fire+water+earth+air"
+  ],
   "parTicks": 3600,
   "description": "In the dark: a boulder only a two-key lift can reach, a crate that is a stone and then a key, and a vault that needs four keys at once.",
   "hints": [
@@ -1237,6 +1224,36 @@
  },
  {
   "order": 37,
+  "id": "l80_lantern",
+  "name": "Lantern",
+  "dark": true,
+  "supports": [
+   "fire+air"
+  ],
+  "parTicks": 2100,
+  "description": "Dark, a glide over sludge, and a passenger who has to get off halfway.",
+  "hints": [
+   "Fire rides on Air's head. Air runs off the top of the stairs and glides over the sludge.",
+   "The torch is on the pillar in the middle of the pit. Fire drops off Air's head onto it, and Air glides on to the far side.",
+   "Air stands on the plate to send the lift out to the pillar, and steps off once Fire is aboard to bring it back."
+  ],
+  "palette": [
+   "S"
+  ],
+  "entities": {
+   "torch": 1,
+   "door": 1,
+   "plate": 1,
+   "elevator": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "elevator:powered"
+  ],
+  "ours": "lantern"
+ },
+ {
+  "order": 38,
   "id": "l37_jack",
   "name": "Jack",
   "dark": false,
@@ -1269,14 +1286,14 @@
   ]
  },
  {
-  "order": 38,
+  "order": 39,
   "id": "l38_ballast",
   "name": "Ballast",
   "dark": false,
   "supports": [
    "fire+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "For once, someone has to lift Earth. Fire and Air together are only just as heavy.",
   "hints": [
    "Earth has to get on the seesaw first. Only then does the left end rise level with the block.",
@@ -1303,7 +1320,7 @@
   ]
  },
  {
-  "order": 39,
+  "order": 40,
   "id": "l39_thin_ice",
   "name": "Thin Ice",
   "dark": false,
@@ -1333,14 +1350,48 @@
   ]
  },
  {
-  "order": 40,
+  "order": 41,
+  "id": "l81_gangway",
+  "name": "Gangway",
+  "dark": false,
+  "supports": [
+   "fire+earth+air"
+  ],
+  "parTicks": 2400,
+  "description": "The lift is also the floor, and it can't be in two places.",
+  "hints": [
+   "Fire stands on the platform in the gap. While Air stays on the turbine, it rises, and the hall has a hole in it.",
+   "The lift doesn't stop at the loft: Fire has to get off as it goes past. Missed it? Air steps off the turbine, and Fire tries again on the way down.",
+   "Fire's lever in the loft opens the vault for good. With the platform back down, Earth crosses and breaks the cracked floor into the vault."
+  ],
+  "palette": [
+   "S"
+  ],
+  "entities": {
+   "turbine": 1,
+   "elevator": 1,
+   "ice": 1,
+   "lever": 1,
+   "door": 1,
+   "cracked": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "elevator:powered",
+   "latch"
+  ],
+  "ours": "gangway",
+  "map_differs": true
+ },
+ {
+  "order": 42,
   "id": "l40_tidewater",
   "name": "Tidewater",
   "dark": false,
   "supports": [
    "water+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "One freeze pad, two pools, and they take turns: the moment one freezes, the other thaws.",
   "hints": [
    "The pad freezes the first pool and thaws the second. Step off and they swap, about a second later.",
@@ -1369,7 +1420,7 @@
   ]
  },
  {
-  "order": 41,
+  "order": 43,
   "id": "l41_chimney_sweep",
   "name": "Chimney Sweep",
   "dark": false,
@@ -1395,7 +1446,40 @@
   "options": []
  },
  {
-  "order": 42,
+  "order": 44,
+  "id": "l83_one_through",
+  "name": "One Through",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3600,
+  "description": "The lock wants three of you holding it, and it doesn't stay open.",
+  "hints": [
+   "Each of the three switches answers to one of you only: the plate behind the flames, the heavy plate, and the turbine.",
+   "With three of you holding the lock open, the fourth walks through. Beyond the ice is a lever.",
+   "The lever opens a door in the crawl under the hall. The other three drop into it from the alcove and come up at the far end."
+  ],
+  "palette": [
+   "="
+  ],
+  "entities": {
+   "plate": 2,
+   "firewall": 1,
+   "turbine": 1,
+   "door": 2,
+   "ice": 1,
+   "lever": 1
+  },
+  "options": [
+   "heavy plate",
+   "latch",
+   "required:3"
+  ],
+  "ours": "one_through"
+ },
+ {
+  "order": 45,
   "id": "l42_keystone",
   "name": "Keystone",
   "dark": false,
@@ -1428,7 +1512,7 @@
   ]
  },
  {
-  "order": 43,
+  "order": 46,
   "id": "l43_grand_works",
   "name": "Grand Works",
   "dark": false,
@@ -1467,7 +1551,7 @@
   ]
  },
  {
-  "order": 44,
+  "order": 47,
   "id": "l44_flue",
   "name": "Flue",
   "dark": false,
@@ -1496,7 +1580,7 @@
   ]
  },
  {
-  "order": 45,
+  "order": 48,
   "id": "l45_leap_of_faith",
   "name": "Leap of Faith",
   "dark": false,
@@ -1524,7 +1608,7 @@
   "options": []
  },
  {
-  "order": 46,
+  "order": 49,
   "id": "l46_dumbwaiter",
   "name": "Dumbwaiter",
   "dark": false,
@@ -1553,14 +1637,45 @@
   ]
  },
  {
-  "order": 47,
+  "order": 50,
+  "id": "l79_conveyor",
+  "name": "Conveyor",
+  "dark": false,
+  "supports": [
+   "fire+water"
+  ],
+  "parTicks": 2100,
+  "description": "A belt that only runs one way, and a boulder no hand can move.",
+  "hints": [
+   "Only Water can reach the button. While it is held the belt runs left and takes the boulder with it. Take the gem in the tunnel first.",
+   "Let go while the boulder is on the wide plate: the door on the shelf opens and Fire can cross above the tunnel. Hold too long and Fire is shut in for good.",
+   "The gate needs the torch and the boulder on the last plate. Fire lights the torch before crossing."
+  ],
+  "palette": [],
+  "entities": {
+   "door": 2,
+   "button": 1,
+   "belt": 1,
+   "boulder": 1,
+   "plate": 2,
+   "torch": 1
+  },
+  "options": [
+   "belt speed -2",
+   "button:hold",
+   "required:2"
+  ],
+  "ours": "conveyor"
+ },
+ {
+  "order": 51,
   "id": "l47_stamp_mill",
   "name": "Stamp Mill",
   "dark": false,
   "supports": [
    "water+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "A crate can't fall through a grate. It can be hit through one.",
   "hints": [
    "Air pushes the crate over the mist to the end of the top floor. When Water stands on the plate downstairs, the stamp comes down.",
@@ -1587,7 +1702,7 @@
   ]
  },
  {
-  "order": 48,
+  "order": 52,
   "id": "l48_long_haul",
   "name": "Long Haul",
   "dark": false,
@@ -1619,7 +1734,7 @@
   ]
  },
  {
-  "order": 49,
+  "order": 53,
   "id": "l49_relay",
   "name": "Relay",
   "dark": false,
@@ -1652,7 +1767,7 @@
   ]
  },
  {
-  "order": 50,
+  "order": 54,
   "id": "l50_assay",
   "name": "Assay",
   "dark": false,
@@ -1682,14 +1797,14 @@
   ]
  },
  {
-  "order": 51,
+  "order": 55,
   "id": "l51_three_stage",
   "name": "Three Stage",
   "dark": false,
   "supports": [
    "fire+water+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "Three ledges too high for two players.",
   "hints": [
    "Stand on each other's heads, all three, and jump from the bottom up. The top player flies about 11 tiles.",
@@ -1713,14 +1828,14 @@
   ]
  },
  {
-  "order": 52,
+  "order": 56,
   "id": "l52_ore_run",
   "name": "Ore Run",
   "dark": false,
   "supports": [
    "fire+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "A boulder on the wrong side of the river, and a lever on the wrong side of the boulder.",
   "hints": [
    "Air crosses the river the way it did in the Relay, and spins the turbine on the walkway.",
@@ -1749,7 +1864,40 @@
   ]
  },
  {
-  "order": 53,
+  "order": 57,
+  "id": "l82_jackshaft",
+  "name": "Jackshaft",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 1800,
+  "description": "The lift isn't for going up. It's for pressing something into the ceiling.",
+  "hints": [
+   "The heavy plate at the top of the shaft opens the vault. Only the boulder can hold it and stay there.",
+   "Fire's door is up in the loft, and the lift carries one thing at a time. Fire has to ride up first.",
+   "Water's lever sends the lift up and back. Bring it down empty, Earth pushes the boulder on, and up it goes for good."
+  ],
+  "palette": [],
+  "entities": {
+   "door": 1,
+   "ice": 1,
+   "firewall": 1,
+   "lever": 1,
+   "boulder": 1,
+   "elevator": 1,
+   "plate": 1
+  },
+  "options": [
+   "elevator speed 1.5",
+   "elevator:powered",
+   "heavy plate"
+  ],
+  "ours": "jackshaft",
+  "map_differs": true
+ },
+ {
+  "order": 58,
   "id": "l53_counterpoise",
   "name": "Counterpoise",
   "dark": false,
@@ -1781,11 +1929,42 @@
    "heavy plate",
    "pool dur 420",
    "required:2",
-   "seesaw range 2"
+   "seesaw range 2.375"
   ]
  },
  {
-  "order": 54,
+  "order": 59,
+  "id": "l84_treadmill",
+  "name": "Treadmill",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3000,
+  "description": "A belt just a little faster than Earth can walk.",
+  "hints": [
+   "Walk into the belt and keep walking: Fire, Water and Air are just fast enough. Nobody can jump under that roof.",
+   "Earth will never get across. The cracked floor before the belt leads to a cellar underneath it.",
+   "Air's turbine on the far side opens the cellar gate. Earth's lever at the end of the cellar opens the vault for the other three."
+  ],
+  "palette": [],
+  "entities": {
+   "ice": 1,
+   "firewall": 1,
+   "cracked": 1,
+   "belt": 1,
+   "turbine": 1,
+   "door": 2,
+   "lever": 1
+  },
+  "options": [
+   "belt speed -2.8",
+   "latch"
+  ],
+  "ours": "treadmill"
+ },
+ {
+  "order": 60,
   "id": "l54_quorum",
   "name": "Quorum",
   "dark": false,
@@ -1820,14 +1999,14 @@
   ]
  },
  {
-  "order": 55,
+  "order": 61,
   "id": "l55_last_word",
   "name": "Last Word",
   "dark": false,
   "supports": [
    "fire+water+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "A gale, a leap, a bridge, and a gate that can count.",
   "hints": [
    "The gale needs Fire's torch and the boulder on the plate. Everyone but Earth rides it alone, and Earth rides on Fire's head.",
@@ -1856,7 +2035,7 @@
   ]
  },
  {
-  "order": 56,
+  "order": 62,
   "id": "l56_portcullis",
   "name": "Portcullis",
   "dark": false,
@@ -1889,7 +2068,7 @@
   ]
  },
  {
-  "order": 57,
+  "order": 63,
   "id": "l57_low_bow",
   "name": "Low Bow",
   "dark": false,
@@ -1917,7 +2096,7 @@
   ]
  },
  {
-  "order": 58,
+  "order": 64,
   "id": "l58_catch_the_lift",
   "name": "Catch the Lift",
   "dark": false,
@@ -1949,7 +2128,7 @@
   ]
  },
  {
-  "order": 59,
+  "order": 65,
   "id": "l59_furnace_line",
   "name": "Furnace Line",
   "dark": false,
@@ -1981,7 +2160,7 @@
   ]
  },
  {
-  "order": 60,
+  "order": 66,
   "id": "l60_relay",
   "name": "Relay",
   "dark": false,
@@ -2015,7 +2194,7 @@
   ]
  },
  {
-  "order": 61,
+  "order": 67,
   "id": "l61_sorting_yard",
   "name": "Sorting Yard",
   "dark": false,
@@ -2051,7 +2230,7 @@
   ]
  },
  {
-  "order": 62,
+  "order": 68,
   "id": "l62_updraft",
   "name": "Updraft",
   "dark": false,
@@ -2082,7 +2261,7 @@
   ]
  },
  {
-  "order": 63,
+  "order": 69,
   "id": "l63_two_high",
   "name": "Two High",
   "dark": false,
@@ -2109,14 +2288,46 @@
   "options": []
  },
  {
-  "order": 64,
+  "order": 70,
+  "id": "l85_tripwire",
+  "name": "Tripwire",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 3600,
+  "description": "The switch is in the lift shaft, and riding past it is the only way to press it.",
+  "hints": [
+   "The heavy plate halfway up the shaft is pressed by whoever the lift carries past it, and only Earth is heavy enough.",
+   "While Earth rides past the plate, the gate at the far end of the hall opens for a moment. Fire has to be running before it's fully open.",
+   "Missed it? The lift keeps going round: the gate opens again on the next pass."
+  ],
+  "palette": [],
+  "entities": {
+   "elevator": 1,
+   "plate": 1,
+   "door": 2,
+   "turbine": 1,
+   "firewall": 1,
+   "ice": 1
+  },
+  "options": [
+   "elevator speed .5",
+   "elevator:loop",
+   "heavy plate",
+   "latch"
+  ],
+  "ours": "tripwire"
+ },
+ {
+  "order": 71,
   "id": "l64_paternoster",
   "name": "Paternoster",
   "dark": false,
   "supports": [
    "fire+water+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "Two lifts, two buttons, each on the wrong side.",
   "hints": [
    "Each button raises the lift on the other side. Earth waits on the left lift and Air on the right one.",
@@ -2142,14 +2353,14 @@
   ]
  },
  {
-  "order": 65,
+  "order": 72,
   "id": "l65_last_shift",
   "name": "Last Shift",
   "dark": false,
   "supports": [
    "fire+water+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "A boulder on its way to the furnace, two plates, and a gate that hardly opens.",
   "hints": [
    "Only Fire can reach the start lever. Once the boulder is on the belt, Water has to climb onto the ledge from a partner's head, douse the flames and turn the belt round.",
@@ -2182,7 +2393,7 @@
   ]
  },
  {
-  "order": 66,
+  "order": 73,
   "id": "l66_rockslide",
   "name": "Rockslide",
   "dark": false,
@@ -2211,7 +2422,7 @@
   ]
  },
  {
-  "order": 67,
+  "order": 74,
   "id": "l67_ferry",
   "name": "Ferry",
   "dark": false,
@@ -2240,7 +2451,7 @@
   ]
  },
  {
-  "order": 68,
+  "order": 75,
   "id": "l68_stepping_stone",
   "name": "Stepping Stone",
   "dark": false,
@@ -2267,7 +2478,7 @@
   "options": []
  },
  {
-  "order": 69,
+  "order": 76,
   "id": "l69_express",
   "name": "Express",
   "dark": false,
@@ -2300,7 +2511,7 @@
   ]
  },
  {
-  "order": 70,
+  "order": 77,
   "id": "l70_brake",
   "name": "Brake",
   "dark": false,
@@ -2332,7 +2543,7 @@
   ]
  },
  {
-  "order": 71,
+  "order": 78,
   "id": "l71_domino",
   "name": "Domino",
   "dark": false,
@@ -2361,7 +2572,7 @@
   ]
  },
  {
-  "order": 72,
+  "order": 79,
   "id": "l72_hoist",
   "name": "Hoist",
   "dark": false,
@@ -2392,7 +2603,7 @@
   ]
  },
  {
-  "order": 73,
+  "order": 80,
   "id": "l73_flash",
   "name": "Flash",
   "dark": false,
@@ -2422,14 +2633,49 @@
   ]
  },
  {
-  "order": 74,
+  "order": 81,
+  "id": "l86_cargo",
+  "name": "Cargo",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 2400,
+  "description": "A belt too fast to walk against, one boulder, and four doors that all want it.",
+  "hints": [
+   "The belt runs back towards the start unless Air stands on the turbine. Under its low roof you can only jump where there's a hatch.",
+   "The boulder on the first plate opens the hatches for Fire and Water for good. Ride the belt and jump, holding forward, as you pass under your own hatch.",
+   "Earth's hatch needs the boulder at the far end of the belt, and stays open after that. Missed your hatch? Air steps off the turbine, the belt brings everyone back, and you go again.",
+   "Air's gate opens for a moment while the boulder rolls over the long plate, once Earth is home. Air steps off the turbine and waits under its shaft. Missed it? Send the boulder out and back again."
+  ],
+  "palette": [],
+  "entities": {
+   "turbine": 1,
+   "door": 5,
+   "boulder": 1,
+   "plate": 4,
+   "ice": 1,
+   "firewall": 1,
+   "belt": 1
+  },
+  "options": [
+   "belt speed -5",
+   "belt:reverse",
+   "heavy plate",
+   "latch",
+   "required:2"
+  ],
+  "ours": "cargo"
+ },
+ {
+  "order": 82,
   "id": "l74_convoy",
   "name": "Convoy",
   "dark": false,
   "supports": [
    "fire+water+earth+air"
   ],
-  "parTicks": 3,
+  "parTicks": 3000,
   "description": "Two boulders, two riders, one tunnel of sludge, and the way home for those who stay behind.",
   "hints": [
    "Nobody can cross the sludge in the tunnel except on a boulder, or Air in a long glide. Fire and Water each ride one, and Earth pushes them off the hill one after the other.",
@@ -2453,7 +2699,7 @@
   ]
  },
  {
-  "order": 75,
+  "order": 83,
   "id": "l75_avalanche",
   "name": "Avalanche",
   "dark": false,
@@ -2490,6 +2736,242 @@
    "heavy plate",
    "latch",
    "required:2"
+  ]
+ },
+ {
+  "order": 84,
+  "id": "l77_updraft_duet",
+  "name": "Updraft Duet",
+  "dark": false,
+  "supports": [
+   "water+air"
+  ],
+  "parTicks": 2400,
+  "description": "The only way across is on Water's head, and Water can't get up there alone.",
+  "hints": [
+   "Water climbs onto Air's head, and Air rides the draught up the chimney with Water aboard.",
+   "Up top, Water jumps down onto the water. Air can't touch it, so Air has to land on Water's head.",
+   "Water walks across with Air on its head. The lever on the far side opens the gate in front of your doors and stops the draught, so leave nothing behind up there."
+  ],
+  "palette": [
+   "W"
+  ],
+  "entities": {
+   "fan": 1,
+   "lever": 1,
+   "door": 1
+  },
+  "options": [
+   "invert(fan)",
+   "latch"
+  ],
+  "ours": "updraft_duet",
+  "map_differs": true
+ },
+ {
+  "order": 85,
+  "id": "l78_counterweight",
+  "name": "Counterweight",
+  "dark": false,
+  "supports": [
+   "water+earth"
+  ],
+  "parTicks": 2700,
+  "description": "The stone holds the gate open, and the stone is needed somewhere else.",
+  "hints": [
+   "The stone on the heavy plate holds the far gate open. Water has to be through before Earth takes it off again.",
+   "Earth pushes the stone onto the grating under the lid, and steps out from under it. The lever behind the flames brings the lid down.",
+   "The stone lands on a plate in the crawl, which opens the crawl and the vault. Earth drops through the grating and crawls to the far end."
+  ],
+  "palette": [
+   "="
+  ],
+  "entities": {
+   "plate": 2,
+   "boulder": 1,
+   "door": 4,
+   "firewall": 1,
+   "lever": 1
+  },
+  "options": [
+   "heavy plate",
+   "invert(door)"
+  ],
+  "ours": "counterweight"
+ },
+ {
+  "order": 86,
+  "id": "l76_crosswire",
+  "name": "Crosswire",
+  "dark": false,
+  "supports": [
+   "fire+air"
+  ],
+  "parTicks": 2400,
+  "description": "Both crossings happen before the way across them exists.",
+  "hints": [
+   "Air starts the turbine. The draught lifts Air up into the loft, but it only carries Fire sideways: take a running jump into it.",
+   "The lever in the loft swaps the shutter in the middle of the gap for the perch on the far side. Throw it once Fire has floated past the shutter.",
+   "Fire's lever on the far side opens the cage in the loft. For the way back, Air throws the lever again once Fire is in the air."
+  ],
+  "palette": [
+   "S"
+  ],
+  "entities": {
+   "turbine": 1,
+   "fan": 2,
+   "lever": 2,
+   "door": 3
+  },
+  "options": [
+   "fan 1.54",
+   "invert(door)",
+   "latch"
+  ],
+  "ours": "crosswire"
+ },
+ {
+  "order": 87,
+  "id": "l87_slow_fall",
+  "name": "Slow Fall",
+  "dark": false,
+  "supports": [
+   "fire+water"
+  ],
+  "parTicks": 2100,
+  "description": "In this draught you sink slowly, and while you sink, your partner has a bridge.",
+  "hints": [
+   "The draughts can't lift you, but they let you sink very slowly. The switches hanging in them hold the bridge out while someone sinks past them.",
+   "Fire steps off the left of the ledge into its draught, over the lava, and Water runs across the bridge. Then Water does the same for Fire, over the water.",
+   "Sank too soon? The ledges up the wall lead back to the top. Walking off the edge, rather than jumping, keeps you on the switches longest."
+  ],
+  "palette": [
+   "=",
+   "L",
+   "S",
+   "W"
+  ],
+  "entities": {
+   "fan": 2,
+   "door": 1,
+   "plate": 12
+  },
+  "options": [
+   "fan 1.54",
+   "invert(door)"
+  ],
+  "ideas": [
+   "sink-as-a-timer",
+   "switch-in-mid-flight",
+   "liquid-lane"
+  ]
+ },
+ {
+  "order": 88,
+  "id": "l88_keep_it_spinning",
+  "name": "Keep It Spinning",
+  "dark": false,
+  "supports": [
+   "earth+air"
+  ],
+  "parTicks": 2100,
+  "description": "The lift runs only while a turbine spins, and each one spins for a moment.",
+  "hints": [
+   "Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down.",
+   "Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch.",
+   "At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door."
+  ],
+  "palette": [],
+  "entities": {
+   "elevator": 1,
+   "turbine": 4,
+   "boulder": 1,
+   "plate": 1,
+   "door": 1
+  },
+  "options": [
+   "elevator speed 1.2",
+   "elevator:powered",
+   "heavy plate",
+   "turbine dur 110"
+  ],
+  "ideas": [
+   "feed-the-engine-mid-ride",
+   "object-as-permanent-switch"
+  ]
+ },
+ {
+  "order": 89,
+  "id": "l89_totem",
+  "name": "Totem",
+  "dark": false,
+  "supports": [
+   "fire+water+earth"
+  ],
+  "parTicks": 1800,
+  "description": "Each gate opens for a tower of all three of you, built in the right order.",
+  "hints": [
+   "Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them.",
+   "The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth.",
+   "First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens."
+  ],
+  "palette": [
+   "L",
+   "W"
+  ],
+  "entities": {
+   "plate": 6,
+   "door": 2
+  },
+  "options": [
+   "heavy plate",
+   "required:3"
+  ],
+  "ideas": [
+   "tower-presses-a-column",
+   "head-stack",
+   "quorum",
+   "twist-order"
+  ]
+ },
+ {
+  "order": 90,
+  "id": "l90_weighbridge",
+  "name": "Weighbridge",
+  "dark": false,
+  "supports": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 5400,
+  "description": "A lift that weighs its passengers: with the lever on, anything heavy gets off halfway.",
+  "hints": [
+   "The lift never stops at the middle floor on its own. With the lever up there on, it stops for anything heavy, and goes on again once that's off.",
+   "The boulder rides the lift. It belongs in the notch on the middle floor, on the heavy plate that opens the gate at the top: Earth rides up with it and pushes it off there.",
+   "Only Air can jump up to the lever. Light riders can step off the moving lift at the middle floor, and step back on as it goes by. Earth needs the lever off to get past the middle floor."
+  ],
+  "palette": [
+   "="
+  ],
+  "entities": {
+   "elevator": 1,
+   "plate": 2,
+   "lever": 1,
+   "door": 2,
+   "boulder": 1,
+   "ice": 1,
+   "firewall": 1
+  },
+  "options": [
+   "elevator speed 2",
+   "elevator:loop",
+   "heavy plate",
+   "invert(elevator)",
+   "required:2"
+  ],
+  "ideas": [
+   "lift-sorts-by-weight",
+   "lift-loop",
+   "object-as-permanent-switch"
   ]
  }
 ]

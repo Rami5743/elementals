@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 75 campaign levels, 36 in this repo.
+Totals: 79 campaign levels, 36 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (12)
@@ -50,15 +50,15 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: two pools fed by one pad, one of them inverted, so they are never ice at the same time — and an errand at the far end that has to be run and then *undone*, because the way out is back where you started.
   - ideas: freeze-bridge, freeze-invert, invert-door, hold-switch, twist-order, twist-undo
   - features: ent:door ent:freezepad ent:plate ent:pool ent:torch opt:invert:pool opt:latch opt:pool-timed opt:required:2 tile:water
-- **Updraft Duet** `updraft_duet` (2p: water+air) core=`the-landing-melts-from-the-moment-you-leave-the-pad` challenge=motor par=5400
+- **Updraft Duet** `updraft_duet` (2p: water+air) core=`the-landing-melts-from-the-moment-you-leave-the-pad` challenge=motor shipped in the campaign as `l77_updraft_duet` (#84, map edited there) par=5400
   - idea: a landing made of ice that starts melting the moment you leave the pad that froze it. The draught carries a pair, but slowly, and the whole climb is spent inside a countdown that you started yourself.
   - ideas: fan-passenger, freeze-bridge, twist-sacrifice
   - features: ent:box ent:door ent:fan ent:firewall ent:freezepad ent:lever ent:plate ent:pool opt:invert:fan opt:latch opt:pool-timed tile:water
-- **Conveyor** `conveyor` (2p: fire+water) core=`the-belt-is-the-only-hand-in-the-level` challenge=mind par=3600
+- **Conveyor** `conveyor` (2p: fire+water) core=`the-belt-is-the-only-hand-in-the-level` challenge=mind shipped in the campaign as `l79_conveyor` (#50) par=3600
   - idea: a boulder in a group with no Earth in it. Fire and Water cannot shift a boulder at all — it is a wall with a handle on it, and the belt is the only hand in the level.
   - ideas: no-hands-for-cargo, belt-cargo, hold-switch, twist-self-block, twist-order, machine-strands-operator
   - features: ent:belt ent:boulder ent:button ent:door ent:plate ent:torch opt:belt:walkable opt:button:hold opt:required:2
-- **Lantern** `lantern` (2p: fire+air) core=`the-switch-is-halfway-so-the-ride-ends-halfway` challenge=motor par=3600 dark
+- **Lantern** `lantern` (2p: fire+air) core=`the-switch-is-halfway-so-the-ride-ends-halfway` challenge=motor shipped in the campaign as `l80_lantern` (#37) par=3600 dark
   - idea: a glide across sludge in the dark, a passenger who has to get off halfway, and a pillar in the middle of the gap that nobody can leave on their own.
   - ideas: dark, glide-passenger, glide-dismount, machine-strands-operator, twist-stranding, hold-switch
   - features: dark ent:door ent:elevator ent:plate ent:torch opt:elevator:powered tile:sludge
@@ -70,16 +70,16 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: an airlock whose two gates are never open together, a turbine you can only reach from the wrong side of it, and a boulder that has to be inside the lock with you *and* is the only thing that will hold the last gate open for two.
   - ideas: stock-before-it-seals, shared-switch-two-gates, invert-door, timed-window, object-as-permanent-switch, twist-setup
   - features: ent:boulder ent:door ent:plate ent:turbine opt:invert:door opt:turbine-timed tile:mud
-- **Counterweight** `counterweight` (2p: water+earth) core=`the-weight-holding-the-gate-is-the-weight-you-need` challenge=mind par=5400
+- **Counterweight** `counterweight` (2p: water+earth) core=`the-weight-holding-the-gate-is-the-weight-you-need` challenge=mind shipped in the campaign as `l78_counterweight` (#85) par=5400
   - idea: a gate held open by the weight of the one thing the rest of the level needs. Taking the stone off the plate is both the only way forward and the thing that cuts the hall in two with your partner on the far side.
   - ideas: counterweight-you-must-remove, twist-stranding, one-way-press
   - features: ent:boulder ent:door ent:firewall ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch tile:one-way
-- **Crosswire** `crosswire` (2p: fire+air) core=`the-far-end-of-the-crossing-is-built-while-you-fly` challenge=motor par=5400
+- **Crosswire** `crosswire` (2p: fire+air) core=`the-far-end-of-the-crossing-is-built-while-you-fly` challenge=motor shipped in the campaign as `l76_crosswire` (#86) par=5400
   - idea: a crossing whose far end does not exist when you set off. One lever drives two doors the opposite way round, and it has to be thrown twice — both times while Fire is in mid-air and can no longer do anything about it.
   - ideas: partner-builds-your-landing, twist-stranding
   - features: ent:door ent:fan ent:lever ent:turbine opt:fan:hang-time opt:invert:door opt:latch opt:wide-door tile:sludge
 
-## 2 players — campaign (32)
+## 2 players — campaign (34)
 
 - **First Steps** `t01_first_steps` (2p: fire+water) par=1500
   - idea: Plates, gates and levers. One holds the door, the other opens the way.
@@ -92,7 +92,7 @@ Totals: 75 campaign levels, 36 in this repo.
 - **Lend a Hand** `t03_lend_a_hand` (2/3/4p: fire+water, fire+water+earth, fire+water+earth+air) par=2100
   - idea: A human ladder up the cliff, then an elevator for whoever stayed below.
   - hints: The cliff is too high to jump. Water stands in the pool at its foot, and Fire jumps onto Water's head. / The lever up top moves the elevator. Ride it before the lever is pulled.
-  - features: ent:belt ent:boulder ent:box ent:button ent:cracked ent:door ent:elevator ent:fan ent:firewall ent:freezepad ent:ice ent:lever ent:plate ent:pool ent:seesaw ent:text ent:torch ent:turbine opt:belt:walkable opt:button-timed opt:button:timed opt:elevator:loop opt:fan:lifts-air opt:fan:lifts-all opt:heavy-plate opt:required:2 opt:seesaw-range tile:water
+  - features: ent:door ent:elevator ent:fan ent:firewall ent:ice ent:lever ent:plate opt:heavy-plate opt:required:2 tile:water
 - **Ice & Flame** `l04_ice_and_flame` (2p: fire+water) par=2100
   - idea: Two tunnels, two barriers. Each of you can only clear the other's way.
   - hints: Fire can melt the ice in the lower tunnel. Water can douse the flames at the end of the upper tunnel. / Fire goes through the lava tunnel, Water through the water tunnel.
@@ -165,7 +165,7 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: A lift can carry a boulder past a ledge. The ledge keeps it.
   - hints: Earth pushes the boulder onto the lift and Water holds the plate. The lift goes too high to push the boulder off it. / Step off the plate. The lift sinks through the one-way ledge, and the boulder stays on it. / Do it again at the second shaft. The heavy plate on the top floor wants the boulder, so that Earth is free to walk through the gate.
   - features: ent:boulder ent:door ent:elevator ent:plate opt:heavy-plate tile:one-way
-- **Stamp Mill** `l47_stamp_mill` (2p: water+air) par=3
+- **Stamp Mill** `l47_stamp_mill` (2p: water+air) par=3000
   - idea: A crate can't fall through a grate. It can be hit through one.
   - hints: Air pushes the crate over the mist to the end of the top floor. When Water stands on the plate downstairs, the stamp comes down. / Water pushes the crate back along the middle floor, through the water. Air, downstairs by then, spins the turbine, and the second stamp comes down. / Press Down on a grate to drop through it. Water's freeze pad lets Air cross the water.
   - features: ent:box ent:door ent:firewall ent:freezepad ent:plate ent:pool ent:turbine opt:invert:door opt:pool-timed tile:mist tile:one-way tile:water
@@ -209,6 +209,16 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: Two boulders, two plates in the sludge, and a little lava to stand in.
   - hints: Fire stands at the near end of the lava, right past the plates. Earth pushes the first boulder down: it rolls over the sludge and stops against Fire, on the far plate. / Earth pushes the second one down. It stops against the first, on the near plate, and both gates open.
   - features: ent:boulder ent:door ent:plate opt:heavy-plate opt:required:2 tile:lava tile:slope tile:sludge
+- **Slow Fall** `l87_slow_fall` (2p: fire+water) par=2100
+  - idea: In this draught you sink slowly, and while you sink, your partner has a bridge.
+  - ideas: sink-as-a-timer, switch-in-mid-flight, liquid-lane
+  - hints: The draughts can't lift you, but they let you sink very slowly. The switches hanging in them hold the bridge out while someone sinks past them. / Fire steps off the left of the ledge into its draught, over the lava, and Water runs across the bridge. Then Water does the same for Fire, over the water. / Sank too soon? The ledges up the wall lead back to the top. Walking off the edge, rather than jumping, keeps you on the switches longest.
+  - features: ent:door ent:fan ent:plate opt:fan:hang-time opt:invert:door tile:lava tile:one-way tile:sludge tile:water
+- **Keep It Spinning** `l88_keep_it_spinning` (2p: earth+air) par=2100
+  - idea: The lift runs only while a turbine spins, and each one spins for a moment.
+  - ideas: feed-the-engine-mid-ride, object-as-permanent-switch
+  - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
+  - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
 ## 3 players — this repo (12)
 
@@ -244,7 +254,7 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: a gate that wants two plates down at the same time, so neither of them can be a player — both have to be held by something that stays.
   - ideas: object-as-permanent-switch, quorum
   - features: ent:boulder ent:box ent:door ent:firewall ent:ice ent:plate opt:heavy-plate opt:required:2 tile:water
-- **Gangway** `gangway` (3p: fire+earth+air) core=`the-lift-is-the-floor` challenge=mind par=3000
+- **Gangway** `gangway` (3p: fire+earth+air) core=`the-lift-is-the-floor` challenge=mind shipped in the campaign as `l81_gangway` (#41, map edited there) par=3000
   - idea: Every other lift in the game is a thing you wait for. This one is the ground you are standing on. Sending it up is not free — it takes the road away, so whoever is going to need that road has to be on the right side of it first, and whoever is going up has to already be aboard.
   - ideas: lift-as-floor, twist-self-block
   - features: ent:cracked ent:door ent:elevator ent:ice ent:lever ent:turbine opt:elevator:powered opt:latch tile:sludge
@@ -252,7 +262,7 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: The grating looks like a hole you cannot use. It is: you can fall through it, but the thing you need to get down there cannot. The lid is not a gate in this level, it is a press — the only machine in the hall that pushes downward.
   - ideas: one-way-press, twist-backwards
   - features: ent:boulder ent:door ent:firewall ent:ice ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch tile:one-way
-- **Jackshaft** `jackshaft` (3p: fire+water+earth) core=`a-lift-that-presses-instead-of-carrying` challenge=mind par=3000
+- **Jackshaft** `jackshaft` (3p: fire+water+earth) core=`a-lift-that-presses-instead-of-carrying` challenge=mind shipped in the campaign as `l82_jackshaft` (#57, map edited there) par=3000
   - idea: a lift used as a jack. It is not transport: its job is to carry a boulder up the shaft and hold it against a plate hanging in the ceiling, and to stay there for the rest of the level.
   - ideas: lift-press, twist-order
   - features: ent:boulder ent:door ent:elevator ent:firewall ent:ice ent:lever ent:plate opt:elevator:powered opt:heavy-plate
@@ -261,7 +271,7 @@ Totals: 75 campaign levels, 36 in this repo.
   - ideas: climb-then-steer, fan-passenger, glide-dismount, one-way-drop, timed-window, twist-order
   - features: ent:button ent:door ent:fan ent:firewall ent:torch opt:button-timed opt:button:timed opt:fan:lifts-air opt:latch
 
-## 3 players — campaign (27)
+## 3 players — campaign (30)
 
 - **Hot & Cold** `t02_hot_and_cold` (2/3/4p: fire+water, fire+earth, fire+air, water+earth, water+air, earth+air, fire+water+earth, fire+water+air, fire+earth+air, water+earth+air, fire+water+earth+air) par=1800
   - idea: Each element wades through its own liquid to a lever that opens someone else's door.
@@ -270,7 +280,7 @@ Totals: 75 campaign levels, 36 in this repo.
 - **Lend a Hand** `t03_lend_a_hand` (2/3/4p: fire+water, fire+water+earth, fire+water+earth+air) par=2100
   - idea: A human ladder up the cliff, then an elevator for whoever stayed below.
   - hints: The cliff is too high to jump. Water stands in the pool at its foot, and Fire jumps onto Water's head. / The lever up top moves the elevator. Ride it before the lever is pulled.
-  - features: ent:belt ent:boulder ent:box ent:button ent:cracked ent:door ent:elevator ent:fan ent:firewall ent:freezepad ent:ice ent:lever ent:plate ent:pool ent:seesaw ent:text ent:torch ent:turbine opt:belt:walkable opt:button-timed opt:button:timed opt:elevator:loop opt:fan:lifts-air opt:fan:lifts-all opt:heavy-plate opt:required:2 opt:seesaw-range tile:water
+  - features: ent:door ent:elevator ent:fan ent:firewall ent:ice ent:lever ent:plate opt:heavy-plate opt:required:2 tile:water
 - **Heavy Hearted** `l07_heavy_hearted` (3p: fire+water+earth) par=2700
   - idea: Only Earth is heavy enough to tip the seesaw, but Earth needs help to get started.
   - hints: Fire can melt the ice that traps Earth and the boulder. / The boulder holds the heavy plate for good, and that plate opens Water's gate. / Stand on one end of the seesaw while Earth jumps on the other.
@@ -291,11 +301,15 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: A seesaw that only works in pairs, a frozen tunnel, and a bridge that exists only while someone holds it.
   - hints: Two equal weights keep the seesaw level. Earth outweighs anyone. / Air's turbine upstairs powers Earth's lift. / The bridge over the sludge only appears while a plate is held. There is a plate on each side.
   - features: ent:door ent:elevator ent:firewall ent:freezepad ent:plate ent:pool ent:seesaw ent:turbine opt:heavy-plate opt:invert:door opt:pool-timed opt:seesaw-range tile:one-way tile:sludge tile:water
+- **Thunderhead** `l21_thunderhead` (3p: fire+water+air) par=2400 dark
+  - idea: In the dark, across the ice, over the sludge and up into the clouds.
+  - hints: The first torch powers both the fan and the lift. / Only the fan reaches the lever on the cloud. Freeze the tunnel for the others. / Air can carry Fire over the sludge. The torch on the far side does the rest.
+  - features: dark ent:door ent:elevator ent:fan ent:firewall ent:freezepad ent:lever ent:pool ent:torch opt:elevator:loop opt:invert:door opt:pool-timed tile:sludge tile:water
 - **Undercurrent** `l25_undercurrent` (3p: fire+water+earth) par=2100
   - idea: Fire and Water carry each other through their pools, there and back and there again, while Earth walks the floor above them.
   - hints: Earth holds the heavy plate while the others go through. Earth's way is up the ledges. / Stand on your partner's head: they can walk you through their own liquid. / The torch opens Earth's door upstairs, and the freeze pad freezes Earth's pool. Water has to be carried back to the pad.
   - features: ent:cracked ent:door ent:firewall ent:freezepad ent:ice ent:plate ent:pool ent:torch opt:heavy-plate opt:pool-timed tile:lava tile:mud tile:one-way tile:water
-- **Gondola** `l26_gondola` (3p: water+earth+air) par=3
+- **Gondola** `l26_gondola` (3p: water+earth+air) par=3000
   - idea: One gondola, four switches, three passengers. It only moves while two switches are on, and it comes back as soon as they aren't.
   - hints: The gondola moves while any two of its switches are on: the turbine, the two heavy plates and the light plate. / Whoever holds a switch can't ride. Think about who has to go first, and who has to go last. / Everyone off the switches sends the gondola back.
   - features: ent:elevator ent:firewall ent:plate ent:turbine opt:heavy-plate opt:required:2 tile:mist tile:sludge
@@ -303,11 +317,15 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: Air can glide a whole tower of friends over the sludge on its head. There is no flight back.
   - hints: Air can glide with passengers stacked on its head. Once across, nobody can get back up. / Fire melts the way in. Earth smashes the cracked floor, and the boulder falls with Earth onto the heavy plate below. / The torch starts the chimney fan. Air can carry Fire up it, slowly.
   - features: ent:boulder ent:cracked ent:door ent:fan ent:ice ent:plate ent:torch opt:heavy-plate tile:sludge
+- **Lighthouse** `l28_lighthouse` (3p: fire+water+air) par=3000 dark
+  - idea: A dark tower, four floors high. Light a torch on every floor and lift each other to the lamp.
+  - hints: Douse the flames and light the first torch: the lift starts. / The pool is too wide for Fire and Air. Freeze it. The second torch starts Air's fan. / Air's turbine raises the lift and opens its hatches. The lamp torch opens Air's way to the top.
+  - features: dark ent:door ent:elevator ent:fan ent:firewall ent:freezepad ent:pool ent:torch ent:turbine opt:elevator:loop opt:pool-timed tile:mist tile:water
 - **Ferryman** `l33_ferryman` (2/3/4p: earth+air, water+earth+air, fire+water+earth+air) par=4200
   - idea: A one-seat gondola that crosses while enough switches are on and comes back when they aren't. Some of you start on the wrong side, and so does the crate.
   - hints: The gondola holds one player, crate or boulder. It goes to the far side while enough switches are on (2, 3 or 4, one per player) and comes back as soon as there aren't. / Parked boulders and crates count as switches. Someone may have to ride back just to move one. / The crate belongs in the pit on the far side: the gate to the far exits needs it. Push it from the step behind the far stop.
   - features: ent:boulder ent:box ent:button ent:door ent:elevator ent:plate ent:turbine opt:button:hold opt:heavy-plate opt:required:2 opt:required:3 opt:required:4 opt:turbine-timed tile:lava tile:one-way tile:sludge
-- **Ballast** `l38_ballast` (3p: fire+earth+air) par=3
+- **Ballast** `l38_ballast` (3p: fire+earth+air) par=3000
   - idea: For once, someone has to lift Earth. Fire and Air together are only just as heavy.
   - hints: Earth has to get on the seesaw first. Only then does the left end rise level with the block. / Fire and Air on the left end only balance Earth. Bring the crate along too. / Earth's end has to go all the way up for Earth to reach the top floor.
   - features: ent:box ent:cracked ent:door ent:fan ent:ice ent:plate ent:seesaw ent:torch opt:heavy-plate opt:seesaw-range tile:mud tile:one-way
@@ -315,7 +333,7 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: A bridge of ice, a bridge of flames, and two friends who must not touch them. Then something has to fall at exactly the right moment.
   - hints: Fire melts the ice bridge by touching it and Water puts out the flame bridge. A passenger doesn't touch the bridge. / The hatch only opens while Earth stands on its plate, and Earth can't cross it while it is open. / Melting the ice plug drops the boulder and opens the gate, but it also leaves a pit too wide for Earth. Who has to be where first?
   - features: ent:boulder ent:door ent:firewall ent:ice ent:plate opt:heavy-plate tile:lava tile:sludge
-- **Tidewater** `l40_tidewater` (3p: water+earth+air) par=3
+- **Tidewater** `l40_tidewater` (3p: water+earth+air) par=3000
   - idea: One freeze pad, two pools, and they take turns: the moment one freezes, the other thaws.
   - hints: The pad freezes the first pool and thaws the second. Step off and they swap, about a second later. / The fan in the middle is on until Earth stands on the plate in the far room. Air can't get down to the lever against it. / With the fan on, Water floats over the gap in a running jump, like Fire on Thermals.
   - features: ent:door ent:fan ent:freezepad ent:lever ent:plate ent:pool opt:fan:hang-time opt:heavy-plate opt:invert:fan opt:invert:pool opt:pool-timed tile:mud tile:one-way tile:water
@@ -331,11 +349,11 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: A scale that opens a gate, and a boulder that nobody can weigh alone.
   - hints: The plate floats over the right pan. Whatever is on that pan touches it only when the scale is level. / Earth and one partner on the left pan balance the boulder. The third goes through the gate. / Up on the walkway is a crate. Dropped onto the left pan, it takes Earth's place on the scale, so Earth can go through too.
   - features: ent:boulder ent:box ent:door ent:plate ent:seesaw opt:heavy-plate opt:seesaw-range tile:one-way
-- **Three Stage** `l51_three_stage` (3p: fire+water+air) par=3
+- **Three Stage** `l51_three_stage` (3p: fire+water+air) par=3000
   - idea: Three ledges too high for two players.
   - hints: Stand on each other's heads, all three, and jump from the bottom up. The top player flies about 11 tiles. / Only Water can stand in the pool, so Water is the bottom of the stack under Fire's ledge. Under Water's ledge the bottom is Fire. / Walk off the end of a ledge to come down, not over the liquid. Water crosses the lava on Fire's head.
   - features: ent:door ent:firewall ent:lever ent:torch opt:required:3 tile:lava tile:mist tile:one-way tile:water
-- **Ore Run** `l52_ore_run` (3p: fire+earth+air) par=3
+- **Ore Run** `l52_ore_run` (3p: fire+earth+air) par=3000
   - idea: A boulder on the wrong side of the river, and a lever on the wrong side of the boulder.
   - hints: Air crosses the river the way it did in the Relay, and spins the turbine on the walkway. / Let the lift down to leave the boulder on the ledge. Earth pushes it along the walkway to the grate. / Fire's lever brings the stamp down. The boulder on the vault plate opens Fire's gate on the top floor, and Fire's plate and torch take the others home.
   - features: ent:boulder ent:door ent:elevator ent:fan ent:lever ent:plate ent:torch ent:turbine opt:heavy-plate opt:invert:door tile:lava tile:mud tile:one-way
@@ -371,6 +389,11 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: A boulder rolls over a plate nobody else can reach, and the gate opens for a moment.
   - hints: Air turns the turbine on the deck, and the hatch in front of the boulder opens for good. / Water waits right next to the gate. Earth pushes the boulder down into the trench: as it rolls over the heavy plate, the gate opens for a moment, and Water steps under it. / The gate comes down on Water's head and waits there. Earth lines up right behind her and Air behind Earth, and they walk through together.
   - features: ent:boulder ent:door ent:plate ent:turbine opt:heavy-plate opt:latch tile:slope tile:sludge
+- **Totem** `l89_totem` (3p: fire+water+earth) par=1800
+  - idea: Each gate opens for a tower of all three of you, built in the right order.
+  - ideas: tower-presses-a-column, head-stack, quorum, twist-order
+  - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
+  - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
 ## 4 players — this repo (12)
 
@@ -402,11 +425,11 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: Everyone looks at the same wind and sees a different machine. The second half of it is Air's: steering is what stops you climbing. Hold right and the wind just carries you across like Fire. Let go, and it takes you to the top.
   - ideas: fan-band
   - features: ent:boulder ent:door ent:fan ent:firewall ent:ice ent:plate ent:turbine opt:fan:hang-time opt:heavy-plate opt:latch opt:required:2 tile:sludge
-- **Treadmill** `treadmill` (4p: fire+water+earth+air) core=`belt-speed-tuned-to-exclude-earth` challenge=mind par=3000
+- **Treadmill** `treadmill` (4p: fire+water+earth+air) core=`belt-speed-tuned-to-exclude-earth` challenge=mind shipped in the campaign as `l84_treadmill` (#59) par=3000
   - idea: The belt is not an obstacle to be timed or avoided — it is a *speed test*, set exactly between Earth's legs and everyone else's. The moment you notice Earth cannot gain a pixel on it, the question stops being "how do we get Earth across" and becomes "what can Earth do down there that we cannot do up here".
   - ideas: belt-filter
   - features: ent:belt ent:cracked ent:door ent:firewall ent:ice ent:lever ent:turbine opt:belt:blocks-earth opt:latch
-- **Cargo** `cargo` (4p: fire+water+earth+air) core=`the-stone-has-to-come-home-before-the-driver-can-leave` challenge=motor par=3000
+- **Cargo** `cargo` (4p: fire+water+earth+air) core=`the-stone-has-to-come-home-before-the-driver-can-leave` challenge=motor shipped in the campaign as `l86_cargo` (#81) par=3000
   - idea: The belt is not a floor you walk on, it is a vehicle you ride — and the one who decides where it takes you is standing still at the other end of the level. The second turn of the screw is that the line carries freight as well as passengers, there is only one piece of freight, and the two plates that want it are at opposite ends. The second half of the insight is that you cannot jump off wherever you like: the roof is one tile high everywhere except at the three hatches, so the only question that matters is *when* you jump.
   - ideas: belt-reverse, low-roof-no-jump, twist-order, twist-undo, machine-strands-operator, lock-per-element
   - features: ent:belt ent:boulder ent:door ent:firewall ent:ice ent:plate ent:turbine opt:belt:blocks-all opt:belt:reverse opt:heavy-plate opt:wide-door
@@ -414,16 +437,16 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: a turbine only Air can reach, a ford only Water can freeze, a shelf that takes three players to reach, and a vault only Earth can open.
   - ideas: lock-per-element, head-stack, freeze-bridge
   - features: ent:cracked ent:door ent:freezepad ent:ice ent:lever ent:pool ent:turbine opt:latch opt:pool-timed tile:water
-- **One Through** `one_through` (4p: fire+water+earth+air) core=`a-lock-that-lets-exactly-one-of-you-past` challenge=mind par=3600
+- **One Through** `one_through` (4p: fire+water+earth+air) core=`a-lock-that-lets-exactly-one-of-you-past` challenge=mind shipped in the campaign as `l83_one_through` (#44) par=3600
   - idea: a lock that wants three keys held at the same time, in a level with four players. It does not latch, so the three who hold it cannot also walk through it — exactly one of you can, and which one is decided by the keys, not by you.
   - ideas: send-one-through, quorum
   - features: ent:door ent:firewall ent:ice ent:lever ent:plate ent:turbine opt:heavy-plate opt:latch opt:required:3 tile:one-way
-- **Tripwire** `tripwire` (4p: fire+water+earth+air) core=`the-ride-past-the-switch-is-the-window` challenge=motor par=3600
+- **Tripwire** `tripwire` (4p: fire+water+earth+air) core=`the-ride-past-the-switch-is-the-window` challenge=motor shipped in the campaign as `l85_tripwire` (#70) par=3600
   - idea: a switch hanging in a lift shaft. Nothing can stand on it, and the lift itself does not press it — only a rider does, and only for as long as the lift takes to carry them past it.
   - ideas: trip-plate-in-the-shaft, lift-loop
   - features: ent:door ent:elevator ent:firewall ent:ice ent:plate ent:turbine opt:elevator:loop opt:heavy-plate opt:latch
 
-## 4 players — campaign (21)
+## 4 players — campaign (23)
 
 - **Hot & Cold** `t02_hot_and_cold` (2/3/4p: fire+water, fire+earth, fire+air, water+earth, water+air, earth+air, fire+water+earth, fire+water+air, fire+earth+air, water+earth+air, fire+water+earth+air) par=1800
   - idea: Each element wades through its own liquid to a lever that opens someone else's door.
@@ -432,7 +455,7 @@ Totals: 75 campaign levels, 36 in this repo.
 - **Lend a Hand** `t03_lend_a_hand` (2/3/4p: fire+water, fire+water+earth, fire+water+earth+air) par=2100
   - idea: A human ladder up the cliff, then an elevator for whoever stayed below.
   - hints: The cliff is too high to jump. Water stands in the pool at its foot, and Fire jumps onto Water's head. / The lever up top moves the elevator. Ride it before the lever is pulled.
-  - features: ent:belt ent:boulder ent:box ent:button ent:cracked ent:door ent:elevator ent:fan ent:firewall ent:freezepad ent:ice ent:lever ent:plate ent:pool ent:seesaw ent:text ent:torch ent:turbine opt:belt:walkable opt:button-timed opt:button:timed opt:elevator:loop opt:fan:lifts-air opt:fan:lifts-all opt:heavy-plate opt:required:2 opt:seesaw-range tile:water
+  - features: ent:door ent:elevator ent:fan ent:firewall ent:ice ent:lever ent:plate opt:heavy-plate opt:required:2 tile:water
 - **Four Corners** `l10_four_corners` (4p: fire+water+earth+air) par=1800
   - idea: Everyone to their own corner. The vault opens only when all four plates are held at once.
   - hints: Each corner plate can only be reached or held by one element. / Hold all four plates at the same time. The trapdoor in the middle stays open after that.
@@ -441,7 +464,7 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: A chain reaction: every element powers the next.
   - hints: Freeze the pool, light the torch, ride the wind, spin the turbine. / The turbine powers the lift only while Air keeps it spinning. Hover at the edge of the updraft until Earth is done. / The boulder up top belongs on the heavy plate below.
   - features: ent:boulder ent:door ent:elevator ent:fan ent:firewall ent:freezepad ent:plate ent:pool ent:torch ent:turbine opt:heavy-plate opt:pool-timed tile:one-way tile:water
-- **Convergence** `l12_convergence` (4p: fire+water+earth+air) par=3
+- **Convergence** `l12_convergence` (4p: fire+water+earth+air) par=3000
   - idea: The finale: crack, drop, burn, blow, freeze and douse. In the right order.
   - hints: Earth can't reach the cracked platform alone. Give them a boost. / The boulder belongs on the heavy plate below the platform. / Torch, fan, lever: then freeze the pool so everyone can cross.
   - features: ent:boulder ent:cracked ent:door ent:fan ent:firewall ent:freezepad ent:lever ent:plate ent:pool ent:torch opt:heavy-plate opt:pool-timed tile:one-way tile:water
@@ -449,7 +472,7 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: Four buttons in four corners, each behind another element's lock. Press them together.
   - hints: Water clears Fire's tunnel, Fire clears Water's tunnel and lights the torch for Air's fan. / Air's turbine powers Earth's lift. / Each button only stays pressed for a moment. Count down together and press at the same time.
   - features: ent:button ent:door ent:elevator ent:fan ent:firewall ent:ice ent:torch ent:turbine opt:button-timed opt:button:timed opt:latch opt:required:4 tile:lava tile:mist tile:mud tile:water
-- **Heartstone** `l22_heartstone` (4p: fire+water+earth+air) par=3
+- **Heartstone** `l22_heartstone` (4p: fire+water+earth+air) par=3000
   - idea: The grand finale: three chambers, every element needed in each.
   - hints: Douse, light, blow, lift, pound: the boulder belongs on the heavy plate. / Earth's weight lifts Fire to the second torch. The high step freezes the tunnel. / Air can carry Earth over the sludge. Earth's weight raises the bridge and powers the last fan.
   - features: ent:boulder ent:cracked ent:door ent:elevator ent:fan ent:firewall ent:freezepad ent:plate ent:pool ent:seesaw ent:torch ent:turbine opt:heavy-plate opt:invert:door opt:pool-timed opt:required:2 opt:seesaw-range tile:one-way tile:sludge tile:water
@@ -461,6 +484,10 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: Four sealed quarters, four airlocks. Each airlock's switch is in someone else's hands, and so is every way home.
   - hints: An airlock's switch opens its outer door and shuts its inner one. Step in, then have the switch turned off. / Air's turbine lets Fire in, Fire's lever lets Water in, Water's plate lets Earth in, and Earth's plate lets Air in. / Then the favours go back the other way: freeze, weigh, spin and light.
   - features: ent:door ent:elevator ent:fan ent:freezepad ent:lever ent:plate ent:pool ent:torch ent:turbine opt:heavy-plate opt:invert:door opt:pool-timed tile:lava tile:mist tile:mud tile:one-way tile:water
+- **Eclipse** `l31_eclipse` (4p: fire+water+earth+air) par=3600 dark
+  - idea: In the dark: a boulder only a two-key lift can reach, a crate that is a stone and then a key, and a vault that needs four keys at once.
+  - hints: The lift needs the torch and the turbine together. Earth rides it up to the boulder, and the boulder holds gate 1 open. / The crate is a stepping stone in the mud first, and the vault's fourth key after. / The vault needs the crate, the torch, the lever and the turbine all on at the same moment. Then it stays open.
+  - features: dark ent:boulder ent:box ent:door ent:elevator ent:firewall ent:lever ent:plate ent:torch ent:turbine opt:heavy-plate opt:latch opt:required:2 opt:required:4 tile:lava tile:mist tile:mud tile:one-way tile:water
 - **Elementarium** `l32_elementarium` (4p: fire+water+earth+air) par=5400
   - idea: The finale. Four wings, each sealed by one element's liquid, each holding a key that its owner can't win alone. Carry a friend in, work together, carry them out.
   - hints: Each wing is behind its owner's liquid. Ride in on the owner's head: your own liquid is safe for a passenger. / Fire needs a ladder to its torch. Water's lever is behind lava. Earth's lift needs a turbine. Air's crate is behind flames. / The vault opens when all four keys are on: torch, lever, boulder and crate.
@@ -485,7 +512,7 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: Gates that open for the right number, and shut again for too many.
   - hints: Each gate is two doors. One opens when enough plates are held, and the other shuts when too many are. Each of you has a plate, down your own lane. / Air wades the mist and waits at the first gate. Two on plates opens it, and then one has to step off for the second. / All three plates open the last gate. The lever behind it opens the gates at the end of the lanes.
   - features: ent:door ent:lever ent:plate opt:heavy-plate opt:invert:door opt:required:1 opt:required:2 opt:required:3 tile:lava tile:mist tile:mud tile:one-way tile:water
-- **Last Word** `l55_last_word` (4p: fire+water+earth+air) par=3
+- **Last Word** `l55_last_word` (4p: fire+water+earth+air) par=3000
   - idea: A gale, a leap, a bridge, and a gate that can count.
   - hints: The gale needs Fire's torch and the boulder on the plate. Everyone but Earth rides it alone, and Earth rides on Fire's head. / Water rides on Air's head and jumps off in mid-flight onto the crag. The lever behind the flames slides the bridge out. / The last gate wants exactly 2. Two hold the near plates while two go through. Those two stand on the far plates, in their own doorways, and the first two step off.
   - features: ent:boulder ent:door ent:fan ent:firewall ent:lever ent:plate ent:torch opt:fan:lifts-all opt:heavy-plate opt:invert:door opt:required:2 opt:required:3 tile:one-way tile:sludge
@@ -493,15 +520,15 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: Each plate is far from its gate. Somebody has to keep the gate from shutting.
   - hints: Nobody can run from a plate to its gate before it shuts. / One stands under the gate while the other holds the plate. When the plate is let go, the gate comes down onto the head of whoever is under it and waits. / Run up right behind your partner and go through together. Only Water can hold the first plate and only Fire the second. / With Earth: Earth holds the heavy plate too, and rides across the lava on Fire's head. With Air: only Air can stand on the mist to hold its plate, and Air is too short to hold a gate up for anyone else.
   - features: ent:door ent:plate opt:heavy-plate opt:required:2 tile:lava tile:mist tile:one-way tile:water
-- **Paternoster** `l64_paternoster` (4p: fire+water+earth+air) par=3
+- **Paternoster** `l64_paternoster` (4p: fire+water+earth+air) par=3000
   - idea: Two lifts, two buttons, each on the wrong side.
   - hints: Each button raises the lift on the other side. Earth waits on the left lift and Air on the right one. / Fire and Water press at the same moment and each runs for the lift near them. It is already rising. / At the top, Air glides Fire over the chasm. Earth's weight opens the last gate. Someone taller than Air holds it up for Earth.
   - features: ent:button ent:door ent:elevator ent:plate opt:button-timed opt:button:timed opt:heavy-plate tile:lava tile:sludge tile:water
-- **Last Shift** `l65_last_shift` (4p: fire+water+earth+air) par=3
+- **Last Shift** `l65_last_shift` (4p: fire+water+earth+air) par=3000
   - idea: A boulder on its way to the furnace, two plates, and a gate that hardly opens.
   - hints: Only Fire can reach the start lever. Once the boulder is on the belt, Water has to climb onto the ledge from a partner's head, douse the flames and turn the belt round. / The first gate needs the boulder on one heavy plate and Earth on the other. Then it stays open. / Only Air can press the last button, and the gate opens only for a moment. Water rides on Earth's head at the front, and Fire stays under the gate so that it comes down on its head while Air runs up behind.
   - features: ent:belt ent:boulder ent:button ent:door ent:firewall ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2 tile:lava tile:mist tile:one-way tile:sludge
-- **Convoy** `l74_convoy` (4p: fire+water+earth+air) par=3
+- **Convoy** `l74_convoy` (4p: fire+water+earth+air) par=3000
   - idea: Two boulders, two riders, one tunnel of sludge, and the way home for those who stay behind.
   - hints: Nobody can cross the sludge in the tunnel except on a boulder, or Air in a long glide. Fire and Water each ride one, and Earth pushes them off the hill one after the other. / The second boulder stops against the first: Water walks over the first one to the far bank. / Fire's torch opens the way home for Earth and Air. Water puts out the flames in front of Fire's door, and Air's turbine opens Water's door.
   - features: ent:boulder ent:door ent:firewall ent:torch ent:turbine opt:latch tile:slope tile:sludge
@@ -509,3 +536,8 @@ Totals: 75 campaign levels, 36 in this repo.
   - idea: The finale. A boulder down a long slope, someone running ahead of it, a gale, and everyone's door in someone else's hands.
   - hints: Air turns the turbine while Fire presses the button in the lava: the belt starts and the hatch opens. Earth rides the boulder; Earth on foot is far too slow for the gate at the bottom. / Water runs down the slope just ahead of the boulder, through the gate, and stops past the heavy plate. The boulder stops against her, on the plate, and the gale starts. / Water carries Earth up the gale. Water puts out the flames, and Earth's weight on the plate up there opens the gate in front of Fire's and Air's doors, back at the top.
   - features: ent:belt ent:boulder ent:button ent:door ent:fan ent:firewall ent:plate ent:turbine opt:belt:blocks-earth opt:button-timed opt:button:timed opt:fan:lifts-all opt:heavy-plate opt:latch opt:required:2 tile:lava tile:slope tile:sludge
+- **Weighbridge** `l90_weighbridge` (4p: fire+water+earth+air) par=5400
+  - idea: A lift that weighs its passengers: with the lever on, anything heavy gets off halfway.
+  - ideas: lift-sorts-by-weight, lift-loop, object-as-permanent-switch
+  - hints: The lift never stops at the middle floor on its own. With the lever up there on, it stops for anything heavy, and goes on again once that's off. / The boulder rides the lift. It belongs in the notch on the middle floor, on the heavy plate that opens the gate at the top: Earth rides up with it and pushes it off there. / Only Air can jump up to the lever. Light riders can step off the moving lift at the middle floor, and step back on as it goes by. Earth needs the lever off to get past the middle floor.
+  - features: ent:boulder ent:door ent:elevator ent:firewall ent:ice ent:lever ent:plate opt:elevator:loop opt:heavy-plate opt:invert:elevator opt:required:2 tile:one-way

@@ -85,11 +85,20 @@ for (const id of fs.readdirSync(path.join(ROOT, 'levels')).sort()) {
     line: coreLine(notes), tokens: tokensOfOwn(level),
   });
 }
-const camp = campaign.map((l) => ({
+// Some campaign levels are levels of ours the game has since shipped (campaign.json tags them
+// with "ours"). They are the same level, so they are not listed twice: the campaign id is hung
+// on our entry instead, and the campaign copy is dropped. Listing both would double every
+// ingredient in the weighting and make each shipped level its own nearest neighbour.
+const shipped = new Map(campaign.filter((l) => l.ours).map((l) => [l.ours, l]));
+for (const l of mine) {
+  const c = shipped.get(l.id);
+  if (c) l.shipped = { id: c.id, order: c.order, differs: !!c.map_differs };
+}
+const camp = campaign.filter((l) => !l.ours).map((l) => ({
   id: l.id, name: l.name, source: 'campaign', order: l.order,
   sizes: [...new Set(l.supports.map((g) => g.split('+').length))].sort(),
   groups: l.supports, parTicks: l.parTicks, dark: l.dark,
-  line: l.description, hints: l.hints, tokens: tokensOfCampaign(l),
+  line: l.description, hints: l.hints, ideas: l.ideas ?? [], tokens: tokensOfCampaign(l),
 }));
 
 // ---- catalog/levels.json ----------------------------------------------------
@@ -100,6 +109,7 @@ const esc = (s) => String(s).replace(/\|/g, '\\|');
 const entry = (l) => {
   const bits = [`- **${l.name}** \`${l.id}\``, `(${l.sizes.join('/')}p: ${l.groups.join(', ')})`];
   if (l.source === 'mine') bits.push(`core=\`${l.core}\``, `challenge=${l.challenge}`);
+  if (l.shipped) bits.push(`shipped in the campaign as \`${l.shipped.id}\` (#${l.shipped.order}${l.shipped.differs ? ', map edited there' : ''})`);
   bits.push(`par=${l.parTicks}`);
   if (l.dark) bits.push('dark');
   const out = [bits.join(' ')];
@@ -138,7 +148,7 @@ against every level that already exists. Read it before designing anything.
   \`catalog/MAPS.md\`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: ${camp.length} campaign levels, ${mine.length} in this repo.
+Totals: ${camp.length} campaign levels, ${mine.length} in this repo, of which ${mine.filter((l) => l.shipped).length} now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 `;
 for (const n of [2, 3, 4]) {

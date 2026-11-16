@@ -94,6 +94,10 @@ Object.assign(IDEAS, {
   'partner-builds-your-landing': { kind: 'spine', note: 'The place you are going to does not exist yet: a partner has to put it there while you are already in the air.' },
   'counterweight-you-must-remove': { kind: 'spine', note: 'A gate held open by the weight of the very thing the rest of the level needs, so going on means shutting it.' },
   'no-hands-for-cargo': { kind: 'spine', note: 'A boulder in a group with no Earth: nobody can push it, so a machine is the only thing that can move it, and where it stops is decided by a switch.' },
+  'sink-as-a-timer': { kind: 'spine', note: 'A draught too weak to lift but strong enough to slow a fall: the long sink past a column of switches is the window a partner crosses in. (Campaign: Slow Fall.)' },
+  'feed-the-engine-mid-ride': { kind: 'spine', note: 'A machine that runs only for a moment after each touch, so the rider has to keep leaving it and coming back to keep it going. (Campaign: Keep It Spinning.)' },
+  'tower-presses-a-column': { kind: 'spine', note: 'Switches stacked up a wall that nothing but a tower of players reaches, with the order of the tower forced by what stands at the bottom. (Campaign: Totem.)' },
+  'lift-sorts-by-weight': { kind: 'spine', note: 'A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)' },
   'stock-before-it-seals': { kind: 'spine', note: 'A timed airlock whose two gates are never open together: everything that will be needed on the far side — partner, cargo, gems — has to be inside before the clock runs out, and the switch cannot be reached from in there.' },
   'send-one-through': { kind: 'spine', note: 'A lock that needs every hand but one held on it, so exactly one player can pass — and has to open the way back for the rest from the far side.' },
 });

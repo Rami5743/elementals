@@ -19,3 +19,6 @@ Work on `main`.
   tiles or a solution script; most of it is not guessable.
 - After `kit.mjs check` passes, run `node tools/build.mjs` **and** `node tools/catalog.mjs`, or the
   level is invisible to the page and to the next novelty check.
+- When the published game gains levels, refresh the campaign half of the catalogue with
+  `tools/extract-campaign.py` (its docstring has the two curl lines and the follow-up steps). The
+  author ships levels from this repo, so that script also marks which campaign levels are ours.
