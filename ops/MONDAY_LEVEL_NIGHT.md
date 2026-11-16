@@ -10,9 +10,20 @@ not, clone it there first and work from it.
 
 ## 0. Preflight (a few minutes, before 18:00)
 
+**Attach the repository before anything else.** A session fired by the scheduled task is created
+with no repository of its own: it can read through the proxy but it has no push credential, so
+every `git push` comes back `403` and the night's work piles up unpushed in the container. Call the
+tool `mcp__claude-code-remote__add_repo` with owner `rami5743`, repo `elementals`, access `push`,
+as your first tool call. Do not probe the repo with curl or `git ls-remote` first — unauthenticated
+probes return misleading 404s. If that tool is not in this session's list, say so in the summary and
+stop: there is no point building levels that cannot be pushed.
+
+Prove it worked before spawning anything, with a push that costs nothing:
+
 ```
 cd /home/user/elementals
 git checkout main && git pull --ff-only origin main
+git push origin main            # must succeed, even with nothing to push
 node tools/catalog.mjs >/dev/null && node tools/audit.mjs --fast | tail -3
 ```
 
