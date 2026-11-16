@@ -194,6 +194,19 @@ Never leave a chain without an agent while the window is open.
    and ideas, the motor on/off pattern that actually came out, anything that got stuck and what
    was done about it, any branch left unmerged, and the audit line before and after.
 
+## The account's weekly usage limit
+
+The first run died on it. At about three and three-quarter hours in, with three chains running,
+the session's turn failed with `You've hit your weekly limit`, and from that moment it could not
+push, merge, read messages or write a summary — everything it had built was stranded in its
+container. The limit is the account's, not this task's, so spending it all here also takes it away
+from the owner's own work for the rest of the week.
+
+So: **finishing and pushing beats starting**. Past the three-hour mark, do not spawn a new level
+unless every chain's last level is already merged and pushed; spend what is left on landing the
+work in flight and writing the summary early. If any turn fails with a usage-limit error, the
+night is over — do not retry in a loop.
+
 ## Rules that hold all night
 
 - `main` is never force-pushed and nothing is ever deleted from `levels/`.
