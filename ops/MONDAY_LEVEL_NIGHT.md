@@ -236,22 +236,42 @@ level with the work at all times:
   finish the level in hand, then wind down. Do not leave it for next Monday: a level is cheapest
   to finish while it is fresh, and next week's run should start on something new.
 
-## Freeze an unfinished level, do not bin it
+## Nobody gets a warning, so save continuously
 
-The container is not a safe place and the night ends abruptly — on the usage cap, on the clock, or
-because an agent was replaced. What survives is what is on a branch, so an interrupted level should
-cost the time it ran, not the thinking that went into it.
+An agent has no idea how much allowance is left. The cap arrives as a failed model call in the
+middle of a thought: no notice, no chance to tidy up. So the design must not depend on anyone
+seeing it coming. An interruption at any instant should cost **minutes, not hours**.
 
-**Every agent** is told, in its prompt, to commit and push as it goes, not only at the end:
+**You** do get one signal the agents do not. Your own session record carries it:
 
-- commit to its own branch whenever the level changes shape, even while `node kit.mjs check` still
-  fails, and push with `--force-with-lease`;
-- keep a `RESUME.md` beside `level.json` in the same commits, four short sections — the design in
-  two sentences; what already passes; what fails and the exact error; the next thing to try;
-- say in its final report whether the branch holds a finished level or a frozen one.
+```
+rate_limit_info: { rateLimitType: "seven_day", status: "allowed" | "allowed_warning", resetsAt }
+```
 
-**You**, when you stop an agent for any reason, push its branch as it stands before spawning the
-replacement, and name it in the summary as frozen and resumable. Never delete such a branch.
+Read it at every heartbeat (`get_session` with no session_id describes you). Once it reads
+`allowed_warning`, stop spawning new levels and let what is in flight have the rest — you cannot
+interrupt an agent mid-build, but you can stop adding to the queue.
+
+**Every agent** is told, in its prompt, to commit and push at each of these milestones, not at the
+end — and to update `RESUME.md` in the same commit, because the files survive an interruption and
+the agent's reasoning does not:
+
+1. the design, written out before any JSON exists;
+2. the first `level.json` that validates;
+3. the first solution script that runs at all, however badly;
+4. every time `check` gets measurably further than before;
+5. the finished level.
+
+`RESUME.md` sits beside `level.json` and is four short sections: the design in two sentences; what
+already passes; what fails and the exact error; the next thing to try. A commit without it is a
+commit that will mean nothing to whoever picks the branch up.
+
+Pushes are free in the only currency that runs out here, so push after every commit:
+`git push -u origin <branch> --force-with-lease`.
+
+**You**, when an agent stops for any reason — finished, stuck, replaced, killed by the cap — push
+its branch as it stands before doing anything else, and say in the summary whether it holds a
+finished level or a frozen one. Never delete such a branch.
 
 **At preflight**, before spawning anything, look for frozen work:
 
@@ -260,10 +280,9 @@ git ls-remote --heads origin 'refs/heads/claude/levels-*'
 git log --oneline origin/main..origin/claude/levels-2p    # and -3p, -4p
 ```
 
-A branch with unmerged commits is last week's unfinished level. The first agent on that chain
-resumes it — give it the branch name and tell it to read `RESUME.md` first — instead of starting
-something new. The chain's motor cycle continues from where the counter left off, which the frozen
-`RESUME.md` should state.
+A branch with unmerged commits is an unfinished level. The first agent on that chain resumes it —
+give it the branch name and tell it to read `RESUME.md` first — instead of starting something new.
+The motor cycle continues from where the counter left off, which `RESUME.md` should state.
 
 Resuming never lowers the bar: a frozen level merges only when it passes `check` cleanly and gets
 through `novelty.mjs`, exactly like one built from scratch. If a resumed level turns out to be
