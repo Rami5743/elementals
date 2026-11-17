@@ -231,6 +231,39 @@ level with the work at all times:
   The allowance returns at 23:00 — which is also the wind-down hour — so use the turn you get
   then to merge anything outstanding, push, and write the summary.
 
+## Freeze an unfinished level, do not bin it
+
+The container is not a safe place and the night ends abruptly — on the usage cap, on the clock, or
+because an agent was replaced. What survives is what is on a branch, so an interrupted level should
+cost the time it ran, not the thinking that went into it.
+
+**Every agent** is told, in its prompt, to commit and push as it goes, not only at the end:
+
+- commit to its own branch whenever the level changes shape, even while `node kit.mjs check` still
+  fails, and push with `--force-with-lease`;
+- keep a `RESUME.md` beside `level.json` in the same commits, four short sections — the design in
+  two sentences; what already passes; what fails and the exact error; the next thing to try;
+- say in its final report whether the branch holds a finished level or a frozen one.
+
+**You**, when you stop an agent for any reason, push its branch as it stands before spawning the
+replacement, and name it in the summary as frozen and resumable. Never delete such a branch.
+
+**At preflight**, before spawning anything, look for frozen work:
+
+```
+git ls-remote --heads origin 'refs/heads/claude/levels-*'
+git log --oneline origin/main..origin/claude/levels-2p    # and -3p, -4p
+```
+
+A branch with unmerged commits is last week's unfinished level. The first agent on that chain
+resumes it — give it the branch name and tell it to read `RESUME.md` first — instead of starting
+something new. The chain's motor cycle continues from where the counter left off, which the frozen
+`RESUME.md` should state.
+
+Resuming never lowers the bar: a frozen level merges only when it passes `check` cleanly and gets
+through `novelty.mjs`, exactly like one built from scratch. If a resumed level turns out to be
+built on a dead idea, say so, delete nothing, and start a fresh one on a new branch name.
+
 ## Rules that hold all night
 
 - `main` is never force-pushed and nothing is ever deleted from `levels/`.
