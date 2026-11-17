@@ -220,9 +220,11 @@ push, merge, read messages or write a summary — everything it had built was st
 container. The limit is the account's, not this task's, so spending it all here also takes it away
 from the owner's own work for the rest of the week.
 
-So: **finishing and pushing beats starting**. Past the three-hour mark, do not spawn a new level
-unless every chain's last level is already merged and pushed; spend what is left on landing the
-work in flight and writing the summary early. If any turn fails with a usage-limit error, the
+So: **finishing and pushing beats starting**. From **21:00 Israel time** — three hours into the
+window — do not spawn a new level unless every chain's last level is already merged and pushed;
+spend what is left on landing the work in flight and writing the summary early. A level that is
+not pushed is worth nothing, so the closer the end of the night, the more the balance tips from
+starting work to landing it. If any turn fails with a usage-limit error, the
 night is over — do not retry in a loop.
 
 ## Rules that hold all night
