@@ -195,9 +195,10 @@ Never leave a chain without an agent while the window is open.
 ## 5. Wind-down at 23:00
 
 1. Stop spawning. Do not start a level after the wind-down message, however much time seems left.
-2. Let the in-flight agents finish, with a grace of **30 minutes**. At 23:30 `TaskStop` anything
-   still running; its branch is left as it is, unmerged, and named in the summary so it can be
-   picked up next week.
+2. **Let every agent finish the level it is on, however long that takes.** There is no fixed grace
+   period: a level twenty minutes from done is worth twenty minutes past the hour, and a half-built
+   level is worth nothing. Stop an agent past 23:00 only if it is stuck rather than working, and
+   then freeze its branch as in the section below rather than discarding it.
 3. Merge every finished branch as in section 3, one at a time.
 4. Final check on `main`:
    ```
@@ -227,9 +228,13 @@ level with the work at all times:
 - Merge and push each level the moment its agent reports success, and verify the push landed.
   Done properly, a cap that lands mid-flight costs at most one unfinished level per chain, which
   is cheap and expected.
-- If a turn fails with a usage-limit error, the night's building is over: do not retry in a loop.
-  The allowance returns at 23:00 — which is also the wind-down hour — so use the turn you get
-  then to merge anything outstanding, push, and write the summary.
+- If a turn fails with a usage-limit error, stop spawning and do not retry in a loop — but the
+  night is not over. The allowance returns at 23:00, and the first thing to spend it on is
+  **finishing the levels that were in flight when the cap hit**: resume each from its frozen
+  branch, let it finish, merge and push it, and only then write the summary and stop. This is the
+  same situation as reaching 23:00 with agents still building, and it gets the same answer —
+  finish the level in hand, then wind down. Do not leave it for next Monday: a level is cheapest
+  to finish while it is fresh, and next week's run should start on something new.
 
 ## Freeze an unfinished level, do not bin it
 
