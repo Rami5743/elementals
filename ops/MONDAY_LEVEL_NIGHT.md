@@ -288,6 +288,26 @@ Resuming never lowers the bar: a frozen level merges only when it passes `check`
 through `novelty.mjs`, exactly like one built from scratch. If a resumed level turns out to be
 built on a dead idea, say so, delete nothing, and start a fresh one on a new branch name.
 
+## Leave a measurement behind
+
+There is no gauge. `rate_limit_info` gives a coarse `status` (`allowed`, then `allowed_warning`),
+the name of whichever limit is currently nearest, and when it resets — never a percentage, and the
+session's own token counters cannot be turned into one because the limit is the whole account's.
+So the budget cannot be predicted; it can only be observed, and only across weeks.
+
+At wind-down, append one line to `ops/night-log.tsv` (create it with this header if absent) and
+commit it with the night's work:
+
+```
+date<TAB>chains<TAB>levels<TAB>first_level_at<TAB>warning_at<TAB>cap_at<TAB>end_at<TAB>note
+2026-11-16	3	5	18:18	-	21:24	23:08	push blocked all night; nothing published until the next day
+```
+
+`warning_at` is when `rate_limit_info.status` first read `allowed_warning`, `cap_at` when a turn
+first failed on the limit, `-` where it did not happen. After a few weeks this says what a night
+of three chains actually costs and how early the warning really comes, which is the only honest
+basis for changing the width of the run. Until then, do not change it on a hunch.
+
 ## Rules that hold all night
 
 - `main` is never force-pushed and nothing is ever deleted from `levels/`.
