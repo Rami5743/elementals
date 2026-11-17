@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 36 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 41 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (12)
+## 2 players — this repo (13)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -78,6 +78,10 @@ Totals: 79 campaign levels, 36 in this repo, of which 11 now ship in the campaig
   - idea: a crossing whose far end does not exist when you set off. One lever drives two doors the opposite way round, and it has to be thrown twice — both times while Fire is in mid-air and can no longer do anything about it.
   - ideas: partner-builds-your-landing, twist-stranding
   - features: ent:door ent:fan ent:lever ent:turbine opt:fan:hang-time opt:invert:door opt:latch opt:wide-door tile:sludge
+- **Passing Place** `passing_place` (2p: water+earth) core=`the-one-high-spot-is-the-passing-place-and-the-switch` challenge=mind par=6900
+  - idea: a crawlway one tile high with a stone in it. The stone is an absolute wall that only Earth can move and only ever forwards, the one stretch of raised roof is the only place anybody can get past it — and that same raised place is the plate that holds the far hatch open, so standing aside and opening the way are the same act, and whoever does it cannot be the one who goes.
+  - ideas: single-file-stone, stand-aside-is-the-switch, hold-switch, machine-strands-operator, shared-switch-two-gates, invert-door
+  - features: ent:boulder ent:door ent:firewall ent:lever ent:plate opt:heavy-plate opt:invert:door tile:one-way
 
 ## 2 players — campaign (34)
 
@@ -220,7 +224,7 @@ Totals: 79 campaign levels, 36 in this repo, of which 11 now ship in the campaig
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (12)
+## 3 players — this repo (14)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -270,6 +274,14 @@ Totals: 79 campaign levels, 36 in this repo, of which 11 now ship in the campaig
   - idea: a draught that only goes up, a lift that carries exactly one passenger, and two switches on two floors that two different elements have to work — so the ride has to be made twice, in the right order, with a nine-second clock at the end.
   - ideas: climb-then-steer, fan-passenger, glide-dismount, one-way-drop, timed-window, twist-order
   - features: ent:button ent:door ent:fan ent:firewall ent:torch opt:button-timed opt:button:timed opt:fan:lifts-air opt:latch
+- **Dumbwaiter** `dumbwaiter` (3p: fire+earth+air) core=`the-hoist-only-ever-delivers-upward` challenge=mind par=7200
+  - idea: a hoist that runs up through a one-way grating, so whatever it carries is scraped off on the grating when it goes back down — it delivers upward and only upward, and people can drop back through after their cargo but the cargo can never follow them down.
+  - ideas: hoist-one-way-for-cargo, machine-strands-operator, hold-switch, twist-order
+  - features: ent:boulder ent:door ent:elevator ent:plate ent:torch ent:turbine opt:elevator:powered opt:heavy-plate opt:latch tile:one-way
+- **Backshunt** `backshunt` (3p: fire+water+air) core=`one-stone-feeds-one-end-at-a-time` challenge=mind par=7200
+  - idea: a conveyor with no off switch, only a direction — the one stone it carries is always pinned against the west buffer or the east buffer and never anywhere between, so the lever does not turn anything on, it decides which end of the level has power.
+  - ideas: two-stops-no-middle, no-hands-for-cargo, twist-undo, freeze-bridge
+  - features: ent:belt ent:boulder ent:door ent:fan ent:freezepad ent:lever ent:plate ent:pool ent:torch opt:belt:reverse opt:belt:walkable opt:fan:lifts-air opt:fan:lifts-fire-water opt:heavy-plate opt:pool-timed opt:required:2 tile:mist tile:water
 
 ## 3 players — campaign (30)
 
@@ -395,7 +407,7 @@ Totals: 79 campaign levels, 36 in this repo, of which 11 now ship in the campaig
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (12)
+## 4 players — this repo (14)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -445,6 +457,14 @@ Totals: 79 campaign levels, 36 in this repo, of which 11 now ship in the campaig
   - idea: a switch hanging in a lift shaft. Nothing can stand on it, and the lift itself does not press it — only a rider does, and only for as long as the lift takes to carry them past it.
   - ideas: trip-plate-in-the-shaft, lift-loop
   - features: ent:door ent:elevator ent:firewall ent:ice ent:plate ent:turbine opt:elevator:loop opt:heavy-plate opt:latch
+- **Winnow** `winnow` (4p: fire+water+earth+air) core=`the-grating-combs-the-load-off-the-cage` challenge=mind par=6600
+  - idea: a cage that rises through a one-way grating cannot put anything down while it is still holding it — only the trip back down leaves the load standing on the grating, so the cage delivers upward and never returns anything, while people step off at the top and drop back through at will.
+  - ideas: lift-sheds-its-load, hold-switch, machine-strands-operator, trigger-from-above, twist-order
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:latch opt:required:2 tile:one-way
+- **Single File** `single_file` (4p: fire+water+earth+air) core=`the-only-one-who-can-open-the-gate-can-never-go-through-it` challenge=mind par=6600
+  - idea: a corridor one tile high is one body wide as well — nobody jumps in it and nobody hops over anybody — so a party inside it is a queue, the switches that open its gate stand *in* it, and the one player heavy enough to work the gate is therefore the one player who can never walk through it.
+  - ideas: no-overtaking, quorum, no-hands-for-cargo, hold-switch, machine-strands-operator, twist-order
+  - features: ent:belt ent:boulder ent:button ent:door ent:fan ent:plate ent:torch ent:turbine opt:belt:walkable opt:button:hold opt:fan:hang-time opt:heavy-plate opt:latch opt:required:2 opt:turbine-timed
 
 ## 4 players — campaign (23)
 

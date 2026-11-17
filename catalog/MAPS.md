@@ -561,6 +561,56 @@ Entities:
   X  exit_a       exit       at (37,11)  air
 ```
 
+## Passing Place (`passing_place`) — 2p, core `the-one-high-spot-is-the-passing-place-and-the-switch`
+
+```
+Passing Place (passing_place) for water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ##........D.....................########
+ 4  ##...X....D.....................########
+ 5  ##...X....D.......*.............########
+ 6  ##..#########################===########
+ 7  #.......#################........#######
+ 8  #.......#################....===.#######
+ 9  #.......#################........#######
+10  #.......######........###....===.#######
+11  #.......######..ppp...###........#######
+12  #.......######..###...###....===.#######
+13  #........O............*.D........#######
+14  #......##################....===.#######
+15  #......################..........F.D...#
+16  #.....#################......===.F.D.X.#
+17  #.@.@.#################...*......F.DlX.#
+18  ############################p###########
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (2,17)  earth (4,17)
+Entities:
+  p  shelf        plate      at (16,11)  3x1  -> hatch, gallerygate
+  D  hatch        door       at (24,13)  <- shelf, release
+  D  gallerygate  door       at (10,3)  1x3  <- shelf  invert
+  l  release      lever      at (36,17)  -> hatch
+  p  load         plate      at (28,18)  -> vault  weight heavy
+  D  vault        door       at (35,15)  1x3  <- load
+  F  blaze        firewall   at (33,15)  1x3
+  O  stone        boulder    at (9,13)
+  *  gem_8        gem        at (18,5)  neutral
+  *  gem_9        gem        at (22,13)  water
+  *  gem_10       gem        at (26,17)  earth
+  X  exit_11      exit       at (5,4)  earth
+  X  exit_12      exit       at (37,16)  water
+  "  sign_13      sign       at (1,10)  "Earth pushes. Forwards only."
+  "  sign_14      sign       at (25,9)  "Up the rungs for the long way home."
+  "  sign_15      sign       at (12,4)  "Shut while the shelf is held."
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```
@@ -1138,6 +1188,114 @@ Entities:
   X  exit_f       exit       at (33,16)  fire
   X  exit_w       exit       at (32,16)  water
   X  exit_a       exit       at (31,16)  air
+```
+
+## Dumbwaiter (`dumbwaiter`) — 3p, core `the-hoist-only-ever-delivers-upward`
+
+```
+Dumbwaiter (dumbwaiter) for fire+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ##....D...............D...........######
+ 5  ##....D...............D...........######
+ 6  ##X...D...............D...X.......######
+ 7  ##Xt*.D.....pp..pp....D..*X.......######
+ 8  #########===############################
+ 9  #########...############################
+10  #########...############################
+11  #########...############################
+12  #########...############################
+13  #########...############################
+14  ##..D..............D.....D........######
+15  ##..D..............D.....D........######
+16  ##..D..............D.....D........######
+17  ##..D..............D.....D........######
+18  ##X.D..............D.....D........######
+19  ##X*D.T.@...@..@...D.O...D.*p.....######
+20  #########=E=############################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (12,19)  earth (15,19)  air (8,19)
+Entities:
+  T  turbine      turbine    at (6,19)  -> hoist
+  E  hoist        elevator   at (10,20)  <- turbine  mode powered  speed 1.5  path (10,20)-(10,8)
+  O  rock         boulder    at (21,19)
+  p  pgal         plate      at (12,7)  2x1  -> gate_load, gate_west
+  D  gate_load    door       at (19,14)  1x6  <- pgal  latch
+  D  gate_west    door       at (6,4)  1x4  <- pgal
+  t  torch        torch      at (3,7)  -> gate_vault
+  p  pg           plate      at (16,7)  2x1  -> gate_air  weight heavy
+  D  gate_earth   door       at (22,4)  1x4  <- pvault  latch
+  D  gate_air     door       at (4,14)  1x6  <- pg  latch
+  D  gate_vault   door       at (25,14)  1x6  <- torch
+  p  pvault       plate      at (28,19)  -> gate_earth  weight heavy
+  X  exit_12      exit       at (2,18)  air
+  X  exit_13      exit       at (2,6)  fire
+  X  exit_14      exit       at (26,6)  earth
+  *  gem_15       gem        at (3,19)  air
+  *  gem_16       gem        at (4,7)  fire
+  *  gem_17       gem        at (25,7)  earth
+  *  gem_18       gem        at (27,19)  neutral
+```
+
+## Backshunt (`backshunt`) — 3p, core `one-stone-feeds-one-end-at-a-time`
+
+```
+Backshunt (backshunt) for fire+water+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  #...............D.....D................#
+11  #.^^^...........D.XXX.D...............^#
+12  #.^^^...........D.XXX.D...............^#
+13  ##^^^#################################^#
+14  #.^^^####...........................##^#
+15  #.^^^####.........................*.##^#
+16  #*^^^####...........................##^#
+17  #t^^^.*...f!#p.................p#@@@...#
+18  #####WWWW##!#>>>>>>>>>>>>>>>>>>>######V#
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (33,17)  water (34,17)  air (35,17)
+Entities:
+  >  belt         belt       at (13,18)  19x1  <- shunt  mode reverse  speed 0.7
+  O  stone        boulder    at (31,17)
+  p  plate_west   plate      at (13,17)  -> fan_west  weight heavy
+  p  plate_east   plate      at (31,17)  -> fan_east, door_w, door_e  weight heavy
+  ^  fan_west     fan        at (2,11)  3x7  <- plate_west  strength 1.7
+  ^  fan_east     fan        at (38,11)  1x6  <- plate_east  strength 0.9
+  l  shunt        lever      at (34,17)  -> belt
+  t  torch        torch      at (1,17)  -> door_w, door_e
+  f  pad          freezepad  at (10,17)  -> pool
+  W  pool         pool       at (5,18)  4x1  <- pad  duration 900
+  D  door_w       door       at (16,10)  1x3  <- plate_east, torch (needs 2)
+  D  door_e       door       at (22,10)  1x3  <- plate_east, torch (needs 2)
+  X  exit_12      exit       at (18,11)  fire
+  X  exit_13      exit       at (19,11)  water
+  X  exit_14      exit       at (20,11)  air
+  *  gem_15       gem        at (1,16)  fire
+  *  gem_16       gem        at (6,17)  water
+  *  gem_17       gem        at (34,15)  air
+  !  checkpoint_18 checkpoint at (11,17)
+  "  sign_19      sign       at (20,15)  "The belt has no stop. Only a side."
+  "  sign_20      sign       at (24,11)  "Both gates want the stone at the east buffer."
 ```
 
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
@@ -1750,4 +1908,111 @@ Entities:
   X  exit_f       exit       at (31,15)  fire
   X  exit_w       exit       at (18,15)  water
   X  exit_a       exit       at (10,15)  air
+```
+
+## Winnow (`winnow`) — 4p, core `the-grating-combs-the-load-off-the-cage`
+
+```
+Winnow (winnow) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ##############............D............#
+ 9  ##############............D.X..X.......#
+10  ##############....p.......D.X..X..*..l.#
+11  ##################===###################
+12  #..D...............................D...#
+13  #..D...............................D...#
+14  #..D...............................D...#
+15  #..D...............................D...#
+16  #X.D.ppp.......................pp..D..X#
+17  #X*D.###@O............@.!@..@..##..D*.X#
+18  ##################EEE###!###############
+19  #############T............*#############
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (8,17)  air (22,17)  water (25,17)  fire (28,17)
+Entities:
+  E  hoist        elevator   at (18,18)  3x1  <- drum, pad (needs 2)  mode powered  speed 1.2  path (18,18)-(18,10)
+  p  drum         plate      at (5,16)  3x1  -> hoist  weight heavy
+  p  pad          plate      at (31,16)  2x1  -> hoist
+  O  stone        boulder    at (9,17)
+  p  shelf        plate      at (18,10)  -> vault, gate, gate_w  weight heavy
+  T  spark        turbine    at (13,19)  -> vault
+  D  vault        door       at (26,8)  1x3  <- shelf, spark (needs 2)  latch
+  l  winch        lever      at (37,10)  -> gate, gate_w
+  D  gate         door       at (35,12)  1x6  <- shelf, winch (needs 2)  latch
+  D  gate_w       door       at (3,12)  1x6  <- shelf, winch (needs 2)  latch
+  !  checkpoint_10 checkpoint at (24,17)
+  *  gem_11       gem        at (26,19)  air
+  *  gem_12       gem        at (2,17)  earth
+  *  gem_13       gem        at (34,10)  water
+  *  gem_14       gem        at (36,17)  fire
+  X  exit_15      exit       at (31,9)  water
+  X  exit_16      exit       at (28,9)  air
+  X  exit_17      exit       at (1,16)  earth
+  X  exit_18      exit       at (38,16)  fire
+```
+
+## Single File (`single_file`) — 4p, core `the-only-one-who-can-open-the-gate-can-never-go-through-it`
+
+```
+Single File (single_file) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ##.......*................^^############
+ 5  ##..######################^^############
+ 6  #.........################^^############
+ 7  #.........################^^############
+ 8  #.........################^^############
+ 9  #.........################^^############
+10  #.........################^^############
+11  #.........################^^############
+12  #.........################^^############
+13  #.........################^^############
+14  #.........################^^############
+15  #.........################^^############
+16  #.........###############.^^........D..#
+17  #.X.X.....###############.^^........DXX#
+18  #.X.X@@@@..p..p...p..**D.b^^O.*..ppTDXX#
+19  ############################>>>>>>######
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (8,18)  air (7,18)  fire (6,18)  water (5,18)
+Entities:
+  p  p_west       plate      at (11,18)  -> gate
+  p  p_heavy      plate      at (14,18)  -> gate  weight heavy
+  p  p_east       plate      at (18,18)  -> gate
+  D  gate         door       at (23,18)  <- p_west, p_heavy, p_east (needs 2)
+  b  crank        button     at (25,18)  -> belt  mode hold
+  t  torch        torch      at (34,18)  -> belt
+  >  belt         belt       at (28,19)  6x1  <- crank, torch (needs 2)  speed 0.45
+  O  stone        boulder    at (28,18)
+  p  p_stone      plate      at (33,18)  2x1  -> draught, vault  weight heavy
+  ^  draught      fan        at (26,4)  2x15  <- p_stone  strength 1.5
+  T  spin         turbine    at (35,18)  -> vault  duration 600
+  D  vault        door       at (36,16)  1x3  <- p_stone, spin (needs 2)  latch
+  *  gem_e        gem        at (22,18)  earth
+  *  gem_w        gem        at (21,18)  water
+  *  gem_f        gem        at (30,18)  fire
+  *  gem_a        gem        at (9,4)  air
+  X  exit_a       exit       at (2,17)  air
+  X  exit_e       exit       at (4,17)  earth
+  X  exit_w       exit       at (37,17)  water
+  X  exit_f       exit       at (38,17)  fire
 ```

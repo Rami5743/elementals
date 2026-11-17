@@ -1,0 +1,168 @@
+{
+ "id": "passing_place",
+ "name": "Passing Place",
+ "order": 113,
+ "description": "One stone, one crawlway, and one patch of roof high enough to get past it. Earth goes home the way Water came.",
+ "supports": [
+  [
+   "water",
+   "earth"
+  ]
+ ],
+ "parTicks": 6900,
+ "hints": [
+  "The stone fills the crawlway and only Earth can shift it - and only ever forwards. Its berth is the notch in the right hall floor.",
+  "The shelf in the middle is the one place with room to get past anything. Standing on it holds the far hatch open.",
+  "The shelf works both ways: while it is held the hatch is open and the gallery home is sealed, so somebody has to give it up before anybody can come back."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "##..............................########",
+  "##..............................########",
+  "##..............................########",
+  "##..#########################===########",
+  "#.......#################........#######",
+  "#.......#################....===.#######",
+  "#.......#################........#######",
+  "#.......######........###....===.#######",
+  "#.......######........###........#######",
+  "#.......######..###...###....===.#######",
+  "#................................#######",
+  "#......##################....===.#######",
+  "#......################................#",
+  "#.....#################......===.......#",
+  "#.....#################................#",
+  "############################.###########",
+  "########################################",
+  "########################################",
+  "########################################"
+ ],
+ "spawns": {
+  "water": [
+   2,
+   17
+  ],
+  "earth": [
+   4,
+   17
+  ]
+ },
+ "entities": [
+  {
+   "id": "shelf",
+   "type": "plate",
+   "x": 16,
+   "y": 11,
+   "w": 3,
+   "targets": [
+    "hatch",
+    "gallerygate"
+   ]
+  },
+  {
+   "id": "hatch",
+   "type": "door",
+   "x": 24,
+   "y": 13,
+   "w": 1,
+   "h": 1
+  },
+  {
+   "id": "gallerygate",
+   "type": "door",
+   "x": 10,
+   "y": 3,
+   "h": 3,
+   "invert": true
+  },
+  {
+   "id": "release",
+   "type": "lever",
+   "x": 36,
+   "y": 17,
+   "targets": [
+    "hatch"
+   ]
+  },
+  {
+   "id": "load",
+   "type": "plate",
+   "x": 28,
+   "y": 18,
+   "weight": "heavy",
+   "targets": [
+    "vault"
+   ]
+  },
+  {
+   "id": "vault",
+   "type": "door",
+   "x": 35,
+   "y": 15,
+   "h": 3
+  },
+  {
+   "id": "blaze",
+   "type": "firewall",
+   "x": 33,
+   "y": 15,
+   "h": 3
+  },
+  {
+   "id": "stone",
+   "type": "boulder",
+   "x": 9,
+   "y": 13
+  },
+  {
+   "type": "gem",
+   "element": "neutral",
+   "x": 18,
+   "y": 5
+  },
+  {
+   "type": "gem",
+   "element": "water",
+   "x": 22,
+   "y": 13
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 26,
+   "y": 17
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 5,
+   "y": 4
+  },
+  {
+   "type": "exit",
+   "element": "water",
+   "x": 37,
+   "y": 16
+  },
+  {
+   "type": "sign",
+   "x": 1,
+   "y": 10,
+   "text": "Earth pushes. Forwards only."
+  },
+  {
+   "type": "sign",
+   "x": 25,
+   "y": 9,
+   "text": "Up the rungs for the long way home."
+  },
+  {
+   "type": "sign",
+   "x": 12,
+   "y": 4,
+   "text": "Shut while the shelf is held."
+  }
+ ]
+}

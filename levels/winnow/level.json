@@ -1,0 +1,223 @@
+{
+ "id": "winnow",
+ "name": "Winnow",
+ "order": 313,
+ "description": "The cage only ever delivers. Whatever rides it up is combed off by the grating on the way back down.",
+ "supports": [
+  [
+   "fire",
+   "water",
+   "earth",
+   "air"
+  ]
+ ],
+ "parTicks": 6600,
+ "hints": [
+  "The cage is the only way up, and it moves only while the drum and the pad are both held. The drum is heavy: nothing but Earth can work it, and the stone cannot be pushed up onto its ledge.",
+  "Nothing can be set down in the loft while the cage is still holding it. Send the cage away and the grating combs its load off.",
+  "The shaft mouth is sealed while the cage is parked in it. Air has to be down in the cellar before the stone lands, not after: raising the cage again picks the stone straight back off the shelf."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "##############.........................#",
+  "##############.........................#",
+  "##############.........................#",
+  "##################===###################",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#......................................#",
+  "#....###.......................##......#",
+  "##################===###################",
+  "#############..............#############",
+  "########################################",
+  "########################################"
+ ],
+ "spawns": {
+  "earth": [
+   8,
+   17
+  ],
+  "air": [
+   22,
+   17
+  ],
+  "water": [
+   25,
+   17
+  ],
+  "fire": [
+   28,
+   17
+  ]
+ },
+ "entities": [
+  {
+   "id": "hoist",
+   "type": "elevator",
+   "x": 18,
+   "y": 18,
+   "w": 3,
+   "mode": "powered",
+   "speed": 1.2,
+   "required": 2,
+   "path": [
+    [
+     18,
+     18
+    ],
+    [
+     18,
+     10
+    ]
+   ]
+  },
+  {
+   "id": "drum",
+   "type": "plate",
+   "x": 5,
+   "y": 16,
+   "w": 3,
+   "weight": "heavy",
+   "targets": [
+    "hoist"
+   ]
+  },
+  {
+   "id": "pad",
+   "type": "plate",
+   "x": 31,
+   "y": 16,
+   "w": 2,
+   "targets": [
+    "hoist"
+   ]
+  },
+  {
+   "id": "stone",
+   "type": "boulder",
+   "x": 9,
+   "y": 17
+  },
+  {
+   "id": "shelf",
+   "type": "plate",
+   "x": 18,
+   "y": 10,
+   "w": 1,
+   "weight": "heavy",
+   "targets": [
+    "vault",
+    "gate",
+    "gate_w"
+   ]
+  },
+  {
+   "id": "spark",
+   "type": "turbine",
+   "x": 13,
+   "y": 19,
+   "targets": [
+    "vault"
+   ]
+  },
+  {
+   "id": "vault",
+   "type": "door",
+   "x": 26,
+   "y": 8,
+   "h": 3,
+   "required": 2,
+   "latch": true
+  },
+  {
+   "id": "winch",
+   "type": "lever",
+   "x": 37,
+   "y": 10,
+   "targets": [
+    "gate",
+    "gate_w"
+   ]
+  },
+  {
+   "id": "gate",
+   "type": "door",
+   "x": 35,
+   "y": 12,
+   "h": 6,
+   "required": 2,
+   "latch": true
+  },
+  {
+   "id": "gate_w",
+   "type": "door",
+   "x": 3,
+   "y": 12,
+   "h": 6,
+   "required": 2,
+   "latch": true
+  },
+  {
+   "type": "checkpoint",
+   "x": 24,
+   "y": 17
+  },
+  {
+   "type": "gem",
+   "element": "air",
+   "x": 26,
+   "y": 19
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 2,
+   "y": 17
+  },
+  {
+   "type": "gem",
+   "element": "water",
+   "x": 34,
+   "y": 10
+  },
+  {
+   "type": "gem",
+   "element": "fire",
+   "x": 36,
+   "y": 17
+  },
+  {
+   "type": "exit",
+   "element": "water",
+   "x": 31,
+   "y": 9
+  },
+  {
+   "type": "exit",
+   "element": "air",
+   "x": 28,
+   "y": 9
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 1,
+   "y": 16
+  },
+  {
+   "type": "exit",
+   "element": "fire",
+   "x": 38,
+   "y": 16
+  }
+ ]
+}

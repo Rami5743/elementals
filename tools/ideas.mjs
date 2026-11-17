@@ -101,3 +101,21 @@ Object.assign(IDEAS, {
   'stock-before-it-seals': { kind: 'spine', note: 'A timed airlock whose two gates are never open together: everything that will be needed on the far side — partner, cargo, gems — has to be inside before the clock runs out, and the switch cannot be reached from in there.' },
   'send-one-through': { kind: 'spine', note: 'A lock that needs every hand but one held on it, so exactly one player can pass — and has to open the way back for the rest from the far side.' },
 });
+
+// Coined while building Dumbwaiter (2026-11-16).
+Object.assign(IDEAS, {
+  'hoist-one-way-for-cargo': { kind: 'spine', note: 'A lift that runs up through a one-way grating: whatever it carries is scraped off on the grating when the lift goes back down, so the hoist delivers upward and only upward. People can drop back through after it; cargo never can, so anything sent up is up for good, and every job it still owed the floor below has to have been done first.' },
+  'lift-sheds-its-load': { kind: 'spine', note: 'A lift that rises through a one-way grating is a delivery chute, not a shuttle: it cannot put anything down while it is holding it, and only the trip back down leaves the load standing on the grating. People step off at the top and drop back through at will, so the route is two-way for them and one-way for cargo — and raising the lift again picks the cargo straight back up off whatever it was resting on.' },
+  'single-file-stone': { kind: 'spine', note: 'A boulder in a corridor one tile high is an absolute wall that only Earth can move and only ever forwards, so the one stretch of raised roof is the only place anybody can get past it: where the stone is parked decides who can be on which side of it.' },
+  'stand-aside-is-the-switch': { kind: 'spine', note: 'In a corridor where nobody can pass anybody, the one place to get out of the walking line is a shelf above it \u2014 and that shelf is the switch, so standing aside and holding the far door open are the same act, and whoever does it cannot be the one who goes.' },
+});
+
+// Coined while building Single File (2026-11-16).
+Object.assign(IDEAS, {
+  'no-overtaking': { kind: 'spine', note: 'A corridor one tile high is one body wide as well: nobody can jump in it and nobody can hop over anybody, so a party inside it is a queue. The order you file in is the order you are stuck with; the only way to change it is to walk the whole corridor back out; and anyone who comes round from the far end can only ever join at the back. That decides who can reach which switch in the corridor, and so who holds and who goes.' },
+});
+
+// Coined while building Backshunt (2026-11-16).
+Object.assign(IDEAS, {
+  'two-stops-no-middle': { kind: 'spine', note: 'A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.' },
+});

@@ -1,0 +1,214 @@
+{
+ "id": "dumbwaiter",
+ "name": "Dumbwaiter",
+ "order": 213,
+ "description": "A hoist that only ever delivers upward: whatever rides it up is scraped off on the grating and can never come down again.",
+ "supports": [
+  [
+   "fire",
+   "earth",
+   "air"
+  ]
+ ],
+ "parTicks": 7200,
+ "hints": [
+  "Only Air answers the turbine, and the hoist runs only while Air is standing on it \u2014 so Air works every trip and can never be on one.",
+  "The loading bay only unlocks while somebody is up in the gallery, on the plate. And nobody but Earth can take the stone off the hoist at the top, so Earth has to arrive with it: climb on top of the stone and ride up.",
+  "The gratings let people down but never cargo. Once the stone is upstairs it is upstairs for good \u2014 so the heavy plate down in the vault has to be stood on by Earth, who then needs a third ride up."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "##................................######",
+  "##................................######",
+  "##................................######",
+  "##................................######",
+  "#########===############################",
+  "#########...############################",
+  "#########...############################",
+  "#########...############################",
+  "#########...############################",
+  "#########...############################",
+  "##................................######",
+  "##................................######",
+  "##................................######",
+  "##................................######",
+  "##................................######",
+  "##................................######",
+  "#########===############################",
+  "########################################"
+ ],
+ "spawns": {
+  "fire": [
+   12,
+   19
+  ],
+  "earth": [
+   15,
+   19
+  ],
+  "air": [
+   8,
+   19
+  ]
+ },
+ "entities": [
+  {
+   "id": "turbine",
+   "type": "turbine",
+   "x": 6,
+   "y": 19,
+   "targets": [
+    "hoist"
+   ]
+  },
+  {
+   "id": "hoist",
+   "type": "elevator",
+   "x": 10,
+   "y": 20,
+   "w": 1,
+   "path": [
+    [
+     10,
+     20
+    ],
+    [
+     10,
+     8
+    ]
+   ],
+   "mode": "powered",
+   "speed": 1.5
+  },
+  {
+   "id": "rock",
+   "type": "boulder",
+   "x": 21,
+   "y": 19
+  },
+  {
+   "id": "pgal",
+   "type": "plate",
+   "x": 12,
+   "y": 7,
+   "w": 2,
+   "targets": [
+    "gate_load",
+    "gate_west"
+   ]
+  },
+  {
+   "id": "gate_load",
+   "type": "door",
+   "x": 19,
+   "y": 14,
+   "h": 6,
+   "latch": true
+  },
+  {
+   "id": "gate_west",
+   "type": "door",
+   "x": 6,
+   "y": 4,
+   "h": 4
+  },
+  {
+   "id": "torch",
+   "type": "torch",
+   "x": 3,
+   "y": 7,
+   "targets": [
+    "gate_vault"
+   ]
+  },
+  {
+   "id": "pg",
+   "type": "plate",
+   "x": 16,
+   "y": 7,
+   "w": 2,
+   "weight": "heavy",
+   "targets": [
+    "gate_air"
+   ]
+  },
+  {
+   "id": "gate_earth",
+   "type": "door",
+   "x": 22,
+   "y": 4,
+   "h": 4,
+   "latch": true
+  },
+  {
+   "id": "gate_air",
+   "type": "door",
+   "x": 4,
+   "y": 14,
+   "h": 6,
+   "latch": true
+  },
+  {
+   "id": "gate_vault",
+   "type": "door",
+   "x": 25,
+   "y": 14,
+   "h": 6
+  },
+  {
+   "id": "pvault",
+   "type": "plate",
+   "x": 28,
+   "y": 19,
+   "weight": "heavy",
+   "targets": [
+    "gate_earth"
+   ]
+  },
+  {
+   "type": "exit",
+   "element": "air",
+   "x": 2,
+   "y": 18
+  },
+  {
+   "type": "exit",
+   "element": "fire",
+   "x": 2,
+   "y": 6
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 26,
+   "y": 6
+  },
+  {
+   "type": "gem",
+   "element": "air",
+   "x": 3,
+   "y": 19
+  },
+  {
+   "type": "gem",
+   "element": "fire",
+   "x": 4,
+   "y": 7
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 25,
+   "y": 7
+  },
+  {
+   "type": "gem",
+   "element": "neutral",
+   "x": 27,
+   "y": 19
+  }
+ ]
+}

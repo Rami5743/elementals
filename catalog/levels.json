@@ -2719,6 +2719,49 @@
   ]
  },
  {
+  "id": "backshunt",
+  "name": "Backshunt",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+air"
+  ],
+  "parTicks": 7200,
+  "dark": false,
+  "challenge": "mind",
+  "core": "one-stone-feeds-one-end-at-a-time",
+  "ideas": [
+   "two-stops-no-middle",
+   "no-hands-for-cargo",
+   "twist-undo",
+   "freeze-bridge"
+  ],
+  "order": 214,
+  "line": "a conveyor with no off switch, only a direction — the one stone it carries is always pinned against the west buffer or the east buffer and never anywhere between, so the lever does not turn anything on, it decides which end of the level has power.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:fan",
+   "ent:freezepad",
+   "ent:lever",
+   "ent:plate",
+   "ent:pool",
+   "ent:torch",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:fan:lifts-air",
+   "opt:fan:lifts-fire-water",
+   "opt:heavy-plate",
+   "opt:pool-timed",
+   "opt:required:2",
+   "tile:mist",
+   "tile:water"
+  ]
+ },
+ {
   "id": "cargo",
   "name": "Cargo",
   "source": "mine",
@@ -3067,6 +3110,41 @@
   ]
  },
  {
+  "id": "dumbwaiter",
+  "name": "Dumbwaiter",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+earth+air"
+  ],
+  "parTicks": 7200,
+  "dark": false,
+  "challenge": "mind",
+  "core": "the-hoist-only-ever-delivers-upward",
+  "ideas": [
+   "hoist-one-way-for-cargo",
+   "machine-strands-operator",
+   "hold-switch",
+   "twist-order"
+  ],
+  "order": 213,
+  "line": "a hoist that runs up through a one-way grating, so whatever it carries is scraped off on the grating when it goes back down — it delivers upward and only upward, and people can drop back through after their cargo but the cargo can never follow them down.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:plate",
+   "ent:torch",
+   "ent:turbine",
+   "opt:elevator:powered",
+   "opt:heavy-plate",
+   "opt:latch",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "finale",
   "name": "Finale",
   "source": "mine",
@@ -3350,6 +3428,41 @@
   }
  },
  {
+  "id": "passing_place",
+  "name": "Passing Place",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "water+earth"
+  ],
+  "parTicks": 6900,
+  "dark": false,
+  "challenge": "mind",
+  "core": "the-one-high-spot-is-the-passing-place-and-the-switch",
+  "ideas": [
+   "single-file-stone",
+   "stand-aside-is-the-switch",
+   "hold-switch",
+   "machine-strands-operator",
+   "shared-switch-two-gates",
+   "invert-door"
+  ],
+  "order": 113,
+  "line": "a crawlway one tile high with a stone in it. The stone is an absolute wall that only Earth can move and only ever forwards, the one stretch of raised roof is the only place anybody can get past it — and that same raised place is the plate that holds the far hatch open, so standing aside and opening the way are the same act, and whoever does it cannot be the one who goes.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:firewall",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "pillars",
   "name": "Pillars",
   "source": "mine",
@@ -3493,6 +3606,48 @@
    "opt:invert:door",
    "opt:wide-door",
    "tile:sludge"
+  ]
+ },
+ {
+  "id": "single_file",
+  "name": "Single File",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6600,
+  "dark": false,
+  "challenge": "mind",
+  "core": "the-only-one-who-can-open-the-gate-can-never-go-through-it",
+  "ideas": [
+   "no-overtaking",
+   "quorum",
+   "no-hands-for-cargo",
+   "hold-switch",
+   "machine-strands-operator",
+   "twist-order"
+  ],
+  "order": 314,
+  "line": "a corridor one tile high is one body wide as well — nobody jumps in it and nobody hops over anybody — so a party inside it is a queue, the switches that open its gate stand *in* it, and the one player heavy enough to work the gate is therefore the one player who can never walk through it.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:fan",
+   "ent:plate",
+   "ent:torch",
+   "ent:turbine",
+   "opt:belt:walkable",
+   "opt:button:hold",
+   "opt:fan:hang-time",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:turbine-timed"
   ]
  },
  {
@@ -3902,6 +4057,43 @@
    "opt:invert:door",
    "opt:turbine-timed",
    "tile:mud"
+  ]
+ },
+ {
+  "id": "winnow",
+  "name": "Winnow",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6600,
+  "dark": false,
+  "challenge": "mind",
+  "core": "the-grating-combs-the-load-off-the-cage",
+  "ideas": [
+   "lift-sheds-its-load",
+   "hold-switch",
+   "machine-strands-operator",
+   "trigger-from-above",
+   "twist-order"
+  ],
+  "order": 313,
+  "line": "a cage that rises through a one-way grating cannot put anything down while it is still holding it — only the trip back down leaves the load standing on the grating, so the cage delivers upward and never returns anything, while people step off at the top and drop back through at will.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:turbine",
+   "opt:elevator:powered",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "tile:one-way"
   ]
  }
 ]

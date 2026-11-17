@@ -1,0 +1,233 @@
+{
+ "id": "single_file",
+ "name": "Single File",
+ "order": 314,
+ "description": "A tunnel one tile high, and a gate that wants two of you standing still in it.",
+ "supports": [
+  [
+   "fire",
+   "water",
+   "earth",
+   "air"
+  ]
+ ],
+ "parTicks": 6600,
+ "hints": [
+  "Nobody jumps in the tunnel and nobody gets past anybody in it: the order you walk in is the order you are stuck with.",
+  "The gate needs two of the three plates at once, and the middle plate is heavy. Earth is always one of the two - so Earth is the one who can never walk through the gate he is the only one who can open.",
+  "Only Air has a way home from the works. Whoever crosses has to be worth the trip: the torch is no use to anybody but Fire, and the turbine is no use to anybody but Air."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "##..........................############",
+  "##..######################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........################..############",
+  "#.........###############..............#",
+  "#.........###############..............#",
+  "#......................................#",
+  "############################......######",
+  "########################################",
+  "########################################"
+ ],
+ "spawns": {
+  "earth": [
+   8,
+   18
+  ],
+  "air": [
+   7,
+   18
+  ],
+  "fire": [
+   6,
+   18
+  ],
+  "water": [
+   5,
+   18
+  ]
+ },
+ "entities": [
+  {
+   "id": "p_west",
+   "type": "plate",
+   "x": 11,
+   "y": 18,
+   "targets": [
+    "gate"
+   ]
+  },
+  {
+   "id": "p_heavy",
+   "type": "plate",
+   "x": 14,
+   "y": 18,
+   "weight": "heavy",
+   "targets": [
+    "gate"
+   ]
+  },
+  {
+   "id": "p_east",
+   "type": "plate",
+   "x": 18,
+   "y": 18,
+   "targets": [
+    "gate"
+   ]
+  },
+  {
+   "id": "gate",
+   "type": "door",
+   "x": 23,
+   "y": 18,
+   "w": 1,
+   "h": 1,
+   "required": 2
+  },
+  {
+   "id": "crank",
+   "type": "button",
+   "x": 25,
+   "y": 18,
+   "mode": "hold",
+   "targets": [
+    "belt"
+   ]
+  },
+  {
+   "id": "torch",
+   "type": "torch",
+   "x": 34,
+   "y": 18,
+   "targets": [
+    "belt"
+   ]
+  },
+  {
+   "id": "belt",
+   "type": "belt",
+   "x": 28,
+   "y": 19,
+   "w": 6,
+   "h": 1,
+   "speed": 0.45,
+   "required": 2
+  },
+  {
+   "id": "stone",
+   "type": "boulder",
+   "x": 28,
+   "y": 18
+  },
+  {
+   "id": "p_stone",
+   "type": "plate",
+   "x": 33,
+   "y": 18,
+   "w": 2,
+   "weight": "heavy",
+   "targets": [
+    "draught",
+    "vault"
+   ]
+  },
+  {
+   "id": "draught",
+   "type": "fan",
+   "x": 26,
+   "y": 4,
+   "w": 2,
+   "h": 15,
+   "strength": 1.5
+  },
+  {
+   "id": "spin",
+   "type": "turbine",
+   "x": 35,
+   "y": 18,
+   "duration": 600,
+   "targets": [
+    "vault"
+   ]
+  },
+  {
+   "id": "vault",
+   "type": "door",
+   "x": 36,
+   "y": 16,
+   "w": 1,
+   "h": 3,
+   "required": 2,
+   "latch": true
+  },
+  {
+   "id": "gem_e",
+   "type": "gem",
+   "x": 22,
+   "y": 18,
+   "element": "earth"
+  },
+  {
+   "id": "gem_w",
+   "type": "gem",
+   "x": 21,
+   "y": 18,
+   "element": "water"
+  },
+  {
+   "id": "gem_f",
+   "type": "gem",
+   "x": 30,
+   "y": 18,
+   "element": "fire"
+  },
+  {
+   "id": "gem_a",
+   "type": "gem",
+   "x": 9,
+   "y": 4,
+   "element": "air"
+  },
+  {
+   "id": "exit_a",
+   "type": "exit",
+   "x": 2,
+   "y": 17,
+   "element": "air"
+  },
+  {
+   "id": "exit_e",
+   "type": "exit",
+   "x": 4,
+   "y": 17,
+   "element": "earth"
+  },
+  {
+   "id": "exit_w",
+   "type": "exit",
+   "x": 37,
+   "y": 17,
+   "element": "water"
+  },
+  {
+   "id": "exit_f",
+   "type": "exit",
+   "x": 38,
+   "y": 17,
+   "element": "fire"
+  }
+ ]
+}
