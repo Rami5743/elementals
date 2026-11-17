@@ -295,16 +295,27 @@ the name of whichever limit is currently nearest, and when it resets — never a
 session's own token counters cannot be turned into one because the limit is the whole account's.
 So the budget cannot be predicted; it can only be observed, and only across weeks.
 
+There is one real measurement, though. Your session record's `usage` block counts **you and every
+agent under you** — last week's orchestrator read 2.25 M output tokens, which is the agents' work,
+not its own. So `get_session` tells you exactly what the night has consumed so far. What nobody can
+tell you is the denominator: how much the account had left when you started, which depends on the
+owner's own use earlier in the week.
+
+That makes the only possible estimate a relative one. Record the consumption figures below, and
+from the second night onward you can say "we are at 70% of what the last run managed before the
+cap" — not a percentage of the limit, but a number worth acting on, and a better one each week.
+
 At wind-down, append one line to `ops/night-log.tsv` (create it with this header if absent) and
 commit it with the night's work:
 
 ```
-date<TAB>chains<TAB>levels<TAB>first_level_at<TAB>warning_at<TAB>cap_at<TAB>end_at<TAB>note
-2026-11-16	3	5	18:18	-	21:24	23:08	push blocked all night; nothing published until the next day
+date  chains  levels  first_level_at  warning_at  cap_at  end_at  out_at_cap  out_at_end  note
 ```
 
-`warning_at` is when `rate_limit_info.status` first read `allowed_warning`, `cap_at` when a turn
-first failed on the limit, `-` where it did not happen. After a few weeks this says what a night
+tab-separated. `warning_at` is when `rate_limit_info.status` first read `allowed_warning`, `cap_at`
+when a turn first failed on the limit, `-` where it did not happen; `out_at_cap` and `out_at_end`
+are `usage.output_tokens` from your own session record at those moments, in millions to two
+decimals. After a few weeks this says what a night
 of three chains actually costs and how early the warning really comes, which is the only honest
 basis for changing the width of the run. Until then, do not change it on a hunch.
 
