@@ -88,6 +88,11 @@ Precision is allowed and wanted, within a tolerance a person can actually hit.
 - The hard bit should be legible before it is attempted: a player should be able to see what they
   are about to have to do.
 
+`check` has its own floor: it warns about any door that stands open for less than about 0.75 s
+(45 ticks), even with everyone else waiting. That warning is the simulation's bare minimum, not
+this bar — a window that only just clears it fails `motor: off` outright and is at the painful end
+of `motor: on`.
+
 In both modes: **a mistake costs time, never the level.** Anything that can destroy a route for good
 — melted ice on the critical path, an object dropped somewhere unreachable, a one-way drop into a
 dead end — is a bug in the design, not a difficulty.

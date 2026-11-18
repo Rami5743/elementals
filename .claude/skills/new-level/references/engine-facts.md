@@ -64,6 +64,14 @@ a lower bank buys roughly another tile.
   not move a pixel. In a group without Earth a boulder is pure wall — and a machine (belt,
   lift, closing door) is then the only thing that can move it at all. Crates, by contrast,
   anybody pushes.
+- **`"rolls": true` (format 2) makes a boulder roll.** It reaches 4 px a tick after about two tiles
+  of slope — faster than anyone runs, Earth at 2.6 — and carries on about three tiles over level
+  ground, liquids included, because liquids are floors to it. It flies on off a ledge. Nobody can
+  catch one up, but **whoever stands in its way stops it**: it pushes nobody and never rolls onto a
+  head, so a player below it on a slope holds it there, and Earth can push it back up. Riders go
+  with it, through sludge too. Under a two-tile roof only a boulder with one rider fits. **Do not
+  make Air the brake**: Air is short enough that the held boulder rests partly over its head, and
+  Air's jump then carries it off. Without `rolls` a boulder stays where it is put, even on a slope.
 - **A boulder in a one-tile-high corridor is an absolute barrier**, even to a hopping player:
   measured, Fire could not get past one with jump held. A boulder in open ground is hopped over
   without a thought, so if a boulder is meant to block, put a roof one tile above it.
@@ -77,6 +85,10 @@ a lower bank buys roughly another tile.
 - A rider only rises **while inside the fan's rectangle**. Holding a direction walks you out of the
   column, so steering is what stops you climbing — a usable puzzle in itself.
 - A fan's area must be open tiles.
+
+- **Where two fans touch, a player in both feels only the stronger one** — overlapping columns do
+  not add up. Prefer the strengths the built-in levels use (0.9, 1.54, 2.7): players learn to read
+  them by sight.
 
 ## Doors
 
@@ -99,6 +111,11 @@ a lower bank buys roughly another tile.
   `duration` ticks after Air leaves (default 0: only while touched).
 - `freezepad`: **Water only**, and it may only target a pool.
 - `lever` toggles; `button` has `toggle`, `timed` (`duration`) and `hold`.
+
+- **A heavy plate reads the heaviest single thing on it, and Earth counts.** Two light players
+  standing together do nothing; Earth alone holds it down as well as a boulder does — so a design
+  that says "only the stone can hold this" is a design where Earth must not be able to reach it.
+  A target that `latch`es needs its plate pressed only once, by anyone who can get there.
 
 ## Pools
 
@@ -136,6 +153,11 @@ a lower bank buys roughly another tile.
 - The platform is **16 px thick** and sits at the top of its tile row, so it is flush with a floor
   whose tile row is the same. Players walk straight on and off.
 - A platform parked in a gap is a floor; send it away and the gap is open.
+- **A lift never crushes: it stops on whatever is in its way, for good.** A boulder or crate left in
+  the shaft, or under the lowest stop, jams it permanently — leave two tiles under that stop and
+  keep objects out of the path. A rider standing half on, under a low ceiling, stalls it until they
+  step properly aboard. **A two-tile-wide lift carries a player beside a boulder**: make it one tile
+  wide when the cargo has to ride alone.
 
 ## Entities and tiles
 
@@ -144,12 +166,23 @@ a lower bank buys roughly another tile.
 - A gem is taken by body overlap and only by its own element. A standing player's body is in the row
   **above** the floor, so a gem for someone walking past goes at `floorRow - 1`.
 - An exit is 1×2 and must stand on solid ground: one per element in every supported group.
+- A **checkpoint is two tiles tall from its `y`**, like an exit: for a post standing on a floor at
+  row r, `y = r - 2`. `check` fails on one whose two tiles are not clear.
+- A **sign's banner is `text.length × 6` pixels wide** from `x × 32`, so it covers roughly one
+  column per five and a half characters. `check` warns when it runs into rock, across a door, an
+  ice wall or a firewall, or off the right edge — count before placing, or move the sign rather
+  than trimming the sentence to nothing.
 
 ## What `check` does and does not catch
 
 - It validates, runs every supported group's script, records replays, and fails on a death, a missed
   gem, or a level that can still be finished while one player idles in its own door.
+- It runs every script in a group's `shortcuts` list and **fails if one of them finishes the
+  level** — that is how a blocked cheat is proved blocked rather than asserted in NOTES.md.
+- It warns when a door stands open **less than about 0.75 s** even with everyone else waiting:
+  people miss a window that short even when the scripted solution makes it. Lengthen it, or say in
+  NOTES.md that the tightness is the point.
 - It does **not** find head-stacking, gliding, body-doorstops, or an unwinnable state you can walk
-  into. Those are yours to find.
+  into, unless you wrote a shortcut script for it. Those are yours to find.
 - Debug with `node kit.mjs check <id> --trace 10 --ents gate,lift`. The trace prints every player's
   tile position and those entities' state.

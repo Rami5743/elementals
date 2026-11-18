@@ -88,10 +88,28 @@ Ids are lowercase with `_`; ids starting with `t` or `l` and a digit are reserve
 under `levels/` (plus this repo's own `tools/`, `catalog/` and `index.html` at the publish step) —
 never `kit.mjs`, `kit.d.mts`, `types/` or `docs/`.
 
-## 6. Hunt your own shortcuts
+## 6. Hunt your own shortcuts — and prove each one fails
 
-`check` only catches a player who is never needed and a barrier jumpable from the floor. Before you
-call it done, walk through each of these and write the answer in NOTES.md:
+Walk through the list below, write the answer in NOTES.md, and then **write the cheat as a script**
+and put it in the group's `shortcuts` list in `solution.mjs`:
+
+```js
+sets: [{
+  elements: ['water', 'earth'],
+  scripts: { water, earth },
+  shortcuts: [
+    { name: 'Earth holds the plate itself', scripts: { water: waterWalksIn, earth: earthHoldsThePlate } },
+  ],
+}],
+```
+
+`check` runs each one for up to 6000 ticks and reports a **problem** if it finishes the level, so a
+block that stops working later cannot pass unnoticed. Read the reason it gives when the shortcut
+fails (`earth could not reach x=30`, `water died`): it has to be the thing you blocked, not a typo
+in the cheat script — a shortcut that fails for the wrong reason proves nothing. Two or three are
+usually enough: the ones a player would actually try first.
+
+The cheats worth scripting, every time:
 
 - Could somebody jump the barrier **from a partner's head**? That is a tile higher than any jump.
 - Could Air **glide** past it, or reach a ledge nobody else can?
@@ -99,8 +117,16 @@ call it done, walk through each of these and write the answer in NOTES.md:
 - Could a player **hold a gate open with their body** instead of the mechanism you built?
 - Does every barrier reach the **ceiling**? A 2-tile door under a 3-tile roof is a doorway.
 - Is the way back **open** when it should not be, or shut when a player still needs it?
+- Could a player **stand on the plate instead of fetching the weight**? A heavy plate reads the
+  heaviest single thing on it and **Earth counts as heavy** — so "the boulder must hold this" is
+  only true if Earth cannot stand there, and a plate that latches needs pressing only once.
+- Could someone **ride the lift beside the cargo**? A two-tile-wide lift carries a player next to a
+  boulder; make it one tile wide if the cargo must travel alone.
 - Can the level reach a state where it **cannot be finished**? If yes, redesign — a mistake must
-  cost time, never the level. Where a loss is possible anyway, place a `checkpoint`.
+  cost time, never the level. Where a loss is possible anyway, place a `checkpoint` (two tiles tall
+  from its `y`: for a post on a floor at row r, `y = r - 2`), and prefer machines a player can try
+  again — a lift that comes round, a turbine that can be touched twice, a stone that can be sent
+  back.
 
 ## 7. The novelty gate
 

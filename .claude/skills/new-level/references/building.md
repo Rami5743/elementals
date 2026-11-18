@@ -46,7 +46,9 @@ each a distinct resting tile. The reliable arrangement is:
 
 ## Solution scripts
 
-- Export `solutions = { level: '<id>', sets: [{ elements: [...], scripts: {...} }], roles: {...} }`.
+- Export `solutions = { level: '<id>', sets: [{ elements: [...], scripts: {...}, shortcuts: [...] }], roles: {...} }`.
+  `shortcuts` is a list of `{ name, scripts }` that each *try* a cheat you believe is blocked; `check`
+  fails if one of them finishes the level. Write them as you close each hole, not at the end.
 - Sequence with `c.flag(name)` and `waitFlag`; never rely on two players' timings lining up.
 - `go(c, x)` walks to a tile centre and stops; `until(c, pred, bits, max, what)` is the workhorse
   for waiting on a door, a lift or a partner; `pound(c)` after about 14 ticks of held jump.
