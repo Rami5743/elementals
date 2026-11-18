@@ -53,9 +53,9 @@
   {
    "id": "sign_0",
    "type": "sign",
-   "x": 1,
+   "x": 13,
    "y": 13,
-   "text": "Whoever holds the ceiling down stays up there."
+   "text": "Who holds it down stays up."
   },
   {
    "id": "vault",

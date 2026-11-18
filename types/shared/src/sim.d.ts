@@ -31,6 +31,9 @@ export interface EntState {
     y: number;
     ry: number;
     vy: number;
+    /** Rolling boulders: sideways speed and its sub-pixel remainder. */
+    vx: number;
+    rx: number;
     gone: number;
     open: number;
     d: number;
@@ -69,6 +72,12 @@ export interface StateOptions {
 export declare function createState(world: World, opts?: StateOptions): GameState;
 /** Restart the attempt while keeping session-level counters. */
 export declare function restartState(world: World, prev: GameState): GameState;
+/**
+ * Change what a death does in the middle of a go. Anyone already dead under "respawn" would wait
+ * forever under "restart level", so their fall becomes the level's: it restarts once their death
+ * animation has played and the "was lost" banner shown, just as if they had died under it.
+ */
+export declare function setDifficulty(state: GameState, difficulty: Difficulty): void;
 /** Deterministic PRNG (mulberry32) stored in state. */
 export declare function nextRandom(state: GameState): number;
 export declare function overlaps(a: Rect, b: Rect): boolean;
@@ -153,6 +162,11 @@ export declare class Sim {
      */
     /** Every actor resting on rect r, directly or on top of others (each once). */
     updateMovable(i: number): void;
+    /**
+     * A rolling boulder speeds up down a slope, keeps rolling on level ground until friction stops it,
+     * and flies on when it rolls off a ledge. Anything in its way stops it dead: it pushes nobody, so
+     * whoever stands below it on a slope holds it there.
+     */
     interactions(inputs: readonly number[]): void;
     /** Whether a living player of this element overlaps (or touches within `pad` px) the entity. */
     touchedBy(e: Rect, element: Element, pad?: number): boolean;
@@ -170,6 +184,16 @@ export declare class Sim {
     frozenAt(tx: number, ty: number): boolean;
     hazards(): void;
     respawns(): void;
+    /**
+     * A place to respawn near (x, y) that nothing occupies, so a player never comes back inside
+     * someone standing on the save point (or someone who respawned there the same tick). Prefers
+     * the nearest spot on the same floor, then any free spot beside it, then on top of whoever is
+     * in the way.
+     */
+    freeSpot(ref: Ref, x: number, y: number, w: number, h: number): {
+        x: number;
+        y: number;
+    };
     checkWin(): void;
 }
 /**

@@ -58,9 +58,9 @@
   {
    "id": "sign_0",
    "type": "sign",
-   "x": 1,
+   "x": 6,
    "y": 14,
-   "text": "Three hands. There are four of you."
+   "text": "Three hands, four of you."
   },
   {
    "id": "p3",

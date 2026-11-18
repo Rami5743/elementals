@@ -58,9 +58,9 @@
   {
    "id": "sign_0",
    "type": "sign",
-   "x": 14,
+   "x": 7,
    "y": 14,
-   "text": "It opens while the lift goes by, and only then."
+   "text": "Open only as the lift passes."
   },
   {
    "id": "hoist",

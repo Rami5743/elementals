@@ -96,14 +96,14 @@ A target's signal is on when at least `required` (default 1) of its inputs are o
 | Type | What it is |
 |---|---|
 | `box` | A crate anyone can push (mass 1). Stands on plates, rides lifts, can be carried on a head. |
-| `boulder` | Only Earth can push it (mass 3: holds heavy plates). |
+| `boulder` | Only Earth can push it (mass 3: holds heavy plates). *Format 2:* `"rolls": true` makes it roll down slopes (`/`, `\`) and on along level ground until it slows to a stop; it flies on off a ledge. Whoever stands in its way stops it (it pushes nobody), and Earth can push it back up. Without `rolls` it stays where it is put, even on a slope. |
 | `seesaw` | A plank `w` tiles wide in two halves: the heavier side goes down by `range` tiles in all (default 2). |
 | `ice` | Solid; Fire melts it by touching it for a third of a second. |
 | `firewall` | Solid to everyone, Fire included; Water puts it out by touching it. |
 | `cracked` | A solid floor that Earth breaks with a ground pound (Down in mid-air). |
 | `gem` | `element`: `fire`/`water`/`earth`/`air` (only that element takes it) or `neutral` (anyone). Taking every gem is one of the three stars. |
 | `exit` | `element`: whose door it is. 1 tile wide and 2 tall, standing on solid ground. Exactly one per element in every supported group. The level is won when everyone stands in their own door at once. |
-| `checkpoint` | Respawn point, used only when players choose "respawn at checkpoint". |
+| `checkpoint` | Respawn point, used only when players choose "respawn at checkpoint". It is two tiles tall, from `y` down: for a post standing on a floor at row `r`, use `y = r - 2`. |
 | `sign` | `text`: a short line drawn starting at its tile, about 6 px a character. |
 
 ## 4. The level bundle (`.elementals.json`)
@@ -132,7 +132,9 @@ A **play link** is the game's address followed by `#level=` and the bundle packe
 
 ## 5. Versions
 
-Everything in this document is **level format 1**. As the game gains features, later formats add to it; they never change what an existing field means.
+Everything in this document is **level format 1** unless it is marked otherwise. As the game gains features, later formats add to it; they never change what an existing field means.
+
+- **Format 2** added `"rolls"` on boulders.
 
 - A bundle's `requires` is the format its level needs. The kit sets it from what the level actually uses.
 - A level that uses only format 1 keeps working in every version of the game.

@@ -36,6 +36,8 @@ export interface EntityDef {
     range?: number;
     element?: Element | 'neutral';
     text?: string;
+    /** Boulders: roll down slopes (format 2). Without it a boulder stays where it is put. */
+    rolls?: boolean;
 }
 export interface LevelDef {
     id: string;

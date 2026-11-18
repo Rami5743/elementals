@@ -13,14 +13,23 @@ export { checkSolution } from '../../shared/src/bundle.js';
 export { BITS, Ctl, Director, drop, go, holdAt, interact, jump, leap, pound, run, runJump, steerTo, until, wait, waitFlag, type Detour, type Script } from '../../tools/director.js';
 import type { Element } from '../../shared/src/constants.js';
 import type { Script } from '../../tools/director.js';
+/** A way to cheat that must not work: scripts that try it. `check` fails if they finish the level. */
+export interface Shortcut {
+    /** What it tries, e.g. "Earth holds the plate itself instead of the boulder". */
+    name: string;
+    scripts: Partial<Record<Element, Script>>;
+    /** How long to let it try (default 6000 ticks, 100 s). */
+    maxTicks?: number;
+}
 /** What a level's solution.mjs exports as `solutions`. */
 export interface Solutions {
-    /** One entry per supported element set: a script for each player. */
+    /** One entry per supported element set: a script for each player, and any shortcuts to rule out. */
     sets: {
         elements: Element[];
         scripts: Partial<Record<Element, Script>>;
+        shortcuts?: Shortcut[];
     }[];
     /** Per element set ("fire,water"), what each player contributes (shown to reviewers). */
     roles?: Record<string, Partial<Record<Element, string>>>;
 }
-export declare const KIT_VERSION = 1;
+export declare const KIT_VERSION = 2;

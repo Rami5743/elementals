@@ -34,6 +34,30 @@ export const solutions = {
 
 A script is a generator: each `yield` is one tick of input bits for that player (`IN_LEFT` 1, `IN_RIGHT` 2, `IN_DOWN` 8, `IN_JUMP` 16, `IN_INTERACT` 32, combined with `|`; `0` is no input). All scripts advance together, one tick at a time, and read the live game through `c`. When a script ends, that player stands still. The level must be won before 20 000 ticks.
 
+## Shortcuts that must fail
+
+Every level has ways to cheat that you blocked: a barrier someone could jump, a gate a partner could hold, a plate a player could stand on instead of the boulder, a lift wide enough to ride beside the cargo. Writing "blocked" in NOTES.md isn't enough: prove it. Give each group's entry a `shortcuts` list, with scripts that try the cheat as hard as they can:
+
+```js
+/** @type {import('../../kit.mjs').Script} */
+const earthHoldsThePlate = function* (c) {
+  yield* go(c, 24);                      // stand on the heavy plate instead of fetching the boulder
+  yield* wait(c, 600);
+};
+
+export const solutions = {
+  sets: [{
+    elements: ['water', 'earth'],
+    scripts: { water, earth },
+    shortcuts: [
+      { name: 'Earth holds the plate itself', scripts: { water: waterWalksIn, earth: earthHoldsThePlate } },
+    ],
+  }],
+};
+```
+
+`check` runs each shortcut (for up to `maxTicks`, default 6000) and reports a **problem** if it finishes the level. When it fails, `check` says why, for example `earth could not reach x=30` or `water died`. Read that reason: it should be the thing you blocked, not a mistake in the script. A shortcut only proves something if it would have worked without the block.
+
 ## Reading the game: `c`
 
 | | |

@@ -48,9 +48,9 @@
   {
    "id": "sign_0",
    "type": "sign",
-   "x": 2,
+   "x": 7,
    "y": 17,
-   "text": "The ice up there starts melting when you leave the pad."
+   "text": "Leave the pad, the ice melts."
   },
   {
    "id": "gate",
@@ -141,7 +141,7 @@
    "id": "post",
    "type": "checkpoint",
    "x": 12,
-   "y": 19
+   "y": 18
   },
   {
    "id": "gem_a",

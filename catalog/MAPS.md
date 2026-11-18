@@ -254,15 +254,15 @@ Updraft Duet (updraft_duet) for water+air
 15  #################^^^....#########.######
 16  #################^^^....#########.######
 17  #.....D..........^^^..............######
-18  #.X.X.D..........^^^..............######
+18  #.X.X.D.....!....^^^..............######
 19  #.X*X.D...f.@.@..^^^............pp######
-20  ############!###########################
+20  ########################################
 21  ########################################
 
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
 Spawns (@): water (12,19)  air (14,19)
 Entities:
-  "  sign_0       sign       at (2,17)  "The ice up there starts melting when you leave the pad."
+  "  sign_0       sign       at (7,17)  "Leave the pad, the ice melts."
   D  gate         door       at (6,17)  1x3  <- weigh  latch
   f  pad          freezepad  at (10,19)  -> shelf
   ^  wind         fan        at (17,5)  3x15  <- pull  invert
@@ -273,7 +273,7 @@ Entities:
   D  chute_door   door       at (33,8)  <- pull  latch
   p  weigh        plate      at (32,19)  2x1  -> gate
   *  gem_w        gem        at (3,19)  water
-  !  post         checkpoint at (12,19)
+  !  post         checkpoint at (12,18)
   *  gem_a        gem        at (31,7)  air
   X  exit_w       exit       at (2,18)  water
   X  exit_a       exit       at (4,18)  air
@@ -530,9 +530,9 @@ Crosswire (crosswire) for fire+air
  8  ####......^^^^^^D^^^^^................##
  9  ####......^^^^^^D^^^^^................##
 10  ####......^^^^^^D^^^^^................##
-11  ####X.....^^^^^^D^^^^^...............X##
+11  ####X.....^^^^^^D^^^^^........!......X##
 12  ####X@@.T.^^^^^^D^^^^^........!.*.l..X##
-13  ##########^^^^^^^^^^^^DDDD####!#########
+13  ##########^^^^^^^^^^^^DDDD##############
 14  ##########^^^^^^^^^^^^##################
 15  ##########^^^^^^^^^^^^##################
 16  ##########^^^^^^^^^^^^##################
@@ -546,7 +546,7 @@ Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sl
 Spawns (@): fire (5,12)  air (6,12)
 Entities:
   "  sign_0       sign       at (4,10)  "One lever, two things, opposite ways."
-  !  post         checkpoint at (30,12)
+  !  post         checkpoint at (30,11)
   T  starter      turbine    at (8,12)  -> wind, updraught
   ^  wind         fan        at (10,7)  12x10  <- starter  strength 1.54  latch
   ^  updraught    fan        at (10,4)  4x3  <- starter  strength 1.2  latch
@@ -1079,7 +1079,7 @@ Letterbox (letterbox) for fire+water+earth
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
 Spawns (@): earth (4,13)  water (5,13)  fire (6,13)
 Entities:
-  "  sign_0       sign       at (2,11)  "A grating holds a stone up. A lid does not."
+  "  sign_0       sign       at (2,11)  "A grating holds a stone up."
   I  icewall      ice        at (9,11)  1x3
   F  flames       firewall   at (10,11)  1x3
   O  rock_1       boulder    at (14,13)
@@ -1127,7 +1127,7 @@ Jackshaft (jackshaft) for fire+water+earth
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
 Spawns (@): fire (15,15)  water (16,15)  earth (17,15)
 Entities:
-  "  sign_0       sign       at (1,13)  "Whoever holds the ceiling down stays up there."
+  "  sign_0       sign       at (13,13)  "Who holds it down stays up."
   D  vault        door       at (6,13)  1x3  <- squash
   I  icewall      ice        at (10,13)  1x3
   F  flames       firewall   at (12,13)  1x3
@@ -1265,9 +1265,9 @@ Backshunt (backshunt) for fire+water+air
 13  ##^^^#################################^#
 14  #.^^^####...........................##^#
 15  #.^^^####.........................*.##^#
-16  #*^^^####...........................##^#
+16  #*^^^####..!........................##^#
 17  #t^^^.*...f!#p.................p#@@@...#
-18  #####WWWW##!#>>>>>>>>>>>>>>>>>>>######V#
+18  #####WWWW####>>>>>>>>>>>>>>>>>>>######V#
 19  ########################################
 20  ########################################
 21  ########################################
@@ -1293,7 +1293,7 @@ Entities:
   *  gem_15       gem        at (1,16)  fire
   *  gem_16       gem        at (6,17)  water
   *  gem_17       gem        at (34,15)  air
-  !  checkpoint_18 checkpoint at (11,17)
+  !  checkpoint_18 checkpoint at (11,16)
   "  sign_19      sign       at (20,15)  "The belt has no stop. Only a side."
   "  sign_20      sign       at (24,11)  "Both gates want the stone at the east buffer."
 ```
@@ -1512,9 +1512,9 @@ Drill (drill) for fire+water+earth+air
  2  ########################################
  3  ########################################
  4  #.........IF..........D......###########
- 5  #.........IF..........D......###########
+ 5  #.........IF........!.D......###########
  6  #.....@@@@IF.**T..*.!.D......###########
- 7  ####################!####....###########
+ 7  #########################....###########
  8  #########################....###########
  9  #########################cc#############
 10  #########################....###########
@@ -1538,7 +1538,7 @@ Entities:
   F  flames       firewall   at (11,4)  1x3
   T  spin         turbine    at (15,6)  -> gate
   D  gate         door       at (22,4)  1x3  <- spin  latch
-  !  post         checkpoint at (20,6)
+  !  post         checkpoint at (20,5)
   c  hatch_a      cracked    at (25,9)  2x1
   c  hatch_b      cracked    at (26,13)  2x1
   c  hatch_c      cracked    at (27,17)  2x1
@@ -1624,7 +1624,7 @@ Lofts (lofts) for fire+water+earth+air
 15  #...........^^^^^^^^....I.F...D...######
 16  #.........X.^^^^^^^^....I.F...DXXX######
 17  #.*pp.O@@@@.^^^^^^^^...*I*F...DXXX######
-18  ##########!#.......#####################
+18  ############.......#####################
 19  ############SSSSSSS#####################
 20  ########################################
 21  ########################################
@@ -1635,7 +1635,7 @@ Entities:
   "  sign_0       sign       at (1,15)  "The wind is not the same for everyone."
   p  weigh        plate      at (3,17)  2x1  -> gate  weight heavy
   O  rock_1       boulder    at (6,17)
-  !  post         checkpoint at (10,17)
+  !  post         checkpoint at (10,16)
   ^  wind         fan        at (12,4)  8x14  strength 1.5
   T  spin         turbine    at (24,5)  -> gate
   I  icewall      ice        at (24,15)  1x3
@@ -1724,7 +1724,7 @@ Cargo (cargo) for fire+water+earth+air
 13  ##..X##########...X##...X##...X#########
 14  ###D#....IF####...X##...X##...X#########
 15  #........IF####DD####DD####DD###########
-16  #T@@Opp@@IFpp......*.....*......pp######
+16  #T@@Opp@@Ippp......*.....*......pp######
 17  ###########<<<<<<<<<<<<<<<<<<<<<<<######
 18  ########################################
 19  ########################################
@@ -1754,7 +1754,7 @@ Entities:
   X  exit_f       exit       at (18,13)  fire
   X  exit_w       exit       at (24,13)  water
   X  exit_e       exit       at (30,13)  earth
-  p  weigh3       plate      at (11,16)  2x1  -> air_gate  weight heavy
+  p  weigh3       plate      at (10,16)  3x1  -> air_gate  weight heavy
 ```
 
 ## Finale (`finale`) — 4p, core `four-locks-one-tower`
@@ -1841,7 +1841,7 @@ One Through (one_through) for fire+water+earth+air
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
 Spawns (@): water (6,16)  fire (7,16)  earth (9,16)  air (11,16)
 Entities:
-  "  sign_0       sign       at (1,14)  "Three hands. There are four of you."
+  "  sign_0       sign       at (6,14)  "Three hands, four of you."
   p  p3           plate      at (2,16)  2x1  -> lock
   F  flames       firewall   at (5,14)  1x3
   p  p1           plate      at (8,16)  2x1  -> lock  weight heavy
@@ -1892,7 +1892,7 @@ Tripwire (tripwire) for fire+water+earth+air
 Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
 Spawns (@): earth (6,16)  fire (7,16)  water (8,16)  air (9,16)
 Entities:
-  "  sign_0       sign       at (14,14)  "It opens while the lift goes by, and only then."
+  "  sign_0       sign       at (7,14)  "Open only as the lift passes."
   E  hoist        elevator   at (2,17)  2x1  mode loop  speed 0.5  pause 90  path (2,17)-(2,8)
   p  trip         plate      at (2,12)  2x1  -> gate  weight heavy
   D  shaft_gate   door       at (5,14)  1x3  <- spin  latch
@@ -1932,9 +1932,9 @@ Winnow (winnow) for fire+water+earth+air
 13  #..D...............................D...#
 14  #..D...............................D...#
 15  #..D...............................D...#
-16  #X.D.ppp.......................pp..D..X#
+16  #X.D.ppp................!......pp..D..X#
 17  #X*D.###@O............@.!@..@..##..D*.X#
-18  ##################EEE###!###############
+18  ##################EEE###################
 19  #############T............*#############
 20  ########################################
 21  ########################################
@@ -1952,7 +1952,7 @@ Entities:
   l  winch        lever      at (37,10)  -> gate, gate_w
   D  gate         door       at (35,12)  1x6  <- shelf, winch (needs 2)  latch
   D  gate_w       door       at (3,12)  1x6  <- shelf, winch (needs 2)  latch
-  !  checkpoint_10 checkpoint at (24,17)
+  !  checkpoint_10 checkpoint at (24,16)
   *  gem_11       gem        at (26,19)  air
   *  gem_12       gem        at (2,17)  earth
   *  gem_13       gem        at (34,10)  water

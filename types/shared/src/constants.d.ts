@@ -27,6 +27,10 @@ export declare const DOOR_SPEED = 4;
 export declare const PUSH_SPEED = 1.6;
 export declare const GLIDE_TERMINAL = 1.6;
 export declare const RESTART_HOLD_TICKS = 60;
+/** Rolling boulders: pull down a 45° slope, top speed, and how fast they slow down on level ground. */
+export declare const ROLL_ACCEL = 0.12;
+export declare const ROLL_MAX = 4;
+export declare const ROLL_FRICTION = 0.08;
 export interface Physique {
     w: number;
     h: number;

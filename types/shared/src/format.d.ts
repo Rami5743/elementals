@@ -13,7 +13,7 @@ import { type EntityDef, type EntityType, type LevelDef } from './level.js';
  * 2. Raise LEVEL_FORMAT by one and register the new part here with that number. The typed
  *    tables below stop compiling until a new type, field or mode is registered.
  */
-export declare const LEVEL_FORMAT = 1;
+export declare const LEVEL_FORMAT = 2;
 /** Top-level level fields. */
 export declare const LEVEL_FIELD_SINCE: Record<keyof LevelDef, number>;
 export declare const ENTITY_TYPE_SINCE: Record<EntityType, number>;

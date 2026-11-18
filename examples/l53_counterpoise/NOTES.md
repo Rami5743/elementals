@@ -1,5 +1,5 @@
 # Counterpoise (`l53_counterpoise`) — all four
-**Introduces:** a seesaw as a ratchet. The right pan rises through a one-way ledge and comes back without what it carried, as a lift does in level 46, but here the lift is the team's own weight: boulder 3 plus crate 1 is 4, and only all four players together weigh 5. A short seesaw (38 px of travel) leaves no gap to fall through, a post stops anyone walking under the right pan, and a bridge over the left pan lets everyone reach the ledge without tipping the scale.
+**Introduces:** a seesaw as a ratchet. The right pan rises through a one-way ledge and comes back without what it carried, as a lift does in level 49, but here the lift is the team's own weight: boulder 3 plus crate 1 is 4, and only all four players together weigh 5. A short seesaw (38 px of travel) leaves no gap to fall through, a post stops anyone walking under the right pan, and a bridge over the left pan lets everyone reach the ledge without tipping the scale.
 1. **Solution:**
    1. Everyone climbs onto the bridge and drops through it onto the left pan. With all four on, the right pan rises past the ledge.
    2. Everyone gets off. The right pan sinks, and the boulder and the crate stay on the ledge.
