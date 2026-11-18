@@ -41,6 +41,7 @@ function tokensOf(l) {
     if (e.required) t.add(`opt:required:${e.required}`);
     if (e.mode) t.add(`opt:${e.type}:${e.mode}`);
     if (e.weight === 'heavy') t.add('opt:heavy-plate');
+    if (e.rolls) t.add('opt:rolling-boulder');
     if (e.strength !== undefined) t.add(`opt:fan:${fanBand(e.strength)}`);
     if (e.speed !== undefined && e.type === 'belt') t.add(`opt:belt:${beltBand(Math.abs(e.speed))}`);
     if (e.duration !== undefined) t.add(`opt:${e.type}-timed`);

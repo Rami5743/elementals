@@ -103,6 +103,10 @@ sets: [{
 }],
 ```
 
+`levels/conveyor/solution.mjs` has two worked examples — the first proves that a group without
+Earth cannot shift a boulder at all, the second that nobody hops one in a one-tile tunnel — and
+`check` prints the reason each fails.
+
 `check` runs each one for up to 6000 ticks and reports a **problem** if it finishes the level, so a
 block that stops working later cannot pass unnoticed. Read the reason it gives when the shortcut
 fails (`earth could not reach x=30`, `water died`): it has to be the thing you blocked, not a typo
