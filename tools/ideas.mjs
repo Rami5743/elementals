@@ -119,3 +119,8 @@ Object.assign(IDEAS, {
 Object.assign(IDEAS, {
   'two-stops-no-middle': { kind: 'spine', note: 'A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.' },
 });
+
+// Coined while building Headlong (2026-11-24).
+Object.assign(IDEAS, {
+  'dive-ahead-of-the-runaway': { kind: 'spine', note: 'A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance \u2014 the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.' },
+});
