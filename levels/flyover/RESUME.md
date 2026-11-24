@@ -15,7 +15,9 @@ and takes Earth's place.
 
 ## What already passes
 
-- `node kit.mjs check flyover`: **`level.json` is valid**, every spawn is safe.
+- `node kit.mjs check flyover`: **no problems** — solved in 20.3 s, 4/4 gems, no deaths, and all
+  four co-op necessity tests pass. Still to do: the shortcut scripts, and more length (the skill
+  wants 30 s).
 - Generator: `/tmp/claude-0/-home-user-elementals/21399c47-b54e-59c4-b8d3-8866955cc1ed/scratchpad/gen_flyover.mjs`
   (re-run it after every geometry tweak; it writes `levels/flyover/level.json`).
 - Probed facts this design rests on (all measured against `kit.mjs` in this session):
@@ -26,11 +28,17 @@ and takes Earth's place.
     drift across the shaft, which is what makes the gate safe.
   - **Air in a 1.5 fan**: rises at a flat 5 px/tick and then hovers at the fan's top row, so the
     loft floor is one row below where Air comes to rest.
-  - Plates accept `w` **and** `h` (shown as `9x2` by `kit.mjs show`).
+  - A **plate's sensor is an 8 px strip** at `y*32 + 24`: `h` is stored but ignored, so a hanging
+    plate is pressed only while the body overlaps those 8 px (feet within a 38 px band).
+  - At **1.54** Fire/Water sink at only ~0.011 px/tick² (vs 0.025 at 1.50), so a hanging plate at
+    the jump's apex is held for ~65 ticks; at 1.58 they slowly rise instead.
+  - 1.54 is also the strength at which **Air carrying Earth rises**, which is what stops Air
+    ferrying Earth *across* the shaft: in the column they can only go up, and up is the loft.
 
 ## What fails and the exact error
 
-`✗ no solution.mjs: every supported group needs a solution script` — nothing else.
+Nothing fails. Two things are still owed: the `shortcuts` list in solution.mjs (Earth holds the
+plate; the fliers go in series; Air ferries Earth across), and a solve time nearer 30 s.
 
 ## The next thing to try
 
