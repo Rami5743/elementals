@@ -1298,6 +1298,55 @@ Entities:
   "  sign_20      sign       at (24,11)  "Both gates want the stone at the east buffer."
 ```
 
+## Headlong (`headlong`) — 3p, core `the-only-way-in-front-of-the-stone-is-to-dive-after-it`
+
+```
+Headlong (headlong) for water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##...........................D...#######
+ 2  ##...........................D...#######
+ 3  ##....WWW..................*.D...#######
+ 4  ##...#########################...#######
+ 5  ##..#............................#######
+ 6  ##==............D................#######
+ 7  ##......T.*.....D................#######
+ 8  #########==#bbb\D................#######
+ 9  #########..#bbb#\................#######
+10  #########==#bbb##\...............#######
+11  #########..#bbb###\..............#######
+12  #########==#bbb######\...........#######
+13  #########..#bbb#######\..........#######
+14  #########==#bbb##########\.......#######
+15  #########..#bbb###########\ppp...#######
+16  #########==#bbb###############...#######
+17  ##..........bbb..................D...###
+18  ##...!...==.bbb..................DXXX###
+19  ##...!@.@...bbb...*........O...@.DXXX###
+20  ############bbb#########################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (6,19)  earth (31,19)  air (8,19)
+Entities:
+  T  spin         turbine    at (8,7)  -> pen, catgate
+  D  pen          door       at (16,6)  1x3  <- spin
+  D  catgate      door       at (29,1)  1x3  <- spin
+  E  hoist        elevator   at (12,20)  3x1  <- call  mode powered  speed 4  path (12,20)-(12,8)
+  b  call         button     at (12,8)  3x13  -> hoist  mode hold
+  O  stone        boulder    at (27,19)
+  p  pad          plate      at (27,15)  3x1  -> way  weight heavy
+  D  way          door       at (33,17)  1x3  <- pad
+  *  gem_8        gem        at (18,19)  earth
+  *  gem_9        gem        at (27,3)  water
+  *  gem_10       gem        at (10,7)  air
+  !  checkpoint_11 checkpoint at (5,18)
+  X  exit_12      exit       at (34,18)  water
+  X  exit_13      exit       at (35,18)  earth
+  X  exit_14      exit       at (36,18)  air
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

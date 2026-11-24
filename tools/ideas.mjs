@@ -124,3 +124,8 @@ Object.assign(IDEAS, {
 Object.assign(IDEAS, {
   'two-in-the-air-at-once': { kind: 'spine', note: "A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count \u2014 and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air." },
 });
+
+// Coined while building Headlong (2026-11-24).
+Object.assign(IDEAS, {
+  'dive-ahead-of-the-runaway': { kind: 'spine', note: 'A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance \u2014 the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.' },
+});
