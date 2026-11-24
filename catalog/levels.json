@@ -3465,6 +3465,40 @@
   ]
  },
  {
+  "id": "makeweight",
+  "name": "Makeweight",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 4500,
+  "dark": false,
+  "challenge": "mind",
+  "core": "the-plank-sums-what-the-plate-only-maxes",
+  "ideas": [
+   "plank-sums-plate-maxes",
+   "two-is-not-heavy",
+   "twist-backwards",
+   "twist-order"
+  ],
+  "order": 316,
+  "line": "the game's two weighing machines disagree about what a crowd weighs. A heavy plate reads the *heaviest single body* on it, so two of you are worth one of you; the balance plank reads the *sum* of each half, so two of you are worth exactly Earth and three of you outweigh Earth. The same four bodies are therefore interchangeable with the stone on the scales and useless in its place on the lock, and that one arithmetic difference decides which of the two jobs the heavy player has to go and do in person.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:plate",
+   "ent:seesaw",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "one_through",
   "name": "One Through",
   "source": "mine",
