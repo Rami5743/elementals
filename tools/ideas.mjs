@@ -129,3 +129,8 @@ Object.assign(IDEAS, {
 Object.assign(IDEAS, {
   'dive-ahead-of-the-runaway': { kind: 'spine', note: 'A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance \u2014 the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.' },
 });
+
+// Coined while building Threshold (2026-11-24).
+Object.assign(IDEAS, {
+  'threshold-is-a-switch': { kind: 'spine', note: "A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply \u2014 and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing." },
+});
