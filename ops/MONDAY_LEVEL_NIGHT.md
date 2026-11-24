@@ -10,6 +10,48 @@ not, clone it there first and work from it.
 
 ## 0. Preflight (a few minutes, before 18:00)
 
+## Two kinds of night
+
+**Monday, 18:00–23:00** is the big one. It runs the full window at full width and never stops
+itself over budget: the weekly allowance resets at 23:00, exactly when it closes, so spending down
+whatever is left of the week is the whole point. Nothing in the budget rules below applies to it.
+
+**Every other evening, 20:00–00:04**, is a routine night, and it runs only out of surplus.
+
+### The surplus test
+
+Spend no faster than the week can afford. The reference is a straight line: usage that would
+finish the weekly allowance exactly as the week ends. From the newest `rate_limit_event` (see
+"What the allowance actually says" — mind the two traps):
+
+```
+w        = unifiedWindows.seven_day
+left     = (w.resetsAt - now_epoch_seconds) / 604800     # 604800 = 7 days, the window's length
+expected = 1 - left                                      # where the straight line is now
+surplus  = expected - w.utilization                      # positive means we are under the line
+```
+
+So at Wednesday 20:00, with the week having started Monday 23:00, about 0.27 of it has gone:
+`expected` 0.27 against a `utilization` of 0.18 is a surplus of 0.09, and the night runs. A
+`utilization` of 0.31 is a deficit, and it does not.
+
+### What a routine night does differently
+
+- **At 20:00, test first.** No surplus, no night: say so in one line, build nothing, and stop.
+  Do not round a deficit down to zero and start anyway.
+- **Test again every time an agent finishes a level** — after the merge and push, before spawning
+  that chain's next one. Still in surplus: carry on. Not in surplus: stop that chain. When every
+  chain has stopped, close the night properly (merge, regenerate, check, push, night-log line,
+  summary) rather than simply going quiet.
+- A routine night that produces one level and stops is a correct outcome, not a failure. It means
+  the week was already being spent at pace, which is what the test is there to protect.
+- Everything else is the Monday procedure unchanged: three chains, the OFF/OFF/ON motor cycle and
+  its counters, one background agent per level, commit and push at the five milestones, merge and
+  push each level as it lands, freeze unfinished branches, and finish the level in hand when the
+  window closes at 00:04.
+- In `ops/night-log.tsv`, write `routine` or `monday` in the note, and the weekly utilization at
+  the gate as well as at the end.
+
 ## How the night is wired, and why
 
 A session started *by* a scheduled task is a bare container: empty home directory, no repository,
