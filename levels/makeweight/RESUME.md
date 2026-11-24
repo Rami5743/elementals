@@ -14,26 +14,15 @@ loft's heavy plate, the gate's second key.
 
 ## What already passes
 
-- `level.json` validates; every spawn point is safe.
-- The solution scripts run; Earth's whole first act works (walks east, drops into the trough the
-  raised seat leaves behind, falls into the vault, pushes the stone off the pan onto `hp`, comes
-  back west, climbs the stair, sags the seat).
-- The mechanism is **measured, not guessed** (probe against `kit.mjs`, see "engine facts" below).
-- NOTES.md written in full.
+`node kit.mjs check makeweight` reports **no problems**: solved in 29.3 s, 4/4 gems, no deaths, and
+all four co-op tests pass (the level cannot be finished while any one player waits in its door).
 
-## What fails, exactly
+## What is left
 
-```
-fire did not come to rest at y=288 (at 258)
-```
-Fire walks east off the hall floor at col 13 and lands on **Earth's head** (Earth sags the seat to
-y=288, so Earth's top is at 258) instead of on the seat.
-
-## Next thing to try
-
-Replace Fire's and Water's `go(13) + stepOff(1, 288)` with `hopOver(c, 1, 16)` so they jump over
-Earth and land on the seat east of it. Then they still need the two-tile step up onto the raised
-pan (`until(... bottom <= 240, IN_RIGHT|IN_JUMP ...)`), which is untested.
+- `shortcuts` in solution.mjs is still empty. Three to write: Earth on a human ladder to the loft,
+  two on the pan instead of three, and Earth holding the cellar plate instead of the stone.
+- `parTicks` still 9000 (150 s) — far too generous for a 29 s solution; set about 4500.
+- Then `node tools/novelty.mjs makeweight`, `node tools/build.mjs`, `node tools/catalog.mjs`.
 
 ## Important geometry note (cost an hour to find)
 
