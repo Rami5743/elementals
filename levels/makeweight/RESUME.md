@@ -14,17 +14,36 @@ loft's heavy plate, the gate's second key.
 
 ## What already passes
 
+- `level.json` validates; every spawn point is safe.
+- The solution scripts run; Earth's whole first act works (walks east, drops into the trough the
+  raised seat leaves behind, falls into the vault, pushes the stone off the pan onto `hp`, comes
+  back west, climbs the stair, sags the seat).
 - The mechanism is **measured, not guessed** (probe against `kit.mjs`, see "engine facts" below).
-- NOTES.md written in full (design, roles, insight, failures, shortcuts, kinship).
+- NOTES.md written in full.
 
-## What fails / not done yet
+## What fails, exactly
 
-- `level.json` does not exist yet. No `check` has been run.
+```
+fire did not come to rest at y=288 (at 258)
+```
+Fire walks east off the hall floor at col 13 and lands on **Earth's head** (Earth sags the seat to
+y=288, so Earth's top is at 258) instead of on the seat.
 
 ## Next thing to try
 
-Write `/tmp/.../gen_makeweight.mjs` (generator-script pattern) producing the map below, then
-`node kit.mjs show makeweight`, then `solution.mjs`.
+Replace Fire's and Water's `go(13) + stepOff(1, 288)` with `hopOver(c, 1, 16)` so they jump over
+Earth and land on the seat east of it. Then they still need the two-tile step up onto the raised
+pan (`until(... bottom <= 240, IN_RIGHT|IN_JUMP ...)`), which is untested.
+
+## Important geometry note (cost an hour to find)
+
+`moveSolidPx` does **not** test tiles — a seesaw half passes straight through rock; it is stopped
+only when an **actor** in its way cannot be pushed. So rock under a half does not pin the half, it
+pins the half's *rider*: Earth alone on the seat sags it exactly one tile (Earth's feet 256 -> 288,
+where the rock at row 9 stops them) rather than riding it six tiles down. That one-tile sag is what
+makes the plank boardable at all, and it is why the pan sits one tile *above* the hall floor while
+Earth stands on the seat — Fire and Water have to step up two tiles to board it, Air walks straight
+on once their weight has levelled the plank.
 
 ## Engine facts measured tonight that are NOT in references/engine-facts.md
 

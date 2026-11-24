@@ -1,0 +1,167 @@
+{
+ "id": "makeweight",
+ "name": "Makeweight",
+ "order": 316,
+ "description": "The plank adds you up. The plate does not.",
+ "supports": [
+  [
+   "fire",
+   "water",
+   "earth",
+   "air"
+  ]
+ ],
+ "parTicks": 9000,
+ "hints": [
+  "The stone is sitting on the scale, which is why the far end is up at the loft. Take the weight off first.",
+  "The plate in the loft is heavy, so only Earth can press it, and the stone can never get up there.",
+  "Two of you weigh two. So does Earth, and then the plank does nothing at all. It takes all three."
+ ],
+ "tiles": [
+  "########################################",
+  "#................#######################",
+  "##############...#######################",
+  "##############...#######################",
+  "##############...#######################",
+  "#...................####################",
+  "#...................####################",
+  "#...................####################",
+  "##########==##......####################",
+  "##########==#####...####################",
+  "##########..#####...####################",
+  "##########==#####...####################",
+  "#...............................########",
+  "#.........==....................########",
+  "#...............................########",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################"
+ ],
+ "spawns": {
+  "earth": [
+   3,
+   7
+  ],
+  "fire": [
+   5,
+   7
+  ],
+  "water": [
+   7,
+   7
+  ],
+  "air": [
+   9,
+   7
+  ]
+ },
+ "entities": [
+  {
+   "id": "scale",
+   "type": "seesaw",
+   "x": 14,
+   "y": 8,
+   "w": 6,
+   "range": 12
+  },
+  {
+   "id": "stone",
+   "type": "boulder",
+   "x": 19,
+   "y": 7
+  },
+  {
+   "id": "hp",
+   "type": "plate",
+   "x": 20,
+   "y": 14,
+   "weight": "heavy",
+   "targets": [
+    "gate"
+   ]
+  },
+  {
+   "id": "beam",
+   "type": "plate",
+   "x": 8,
+   "y": 1,
+   "weight": "heavy",
+   "targets": [
+    "gate"
+   ]
+  },
+  {
+   "id": "gate",
+   "type": "door",
+   "x": 26,
+   "y": 12,
+   "h": 3,
+   "required": 2,
+   "latch": true
+  },
+  {
+   "type": "exit",
+   "x": 28,
+   "y": 13,
+   "element": "fire"
+  },
+  {
+   "type": "exit",
+   "x": 29,
+   "y": 13,
+   "element": "water"
+  },
+  {
+   "type": "exit",
+   "x": 30,
+   "y": 13,
+   "element": "earth"
+  },
+  {
+   "type": "exit",
+   "x": 31,
+   "y": 13,
+   "element": "air"
+  },
+  {
+   "type": "gem",
+   "x": 5,
+   "y": 1,
+   "element": "earth"
+  },
+  {
+   "type": "gem",
+   "x": 12,
+   "y": 7,
+   "element": "fire"
+  },
+  {
+   "type": "gem",
+   "x": 13,
+   "y": 7,
+   "element": "water"
+  },
+  {
+   "type": "gem",
+   "x": 18,
+   "y": 13,
+   "element": "air"
+  },
+  {
+   "type": "sign",
+   "x": 2,
+   "y": 5,
+   "text": "Boulder 3.  Earth 2.  Fire, Water, Air 1 each."
+  },
+  {
+   "type": "sign",
+   "x": 2,
+   "y": 6,
+   "text": "Level only when both ends weigh the same."
+  }
+ ]
+}
