@@ -1,96 +1,70 @@
-# RESUME — makeweight (4p, motor OFF, order 316)
+# RESUME — makeweight (4p, motor OFF, order 316) — FINISHED
 
 This chain's motor counter: **built[4p] = 3** (this level OFF, the next one OFF, then ON).
 
 ## The design in two sentences
 
-A balance plank (`seesaw`) adds up the masses standing on each half while a heavy plate reads only
-the heaviest single body, so three light players are worth 3 to the plank and 1 to the plate: the
-party can stand in for the stone on the scales but never on the lock. The stone starts *on* the pan
-and so jams the machine with the seat six tiles up out of reach, so the opening move is to take the
-weight off the scale and spend it on the cellar's heavy plate — after which the only makeweight left
-is the whole rest of the party, who must all ride the pan six tiles down to lift Earth up to the
-loft's heavy plate, the gate's second key.
+A balance plank adds up the masses standing on each half while a heavy plate reads only the heaviest
+single body, so three light players are worth 3 to the plank and 1 to the plate: the party can stand
+in for the stone on the scales and never on the lock. The stone starts *on* the pan and so jams the
+machine with the seat six tiles up out of reach, so the opening move is to take the weight off the
+scale and spend it on the cellar's heavy plate — after which the only makeweight left is the whole
+rest of the party, who must all ride the pan six tiles down to lift Earth up to the loft's heavy
+plate, the gate's second key.
 
-## What already passes
+## What passes
 
-`node kit.mjs check makeweight` reports **no problems**: solved in 29.3 s, 4/4 gems, no deaths, and
-all four co-op tests pass (the level cannot be finished while any one player waits in its door).
+Everything. `node kit.mjs check makeweight`:
 
-## What is left
+- solved in **29.3 s** (par 75.0 s), 4/4 gems, no deaths;
+- all four co-op tests pass (unfinishable while any one player waits in its door);
+- all four shortcut scripts fail, each for the reason it was meant to:
+  - `Earth climbs a partner in the shaft and jumps for the loft` — earth stops at x=18.6, never
+    reaches the beam at x=23;
+  - `Two on the pan instead of three` — earth waits on the seat for ever; the plank never moves;
+  - `Earth tries to hold the cellar plate without moving the stone` — earth stops at x=16, because
+    the loaded pan seals the cellar passage;
+  - `Earth spends the stone on the plate and then stays in the cellar` — fire stops at x=8.3, in
+    front of a gate holding one key.
 
-- `shortcuts` in solution.mjs is still empty. Three to write: Earth on a human ladder to the loft,
-  two on the pan instead of three, and Earth holding the cellar plate instead of the stone.
-- `parTicks` still 9000 (150 s) — far too generous for a 29 s solution; set about 4500.
-- Then `node tools/novelty.mjs makeweight`, `node tools/build.mjs`, `node tools/catalog.mjs`.
+`node tools/novelty.mjs makeweight` → **PASS (invented)**: `plank-sums-plate-maxes` and
+`two-is-not-heavy` are used by no other level anywhere. `tools/build.mjs` and `tools/catalog.mjs`
+have both been run (43 levels, 16 at 4p).
 
-## Important geometry note (cost an hour to find)
+## Nothing is outstanding
 
-`moveSolidPx` does **not** test tiles — a seesaw half passes straight through rock; it is stopped
-only when an **actor** in its way cannot be pushed. So rock under a half does not pin the half, it
-pins the half's *rider*: Earth alone on the seat sags it exactly one tile (Earth's feet 256 -> 288,
-where the rock at row 9 stops them) rather than riding it six tiles down. That one-tile sag is what
-makes the plank boardable at all, and it is why the pan sits one tile *above* the hall floor while
-Earth stands on the seat — Fire and Water have to step up two tiles to board it, Air walks straight
-on once their weight has levelled the plank.
+If this is picked up again it is polish only: the solve time is 29.3 s, a shade under the 30 s the
+skill suggests aiming at, and the way to raise it would be a fourth phase, not a longer walk.
 
 ## Engine facts measured tonight that are NOT in references/engine-facts.md
 
-The repo has **no seesaw level**, so all of this was unknown:
+The repo had **no seesaw level**, so none of this was written down:
 
 - A seesaw's halves are `w/2` tiles each: left = `{x, y+d}`, right = `{x+w/2, y-d}`, each **16 px
-  thick**, and `d` moves **2 px/tick**.
-- It is a **comparator, not a scale**: target is `+range*32/2` if left-sum > right-sum, `-range*32/2`
-  if right > left, and **0 when the two sums are exactly equal**. The margin is irrelevant — 1 vs 2
-  gives the same full swing as 1 vs 5. So the three states are `left down / level / right down`.
-- It reads **`stackMass`, i.e. the SUM of everything resting on that half, recursively through
-  heads** — unlike a plate, which reads `max(mass)`. Measured: Earth(2) vs Fire+Water(2) → stays dead
-  level for 200+ ticks; Fire+Water+Air(3) vs Earth(2) → full swing.
-- `range: 6` → each half swings **±3 tiles** (±96 px) from its rest row; `range: 12` → ±6 tiles.
-- **The swing stops on whatever is in its way, like a lift.** With rock 3 rows above the rising
-  half, the plank stopped at `d=68` instead of 96 — the *rider's head* hitting the ceiling jams the
-  whole plank (both halves move in one `moveSolidPx`, so if either is blocked nothing moves). Put
-  rock under one half and that half can never descend; the plank then jams level instead.
+  thick**; `d` moves **2 px/tick**, so a full `range: 12` swing takes ~96 ticks.
+- It is a **comparator, not a scale**: the target is `+range*32/2` if left-sum > right-sum,
+  `-range*32/2` if right > left, and **0 when the two sums are exactly equal**. The margin is
+  irrelevant — 1 vs 2 swings exactly as far as 1 vs 5. Three states only: left down / level / right
+  down, and "level" is reached only by exact equality.
+- It reads **`stackMass`: the SUM of everything resting on that half, recursively through heads** —
+  unlike a plate, which reads `max(mass)` and ignores riders. Measured: Earth(2) vs Fire+Water(2)
+  stays dead level for 200+ ticks; Fire+Water+Air(3) vs Earth(2) gives the full swing.
+- `range: 6` → each half swings ±3 tiles from its rest row; `range: 12` → ±6 tiles.
+- **`moveSolidPx` does not test tiles.** A seesaw half passes straight *through* rock; the swing is
+  stopped only when an **actor** in the way cannot be pushed, and because both halves move in one
+  call, either one being blocked freezes the whole plank. Two consequences worth knowing:
+  - rock under a half does not pin the half, it pins the half's **rider** — so rock one row below a
+    half's rest row turns "Earth rides it six tiles down" into "Earth sags it exactly one tile", and
+    that sag is what makes a plank boardable at all (the first body on to a level plank otherwise
+    always tips it and rides it away);
+  - a rider's **head hitting a ceiling** jams the plank too. In the first probe the swing stopped at
+    `d=68` of a possible 96 purely because Air's head met rock three rows above.
 - A half carries its riders both up and down; three players fit side by side on a 3-tile half.
-- Full ±6-tile swing takes ~96 ticks (1.6 s).
-
-## The map (40×22) — build this
-
-Rows, with `#` rock, `.` air, `=` one-way:
-
-- 0 rock. 1: loft air, cols 17–27 open. 2: **loft floor**, cols 17–19 open (seat's top), cols 20–27
-  rock. 3–7: seat shaft cols 17–19 open; hall headroom cols 1–13 rows 5–7 open (rows 3,4 rock);
-  cols 20–27 rock.
-- 8: **hall floor** — cols 1–9 rock, **10–11 `=`** (stair mouth), 12–13 rock, **14–19 open** (the
-  plank), 20+ rock.
-- 9–11: rock at cols 1–13 except the stair shaft cols 10–11 (one-ways at rows 9 and 11); cols 14–16
-  open (vault); 17+ rock.
-- 12–14: cellar, cols 1–16 open; one-way at row 13 cols 10–11; cols 17+ rock.
-- 15: cellar floor rock cols 1–13 and 17+; **cols 14–16 rock too** (so the pan's lowest row 14 sits
-  one tile *above* the floor — this is what stops the stone being pushed back into the vault and
-  lost). 16–21 rock.
-
-Entities:
-
-- `scale` seesaw `x:14, y:8, w:6, range:12` — pan = cols 14–16, seat = cols 17–19. Rest row 8 (flush
-  with the hall floor); pan's low = row 14; seat's high = row 2 (flush with the loft floor).
-- `stone` boulder at (15,7) — starts on the pan, so the plank sinks in the first 96 ticks.
-- `hp` plate `weight:"heavy"` at about (12,14) in the cellar → `gate`.
-- `beam` plate `weight:"heavy"` at (24,1) in the loft → `gate`. Sensor strip is `y*32+24 = 56`;
-  Earth on the loft floor spans y 34–64, so it reads.
-- `gate` door at col 7, `h:3`, rows 12–14, `required:2`, `latch:true`, inputs `hp` + `beam`.
-  (Keep ≥5 tiles from `hp` or `check` cries "can jump over door".)
-- Four exits in the cellar at cols 2–5, `y:13` (floor row 15 → `y = 15-2`).
-- Gems: earth in the loft, fire/water in the hall at row 7, air in the cellar at row 14.
-- Two signs in the hall: "Boulder 3.  Earth 2.  Fire, Water, Air 1 each." and "The plank is level
-  only when both ends weigh the same."
-
-Why **six** tiles of lift and not five: a four-high tower (Water+Fire+Air under Earth) puts Earth's
-feet at y=168, Earth jumps 76 px → y=92. A loft at row 3 has its surface at y=96 and Earth **gets in
-by 4 px**; at row 2 the surface is y=64 and Earth is 28 px short. The loft must be row 2.
-
-## Shortcut scripts to write (solution.mjs `shortcuts`)
-
-1. `Earth climbs a human ladder to the loft` — four-high tower under the plank shaft.
-2. `Two on the pan` — Fire + Water on the pan, Earth on the seat; the plank never moves.
-3. `Earth holds the cellar plate` — the gate's other key is in the loft and only Earth can press it.
+- A boulder pushed off a half's lip comes to rest with its far edge exactly at the half's edge, so a
+  half's lowest position should be **one tile above** the floor the cargo lands on: the cargo then
+  cannot be pushed back under the half (no uphill push) and cannot jam its descent.
+- Dropping through a one-way ledge is **edge-triggered like jump**: holding Down gives exactly one
+  drop. Pulse it (7 ticks on, 7 off) to descend a stack of ledges.
+- Towers: with both halls capped at three tiles of headroom, the only place a human ladder can be
+  built is the plank shaft, standing on the seat — whose own sag drops the tower's base a tile. Off a
+  partner's head there Earth reaches y=182; off a three-high tower, y≈124.

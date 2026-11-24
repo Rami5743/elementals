@@ -164,6 +164,89 @@ const air = function* (c) {
   c.flag('pan_clear');
 };
 
+
+// ---------------------------------------------------------------- cheats that must fail
+
+/** Stand still at tile x for as long as the shortcut runs. */
+const parks = (x) => function* (c) {
+  yield* go(c, x);
+  yield* wait(c, 5800);
+};
+
+/** Water offers its head in the shaft; Earth climbs it and jumps for the loft. */
+const waterOffersAHead = function* (c) {
+  yield* go(c, 12);
+  yield* hopUp(c, 1, 300);          // down on to the pan... which sinks with it
+  yield* wait(c, 5800);
+};
+const ladderWater = function* (c) {
+  yield* waitFlag(c, 'stone_placed');
+  yield* go(c, 12);
+  yield* until(c, () => c.me.grounded === 1 && c.bottom >= 286, IN_RIGHT, 400, 'to reach the seat');
+  yield* go(c, 17, { noHop: true });
+  yield* wait(c, 5500);
+};
+const ladderEarth = function* (c) {
+  // the honest opening: get the stone off the pan so the plank can be used at all
+  yield* until(c, () => PAN_DOWN(c), 0, 400, 'the plank to settle');
+  yield* go(c, 22);
+  yield* sink(c, 480);
+  yield* go(c, 16);
+  yield* hopUp(c, -1, 450);
+  yield* go(c, 15, { noHop: true });
+  yield* until(c, () => c.ent('stone').s.y >= 440, IN_LEFT, 900, 'to push the stone off the pan');
+  c.flag('stone_placed');
+  yield* stepOff(c, 1, 480);
+  yield* go(c, 22);
+  yield* climb(c, 256);
+  // now climb on to Water's head in the shaft and jump for the loft
+  yield* go(c, 19);
+  for (let k = 0; k < 10; k++) {
+    yield* jump(c, -1, { hold: 30, steerUntil: 17 });
+    if (c.bottom <= 262) break;
+  }
+  for (let k = 0; k < 12; k++) {
+    yield* jump(c, 0, { hold: 30 });
+    if (c.bottom <= 70) break;
+  }
+  yield* go(c, 23, { max: 2500 });
+  yield* wait(c, 1500);
+};
+
+/** Two on the pan: 2 against Earth's 2 is a dead level plank. */
+const twoOnPanEarth = earth;
+
+/** Earth holds the cellar plate itself instead of spending the stone on it. */
+const plateEarth = function* (c) {
+  yield* until(c, () => PAN_DOWN(c), 0, 400, 'the plank to settle');
+  yield* go(c, 22);
+  yield* sink(c, 480);
+  yield* go(c, 12);              // stand on the heavy plate: Earth counts as heavy
+  yield* wait(c, 5000);
+};
+/** Earth spends the stone on the plate and then simply stays down in the cellar. */
+const stayDownEarth = function* (c) {
+  yield* until(c, () => PAN_DOWN(c), 0, 400, 'the plank to settle');
+  yield* go(c, 22);
+  yield* sink(c, 480);
+  yield* go(c, 16);
+  yield* hopUp(c, -1, 450);
+  yield* go(c, 15, { noHop: true });
+  yield* until(c, () => c.ent('stone').s.y >= 440, IN_LEFT, 900, 'to push the stone off the pan');
+  yield* stepOff(c, 1, 480);
+  yield* go(c, 16);
+  yield* wait(c, 4000);
+};
+
+const plateRider = (exitX) => function* (c) {
+  yield* wait(c, 500);
+  yield* go(c, 12);
+  yield* until(c, () => c.me.grounded === 1 && c.bottom >= 440, IN_RIGHT, 900, 'to ride the pan down');
+  yield* hopOver(c, -1, 10);
+  yield* go(c, exitX, { max: 2500 });
+  yield* wait(c, 2000);
+};
+
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
   level: 'makeweight',
@@ -171,7 +254,24 @@ export const solutions = {
     {
       elements: ['fire', 'water', 'earth', 'air'],
       scripts: { fire, water, earth, air },
-      shortcuts: [],
+      shortcuts: [
+        {
+          name: 'Earth climbs a partner in the shaft and jumps for the loft',
+          scripts: { earth: ladderEarth, water: ladderWater, fire: parks(4), air: parks(6) },
+        },
+        {
+          name: 'Two on the pan instead of three',
+          scripts: { earth: twoOnPanEarth, fire, water, air: parks(6) },
+        },
+        {
+          name: 'Earth tries to hold the cellar plate without moving the stone',
+          scripts: { earth: plateEarth, fire: plateRider(4), water: plateRider(3), air: plateRider(2) },
+        },
+        {
+          name: 'Earth spends the stone on the plate and then stays in the cellar',
+          scripts: { earth: stayDownEarth, fire: plateRider(4), water: parks(5), air: parks(7) },
+        },
+      ],
     },
   ],
   roles: {

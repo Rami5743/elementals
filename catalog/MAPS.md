@@ -2071,3 +2071,52 @@ Entities:
   X  exit_19      exit       at (24,18)  earth
   X  exit_20      exit       at (33,2)  air
 ```
+
+## Makeweight (`makeweight`) — 4p, core `the-plank-sums-what-the-plate-only-maxes`
+
+```
+Makeweight (makeweight) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ################.....*.p...#############
+ 2  ################...#####################
+ 3  ################...#####################
+ 4  ################...#####################
+ 5  #..........................#############
+ 6  #..........................#############
+ 7  #...@.@.@.**.O......@......#############
+ 8  #############zzzzzz###==################
+ 9  #############...######==################
+10  #############...######..################
+11  #############...######==################
+12  #......D...................#############
+13  #.XXXX.D.....*........==...#############
+14  #.XXXX.D....p..............#############
+15  ########################################
+16  ########################################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (4,7)  water (6,7)  air (8,7)  earth (20,7)
+Entities:
+  z  scale        seesaw     at (13,8)  6x1  range 12
+  O  stone        boulder    at (13,7)
+  p  hp           plate      at (12,14)  -> gate  weight heavy
+  p  beam         plate      at (23,1)  -> gate  weight heavy
+  D  gate         door       at (7,12)  1x3  <- hp, beam (needs 2)  latch
+  X  exit_5       exit       at (2,13)  air
+  X  exit_6       exit       at (3,13)  water
+  X  exit_7       exit       at (4,13)  fire
+  X  exit_8       exit       at (5,13)  earth
+  *  gem_9        gem        at (21,1)  earth
+  *  gem_10       gem        at (10,7)  fire
+  *  gem_11       gem        at (11,7)  water
+  *  gem_12       gem        at (13,13)  air
+  "  sign_13      sign       at (2,5)  "Boulder 3.  Earth 2.  Fire, Water, Air 1 each."
+  "  sign_14      sign       at (2,6)  "Level only when both ends weigh the same."
+```
