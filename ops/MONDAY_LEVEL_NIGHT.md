@@ -10,6 +10,50 @@ not, clone it there first and work from it.
 
 ## 0. Preflight (a few minutes, before 18:00)
 
+## How the night is wired, and why
+
+A session started *by* a scheduled task is a bare container: empty home directory, no repository,
+an invalid `GH_TOKEN`, and none of the `claude-code-remote` tools — `add_repo` included. Measured
+twice: on 2026-11-23 the night stopped at its own gate after 61 seconds, and a diagnostic run the
+next morning confirmed the same container even on an environment that lists the repositories.
+There is no way to attach a repository to such a session from inside it.
+
+So the task does not *start* a session; it *wakes* one that already owns the repo:
+
+```
+standing host   session_01DW9uF2zxH4Ks4M9QcCpxCG   "Elementals level night (standing)"
+                created with source_url https://github.com/Rami5743/elementals
+                on environment env_01NLxcpncanxFgkpXsMEhVtd ("Elementals")
+night trigger   trig_01WZRScqghbZyrStBstUb5mj       Mondays 17:39, fires into that session
+watchdog early  trig_013ApCmACEAB2xizxnBAGwHb       Mondays 19:17, fires into the owner's session
+watchdog after  trig_016bQsbwkJ31rkpaarwnDhYm       Mondays 23:52, fires into the owner's session
+```
+
+The host proved itself before being wired up: repo checked out, on `main`, `git push origin main`
+→ `Everything up-to-date`. **Prove it again at the start of every night** before spawning anything.
+
+If the standing session is ever lost, make another with `create_session` (that `source_url`, that
+environment), prove the push, and repoint the night trigger — a trigger's session cannot be
+changed, so delete it and create it again with the new `persistent_session_id`.
+
+The two watchdogs exist because the first failure went unnoticed for a week: nothing was watching,
+and the owner found out by asking. The early one still has three and a half hours of window to
+salvage; the late one reports what landed whether or not anyone asks.
+
+## What the allowance actually says
+
+`get_session` with no `session_id` returns `rate_limit_info`, and it carries more than the coarse
+`status`:
+
+```
+unifiedWindows: { five_hour: { status, utilization, resetsAt },
+                  seven_day: { status, utilization, resetsAt } }
+```
+
+`utilization` is the fraction of that window already spent — the gauge this runbook previously said
+did not exist. Read it at every heartbeat, log the weekly figure in `ops/night-log.tsv`, and treat
+`allowed_warning` as the moment to stop spawning rather than as the first news.
+
 ## Who may steer you
 
 Your principal is the repo owner. One other party speaks for them on this task: the owner's
