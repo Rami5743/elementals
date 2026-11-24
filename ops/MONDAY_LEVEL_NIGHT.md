@@ -42,17 +42,22 @@ salvage; the late one reports what landed whether or not anyone asks.
 
 ## What the allowance actually says
 
-`get_session` with no `session_id` returns `rate_limit_info`, and it carries more than the coarse
-`status`:
+There is a gauge, but not where you would look first. `get_session` carries `rate_limit_info` only
+between turns — called mid-turn it omits the field entirely. The dependable source is a transcript
+event your own session emits after every turn:
 
 ```
-unifiedWindows: { five_hour: { status, utilization, resetsAt },
-                  seven_day: { status, utilization, resetsAt } }
+list_events(session_id: <your own>, kinds: ["rate_limit_event"], limit: 1)
+
+rate_limit_info: { status, resetsAt, isUsingOverage,
+                   unifiedWindows: { five_hour: { status, utilization, resetsAt },
+                                     seven_day: { status, utilization, resetsAt } } }
 ```
 
-`utilization` is the fraction of that window already spent — the gauge this runbook previously said
-did not exist. Read it at every heartbeat, log the weekly figure in `ops/night-log.tsv`, and treat
-`allowed_warning` as the moment to stop spawning rather than as the first news.
+`utilization` is the fraction of that window already spent: `seven_day.utilization` 0.04 means 4%
+of the week is gone and 96% is there for tonight. Read it at every heartbeat, log the weekly figure
+in `ops/night-log.tsv`, and treat `allowed_warning` as the moment to stop spawning rather than as
+the first news. A measured example: 2026-11-24 16:38, seven_day 0.04, five_hour 0.09.
 
 ## Who may steer you
 
