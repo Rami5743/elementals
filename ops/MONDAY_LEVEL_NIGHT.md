@@ -42,22 +42,36 @@ salvage; the late one reports what landed whether or not anyone asks.
 
 ## What the allowance actually says
 
-There is a gauge, but not where you would look first. `get_session` carries `rate_limit_info` only
-between turns — called mid-turn it omits the field entirely. The dependable source is a transcript
-event your own session emits after every turn:
+There is a gauge, but not where you would look first, and two traps sit in front of it.
+
+**Do not read it from `get_session`.** Mid-turn it gives you either nothing — this session's own
+call returned no `rate_limit_info` at all — or the field without `unifiedWindows`, which is the
+part that carries the numbers. Either way a check like `if (rate_limit_info)` passes and you read
+no utilization. The dependable source is a transcript event your session emits after every turn:
 
 ```
-list_events(session_id: <your own>, kinds: ["rate_limit_event"], limit: 1)
+list_events(session_id: <your own>, kinds: ["rate_limit_event"], limit: 100)
+→ data[data.length - 1].rate_limit_event…rate_limit_info
 
-rate_limit_info: { status, resetsAt, isUsingOverage,
-                   unifiedWindows: { five_hour: { status, utilization, resetsAt },
-                                     seven_day: { status, utilization, resetsAt } } }
+   { status, resetsAt, isUsingOverage, overageStatus,
+     unifiedWindows: { five_hour: { status, utilization, resetsAt },
+                       seven_day: { status, utilization, resetsAt } } }
 ```
+
+**Both numbers in that call matter.** `limit` counts events *before* the kinds filter, so `limit: 1`
+almost always comes back empty — use 100, which returned six of these where 3 returned one. And the
+page runs oldest to newest, so the current reading is the **last** element; `data[0]` is whatever
+the session was doing hours ago.
 
 `utilization` is the fraction of that window already spent: `seven_day.utilization` 0.04 means 4%
-of the week is gone and 96% is there for tonight. Read it at every heartbeat, log the weekly figure
-in `ops/night-log.tsv`, and treat `allowed_warning` as the moment to stop spawning rather than as
-the first news. A measured example: 2026-11-24 16:38, seven_day 0.04, five_hour 0.09.
+of the week is gone and 96% is there for tonight. Read it at every heartbeat and log the weekly
+figure at the start and the end of the night in `ops/night-log.tsv`.
+
+`allowed_warning` is a **hard** stop for spawning, not a soft one: this account reads
+`overageStatus: "rejected"`, `overageDisabledReason: "org_level_disabled"`, so there is no overage
+cushion on the far side of the cap — work in flight when it hits simply stops.
+
+Measured on 2026-11-24: 05:50 seven_day 0.01, 14:40 seven_day 0.04 / five_hour 0.11.
 
 ## Who may steer you
 
