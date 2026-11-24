@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 41 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 42 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (13)
@@ -224,7 +224,7 @@ Totals: 79 campaign levels, 41 in this repo, of which 11 now ship in the campaig
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (14)
+## 3 players — this repo (15)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -282,6 +282,10 @@ Totals: 79 campaign levels, 41 in this repo, of which 11 now ship in the campaig
   - idea: a conveyor with no off switch, only a direction — the one stone it carries is always pinned against the west buffer or the east buffer and never anywhere between, so the lever does not turn anything on, it decides which end of the level has power.
   - ideas: two-stops-no-middle, no-hands-for-cargo, twist-undo, freeze-bridge
   - features: ent:belt ent:boulder ent:door ent:fan ent:freezepad ent:lever ent:plate ent:pool ent:torch opt:belt:reverse opt:belt:walkable opt:fan:lifts-air opt:fan:lifts-fire-water opt:heavy-plate opt:pool-timed opt:required:2 tile:mist tile:water
+- **Headlong** `headlong` (3p: water+earth+air) core=`the-only-way-in-front-of-the-stone-is-to-dive-after-it` challenge=motor par=7200
+  - idea: a runaway nobody can overtake, and a way down that only opens at the instant it is loosed — so the only way to get in front of the stone is to throw yourself off the catwalk after it.
+  - ideas: dive-ahead-of-the-runaway, shared-switch-two-gates, twist-setup, object-as-permanent-switch
+  - features: ent:boulder ent:button ent:door ent:elevator ent:plate ent:turbine opt:button:hold opt:elevator:powered opt:heavy-plate opt:rolling-boulder tile:one-way tile:slope tile:water
 
 ## 3 players — campaign (30)
 

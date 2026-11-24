@@ -1,157 +1,144 @@
 # Headlong
 
-**Introduces:** a runaway nobody can overtake, and a shaft that only opens at the instant it is
-loosed — so the only way to get in front of the stone is to throw yourself down the hole after it.
+**Introduces:** a runaway nobody can overtake, and a way down that only opens at the instant it is
+loosed — so the only way to get in front of the stone is to throw yourself off the catwalk after it.
 
-## The design, before any JSON (milestone 1)
+## The intended solution
 
-### The core, in one sentence
+The stone starts in the bay, at the bottom of everything.
 
-A rolling stone goes 4 px a tick and nobody runs faster than 3.4, so the stone can never be caught
-from behind — and the one switch that looses it is also the one that opens the dive shaft, so the
-only way to be standing in front of the stone is to jump down the hole the moment it goes.
+1. **Earth** walks round behind the stone and shunts it the length of the bay, past the hoist, up
+   towards the west wall. Earth's gem is on the way.
+2. Earth **hops over the stone** and shunts it back east on to the hoist's deck. The hop is the
+   whole point of going past: from here on Earth pushes eastward, and so ends up on the uphill side
+   of the stone — which is the side it has to be pushed from at the top.
+3. Earth keeps a hand on the hoist's control rail for the whole climb and rides up beside the
+   stone to the gallery.
+4. Earth shoves the stone off the deck on to the **head of the chute**. It runs away down the
+   stepped slope of its own accord and parks against the **pen door**, four tiles down. Letting go
+   of the rail, Earth rides back down to the bay.
+5. **Air** climbs the people's ladder to the gallery, takes its gem, and waits *beside* the
+   turbine — not on it.
+6. **Water** climbs the ladder too, goes west to the stair well, hops up the one-way ledge and the
+   step on to the **catwalk**, wades the pool at its mouth, and runs the whole length of the
+   catwalk to the gate at its east end.
+7. Air steps on to the **turbine**. That one touch opens the pen door *and* the catwalk gate
+   together: the stone is away down the chute, and the only way down to the ledge has just opened.
+8. Water goes through the gate, runs off the end of the catwalk, and **pulls back west in mid-air**
+   to land on the three-tile ledge at the foot of the chute.
+9. The stone arrives, runs on to the heavy pad, and is **stopped dead by Water standing beyond
+   it**. Its weight holds the pad, and the pad holds the way gate in the bay open.
+10. Air leaves the turbine; Air and Earth come down the ladder, Water steps off the ledge into the
+    void, and all three walk through the open gate to their doors.
 
-`core` tag: `the-only-way-in-front-of-the-stone-is-to-dive-after-it`
-
-`ideas`: `dive-ahead-of-the-runaway` (coined), `shared-switch-two-gates`, `twist-setup`,
-`object-as-permanent-switch`.
-
-### Measured facts this is built on
-
-Probed against `kit.mjs` before designing:
-
-- A `rolls: true` boulder accelerates to exactly **4.00 px a tick** after about two tiles of slope
-  and holds that speed for the rest of the slope.
-- On the flat it decelerates 0.08 px a tick² and **runs out 3.1 tiles**, then stops dead.
-- Earth walks down a slope at its normal 2.57 px a tick, so it falls steadily behind the stone.
-- Nobody runs faster than Air at 3.4, so **once the stone is rolling, it cannot be overtaken.**
-
-### The shape
-
-Three storeys, stacked, with one machine linking them:
-
-- **Top gallery** (west, high): the turbine (Air only), the stone's pen part-way down the head of
-  the ramp, and the hatch over the dive shaft.
-- **The ramp**: a long slope running down and east from the pen to the trench.
-- **The trench** (the ramp's foot): a heavy plate, two tiles of standing room beyond it, and then a
-  hole in the floor.
-- **The bay** (below the trench): the three exits behind a gate, and the long return ramp back up
-  to the top gallery. The stone starts here.
-
-The dive shaft drops from the top gallery straight into the trench, and has **water** in it: Water
-falls through unharmed and nobody else can use it at all.
-
-### Each player's job, and why nobody else could do it
-
-- **Earth** — hauls the stone out of the bay, all the way up the return ramp, and parks it in the
-  pen. *Only Earth can push a boulder at all* (measured: Fire pressed into one for 600 ticks and it
-  did not move). This is the long setup, and it has to be redone after every miss.
-- **Air** — touches the turbine. A turbine answers to **Air only, wherever it is placed**, so this
-  cannot be faked by height, a head-stack or a crate. Touching it opens the pen *and* the hatch at
-  the same instant: Air starts everyone's clock.
-- **Water** — the brake. Water dives down the shaft and stands in the stone's path, which stops it
-  on the plate. *Only Water can go down the shaft*, because there is water in it; and Earth and Air
-  would die in it. Water is also too light (mass 1) to hold the heavy plate, so Water cannot stand
-  in for the stone.
-
-### The forced order, and why it is not readable off the map
-
-1. Earth hauls the stone up the return ramp, through the gallery, and lets it onto the ramp head,
-   where it rolls down of its own accord and parks against the pen door.
-2. Water and Air climb to the top gallery too — **all three have to be up there**, because the
-   trench cannot be entered until the hatch opens, and the hatch opens only with the pen.
-3. Air touches the turbine. The pen door and the hatch open together.
-4. The stone takes the ramp at 4 px a tick.
-5. Water goes down the hatch *immediately* and lands in the trench ahead of it.
-6. The stone arrives, runs onto the plate, and is stopped by Water standing beyond it.
-7. The plate (heavy, not latched) holds the exit gate in the bay open for as long as the stone sits
-   on it.
-8. Earth and Air walk down the ramp; Water drops through the hole in the trench floor; everybody
-   finishes in the bay.
-
-What is not readable: that step 2 is a step at all. The natural plan is to leave somebody down in
-the trench to catch the stone, and the map does not say out loud that there is no way down there
-until the stone is already gone.
-
-### The twist — the counter-intuitive step
-
-You have to let the stone go **before** you can get in front of it, and then jump off a cliff into
-its path. Walking down the ramp behind it is the safe-looking move and it never, ever works: the
-stone is faster than anybody and it has an eight-tile head start on the only route that looks like
-a route.
-
-### The interlock
-
-Loosing the stone is the only way into the trench, and the trench is a one-way drop: its floor has
-a hole that lets out into the bay, and nothing climbs back up from the bay except by the long
-return ramp. So a miss costs the whole haul again — Earth down to the bay, stone up the ramp,
-everybody back to the top.
-
-### One resource, several claims
-
-One stone. It is the only mass-2-or-more thing in the level, so it is the only thing that can hold
-the heavy plate; it is also the thing that has to be hauled; and it is the thing whose release is
-the only key to the trench. Every claim on it runs through the same single run down the ramp.
-
-### Two plausible wrong plans, and why each fails
-
-1. **"Leave Water down in the trench to catch it."** There is no way into the trench before the
-   stone goes: the ramp head is behind the pen door, the hatch is shut, and the hole in the trench
-   floor only lets out. One sentence: *the door that looses the stone is the only door into the
-   room it runs into.*
-2. **"Let it overrun, then push it onto the plate by hand."** An unbraked stone runs 3.1 tiles past
-   the ramp's foot, which puts it through the hole and back into the bay — and the bay is two tiles
-   below the trench, so a pushed stone can never get back up there. One sentence: *the only tile
-   the stone can ever be placed on is the plate, and only a moving stone can get there.*
-
-### The motor challenge, stated plainly
-
-One precision moment, and it is the whole level: **from the tick Air touches the turbine, Water has
-to get to the hatch, drop through it, and be standing in the two-tile pocket beyond the plate before
-the stone finishes the ramp.** The fall is faster than the ramp, so the margin is real but not
-cruel — a prompt dive wins by a comfortable margin, a hesitation loses. The landing pocket is two
-tiles wide, not one. The attempt repeats forever: a missed stone goes back to the bay, Earth hauls
-it round, everybody tries again. Nothing can be lost and nobody can die doing it.
-
-### Fairness
-
-- The pocket Water has to land in is **2 tiles** wide.
-- The hatch is held open by Air for as long as Air stands on the turbine, so there is **no short
-  door window** to run — the only clock is the stone, which players can see coming.
-- A miss costs time (the haul again), never the level, and never a death.
-- The dive is legible before it is attempted: standing on the gallery you can see the shaft, the
-  trench, the plate and the stone's ramp all at once.
+`check`: solved in **38.5 s**, par 120 s, 3/3 gems, no deaths, no warnings.
 
 ## Why each player is needed
 
-(see "Each player's job" above — Earth is the only thing that moves a boulder, Air is the only
-thing a turbine answers to, Water is the only thing that survives the shaft and the only one light
-enough not to be able to cheat the plate.)
+- **Earth** — the only thing in the game that can move a boulder at all (measured: Fire pressed into
+  one for 600 ticks and it did not shift a pixel). Earth is the whole of the setup, and the only one
+  who can put the stone back on the hoist after a miss. Earth also cannot do anything else: its 76 px
+  jump will not carry it up the stair well to the catwalk, and the pool at the catwalk's mouth would
+  stop it even if it did.
+- **Air** — the only thing a turbine answers to, wherever it is placed, so this cannot be faked by
+  height, a head-stack or a crate. Air starts everybody's clock. And Air cannot then be the brake:
+  the gate it opened shuts the moment it steps off the turbine, which is proved by a shortcut.
+- **Water** — the only one who can be on the catwalk at all (the pool at its mouth is three tiles
+  wide: too wide for Earth to jump and lethal to anyone but Water), and therefore the only one who
+  can reach the ledge. Water is also mass 1, far too light to hold the heavy pad, so Water cannot
+  stand in for the stone.
 
 ## The insight
 
-The stone is loose before you can be in front of it, so the dive has to be part of the plan, not a
-reaction to it.
+The stone is loose before anybody can be in front of it, so the dive has to be part of the plan
+rather than a reaction to it. A rolling boulder holds 4 px a tick and the fastest player manages
+3.4, so it can never be caught from behind; and the single turbine that looses it is the same
+turbine that opens the catwalk. The way to get ahead of the stone is to let it go first and then
+fall, because falling is quicker than any road in the level.
+
+## The motor challenge
+
+One precision moment, and it is the whole level: from the tick Air touches the turbine, Water has to
+clear the gate, run off the end of the catwalk and pull back west on to the ledge before the stone
+finishes the chute.
+
+- **Measured forgiveness: about two seconds.** Up to 90 ticks of hesitation still makes it; 120
+  ticks loses the stone. Both are scripted — "Water strolls the catwalk instead of running" is in
+  `shortcuts` and proves the clock is load-bearing.
+- **The landing is three tiles wide** (the whole ledge), and a brake that lands on the wrong tile
+  can simply walk along: the stone follows a body down the last of the slope and stops wherever
+  that body stops.
+- **No door window to run.** The catwalk gate stays open for exactly as long as Air stands on the
+  turbine, so there is nothing to sprint but the stone itself — and players can watch it coming
+  down the chute.
+- **Legible before it is attempted.** From the catwalk you can see the chute, the ledge, the pad and
+  the drop beyond it all at once.
+- **Every attempt repeats.** A missed stone runs off the ledge into the bay, and Earth hauls it
+  round again. Nothing is destroyed and nobody dies doing it.
 
 ## Likely failures and how players recover
 
-- *Water dives late.* The stone runs past the pocket, drops through the hole, lands in the bay.
-  Earth hauls it up the return ramp again. Nothing is lost.
-- *Water dives too early, before Air touches the turbine.* Impossible — the hatch is shut.
-- *Earth pushes the stone off the plate afterwards.* It falls through the hole into the bay; haul it
-  up again.
-- *Somebody walks down the ramp instead of diving.* They arrive after the stone; the stone is
-  already in the bay. Haul it up again.
+- **Water dives late.** The stone runs the length of the ledge, drops into the bay, and the haul
+  starts again: Earth shunts it back to the hoist, Water and Air climb back up. About half a minute,
+  and nothing is lost.
+- **Water forgets to steer west and lands in the void.** Water drops to the bay — the same cost, and
+  Water has to climb back up with everyone else.
+- **Somebody tries to follow the stone down the chute.** The chute is only reachable from the hoist
+  deck, and the stone is faster than anybody; they arrive at an empty ledge.
+- **Earth knocks the stone off the pad afterwards.** It falls into the bay. Haul it round again.
+- **Somebody falls into the hoist shaft.** The control rail runs the height of the shaft, so anyone
+  caught in the pit under the deck can call the platform up off themselves.
+- There is a **checkpoint** in the bay, beside the spawns.
 
 ## Shortcuts that were closed
 
-(filled in as each is scripted and proved — see `shortcuts` in solution.mjs)
+All four are scripted in `shortcuts` in `solution.mjs`, and `check` prints the reason each one
+fails.
+
+1. **"Water waits on the ledge before the stone is loosed."** This is the central claim, so it is
+   the central proof. Air stays off the turbine; Water climbs to the catwalk and walks east.
+   *Fails:* `water could not reach x=31` — the catwalk gate is shut, and the only switch that opens
+   it is the same one that looses the stone. The chute is no use either: it is reachable only from
+   the hoist deck, and the pen door blocks it.
+2. **"Water strolls the catwalk instead of running."** Everything done right but two seconds late.
+   *Fails:* `earth could not reach x=35` — the stone was never braked, so it went into the bay and
+   the way gate never opened. This is what makes the motor demand real rather than decorative.
+3. **"Air looses the stone and goes to brake it itself, so Water is not needed."** *Fails:*
+   `air died` in the pool at the mouth of the catwalk. Behind that lies a second block: the gate
+   shuts the moment Air steps off the turbine, so Air could not have got past it either.
+4. **"Earth goes to hold the heavy pad itself instead of fetching the stone."** Earth is mass 2 and
+   would hold a heavy plate perfectly well. *Fails:* `earth timed out waiting to stand on the stair
+   ledge` — Earth's 76 px jump will not take it up the stair well, so Earth can never reach the
+   catwalk, and the three-tile pool is behind that. The cheat carries an assertion that would fire
+   if Earth ever did reach the pad, so the block cannot quietly stop working.
+
+Hunted and answered without needing a script:
+
+- **Could somebody jump the barriers from a partner's head?** The catwalk pool is a liquid, not a
+  height; a head-stack does not help. The pen door and the catwalk gate are both three tiles under a
+  solid roof.
+- **Could a player stand on the heavy pad instead of the stone?** Only Earth is heavy enough and
+  Earth cannot get to the ledge (above). And the pad does not latch, so even if Earth were standing
+  on it, Earth could not also be in its door — the level would not finish.
+- **Could someone ride the hoist beside the cargo?** Yes, deliberately: Earth has to, in order to
+  push the stone off at the top. The deck is three tiles wide for exactly that.
+- **Can the level reach a state it cannot be finished from?** No, and this took work. The hoist's
+  control is a hold button running the height of the shaft: the mouth is never open unattended, so
+  the stone cannot be shoved into an empty shaft and lost, and anybody who does fall into the pit
+  under the deck can call the platform up off themselves. (With an ordinary button on the deck, a
+  player in that pit was pinned under the returning platform for good — found by probing, and the
+  reason the control is a rail.)
+- **Is the way back open when it should not be?** The gallery is cut off from the chute whenever the
+  platform is away, and the ledge drains one way into the bay, so nobody can loiter where the stone
+  is going to be.
 
 ## Kinship with the campaign
 
-Nearest campaign level: **Flash** (`l73_flash`) — a boulder rolled over a plate nobody else can
-reach, opening a gate for a moment. There the stone's roll *is* the window and the players wait
-beside the gate; here the stone's roll is the thing you have to beat to a place you cannot already
-be, and the stone has to be stopped dead on the plate rather than merely pass over it. **Ferry**
-(`l67_ferry`) and **Hoist** (`l72_hoist`) also roll a stone down a slope, as transport and as a
-weight; neither makes the stone something you have to get ahead of.
+Nearest campaign level: **Flash** (`l73_flash`) — a boulder rolled over a heavy plate nobody else
+can reach, opening a gate for a moment. There the roll *is* the window and the players stand beside
+the gate waiting for it; here the roll is the thing you have to beat to a place you are not allowed
+to be standing yet, and the stone has to be stopped dead on the plate instead of merely crossing it.
+**Ferry** (`l67_ferry`) and **Hoist** (`l72_hoist`) also send a stone down a slope — as transport
+and as a weight — but in neither is the stone something you have to get *ahead* of. Nothing in the
+campaign makes the switch that releases the runaway also be the switch that opens the only road to
+where it is going.

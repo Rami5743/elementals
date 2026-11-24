@@ -3216,6 +3216,44 @@
   }
  },
  {
+  "id": "headlong",
+  "name": "Headlong",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "water+earth+air"
+  ],
+  "parTicks": 7200,
+  "dark": false,
+  "challenge": "motor",
+  "core": "the-only-way-in-front-of-the-stone-is-to-dive-after-it",
+  "ideas": [
+   "dive-ahead-of-the-runaway",
+   "shared-switch-two-gates",
+   "twist-setup",
+   "object-as-permanent-switch"
+  ],
+  "order": 215,
+  "line": "a runaway nobody can overtake, and a way down that only opens at the instant it is loosed — so the only way to get in front of the stone is to throw yourself off the catwalk after it.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:plate",
+   "ent:turbine",
+   "opt:button:hold",
+   "opt:elevator:powered",
+   "opt:heavy-plate",
+   "opt:rolling-boulder",
+   "tile:one-way",
+   "tile:slope",
+   "tile:water"
+  ]
+ },
+ {
   "id": "headroom",
   "name": "Headroom",
   "source": "mine",
