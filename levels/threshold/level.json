@@ -43,7 +43,7 @@
   ],
   "spawns": {
     "fire": [
-      4,
+      8,
       19
     ],
     "earth": [
@@ -51,7 +51,7 @@
       19
     ],
     "air": [
-      8,
+      4,
       19
     ]
   },
@@ -59,9 +59,19 @@
     {
       "id": "tunnel_plate",
       "type": "plate",
-      "x": 10,
+      "x": 2,
       "y": 19,
       "weight": "heavy",
+      "targets": [
+        "tunnel_gate"
+      ]
+    },
+    {
+      "id": "catch",
+      "type": "button",
+      "x": 22,
+      "y": 19,
+      "mode": "hold",
       "targets": [
         "tunnel_gate"
       ]
@@ -72,7 +82,8 @@
       "x": 28,
       "y": 19,
       "w": 1,
-      "h": 1
+      "h": 1,
+      "required": 2
     },
     {
       "id": "draught",
@@ -186,9 +197,9 @@
     },
     {
       "type": "sign",
-      "x": 21,
+      "x": 19,
       "y": 17,
-      "text": "Lava. No room to jump."
+      "text": "The hatch takes a weight and a hand."
     }
   ]
 }

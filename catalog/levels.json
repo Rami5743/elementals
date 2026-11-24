@@ -3894,6 +3894,43 @@
   ]
  },
  {
+  "id": "threshold",
+  "name": "Threshold",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+earth+air"
+  ],
+  "parTicks": 4800,
+  "dark": false,
+  "challenge": "mind",
+  "core": "standing-in-your-own-door-is-the-switch",
+  "ideas": [
+   "threshold-is-a-switch",
+   "fan-passenger",
+   "hold-switch",
+   "machine-strands-operator",
+   "twist-order"
+  ],
+  "order": 216,
+  "line": "a plate under an exit — standing in your own front door is a switch, so the first player home is not finished but *employed*: the draught that carries everybody else up is powered by a body in a doorway, and that body can never step out again.",
+  "tokens": [
+   "ent:button",
+   "ent:door",
+   "ent:fan",
+   "ent:plate",
+   "ent:torch",
+   "opt:button:hold",
+   "opt:fan:hang-time",
+   "opt:heavy-plate",
+   "opt:required:2",
+   "tile:lava",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "treadmill",
   "name": "Treadmill",
   "source": "mine",

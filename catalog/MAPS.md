@@ -1347,6 +1347,59 @@ Entities:
   X  exit_14      exit       at (36,18)  air
 ```
 
+## Threshold (`threshold`) — 3p, core `standing-in-your-own-door-is-the-switch`
+
+```
+Threshold (threshold) for fire+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  #....D.....................D....###...##
+10  #.X..D............^^.......D.X..###..X##
+11  #.X..D............^^....p..D.X..###..X##
+12  ##########..######^^###############==###
+13  #.................^^.......########...##
+14  #.................^^.......########===##
+15  #.................^^.......########.*.##
+16  #.................^^.......########===##
+17  #.................^^.......########t..##
+18  #....!............^^.......########===##
+19  #.p.@!@.@.......*.^^..b..*..D.........##
+20  #############################LLLLLL#####
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (8,19)  earth (6,19)  air (4,19)
+Entities:
+  p  tunnel_plate plate      at (2,19)  -> tunnel_gate  weight heavy
+  b  catch        button     at (22,19)  -> tunnel_gate  mode hold
+  D  tunnel_gate  door       at (28,19)  <- tunnel_plate, catch (needs 2)
+  ^  draught      fan        at (18,10)  2x10  <- fire_thr  strength 1.54
+  p  landing_plate plate      at (24,11)  -> air_gate  weight heavy
+  D  air_gate     door       at (5,9)  1x3  <- landing_plate
+  p  air_thr      plate      at (2,11)  -> earth_gate
+  D  earth_gate   door       at (27,9)  1x3  <- air_thr, lamp (needs 2)
+  t  lamp         torch      at (35,17)  -> earth_gate
+  p  fire_thr     plate      at (37,11)  -> draught
+  X  exit_10      exit       at (2,10)  air
+  X  exit_11      exit       at (29,10)  earth
+  X  exit_12      exit       at (37,10)  fire
+  *  gem_13       gem        at (16,19)  earth
+  *  gem_14       gem        at (25,19)  air
+  *  gem_15       gem        at (36,15)  fire
+  !  checkpoint_16 checkpoint at (5,18)
+  "  sign_17      sign       at (10,15)  "The draught is dead until somebody is home."
+  "  sign_18      sign       at (19,17)  "The hatch takes a weight and a hand."
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

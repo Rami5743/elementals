@@ -1,5 +1,5 @@
 // Threshold — the plate under Fire's doorway is the draught's only input.
-import { IN_JUMP, IN_LEFT, IN_RIGHT, TILE, go, until, wait, waitFlag } from '../../kit.mjs';
+import { IN_INTERACT, IN_JUMP, IN_LEFT, IN_RIGHT, TILE, go, until, wait, waitFlag } from '../../kit.mjs';
 import { climbOnto, rideAlong } from '../_lib.mjs';
 
 const GALLERY = 12 * TILE; // the gallery floor's surface
@@ -50,7 +50,8 @@ const fire = function* (c) {
 
 /** @type {import('../../kit.mjs').Script} */
 const earth = function* (c) {
-  yield* go(c, 10);                       // the hall's heavy plate
+  yield* waitFlag(c, 'air_posted');       // let Air past before walking west
+  yield* go(c, 2);                        // the hall's heavy plate
   yield* until(c, () => c.ent('tunnel_gate').s.open >= 30, 0, 300, 'the hatch to open');
   yield* waitFlag(c, 'draught_on');       // hold it until Fire is home
   yield* go(c, 16);                       // the earth gem
@@ -71,7 +72,11 @@ const earth = function* (c) {
 /** @type {import('../../kit.mjs').Script} */
 const air = function* (c) {
   yield* go(c, 25);                       // the air gem, at the east end of the hall
-  yield* waitFlag(c, 'draught_on');
+  yield* go(c, 22);                       // and a hand on the hatch's catch
+  yield* until(c, () => c.ent('catch').s.on === 1, IN_INTERACT, 120, 'the catch to take');
+  c.flag('air_posted');
+  // the hatch wants the weight and the hand together: hold it until Fire is home
+  yield* until(c, () => c.has('draught_on'), IN_INTERACT, 6000, 'Fire to get home');
   yield* waitFlag(c, 'earth_waiting');
   yield* go(c, 17, { noHop: true });      // park east of Earth, clear of the column
   c.flag('air_ready');
@@ -87,6 +92,75 @@ const air = function* (c) {
   c.flag('air_home');
 };
 
+// ---------------------------------------------------------------------------------------------
+// Shortcuts that must fail. `check` runs each one and reports a problem if it finishes the level.
+
+// 1. "Send Air through the tunnel instead - it is the one that gets about." Fire takes the catch,
+//    Earth the plate, and Air walks east. Air dies in the lava: the roof in there is one tile, so
+//    there is no jumping, no hopping and no gliding over it.
+const fireTakesTheCatch = function* (c) {
+  yield* go(c, 22);
+  yield* until(c, () => c.ent('catch').s.on === 1, IN_INTERACT, 120, 'the catch to take');
+  c.flag('catch_held');
+  yield* wait(c, 6000, IN_INTERACT);
+};
+const earthTakesThePlate = function* (c) {
+  yield* waitFlag(c, 'catch_held');
+  yield* go(c, 2);
+  yield* wait(c, 6000);
+};
+const airWalksTheTunnel = function* (c) {
+  yield* until(c, () => c.ent('tunnel_gate').s.open >= 30, 0, 3000, 'the hatch to open');
+  yield* go(c, 35);                        // straight into six tiles of lava
+  yield* go(c, 37);
+};
+
+// 2. "Never mind Fire - Air can just carry Earth up." The draught's only input is the plate under
+//    Fire's doorway, so with Fire still in the hall the column is dead air.
+const airCarriesEarly = function* (c) {
+  yield* go(c, 20);                        // round the far side of Earth, as in the real solution
+  yield* go(c, 17, { noHop: true });
+  c.flag('air_ready');
+  yield* waitFlag(c, 'aboard');
+  yield* go(c, 18.9, { noHop: true });
+  yield* wait(c, 3000);
+};
+const earthRidesEarly = function* (c) {
+  yield* go(c, 16);
+  yield* waitFlag(c, 'air_ready');
+  yield* climbOnto(c, 'air');
+  c.flag('aboard');
+  yield* until(c, () => c.bottom <= 11 * TILE, 0, 1800, 'the draught to lift us');
+  throw new Error('the draught lifted them with Fire still in the hall');
+};
+const fireStaysPut = function* (c) {
+  yield* go(c, 26);                        // out of everyone's way, but not through the tunnel
+  yield* wait(c, 6000);
+};
+
+// 3. "Air rides up on its own and lets itself in." Air is mass 1; the landing plate is heavy, and
+//    there is no boulder in the level, so nothing but Earth opens Air's gate.
+const airGoesUpAlone = function* (c) {
+  yield* go(c, 25);
+  yield* go(c, 22);
+  yield* until(c, () => c.ent('catch').s.on === 1, IN_INTERACT, 120, 'the catch to take');
+  c.flag('air_posted');
+  yield* until(c, () => c.has('draught_on'), IN_INTERACT, 6000, 'Fire to get home');
+  yield* go(c, 18.9, { noHop: true });
+  yield* until(c, () => c.bottom <= 11 * TILE, 0, 900, 'the draught to carry it up');
+  yield* stepOut(c, IN_LEFT, 600);
+  yield* go(c, 12);
+  yield* leapGap(c, 8);
+  yield* go(c, 2);                         // air_gate is shut and nothing light opens it
+};
+const earthWaitsBelow = function* (c) {
+  yield* waitFlag(c, 'air_posted');
+  yield* go(c, 2);
+  yield* until(c, () => c.has('draught_on'), 0, 6000, 'Fire to get home');
+  yield* go(c, 16);
+  yield* wait(c, 4000);
+};
+
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
   level: 'threshold',
@@ -94,7 +168,11 @@ export const solutions = {
     {
       elements: ['fire', 'earth', 'air'],
       scripts: { fire, earth, air },
-      shortcuts: [],
+      shortcuts: [
+        { name: 'Air walks the lava tunnel instead of Fire', scripts: { fire: fireTakesTheCatch, earth: earthTakesThePlate, air: airWalksTheTunnel } },
+        { name: 'Air carries Earth up before Fire is home', scripts: { fire: fireStaysPut, earth: earthRidesEarly, air: airCarriesEarly } },
+        { name: 'Air rides up alone and tries to open its own gate', scripts: { fire, earth: earthWaitsBelow, air: airGoesUpAlone } },
+      ],
     },
   ],
   roles: {
