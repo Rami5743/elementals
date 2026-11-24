@@ -14,7 +14,7 @@
   "parTicks": 6000,
   "hints": [
     "Only Earth is heavy enough to start the draught, and the draught will never lift Earth.",
-    "The plates hang over the shaft, out of everyone's reach: each is on only while somebody is in the air inside it. The low one also unlatches the loft.",
+    "The two plates hang over the shaft, out of everyone's reach: each is on only while somebody is in the air inside it, and both the loft and the gate want the pair of them at once.",
     "The crank shuts the hopper over the stone, and a closing door is the only thing that posts a boulder through a grating."
   ],
   "tiles": [
@@ -95,9 +95,9 @@
       "x": 13,
       "y": 4,
       "w": 9,
-      "h": 2,
       "targets": [
-        "gate"
+        "gate",
+        "hatch"
       ]
     },
     {
@@ -106,7 +106,6 @@
       "x": 13,
       "y": 9,
       "w": 9,
-      "h": 2,
       "targets": [
         "gate",
         "hatch"
@@ -117,7 +116,8 @@
       "type": "door",
       "x": 22,
       "y": 1,
-      "h": 3
+      "h": 3,
+      "required": 2
     },
     {
       "id": "crank",
@@ -149,8 +149,7 @@
       "x": 22,
       "y": 17,
       "h": 3,
-      "required": 3,
-      "latch": true
+      "required": 3
     },
     {
       "type": "checkpoint",
