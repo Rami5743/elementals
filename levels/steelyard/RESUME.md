@@ -24,7 +24,7 @@ cellar and shove the stone off it before any number of crates can lift him.
 
 ## What fails and the exact error
 
-`✗ no solution.mjs: every supported group needs a solution script` — nothing is written yet.
+`✗ fire+earth: the solution scripts failed: earth timed out waiting for the pan to rise at tick 1359 (at 20.56)` — both players complete their whole journey; the final flip of the beam does not happen yet.
 
 ## The next thing to try
 

@@ -12,8 +12,8 @@
  "parTicks": 7200,
  "hints": [
   "The beam compares the whole load on each pan, your own weight included, and it only moves when a weight is added or taken away.",
-  "Only Earth can shift the stone. Climb onto the pan first and shove the stone off from up there: the pan you are standing on is the one that can rise.",
-  "Crates belong on the far pan, and only Fire can reach it. Two crates weigh the same as Earth and only level the beam; it takes a third to send Earth's pan all the way up."
+  "Only Earth can shift the stone, and the stone is what holds Earth's pan down. Load the far pan first, while the stone is still keeping that pan at the bottom.",
+  "Two crates weigh no more than Earth and only level the beam. It takes a third, and then the stone has to come off the pan Earth is standing on."
  ],
  "tiles": [
   "########################################",
@@ -24,28 +24,28 @@
   "########################################",
   "########################################",
   "########################################",
-  "###########.........................####",
-  "###########.........................####",
-  "###########.........................####",
-  "####################......##############",
-  "#.........................##############",
-  "#.........................##############",
-  "#.........................##############",
-  "#...################......##############",
-  "####......................##############",
-  "#.........................##############",
-  "####......................##############",
-  "#.........................##############",
-  "########################################",
+  "###########...........................##",
+  "###########...........................##",
+  "###########...........................##",
+  "####################......#########...##",
+  "#..................................LLL##",
+  "#..................................#####",
+  "#...............................LLL...##",
+  "#....###############............###...##",
+  "#............................LLL......##",
+  "#####........................###......##",
+  "#.........................LLL.........##",
+  "#....####.................###.........##",
+  "#.....................................##",
   "########################################"
  ],
  "spawns": {
   "fire": [
-   28,
-   10
+   7,
+   14
   ],
   "earth": [
-   9,
+   10,
    14
   ]
  },
@@ -67,60 +67,37 @@
   {
    "id": "hp",
    "type": "plate",
-   "x": 17,
-   "y": 19,
+   "x": 18,
+   "y": 20,
+   "w": 2,
    "weight": "heavy",
    "targets": [
-    "gate_e",
-    "store"
-   ]
-  },
-  {
-   "id": "rp",
-   "type": "plate",
-   "x": 21,
-   "y": 18,
-   "targets": [
-    "store"
+    "gate_e"
    ]
   },
   {
    "id": "gate_e",
    "type": "door",
-   "x": 14,
+   "x": 15,
    "y": 8,
    "h": 3
   },
   {
-   "id": "store",
-   "type": "door",
-   "x": 30,
-   "y": 8,
-   "h": 3,
-   "required": 2
-  },
-  {
    "id": "c1",
    "type": "box",
-   "x": 31,
+   "x": 26,
    "y": 10
   },
   {
    "id": "c2",
    "type": "box",
-   "x": 32,
+   "x": 27,
    "y": 10
   },
   {
    "id": "c3",
    "type": "box",
-   "x": 33,
-   "y": 10
-  },
-  {
-   "id": "c4",
-   "type": "box",
-   "x": 34,
+   "x": 28,
    "y": 10
   },
   {
@@ -132,25 +109,25 @@
   {
    "type": "exit",
    "element": "fire",
-   "x": 27,
+   "x": 33,
    "y": 9
   },
   {
    "type": "gem",
    "element": "earth",
-   "x": 8,
-   "y": 19
+   "x": 12,
+   "y": 20
   },
   {
    "type": "gem",
    "element": "fire",
-   "x": 35,
+   "x": 29,
    "y": 10
   },
   {
    "type": "gem",
    "element": "neutral",
-   "x": 16,
+   "x": 17,
    "y": 10
   }
  ]
