@@ -15,28 +15,32 @@ and takes Earth's place.
 
 ## What already passes
 
-Nothing yet — design only. Measured facts the design rests on (probed in this session):
-
-- A 1.5 fan gives Fire a **140-tick, 14-tile flight**: jump from a ledge at feet-row T, apex at
-  T-2.7 about 2 tiles out, then a slow sink (vy grows ~0.1/tick), back to T at ~10 tiles out.
-- The fan must not reach below **row 11** or Earth gets lift from the shaft floor (row 16):
-  Earth's jump puts its body top at y=406, row 11 ends at y=384.
-- A seesaw tips **instantly** at its midpoint and drops a lone walker; not used here.
+- `node kit.mjs check flyover`: **`level.json` is valid**, every spawn is safe.
+- Generator: `/tmp/claude-0/-home-user-elementals/21399c47-b54e-59c4-b8d3-8866955cc1ed/scratchpad/gen_flyover.mjs`
+  (re-run it after every geometry tweak; it writes `levels/flyover/level.json`).
+- Probed facts this design rests on (all measured against `kit.mjs` in this session):
+  - **Fire/Water in a 1.5 fan**: jump from feet-row T, apex T−2.7 about 2 tiles out, then sink at
+    only ~0.025 px/tick² — back to T after ~84 more ticks and 8.4 more tiles. A ~105-tick,
+    ~11-tile flight.
+  - **Earth in a 1.5 fan**: nothing. 47 ticks airborne, ~4 tiles, normal fall. So Earth can never
+    drift across the shaft, which is what makes the gate safe.
+  - **Air in a 1.5 fan**: rises at a flat 5 px/tick and then hovers at the fan's top row, so the
+    loft floor is one row below where Air comes to rest.
+  - Plates accept `w` **and** `h` (shown as `9x2` by `kit.mjs show`).
 
 ## What fails and the exact error
 
-Nothing run yet.
+`✗ no solution.mjs: every supported group needs a solution script` — nothing else.
 
 ## The next thing to try
 
-1. Write the generator in the scratchpad and emit `levels/flyover/level.json` (geometry below),
-   then `node kit.mjs check flyover` until it validates.
-2. Geometry: cellar floor row 20, open 17–19, ceiling row 16; gate at x=18 (h=3). Shaft x=15–22,
-   open rows 2–15, floor row 16 with a one-way hatch at x=15. Fan x=15–22 rows 2–11, strength 1.5.
-   Low launch ledge surface row 13 (x=4–14), plate `lo` rows 9–10 over x=15–22. High launch ledge
-   surface row 8 (x=8–14), plate `hi` rows 4–5 over x=15–22. Loft floor row 3 (x=23–34), open rows
-   1–2, grating at (34,3) with the boulder on it and `clamp` (door, h=2, invert, from `crank`)
-   above; `crank` turbine on the loft floor. Chimney x=34 rows 4–19 into a notch at (34,20) holding
-   `weight_b`. Right landing ledge surface row 15 (x=23–32) with Fire's and Water's exits on it;
-   Earth's and Air's exits in the right cellar. `weight_a` in the left cellar.
-3. Then the solution scripts, then the two shortcut scripts named in NOTES.md.
+1. Write `levels/flyover/solution.mjs`: Earth → `weight_a`; Air jumps into the draught from the
+   cellar floor at x≈14, rides to the loft, walks to `crank` at x=32; the `clamp` shuts and posts
+   `stone` down the chimney onto `weight_b`; Earth walks to x≈21 under the gate; Fire climbs to the
+   high ledge (row 8) and Water to the low one (row 13) via the one-way shelves at x=1..3; both
+   launch within ~10 ticks of each other; Earth crosses; Fire/Water land on the ledge at row 14 and
+   take their doors at x=25/28; Air leaves the crank, drops through (36,3) and walks to x=33.
+2. Verify the one risky interaction with a trace: does the closing `clamp` actually push `stone`
+   down through the grating at (36,3), and is the door open at tick 0 (invert, crank off) rather
+   than closed on top of the boulder?
+3. Then the two shortcut scripts named in NOTES.md (Earth holds the plate; the fliers go in series).
