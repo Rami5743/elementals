@@ -1,0 +1,220 @@
+{
+  "id": "flyover",
+  "name": "Flyover",
+  "order": 315,
+  "description": "Every switch here hangs in the air. Somebody has to be in it.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 6000,
+  "hints": [
+    "Only Earth is heavy enough to start the draught, and the draught will never lift Earth.",
+    "The two plates hang over the shaft, out of everyone's reach: each is on only while somebody is in the air inside it, and both the loft and the gate want the pair of them at once.",
+    "The crank shuts the hopper over the stone, and a closing door is the only thing that posts a boulder through a grating."
+  ],
+  "tiles": [
+    "########################################",
+    "#############......................#####",
+    "#############......................#.###",
+    "#############......................#.###",
+    "#.....................##############=###",
+    "#..............................#####.###",
+    "#..............................#####.###",
+    "#..............................#####.###",
+    "#...#########..................#####.###",
+    "#===...........................#####.###",
+    "#..............................#####.###",
+    "#===...........................#####.###",
+    "#..............................#####.###",
+    "#...#########..................#####.###",
+    "#===#########.........##############.###",
+    "#...#########.........##############.###",
+    "#===#########.........##############.###",
+    "#......................................#",
+    "#===...................................#",
+    "#......................................#",
+    "####################################.###",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      19
+    ],
+    "water": [
+      2,
+      19
+    ],
+    "earth": [
+      11,
+      19
+    ],
+    "air": [
+      14,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "weight_a",
+      "type": "plate",
+      "x": 9,
+      "y": 19,
+      "weight": "heavy",
+      "targets": [
+        "wind"
+      ]
+    },
+    {
+      "id": "weight_b",
+      "type": "plate",
+      "x": 36,
+      "y": 20,
+      "weight": "heavy",
+      "targets": [
+        "wind"
+      ]
+    },
+    {
+      "id": "wind",
+      "type": "fan",
+      "x": 13,
+      "y": 3,
+      "w": 9,
+      "h": 13,
+      "strength": 1.54
+    },
+    {
+      "id": "hi",
+      "type": "plate",
+      "x": 13,
+      "y": 4,
+      "w": 9,
+      "targets": [
+        "gate",
+        "hatch"
+      ]
+    },
+    {
+      "id": "lo",
+      "type": "plate",
+      "x": 13,
+      "y": 9,
+      "w": 9,
+      "targets": [
+        "gate",
+        "hatch"
+      ]
+    },
+    {
+      "id": "hatch",
+      "type": "door",
+      "x": 22,
+      "y": 1,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "crank",
+      "type": "turbine",
+      "x": 30,
+      "y": 3,
+      "targets": [
+        "gate",
+        "clamp"
+      ]
+    },
+    {
+      "id": "clamp",
+      "type": "door",
+      "x": 36,
+      "y": 2,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 36,
+      "y": 3
+    },
+    {
+      "id": "gate",
+      "type": "door",
+      "x": 22,
+      "y": 17,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "type": "checkpoint",
+      "x": 10,
+      "y": 18
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 18,
+      "text": "The wind wants weight."
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 12,
+      "text": "Nobody can stand on these."
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 16,
+      "y": 5
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 16,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 26,
+      "y": 3
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 26,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 28,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 25,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 24,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 33,
+      "y": 2
+    }
+  ]
+}
