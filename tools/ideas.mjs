@@ -115,6 +115,12 @@ Object.assign(IDEAS, {
   'no-overtaking': { kind: 'spine', note: 'A corridor one tile high is one body wide as well: nobody can jump in it and nobody can hop over anybody, so a party inside it is a queue. The order you file in is the order you are stuck with; the only way to change it is to walk the whole corridor back out; and anyone who comes round from the far end can only ever join at the back. That decides who can reach which switch in the corridor, and so who holds and who goes.' },
 });
 
+// Coined while building Steelyard (2026-11-24).
+Object.assign(IDEAS, {
+  'unload-the-pan-you-ride': { kind: 'spine', note: "A seesaw used as the only route between three storeys, one flush with each of its positions. Only the heavier pan is ever at floor level, so the far pan can never be loaded from below: a weight has to be put on your OWN pan to send theirs up to the storey where it can be loaded at all, and that same weight has to be shed again before your pan will carry you anywhere. You rise by what is taken off, never by what is added. (The campaign's scales — Assay, Counterpoise — sum weights too, but to balance a pan under a floating plate or to hoist cargo past a ledge; here the sum decides which storey each of you can reach, and the beam has no switch and no wiring at all.)" },
+  'mass-adds-on-the-beam': { kind: 'spine', note: "A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)" },
+});
+
 // Coined while building Backshunt (2026-11-16).
 Object.assign(IDEAS, {
   'two-stops-no-middle': { kind: 'spine', note: 'A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.' },

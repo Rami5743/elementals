@@ -611,6 +611,56 @@ Entities:
   "  sign_15      sign       at (12,4)  "Shut while the shelf is held."
 ```
 
+## Steelyard (`steelyard`) — 2p, core `the-stone-must-be-aboard-to-raise-their-pan-and-gone-to-raise-yours`
+
+```
+Steelyard (steelyard) for fire+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ###########....D...................D..##
+ 9  ###########.X..D...................D..##
+10  ###########.X..D.*.....ppp*x@.x.x..D..##
+11  ####################......##########..##
+12  #.........................##########..##
+13  #.........................##########..##
+14  #.......O.@...............##########..##
+15  #....###############zzzzzz##########..##
+16  #.........................##########..##
+17  #####.....................##########..##
+18  #.........................##########..##
+19  #....####...........................X.##
+20  #.....*...........pp................X.##
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (28,10)  earth (10,14)
+Entities:
+  z  beam         seesaw     at (20,15)  6x1  range 8
+  O  stone        boulder    at (8,14)
+  p  hp           plate      at (18,20)  2x1  -> gate_e  weight heavy
+  D  gate_e       door       at (15,8)  1x3  <- hp
+  p  s1           plate      at (23,10)  -> chute
+  p  s2           plate      at (24,10)  -> chute
+  p  s3           plate      at (25,10)  -> chute
+  D  chute        door       at (35,8)  1x3  <- s1, s2, s3 (needs 3)  latch
+  x  c1           box        at (27,10)
+  x  c2           box        at (30,10)
+  x  c3           box        at (32,10)
+  X  exit_11      exit       at (12,9)  earth
+  X  exit_12      exit       at (36,19)  fire
+  *  gem_13       gem        at (6,20)  earth
+  *  gem_14       gem        at (26,10)  fire
+  *  gem_15       gem        at (17,10)  neutral
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```
