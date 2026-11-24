@@ -8,37 +8,50 @@ OFF).
 
 A `rolls: true` boulder runs at 4 px a tick, faster than anybody can run, and the single turbine
 that looses it from its pen is also the only thing that opens the catwalk gate — so the only way to
-be standing on the two-tile ledge at the foot of the chute, in front of the stone, is to run the
+be standing on the three-tile ledge at the foot of the chute, in front of the stone, is to run the
 catwalk and drop off its end after the stone has already gone. Water is the brake, Earth is the only
 thing that can move the stone at all (and so the only thing that can put it back on the hoist after
 a miss), and Air is the only thing a turbine answers to.
 
 ## What already passes
 
-- Rolling-boulder physics probed against `kit.mjs`: 4.00 px/tick terminal on a slope after ~2 tiles,
-  **3.07 tiles of run-out** on the flat (deceleration 0.08 px/tick²), Earth descends a slope at its
-  normal 2.57, so the stone cannot be overtaken by anybody (Air tops out at 3.4).
-- `levels/headlong/level.json` **validates** — `node kit.mjs show headlong` reports no problems.
-  22 rows × 40 cols built from `gen.mjs` (kept in the scratchpad), geometry reads correctly:
-  catwalk (row 4) over gallery (row 8) over the ramp diagonal over the landing ledge (row 16, x
-  25-26) over the bay (row 20).
-- `order: 215` verified free across `levels/*/meta.json`.
-- Design written out in full in `NOTES.md`.
+`node kit.mjs check headlong` — **no problems**:
+
+- level.json valid, every spawn safe
+- water+earth+air: **solved in 43.1 s** (par 120.0 s), 3/3 gems, no deaths
+- all three co-op idle checks pass (the level cannot be finished while any one player waits in its
+  own door)
+- no warnings — in particular no "door open too briefly": the catwalk gate stays open for as long as
+  Air stands on the turbine, so the only clock is the stone itself.
+
+Measured and relied on (all probed against `kit.mjs`): 4.00 px/tick terminal on a slope after ~2
+tiles; 3.07 tiles of run-out on the flat; Earth descends at 2.57; the stone takes ~135 ticks from
+the turbine to the pad against ~70 for Water's run-and-dive, so the race has about a second of
+slack.
 
 ## What fails, and the exact error
 
-No solution script exists yet, so `check` has nothing to run. Two physics questions are still
-unanswered and are the next thing to settle:
+Nothing. The remaining work is the publishing checklist, not debugging.
 
-1. Does the stone **rest against the pen door** where the door crosses the ramp at x=19, and does it
-   run on when the door opens?
-2. Does an unbraked stone reaching the ledge actually **go over the edge at x=27** rather than
-   balancing on the lip? Its speed there should be ~2.4 px/tick, which ought to be ample.
+Hard-won gotchas, recorded so they are not re-learned:
+- A one-way ledge at a lift's bottom stop **jams the lift** — the platform stops on the head of
+  whatever is resting on the ledge. The shaft mouth is a plain gap, plugged by the platform itself
+  (the hoist is `powered` with a `timed` call button, so it is parked at the bay by default).
+- The call button sits **on the platform's own deck** (`w: 3`), so it can only be pressed from
+  aboard: nobody can send the platform away and leave the shaft mouth open behind them.
+- A 2-tile-wide shaft is too narrow for Earth beside the stone: the stone's right edge clipped the
+  rock beside the shaft and jammed the hoist. The shaft is 3 wide.
+- Ordinary 1-tile steps make a staircase that **traps the climber** (each step overhangs the one
+  below) and the bottom step blocks the corridor. The way up to the catwalk is a one-way ledge.
+- A turbine fires the moment Air touches it, so Air has to wait *beside* it until Water is in place.
+- Air must not glide down the hoist shaft — it sails straight over a three-tile hole.
 
 ## The next thing to try
 
-1. Probe both questions with a script against `level.json` directly (`buildWorld` / `stepGame`);
-   `s.ents` is an **array indexed by entity order**, not keyed by id.
-2. Then write `solution.mjs` for `water+earth+air` and get it to run at all, however badly.
-3. Then tune `GATE_X` / `PEN_X` in `gen.mjs` so a prompt dive beats the stone by roughly a second
-   and a hesitation loses.
+1. Shortcut scripts in `solution.mjs` (`shortcuts`), then re-check:
+   - Earth walks down the chute and stands on the heavy pad itself instead of the stone.
+   - Water walks down the chute behind the stone instead of diving (must arrive too late).
+   - Air touches the turbine and then tries to be the brake itself.
+2. `meta.json` with `order: 215`, `challenge: "motor"`, the core tag and the ideas.
+3. Coin `dive-ahead-of-the-runaway` in `tools/ideas.mjs`, then `node tools/novelty.mjs headlong`.
+4. Finish `NOTES.md` (shortcuts section), then `node tools/build.mjs` and `node tools/catalog.mjs`.
