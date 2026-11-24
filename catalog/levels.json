@@ -3179,6 +3179,43 @@
   ]
  },
  {
+  "id": "flyover",
+  "name": "Flyover",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6000,
+  "dark": false,
+  "challenge": "motor",
+  "core": "the-door-below-is-open-while-two-of-you-are-flying",
+  "ideas": [
+   "two-in-the-air-at-once",
+   "switch-in-mid-flight",
+   "one-way-press",
+   "machine-strands-operator",
+   "twist-backwards"
+  ],
+  "order": 315,
+  "line": "a lock that counts bodies off the ground. Its two plates hang in the draught five rows apart, where nobody can stand, so each is on only while somebody is in flight inside it — and both the loft above and the gate in the cellar want the pair of them at the same moment. The draught is what makes that fair: in it a jump lasts a second and a half instead of half a second, so \"both of us in the air at once\" is a window a fourth player can walk through.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:fan",
+   "ent:plate",
+   "ent:turbine",
+   "opt:fan:hang-time",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "gangway",
   "name": "Gangway",
   "source": "mine",

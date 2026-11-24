@@ -2016,3 +2016,58 @@ Entities:
   X  exit_w       exit       at (37,17)  water
   X  exit_f       exit       at (38,17)  fire
 ```
+
+## Flyover (`flyover`) — 4p, core `the-door-below-is-open-while-two-of-you-are-flying`
+
+```
+Flyover (flyover) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #############.........D............#####
+ 2  #############.........D..........X.#D###
+ 3  #############^^^^^^^^^D...*...T..X.#O###
+ 4  #............ppppppppp##############=###
+ 5  #............^^^*^^^^^.........#####.###
+ 6  #............^^^^^^^^^.........#####.###
+ 7  #............^^^^^^^^^.........#####.###
+ 8  #...#########^^^^^^^^^.........#####.###
+ 9  #===.........ppppppppp.........#####.###
+10  #............^^^*^^^^^.........#####.###
+11  #===.........^^^^^^^^^.........#####.###
+12  #............^^^^^^^^^...X..X..#####.###
+13  #...#########^^^^^^^^^...X..X..#####.###
+14  #===#########^^^^^^^^^##############.###
+15  #...#########^^^^^^^^^##############.###
+16  #===#########.........##############.###
+17  #.....................D................#
+18  #===......!...........D.X..............#
+19  #.@...@..p!@..@.......D.X.*............#
+20  ####################################p###
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (6,19)  water (2,19)  earth (11,19)  air (14,19)
+Entities:
+  p  weight_a     plate      at (9,19)  -> wind  weight heavy
+  p  weight_b     plate      at (36,20)  -> wind  weight heavy
+  ^  wind         fan        at (13,3)  9x13  <- weight_a, weight_b  strength 1.54
+  p  hi           plate      at (13,4)  9x1  -> gate, hatch
+  p  lo           plate      at (13,9)  9x1  -> gate, hatch
+  D  hatch        door       at (22,1)  1x3  <- hi, lo (needs 2)
+  T  crank        turbine    at (30,3)  -> gate, clamp
+  D  clamp        door       at (36,2)  1x2  <- crank  invert
+  O  stone        boulder    at (36,3)
+  D  gate         door       at (22,17)  1x3  <- hi, lo, crank (needs 3)
+  !  checkpoint_10 checkpoint at (10,18)
+  "  sign_11      sign       at (4,18)  "The wind wants weight."
+  "  sign_12      sign       at (14,12)  "Nobody can stand on these."
+  *  gem_13       gem        at (16,5)  fire
+  *  gem_14       gem        at (16,10)  water
+  *  gem_15       gem        at (26,3)  air
+  *  gem_16       gem        at (26,19)  earth
+  X  exit_17      exit       at (28,12)  fire
+  X  exit_18      exit       at (25,12)  water
+  X  exit_19      exit       at (24,18)  earth
+  X  exit_20      exit       at (33,2)  air
+```

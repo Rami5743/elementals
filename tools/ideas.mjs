@@ -119,3 +119,8 @@ Object.assign(IDEAS, {
 Object.assign(IDEAS, {
   'two-stops-no-middle': { kind: 'spine', note: 'A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.' },
 });
+
+// Coined while building Flyover (2026-11-24).
+Object.assign(IDEAS, {
+  'two-in-the-air-at-once': { kind: 'spine', note: "A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count \u2014 and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air." },
+});

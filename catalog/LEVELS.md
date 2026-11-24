@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 41 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 42 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (13)
@@ -407,7 +407,7 @@ Totals: 79 campaign levels, 41 in this repo, of which 11 now ship in the campaig
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (14)
+## 4 players — this repo (15)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -465,6 +465,10 @@ Totals: 79 campaign levels, 41 in this repo, of which 11 now ship in the campaig
   - idea: a corridor one tile high is one body wide as well — nobody jumps in it and nobody hops over anybody — so a party inside it is a queue, the switches that open its gate stand *in* it, and the one player heavy enough to work the gate is therefore the one player who can never walk through it.
   - ideas: no-overtaking, quorum, no-hands-for-cargo, hold-switch, machine-strands-operator, twist-order
   - features: ent:belt ent:boulder ent:button ent:door ent:fan ent:plate ent:torch ent:turbine opt:belt:walkable opt:button:hold opt:fan:hang-time opt:heavy-plate opt:latch opt:required:2 opt:turbine-timed
+- **Flyover** `flyover` (4p: fire+water+earth+air) core=`the-door-below-is-open-while-two-of-you-are-flying` challenge=motor par=6000
+  - idea: a lock that counts bodies off the ground. Its two plates hang in the draught five rows apart, where nobody can stand, so each is on only while somebody is in flight inside it — and both the loft above and the gate in the cellar want the pair of them at the same moment. The draught is what makes that fair: in it a jump lasts a second and a half instead of half a second, so "both of us in the air at once" is a window a fourth player can walk through.
+  - ideas: two-in-the-air-at-once, switch-in-mid-flight, one-way-press, machine-strands-operator, twist-backwards
+  - features: ent:boulder ent:door ent:fan ent:plate ent:turbine opt:fan:hang-time opt:heavy-plate opt:invert:door opt:required:2 opt:required:3 tile:one-way
 
 ## 4 players — campaign (23)
 
