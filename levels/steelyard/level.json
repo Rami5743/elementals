@@ -1,0 +1,170 @@
+{
+ "id": "steelyard",
+ "name": "Steelyard",
+ "order": 114,
+ "description": "A weighing beam that adds up everything on each pan, and a stone that weighs exactly what the two of you weigh together.",
+ "supports": [
+  [
+   "fire",
+   "earth"
+  ]
+ ],
+ "parTicks": 7200,
+ "hints": [
+  "The beam compares the whole load on each pan, your own weight included, and it only moves when a weight is added or taken away.",
+  "Only Earth can shift the stone, and the stone is what holds Earth's pan down. Load the far pan first, while the stone is still keeping that pan at the bottom.",
+  "Two crates weigh no more than Earth and only level the beam. It takes a third, and then the stone has to come off the pan Earth is standing on."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "###########...........................##",
+  "###########...........................##",
+  "###########...........................##",
+  "####################......##########..##",
+  "#.........................##########..##",
+  "#.........................##########..##",
+  "#.........................##########..##",
+  "#....###############......##########..##",
+  "#.........................##########..##",
+  "#####.....................##########..##",
+  "#.........................##########..##",
+  "#....####.............................##",
+  "#.....................................##",
+  "########################################"
+ ],
+ "spawns": {
+  "fire": [
+   28,
+   10
+  ],
+  "earth": [
+   10,
+   14
+  ]
+ },
+ "entities": [
+  {
+   "id": "beam",
+   "type": "seesaw",
+   "x": 20,
+   "y": 15,
+   "w": 6,
+   "range": 8
+  },
+  {
+   "id": "stone",
+   "type": "boulder",
+   "x": 8,
+   "y": 14
+  },
+  {
+   "id": "hp",
+   "type": "plate",
+   "x": 18,
+   "y": 20,
+   "w": 2,
+   "weight": "heavy",
+   "targets": [
+    "gate_e"
+   ]
+  },
+  {
+   "id": "gate_e",
+   "type": "door",
+   "x": 15,
+   "y": 8,
+   "h": 3
+  },
+  {
+   "id": "s1",
+   "type": "plate",
+   "x": 23,
+   "y": 10,
+   "targets": [
+    "chute"
+   ]
+  },
+  {
+   "id": "s2",
+   "type": "plate",
+   "x": 24,
+   "y": 10,
+   "targets": [
+    "chute"
+   ]
+  },
+  {
+   "id": "s3",
+   "type": "plate",
+   "x": 25,
+   "y": 10,
+   "targets": [
+    "chute"
+   ]
+  },
+  {
+   "id": "chute",
+   "type": "door",
+   "x": 35,
+   "y": 8,
+   "h": 3,
+   "required": 3,
+   "latch": true
+  },
+  {
+   "id": "c1",
+   "type": "box",
+   "x": 27,
+   "y": 10
+  },
+  {
+   "id": "c2",
+   "type": "box",
+   "x": 30,
+   "y": 10
+  },
+  {
+   "id": "c3",
+   "type": "box",
+   "x": 32,
+   "y": 10
+  },
+  {
+   "type": "exit",
+   "element": "earth",
+   "x": 12,
+   "y": 9
+  },
+  {
+   "type": "exit",
+   "element": "fire",
+   "x": 36,
+   "y": 19
+  },
+  {
+   "type": "gem",
+   "element": "earth",
+   "x": 6,
+   "y": 20
+  },
+  {
+   "type": "gem",
+   "element": "fire",
+   "x": 26,
+   "y": 10
+  },
+  {
+   "type": "gem",
+   "element": "neutral",
+   "x": 17,
+   "y": 10
+  }
+ ]
+}

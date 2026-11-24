@@ -3759,6 +3759,42 @@
   ]
  },
  {
+  "id": "steelyard",
+  "name": "Steelyard",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 7200,
+  "dark": false,
+  "challenge": "mind",
+  "core": "the-stone-must-be-aboard-to-raise-their-pan-and-gone-to-raise-yours",
+  "ideas": [
+   "unload-the-pan-you-ride",
+   "mass-adds-on-the-beam",
+   "quorum",
+   "twist-undo",
+   "object-as-permanent-switch",
+   "machine-strands-operator"
+  ],
+  "order": 114,
+  "line": "a weighing beam used as the only route between three storeys, where **you rise by what is taken off your pan, never by what is added** — the stone has to be loaded onto your own pan to send the far one up to the storey where it can be loaded at all, and shed off again before your pan will carry you anywhere.",
+  "tokens": [
+   "ent:boulder",
+   "ent:box",
+   "ent:door",
+   "ent:plate",
+   "ent:seesaw",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:3",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "thaw",
   "name": "Thaw",
   "source": "mine",

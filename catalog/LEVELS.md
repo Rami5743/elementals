@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 44 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 45 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (13)
+## 2 players — this repo (14)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -82,6 +82,10 @@ Totals: 79 campaign levels, 44 in this repo, of which 11 now ship in the campaig
   - idea: a crawlway one tile high with a stone in it. The stone is an absolute wall that only Earth can move and only ever forwards, the one stretch of raised roof is the only place anybody can get past it — and that same raised place is the plate that holds the far hatch open, so standing aside and opening the way are the same act, and whoever does it cannot be the one who goes.
   - ideas: single-file-stone, stand-aside-is-the-switch, hold-switch, machine-strands-operator, shared-switch-two-gates, invert-door
   - features: ent:boulder ent:door ent:firewall ent:lever ent:plate opt:heavy-plate opt:invert:door tile:one-way
+- **Steelyard** `steelyard` (2p: fire+earth) core=`the-stone-must-be-aboard-to-raise-their-pan-and-gone-to-raise-yours` challenge=mind par=7200
+  - idea: a weighing beam used as the only route between three storeys, where **you rise by what is taken off your pan, never by what is added** — the stone has to be loaded onto your own pan to send the far one up to the storey where it can be loaded at all, and shed off again before your pan will carry you anywhere.
+  - ideas: unload-the-pan-you-ride, mass-adds-on-the-beam, quorum, twist-undo, object-as-permanent-switch, machine-strands-operator
+  - features: ent:boulder ent:box ent:door ent:plate ent:seesaw opt:heavy-plate opt:latch opt:required:3 opt:seesaw-range
 
 ## 2 players — campaign (34)
 
