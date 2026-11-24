@@ -66,10 +66,15 @@ So the task does not *start* a session; it *wakes* one that already owns the rep
 standing host   session_01DW9uF2zxH4Ks4M9QcCpxCG   "Elementals level night (standing)"
                 created with source_url https://github.com/Rami5743/elementals
                 on environment env_01NLxcpncanxFgkpXsMEhVtd ("Elementals")
-night trigger   trig_01WZRScqghbZyrStBstUb5mj       Mondays 17:39, fires into that session
+monday night    trig_01WZRScqghbZyrStBstUb5mj       Mondays 17:39, fires into that session
+routine night   trig_01Ao4TL9buSs9qQkQgBEmvuU       19:51 every evening but Monday, same session
 watchdog early  trig_013ApCmACEAB2xizxnBAGwHb       Mondays 19:17, fires into the owner's session
 watchdog after  trig_016bQsbwkJ31rkpaarwnDhYm       Mondays 23:52, fires into the owner's session
+watchdog daily  trig_018MFQddeABXnY9dZ6J7gZiF       00:23 after each routine night, owner's session
 ```
+
+A trigger's prompt can only be edited from the session it wakes, and its session cannot be changed
+at all — to move a night onto a new host, delete the trigger and create it again.
 
 The host proved itself before being wired up: repo checked out, on `main`, `git push origin main`
 → `Everything up-to-date`. **Prove it again at the start of every night** before spawning anything.
