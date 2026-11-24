@@ -49,7 +49,7 @@ const earth = function* (c) {
   yield* until(c, () => c.tx >= 21.4, IN_RIGHT, 300, 'aboard the pan');
   yield* until(c, () => beam(c).d >= 120, 0, 400, 'the pan to settle in the cellar');
   // the stone alone keeps the pan at the bottom, so Earth can get off and come back
-  yield* go(c, 12);                        // the gem on the cellar floor
+  yield* go(c, 6);                         // the gem at the foot of the west stair
   yield* go(c, 23.6);                      // round under the pan to its far side
   yield* jump(c, -1, { hold: 14 });        // back aboard, two tiles up
   yield* wait(c, 20);
@@ -81,9 +81,11 @@ const fire = function* (c) {
   yield* until(c, () => c.tx <= 26.4, IN_LEFT, 900, 'the third crate onto the pan');
   yield* go(c, 27);                       // clear of the pan, and the gem on the way
   c.flag('crates');
-  // the stone landing on the pad down in the cellar is what unlocks both doors
-  yield* until(c, () => c.ent('gate_f').s.open >= 90, 0, 1200, 'the stone to reach the pad');
-  yield* go(c, 36);
+  // all three studs pressed: the chute out of the gallery has unlatched
+  yield* until(c, () => c.ent('chute').s.open >= 90, 0, 600, 'the chute to open');
+  yield* go(c, 34);
+  yield* go(c, 36.6);                     // over the lip, down the chute
+  yield* go(c, 36);                       // square in the door at the bottom
 };
 
 /** @type {import('../../kit.mjs').Solutions} */
