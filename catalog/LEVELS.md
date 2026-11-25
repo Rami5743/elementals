@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 129 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 130 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (43)
@@ -343,7 +343,7 @@ Totals: 79 campaign levels, 129 in this repo, of which 11 now ship in the campai
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (44)
+## 3 players — this repo (45)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -520,6 +520,10 @@ Totals: 79 campaign levels, 129 in this repo, of which 11 now ship in the campai
   - idea: Overlapping weak and strong fans make three useful configurations. Earth has their controls, and only Air can initially travel up the weak current.
   - ideas: fan-band, wind-off-enables-descent, twist-undo, quorum
   - features: ent:door ent:fan ent:ice ent:lever opt:fan:hang-time opt:fan:lifts-air opt:invert:fan opt:latch opt:required:2
+- **Shoulder Signalman** `shoulder_signalman` (3p: water+earth+air) core=`high-turbine-withdrawn-station-permission` challenge=motor par=10140
+  - idea: Two timed turbine dispatches require a third operator's permission; that same permission blocks their next control until the two travelers are safely through.
+  - ideas: turbine-out-of-reach, head-stack, timed-window, twist-undo, invert-door
+  - features: ent:door ent:lever ent:turbine opt:invert:door opt:latch opt:turbine-timed opt:wide-door
 
 ## 3 players — campaign (30)
 

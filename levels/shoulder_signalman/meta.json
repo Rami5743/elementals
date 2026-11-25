@@ -1,0 +1,12 @@
+{
+  "order": 244,
+  "challenge": "motor",
+  "core": "high-turbine-withdrawn-station-permission",
+  "ideas": [
+    "turbine-out-of-reach",
+    "head-stack",
+    "timed-window",
+    "twist-undo",
+    "invert-door"
+  ]
+}

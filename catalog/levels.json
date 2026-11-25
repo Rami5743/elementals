@@ -5890,6 +5890,39 @@
   ]
  },
  {
+  "id": "shoulder_signalman",
+  "name": "Shoulder Signalman",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "water+earth+air"
+  ],
+  "parTicks": 10140,
+  "dark": false,
+  "challenge": "motor",
+  "core": "high-turbine-withdrawn-station-permission",
+  "ideas": [
+   "turbine-out-of-reach",
+   "head-stack",
+   "timed-window",
+   "twist-undo",
+   "invert-door"
+  ],
+  "order": 244,
+  "line": "Two timed turbine dispatches require a third operator's permission; that same permission blocks their next control until the two travelers are safely through.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "ent:turbine",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:turbine-timed",
+   "opt:wide-door"
+  ]
+ },
+ {
   "id": "shoulders",
   "name": "Shoulders",
   "source": "mine",

@@ -1,0 +1,268 @@
+{
+  "id": "shoulder_signalman",
+  "name": "Shoulder Signalman",
+  "order": 244,
+  "description": "A third operator must keep a passage enabled while Air uses Earth's shoulders to dispatch Earth through a timed gate; withdrawing that permission unlocks the next station.",
+  "supports": [
+    [
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###################################..###",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "earth": [
+      5,
+      7
+    ],
+    "air": [
+      7,
+      7
+    ],
+    "water": [
+      2,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "T1",
+      "type": "turbine",
+      "x": 5,
+      "y": 2,
+      "duration": 480,
+      "targets": [
+        "gate1"
+      ]
+    },
+    {
+      "id": "gate1",
+      "type": "door",
+      "x": 28,
+      "y": 1,
+      "h": 7
+    },
+    {
+      "id": "west1",
+      "type": "door",
+      "x": 3,
+      "y": 1,
+      "h": 7,
+      "latch": true
+    },
+    {
+      "id": "far1",
+      "type": "lever",
+      "x": 31,
+      "y": 7,
+      "targets": [
+        "gate1",
+        "west1"
+      ]
+    },
+    {
+      "id": "near1",
+      "type": "lever",
+      "x": 1,
+      "y": 7,
+      "targets": [
+        "drop",
+        "w2access"
+      ]
+    },
+    {
+      "id": "drop",
+      "type": "door",
+      "x": 35,
+      "y": 8,
+      "h": 1,
+      "w": 2,
+      "latch": true
+    },
+    {
+      "id": "T2",
+      "type": "turbine",
+      "x": 35,
+      "y": 10,
+      "duration": 480,
+      "targets": [
+        "gate2"
+      ]
+    },
+    {
+      "id": "gate2",
+      "type": "door",
+      "x": 9,
+      "y": 9,
+      "h": 7
+    },
+    {
+      "id": "east2",
+      "type": "door",
+      "x": 37,
+      "y": 9,
+      "h": 7,
+      "latch": true
+    },
+    {
+      "id": "far2",
+      "type": "lever",
+      "x": 5,
+      "y": 15,
+      "targets": [
+        "gate2",
+        "east2"
+      ]
+    },
+    {
+      "id": "near2",
+      "type": "lever",
+      "x": 38,
+      "y": 15,
+      "targets": [
+        "finish",
+        "Wdone"
+      ]
+    },
+    {
+      "id": "finish",
+      "type": "door",
+      "x": 3,
+      "y": 9,
+      "h": 7,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 38,
+      "y": 15
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 1,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 1,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 2,
+      "y": 14
+    },
+    {
+      "id": "upperpre",
+      "type": "door",
+      "x": 17,
+      "y": 1,
+      "h": 7
+    },
+    {
+      "id": "lowerpre",
+      "type": "door",
+      "x": 23,
+      "y": 9,
+      "h": 7
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "upperpre",
+        "winv1"
+      ]
+    },
+    {
+      "id": "winv1",
+      "type": "door",
+      "x": 9,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w2access",
+      "type": "door",
+      "x": 14,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 19,
+      "y": 19,
+      "targets": [
+        "lowerpre",
+        "winv2"
+      ]
+    },
+    {
+      "id": "winv2",
+      "type": "door",
+      "x": 26,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "Wdone",
+      "type": "door",
+      "x": 32,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 35,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 10140,
+  "hints": [
+    "Air needs Earth's shoulders at the high turbines. Water must also enable the intermediate passage.",
+    "The far-bank lever preserves the timed opening, but Water must keep its permission until the two climbers have gone down.",
+    "Withdraw the first permission to reach the second control; withdraw the second only after both travelers have crossed."
+  ]
+}

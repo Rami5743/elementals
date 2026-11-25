@@ -5009,6 +5009,66 @@ Entities:
   X  exit_28      exit       at (38,18)  earth
 ```
 
+## Shoulder Signalman (`shoulder_signalman`) — 3p, core `high-turbine-withdrawn-station-permission`
+
+```
+Shoulder Signalman (shoulder_signalman) for water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #..D.............D..........D..........#
+ 2  #..D.T...........D..........D..........#
+ 3  #..D.............D..........D..........#
+ 4  #..D.............D..........D..........#
+ 5  #..D.............D..........D..........#
+ 6  #..D.............D..........D..........#
+ 7  #*.D.@.@.........D..........D..l.......#
+ 8  ###################################DD###
+ 9  #..D.....D.............D.............D.#
+10  #..D.....D.............D...........T.D.#
+11  #..D.....D.............D.............D.#
+12  #..D.....D.............D.............D.#
+13  #..D.....D.............D.............D.#
+14  #XXD.....D.............D.............D.#
+15  #XXD.l...D.............D.............D*#
+16  ########################################
+17  #........D....D...........D.....D......#
+18  #........D....D...........D.....D.....X#
+19  #.@l.....D....D....l......D.....D..*..X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (5,7)  air (7,7)  water (2,19)
+Entities:
+  T  T1           turbine    at (5,2)  -> gate1  duration 480
+  D  gate1        door       at (28,1)  1x7  <- T1, far1
+  D  west1        door       at (3,1)  1x7  <- far1  latch
+  l  far1         lever      at (31,7)  -> gate1, west1
+  l  near1        lever      at (1,7)  -> drop, w2access
+  D  drop         door       at (35,8)  2x1  <- near1  latch
+  T  T2           turbine    at (35,10)  -> gate2  duration 480
+  D  gate2        door       at (9,9)  1x7  <- T2, far2
+  D  east2        door       at (37,9)  1x7  <- far2  latch
+  l  far2         lever      at (5,15)  -> gate2, east2
+  l  near2        lever      at (38,15)  -> finish, Wdone
+  D  finish       door       at (3,9)  1x7  <- near2  latch
+  *  gem_12       gem        at (38,15)  earth
+  *  gem_13       gem        at (1,7)  air
+  X  exit_14      exit       at (1,14)  earth
+  X  exit_15      exit       at (2,14)  air
+  D  upperpre     door       at (17,1)  1x7  <- W1
+  D  lowerpre     door       at (23,9)  1x7  <- W2
+  l  W1           lever      at (3,19)  -> upperpre, winv1
+  D  winv1        door       at (9,17)  1x3  <- W1  invert
+  D  w2access     door       at (14,17)  1x3  <- near1  latch
+  l  W2           lever      at (19,19)  -> lowerpre, winv2
+  D  winv2        door       at (26,17)  1x3  <- W2  invert
+  D  Wdone        door       at (32,17)  1x3  <- near2  latch
+  *  gem_24       gem        at (35,19)  water
+  X  exit_25      exit       at (38,18)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```
