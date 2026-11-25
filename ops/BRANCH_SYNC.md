@@ -124,6 +124,12 @@ Then:
 - **Let the pass take as long as it needs.** Checking twenty levels is minutes of simulation, not
   one command, and that check is the only thing standing between a broken level and `main`. Never
   shorten it by sampling, and never push a level that was not checked.
+- **When the failing level is the batch's first commit, nothing lands — and that is the right
+  outcome.** There is then no prefix of `gpt` that excludes it, so the choice is to remove it from
+  the merge or to push a `main` that fails `check`, which is never allowed. If removal is not
+  available to you, land nothing, say so plainly, and name the failure precisely: a missing import
+  or a typo is a thirty-second fix for whoever can make it, and every hour it stays unfixed the
+  queue behind it grows.
 - **One bad level does not block the rest.** If a level fails, do not abandon the merge: reset,
   merge `origin/gpt` again, and `git checkout` the failing level's directory back to its state on
   `main` (or, if it is new, remove it from the merge with `git rm -r --cached` and delete the
