@@ -2241,6 +2241,72 @@ Entities:
   D  e_final      door       at (32,17)  1x3  <- c, f_end, w_end (needs 3)  latch
 ```
 
+## Three-Way Imprint (`three_way_imprint`) — 3p, core `three-operator-grating-imprint`
+
+```
+Three-Way Imprint (three_way_imprint) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ################.p.#####################
+ 2  ################===#####################
+ 3  ################...#####################
+ 4  ################...#####################
+ 5  ################.p.#####################
+ 6  ################EEE#####################
+ 7  ########################################
+ 8  #........D.........D.........D.........#
+ 9  #........D.........D.........D.......X.#
+10  #..@.....D....l....D...l.....D......*X.#
+11  ########################################
+12  #.........D.......D.D.........D........#
+13  #.X.......D.......D.D.........D........#
+14  #.X*.l....D.....l.D.D....l....D...l.@..#
+15  ########################################
+16  ########################################
+17  #........D.........D.........D.........#
+18  #........D.........D.........D.......X.#
+19  #..@.....D....l....D...l.....D....l.*X.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,10)  water (36,14)  earth (3,19)
+Entities:
+  E  hoist        elevator   at (16,6)  3x1  <- lift  speed 1.5  path (16,6)-(16,2)
+  O  stone        boulder    at (17,5)
+  D  press        door       at (17,1)  <- hammer
+  p  top          plate      at (17,1)  -> w0, e0, w1, f1, f2  weight heavy
+  p  bottom       plate      at (17,5)  -> f0, e1, e2, w2  weight heavy
+  X  exit_5       exit       at (37,9)  fire
+  *  gem_6        gem        at (36,10)  fire
+  X  exit_7       exit       at (2,13)  water
+  *  gem_8        gem        at (3,14)  water
+  X  exit_9       exit       at (37,18)  earth
+  *  gem_10       gem        at (36,19)  earth
+  l  lift         lever      at (3,10)  -> hoist
+  l  hammer       lever      at (3,19)  -> press  on
+  D  w0           door       at (30,12)  1x3  <- top  latch
+  l  wa           lever      at (25,14)  -> f0
+  D  e0           door       at (9,17)  1x3  <- top  latch
+  l  ea           lever      at (14,19)  -> f0
+  D  f0           door       at (9,8)  1x3  <- bottom, wa, ea (needs 3)  latch
+  l  fa           lever      at (14,10)  -> e1, w1
+  D  e1           door       at (19,17)  1x3  <- bottom, fa (needs 2)  latch
+  l  eb           lever      at (23,19)  -> w1
+  D  w1           door       at (20,12)  1x3  <- top, fa, eb (needs 3)  latch
+  l  wb           lever      at (16,14)  -> f1, inv
+  D  inv          door       at (18,12)  1x3  <- wb  invert
+  D  f1           door       at (19,8)  1x3  <- top, wb (needs 2)  latch
+  l  fb           lever      at (23,10)  -> e2, w2
+  l  return       lever      at (34,14)  -> e2
+  D  e2           door       at (29,17)  1x3  <- bottom, fb, return (needs 3)  latch
+  l  ec           lever      at (34,19)  -> w2
+  D  w2           door       at (10,12)  1x3  <- bottom, fb, ec (needs 3)  latch
+  l  wc           lever      at (5,14)  -> f2
+  D  f2           door       at (29,8)  1x3  <- top, wc (needs 2)  latch
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

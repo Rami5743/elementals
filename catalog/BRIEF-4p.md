@@ -60,18 +60,18 @@ together. `twist-undo`×5, `lock-per-element`×4, `twist-order`×4, `machine-str
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + shared-switch-two-gates
-- dark + fan-band
-- fan-band + hoist-one-way-for-cargo
-- hop-beats-belt + twist-order
-- freeze-bridge + transport-power-excludes-workshop
-- one-way-drop + turbine-out-of-reach
+- pound-chain + single-file-stone
+- head-stack + two-stops-no-middle
+- belt-filter + partner-builds-your-landing
+- fan-band + one-way-drop
 - dive-ahead-of-the-runaway + turbine-out-of-reach
-- belt-filter + transport-power-excludes-workshop
-- freeze-bridge + stock-before-it-seals
-- head-stack + twist-setup
-- freeze-bridge + grating-memory-with-erase
-- hop-beats-belt + lift-loop
+- mass-adds-on-the-beam + turbine-out-of-reach
+- low-roof-no-jump + twist-sacrifice
+- hop-beats-belt + invert-door
+- boulder-carry + fan-passenger
+- counterweight-you-must-remove + pound-chain
+- boulder-float + tower-presses-a-column
+- lock-per-element + shared-switch-two-gates
 
 ## This repo's 4-player levels
 

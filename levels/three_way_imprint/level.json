@@ -1,0 +1,345 @@
+{
+  "id": "three_way_imprint",
+  "name": "Three-Way Imprint",
+  "order": 221,
+  "description": "A hoist writes a stone onto a grate, a closing press erases it, and a third operator must relinquish a stored permission before the press may be used again.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 7860,
+  "tiles": [
+    "########################################",
+    "################...#####################",
+    "################===#####################",
+    "################...#####################",
+    "################...#####################",
+    "################...#####################",
+    "################...#####################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      10
+    ],
+    "water": [
+      36,
+      14
+    ],
+    "earth": [
+      3,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "hoist",
+      "type": "elevator",
+      "x": 16,
+      "y": 6,
+      "w": 3,
+      "path": [
+        [
+          16,
+          6
+        ],
+        [
+          16,
+          2
+        ]
+      ],
+      "speed": 1.5
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 17,
+      "y": 5
+    },
+    {
+      "id": "press",
+      "type": "door",
+      "x": 17,
+      "y": 1,
+      "h": 1
+    },
+    {
+      "id": "top",
+      "type": "plate",
+      "x": 17,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "w0",
+        "e0",
+        "w1",
+        "f1",
+        "f2"
+      ]
+    },
+    {
+      "id": "bottom",
+      "type": "plate",
+      "x": 17,
+      "y": 5,
+      "weight": "heavy",
+      "targets": [
+        "f0",
+        "e1",
+        "e2",
+        "w2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 36,
+      "y": 19
+    },
+    {
+      "id": "lift",
+      "type": "lever",
+      "x": 3,
+      "y": 10,
+      "targets": [
+        "hoist"
+      ]
+    },
+    {
+      "id": "hammer",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "press"
+      ],
+      "on": true
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 12,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "wa",
+      "type": "lever",
+      "x": 25,
+      "y": 14,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "e0",
+      "type": "door",
+      "x": 9,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "ea",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "f0",
+      "type": "door",
+      "x": 9,
+      "y": 8,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "fa",
+      "type": "lever",
+      "x": 14,
+      "y": 10,
+      "targets": [
+        "e1",
+        "w1"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "eb",
+      "type": "lever",
+      "x": 23,
+      "y": 19,
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 12,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "wb",
+      "type": "lever",
+      "x": 16,
+      "y": 14,
+      "targets": [
+        "f1",
+        "inv"
+      ]
+    },
+    {
+      "id": "inv",
+      "type": "door",
+      "x": 18,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 19,
+      "y": 8,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "fb",
+      "type": "lever",
+      "x": 23,
+      "y": 10,
+      "targets": [
+        "e2",
+        "w2"
+      ]
+    },
+    {
+      "id": "return",
+      "type": "lever",
+      "x": 34,
+      "y": 14,
+      "targets": [
+        "e2"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "ec",
+      "type": "lever",
+      "x": 34,
+      "y": 19,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 10,
+      "y": 12,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "wc",
+      "type": "lever",
+      "x": 5,
+      "y": 14,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 29,
+      "y": 8,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    }
+  ],
+  "hints": [
+    "Fire can raise and lower the stone. Earth must close the press to erase the high state.",
+    "Water must undo its middle relay after Fire has used it, and return to the first room to grant the next permission.",
+    "All recorded gates latch. The stone can be sent up and down repeatedly."
+  ]
+}

@@ -4565,6 +4565,42 @@
   ]
  },
  {
+  "id": "three_way_imprint",
+  "name": "Three-Way Imprint",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7860,
+  "dark": false,
+  "challenge": "mind",
+  "core": "three-operator-grating-imprint",
+  "ideas": [
+   "grating-memory-with-erase",
+   "one-way-press",
+   "twist-undo"
+  ],
+  "order": 221,
+  "line": "A hoist writes a physical memory by depositing a stone above a grate, and a closing press erases it. A third operator must relinquish a recorded permission and return to the starting room before the next erasure can open the onward route.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "threshold",
   "name": "Threshold",
   "source": "mine",
