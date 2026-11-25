@@ -35,23 +35,24 @@ together. `twist-undo`×27, `quorum`×27, `twist-order`×7, `timed-window`×5, `
 - `unload-the-pan-you-ride` — A seesaw used as the only route between three storeys, one flush with each of its positions. Only the heavier pan is ever at floor level, so the far pan can never be loaded from below: a weight has to be put on your OWN pan to send theirs up to the storey where it can be loaded at all, and that same weight has to be shed again before your pan will carry you anywhere. You rise by what is taken off, never by what is added. (The campaign's scales — Assay, Counterpoise — sum weights too, but to balance a pan under a floating plate or to hoist cargo past a ledge; here the sum decides which storey each of you can reach, and the beam has no switch and no wiring at all.)
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `three-load-rope-control` — A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact.
+- `spatial-clock-phase-rendezvous` — Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-cargo + fan-passenger
-- belt-filter + tower-presses-a-column
-- send-one-through + single-file-stone
-- fan-band + glide-passenger
-- send-one-through + twist-stranding
-- boulder-carry + counterweight-you-must-remove
-- pound-to-move + twist-undo
-- lock-per-element + three-load-rope-control
-- counterweight-you-must-remove + twist-order
-- low-roof-no-jump + tower-presses-a-column
-- single-file-stone + turbine-out-of-reach
-- direction-qualified-transit-contact + lift-corner-path
+- freeze-bridge + tower-presses-a-column
+- reversible-switch-maze + three-load-rope-control
+- belt-reverse + twist-stranding
+- climb-then-steer + freeze-bridge
+- glide-dismount + machine-strands-operator
+- boulder-carry + wide-door
+- turbine-out-of-reach + twist-self-block
+- belt-reverse + door-pushes-you-through
+- belt-cargo + partner-builds-your-landing
+- machine-strands-operator + unload-the-pan-you-ride
+- lift-corner-path + obstruction-as-third-state
+- cargo-as-clock-contact + spatial-clock-phase-rendezvous
 
 ## This repo's 4-player levels
 

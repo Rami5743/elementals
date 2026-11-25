@@ -5480,6 +5480,43 @@
   ]
  },
  {
+  "id": "phase_rendezvous",
+  "name": "Phase Rendezvous",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7620,
+  "dark": false,
+  "challenge": "motor",
+  "core": "unequal-speed-spatial-clock-rendezvous",
+  "ideas": [
+   "spatial-clock-phase-rendezvous",
+   "timed-window",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 149,
+  "line": "Two independent moving cargo contacts with different physical travel times; the relative launch phase, rather than either clock's absolute expiry, is the key.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "pillars",
   "name": "Pillars",
   "source": "mine",

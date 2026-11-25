@@ -1,0 +1,11 @@
+{
+  "order": 149,
+  "challenge": "motor",
+  "core": "unequal-speed-spatial-clock-rendezvous",
+  "ideas": [
+    "spatial-clock-phase-rendezvous",
+    "timed-window",
+    "quorum",
+    "twist-undo"
+  ]
+}

@@ -36,23 +36,24 @@ together. `twist-undo`×27, `quorum`×25, `twist-order`×8, `timed-window`×6, `
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `three-load-rope-control` — A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact.
+- `spatial-clock-phase-rendezvous` — Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- feed-the-engine-mid-ride + head-stack
-- feed-the-engine-mid-ride + one-way-press
-- direction-qualified-transit-contact + hop-beats-belt
-- lift-as-floor + plank-sums-plate-maxes
-- door-pushes-you-through + one-way-press
-- single-file-stone + twist-undo
-- lift-sorts-by-weight + one-way-press
-- boulder-float + timed-window
-- boulder-float + quorum
-- twist-stranding + unload-the-pan-you-ride
-- hop-beats-belt + twist-self-block
-- hop-beats-belt + shared-switch-two-gates
+- boulder-float + lift-corner-path
+- fan-passenger + lift-sorts-by-weight
+- counterweight-you-must-remove + lock-per-element
+- freeze-bridge + trigger-from-above
+- freeze-bridge + wide-door
+- boulder-carry + freeze-bridge
+- feed-the-engine-mid-ride + torch-bridge
+- freeze-bridge + glide-passenger
+- dark + head-stack
+- freeze-bridge + three-load-rope-control
+- door-pushes-you-through + twist-undo
+- low-roof-no-jump + quorum
 
 ## This repo's 3-player levels
 

@@ -2642,6 +2642,62 @@ Entities:
   l  top_cert     lever      at (1,8)  -> hatch_l, hatch_r
 ```
 
+## Phase Rendezvous (`phase_rendezvous`) — 2p, core `unequal-speed-spatial-clock-rendezvous`
+
+```
+Phase Rendezvous (phase_rendezvous) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #......................................#
+ 3  #..pp............pp...ppppp............#
+ 4  #..E...................................#
+ 5  ########################################
+ 6  #......................................#
+ 7  #..pp........ppppppp...................#
+ 8  #..E...................................#
+ 9  ########################################
+10  ########################################
+11  #.....D................D..............D#
+12  #.X...D................D..............D#
+13  #.X...D...@.b..........D..........l*..D#
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.....D................D...............#
+18  #.X...D................D...............#
+19  #.X...D...@.b..........D..........l*...#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (10,13)  water (10,19)
+Entities:
+  E  slow         elevator   at (3,4)  <- F_launch  speed 0.7  path (3,4)-(35,4)
+  O  slowcargo    boulder    at (3,3)
+  p  slow_home    plate      at (3,3)  2x1  -> F_exit, W_exit  weight heavy
+  E  fast         elevator   at (3,8)  <- W_launch  speed 1.4  path (3,8)-(35,8)
+  O  fastcargo    boulder    at (3,7)
+  p  fast_home    plate      at (3,7)  2x1  -> F_exit, W_exit  weight heavy
+  p  cue          plate      at (17,3)  2x1  -> cue_gate  weight heavy
+  p  slow_contact plate      at (22,3)  5x1  -> F_cross, W_cross  weight heavy
+  p  fast_contact plate      at (13,7)  7x1  -> F_cross, W_cross  weight heavy
+  b  F_launch     button     at (12,13)  -> slow  mode timed  duration 1550
+  D  F_cross      door       at (23,11)  1x3  <- slow_contact, fast_contact (needs 2)  latch
+  l  F_cert       lever      at (34,13)  -> F_exit, W_exit
+  D  F_exit       door       at (6,11)  1x3  <- slow_home, fast_home, F_cert, W_cert (needs 4)  latch
+  *  gem_13       gem        at (35,13)  fire
+  X  exit_14      exit       at (2,12)  fire
+  b  W_launch     button     at (12,19)  -> fast  mode timed  duration 850
+  D  W_cross      door       at (23,17)  1x3  <- slow_contact, fast_contact (needs 2)  latch
+  l  W_cert       lever      at (34,19)  -> F_exit, W_exit
+  D  W_exit       door       at (6,17)  1x3  <- slow_home, fast_home, F_cert, W_cert (needs 4)  latch
+  *  gem_19       gem        at (35,19)  water
+  X  exit_20      exit       at (2,18)  water
+  D  cue_gate     door       at (38,11)  1x3  <- cue
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

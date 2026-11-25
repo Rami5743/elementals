@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 144 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 145 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (48)
+## 2 players — this repo (49)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -219,6 +219,10 @@ Totals: 79 campaign levels, 144 in this repo, of which 11 now ship in the campai
 - **Mass Arithmetic** `mass_arithmetic` (2p: fire+water) core=`dual-rider-hold-and-empty-reversal` challenge=mind par=7800
   - ideas: three-load-rope-control, quorum, machine-strands-operator
   - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:pulley opt:elevator:loop opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:seesaw-range opt:wide-door
+- **Phase Rendezvous** `phase_rendezvous` (2p: fire+water) core=`unequal-speed-spatial-clock-rendezvous` challenge=motor par=7620
+  - idea: Two independent moving cargo contacts with different physical travel times; the relative launch phase, rather than either clock's absolute expiry, is the key.
+  - ideas: spatial-clock-phase-rendezvous, timed-window, quorum, twist-undo
+  - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2 opt:required:4
 
 ## 2 players — campaign (34)
 
