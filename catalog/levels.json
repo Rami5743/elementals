@@ -3641,6 +3641,40 @@
   ]
  },
  {
+  "id": "descent_exchange",
+  "name": "Descent Exchange",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6300,
+  "dark": false,
+  "challenge": "motor",
+  "core": "reusable-slow-fall-contact-recipient-reversal",
+  "ideas": [
+   "sink-as-a-timer",
+   "switch-in-mid-flight",
+   "twist-undo"
+  ],
+  "order": 241,
+  "line": "A near-neutral updraft turns one player's descent into a temporary electrical contact. Water must reverse the draught setting between two crossings and finally withdraw it.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:fan:hang-time",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "dismount",
   "name": "Dismount",
   "source": "mine",

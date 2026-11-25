@@ -1,0 +1,10 @@
+{
+  "order": 241,
+  "challenge": "motor",
+  "core": "reusable-slow-fall-contact-recipient-reversal",
+  "ideas": [
+    "sink-as-a-timer",
+    "switch-in-mid-flight",
+    "twist-undo"
+  ]
+}

@@ -34,18 +34,18 @@ together. `twist-undo`×23, `twist-order`×6, `quorum`×6, `invert-door`×5, `ob
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-band + hop-beats-belt
-- liquid-lane + two-is-not-heavy
-- glide-dismount + torch-bridge
-- door-pushes-you-through + freeze-bridge
-- boulder-carry + glide-dismount
-- hold-switch + pound-chain
-- boulder-float + pound-to-move
-- hop-beats-belt + torch-bridge
-- object-as-permanent-switch + torch-bridge
-- dark + pound-chain
-- glide-dismount + two-is-not-heavy
-- crate-step + one-way-press
+- fan-band + machine-strands-operator
+- fan-band + shuttle-strips-cargo-to-belt
+- fan-band + stock-before-it-seals
+- hop-beats-belt + plank-sums-plate-maxes
+- lift-sorts-by-weight + stock-before-it-seals
+- head-stack + two-is-not-heavy
+- fan-band + twist-undo
+- lift-sorts-by-weight + twist-setup
+- liquid-lane + plank-sums-plate-maxes
+- tower-presses-a-column + twist-setup
+- door-pushes-you-through + timed-window
+- hop-beats-belt + pound-chain
 
 ## This repo's 2-player levels
 

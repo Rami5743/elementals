@@ -4641,6 +4641,71 @@ Entities:
   X  exit_25      exit       at (26,9)  water
 ```
 
+## Descent Exchange (`descent_exchange`) — 3p, core `reusable-slow-fall-contact-recipient-reversal`
+
+```
+Descent Exchange (descent_exchange) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.......^^^^^#...........D.........D...#
+ 2  #.......^^^^^#...........D.........D..X#
+ 3  #.....@.^^^^^#.@.........D...l.....D.*X#
+ 4  ###...##^^^^^###########################
+ 5  #.#...##^^^^^###########################
+ 6  #.#...##ppppp###########################
+ 7  #.#...##ppppp#..DD....D.....D....D..D..#
+ 8  #.#...##ppppp#..DD....D.....D....D..D.X#
+ 9  #.#...##ppppp#l.DD..@lD.l...D....D.lD*X#
+10  #.#...##ppppp###########################
+11  #.#...##ppppp###########################
+12  #.#...##ppppp###########################
+13  #.#...##^^^^^#.........................#
+14  #.#...##^^^^^#.........................#
+15  #.#...##^^^^^#.........................#
+16  #.#...##^^^^^###########################
+17  #.D...##^^^^^###########################
+18  #XD...##^^^^^###########################
+19  #XD.......l..###########################
+20  ###EEE##################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (6,3)  earth (15,3)  water (20,9)
+Entities:
+  ^  shaft        fan        at (8,1)  5x18  <- wind  strength 1.565
+  p  pulse        plate      at (8,6)  5x1  -> e_pulse, w_pulse
+  E  return_lift  elevator   at (3,20)  3x1  <- lift_control  speed 2  path (3,20)-(3,4)
+  D  e_pulse      door       at (25,1)  1x3  <- pulse, E1, pulse7, pulse8, pulse9, pulse10, pulse11, pulse12
+  l  E1           lever      at (29,3)  -> e_pulse, e_exit
+  D  e_exit       door       at (35,1)  1x3  <- E1, Wcert (needs 2)  latch
+  *  gem_6        gem        at (37,3)  earth
+  X  exit_7       exit       at (38,2)  earth
+  *  gem_8        gem        at (37,9)  water
+  X  exit_9       exit       at (38,8)  water
+  l  F1           lever      at (10,19)  -> w_access, w_inspect
+  D  f_exit       door       at (2,17)  1x3  <- Wcert  latch
+  *  gem_12       gem        at (1,19)  fire
+  X  exit_13      exit       at (1,18)  fire
+  p  pulse7       plate      at (8,7)  5x1  -> e_pulse, w_pulse
+  p  pulse8       plate      at (8,8)  5x1  -> e_pulse, w_pulse
+  p  pulse9       plate      at (8,9)  5x1  -> e_pulse, w_pulse
+  p  pulse10      plate      at (8,10)  5x1  -> e_pulse, w_pulse
+  p  pulse11      plate      at (8,11)  5x1  -> e_pulse, w_pulse
+  p  pulse12      plate      at (8,12)  5x1  -> e_pulse, w_pulse
+  l  Eback        lever      at (15,3)  -> w_phase
+  l  wind         lever      at (21,9)  -> shaft, w_inverse, w_exit
+  D  w_inverse    door       at (16,7)  1x3  <- wind  invert
+  D  w_inspect    door       at (17,7)  1x3  <- F1  latch
+  l  Wmode        lever      at (14,9)  -> w_phase
+  D  w_access     door       at (22,7)  1x3  <- F1  latch
+  l  lift_control lever      at (24,9)  -> return_lift
+  D  w_phase      door       at (28,7)  1x3  <- Eback, Wmode (needs 2)  latch
+  D  w_pulse      door       at (33,7)  1x3  <- pulse, pulse7, pulse8, pulse9, pulse10, pulse11, pulse12, Wcert
+  l  Wcert        lever      at (35,9)  -> w_pulse, e_exit, f_exit
+  D  w_exit       door       at (36,7)  1x3  <- wind  invert
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

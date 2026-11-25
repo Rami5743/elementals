@@ -1,0 +1,342 @@
+{
+  "id": "descent_exchange",
+  "name": "Descent Exchange",
+  "order": 241,
+  "description": "The slow descent generates a temporary crossing signal; the receiver must reverse the draught authorization between two deliveries and release it at the end.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#............#.........................#",
+    "#............#.........................#",
+    "#............#.........................#",
+    "###...##.....###########################",
+    "#.#...##.....###########################",
+    "#.#...##.....###########################",
+    "#.#...##.....#.........................#",
+    "#.#...##.....#.........................#",
+    "#.#...##.....#.........................#",
+    "#.#...##.....###########################",
+    "#.#...##.....###########################",
+    "#.#...##.....###########################",
+    "#.#...##.....#.........................#",
+    "#.#...##.....#.........................#",
+    "#.#...##.....#.........................#",
+    "#.#...##.....###########################",
+    "#.....##.....###########################",
+    "#.....##.....###########################",
+    "#............###########################",
+    "###...##################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      3
+    ],
+    "earth": [
+      15,
+      3
+    ],
+    "water": [
+      20,
+      9
+    ]
+  },
+  "parTicks": 6300,
+  "entities": [
+    {
+      "id": "shaft",
+      "type": "fan",
+      "x": 8,
+      "y": 1,
+      "w": 5,
+      "h": 18,
+      "strength": 1.565
+    },
+    {
+      "id": "pulse",
+      "type": "plate",
+      "x": 8,
+      "y": 6,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "return_lift",
+      "type": "elevator",
+      "x": 3,
+      "y": 20,
+      "w": 3,
+      "path": [
+        [
+          3,
+          20
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "speed": 2
+    },
+    {
+      "id": "e_pulse",
+      "type": "door",
+      "x": 25,
+      "y": 1,
+      "h": 3,
+      "required": 1
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 29,
+      "y": 3,
+      "targets": [
+        "e_pulse",
+        "e_exit"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 35,
+      "y": 1,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 2
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 8
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 10,
+      "y": 19,
+      "targets": [
+        "w_access",
+        "w_inspect"
+      ]
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 1,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 18
+    },
+    {
+      "id": "pulse7",
+      "type": "plate",
+      "x": 8,
+      "y": 7,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse8",
+      "type": "plate",
+      "x": 8,
+      "y": 8,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse9",
+      "type": "plate",
+      "x": 8,
+      "y": 9,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse10",
+      "type": "plate",
+      "x": 8,
+      "y": 10,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse11",
+      "type": "plate",
+      "x": 8,
+      "y": 11,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse12",
+      "type": "plate",
+      "x": 8,
+      "y": 12,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "Eback",
+      "type": "lever",
+      "x": 15,
+      "y": 3,
+      "targets": [
+        "w_phase"
+      ]
+    },
+    {
+      "id": "wind",
+      "type": "lever",
+      "x": 21,
+      "y": 9,
+      "targets": [
+        "shaft",
+        "w_inverse",
+        "w_exit"
+      ]
+    },
+    {
+      "id": "w_inverse",
+      "type": "door",
+      "x": 16,
+      "y": 7,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w_inspect",
+      "type": "door",
+      "x": 17,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Wmode",
+      "type": "lever",
+      "x": 14,
+      "y": 9,
+      "targets": [
+        "w_phase"
+      ]
+    },
+    {
+      "id": "w_access",
+      "type": "door",
+      "x": 22,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "lift_control",
+      "type": "lever",
+      "x": 24,
+      "y": 9,
+      "targets": [
+        "return_lift"
+      ]
+    },
+    {
+      "id": "w_phase",
+      "type": "door",
+      "x": 28,
+      "y": 7,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_pulse",
+      "type": "door",
+      "x": 33,
+      "y": 7,
+      "h": 3
+    },
+    {
+      "id": "Wcert",
+      "type": "lever",
+      "x": 35,
+      "y": 9,
+      "targets": [
+        "w_pulse",
+        "e_exit",
+        "f_exit"
+      ]
+    },
+    {
+      "id": "w_exit",
+      "type": "door",
+      "x": 36,
+      "y": 7,
+      "h": 3,
+      "invert": true
+    }
+  ],
+  "hints": [
+    "Earth needs the first descending contact. Water powers the weak draught.",
+    "After Fire lands, switch the draught off, obtain the second authorization, and return Fire to the upper bank.",
+    "Restore the draught for Water's crossing; turn it off again after the certificate to release Water's exit."
+  ]
+}
