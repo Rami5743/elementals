@@ -175,3 +175,5 @@ Object.assign(IDEAS, { "cargo-power-cascade": {kind:'spine',note:"A physical car
 Object.assign(IDEAS, { "obstruction-as-third-state": {kind:'spine',note:"A retractable obstruction deliberately stalls a powered cargo hoist at an intermediate sensor. Releasing the obstruction, without changing the lift command, resumes its travel. The binary command becomes a three-state machine."} });
 
 Object.assign(IDEAS, { "brake-makes-transit-contact-stable": {kind:'spine',note:"A controllable loop shuttle with a heavy cargo must be braked in two intermediate contact zones. Gates require both braking and the contact, so merely passing through is useless. The final complementary gate demands releasing the second parked state."} });
+
+Object.assign(IDEAS, { "convergent-belt-seam": {kind:'spine',note:"Independent reversible conveyors meet at a seam. Inward currents gather one cargo token at the seam, outward currents retain its previous endpoint, and aligned currents transfer it to the opposite endpoint."} });

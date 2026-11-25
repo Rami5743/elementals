@@ -1,0 +1,294 @@
+{
+  "id": "confluence_switch",
+  "name": "Confluence Switch",
+  "order": 129,
+  "description": "Two independent conveyor directions determine whether the same stone is gathered at the seam or delivered to an outer end.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      11
+    ],
+    "water": [
+      37,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "left_belt",
+      "type": "belt",
+      "x": 2,
+      "y": 7,
+      "w": 18,
+      "speed": 2,
+      "mode": "reverse"
+    },
+    {
+      "id": "right_belt",
+      "type": "belt",
+      "x": 20,
+      "y": 7,
+      "w": 18,
+      "speed": -2,
+      "mode": "reverse"
+    },
+    {
+      "id": "token",
+      "type": "boulder",
+      "x": 19,
+      "y": 6
+    },
+    {
+      "id": "center",
+      "type": "plate",
+      "x": 18,
+      "y": 6,
+      "w": 4,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "w1",
+        "w4"
+      ]
+    },
+    {
+      "id": "left",
+      "type": "plate",
+      "x": 2,
+      "y": 6,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f2",
+        "w2",
+        "f4"
+      ]
+    },
+    {
+      "id": "right",
+      "type": "plate",
+      "x": 35,
+      "y": 6,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f3",
+        "w3"
+      ]
+    },
+    {
+      "id": "L",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "left_belt"
+      ]
+    },
+    {
+      "id": "R",
+      "type": "lever",
+      "x": 35,
+      "y": 19,
+      "targets": [
+        "right_belt"
+      ]
+    },
+    {
+      "id": "fkey1",
+      "type": "lever",
+      "x": 14,
+      "y": 11,
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "wkey1",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "fkey2",
+      "type": "lever",
+      "x": 24,
+      "y": 11,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "wkey2",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f3"
+      ]
+    },
+    {
+      "id": "fkey3",
+      "type": "lever",
+      "x": 32,
+      "y": 11,
+      "targets": [
+        "w3",
+        "w4"
+      ]
+    },
+    {
+      "id": "wkey3",
+      "type": "lever",
+      "x": 8,
+      "y": 19,
+      "targets": [
+        "w4"
+      ]
+    },
+    {
+      "id": "wlast",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "f4"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 9,
+      "y": 9,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 19,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 28,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f4",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": false
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w4",
+      "type": "door",
+      "x": 5,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 2,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    }
+  ],
+  "parTicks": 10860,
+  "hints": [
+    "Both belts point inward at first. They keep the stone at their meeting point.",
+    "To send it from the left end to the right, changing only the far belt is not enough.",
+    "Gather it at the seam again before the final left delivery."
+  ]
+}

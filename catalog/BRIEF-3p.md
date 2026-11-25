@@ -53,23 +53,24 @@ together. `twist-undo`×13, `quorum`×11, `twist-order`×7, `machine-strands-ope
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `convergent-belt-seam` — Independent reversible conveyors meet at a seam. Inward currents gather one cargo token at the seam, outward currents retain its previous endpoint, and aligned currents transfer it to the opposite endpoint.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- mass-adds-on-the-beam + twist-self-block
-- counterweight-you-must-remove + low-roof-no-jump
-- invert-door + lift-sheds-its-load
+- lift-sheds-its-load + object-as-permanent-switch
+- door-pushes-you-through + fan-passenger
+- object-as-permanent-switch + stand-aside-is-the-switch
+- feed-the-engine-mid-ride + invert-door
+- stand-aside-is-the-switch + twist-order
+- counterweight-you-must-remove + single-file-stone
 - feed-the-engine-mid-ride + twist-stranding
-- counterweight-you-must-remove + feed-the-engine-mid-ride
-- counterweight-you-must-remove + two-in-the-air-at-once
-- counterweight-you-must-remove + freeze-invert
-- belt-reverse + twist-stranding
-- send-one-through + twist-self-block
-- pound-to-move + twist-order
-- invert-door + stand-aside-is-the-switch
-- partner-builds-your-landing + twist-order
+- twist-stranding + two-in-the-air-at-once
+- trigger-from-above + twist-self-block
+- boulder-float + fan-passenger
+- pound-chain + timed-window
+- plank-sums-plate-maxes + timed-window
 
 ## This repo's 3-player levels
 

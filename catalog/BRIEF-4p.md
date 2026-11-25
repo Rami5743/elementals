@@ -52,23 +52,24 @@ together. `twist-undo`×13, `quorum`×12, `twist-order`×5, `lock-per-element`×
 - `two-stops-no-middle` — A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.
 - `dive-ahead-of-the-runaway` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance — the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
+- `convergent-belt-seam` — Independent reversible conveyors meet at a seam. Inward currents gather one cargo token at the seam, outward currents retain its previous endpoint, and aligned currents transfer it to the opposite endpoint.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- stock-before-it-seals + turbine-out-of-reach
-- boulder-float + twist-stranding
-- boulder-carry + twist-self-block
-- freeze-bridge + torch-bridge
-- freeze-bridge + twist-stranding
-- low-roof-no-jump + stock-before-it-seals
-- shared-switch-two-gates + turbine-out-of-reach
-- single-file-stone + turbine-out-of-reach
-- glide-dismount + head-stack
-- counterweight-you-must-remove + head-stack
-- boulder-carry + climb-then-steer
-- lock-per-element + partner-builds-your-landing
+- head-stack + two-stops-no-middle
+- reversible-switch-maze + seesaw-balance
+- fan-band + stand-aside-is-the-switch
+- low-roof-no-jump + stand-aside-is-the-switch
+- pound-chain + single-file-stone
+- head-stack + twist-sacrifice
+- belt-reverse + hop-beats-belt
+- turbine-out-of-reach + twist-setup
+- turbine-out-of-reach + twist-self-block
+- belt-filter + twist-stranding
+- pound-chain + twist-sacrifice
+- balanced-rope-memory + hop-beats-belt
 
 ## This repo's 4-player levels
 

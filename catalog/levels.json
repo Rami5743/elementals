@@ -3130,6 +3130,42 @@
   ]
  },
  {
+  "id": "confluence_switch",
+  "name": "Confluence Switch",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 10860,
+  "dark": false,
+  "challenge": "mind",
+  "core": "converging-conveyors-route-cargo",
+  "ideas": [
+   "convergent-belt-seam",
+   "twist-undo",
+   "belt-reverse"
+  ],
+  "order": 129,
+  "line": "Two reversible belts share a cargo track. When they point inward, their seam acts as a stable destination without a mechanical stop; when they point outward, a cargo token at an endpoint stays there.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "conveyor",
   "name": "Conveyor",
   "source": "mine",
