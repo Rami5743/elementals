@@ -5120,6 +5120,43 @@
   ]
  },
  {
+  "id": "mass_arithmetic",
+  "name": "Mass Arithmetic",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7800,
+  "dark": false,
+  "challenge": "mind",
+  "core": "dual-rider-hold-and-empty-reversal",
+  "ideas": [
+   "three-load-rope-control",
+   "quorum",
+   "machine-strands-operator"
+  ],
+  "order": 148,
+  "line": "",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range",
+   "opt:wide-door"
+  ]
+ },
+ {
   "id": "memory_loom",
   "name": "Memory Loom",
   "source": "mine",

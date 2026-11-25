@@ -35,23 +35,24 @@ together. `twist-undo`×27, `quorum`×25, `twist-order`×8, `timed-window`×6, `
 - `unload-the-pan-you-ride` — A seesaw used as the only route between three storeys, one flush with each of its positions. Only the heavier pan is ever at floor level, so the far pan can never be loaded from below: a weight has to be put on your OWN pan to send theirs up to the storey where it can be loaded at all, and that same weight has to be shed again before your pan will carry you anywhere. You rise by what is taken off, never by what is added. (The campaign's scales — Assay, Counterpoise — sum weights too, but to balance a pan under a floating plate or to hoist cargo past a ledge; here the sum decides which storey each of you can reach, and the beam has no switch and no wiring at all.)
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `three-load-rope-control` — A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hop-beats-belt + lift-press
-- hop-beats-belt + lift-corner-path
-- quorum + unload-the-pan-you-ride
-- fan-passenger + stand-aside-is-the-switch
-- crate-step + hop-beats-belt
-- glide-passenger + reversible-switch-maze
-- expiry-order-is-key + hop-beats-belt
-- lock-per-element + twist-order
-- torch-bridge + unload-the-pan-you-ride
-- dark + lift-as-floor
-- hop-beats-belt + seesaw-balance
-- boulder-float + head-stack
+- feed-the-engine-mid-ride + head-stack
+- feed-the-engine-mid-ride + one-way-press
+- direction-qualified-transit-contact + hop-beats-belt
+- lift-as-floor + plank-sums-plate-maxes
+- door-pushes-you-through + one-way-press
+- single-file-stone + twist-undo
+- lift-sorts-by-weight + one-way-press
+- boulder-float + timed-window
+- boulder-float + quorum
+- twist-stranding + unload-the-pan-you-ride
+- hop-beats-belt + twist-self-block
+- hop-beats-belt + shared-switch-two-gates
 
 ## This repo's 3-player levels
 

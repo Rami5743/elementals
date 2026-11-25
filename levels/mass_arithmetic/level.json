@@ -1,0 +1,294 @@
+{
+  "id": "mass_arithmetic",
+  "name": "Mass Arithmetic",
+  "order": 148,
+  "description": "Two riders sink the pan; one balances it and neither reverses it. Carry the high permission away, then unload to obtain the low permission.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#################################..#####",
+    "#################################..#####",
+    "#################################..#####",
+    "#################################..#####",
+    "#################################..#####",
+    "#...................#############..#####",
+    "#...................#############..#####",
+    "#...................####################",
+    "#####...######......####################",
+    "#####...######......####################",
+    "#####...######......####################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##...#############################....##",
+    "##...#############################....##",
+    "##...#############################....##",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      10,
+      8
+    ],
+    "water": [
+      9,
+      8
+    ]
+  },
+  "entities": [
+    {
+      "id": "scale",
+      "type": "pulley",
+      "x": 14,
+      "y": 9,
+      "w": 6,
+      "to": [
+        33,
+        7,
+        2
+      ],
+      "range": 6,
+      "ratio": 2,
+      "weights": [
+        0.5,
+        0
+      ],
+      "speed": 0.45
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 33,
+      "y": 6
+    },
+    {
+      "id": "high",
+      "type": "plate",
+      "x": 33,
+      "y": 3,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "east"
+      ]
+    },
+    {
+      "id": "low",
+      "type": "plate",
+      "x": 33,
+      "y": 6,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "west"
+      ]
+    },
+    {
+      "id": "east",
+      "type": "door",
+      "x": 25,
+      "y": 12,
+      "h": 3
+    },
+    {
+      "id": "far",
+      "type": "lever",
+      "x": 36,
+      "y": 14,
+      "targets": [
+        "west",
+        "east"
+      ]
+    },
+    {
+      "id": "west",
+      "type": "door",
+      "x": 9,
+      "y": 12,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "release",
+      "type": "lever",
+      "x": 3,
+      "y": 14,
+      "targets": [
+        "top_access"
+      ]
+    },
+    {
+      "id": "hatch_l",
+      "type": "door",
+      "x": 2,
+      "y": 15,
+      "w": 3,
+      "h": 1,
+      "latch": true
+    },
+    {
+      "id": "hatch_r",
+      "type": "door",
+      "x": 34,
+      "y": 15,
+      "w": 4,
+      "h": 1,
+      "latch": true
+    },
+    {
+      "id": "west_key",
+      "type": "lever",
+      "x": 3,
+      "y": 20,
+      "targets": [
+        "right_mid",
+        "left_block"
+      ]
+    },
+    {
+      "id": "east_key",
+      "type": "lever",
+      "x": 36,
+      "y": 20,
+      "targets": [
+        "left_mid",
+        "right_block"
+      ]
+    },
+    {
+      "id": "left_block",
+      "type": "door",
+      "x": 8,
+      "y": 18,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "right_block",
+      "type": "door",
+      "x": 31,
+      "y": 18,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "left_mid",
+      "type": "door",
+      "x": 12,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "right_mid",
+      "type": "door",
+      "x": 27,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "cert_l",
+      "type": "plate",
+      "x": 16,
+      "y": 20,
+      "targets": [
+        "center"
+      ]
+    },
+    {
+      "id": "cert_r",
+      "type": "plate",
+      "x": 23,
+      "y": 20,
+      "targets": [
+        "center"
+      ]
+    },
+    {
+      "id": "center",
+      "type": "door",
+      "x": 20,
+      "y": 18,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 23,
+      "y": 20
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 16,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 36,
+      "y": 19
+    },
+    {
+      "id": "recall",
+      "type": "elevator",
+      "x": 5,
+      "y": 9,
+      "w": 3,
+      "path": [
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          15
+        ]
+      ],
+      "mode": "loop",
+      "pause": 300,
+      "speed": 2
+    },
+    {
+      "id": "top_access",
+      "type": "door",
+      "x": 3,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "top_cert",
+      "type": "lever",
+      "x": 1,
+      "y": 8,
+      "targets": [
+        "hatch_l",
+        "hatch_r"
+      ]
+    }
+  ],
+  "parTicks": 7800,
+  "hints": [
+    "Both riders lower the pan. One rider balances it; when both leave it rises.",
+    "The high stone opens the eastern workshop. Its lever keeps that route open when the stone descends.",
+    "With the stone low, the western lever authorizes the top certificate. Ride the recall lift back up before descending."
+  ]
+}

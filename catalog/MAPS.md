@@ -2582,6 +2582,66 @@ Entities:
   X  exit_25      exit       at (38,13)  water
 ```
 
+## Mass Arithmetic (`mass_arithmetic`) — 2p, core `dual-rider-hold-and-empty-reversal`
+
+```
+Mass Arithmetic (mass_arithmetic) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #################################..#####
+ 2  #################################..#####
+ 3  #################################pp#####
+ 4  #################################..#####
+ 5  #################################..#####
+ 6  #..D................#############pp#####
+ 7  #..D................#############uu#####
+ 8  #l.D.....@@.........####################
+ 9  #####EEE######uuuuuu####################
+10  #####...######......####################
+11  #####...######......####################
+12  #........D...............D.............#
+13  #........D...............D.............#
+14  #..l.....D...............D..........l..#
+15  ##DDD#############################DDDD##
+16  ##...#############################....##
+17  ##...#############################....##
+18  #.......D...D.......D......D...D.......#
+19  #..X....D...D.......D......D...D....X..#
+20  #..X....D...D...*...D..*...D...D....X..#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (10,8)  water (9,8)
+Entities:
+  u  scale        pulley     at (14,9)  6x1  speed 0.45  range 6  ratio 2  second platform at (33,7)  platforms weigh 0.5 and 0
+  O  stone        boulder    at (33,6)
+  p  high         plate      at (33,3)  2x1  -> east  weight heavy
+  p  low          plate      at (33,6)  2x1  -> west  weight heavy
+  D  east         door       at (25,12)  1x3  <- high, far
+  l  far          lever      at (36,14)  -> west, east
+  D  west         door       at (9,12)  1x3  <- low, far (needs 2)
+  l  release      lever      at (3,14)  -> top_access
+  D  hatch_l      door       at (2,15)  3x1  <- top_cert  latch
+  D  hatch_r      door       at (34,15)  4x1  <- top_cert  latch
+  l  west_key     lever      at (3,20)  -> right_mid, left_block
+  l  east_key     lever      at (36,20)  -> left_mid, right_block
+  D  left_block   door       at (8,18)  1x3  <- west_key  invert
+  D  right_block  door       at (31,18)  1x3  <- east_key  invert
+  D  left_mid     door       at (12,18)  1x3  <- east_key  latch
+  D  right_mid    door       at (27,18)  1x3  <- west_key  latch
+  p  cert_l       plate      at (16,20)  -> center
+  p  cert_r       plate      at (23,20)  -> center
+  D  center       door       at (20,18)  1x3  <- cert_l, cert_r (needs 2)  latch
+  *  gem_19       gem        at (23,20)  fire
+  *  gem_20       gem        at (16,20)  water
+  X  exit_21      exit       at (3,19)  fire
+  X  exit_22      exit       at (36,19)  water
+  E  recall       elevator   at (5,9)  3x1  mode loop  speed 2  pause 300  path (5,9)-(5,15)
+  D  top_access   door       at (3,6)  1x3  <- release  latch
+  l  top_cert     lever      at (1,8)  -> hatch_l, hatch_r
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

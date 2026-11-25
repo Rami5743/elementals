@@ -183,3 +183,5 @@ Object.assign(IDEAS, { "ratio-reverses-paired-cargo": {kind:'spine',note:"Fixed 
 Object.assign(IDEAS, { "hoist-unloads-comparator": {kind:'spine',note:"Two independent hoists lift loads away from a seesaw, so either imbalance and the loaded centered state give distinct paired contacts; an empty centered plank is not equivalent to a loaded one."} });
 
 Object.assign(IDEAS, { "direction-qualified-transit-contact": {kind:'spine',note:"The same physical mid-track sensor supplies different permissions on the outward and return strokes of a powered shuttle: the first is qualified by the live power pulse and the second by a far-bank certificate and the expired power. No second sensor or brake can substitute."} });
+
+Object.assign(IDEAS, { "three-load-rope-control": {kind:'spine',note:"A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact."} });
