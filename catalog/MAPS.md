@@ -4237,6 +4237,90 @@ Entities:
   !  checkpoint_35 checkpoint at (5,17)
 ```
 
+## Flight Inspector (`flight_inspector`) — 3p, core `synchronized-flight-shutdown-certificates`
+
+```
+Flight Inspector (flight_inspector) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #...........pppppppppppppppp....D....D.#
+ 2  #...........^^^^^^^^^^^^^^^^....D....D.#
+ 3  #...........^^^^^^^^^^^^^^^^....D.l..Dl#
+ 4  ######===###^^^^^^^^^^^^^^^^############
+ 5  ######......^^^^^^^^^^^^^^^^############
+ 6  ######===###############################
+ 7  #XD.DD....D.........D...D.D.############
+ 8  #XDlDD===.D....l....D.l@D.Dl############
+ 9  ########################################
+10  #...........pppppppppppppppp....D....D.#
+11  #...........^^^^^^^^^^^^^^^^....D....D.#
+12  #...........^^^^^^^^^^^^^^^^....D.l..Dl#
+13  ######===###^^^^^^^^^^^^^^^^############
+14  ######......^^^^^^^^^^^^^^^^############
+15  ######===###############################
+16  #XD.DD....D.........D...D.D.############
+17  #XDlDD===.D....l....D.l@D.Dl############
+18  ########################################
+19  #........D.........D.D.......D...D.D..X#
+20  #..@.....D....l....D.D..l....D...D.D.*X#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (23,8)  water (23,17)  earth (3,20)
+Entities:
+  ^  ffan         fan        at (12,1)  16x5  <- wB, master (needs 2)  strength 1.56
+  p  fplate       plate      at (12,1)  16x1  -> f_gate, w_gate, f_final, w_final, e_first, e_second
+  D  f_gate       door       at (32,1)  1x3  <- fplate, wplate (needs 2)  latch
+  D  f_final      door       at (37,1)  1x3  <- fplate, fE, wplate, wE, E2 (needs 5)  latch
+  D  fAaccess     door       at (20,7)  1x2  <- wA  latch
+  D  fBaccess     door       at (10,7)  1x2  <- wB  latch
+  D  fCaccess     door       at (24,7)  1x2  <- wC, E1 (needs 2)  latch
+  D  fAinverse    door       at (26,7)  1x2  <- wA  invert
+  D  fDaccess     door       at (5,7)  1x2  <- wD, E2 (needs 2)  latch
+  D  fBinverse    door       at (4,7)  1x2  <- wB  invert
+  l  fA           lever      at (22,8)  -> wAaccess, wAinverse
+  l  fB           lever      at (15,8)  -> wBaccess, wfan, wBinverse
+  l  fC           lever      at (34,3)  -> wCaccess
+  l  fD           lever      at (27,8)  -> wDaccess, e_middle
+  l  fE           lever      at (3,8)  -> f_final, w_final
+  *  gem_15       gem        at (38,3)  fire
+  X  exit_16      exit       at (1,7)  fire
+  ^  wfan         fan        at (12,10)  16x5  <- fB, master (needs 2)  strength 1.56
+  p  wplate       plate      at (12,10)  16x1  -> f_gate, w_gate, f_final, w_final, e_first, e_second
+  D  w_gate       door       at (32,10)  1x3  <- fplate, wplate (needs 2)  latch
+  D  w_final      door       at (37,10)  1x3  <- fplate, fE, wplate, wE, E2 (needs 5)  latch
+  D  wAaccess     door       at (20,16)  1x2  <- fA  latch
+  D  wBaccess     door       at (10,16)  1x2  <- fB  latch
+  D  wCaccess     door       at (24,16)  1x2  <- fC, E1 (needs 2)  latch
+  D  wAinverse    door       at (26,16)  1x2  <- fA  invert
+  D  wDaccess     door       at (5,16)  1x2  <- fD, E2 (needs 2)  latch
+  D  wBinverse    door       at (4,16)  1x2  <- fB  invert
+  l  wA           lever      at (22,17)  -> fAaccess, fAinverse
+  l  wB           lever      at (15,17)  -> fBaccess, ffan, fBinverse
+  l  wC           lever      at (34,12)  -> fCaccess
+  l  wD           lever      at (27,17)  -> fDaccess, e_middle
+  l  wE           lever      at (3,17)  -> f_final, w_final
+  *  gem_32       gem        at (38,12)  water
+  X  exit_33      exit       at (1,16)  water
+  D  fhomegate    door       at (2,7)  1x2  <- fF, wF, Ehome (needs 3)  latch
+  l  fF           lever      at (38,3)  -> fhomegate, whomegate, e_exit
+  D  whomegate    door       at (2,16)  1x2  <- fF, wF, Ehome (needs 3)  latch
+  l  wF           lever      at (38,12)  -> fhomegate, whomegate, e_exit
+  l  master       lever      at (3,20)  -> ffan, wfan, e_inverse, e_last
+  D  e_first      door       at (9,19)  1x2  <- fplate, wplate (needs 2)  latch
+  l  E1           lever      at (14,20)  -> fCaccess, wCaccess
+  D  e_middle     door       at (19,19)  1x2  <- fD, wD (needs 2)  latch
+  D  e_inverse    door       at (21,19)  1x2  <- master  invert
+  l  E2           lever      at (24,20)  -> fDaccess, wDaccess, f_final, w_final, e_second
+  D  e_second     door       at (29,19)  1x2  <- fplate, wplate, E2 (needs 3)  latch
+  D  e_last       door       at (33,19)  1x2  <- master  invert
+  D  e_exit       door       at (35,19)  1x2  <- fF, wF (needs 2)  latch
+  l  Ehome        lever      at (37,20)  -> fhomegate, whomegate
+  *  gem_48       gem        at (37,20)  earth
+  X  exit_49      exit       at (38,19)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

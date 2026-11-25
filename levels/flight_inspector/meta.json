@@ -1,0 +1,11 @@
+{
+  "order": 238,
+  "challenge": "motor",
+  "core": "synchronized-flight-shutdown-certificates",
+  "ideas": [
+    "two-in-the-air-at-once",
+    "switch-in-mid-flight",
+    "quorum",
+    "twist-undo"
+  ]
+}

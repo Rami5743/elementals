@@ -3903,6 +3903,43 @@
   ]
  },
  {
+  "id": "flight_inspector",
+  "name": "Flight Inspector",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8400,
+  "dark": false,
+  "challenge": "motor",
+  "core": "synchronized-flight-shutdown-certificates",
+  "ideas": [
+   "two-in-the-air-at-once",
+   "switch-in-mid-flight",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 238,
+  "line": "",
+  "tokens": [
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:fan:hang-time",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:5",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "flyover",
   "name": "Flyover",
   "source": "mine",

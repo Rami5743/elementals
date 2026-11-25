@@ -38,18 +38,18 @@ together. `twist-undo`×21, `quorum`×6, `invert-door`×5, `hold-switch`×5, `tw
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-float + no-hands-for-cargo
-- freeze-bridge + pound-chain
-- fan-passenger + torch-bridge
+- belt-cargo + no-overtaking
+- crate-step + freeze-invert
+- dark + one-way-drop
+- freeze-invert + send-one-through
+- fan-passenger + tower-presses-a-column
+- machine-strands-operator + torch-bridge
+- one-way-drop + twist-sacrifice
+- hoist-one-way-for-cargo + twist-order
+- pound-chain + twist-order
+- dark + two-is-not-heavy
 - crate-step + twist-sacrifice
-- fan-band + shared-switch-two-gates
-- send-one-through + twist-undo
-- boulder-float + twist-undo
-- boulder-float + glide-dismount
-- liquid-lane + torch-bridge
-- no-overtaking + twist-self-block
-- machine-strands-operator + pound-chain
-- boulder-float + pound-to-move
+- fan-passenger + lift-sorts-by-weight
 
 ## This repo's 2-player levels
 
