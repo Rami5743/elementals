@@ -1,0 +1,11 @@
+{
+  "order": 249,
+  "challenge": "mind",
+  "core": "irreversible-drop-reconfigures-cargo-register",
+  "ideas": [
+    "pound-to-move",
+    "drop-reconfigures-circuit",
+    "belt-reverse",
+    "twist-undo"
+  ]
+}

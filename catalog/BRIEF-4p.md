@@ -37,23 +37,24 @@ together. `twist-undo`×27, `quorum`×27, `twist-order`×7, `timed-window`×5, `
 - `three-load-rope-control` — A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact.
 - `spatial-clock-phase-rendezvous` — Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home.
 - `causeway-as-veto` — A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge.
+- `drop-reconfigures-circuit` — A cracked floor permanently transfers a cargo from a stationary upper contact to a separate reversible lower conveyor register, so the old permissions must be recorded before the circuit is reconfigured.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- glide-passenger + twist-undo
-- freeze-bridge + tower-presses-a-column
-- climb-then-steer + fan-band
-- low-roof-no-jump + pound-to-move
-- cargo-as-clock-contact + stand-aside-is-the-switch
-- belt-cargo + climb-then-steer
-- glide-dismount + machine-strands-operator
-- partner-builds-your-landing + twist-undo
-- belt-filter + single-file-stone
-- lock-per-element + single-file-stone
-- counterweight-you-must-remove + head-stack
-- reversible-switch-maze + wide-door
+- boulder-float + unload-the-pan-you-ride
+- low-roof-no-jump + twist-self-block
+- glide-dismount + pound-chain
+- three-load-rope-control + turbine-out-of-reach
+- glide-passenger + pound-chain
+- causeway-as-veto + freeze-bridge
+- climb-then-steer + head-stack
+- boulder-carry + fan-passenger
+- boulder-carry + unload-the-pan-you-ride
+- mass-adds-on-the-beam + turbine-out-of-reach
+- freeze-bridge + partner-builds-your-landing
+- causeway-as-veto + low-roof-no-jump
 
 ## This repo's 4-player levels
 

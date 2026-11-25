@@ -5671,6 +5671,71 @@ Entities:
   X  exit_28      exit       at (1,18)  water
 ```
 
+## Drop Register (`drop_register`) — 3p, core `irreversible-drop-reconfigures-cargo-register`
+
+```
+Drop Register (drop_register) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #........................D.............#
+ 2  #........................D.............#
+ 3  #...............pp.......D......@......#
+ 4  ###############ccccccccc################
+ 5  #.......................################
+ 6  #.......................################
+ 7  #................===#==.......D......D.#
+ 8  #ppp.............ppp#.........D......DX#
+ 9  #<<<<<<<<<<<<<<<<<<<#.........D...*..DX#
+10  ########################################
+11  ########################################
+12  #.........D..........D..D..........D...#
+13  #.........D..........D..D..........D..X#
+14  #...@.....D....l..l..D..D...l......D.*X#
+15  ########################################
+16  ########################################
+17  #.D...D......D..D...........D..........#
+18  #XD...D......D..D...........D..........#
+19  #XD.*.D...l..D..D.....l.....D.....@....#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (32,3)  fire (4,14)  water (34,19)
+Entities:
+  c  slab         cracked    at (15,4)  9x1
+  O  token        boulder    at (16,3)
+  p  upper        plate      at (16,3)  2x1  -> f_access, w_access, f_inverse, w_inverse  weight heavy
+  >  belt         belt       at (1,9)  19x1  <- reverse  mode reverse  speed -0.55
+  p  west         plate      at (1,8)  3x1  -> f_west, w_west, f_exit, w_exit, e_exit  weight heavy
+  p  east         plate      at (17,8)  3x1  -> e_east, w_east  weight heavy
+  D  e_access     door       at (25,1)  1x3  <- Fpre, Wpre (needs 2)  latch
+  D  e_east       door       at (30,7)  1x3  <- east, Fwest, Wwest (needs 3)  latch
+  l  Ecert        lever      at (34,9)  -> f_exit, w_east, w_exit
+  D  e_exit       door       at (37,7)  1x3  <- west, Wlast (needs 2)
+  D  f_access     door       at (10,12)  1x3  <- upper
+  l  Fpre         lever      at (15,14)  -> w_access, e_access
+  l  reverse      lever      at (18,14)  -> belt
+  D  f_inverse    door       at (21,12)  1x3  <- upper  invert
+  D  f_west       door       at (24,12)  1x3  <- west  latch
+  l  Fwest        lever      at (28,14)  -> e_east
+  D  f_exit       door       at (35,12)  1x3  <- west, Ecert, Wlast (needs 3)  latch
+  D  w_access     door       at (28,17)  1x3  <- upper, Fpre (needs 2)
+  l  Wpre         lever      at (22,19)  -> e_access
+  D  w_inverse    door       at (16,17)  1x3  <- upper  invert
+  D  w_west       door       at (13,17)  1x3  <- west  latch
+  l  Wwest        lever      at (10,19)  -> e_east
+  D  w_east       door       at (6,17)  1x3  <- east, Ecert (needs 2)  latch
+  l  Wlast        lever      at (4,19)  -> e_exit, f_exit, w_exit
+  D  w_exit       door       at (2,17)  1x3  <- west, Ecert, Wlast (needs 3)  latch
+  *  gem_25       gem        at (34,9)  earth
+  X  exit_26      exit       at (38,8)  earth
+  *  gem_27       gem        at (37,14)  fire
+  X  exit_28      exit       at (38,13)  fire
+  *  gem_29       gem        at (4,19)  water
+  X  exit_30      exit       at (1,18)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

@@ -189,3 +189,5 @@ Object.assign(IDEAS, { "three-load-rope-control": {kind:'spine',note:"A ballaste
 Object.assign(IDEAS, { "spatial-clock-phase-rendezvous": {kind:'spine',note:"Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home."} });
 
 Object.assign(IDEAS, { "causeway-as-veto": {kind:'spine',note:"A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge."} });
+
+Object.assign(IDEAS, { "drop-reconfigures-circuit": {kind:'spine',note:"A cracked floor permanently transfers a cargo from a stationary upper contact to a separate reversible lower conveyor register, so the old permissions must be recorded before the circuit is reconfigured."} });

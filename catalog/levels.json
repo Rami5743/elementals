@@ -4102,6 +4102,45 @@
   ]
  },
  {
+  "id": "drop_register",
+  "name": "Drop Register",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 9180,
+  "dark": false,
+  "challenge": "mind",
+  "core": "irreversible-drop-reconfigures-cargo-register",
+  "ideas": [
+   "pound-to-move",
+   "drop-reconfigures-circuit",
+   "belt-reverse",
+   "twist-undo"
+  ],
+  "order": 249,
+  "line": "the same boulder is initially an upper stationary permission and, after Earth destroys its support, becomes the movable state of a lower reversible conveyor. This is an irreversible reconfiguration of the electrical circuit, not a succession of similar descents.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "dumbwaiter",
   "name": "Dumbwaiter",
   "source": "mine",
