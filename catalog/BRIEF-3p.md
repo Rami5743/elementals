@@ -60,18 +60,18 @@ together. `twist-order`×6, `machine-strands-operator`×3, `object-as-permanent-
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- freeze-invert + twist-stranding
+- lift-sorts-by-weight + twist-self-block
+- low-roof-no-jump + machine-strands-operator
 - feed-the-engine-mid-ride + machine-strands-operator
-- invert-door + trigger-from-above
-- twist-sacrifice + twist-stranding
-- liquid-lane + machine-strands-operator
-- machine-strands-operator + no-overtaking
-- fan-band + twist-stranding
-- object-as-permanent-switch + pound-chain
-- hop-beats-belt + timed-window
-- machine-strands-operator + two-in-the-air-at-once
-- boulder-float + timed-window
-- machine-strands-operator + send-one-through
+- machine-strands-operator + plank-sums-plate-maxes
+- machine-strands-operator + single-file-stone
+- machine-strands-operator + pound-chain
+- lift-corner-path + stock-before-it-seals
+- twist-order + wide-door
+- freeze-invert + object-as-permanent-switch
+- lift-sheds-its-load + machine-strands-operator
+- lift-sheds-its-load + object-as-permanent-switch
+- fan-band + machine-strands-operator
 
 ## This repo's 3-player levels
 

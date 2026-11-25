@@ -61,18 +61,18 @@ together. `lock-per-element`×4, `twist-order`×4, `machine-strands-operator`×4
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-band + sink-as-a-timer
-- boulder-float + timed-window
-- boulder-float + partner-builds-your-landing
-- freeze-invert + low-roof-no-jump
-- boulder-float + twist-two-clocks
-- low-roof-no-jump + shared-switch-two-gates
-- low-roof-no-jump + unload-the-pan-you-ride
-- boulder-float + tower-presses-a-column
-- boulder-float + twist-setup
-- pound-chain + twist-setup
-- climb-then-steer + pound-chain
-- fan-band + liquid-lane
+- head-stack + single-file-stone
+- belt-filter + wide-door
+- turbine-out-of-reach + unload-the-pan-you-ride
+- head-stack + invert-door
+- turbine-out-of-reach + twist-stranding
+- counterweight-you-must-remove + turbine-out-of-reach
+- hop-beats-belt + low-roof-no-jump
+- head-stack + seesaw-balance
+- boulder-carry + invert-door
+- freeze-invert + turbine-out-of-reach
+- head-stack + lift-corner-path
+- glide-passenger + lock-per-element
 
 ## This repo's 4-player levels
 
