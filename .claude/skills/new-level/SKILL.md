@@ -18,7 +18,12 @@ catalogue. Work on `main`; do not open a branch.
 
 ## 2. Read what already exists
 
-Read the sections of `catalog/LEVELS.md` for **this player count** — both this repo's levels and
+Read **`catalog/BRIEF-<n>p.md`** for your player count — it is the novelty bar for that count,
+the next free `order`, the ideas already used there, the idea keys nobody there has touched, and
+every level at that count in one line each. It replaces reading `catalog/LEVELS.md`, which is five
+times the size and mostly about other player counts; open the full catalogue only to look at a
+level the brief names. The older instruction, kept for when you need it, was to read the sections
+of `catalog/LEVELS.md` for **this player count** — both this repo's levels and
 the campaign's. That is the bar for novelty. `catalog/MAPS.md` has the maps of this repo's levels
 if you want to see how a shape was laid out.
 

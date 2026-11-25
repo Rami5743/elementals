@@ -233,6 +233,18 @@ prompt built from this template:
 > make a level work after a genuine effort, say so plainly in your report rather than lowering
 > the bar or leaving a broken level behind.
 
+**Hand each agent its brief rather than making it derive one.** An hour of every level last
+night went on everything before the first line of JSON, and most of that was reading. You already
+know these; put them in the prompt:
+
+- the player count and the motor setting, and the chain's counter (`built[3p]=2`, so this is the ON);
+- **the `order` number you are assigning it** — the brief prints the next free one, but three
+  chains reading it at once would all take the same number, so you allocate them: 2p from 1xx,
+  3p from 2xx, 4p from 3xx, one each, and say which;
+- its branch name, and the id of any frozen level it is resuming;
+- the two files to read — `catalog/BRIEF-<n>p.md` and `catalog/PHYSICS.md` — and that it should
+  **not** read `catalog/LEVELS.md`, which is five times the size and mostly other player counts.
+
 Record, for each running agent: chain, agent name/id, the level it is on, and the time you
 spawned it.
 
