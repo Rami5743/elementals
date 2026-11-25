@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 134 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 135 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (44)
+## 2 players — this repo (45)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -205,6 +205,10 @@ Totals: 79 campaign levels, 134 in this repo, of which 11 now ship in the campai
   - idea: Permanent torch bridges and temporary reciprocal permissions have different lifetimes; the first bridge's far-bank authorization must be withdrawn after Fire has used it, before the party can reach the second pair of galleries.
   - ideas: torch-bridge, invert-door, twist-undo, twist-stranding
   - features: ent:door ent:lever ent:torch opt:invert:door opt:latch opt:wide-door tile:sludge
+- **Descent Ledger** `descent_ledger` (2p: water+earth) core=`irreversible-hatch-certificates-with-revoked-permissions` challenge=mind par=8220
+  - idea: A series of irreversible cracked-floor descents whose permissions have to be spent in reverse order: Earth must record a certificate, use the current authorization and go down, before Water can revoke that authorization to reach the next control.
+  - ideas: pound-chain, twist-sacrifice, twist-undo, machine-strands-operator
+  - features: ent:cracked ent:door ent:lever opt:invert:door opt:latch
 
 ## 2 players — campaign (34)
 

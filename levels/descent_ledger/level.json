@@ -1,0 +1,271 @@
+{
+  "id": "descent_ledger",
+  "name": "Descent Ledger",
+  "order": 145,
+  "description": "Earth's floor hatches are an irreversible expenditure. Water must record the upper certificate and revoke the corresponding permission before the next descent can be authorized.",
+  "supports": [
+    [
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###...##################################",
+    "###...##################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###################################...##",
+    "###################################...##",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "water": [
+      4,
+      19
+    ],
+    "earth": [
+      12,
+      4
+    ]
+  },
+  "entities": [
+    {
+      "id": "e_east1",
+      "type": "door",
+      "x": 24,
+      "y": 2,
+      "h": 3
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 36,
+      "y": 4,
+      "targets": [
+        "w2access"
+      ]
+    },
+    {
+      "id": "e_west1",
+      "type": "door",
+      "x": 8,
+      "y": 2,
+      "h": 3
+    },
+    {
+      "id": "hatch1",
+      "type": "cracked",
+      "x": 3,
+      "y": 5,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 7,
+      "y": 9,
+      "targets": [
+        "w3access"
+      ]
+    },
+    {
+      "id": "e_east2",
+      "type": "door",
+      "x": 24,
+      "y": 7,
+      "h": 3
+    },
+    {
+      "id": "E3",
+      "type": "lever",
+      "x": 28,
+      "y": 9,
+      "targets": [
+        "hatch_access"
+      ]
+    },
+    {
+      "id": "hatch_access",
+      "type": "door",
+      "x": 33,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "hatch2",
+      "type": "cracked",
+      "x": 35,
+      "y": 10,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "id": "E4",
+      "type": "lever",
+      "x": 3,
+      "y": 14,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "e_final",
+      "type": "door",
+      "x": 37,
+      "y": 12,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "E5",
+      "type": "lever",
+      "x": 38,
+      "y": 14,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 4,
+      "y": 19,
+      "targets": [
+        "e_east1",
+        "w_inv1"
+      ]
+    },
+    {
+      "id": "w_inv1",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w2access",
+      "type": "door",
+      "x": 14,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 18,
+      "y": 19,
+      "targets": [
+        "e_west1",
+        "w_inv2"
+      ]
+    },
+    {
+      "id": "w_inv2",
+      "type": "door",
+      "x": 23,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w3access",
+      "type": "door",
+      "x": 27,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "W3",
+      "type": "lever",
+      "x": 34,
+      "y": 19,
+      "targets": [
+        "e_east2",
+        "w_inv3"
+      ]
+    },
+    {
+      "id": "w_inv3",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w_west",
+      "type": "door",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "W4",
+      "type": "lever",
+      "x": 1,
+      "y": 19,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 37,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 1,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 8220,
+  "hints": [
+    "Earth must return from the east certificate before Water withdraws the first permission.",
+    "Before breaking a floor, record the certificate above it. The next stage must not depend on something left above.",
+    "Water's current permission opens a passage for Earth but closes Water's own route. Revoke it after each descent."
+  ]
+}

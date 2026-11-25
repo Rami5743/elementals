@@ -3779,6 +3779,36 @@
   ]
  },
  {
+  "id": "descent_ledger",
+  "name": "Descent Ledger",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "water+earth"
+  ],
+  "parTicks": 8220,
+  "dark": false,
+  "challenge": "mind",
+  "core": "irreversible-hatch-certificates-with-revoked-permissions",
+  "ideas": [
+   "pound-chain",
+   "twist-sacrifice",
+   "twist-undo",
+   "machine-strands-operator"
+  ],
+  "order": 145,
+  "line": "A series of irreversible cracked-floor descents whose permissions have to be spent in reverse order: Earth must record a certificate, use the current authorization and go down, before Water can revoke that authorization to reach the next control.",
+  "tokens": [
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:latch"
+  ]
+ },
+ {
   "id": "dismount",
   "name": "Dismount",
   "source": "mine",
