@@ -48,18 +48,18 @@ together. `twist-undo`×11, `invert-door`×5, `hold-switch`×5, `object-as-perma
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
+- boulder-float + shared-switch-two-gates
+- lift-press + twist-undo
+- head-stack + lift-sorts-by-weight
+- belt-filter + pound-to-move
+- glide-dismount + pound-chain
+- freeze-bridge + one-way-drop
+- freeze-bridge + torch-bridge
+- glide-dismount + one-way-drop
+- hold-switch + send-one-through
+- hold-switch + one-way-drop
 - boulder-carry + object-as-permanent-switch
-- fan-band + glide-dismount
-- dive-ahead-of-the-runaway + object-as-permanent-switch
-- head-stack + lock-per-element
-- glide-dismount + lift-as-floor
-- belt-filter + hold-switch
-- object-as-permanent-switch + one-way-drop
-- head-stack + lift-press
-- dive-ahead-of-the-runaway + head-stack
-- glide-dismount + torch-bridge
-- lift-sorts-by-weight + object-as-permanent-switch
-- boulder-float + head-stack
+- belt-filter + head-stack
 
 ## This repo's 2-player levels
 

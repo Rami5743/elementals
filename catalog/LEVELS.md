@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 75 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 76 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (25)
@@ -272,7 +272,7 @@ Totals: 79 campaign levels, 75 in this repo, of which 11 now ship in the campaig
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (26)
+## 3 players — this repo (27)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -378,6 +378,10 @@ Totals: 79 campaign levels, 75 in this repo, of which 11 now ship in the campaig
   - idea: separating the stripper from the loading controls so three operators must certify the same cargo circuit.
   - ideas: shuttle-strips-cargo-to-belt, quorum, twist-undo
   - features: ent:belt ent:boulder ent:door ent:elevator ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3
+- **Windfall Relay** `windfall_relay` (3p: fire+water+earth) core=`windfall-relay-isolated-stop` challenge=motor par=7140
+  - idea: the second wind interruption is controlled by a third player in an isolated booth, released only after the first descent and the selector return.
+  - ideas: wind-off-enables-descent, quorum, twist-undo
+  - features: ent:button ent:door ent:fan ent:lever ent:plate opt:button-timed opt:button:timed opt:fan:lifts-fire-water opt:invert:door opt:invert:fan opt:latch opt:required:2 opt:required:3
 
 ## 3 players — campaign (30)
 

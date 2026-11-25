@@ -1,0 +1,305 @@
+{
+  "id": "windfall_relay",
+  "name": "Windfall Relay",
+  "order": 226,
+  "description": "The second descent requires an isolated stop operator, released only after the first windfall and the selector's return.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 7140,
+  "tiles": [
+    "########################################",
+    "#######.........................########",
+    "#######.........................########",
+    "#######.........................########",
+    "#######....#################....########",
+    "#######....#...............#....########",
+    "#######....#...............#....########",
+    "#..........#...............#...........#",
+    "#..........#################...........#",
+    "#..........#################...........#",
+    "########...#################...#########",
+    "#######....#################....########",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      4,
+      14
+    ],
+    "water": [
+      34,
+      19
+    ],
+    "earth": [
+      13,
+      7
+    ]
+  },
+  "entities": [
+    {
+      "id": "leftwind",
+      "type": "fan",
+      "x": 8,
+      "y": 1,
+      "w": 3,
+      "h": 14,
+      "strength": 2,
+      "invert": true
+    },
+    {
+      "id": "rightwind",
+      "type": "fan",
+      "x": 28,
+      "y": 1,
+      "w": 3,
+      "h": 14,
+      "strength": 2,
+      "invert": true
+    },
+    {
+      "id": "start",
+      "type": "lever",
+      "x": 3,
+      "y": 14,
+      "targets": [
+        "w0"
+      ]
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "selector",
+      "type": "lever",
+      "x": 33,
+      "y": 19,
+      "targets": [
+        "top_gate",
+        "w_inv",
+        "f_exit"
+      ]
+    },
+    {
+      "id": "top_gate",
+      "type": "door",
+      "x": 19,
+      "y": 1,
+      "h": 3
+    },
+    {
+      "id": "r_stop",
+      "type": "button",
+      "x": 25,
+      "y": 19,
+      "mode": "timed",
+      "duration": 360,
+      "targets": [
+        "rightwind"
+      ]
+    },
+    {
+      "id": "right",
+      "type": "lever",
+      "x": 35,
+      "y": 9,
+      "targets": [
+        "w1",
+        "e_gate"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w_inv",
+      "type": "door",
+      "x": 18,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "l_stop",
+      "type": "button",
+      "x": 22,
+      "y": 7,
+      "mode": "timed",
+      "duration": 360,
+      "targets": [
+        "leftwind"
+      ]
+    },
+    {
+      "id": "left",
+      "type": "lever",
+      "x": 4,
+      "y": 9,
+      "targets": [
+        "w2",
+        "ack_gate",
+        "e_exit"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "latch": true,
+      "required": 3
+    },
+    {
+      "id": "finish",
+      "type": "lever",
+      "x": 5,
+      "y": 19,
+      "targets": [
+        "f_exit"
+      ]
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 2,
+      "y": 7,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_exit",
+      "type": "door",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 35,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 5,
+      "y": 19
+    },
+    {
+      "id": "home_contact",
+      "type": "plate",
+      "x": 1,
+      "y": 9,
+      "targets": [
+        "w_exit"
+      ]
+    },
+    {
+      "id": "ack_gate",
+      "type": "door",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "ack",
+      "type": "lever",
+      "x": 37,
+      "y": 19,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "release",
+      "type": "lever",
+      "x": 15,
+      "y": 19,
+      "targets": [
+        "e_gate"
+      ]
+    },
+    {
+      "id": "e_gate",
+      "type": "door",
+      "x": 18,
+      "y": 5,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 24,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_cert",
+      "type": "lever",
+      "x": 25,
+      "y": 7,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 26,
+      "y": 6
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 25,
+      "y": 7
+    }
+  ],
+  "hints": [
+    "Fire uses the right stop first, returns through the top selector, then signals the left descent.",
+    "Water releases the selector and opens Earth's isolated booth after the first contact.",
+    "Earth stops the left wind and certifies the descent. Both windows can be retried."
+  ]
+}

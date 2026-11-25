@@ -5160,6 +5160,43 @@
   ]
  },
  {
+  "id": "windfall_relay",
+  "name": "Windfall Relay",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7140,
+  "dark": false,
+  "challenge": "motor",
+  "core": "windfall-relay-isolated-stop",
+  "ideas": [
+   "wind-off-enables-descent",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 226,
+  "line": "the second wind interruption is controlled by a third player in an isolated booth, released only after the first descent and the selector return.",
+  "tokens": [
+   "ent:button",
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:fan:lifts-fire-water",
+   "opt:invert:door",
+   "opt:invert:fan",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "windfall_switch",
   "name": "Windfall Switch",
   "source": "mine",

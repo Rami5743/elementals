@@ -1,0 +1,10 @@
+{
+  "order": 226,
+  "challenge": "motor",
+  "core": "windfall-relay-isolated-stop",
+  "ideas": [
+    "wind-off-enables-descent",
+    "quorum",
+    "twist-undo"
+  ]
+}

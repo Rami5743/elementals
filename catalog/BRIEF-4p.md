@@ -60,18 +60,18 @@ together. `twist-undo`×7, `quorum`×6, `twist-order`×5, `lock-per-element`×4,
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- liquid-lane + turbine-out-of-reach
-- liquid-lane + lock-per-element
-- glide-dismount + head-stack
-- lock-per-element + one-way-drop
-- lock-per-element + mass-adds-on-the-beam
-- lift-press + lock-per-element
-- head-stack + hoist-one-way-for-cargo
-- pound-chain + two-stops-no-middle
-- freeze-bridge + glide-dismount
-- hop-beats-belt + two-is-not-heavy
-- belt-filter + partner-builds-your-landing
-- fan-band + tower-presses-a-column
+- shutter-floor-wall-duality + turbine-out-of-reach
+- belt-filter + lift-corner-path
+- belt-filter + feed-the-engine-mid-ride
+- pound-chain + shared-switch-two-gates
+- mass-adds-on-the-beam + pound-chain
+- single-file-stone + turbine-out-of-reach
+- fan-passenger + head-stack
+- glide-passenger + lock-per-element
+- fan-passenger + pound-chain
+- lock-per-element + pound-to-move
+- boulder-float + unload-the-pan-you-ride
+- hop-beats-belt + lock-per-element
 
 ## This repo's 4-player levels
 

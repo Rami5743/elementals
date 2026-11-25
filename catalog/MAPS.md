@@ -2741,6 +2741,69 @@ Entities:
   *  gem_32       gem        at (34,9)  earth
 ```
 
+## Windfall Relay (`windfall_relay`) — 3p, core `windfall-relay-isolated-stop`
+
+```
+Windfall Relay (windfall_relay) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #######.^^^........D........^^^.########
+ 2  #######.^^^........D........^^^.########
+ 3  #######.^^^........D........^^^.########
+ 4  #######.^^^#################^^^.########
+ 5  #######.^^^#......D.....D..#^^^.########
+ 6  #######.^^^#......D.....D.X#^^^.########
+ 7  #.D.....^^^#.@....D...b.D*X#^^^........#
+ 8  #XD.....^^^#################^^^........#
+ 9  #pD.l...^^^#################^^^....*...#
+10  ########^^^#################^^^#########
+11  #######.^^^#################^^^.########
+12  #.......^^^.................^^^........#
+13  #.......^^^.................^^^........#
+14  #..l@...^^^.................^^^........#
+15  ########################################
+16  ########################################
+17  #.D.......D.......D.D.........D.....D..#
+18  #XD.......D.......D.D.........D.....D..#
+19  #XD..*....D....l..D.D....b....D..l@.Dl.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (4,14)  water (34,19)  earth (13,7)
+Entities:
+  ^  leftwind     fan        at (8,1)  3x14  <- l_stop  strength 2  invert
+  ^  rightwind    fan        at (28,1)  3x14  <- r_stop  strength 2  invert
+  l  start        lever      at (3,14)  -> w0
+  D  w0           door       at (30,17)  1x3  <- start  latch
+  l  selector     lever      at (33,19)  -> top_gate, w_inv, f_exit
+  D  top_gate     door       at (19,1)  1x3  <- selector
+  b  r_stop       button     at (25,19)  -> rightwind  mode timed  duration 360
+  l  right        lever      at (35,9)  -> w1, e_gate
+  D  w1           door       at (20,17)  1x3  <- right  latch
+  D  w_inv        door       at (18,17)  1x3  <- selector  invert
+  b  l_stop       button     at (22,7)  -> leftwind  mode timed  duration 360
+  l  left         lever      at (4,9)  -> w2, ack_gate, e_exit
+  D  w2           door       at (10,17)  1x3  <- left, ack, e_cert (needs 3)  latch
+  l  finish       lever      at (5,19)  -> f_exit
+  D  f_exit       door       at (2,7)  1x3  <- selector, finish (needs 2)  latch
+  D  w_exit       door       at (2,17)  1x3  <- home_contact  latch
+  X  exit_16      exit       at (1,8)  fire
+  *  gem_17       gem        at (35,9)  fire
+  X  exit_18      exit       at (1,18)  water
+  *  gem_19       gem        at (5,19)  water
+  p  home_contact plate      at (1,9)  -> w_exit
+  D  ack_gate     door       at (36,17)  1x3  <- left  latch
+  l  ack          lever      at (37,19)  -> w2
+  l  release      lever      at (15,19)  -> e_gate
+  D  e_gate       door       at (18,5)  1x3  <- right, release (needs 2)  latch
+  D  e_exit       door       at (24,5)  1x3  <- left  latch
+  l  e_cert       lever      at (25,7)  -> w2
+  X  exit_27      exit       at (26,6)  earth
+  *  gem_28       gem        at (25,7)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```
