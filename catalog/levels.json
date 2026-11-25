@@ -4322,6 +4322,41 @@
   ]
  },
  {
+  "id": "dual_embargo",
+  "name": "Dual Embargo",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7680,
+  "dark": false,
+  "challenge": "mind",
+  "core": "floating-bridge-dual-permit-embargo",
+  "ideas": [
+   "causeway-as-veto",
+   "boulder-float",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 350,
+  "line": "a floating stone is both the route and an irreversible electrical veto. Two independent operators must revoke both live approach permits, not merely one, and later restore them.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "dumbwaiter",
   "name": "Dumbwaiter",
   "source": "mine",

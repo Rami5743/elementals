@@ -38,18 +38,18 @@ together. `twist-undo`×32, `quorum`×25, `twist-order`×9, `timed-window`×8, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- glide-passenger + stock-before-it-seals
-- quorum + single-file-stone
-- head-stack + mass-adds-on-the-beam
-- head-stack + unload-the-pan-you-ride
-- lift-corner-path + lock-per-element
-- glide-passenger + quorum
-- glide-passenger + twist-backwards
-- glide-passenger + lift-as-floor
-- dark + twist-undo
-- quorum + rope-keeps-the-jumper
-- dark + lift-corner-path
-- glide-passenger + grating-memory-with-erase
+- single-file-stone + twist-stranding
+- dark + quorum
+- lift-sorts-by-weight + twist-stranding
+- door-pushes-you-through + twist-stranding
+- feed-the-engine-mid-ride + machine-strands-operator
+- twist-stranding + wide-door
+- glide-passenger + lift-corner-path
+- mass-adds-on-the-beam + twist-stranding
+- machine-strands-operator + single-file-stone
+- glide-passenger + hoist-unloads-comparator
+- dark + lift-as-floor
+- machine-strands-operator + stand-aside-is-the-switch
 
 ## This repo's 3-player levels
 
