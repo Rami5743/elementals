@@ -187,3 +187,5 @@ Object.assign(IDEAS, { "direction-qualified-transit-contact": {kind:'spine',note
 Object.assign(IDEAS, { "three-load-rope-control": {kind:'spine',note:"A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact."} });
 
 Object.assign(IDEAS, { "spatial-clock-phase-rendezvous": {kind:'spine',note:"Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home."} });
+
+Object.assign(IDEAS, { "causeway-as-veto": {kind:'spine',note:"A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge."} });

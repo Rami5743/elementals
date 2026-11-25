@@ -1,0 +1,296 @@
+{
+  "id": "stone_causeway",
+  "name": "Stone Causeway",
+  "order": 248,
+  "description": "A floating boulder is both a bridge and a heavy electrical contact. Its arrival revokes the water route until the original permit is withdrawn.",
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#..........#######.....................#",
+    "#..........#######.....................#",
+    "#......................................#",
+    "#################.######################",
+    "#################S######################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "spawns": {
+    "earth": [
+      6,
+      8
+    ],
+    "fire": [
+      6,
+      13
+    ],
+    "water": [
+      28,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "type": "boulder",
+      "id": "bridge",
+      "x": 12,
+      "y": 8
+    },
+    {
+      "type": "plate",
+      "id": "bridge_contact",
+      "x": 17,
+      "y": 9,
+      "weight": "heavy",
+      "targets": [
+        "f_bridge",
+        "w_inverse"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "e_access",
+      "x": 8,
+      "y": 6,
+      "h": 3
+    },
+    {
+      "type": "door",
+      "id": "e_east",
+      "x": 24,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "e_left",
+      "x": 4,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "e_final",
+      "x": 36,
+      "y": 6,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Eeast",
+      "x": 28,
+      "y": 8,
+      "targets": [
+        "w_access"
+      ]
+    },
+    {
+      "type": "lever",
+      "id": "Eleft",
+      "x": 2,
+      "y": 8,
+      "targets": [
+        "e_final",
+        "w_late",
+        "f_late"
+      ]
+    },
+    {
+      "type": "lever",
+      "id": "Efinal",
+      "x": 38,
+      "y": 8,
+      "targets": [
+        "w_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_access",
+      "x": 10,
+      "y": 11,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "F0",
+      "x": 16,
+      "y": 13,
+      "targets": [
+        "e_access",
+        "w_inverse"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_bridge",
+      "x": 22,
+      "y": 11,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Ffar",
+      "x": 30,
+      "y": 13,
+      "targets": [
+        "e_east",
+        "w_access"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_late",
+      "x": 35,
+      "y": 11,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Flast",
+      "x": 37,
+      "y": 13,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_exit",
+      "x": 3,
+      "y": 11,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "W0",
+      "x": 32,
+      "y": 19,
+      "targets": [
+        "f_access"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_access",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "w_inverse",
+      "x": 14,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "invert": true
+    },
+    {
+      "type": "lever",
+      "id": "Wcert",
+      "x": 5,
+      "y": 19,
+      "targets": [
+        "e_left",
+        "f_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_late",
+      "x": 34,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Wlate",
+      "x": 37,
+      "y": 19,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_exit",
+      "x": 3,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 34,
+      "y": 8
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 7
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 13
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 12
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 5,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 18
+    }
+  ],
+  "parTicks": 6660,
+  "hints": [
+    "Push the stone into the channel; it floats just below the bank.",
+    "The bridge contact is both a permission and a veto. Turn the original lever off after the east certificate.",
+    "The earth runner must return to the western chamber, then cross again before the final release."
+  ]
+}

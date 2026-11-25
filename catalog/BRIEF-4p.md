@@ -36,23 +36,24 @@ together. `twist-undo`×27, `quorum`×27, `twist-order`×7, `timed-window`×5, `
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `three-load-rope-control` — A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact.
 - `spatial-clock-phase-rendezvous` — Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home.
+- `causeway-as-veto` — A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
+- glide-passenger + twist-undo
 - freeze-bridge + tower-presses-a-column
-- reversible-switch-maze + three-load-rope-control
-- belt-reverse + twist-stranding
-- climb-then-steer + freeze-bridge
+- climb-then-steer + fan-band
+- low-roof-no-jump + pound-to-move
+- cargo-as-clock-contact + stand-aside-is-the-switch
+- belt-cargo + climb-then-steer
 - glide-dismount + machine-strands-operator
-- boulder-carry + wide-door
-- turbine-out-of-reach + twist-self-block
-- belt-reverse + door-pushes-you-through
-- belt-cargo + partner-builds-your-landing
-- machine-strands-operator + unload-the-pan-you-ride
-- lift-corner-path + obstruction-as-third-state
-- cargo-as-clock-contact + spatial-clock-phase-rendezvous
+- partner-builds-your-landing + twist-undo
+- belt-filter + single-file-stone
+- lock-per-element + single-file-stone
+- counterweight-you-must-remove + head-stack
+- reversible-switch-maze + wide-door
 
 ## This repo's 4-player levels
 

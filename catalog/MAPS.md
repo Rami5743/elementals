@@ -5608,6 +5608,69 @@ Entities:
   X  wexit        exit       at (38,18)  water
 ```
 
+## Stone Causeway (`stone_causeway`) — 3p, core `floating-stone-floor-and-electrical-contact`
+
+```
+Stone Causeway (stone_causeway) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  #...D...D..#######......D...........D..#
+ 7  #...D...D..#######......D...........D.X#
+ 8  #.l.D.@.D...O...........D...l.....*.D.X#
+ 9  #################p######################
+10  #################S######################
+11  #..D......D...........D............D...#
+12  #X.D......D...........D............D...#
+13  #X.D..@...D.....l.....D.......l....D.*.#
+14  ########################################
+15  ########################################
+16  ########################################
+17  #..D..........D.....D.............D....#
+18  #X.D..........D.....D.............D....#
+19  #X.D.*........D.....D.......@...l.D..l.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (6,8)  fire (6,13)  water (28,19)
+Entities:
+  O  bridge       boulder    at (12,8)
+  p  bridge_contact plate      at (17,9)  -> f_bridge, w_inverse  weight heavy
+  D  e_access     door       at (8,6)  1x3  <- F0
+  D  e_east       door       at (24,6)  1x3  <- Ffar  latch
+  D  e_left       door       at (4,6)  1x3  <- Wcert  latch
+  D  e_final      door       at (36,6)  1x3  <- Eleft, Flast, Wlate (needs 3)  latch
+  l  Eeast        lever      at (28,8)  -> w_access
+  l  Eleft        lever      at (2,8)  -> e_final, w_late, f_late
+  l  Efinal       lever      at (38,8)  -> w_exit
+  D  f_access     door       at (10,11)  1x3  <- W0  latch
+  l  F0           lever      at (16,13)  -> e_access, w_inverse
+  D  f_bridge     door       at (22,11)  1x3  <- bridge_contact  latch
+  l  Ffar         lever      at (30,13)  -> e_east, w_access
+  D  f_late       door       at (35,11)  1x3  <- Eleft  latch
+  l  Flast        lever      at (37,13)  -> e_final
+  D  f_exit       door       at (3,11)  1x3  <- Wcert  latch
+  l  W0           lever      at (32,19)  -> f_access
+  D  w_access     door       at (20,17)  1x3  <- Eeast, Ffar (needs 2)  latch
+  D  w_inverse    door       at (14,17)  1x3  <- bridge_contact, F0 (needs 2)  invert
+  l  Wcert        lever      at (5,19)  -> e_left, f_exit
+  D  w_late       door       at (34,17)  1x3  <- Eleft  latch
+  l  Wlate        lever      at (37,19)  -> e_final
+  D  w_exit       door       at (3,17)  1x3  <- Efinal  latch
+  *  gem_23       gem        at (34,8)  earth
+  X  exit_24      exit       at (38,7)  earth
+  *  gem_25       gem        at (37,13)  fire
+  X  exit_26      exit       at (1,12)  fire
+  *  gem_27       gem        at (5,19)  water
+  X  exit_28      exit       at (1,18)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

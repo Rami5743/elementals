@@ -6638,6 +6638,40 @@
   ]
  },
  {
+  "id": "stone_causeway",
+  "name": "Stone Causeway",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6660,
+  "dark": false,
+  "challenge": "mind",
+  "core": "floating-stone-floor-and-electrical-contact",
+  "ideas": [
+   "boulder-float",
+   "causeway-as-veto",
+   "twist-undo"
+  ],
+  "order": 248,
+  "line": "a boulder floated into a single-tile sludge channel is simultaneously the persistent floor of a three-crossing route and the electrical input that vetoes a different player's passage. Establishing the physical route therefore costs an electrical permission.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "strip_and_reload",
   "name": "Strip and Reload",
   "source": "mine",

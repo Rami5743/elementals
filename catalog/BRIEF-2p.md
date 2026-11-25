@@ -23,23 +23,24 @@ together. `twist-undo`×31, `quorum`×8, `invert-door`×6, `twist-order`×6, `ma
 - `tower-presses-a-column` — Switches stacked up a wall that nothing but a tower of players reaches, with the order of the tower forced by what stands at the bottom. (Campaign: Totem.)
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `causeway-as-veto` — A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + no-hands-for-cargo
-- belt-reverse + boulder-float
-- glide-dismount + plank-sums-plate-maxes
-- door-pushes-you-through + twist-setup
-- stock-before-it-seals + tower-presses-a-column
-- invert-door + lift-sorts-by-weight
-- two-is-not-heavy + wide-door
-- tower-presses-a-column + two-stage-piston-handoff
-- boulder-float + lift-corner-path
-- door-pushes-you-through + liquid-lane
-- lock-per-element + twist-self-block
-- belt-cargo + lift-sorts-by-weight
+- plank-sums-plate-maxes + twist-stranding
+- twist-stranding + two-is-not-heavy
+- glide-passenger + two-is-not-heavy
+- freeze-bridge + tower-presses-a-column
+- twist-self-block + two-is-not-heavy
+- door-pushes-you-through + glide-dismount
+- boulder-float + dark
+- shared-switch-two-gates + tower-presses-a-column
+- boulder-carry + twist-undo
+- twist-undo + two-is-not-heavy
+- boulder-float + glide-passenger
+- plank-sums-plate-maxes + twist-order
 
 ## This repo's 2-player levels
 
