@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 101 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 102 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (34)
@@ -308,7 +308,7 @@ Totals: 79 campaign levels, 101 in this repo, of which 11 now ship in the campai
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (34)
+## 3 players — this repo (35)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -446,6 +446,10 @@ Totals: 79 campaign levels, 101 in this repo, of which 11 now ship in the campai
   - idea: Three operators jointly select the heavier side of a loaded rope; two must finish on one paired contact state and the third must relinquish that state to finish.
   - ideas: ratio-reverses-paired-cargo, quorum, twist-undo
   - features: ent:boulder ent:door ent:lever ent:plate ent:pulley opt:heavy-plate opt:latch opt:required:1 opt:required:2 opt:required:3 opt:required:4 opt:required:5 opt:seesaw-range
+- **Bridge Assembly** `bridge_assembly` (3p: fire+water+earth) core=`joint-consent-alternating-decks` challenge=mind par=6300
+  - idea: A bridge with two incompatible deck positions rises only by joint consent; each operator must rescind their own consent to reach the next acknowledgment.
+  - ideas: lift-as-floor, quorum, twist-undo, twist-order
+  - features: ent:door ent:elevator ent:lever opt:invert:door opt:latch opt:required:2 tile:sludge
 
 ## 3 players — campaign (30)
 

@@ -2862,6 +2862,38 @@
   ]
  },
  {
+  "id": "bridge_assembly",
+  "name": "Bridge Assembly",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6300,
+  "dark": false,
+  "challenge": "mind",
+  "core": "joint-consent-alternating-decks",
+  "ideas": [
+   "lift-as-floor",
+   "quorum",
+   "twist-undo",
+   "twist-order"
+  ],
+  "order": 234,
+  "line": "A bridge with two incompatible deck positions rises only by joint consent; each operator must rescind their own consent to reach the next acknowledgment.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "cargo",
   "name": "Cargo",
   "source": "mine",

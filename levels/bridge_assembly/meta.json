@@ -1,0 +1,11 @@
+{
+  "order": 234,
+  "challenge": "mind",
+  "core": "joint-consent-alternating-decks",
+  "ideas": [
+    "lift-as-floor",
+    "quorum",
+    "twist-undo",
+    "twist-order"
+  ]
+}

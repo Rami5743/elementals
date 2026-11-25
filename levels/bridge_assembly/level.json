@@ -1,0 +1,267 @@
+{
+  "id": "bridge_assembly",
+  "name": "Bridge Assembly",
+  "order": 234,
+  "description": "The shared crossing has two decks and needs two independent approvals to rise. Each approval must be relinquished before its operator can finish the next task.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "################.......#################",
+    "################.......#################",
+    "################.......#################",
+    "################.......#################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "################.......#################",
+    "################SSSSSSS#################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#...................#..................#",
+    "#...................#..................#",
+    "#...................#..................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      12,
+      11
+    ],
+    "water": [
+      22,
+      19
+    ],
+    "earth": [
+      12,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "bridge",
+      "type": "elevator",
+      "x": 16,
+      "y": 12,
+      "w": 7,
+      "path": [
+        [
+          16,
+          12
+        ],
+        [
+          16,
+          5
+        ]
+      ],
+      "speed": 0.9,
+      "required": 2
+    },
+    {
+      "id": "west_lower",
+      "type": "door",
+      "x": 9,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "west_upper",
+      "type": "door",
+      "x": 12,
+      "y": 2,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "east_exit",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "control_access",
+      "type": "door",
+      "x": 24,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "ack_access",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "water_exit",
+      "type": "door",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "lower_east",
+      "type": "lever",
+      "x": 30,
+      "y": 11,
+      "targets": [
+        "control_access"
+      ]
+    },
+    {
+      "id": "lift_control",
+      "type": "lever",
+      "x": 26,
+      "y": 19,
+      "targets": [
+        "bridge",
+        "water_inverse"
+      ]
+    },
+    {
+      "id": "upper_east",
+      "type": "lever",
+      "x": 32,
+      "y": 4,
+      "targets": [
+        "west_lower"
+      ]
+    },
+    {
+      "id": "lower_west",
+      "type": "lever",
+      "x": 4,
+      "y": 11,
+      "targets": [
+        "ack_access"
+      ]
+    },
+    {
+      "id": "ack",
+      "type": "lever",
+      "x": 6,
+      "y": 19,
+      "targets": [
+        "west_upper"
+      ]
+    },
+    {
+      "id": "upper_west",
+      "type": "lever",
+      "x": 3,
+      "y": 4,
+      "targets": [
+        "east_exit",
+        "water_exit",
+        "earth_exit"
+      ]
+    },
+    {
+      "id": "water_final",
+      "type": "lever",
+      "x": 34,
+      "y": 19,
+      "targets": [
+        "east_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 18
+    },
+    {
+      "type": "checkpoint",
+      "x": 12,
+      "y": 10
+    },
+    {
+      "id": "earth_approval",
+      "type": "lever",
+      "x": 15,
+      "y": 19,
+      "targets": [
+        "bridge",
+        "earth_inverse"
+      ]
+    },
+    {
+      "id": "earth_inverse",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "water_inverse",
+      "type": "door",
+      "x": 31,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "earth_exit",
+      "type": "door",
+      "x": 4,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 2,
+      "y": 18
+    }
+  ],
+  "parTicks": 6300,
+  "hints": [
+    "Both operators must agree before the bridge rises.",
+    "The west acknowledgment is behind an inverse door: first lower the bridge.",
+    "After the last descent, release both approvals before going home."
+  ]
+}
