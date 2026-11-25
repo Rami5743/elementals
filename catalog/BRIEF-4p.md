@@ -40,18 +40,18 @@ together. `twist-undo`×29, `quorum`×28, `twist-order`×8, `timed-window`×6, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- direction-qualified-transit-contact + lift-corner-path
-- mass-adds-on-the-beam + send-one-through
-- stand-aside-is-the-switch + twist-order
-- invert-door + unload-the-pan-you-ride
-- belt-cargo + climb-then-steer
-- machine-strands-operator + single-file-stone
-- machine-strands-operator + stand-aside-is-the-switch
-- lift-corner-path + two-is-not-heavy
-- lift-as-floor + lift-corner-path
-- send-one-through + stand-aside-is-the-switch
-- belt-reverse + partner-builds-your-landing
-- door-pushes-you-through + send-one-through
+- boulder-carry + mass-adds-on-the-beam
+- boulder-float + climb-then-steer
+- freeze-bridge + glide-passenger
+- belt-filter + liquid-lane
+- machine-strands-operator + tower-presses-a-column
+- glide-dismount + pound-chain
+- belt-filter + lift-corner-path
+- freeze-bridge + rope-keeps-the-jumper
+- dark + turbine-out-of-reach
+- liquid-lane + twist-order
+- belt-reverse + stand-aside-is-the-switch
+- door-pushes-you-through + twist-undo
 
 ## This repo's 4-player levels
 

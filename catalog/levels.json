@@ -4707,6 +4707,42 @@
   ]
  },
  {
+  "id": "fractional_recall",
+  "name": "Fractional Recall",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+air"
+  ],
+  "parTicks": 7560,
+  "dark": false,
+  "challenge": "mind",
+  "core": "fractional-balance-recalled-for-double-low-certificate",
+  "ideas": [
+   "fractional-rider-keeper",
+   "three-load-rope-control",
+   "twist-undo"
+  ],
+  "order": 251,
+  "line": "a half-unit rider supplies exactly the missing ballast on a 2:1 rope, maintaining the high contact while Fire leaves to ignite a torch; the third operator needs the complementary low contact twice.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "ent:torch",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "frost_authority",
   "name": "Frost Authority",
   "source": "mine",

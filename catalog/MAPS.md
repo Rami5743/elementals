@@ -6075,6 +6075,62 @@ Entities:
   X  exit_30      exit       at (38,18)  earth
 ```
 
+## Fractional Recall (`fractional_recall`) — 3p, core `fractional-balance-recalled-for-double-low-certificate`
+
+```
+Fractional Recall (fractional_recall) for fire+water+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #################################..#####
+ 2  #..D................#############pp#####
+ 3  #X.D................#############..#####
+ 4  #X*D......@.@.......#############..#####
+ 5  #####EEE######uuuuuu#############pp#####
+ 6  #####...######......#############uu#####
+ 7  #####...######......####################
+ 8  #..........................D......D..D.#
+ 9  #..........................D......D..DX#
+10  #..........................D.....tDl*DX#
+11  #####...################################
+12  ########################################
+13  #.........D.............D...........D..#
+14  #.........D.............D...........D.X#
+15  #...@.....D......l......D.......l.*.D.X#
+16  ########################################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (10,4)  air (12,4)  water (4,15)
+Entities:
+  u  scale        pulley     at (14,5)  6x1  speed 1.5  range 6  ratio 2  second platform at (33,6)  platforms weigh 1 and 0
+  O  stone        boulder    at (33,5)
+  p  high         plate      at (33,2)  2x1  -> first, second  weight heavy
+  p  low          plate      at (33,5)  2x1  -> w1, w2, f_exit  weight heavy
+  E  recall       elevator   at (5,5)  3x1  mode loop  speed 2  pause 300  path (5,5)-(5,11)
+  D  first        door       at (27,8)  1x3  <- high, T1
+  t  T1           torch      at (33,10)  -> first, w1
+  D  second       door       at (34,8)  1x3  <- high, W1 (needs 2)
+  l  F2           lever      at (35,10)  -> w2
+  D  f_exit       door       at (37,8)  1x3  <- low, W2 (needs 2)  latch
+  D  a_exit       door       at (3,2)  1x3  <- W2  latch
+  D  w1           door       at (10,13)  1x3  <- low, T1 (needs 2)  latch
+  l  W1           lever      at (17,15)  -> second
+  D  w2           door       at (24,13)  1x3  <- low, F2 (needs 2)  latch
+  l  W2           lever      at (32,15)  -> a_exit, f_exit, w_exit
+  D  w_exit       door       at (36,13)  1x3  <- W2  latch
+  *  gem_16       gem        at (36,10)  fire
+  X  exit_17      exit       at (38,9)  fire
+  *  gem_18       gem        at (2,4)  air
+  X  exit_19      exit       at (1,3)  air
+  *  gem_20       gem        at (34,15)  water
+  X  exit_21      exit       at (38,14)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

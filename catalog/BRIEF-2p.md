@@ -30,18 +30,18 @@ together. `twist-undo`×33, `invert-door`×8, `quorum`×8, `timed-window`×7, `h
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- expiry-order-is-key + pound-needs-headroom
-- fractional-rider-keeper + twist-setup
-- lift-sorts-by-weight + twist-setup
-- counterweight-you-must-remove + fractional-rider-keeper
-- boulder-carry + counterweight-you-must-remove
-- counterweight-you-must-remove + plank-sums-plate-maxes
-- pound-needs-headroom + twist-setup
-- counterweight-you-must-remove + lock-per-element
-- pound-needs-headroom + stand-aside-is-the-switch
-- lift-sorts-by-weight + single-file-stone
-- one-way-press + plank-sums-plate-maxes
-- door-pushes-you-through + trigger-from-above
+- boulder-carry + trigger-from-above
+- freeze-invert + pound-needs-headroom
+- mass-adds-on-the-beam + pound-needs-headroom
+- object-as-permanent-switch + plank-sums-plate-maxes
+- fractional-rider-keeper + low-roof-no-jump
+- door-pushes-you-through + glide-dismount
+- pound-needs-headroom + pound-to-move
+- invert-door + stone-held-from-below
+- head-stack + lock-per-element
+- boulder-carry + brake-makes-transit-contact-stable
+- liquid-lane + pound-needs-headroom
+- fractional-rider-keeper + twist-order
 
 ## This repo's 2-player levels
 
