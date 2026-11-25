@@ -1,0 +1,398 @@
+{
+  "id": "brake_council",
+  "name": "Brake Council",
+  "order": 328,
+  "description": "Four operators certify the two parked transit contacts. The final permission costs the last parked state.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      2,
+      10
+    ],
+    "water": [
+      37,
+      19
+    ],
+    "earth": [
+      3,
+      13
+    ],
+    "air": [
+      3,
+      16
+    ]
+  },
+  "entities": [
+    {
+      "id": "shuttle",
+      "type": "elevator",
+      "x": 3,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          3,
+          7
+        ],
+        [
+          35,
+          7
+        ]
+      ],
+      "mode": "loop",
+      "speed": 1,
+      "pause": 90,
+      "invert": true
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "id": "far",
+      "type": "plate",
+      "x": 25,
+      "y": 6,
+      "w": 4,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "e2",
+        "a2"
+      ]
+    },
+    {
+      "id": "near",
+      "type": "plate",
+      "x": 8,
+      "y": 6,
+      "w": 4,
+      "weight": "heavy",
+      "targets": [
+        "f2",
+        "e3",
+        "a3"
+      ]
+    },
+    {
+      "id": "brake",
+      "type": "lever",
+      "x": 14,
+      "y": 13,
+      "on": true,
+      "targets": [
+        "shuttle",
+        "f1",
+        "f2",
+        "w_release",
+        "e2",
+        "e3",
+        "e4",
+        "a2",
+        "a3",
+        "a4"
+      ]
+    },
+    {
+      "id": "f_start",
+      "type": "lever",
+      "x": 4,
+      "y": 10,
+      "targets": [
+        "w1",
+        "e1",
+        "a1"
+      ]
+    },
+    {
+      "id": "f_a",
+      "type": "lever",
+      "x": 16,
+      "y": 10,
+      "targets": [
+        "w2",
+        "e2",
+        "a2"
+      ]
+    },
+    {
+      "id": "w_ack",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f2",
+        "e3",
+        "a3"
+      ]
+    },
+    {
+      "id": "f_b",
+      "type": "lever",
+      "x": 28,
+      "y": 10,
+      "targets": [
+        "w3"
+      ]
+    },
+    {
+      "id": "w_last",
+      "type": "lever",
+      "x": 4,
+      "y": 19,
+      "targets": [
+        "f3"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 31,
+      "y": 18,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 18,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 18,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "w_release",
+      "type": "door",
+      "x": 7,
+      "y": 18,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 10,
+      "y": 9,
+      "h": 2,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 24,
+      "y": 9,
+      "h": 2,
+      "latch": true,
+      "required": 5
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 34,
+      "y": 9,
+      "h": 2,
+      "latch": true,
+      "required": 3
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 8,
+      "y": 12,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 19,
+      "y": 12,
+      "h": 2,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "e3",
+      "type": "door",
+      "x": 29,
+      "y": 12,
+      "h": 2,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "e4",
+      "type": "door",
+      "x": 35,
+      "y": 12,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "e_key1",
+      "type": "lever",
+      "x": 24,
+      "y": 13,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "e_key2",
+      "type": "lever",
+      "x": 32,
+      "y": 13,
+      "targets": [
+        "f3"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 13
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 12
+    },
+    {
+      "id": "a1",
+      "type": "door",
+      "x": 8,
+      "y": 15,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "a2",
+      "type": "door",
+      "x": 19,
+      "y": 15,
+      "h": 2,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "a3",
+      "type": "door",
+      "x": 29,
+      "y": 15,
+      "h": 2,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "a4",
+      "type": "door",
+      "x": 35,
+      "y": 15,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "a_key1",
+      "type": "lever",
+      "x": 24,
+      "y": 16,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "a_key2",
+      "type": "lever",
+      "x": 32,
+      "y": 16,
+      "targets": [
+        "f3"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 37,
+      "y": 16
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 15
+    }
+  ],
+  "parTicks": 8340,
+  "hints": [
+    "The brake stops the moving shuttle immediately, anywhere along the track.",
+    "A gate needs both the brake and the correct heavy contact. The far contact comes first.",
+    "The last Water passage needs the brake released again."
+  ]
+}

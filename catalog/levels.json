@@ -2825,6 +2825,43 @@
   ]
  },
  {
+  "id": "brake_council",
+  "name": "Brake Council",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8340,
+  "dark": false,
+  "challenge": "motor",
+  "core": "four-party-transit-brake-certification",
+  "ideas": [
+   "brake-makes-transit-contact-stable",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 328,
+  "line": "A transient heavy contact is converted into stable permission by stopping a loop shuttle. Four operators certify two different parked states before relinquishing the final state.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:invert:elevator",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:5"
+  ]
+ },
+ {
   "id": "cargo",
   "name": "Cargo",
   "source": "mine",

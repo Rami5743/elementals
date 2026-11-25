@@ -1,0 +1,10 @@
+{
+  "order": 328,
+  "challenge": "motor",
+  "core": "four-party-transit-brake-certification",
+  "ideas": [
+    "brake-makes-transit-contact-stable",
+    "twist-undo",
+    "quorum"
+  ]
+}
