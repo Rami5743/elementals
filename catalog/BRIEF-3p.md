@@ -33,18 +33,18 @@ together. `twist-undo`×34, `quorum`×27, `twist-order`×10, `timed-window`×8, 
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- quorum + trigger-from-above
-- counterweight-you-must-remove + trigger-from-above
-- glide-passenger + lift-corner-path
-- door-pushes-you-through + no-hands-for-cargo
-- boulder-carry + freeze-bridge
-- liquid-lane + object-as-permanent-switch
-- invert-door + lock-per-element
-- dark + torch-bridge
-- boulder-carry + machine-strands-operator
-- freeze-bridge + wide-door
-- lift-as-floor + lock-per-element
-- counterweight-you-must-remove + plank-sums-plate-maxes
+- low-roof-no-jump + one-way-press
+- lift-sorts-by-weight + twist-backwards
+- counterweight-you-must-remove + door-pushes-you-through
+- low-roof-no-jump + quorum
+- lift-press + lift-sorts-by-weight
+- boulder-carry + twist-stranding
+- glide-passenger + machine-strands-operator
+- plank-sums-plate-maxes + twist-stranding
+- one-way-press + partner-builds-your-landing
+- door-pushes-you-through + lift-as-floor
+- lock-per-element + one-way-press
+- lift-corner-path + lock-per-element
 
 ## This repo's 3-player levels
 

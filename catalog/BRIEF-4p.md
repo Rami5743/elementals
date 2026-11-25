@@ -33,18 +33,18 @@ together. `twist-undo`×35, `quorum`×33, `timed-window`×8, `twist-order`×8, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- tower-presses-a-column + turbine-out-of-reach
-- glide-dismount + timed-window
-- fan-passenger + invert-door
-- stand-aside-is-the-switch + twist-undo
-- belt-filter + liquid-lane
-- belt-cargo + stand-aside-is-the-switch
-- low-roof-no-jump + stone-held-from-below
-- door-pushes-you-through + low-roof-no-jump
-- belt-cargo + single-file-stone
-- lock-per-element + single-file-stone
-- boulder-carry + fan-passenger
-- glide-dismount + twist-undo
+- reversible-switch-maze + tower-presses-a-column
+- freeze-bridge + stand-aside-is-the-switch
+- head-stack + mass-adds-on-the-beam
+- boulder-carry + unload-the-pan-you-ride
+- fan-passenger + wide-door
+- glide-dismount + lock-per-element
+- head-stack + single-file-stone
+- balanced-rope-memory + fan-passenger
+- partner-builds-your-landing + turbine-out-of-reach
+- boulder-float + mass-adds-on-the-beam
+- fan-passenger + lock-per-element
+- fan-band + stand-aside-is-the-switch
 
 ## This repo's 4-player levels
 

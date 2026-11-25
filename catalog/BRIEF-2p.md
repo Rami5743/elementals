@@ -27,18 +27,18 @@ together. `twist-undo`×35, `invert-door`×8, `timed-window`×8, `quorum`×8, `t
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- stone-held-from-below + twist-sacrifice
-- dark + tower-presses-a-column
-- shutter-floor-wall-duality + stone-held-from-below
-- plank-sums-plate-maxes + trigger-from-above
-- fan-passenger + plank-sums-plate-maxes
-- lift-sorts-by-weight + obstruction-as-third-state
-- two-is-not-heavy + wind-off-enables-descent
-- door-pushes-you-through + twist-self-block
-- lock-per-element + trigger-from-above
-- hold-switch + stone-held-from-below
-- lift-sorts-by-weight + wide-door
-- one-way-press + two-is-not-heavy
+- grating-memory-with-erase + lift-sorts-by-weight
+- twist-order + two-is-not-heavy
+- plank-sums-plate-maxes + single-file-stone
+- one-way-press + tower-presses-a-column
+- lift-sorts-by-weight + twist-sacrifice
+- glide-passenger + stone-held-from-below
+- object-as-permanent-switch + two-is-not-heavy
+- freeze-bridge + plank-sums-plate-maxes
+- lock-per-element + twist-sacrifice
+- door-pushes-you-through + glide-passenger
+- stone-held-from-below + trigger-from-above
+- lift-sorts-by-weight + partner-builds-your-landing
 
 ## This repo's 2-player levels
 
