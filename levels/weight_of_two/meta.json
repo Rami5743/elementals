@@ -1,0 +1,9 @@
+{
+  "order": 246,
+  "challenge": "mind",
+  "core": "rope-sum-versus-heavy-maximum-and-quorum",
+  "ideas": [
+    "two-is-not-heavy",
+    "quorum"
+  ]
+}

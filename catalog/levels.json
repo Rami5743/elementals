@@ -7197,6 +7197,39 @@
   ]
  },
  {
+  "id": "weight_of_two",
+  "name": "Weight of Two",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6060,
+  "dark": false,
+  "challenge": "mind",
+  "core": "rope-sum-versus-heavy-maximum-and-quorum",
+  "ideas": [
+   "two-is-not-heavy",
+   "quorum"
+  ],
+  "order": 246,
+  "line": "",
+  "tokens": [
+   "ent:box",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range",
+   "opt:wide-door"
+  ]
+ },
+ {
   "id": "wellspring",
   "name": "Wellspring",
   "source": "mine",

@@ -5313,6 +5313,65 @@ Entities:
   X  exit_36      exit       at (38,19)  fire
 ```
 
+## Weight of Two (`weight_of_two`) — 3p, core `rope-sum-versus-heavy-maximum-and-quorum`
+
+```
+Weight of Two (weight_of_two) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #################################pp#####
+ 2  #################################..#####
+ 3  #################################..#####
+ 4  #################################..#####
+ 5  #################################..#####
+ 6  #...................#############x.#####
+ 7  #...................#############uu#####
+ 8  #...@...@...........####################
+ 9  ##############uuuuuu####################
+10  ##############......####################
+11  #........D....................D...D.D..#
+12  #........D....................D...D.D.X#
+13  #..p..p..D...........pppp.....D..@D*D.X#
+14  ##DDDDD#################################
+15  ##.....#################################
+16  ##.....#################################
+17  #.D......D...........................D.#
+18  #.D.X..X.D...........................D.#
+19  #lD.X..X.D...................*....*p.Dl#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (8,8)  water (4,8)  earth (33,13)
+Entities:
+  u  scale        pulley     at (14,9)  6x1  speed 0.55  range 5  second platform at (33,7)
+  x  mass         box        at (33,6)
+  p  raised       plate      at (33,1)  2x1  -> earth_entry
+  D  earth_entry  door       at (30,11)  1x3  <- raised  latch
+  p  heavy        plate      at (21,13)  4x1  -> west, return  weight heavy
+  D  west         door       at (9,11)  1x3  <- heavy
+  p  left_a       plate      at (3,13)  -> right_access
+  p  left_b       plate      at (6,13)  -> right_access
+  D  right_access door       at (34,11)  1x3  <- left_a, left_b (needs 2)  latch
+  l  release      lever      at (35,13)  -> hatch
+  D  hatch        door       at (2,14)  5x1  <- release  latch
+  D  return       door       at (9,17)  1x3  <- heavy
+  p  bottom_a     plate      at (29,19)  -> east_cert
+  p  bottom_b     plate      at (35,19)  -> east_cert
+  D  east_cert    door       at (37,17)  1x3  <- bottom_a, bottom_b (needs 2)  latch
+  l  far          lever      at (38,19)  -> west_latch
+  D  west_latch   door       at (2,17)  1x3  <- far  latch
+  l  last         lever      at (1,19)  -> earth_out
+  D  earth_out    door       at (36,11)  1x3  <- last  latch
+  *  fgem         gem        at (34,19)  fire
+  *  wgem         gem        at (29,19)  water
+  *  egem         gem        at (35,13)  earth
+  X  fexit        exit       at (4,18)  fire
+  X  wexit        exit       at (7,18)  water
+  X  eexit        exit       at (38,12)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```
