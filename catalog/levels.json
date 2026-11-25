@@ -4708,6 +4708,40 @@
   ]
  },
  {
+  "id": "three_key_dock",
+  "name": "Three-Key Dock",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7980,
+  "dark": false,
+  "challenge": "motor",
+  "core": "triple-quorum-docking-trap",
+  "ideas": [
+   "transport-power-excludes-workshop",
+   "lift-loop",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 322,
+  "line": "The ferry requires three separate power keys. Two operators cannot leave their own control rooms while their keys are active. Power must be relinquished to gain the permissions necessary for the return crossing.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "three_way_imprint",
   "name": "Three-Way Imprint",
   "source": "mine",

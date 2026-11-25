@@ -51,18 +51,18 @@ together. `twist-undo`×9, `invert-door`×5, `hold-switch`×5, `object-as-perman
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- seesaw-balance + shared-switch-two-gates
-- belt-filter + invert-door
-- belt-filter + machine-strands-operator
-- hop-beats-belt + lift-as-floor
-- belt-reverse + low-roof-no-jump
-- crate-step + pound-to-move
-- invert-door + lift-sorts-by-weight
-- door-pushes-you-through + invert-door
-- low-roof-no-jump + send-one-through
-- crate-step + low-roof-no-jump
-- lift-sorts-by-weight + twist-undo
-- low-roof-no-jump + threshold-is-a-switch
+- invert-door + pound-chain
+- hold-switch + lift-sorts-by-weight
+- belt-filter + shared-switch-two-gates
+- invert-door + trip-plate-in-the-shaft
+- pound-chain + twist-undo
+- fan-band + twist-undo
+- fan-band + low-roof-no-jump
+- hoist-one-way-for-cargo + hold-switch
+- belt-reverse + hold-switch
+- hoist-one-way-for-cargo + object-as-permanent-switch
+- glide-dismount + hoist-one-way-for-cargo
+- one-way-drop + twist-undo
 
 ## This repo's 2-player levels
 

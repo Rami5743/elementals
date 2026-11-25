@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 69 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 70 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (22)
@@ -483,7 +483,7 @@ Totals: 79 campaign levels, 69 in this repo, of which 11 now ship in the campaig
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (23)
+## 4 players — this repo (24)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -577,6 +577,10 @@ Totals: 79 campaign levels, 69 in this repo, of which 11 now ship in the campaig
   - idea: Four adjacent pistons make a serial mechanical handoff of a single stone. Five stationary contacts serve different requests. The return belt permits resetting the entire register, but a previously issued live permission has to be relinquished to allow a piston operator to return.
   - ideas: two-stage-piston-handoff, twist-order, twist-backwards
   - features: ent:belt ent:boulder ent:door ent:lever ent:plate opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:1 opt:required:2 opt:wide-door
+- **Three-Key Dock** `three_key_dock` (4p: fire+water+earth+air) core=`triple-quorum-docking-trap` challenge=motor par=7980
+  - idea: The ferry requires three separate power keys. Two operators cannot leave their own control rooms while their keys are active. Power must be relinquished to gain the permissions necessary for the return crossing.
+  - ideas: transport-power-excludes-workshop, lift-loop, twist-undo, quorum
+  - features: ent:door ent:elevator ent:lever opt:elevator:loop opt:invert:door opt:latch opt:required:2 opt:required:3 tile:one-way
 
 ## 4 players — campaign (23)
 

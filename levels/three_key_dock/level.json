@@ -1,0 +1,362 @@
+{
+  "id": "three_key_dock",
+  "name": "Three-Key Dock",
+  "order": 322,
+  "description": "Three operators power one ferry. Two of them must give up their keys to leave their control rooms and collect return permissions.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 7980,
+  "tiles": [
+    "########################################",
+    "#...................#..................#",
+    "#...................#..................#",
+    "#...................#..................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#########===#.................##########",
+    "#########...#.................##########",
+    "#########===#.................##########",
+    "#########...#.................##########",
+    "#########===..................##########",
+    "#########.....................##########",
+    "#########===..................##########",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      10,
+      7
+    ],
+    "water": [
+      36,
+      19
+    ],
+    "earth": [
+      2,
+      3
+    ],
+    "air": [
+      22,
+      3
+    ]
+  },
+  "entities": [
+    {
+      "id": "ferry",
+      "type": "elevator",
+      "x": 15,
+      "y": 8,
+      "w": 3,
+      "path": [
+        [
+          15,
+          8
+        ],
+        [
+          27,
+          8
+        ]
+      ],
+      "mode": "loop",
+      "pause": 150,
+      "speed": 1,
+      "required": 3
+    },
+    {
+      "id": "start",
+      "type": "lever",
+      "x": 10,
+      "y": 7,
+      "targets": [
+        "w0",
+        "e_start",
+        "a_start"
+      ]
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "motor",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "ferry",
+        "far_gate",
+        "w2"
+      ]
+    },
+    {
+      "id": "far_gate",
+      "type": "door",
+      "x": 34,
+      "y": 5,
+      "h": 3,
+      "invert": true,
+      "required": 3
+    },
+    {
+      "id": "far",
+      "type": "lever",
+      "x": 37,
+      "y": 7,
+      "targets": [
+        "w1",
+        "e_far",
+        "a_far"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "ack",
+      "type": "lever",
+      "x": 13,
+      "y": 19,
+      "targets": [
+        "e_ack",
+        "a_ack"
+      ]
+    },
+    {
+      "id": "home",
+      "type": "door",
+      "x": 8,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "finish",
+      "type": "lever",
+      "x": 6,
+      "y": 7,
+      "targets": [
+        "w2",
+        "e_exit",
+        "a_exit"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 7,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 6,
+      "text": "Ferry"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 17,
+      "text": "Motor"
+    },
+    {
+      "id": "e_start",
+      "type": "door",
+      "x": 3,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_motor",
+      "type": "lever",
+      "x": 5,
+      "y": 3,
+      "targets": [
+        "ferry",
+        "far_gate",
+        "e_return"
+      ]
+    },
+    {
+      "id": "e_return",
+      "type": "door",
+      "x": 7,
+      "y": 1,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "e_far",
+      "type": "door",
+      "x": 10,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_ack",
+      "type": "door",
+      "x": 13,
+      "y": 1,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "e_home",
+      "type": "lever",
+      "x": 15,
+      "y": 3,
+      "targets": [
+        "home"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 17,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 18,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 19,
+      "y": 2
+    },
+    {
+      "id": "a_start",
+      "type": "door",
+      "x": 23,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "a_motor",
+      "type": "lever",
+      "x": 25,
+      "y": 3,
+      "targets": [
+        "ferry",
+        "far_gate",
+        "a_return"
+      ]
+    },
+    {
+      "id": "a_return",
+      "type": "door",
+      "x": 27,
+      "y": 1,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "a_far",
+      "type": "door",
+      "x": 30,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "a_ack",
+      "type": "door",
+      "x": 33,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "a_home",
+      "type": "lever",
+      "x": 35,
+      "y": 3,
+      "targets": [
+        "e_ack"
+      ]
+    },
+    {
+      "id": "a_exit",
+      "type": "door",
+      "x": 36,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 2
+    }
+  ],
+  "hints": [
+    "Fire needs all three motor keys to cross.",
+    "After Fire docks, Earth and Air turn off their keys to leave their own control rooms.",
+    "Water's acknowledgment lets Air reach the next key; Air in turn releases Earth. All three must return to the motor."
+  ]
+}

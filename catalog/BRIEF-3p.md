@@ -58,18 +58,18 @@ together. `twist-order`×7, `twist-undo`×7, `quorum`×5, `machine-strands-opera
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- mass-adds-on-the-beam + timed-window
-- freeze-invert + lift-corner-path
-- lift-corner-path + mass-adds-on-the-beam
-- lock-per-element + machine-strands-operator
+- object-as-permanent-switch + two-in-the-air-at-once
+- lift-corner-path + trip-plate-in-the-shaft
+- mass-adds-on-the-beam + twist-self-block
+- belt-filter + two-stage-piston-handoff
+- lift-corner-path + switch-in-mid-flight
+- belt-reverse + machine-strands-operator
 - object-as-permanent-switch + single-file-stone
-- lift-corner-path + stock-before-it-seals
-- machine-strands-operator + send-one-through
-- belt-filter + hold-switch
-- fan-passenger + single-file-stone
-- counterweight-you-must-remove + plank-sums-plate-maxes
-- fan-passenger + lock-per-element
+- sink-as-a-timer + twist-order
+- belt-reverse + twist-order
+- lift-corner-path + pound-chain
 - belt-filter + lift-corner-path
+- turbine-out-of-reach + twist-two-clocks
 
 ## This repo's 3-player levels
 

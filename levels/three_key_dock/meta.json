@@ -1,0 +1,11 @@
+{
+  "order": 322,
+  "challenge": "motor",
+  "core": "triple-quorum-docking-trap",
+  "ideas": [
+    "transport-power-excludes-workshop",
+    "lift-loop",
+    "twist-undo",
+    "quorum"
+  ]
+}

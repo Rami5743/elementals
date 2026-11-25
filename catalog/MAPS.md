@@ -3773,3 +3773,72 @@ Entities:
   p  sensor3      plate      at (23,2)  -> gate3, gate8  weight heavy
   p  sensor4      plate      at (30,2)  -> gate4, gate9  weight heavy
 ```
+
+## Three-Key Dock (`three_key_dock`) — 4p, core `triple-quorum-docking-trap`
+
+```
+Three-Key Dock (three_key_dock) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #..D...D..D..D...D..#..D...D..D..D..D..#
+ 2  #..D...D..D..D...D.X#..D...D..D..D..D.X#
+ 3  #.@D.l.D..D..D.l.D*X#.@D.l.D..D..D.lD*X#
+ 4  ########################################
+ 5  #.......D.........................D....#
+ 6  #....X..D.........................D....#
+ 7  #....Xl.D.@.......................D.*l.#
+ 8  #########===#..EEE............##########
+ 9  #########...#.................##########
+10  #########===#.................##########
+11  #########...#.................##########
+12  #########===..................##########
+13  #########.....................##########
+14  #########===..................##########
+15  ########################################
+16  ########################################
+17  #......D............D.........D........#
+18  #.X....D............D.........D........#
+19  #.X*...D.....l......D....l....D.....@..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (10,7)  water (36,19)  earth (2,3)  air (22,3)
+Entities:
+  E  ferry        elevator   at (15,8)  3x1  <- motor, e_motor, a_motor (needs 3)  mode loop  speed 1  pause 150  path (15,8)-(27,8)
+  l  start        lever      at (10,7)  -> w0, e_start, a_start
+  D  w0           door       at (30,17)  1x3  <- start  latch
+  l  motor        lever      at (25,19)  -> ferry, far_gate, w2
+  D  far_gate     door       at (34,5)  1x3  <- motor, e_motor, a_motor (needs 3)  invert
+  l  far          lever      at (37,7)  -> w1, e_far, a_far
+  D  w1           door       at (20,17)  1x3  <- far  latch
+  l  ack          lever      at (13,19)  -> e_ack, a_ack
+  D  home         door       at (8,5)  1x3  <- e_home  latch
+  l  finish       lever      at (6,7)  -> w2, e_exit, a_exit
+  D  w2           door       at (7,17)  1x3  <- motor, finish (needs 2)  latch
+  X  exit_11      exit       at (5,6)  fire
+  *  gem_12       gem        at (36,7)  fire
+  X  exit_13      exit       at (2,18)  water
+  *  gem_14       gem        at (3,19)  water
+  "  sign_15      sign       at (14,6)  "Ferry"
+  "  sign_16      sign       at (25,17)  "Motor"
+  D  e_start      door       at (3,1)  1x3  <- start  latch
+  l  e_motor      lever      at (5,3)  -> ferry, far_gate, e_return
+  D  e_return     door       at (7,1)  1x3  <- e_motor  invert
+  D  e_far        door       at (10,1)  1x3  <- far  latch
+  D  e_ack        door       at (13,1)  1x3  <- ack, a_home (needs 2)  latch
+  l  e_home       lever      at (15,3)  -> home
+  D  e_exit       door       at (17,1)  1x3  <- finish  latch
+  *  gem_24       gem        at (18,3)  earth
+  X  exit_25      exit       at (19,2)  earth
+  D  a_start      door       at (23,1)  1x3  <- start  latch
+  l  a_motor      lever      at (25,3)  -> ferry, far_gate, a_return
+  D  a_return     door       at (27,1)  1x3  <- a_motor  invert
+  D  a_far        door       at (30,1)  1x3  <- far  latch
+  D  a_ack        door       at (33,1)  1x3  <- ack  latch
+  l  a_home       lever      at (35,3)  -> e_ack
+  D  a_exit       door       at (36,1)  1x3  <- finish  latch
+  *  gem_33       gem        at (37,3)  air
+  X  exit_34      exit       at (38,2)  air
+```
