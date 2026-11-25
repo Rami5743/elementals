@@ -1,0 +1,10 @@
+{
+  "order": 116,
+  "challenge": "motor",
+  "core": "moving-contact-return-pulse",
+  "ideas": [
+    "cargo-as-clock-contact",
+    "belt-cargo",
+    "timed-window"
+  ]
+}

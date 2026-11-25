@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 46 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 52 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (14)
+## 2 players — this repo (16)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -86,6 +86,14 @@ Totals: 79 campaign levels, 46 in this repo, of which 11 now ship in the campaig
   - idea: a weighing beam used as the only route between three storeys, where **you rise by what is taken off your pan, never by what is added** — the stone has to be loaded onto your own pan to send the far one up to the storey where it can be loaded at all, and shed off again before your pan will carry you anywhere.
   - ideas: unload-the-pan-you-ride, mass-adds-on-the-beam, quorum, twist-undo, object-as-permanent-switch, machine-strands-operator
   - features: ent:boulder ent:box ent:door ent:plate ent:seesaw opt:heavy-plate opt:latch opt:required:3 opt:seesaw-range
+- **Crossed Signals** `crossed_signals` (2p: fire+water) core=`crossed-gate-memory` challenge=mind par=14160
+  - idea: A reversible switch maze: the same remote lever is both a key and a lock, so you must deliberately rewind the circuit to finish.
+  - ideas: reversible-switch-maze, invert-door, twist-undo
+  - features: ent:door ent:elevator ent:lever opt:elevator:loop opt:invert:door opt:required:2
+- **Reversing Signal** `reversing_signal` (2p: fire+water) core=`moving-contact-return-pulse` challenge=motor par=6120
+  - idea: A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.
+  - ideas: cargo-as-clock-contact, belt-cargo, timed-window
+  - features: ent:belt ent:boulder ent:button ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2
 
 ## 2 players — campaign (34)
 
@@ -228,7 +236,7 @@ Totals: 79 campaign levels, 46 in this repo, of which 11 now ship in the campaig
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (16)
+## 3 players — this repo (18)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -258,10 +266,18 @@ Totals: 79 campaign levels, 46 in this repo, of which 11 now ship in the campaig
   - idea: a bridge that is only there while a torch burns — a wide door wired to the torch and inverted, so lighting the torch closes it across the chasm.
   - ideas: torch-bridge, invert-door
   - features: dark ent:door ent:firewall ent:torch opt:invert:door opt:wide-door tile:sludge
+- **Return Current** `return_current` (3p: fire+water+earth) core=`remote-switch-rewind` challenge=mind par=8220
+  - idea: A reversible switch maze: the same remote lever is both a key and a lock, so you must deliberately rewind the circuit to finish.
+  - ideas: reversible-switch-maze, invert-door, twist-undo
+  - features: ent:door ent:lever opt:invert:door opt:required:2
 - **Cistern** `cistern` (3p: fire+water+earth) core=`two-plates-held-by-objects-not-players` challenge=mind par=3600
   - idea: a gate that wants two plates down at the same time, so neither of them can be a player — both have to be held by something that stays.
   - ideas: object-as-permanent-switch, quorum
   - features: ent:boulder ent:box ent:door ent:firewall ent:ice ent:plate opt:heavy-plate opt:required:2 tile:water
+- **Pulse Exchange** `pulse_exchange` (3p: fire+water+earth) core=`cargo-clock-relay-exchange` challenge=motor par=7020
+  - idea: A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.
+  - ideas: cargo-as-clock-contact, belt-cargo, timed-window
+  - features: ent:belt ent:boulder ent:button ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2
 - **Gangway** `gangway` (3p: fire+earth+air) core=`the-lift-is-the-floor` challenge=mind shipped in the campaign as `l81_gangway` (#41, map edited there) par=3000
   - idea: Every other lift in the game is a thing you wait for. This one is the ground you are standing on. Sending it up is not free — it takes the road away, so whoever is going to need that road has to be on the right side of it first, and whoever is going up has to already be aboard.
   - ideas: lift-as-floor, twist-self-block
@@ -419,7 +435,7 @@ Totals: 79 campaign levels, 46 in this repo, of which 11 now ship in the campaig
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (16)
+## 4 players — this repo (18)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -453,6 +469,14 @@ Totals: 79 campaign levels, 46 in this repo, of which 11 now ship in the campaig
   - idea: The belt is not an obstacle to be timed or avoided — it is a *speed test*, set exactly between Earth's legs and everyone else's. The moment you notice Earth cannot gain a pixel on it, the question stops being "how do we get Earth across" and becomes "what can Earth do down there that we cannot do up here".
   - ideas: belt-filter
   - features: ent:belt ent:cracked ent:door ent:firewall ent:ice ent:lever ent:turbine opt:belt:blocks-earth opt:latch
+- **Fourfold Interlock** `fourfold_interlock` (4p: fire+water+earth+air) core=`distributed-gate-logic` challenge=mind par=6840
+  - idea: A reversible switch maze: the same remote lever is both a key and a lock, so you must deliberately rewind the circuit to finish.
+  - ideas: reversible-switch-maze, invert-door, twist-undo
+  - features: ent:door ent:lever opt:invert:door opt:required:2
+- **Dispatch Clock** `dispatch_clock` (4p: fire+water+earth+air) core=`single-power-token-dispatch` challenge=motor par=7860
+  - idea: A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.
+  - ideas: cargo-as-clock-contact, belt-cargo, timed-window
+  - features: ent:belt ent:boulder ent:button ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2
 - **Cargo** `cargo` (4p: fire+water+earth+air) core=`the-stone-has-to-come-home-before-the-driver-can-leave` challenge=motor shipped in the campaign as `l86_cargo` (#81) par=3000
   - idea: The belt is not a floor you walk on, it is a vehicle you ride — and the one who decides where it takes you is standing still at the other end of the level. The second turn of the screw is that the line carries freight as well as passengers, there is only one piece of freight, and the two plates that want it are at opposite ends. The second half of the insight is that you cannot jump off wherever you like: the roof is one tile high everywhere except at the three hatches, so the only question that matters is *when* you jump.
   - ideas: belt-reverse, low-roof-no-jump, twist-order, twist-undo, machine-strands-operator, lock-per-element

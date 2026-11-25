@@ -1,0 +1,10 @@
+{
+  "order": 207,
+  "challenge": "mind",
+  "core": "remote-switch-rewind",
+  "ideas": [
+    "reversible-switch-maze",
+    "invert-door",
+    "twist-undo"
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "id": "fourfold_interlock",
+  "name": "Fourfold Interlock",
+  "order": 307,
+  "description": "A reversible switch circuit: crossing one gate can require closing another behind your partner.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 6840,
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      4
+    ],
+    "water": [
+      36,
+      9
+    ],
+    "earth": [
+      3,
+      14
+    ],
+    "air": [
+      36,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "g0_0",
+      "type": "door",
+      "x": 9,
+      "y": 2,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "g0_1",
+      "type": "door",
+      "x": 19,
+      "y": 2,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "g0_2",
+      "type": "door",
+      "x": 29,
+      "y": 2,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 4
+    },
+    {
+      "id": "g1_0",
+      "type": "door",
+      "x": 30,
+      "y": 7,
+      "h": 3,
+      "invert": true,
+      "required": 2
+    },
+    {
+      "id": "g1_1",
+      "type": "door",
+      "x": 20,
+      "y": 7,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "g1_2",
+      "type": "door",
+      "x": 10,
+      "y": 7,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 9
+    },
+    {
+      "id": "g2_0",
+      "type": "door",
+      "x": 9,
+      "y": 12,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "g2_1",
+      "type": "door",
+      "x": 19,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "g2_2",
+      "type": "door",
+      "x": 29,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 36,
+      "y": 14
+    },
+    {
+      "id": "g3_0",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "invert": true,
+      "required": 2
+    },
+    {
+      "id": "g3_1",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "g3_2",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "id": "s0",
+      "type": "lever",
+      "x": 25,
+      "y": 4,
+      "targets": [
+        "g1_0",
+        "g1_1",
+        "g2_2",
+        "g3_0",
+        "g3_1"
+      ]
+    },
+    {
+      "id": "s1",
+      "type": "lever",
+      "x": 34,
+      "y": 9,
+      "targets": [
+        "g0_0",
+        "g3_2"
+      ]
+    },
+    {
+      "id": "s2",
+      "type": "lever",
+      "x": 25,
+      "y": 14,
+      "targets": [
+        "g0_1",
+        "g1_1",
+        "g1_2"
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "g0_1",
+        "g1_0",
+        "g2_0",
+        "g2_1",
+        "g3_0"
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "lever",
+      "x": 15,
+      "y": 4,
+      "targets": [
+        "g0_2",
+        "g1_2",
+        "g2_0"
+      ]
+    },
+    {
+      "id": "s5",
+      "type": "lever",
+      "x": 24,
+      "y": 9,
+      "targets": [
+        "g0_0",
+        "g2_1"
+      ]
+    },
+    {
+      "id": "s6",
+      "type": "lever",
+      "x": 5,
+      "y": 14,
+      "targets": [
+        "g0_2",
+        "g3_2"
+      ]
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 3,
+      "text": "A"
+    },
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 8,
+      "text": "B"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 13,
+      "text": "C"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 18,
+      "text": "D"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 3,
+      "text": "E"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 8,
+      "text": "F"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 13,
+      "text": "G"
+    }
+  ],
+  "hints": [
+    "A lever can open one gate and close another. Follow its wires.",
+    "Do not assume an open gate should stay open. Keep track of the switches you will need again.",
+    "The lanes are isolated. Each player must change the circuit for the others."
+  ]
+}

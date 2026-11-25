@@ -1,0 +1,10 @@
+{
+  "order": 115,
+  "challenge": "mind",
+  "core": "crossed-gate-memory",
+  "ideas": [
+    "reversible-switch-maze",
+    "invert-door",
+    "twist-undo"
+  ]
+}

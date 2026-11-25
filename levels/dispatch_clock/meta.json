@@ -1,0 +1,10 @@
+{
+  "order": 308,
+  "challenge": "motor",
+  "core": "single-power-token-dispatch",
+  "ideas": [
+    "cargo-as-clock-contact",
+    "belt-cargo",
+    "timed-window"
+  ]
+}

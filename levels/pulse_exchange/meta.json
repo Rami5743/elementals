@@ -1,0 +1,10 @@
+{
+  "order": 208,
+  "challenge": "motor",
+  "core": "cargo-clock-relay-exchange",
+  "ideas": [
+    "cargo-as-clock-contact",
+    "belt-cargo",
+    "timed-window"
+  ]
+}
