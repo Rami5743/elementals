@@ -1,0 +1,264 @@
+{
+  "id": "travelling_step",
+  "name": "Travelling Step",
+  "order": 142,
+  "description": "One crate is the missing third step on either side of a trench; reverse its conveyor to move the step between otherwise unreachable galleries.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      15,
+      12
+    ],
+    "water": [
+      2,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "conveyor",
+      "type": "belt",
+      "x": 10,
+      "y": 13,
+      "w": 20,
+      "speed": 3.3,
+      "mode": "reverse"
+    },
+    {
+      "id": "step",
+      "type": "box",
+      "x": 27,
+      "y": 12
+    },
+    {
+      "id": "right1",
+      "type": "door",
+      "x": 31,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "R1",
+      "type": "lever",
+      "x": 32,
+      "y": 9,
+      "targets": [
+        "selectaccess"
+      ]
+    },
+    {
+      "id": "right2",
+      "type": "door",
+      "x": 34,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "R2",
+      "type": "lever",
+      "x": 35,
+      "y": 9,
+      "targets": [
+        "w_cert2"
+      ]
+    },
+    {
+      "id": "right3",
+      "type": "door",
+      "x": 37,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "R3",
+      "type": "lever",
+      "x": 38,
+      "y": 9,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "left1",
+      "type": "door",
+      "x": 7,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "L1",
+      "type": "lever",
+      "x": 6,
+      "y": 9,
+      "targets": [
+        "w_cert"
+      ]
+    },
+    {
+      "id": "left2",
+      "type": "door",
+      "x": 4,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "L2",
+      "type": "lever",
+      "x": 2,
+      "y": 9,
+      "targets": [
+        "w_cert3"
+      ]
+    },
+    {
+      "id": "selectaccess",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "selector",
+      "type": "lever",
+      "x": 12,
+      "y": 19,
+      "targets": [
+        "conveyor"
+      ]
+    },
+    {
+      "id": "w_cert",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Wcert",
+      "type": "lever",
+      "x": 23,
+      "y": 19,
+      "targets": [
+        "right2"
+      ]
+    },
+    {
+      "id": "w_cert2",
+      "type": "door",
+      "x": 25,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Wcert2",
+      "type": "lever",
+      "x": 27,
+      "y": 19,
+      "targets": [
+        "left2"
+      ]
+    },
+    {
+      "id": "w_cert3",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Wcert3",
+      "type": "lever",
+      "x": 32,
+      "y": 19,
+      "targets": [
+        "right3"
+      ]
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 35,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Wstart",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "right1",
+        "left1"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 2,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 32,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 8
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 7140,
+  "hints": [
+    "Fire cannot jump three tiles from the trench floor. The crate is a movable extra step.",
+    "Water sends the step to one bank at a time. Each certificate unlocks the next visit to the opposite bank.",
+    "Wait for the crate to stop at each bank before climbing."
+  ]
+}

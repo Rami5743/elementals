@@ -2239,6 +2239,66 @@ Entities:
   X  exit_21      exit       at (38,18)  fire
 ```
 
+## Travelling Step (`travelling_step`) — 2p, core `single-crate-as-reversible-third-step`
+
+```
+Travelling Step (travelling_step) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  #...D..D.......................D..D..D.#
+ 8  #...D..D.......................D..D..DX#
+ 9  #.*.D.lD.......................Dl.Dl.DX#
+10  ##########....................##########
+11  ##########....................##########
+12  ##########.....@...........x..##########
+13  ##########>>>>>>>>>>>>>>>>>>>>##########
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.......D...........D....D...D.....D...#
+18  #.......D...........D....D...D.....D..X#
+19  #.@l....D...l.......D..l.D.l.D..*..D..X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (15,12)  water (2,19)
+Entities:
+  >  conveyor     belt       at (10,13)  20x1  <- selector  mode reverse  speed 3.3
+  x  step         box        at (27,12)
+  D  right1       door       at (31,7)  1x3  <- Wstart  latch
+  l  R1           lever      at (32,9)  -> selectaccess
+  D  right2       door       at (34,7)  1x3  <- Wcert  latch
+  l  R2           lever      at (35,9)  -> w_cert2
+  D  right3       door       at (37,7)  1x3  <- Wcert3  latch
+  l  R3           lever      at (38,9)  -> w_final
+  D  left1        door       at (7,7)  1x3  <- Wstart  latch
+  l  L1           lever      at (6,9)  -> w_cert
+  D  left2        door       at (4,7)  1x3  <- Wcert2  latch
+  l  L2           lever      at (2,9)  -> w_cert3
+  D  selectaccess door       at (8,17)  1x3  <- R1  latch
+  l  selector     lever      at (12,19)  -> conveyor
+  D  w_cert       door       at (20,17)  1x3  <- L1  latch
+  l  Wcert        lever      at (23,19)  -> right2
+  D  w_cert2      door       at (25,17)  1x3  <- R2  latch
+  l  Wcert2       lever      at (27,19)  -> left2
+  D  w_cert3      door       at (29,17)  1x3  <- L2  latch
+  l  Wcert3       lever      at (32,19)  -> right3
+  D  w_final      door       at (35,17)  1x3  <- R3  latch
+  l  Wstart       lever      at (3,19)  -> right1, left1
+  *  gem_22       gem        at (2,9)  fire
+  *  gem_23       gem        at (32,19)  water
+  X  exit_24      exit       at (38,8)  fire
+  X  exit_25      exit       at (38,18)  water
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

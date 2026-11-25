@@ -46,18 +46,18 @@ together. `twist-undo`×23, `quorum`×20, `twist-order`×8, `timed-window`×4, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- glide-passenger + reversible-switch-maze
-- object-as-permanent-switch + two-is-not-heavy
-- machine-strands-operator + two-is-not-heavy
-- timed-window + unload-the-pan-you-ride
-- freeze-bridge + two-is-not-heavy
-- machine-strands-operator + stand-aside-is-the-switch
-- fan-passenger + single-file-stone
-- hop-beats-belt + lift-corner-path
-- boulder-carry + torch-bridge
-- lift-corner-path + twist-sacrifice
-- plank-sums-plate-maxes + twist-order
-- dark + lift-corner-path
+- low-roof-no-jump + object-as-permanent-switch
+- door-pushes-you-through + twist-order
+- boulder-carry + timed-window
+- lift-sorts-by-weight + twist-self-block
+- freeze-bridge + glide-passenger
+- reversible-switch-maze + stand-aside-is-the-switch
+- fan-band + twist-two-clocks
+- fan-passenger + stand-aside-is-the-switch
+- low-roof-no-jump + twist-two-clocks
+- machine-strands-operator + single-file-stone
+- lock-per-element + twist-order
+- head-stack + stand-aside-is-the-switch
 
 ## This repo's 3-player levels
 

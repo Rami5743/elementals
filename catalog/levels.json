@@ -6516,6 +6516,37 @@
   ]
  },
  {
+  "id": "travelling_step",
+  "name": "Travelling Step",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7140,
+  "dark": false,
+  "challenge": "mind",
+  "core": "single-crate-as-reversible-third-step",
+  "ideas": [
+   "crate-step",
+   "belt-reverse",
+   "twist-undo"
+  ],
+  "order": 142,
+  "line": "The crate is a travelling step: it gives access to either three-tile bank, but cannot provide both steps at once.",
+  "tokens": [
+   "ent:belt",
+   "ent:box",
+   "ent:door",
+   "ent:lever",
+   "opt:belt:blocks-fire-water",
+   "opt:belt:reverse",
+   "opt:latch"
+  ]
+ },
+ {
   "id": "treadmill",
   "name": "Treadmill",
   "source": "mine",
