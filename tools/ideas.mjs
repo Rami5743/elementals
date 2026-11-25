@@ -173,3 +173,5 @@ Object.assign(IDEAS, { "wind-off-enables-descent": {kind:'spine',note:"A running
 Object.assign(IDEAS, { "cargo-power-cascade": {kind:'spine',note:"A physical cargo contact supplies another independently enabled cargo lift. Raising the upstream load cuts power to the downstream lift, and lowering the upstream load automatically restarts it. The alternating high and low contacts become different permissions."} });
 
 Object.assign(IDEAS, { "obstruction-as-third-state": {kind:'spine',note:"A retractable obstruction deliberately stalls a powered cargo hoist at an intermediate sensor. Releasing the obstruction, without changing the lift command, resumes its travel. The binary command becomes a three-state machine."} });
+
+Object.assign(IDEAS, { "brake-makes-transit-contact-stable": {kind:'spine',note:"A controllable loop shuttle with a heavy cargo must be braked in two intermediate contact zones. Gates require both braking and the contact, so merely passing through is useless. The final complementary gate demands releasing the second parked state."} });

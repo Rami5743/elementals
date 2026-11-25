@@ -1,0 +1,10 @@
+{
+  "order": 128,
+  "challenge": "motor",
+  "core": "park-loop-shuttle-mid-contact",
+  "ideas": [
+    "brake-makes-transit-contact-stable",
+    "twist-undo",
+    "quorum"
+  ]
+}

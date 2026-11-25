@@ -1421,6 +1421,61 @@ Entities:
   X  exit_25      exit       at (2,18)  water
 ```
 
+## Midline Brake (`midline_brake`) — 2p, core `park-loop-shuttle-mid-contact`
+
+```
+Midline Brake (midline_brake) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ##....................................##
+ 5  ##....................................##
+ 6  ##.O....pppp.............pppp.........##
+ 7  ##.E..................................##
+ 8  ########################################
+ 9  #.........D.............D.........D....#
+10  #.........D.............D.........D...X#
+11  #.@.l.....D.....l.......D...l.....D..*X#
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #......D...D.......D...........D.......#
+18  #.X....D...D.......D...........D.......#
+19  #.X*l..D...D..l....D......l....D.....@.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (2,11)  water (37,19)
+Entities:
+  E  shuttle      elevator   at (3,7)  <- brake  mode loop  speed 1  pause 90  invert  path (3,7)-(35,7)
+  O  stone        boulder    at (3,6)
+  p  far          plate      at (25,6)  4x1  -> f1  weight heavy
+  p  near         plate      at (8,6)  4x1  -> f2  weight heavy
+  l  brake        lever      at (26,19)  -> shuttle, f1, f2, w_release  on
+  l  f_start      lever      at (4,11)  -> w1
+  l  f_a          lever      at (16,11)  -> w2
+  l  w_ack        lever      at (14,19)  -> f2
+  l  f_b          lever      at (28,11)  -> w3
+  l  w_last       lever      at (4,19)  -> f3
+  D  w1           door       at (31,17)  1x3  <- f_start  latch
+  D  w2           door       at (19,17)  1x3  <- f_a  latch
+  D  w3           door       at (11,17)  1x3  <- f_b  latch
+  D  w_release    door       at (7,17)  1x3  <- brake  invert
+  D  f1           door       at (10,9)  1x3  <- far, brake (needs 2)  latch
+  D  f2           door       at (24,9)  1x3  <- near, brake, w_ack (needs 3)  latch
+  D  f3           door       at (34,9)  1x3  <- w_last  latch
+  *  gem_17       gem        at (37,11)  fire
+  X  exit_18      exit       at (38,10)  fire
+  *  gem_19       gem        at (3,19)  water
+  X  exit_20      exit       at (2,18)  water
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

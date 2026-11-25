@@ -55,23 +55,24 @@ together. `twist-undo`×10, `quorum`×8, `twist-order`×7, `machine-strands-oper
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `cargo-power-cascade` — A physical cargo contact supplies another independently enabled cargo lift. Raising the upstream load cuts power to the downstream lift, and lowering the upstream load automatically restarts it. The alternating high and low contacts become different permissions.
 - `obstruction-as-third-state` — A retractable obstruction deliberately stalls a powered cargo hoist at an intermediate sensor. Releasing the obstruction, without changing the lift command, resumes its travel. The binary command becomes a three-state machine.
+- `brake-makes-transit-contact-stable` — A controllable loop shuttle with a heavy cargo must be braked in two intermediate contact zones. Gates require both braking and the contact, so merely passing through is useless. The final complementary gate demands releasing the second parked state.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- machine-strands-operator + sink-as-a-timer
+- belt-filter + head-stack
 - object-as-permanent-switch + switch-in-mid-flight
-- feed-the-engine-mid-ride + object-as-permanent-switch
-- lock-per-element + timed-window
-- liquid-lane + machine-strands-operator
-- invert-door + lift-sorts-by-weight
-- lift-corner-path + mass-adds-on-the-beam
+- freeze-invert + lift-corner-path
+- counterweight-you-must-remove + obstruction-as-third-state
+- mass-adds-on-the-beam + twist-stranding
+- twist-stranding + unload-the-pan-you-ride
+- crate-step + machine-strands-operator
+- object-as-permanent-switch + stock-before-it-seals
 - lift-corner-path + wide-door
-- invert-door + two-in-the-air-at-once
-- belt-filter + machine-strands-operator
-- lift-corner-path + lift-sorts-by-weight
-- belt-filter + lift-corner-path
+- counterweight-you-must-remove + wide-door
+- counterweight-you-must-remove + twist-sacrifice
+- object-as-permanent-switch + stand-aside-is-the-switch
 
 ## This repo's 3-player levels
 

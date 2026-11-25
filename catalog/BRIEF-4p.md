@@ -54,23 +54,24 @@ together. `twist-undo`×10, `quorum`×9, `twist-order`×5, `lock-per-element`×4
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
 - `cargo-power-cascade` — A physical cargo contact supplies another independently enabled cargo lift. Raising the upstream load cuts power to the downstream lift, and lowering the upstream load automatically restarts it. The alternating high and low contacts become different permissions.
 - `obstruction-as-third-state` — A retractable obstruction deliberately stalls a powered cargo hoist at an intermediate sensor. Releasing the obstruction, without changing the lift command, resumes its travel. The binary command becomes a three-state machine.
+- `brake-makes-transit-contact-stable` — A controllable loop shuttle with a heavy cargo must be braked in two intermediate contact zones. Gates require both braking and the contact, so merely passing through is useless. The final complementary gate demands releasing the second parked state.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lift-as-floor + lock-per-element
-- boulder-float + single-file-stone
-- mass-adds-on-the-beam + turbine-out-of-reach
-- boulder-float + mass-adds-on-the-beam
-- lift-corner-path + lock-per-element
-- counterweight-you-must-remove + low-roof-no-jump
-- hop-beats-belt + object-as-permanent-switch
-- pound-chain + seesaw-balance
-- boulder-carry + crate-step
-- liquid-lane + lock-per-element
-- freeze-bridge + threshold-is-a-switch
-- boulder-float + counterweight-you-must-remove
+- turbine-out-of-reach + twist-sacrifice
+- hop-beats-belt + lock-per-element
+- head-stack + wide-door
+- belt-filter + cargo-power-cascade
+- head-stack + stock-before-it-seals
+- head-stack + hop-beats-belt
+- head-stack + lift-as-floor
+- dark + lock-per-element
+- boulder-carry + fan-passenger
+- freeze-bridge + stand-aside-is-the-switch
+- dive-ahead-of-the-runaway + head-stack
+- door-pushes-you-through + head-stack
 
 ## This repo's 4-player levels
 

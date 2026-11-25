@@ -1,0 +1,243 @@
+{
+  "id": "midline_brake",
+  "name": "Midline Brake",
+  "order": 128,
+  "description": "Do not race the moving stone. Use the brake to park it on two intermediate contacts, then release the machine.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      2,
+      11
+    ],
+    "water": [
+      37,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "shuttle",
+      "type": "elevator",
+      "x": 3,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          3,
+          7
+        ],
+        [
+          35,
+          7
+        ]
+      ],
+      "mode": "loop",
+      "speed": 1,
+      "pause": 90,
+      "invert": true
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "id": "far",
+      "type": "plate",
+      "x": 25,
+      "y": 6,
+      "w": 4,
+      "weight": "heavy",
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "near",
+      "type": "plate",
+      "x": 8,
+      "y": 6,
+      "w": 4,
+      "weight": "heavy",
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "brake",
+      "type": "lever",
+      "x": 26,
+      "y": 19,
+      "on": true,
+      "targets": [
+        "shuttle",
+        "f1",
+        "f2",
+        "w_release"
+      ]
+    },
+    {
+      "id": "f_start",
+      "type": "lever",
+      "x": 4,
+      "y": 11,
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "f_a",
+      "type": "lever",
+      "x": 16,
+      "y": 11,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "w_ack",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f_b",
+      "type": "lever",
+      "x": 28,
+      "y": 11,
+      "targets": [
+        "w3"
+      ]
+    },
+    {
+      "id": "w_last",
+      "type": "lever",
+      "x": 4,
+      "y": 19,
+      "targets": [
+        "f3"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 31,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w_release",
+      "type": "door",
+      "x": 7,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 10,
+      "y": 9,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 24,
+      "y": 9,
+      "h": 3,
+      "latch": true,
+      "required": 3
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 34,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    }
+  ],
+  "parTicks": 7440,
+  "hints": [
+    "The brake stops the moving shuttle immediately, anywhere along the track.",
+    "A gate needs both the brake and the correct heavy contact. The far contact comes first.",
+    "The last Water passage needs the brake released again."
+  ]
+}
