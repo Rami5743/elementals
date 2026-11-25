@@ -50,18 +50,18 @@ together. `twist-undo`×20, `quorum`×18, `twist-order`×8, `timed-window`×4, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- counterweight-you-must-remove + low-roof-no-jump
-- machine-strands-operator + unload-the-pan-you-ride
-- lift-corner-path + trigger-from-above
-- lock-per-element + object-as-permanent-switch
-- object-as-permanent-switch + twist-sacrifice
-- boulder-carry + lift-corner-path
-- lift-corner-path + unload-the-pan-you-ride
-- lift-corner-path + single-file-stone
-- single-file-stone + twist-stranding
-- boulder-float + lift-corner-path
-- door-pushes-you-through + twist-stranding
+- object-as-permanent-switch + partner-builds-your-landing
 - boulder-carry + twist-self-block
+- machine-strands-operator + unload-the-pan-you-ride
+- hop-beats-belt + lift-corner-path
+- counterweight-you-must-remove + sink-as-a-timer
+- counterweight-you-must-remove + low-roof-no-jump
+- invert-door + pound-to-move
+- counterweight-you-must-remove + door-pushes-you-through
+- glide-passenger + twist-self-block
+- boulder-carry + lift-corner-path
+- freeze-bridge + unload-the-pan-you-ride
+- invert-door + pound-chain
 
 ## This repo's 3-player levels
 

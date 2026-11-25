@@ -4114,6 +4114,42 @@
   ]
  },
  {
+  "id": "frost_authority",
+  "name": "Frost Authority",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8100,
+  "dark": false,
+  "challenge": "mind",
+  "core": "opposed-pad-approach-ice-relay",
+  "ideas": [
+   "freeze-invert",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 336,
+  "line": "",
+  "tokens": [
+   "ent:door",
+   "ent:freezepad",
+   "ent:lever",
+   "ent:pool",
+   "opt:invert:door",
+   "opt:invert:pool",
+   "opt:latch",
+   "opt:pool-timed",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:water"
+  ]
+ },
+ {
   "id": "gangway",
   "name": "Gangway",
   "source": "mine",

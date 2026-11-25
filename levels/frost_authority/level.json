@@ -1,0 +1,451 @@
+{
+  "id": "frost_authority",
+  "name": "Frost Authority",
+  "order": 336,
+  "description": "Water selects the ice state, but Air decides which side of the selector can be left. Both return certificates must be collected before the second departure.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      3
+    ],
+    "water": [
+      7,
+      8
+    ],
+    "earth": [
+      35,
+      13
+    ],
+    "air": [
+      3,
+      18
+    ]
+  },
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########WWWWWW#########WWWWWW###########",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########WWWWWW#########WWWWWW###########",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "parTicks": 8100,
+  "entities": [
+    {
+      "id": "FA",
+      "type": "pool",
+      "x": 8,
+      "y": 4,
+      "w": 6,
+      "duration": 1
+    },
+    {
+      "id": "FB",
+      "type": "pool",
+      "x": 23,
+      "y": 4,
+      "w": 6,
+      "duration": 1,
+      "invert": true
+    },
+    {
+      "id": "EA",
+      "type": "pool",
+      "x": 8,
+      "y": 14,
+      "w": 6,
+      "duration": 1
+    },
+    {
+      "id": "EB",
+      "type": "pool",
+      "x": 23,
+      "y": 14,
+      "w": 6,
+      "duration": 1,
+      "invert": true
+    },
+    {
+      "id": "pad",
+      "type": "freezepad",
+      "x": 18,
+      "y": 8,
+      "targets": [
+        "FA",
+        "FB",
+        "EA",
+        "EB"
+      ]
+    },
+    {
+      "id": "fmiddle",
+      "type": "door",
+      "x": 20,
+      "y": 1,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "emiddle",
+      "type": "door",
+      "x": 16,
+      "y": 11,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "fhome",
+      "type": "door",
+      "x": 5,
+      "y": 1,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "ehome",
+      "type": "door",
+      "x": 37,
+      "y": 11,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "fend",
+      "type": "door",
+      "x": 35,
+      "y": 1,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "eend",
+      "type": "door",
+      "x": 3,
+      "y": 11,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "pad_access",
+      "type": "door",
+      "x": 10,
+      "y": 6,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "w_workshop",
+      "type": "door",
+      "x": 26,
+      "y": 6,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 33,
+      "y": 6,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_exit",
+      "type": "door",
+      "x": 36,
+      "y": 6,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 16,
+      "y": 3,
+      "targets": [
+        "emiddle"
+      ]
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 20,
+      "y": 13,
+      "targets": [
+        "fmiddle",
+        "pad_access"
+      ]
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 31,
+      "y": 3,
+      "targets": [
+        "fhome",
+        "ehome",
+        "w_workshop",
+        "a_first"
+      ]
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 5,
+      "y": 13,
+      "targets": [
+        "fhome",
+        "ehome",
+        "w_workshop",
+        "a_first"
+      ]
+    },
+    {
+      "id": "Fback",
+      "type": "lever",
+      "x": 3,
+      "y": 3,
+      "targets": [
+        "fend",
+        "eend",
+        "a_middle"
+      ]
+    },
+    {
+      "id": "Eback",
+      "type": "lever",
+      "x": 38,
+      "y": 13,
+      "targets": [
+        "fend",
+        "eend",
+        "a_middle"
+      ]
+    },
+    {
+      "id": "F3",
+      "type": "lever",
+      "x": 37,
+      "y": 3,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "E3",
+      "type": "lever",
+      "x": 2,
+      "y": 13,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "Wcert",
+      "type": "lever",
+      "x": 34,
+      "y": 8,
+      "targets": [
+        "a_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 2,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 8
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 7
+    },
+    {
+      "type": "checkpoint",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "type": "checkpoint",
+      "x": 18,
+      "y": 2
+    },
+    {
+      "type": "checkpoint",
+      "x": 31,
+      "y": 2
+    },
+    {
+      "type": "checkpoint",
+      "x": 35,
+      "y": 12
+    },
+    {
+      "type": "checkpoint",
+      "x": 20,
+      "y": 12
+    },
+    {
+      "type": "checkpoint",
+      "x": 5,
+      "y": 12
+    },
+    {
+      "id": "consent",
+      "type": "lever",
+      "x": 3,
+      "y": 18,
+      "targets": [
+        "west_pad_gate",
+        "east_pad_gate",
+        "a_inverse"
+      ]
+    },
+    {
+      "id": "a_first",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a_middle",
+      "type": "door",
+      "x": 18,
+      "y": 17,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a_inverse",
+      "type": "door",
+      "x": 21,
+      "y": 17,
+      "h": 2,
+      "required": 1,
+      "invert": true
+    },
+    {
+      "id": "A2",
+      "type": "lever",
+      "x": 24,
+      "y": 18,
+      "targets": [
+        "fend",
+        "eend"
+      ]
+    },
+    {
+      "id": "a_exit",
+      "type": "door",
+      "x": 35,
+      "y": 17,
+      "h": 2,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "Ahome",
+      "type": "lever",
+      "x": 37,
+      "y": 18,
+      "targets": [
+        "w_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 17
+    },
+    {
+      "id": "west_pad_gate",
+      "type": "door",
+      "x": 17,
+      "y": 6,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "east_pad_gate",
+      "type": "door",
+      "x": 20,
+      "y": 6,
+      "h": 3
+    }
+  ],
+  "hints": [
+    "Water enters the pad from the west before Air opens the east side.",
+    "After both return certificates, Air closes the east approach and opens the west; Water leaves the pad to the west for the second crossing.",
+    "Water returns to the pad before Air restores east access, then exits east for the last crossing."
+  ]
+}

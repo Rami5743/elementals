@@ -6680,3 +6680,84 @@ Entities:
   *  gem_54       gem        at (37,18)  air
   X  exit_55      exit       at (38,17)  air
 ```
+
+## Frost Authority (`frost_authority`) — 4p, core `opposed-pad-approach-ice-relay`
+
+```
+Frost Authority (frost_authority) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #....D..............D..............D...#
+ 2  #.X..D!...........!.D..........!...D...#
+ 3  #.Xl.D@.........l.!.D..........!...D.*.#
+ 4  ########WWWWWW#########WWWWWW###########
+ 5  ########################################
+ 6  #.........D......D..D.....D......D..D..#
+ 7  #.........D......D..D.....D......D..D.X#
+ 8  #......@..D......Df.D.....D......Dl.D*X#
+ 9  ########################################
+10  ########################################
+11  #..D............D....................D.#
+12  #..D.!..........D...!..............!.DX#
+13  #.*D.!..........D...!..............@.DX#
+14  ########WWWWWW#########WWWWWW###########
+15  ########################################
+16  ########################################
+17  #.........D.......D..D.............D..X#
+18  #..@......D.......D..D..l..........D.*X#
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (6,3)  water (7,8)  earth (35,13)  air (3,18)
+Entities:
+  W  FA           pool       at (8,4)  6x1  <- pad  duration 1
+  W  FB           pool       at (23,4)  6x1  <- pad  duration 1  invert
+  W  EA           pool       at (8,14)  6x1  <- pad  duration 1
+  W  EB           pool       at (23,14)  6x1  <- pad  duration 1  invert
+  f  pad          freezepad  at (18,8)  -> FA, FB, EA, EB
+  D  fmiddle      door       at (20,1)  1x3  <- E1  latch
+  D  emiddle      door       at (16,11)  1x3  <- F1  latch
+  D  fhome        door       at (5,1)  1x3  <- F2, E2 (needs 2)  latch
+  D  ehome        door       at (37,11)  1x3  <- F2, E2 (needs 2)  latch
+  D  fend         door       at (35,1)  1x3  <- Fback, Eback, A2 (needs 3)  latch
+  D  eend         door       at (3,11)  1x3  <- Fback, Eback, A2 (needs 3)  latch
+  D  pad_access   door       at (10,6)  1x3  <- E1  latch
+  D  w_workshop   door       at (26,6)  1x3  <- F2, E2 (needs 2)  latch
+  D  w_final      door       at (33,6)  1x3  <- F3, E3 (needs 2)  latch
+  D  w_exit       door       at (36,6)  1x3  <- Ahome  latch
+  l  F1           lever      at (16,3)  -> emiddle
+  l  E1           lever      at (20,13)  -> fmiddle, pad_access
+  l  F2           lever      at (31,3)  -> fhome, ehome, w_workshop, a_first
+  l  E2           lever      at (5,13)  -> fhome, ehome, w_workshop, a_first
+  l  Fback        lever      at (3,3)  -> fend, eend, a_middle
+  l  Eback        lever      at (38,13)  -> fend, eend, a_middle
+  l  F3           lever      at (37,3)  -> w_final
+  l  E3           lever      at (2,13)  -> w_final
+  l  Wcert        lever      at (34,8)  -> a_exit
+  *  gem_24       gem        at (37,3)  fire
+  *  gem_25       gem        at (2,13)  earth
+  *  gem_26       gem        at (37,8)  water
+  X  exit_27      exit       at (2,2)  fire
+  X  exit_28      exit       at (38,12)  earth
+  X  exit_29      exit       at (38,7)  water
+  !  checkpoint_30 checkpoint at (6,2)
+  !  checkpoint_31 checkpoint at (18,2)
+  !  checkpoint_32 checkpoint at (31,2)
+  !  checkpoint_33 checkpoint at (35,12)
+  !  checkpoint_34 checkpoint at (20,12)
+  !  checkpoint_35 checkpoint at (5,12)
+  l  consent      lever      at (3,18)  -> west_pad_gate, east_pad_gate, a_inverse
+  D  a_first      door       at (10,17)  1x2  <- F2, E2 (needs 2)  latch
+  D  a_middle     door       at (18,17)  1x2  <- Fback, Eback (needs 2)  latch
+  D  a_inverse    door       at (21,17)  1x2  <- consent  invert
+  l  A2           lever      at (24,18)  -> fend, eend
+  D  a_exit       door       at (35,17)  1x2  <- Wcert  latch
+  l  Ahome        lever      at (37,18)  -> w_exit
+  *  gem_43       gem        at (37,18)  air
+  X  exit_44      exit       at (38,17)  air
+  D  west_pad_gate door       at (17,6)  1x3  <- consent  invert
+  D  east_pad_gate door       at (20,6)  1x3  <- consent
+```
