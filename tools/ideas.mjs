@@ -181,3 +181,8 @@ Object.assign(IDEAS, { "convergent-belt-seam": {kind:'spine',note:"Independent r
 Object.assign(IDEAS, { "ratio-reverses-paired-cargo": {kind:'spine',note:"Fixed cargo on both rope pans is unequal in weight. A selectable snatch block reverses which pan is heavier, producing two complementary pairs of stationary sensor permissions with unequal excursions; no rider or balance memory is needed."} });
 
 Object.assign(IDEAS, { "hoist-unloads-comparator": {kind:'spine',note:"Two independent hoists lift loads away from a seesaw, so either imbalance and the loaded centered state give distinct paired contacts; an empty centered plank is not equivalent to a loaded one."} });
+
+// Coined while building Chockstone (2026-11-25).
+Object.assign(IDEAS, {
+  'stone-held-from-below': { kind: 'spine', note: "A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so the only thing that ever stops one is a body already standing in its path \u2014 and it comes to rest in the cell immediately UPHILL of that body, one row up, never on their head. A heavy plate hung in that cell is therefore an unforgeable key: the body standing under it is too light to press it and cannot climb to it, and the one who pushed the stone can never park it there, because you push from above and hold from below and nobody can be both. The eight ticks a free-rolling stone spends crossing the cell are far too few for anything that has to stay open long enough to walk through. And because the stone rolls on the instant the brake steps aside, and follows the brake downhill, one stone can be walked from a high berth to a lower one but never back up without Earth: gravity fixes the order of the berths, and giving up the high one is the price of the low." },
+});

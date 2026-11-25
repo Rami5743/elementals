@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 135 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 136 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (45)
@@ -351,7 +351,7 @@ Totals: 79 campaign levels, 135 in this repo, of which 11 now ship in the campai
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (45)
+## 3 players — this repo (46)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -532,6 +532,10 @@ Totals: 79 campaign levels, 135 in this repo, of which 11 now ship in the campai
   - idea: Two timed turbine dispatches require a third operator's permission; that same permission blocks their next control until the two travelers are safely through.
   - ideas: turbine-out-of-reach, head-stack, timed-window, twist-undo, invert-door
   - features: ent:door ent:lever ent:turbine opt:invert:door opt:latch opt:turbine-timed opt:wide-door
+- **Chockstone** `chockstone` (3p: fire+water+earth) core=`stone-parked-by-a-body-is-an-unforgeable-key` challenge=mind par=6000
+  - idea: a runaway boulder that only a body can stop, coming to rest in the cell *uphill* of whoever stands in its path — so a heavy plate hung in that cell, over a walkway, is a key nobody can forge: the person holding the stone there is too light to press it, and the person who pushed the stone can never be the one holding it, because you push from above and hold from below.
+  - ideas: stone-held-from-below, twist-stranding, twist-order
+  - features: ent:boulder ent:button ent:door ent:plate opt:button:hold opt:heavy-plate opt:latch opt:required:3 opt:rolling-boulder tile:slope
 
 ## 3 players — campaign (30)
 

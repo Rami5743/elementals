@@ -24,23 +24,24 @@ together. `twist-undo`×28, `invert-door`×6, `twist-order`×6, `twist-stranding
 - `tower-presses-a-column` — Switches stacked up a wall that nothing but a tower of players reaches, with the order of the tower forced by what stands at the bottom. (Campaign: Totem.)
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `stone-held-from-below` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so the only thing that ever stops one is a body already standing in its path — and it comes to rest in the cell immediately UPHILL of that body, one row up, never on their head. A heavy plate hung in that cell is therefore an unforgeable key: the body standing under it is too light to press it and cannot climb to it, and the one who pushed the stone can never park it there, because you push from above and hold from below and nobody can be both. The eight ticks a free-rolling stone spends crossing the cell are far too few for anything that has to stay open long enough to walk through. And because the stone rolls on the instant the brake steps aside, and follows the brake downhill, one stone can be walked from a high berth to a lower one but never back up without Earth: gravity fixes the order of the berths, and giving up the high one is the price of the low.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lift-sorts-by-weight + two-stage-piston-handoff
-- door-pushes-you-through + timed-window
-- boulder-float + twist-setup
-- plank-sums-plate-maxes + stock-before-it-seals
-- lift-sorts-by-weight + one-way-press
-- boulder-carry + timed-window
-- one-way-drop + single-file-stone
-- counterweight-you-must-remove + one-way-drop
-- partner-builds-your-landing + plank-sums-plate-maxes
-- door-pushes-you-through + one-way-press
-- door-pushes-you-through + partner-builds-your-landing
+- lock-per-element + stock-before-it-seals
+- door-pushes-you-through + shared-switch-two-gates
+- counterweight-you-must-remove + tower-presses-a-column
 - counterweight-you-must-remove + plank-sums-plate-maxes
+- lift-sorts-by-weight + mass-adds-on-the-beam
+- boulder-float + sink-as-a-timer
+- boulder-float + grating-memory-with-erase
+- cargo-as-clock-contact + lock-per-element
+- single-file-stone + tower-presses-a-column
+- partner-builds-your-landing + plank-sums-plate-maxes
+- hop-beats-belt + one-way-drop
+- belt-cargo + lift-sorts-by-weight
 
 ## This repo's 2-player levels
 
