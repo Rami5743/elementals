@@ -4598,6 +4598,43 @@
   }
  },
  {
+  "id": "opposite_pans",
+  "name": "Opposite Pans",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8880,
+  "dark": false,
+  "challenge": "mind",
+  "core": "opposed-pan-exit-certificates",
+  "ideas": [
+   "ratio-reverses-paired-cargo",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 333,
+  "line": "Four votes reverse the imbalance of two fixed cargo loads. The first two exit certificates require the low-left state, whereas the other two require the complementary high-left state, and Air must certify an intermediate reversal before either set can finish.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4",
+   "opt:required:5",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "passing_place",
   "name": "Passing Place",
   "source": "mine",

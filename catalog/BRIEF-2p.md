@@ -42,18 +42,18 @@ together. `twist-undo`×18, `quorum`×6, `invert-door`×5, `hold-switch`×5, `tw
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- invert-door + lift-sorts-by-weight
-- expiry-order-is-key + fan-band
-- boulder-float + shared-switch-two-gates
-- glide-dismount + two-stops-no-middle
-- liquid-lane + seesaw-balance
-- one-way-drop + pound-to-move
-- fan-passenger + threshold-is-a-switch
-- pound-chain + twist-undo
-- tower-presses-a-column + twist-undo
-- hop-beats-belt + turbine-out-of-reach
-- freeze-bridge + tower-presses-a-column
-- freeze-invert + threshold-is-a-switch
+- fan-band + wide-door
+- pound-chain + pound-to-move
+- door-pushes-you-through + shared-switch-two-gates
+- freeze-bridge + lift-sorts-by-weight
+- boulder-float + glide-dismount
+- glide-dismount + send-one-through
+- boulder-float + fan-passenger
+- shared-switch-two-gates + tower-presses-a-column
+- fan-band + shared-switch-two-gates
+- lift-sorts-by-weight + pound-to-move
+- head-stack + hoist-one-way-for-cargo
+- object-as-permanent-switch + one-way-drop
 
 ## This repo's 2-player levels
 

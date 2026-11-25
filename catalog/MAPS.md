@@ -6017,3 +6017,85 @@ Entities:
   *  gem_30       gem        at (3,19)  air
   X  exit_31      exit       at (2,18)  air
 ```
+
+## Opposite Pans (`opposite_pans`) — 4p, core `opposed-pan-exit-certificates`
+
+```
+Opposite Pans (opposite_pans) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #......p..####################.........#
+ 2  #......u..####################.........#
+ 3  #.........####################.........#
+ 4  #.........#........D.....D...#.p.......#
+ 5  #......p..#........D.....D..X#.........#
+ 6  #.........#.@l.....D...l.D.*X#.p.......#
+ 7  #.........####################.u.......#
+ 8  ########################################
+ 9  #........D.........D........D......D...#
+10  #........D.........D........D......D..X#
+11  #..@.....D....l....D....l...D...l..D.lX#
+12  ########################################
+13  #....D.....D.......D.........D..D......#
+14  #.X..D.....D.......D.........D..D......#
+15  #.Xl.D..l..D..l....D....l....Dl@D..l...#
+16  ########################################
+17  #........D.........D........D......D...#
+18  #........D.........D........D......D..X#
+19  #..@.....D....l....D....l...D...l..D.lX#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,11)  water (31,15)  earth (3,19)  air (12,6)
+Entities:
+  u  rope         pulley     at (7,2)  <- a, b, c, d (needs 4)  speed 1.5  range 4  ratio 2  second platform at (31,7)  platforms weigh 0 and 1
+  O  aStone       boulder    at (7,1)
+  O  bStone       boulder    at (31,6)
+  l  a            lever      at (3,11)  -> rope
+  l  b            lever      at (30,15)  -> rope
+  p  AH           plate      at (7,1)  -> f2, e2, eexit, air_middle, air_exit  weight heavy
+  p  AL           plate      at (7,5)  -> f1, f3, fexit, e1  weight heavy
+  p  BH           plate      at (31,4)  -> w1, w3, wexit, e3  weight heavy
+  p  BL           plate      at (31,6)  -> w2, eexit, air_exit  weight heavy
+  D  fexit        door       at (35,9)  1x3  <- AL, wkey3, wkey4, ekey3 (needs 4)
+  D  wexit        door       at (5,13)  1x3  <- BH, fkey3, wkey4, ekey3 (needs 4)
+  X  exit_11      exit       at (38,10)  fire
+  X  exit_12      exit       at (2,14)  water
+  *  gem_13       gem        at (37,11)  fire
+  *  gem_14       gem        at (3,15)  water
+  D  f1           door       at (9,9)  1x3  <- AL  latch
+  D  f2           door       at (19,9)  1x3  <- AH, wkey1, ekey1 (needs 3)  latch
+  D  f3           door       at (28,9)  1x3  <- AL, wkey2, ekey2, air_ack (needs 4)  latch
+  D  w1           door       at (29,13)  1x3  <- BH  latch
+  D  w2           door       at (19,13)  1x3  <- BL, fkey1, ekey1 (needs 3)
+  D  w3           door       at (11,13)  1x3  <- BH, fkey2, ekey2 (needs 3)  latch
+  D  wback        door       at (32,13)  1x3  <- wkey3  latch
+  l  fkey1        lever      at (14,11)  -> w2, e2, air_middle
+  l  wkey1        lever      at (24,15)  -> f2
+  l  fkey2        lever      at (24,11)  -> w3
+  l  wkey2        lever      at (14,15)  -> f3, e3
+  l  fkey3        lever      at (32,11)  -> wexit
+  l  wkey3        lever      at (8,15)  -> fexit, wback
+  l  wkey4        lever      at (35,15)  -> wexit, fexit, eexit
+  D  e1           door       at (9,17)  1x3  <- AL  latch
+  D  e2           door       at (19,17)  1x3  <- AH, fkey1 (needs 2)  latch
+  D  e3           door       at (28,17)  1x3  <- BH, wkey2, air_ack (needs 3)  latch
+  D  eexit        door       at (35,17)  1x3  <- AH, BL, wkey4, fhome, whome (needs 5)
+  l  c            lever      at (3,19)  -> rope
+  l  ekey1        lever      at (14,19)  -> f2, w2
+  l  ekey2        lever      at (24,19)  -> f3, w3
+  l  ekey3        lever      at (32,19)  -> fexit, wexit
+  *  gem_37       gem        at (37,19)  earth
+  X  exit_38      exit       at (38,18)  earth
+  l  fhome        lever      at (37,11)  -> eexit
+  l  whome        lever      at (3,15)  -> eexit
+  l  d            lever      at (13,6)  -> rope
+  D  air_middle   door       at (19,4)  1x3  <- AH, fkey1 (needs 2)  latch
+  l  air_ack      lever      at (23,6)  -> f3, e3
+  D  air_exit     door       at (25,4)  1x3  <- AH, BL, ehome (needs 3)
+  l  ehome        lever      at (37,19)  -> air_exit
+  *  gem_46       gem        at (27,6)  air
+  X  exit_47      exit       at (28,5)  air
+```
