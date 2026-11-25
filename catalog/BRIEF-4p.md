@@ -53,23 +53,24 @@ together. `twist-undo`×7, `quorum`×6, `twist-order`×5, `lock-per-element`×4,
 - `dive-ahead-of-the-runaway` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance — the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
 - `shutter-floor-wall-duality` — A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route.
+- `shuttle-strips-cargo-to-belt` — An overhead shuttle passes under a closed shutter which blocks its cargo, stripping the load onto a lower belt. The belt and loading stop recover the cargo for a subsequent intact delivery; high and low deliveries serve distinct requests.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + stand-aside-is-the-switch
-- boulder-carry + shared-switch-two-gates
-- boulder-carry + shutter-floor-wall-duality
-- fan-band + hoist-one-way-for-cargo
-- belt-filter + shutter-floor-wall-duality
-- fan-band + glide-passenger
-- boulder-carry + torch-bridge
-- feed-the-engine-mid-ride + freeze-bridge
-- turbine-out-of-reach + unload-the-pan-you-ride
-- fan-band + seesaw-balance
-- crate-step + head-stack
-- pound-chain + twist-sacrifice
+- belt-filter + torch-bridge
+- lock-per-element + seesaw-balance
+- lock-per-element + pound-to-move
+- head-stack + one-way-drop
+- freeze-bridge + lift-as-floor
+- freeze-invert + head-stack
+- door-pushes-you-through + lock-per-element
+- freeze-bridge + shuttle-strips-cargo-to-belt
+- lift-press + lock-per-element
+- boulder-float + stock-before-it-seals
+- crate-step + freeze-bridge
+- boulder-carry + liquid-lane
 
 ## This repo's 4-player levels
 

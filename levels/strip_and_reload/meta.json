@@ -1,0 +1,10 @@
+{
+  "order": 124,
+  "challenge": "mind",
+  "core": "overhead-cargo-strip-and-recapture",
+  "ideas": [
+    "shuttle-strips-cargo-to-belt",
+    "lift-corner-path",
+    "twist-backwards"
+  ]
+}

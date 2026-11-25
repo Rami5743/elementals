@@ -4571,6 +4571,42 @@
   ]
  },
  {
+  "id": "strip_and_reload",
+  "name": "Strip and Reload",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 15720,
+  "dark": false,
+  "challenge": "mind",
+  "core": "overhead-cargo-strip-and-recapture",
+  "ideas": [
+   "shuttle-strips-cargo-to-belt",
+   "lift-corner-path",
+   "twist-backwards"
+  ],
+  "order": 124,
+  "line": "A low shutter strips a stone from an overhead moving shuttle but does not stop the shuttle itself. A reversible lower belt and a loading stop recover the stripped cargo. The same far destination has two different height contacts, and intentionally unloading the cargo is as important as delivering it.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "tandem_ram",
   "name": "Tandem Ram",
   "source": "mine",

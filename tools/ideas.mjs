@@ -165,3 +165,5 @@ Object.assign(IDEAS, { "two-stage-piston-handoff": {kind:'spine',note:"Two adjac
 Object.assign(IDEAS, { "transport-power-excludes-workshop": {kind:'spine',note:"One switch powers a ferry and closes the workshop gate on its far bank. Dock, stop the machine to enter, relinquish the far position, and restart the machine to get back; the transport and access permissions are incompatible."} });
 
 Object.assign(IDEAS, { "shutter-floor-wall-duality": {kind:'spine',note:"A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route."} });
+
+Object.assign(IDEAS, { "shuttle-strips-cargo-to-belt": {kind:'spine',note:"An overhead shuttle passes under a closed shutter which blocks its cargo, stripping the load onto a lower belt. The belt and loading stop recover the cargo for a subsequent intact delivery; high and low deliveries serve distinct requests."} });

@@ -54,23 +54,24 @@ together. `twist-order`×7, `twist-undo`×7, `quorum`×5, `machine-strands-opera
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `shutter-floor-wall-duality` — A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route.
+- `shuttle-strips-cargo-to-belt` — An overhead shuttle passes under a closed shutter which blocks its cargo, stripping the load onto a lower belt. The belt and loading stop recover the cargo for a subsequent intact delivery; high and low deliveries serve distinct requests.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-passenger + lift-sorts-by-weight
-- send-one-through + twist-stranding
-- machine-strands-operator + pound-chain
-- timed-window + two-is-not-heavy
-- freeze-invert + object-as-permanent-switch
-- pound-chain + timed-window
-- object-as-permanent-switch + pound-chain
-- boulder-carry + object-as-permanent-switch
-- timed-window + wide-door
-- send-one-through + timed-window
-- timed-window + unload-the-pan-you-ride
-- pound-to-move + timed-window
+- hop-beats-belt + twist-order
+- liquid-lane + object-as-permanent-switch
+- stock-before-it-seals + twist-stranding
+- belt-reverse + twist-self-block
+- trip-plate-in-the-shaft + twist-self-block
+- shutter-floor-wall-duality + twist-stranding
+- lift-corner-path + pound-chain
+- lift-corner-path + lock-per-element
+- no-overtaking + twist-self-block
+- glide-passenger + twist-self-block
+- freeze-invert + twist-stranding
+- stand-aside-is-the-switch + twist-self-block
 
 ## This repo's 3-player levels
 
