@@ -169,3 +169,5 @@ Object.assign(IDEAS, { "shutter-floor-wall-duality": {kind:'spine',note:"A wide 
 Object.assign(IDEAS, { "shuttle-strips-cargo-to-belt": {kind:'spine',note:"An overhead shuttle passes under a closed shutter which blocks its cargo, stripping the load onto a lower belt. The belt and loading stop recover the cargo for a subsequent intact delivery; high and low deliveries serve distinct requests."} });
 
 Object.assign(IDEAS, { "wind-off-enables-descent": {kind:'spine',note:"A running upward fan prevents reaching a side balcony; temporarily disable it, then restore it for return ascent."} });
+
+Object.assign(IDEAS, { "cargo-power-cascade": {kind:'spine',note:"A physical cargo contact supplies another independently enabled cargo lift. Raising the upstream load cuts power to the downstream lift, and lowering the upstream load automatically restarts it. The alternating high and low contacts become different permissions."} });

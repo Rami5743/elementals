@@ -1,0 +1,10 @@
+{
+  "order": 126,
+  "challenge": "mind",
+  "core": "dependent-cargo-power-cascade",
+  "ideas": [
+    "cargo-power-cascade",
+    "twist-undo",
+    "quorum"
+  ]
+}

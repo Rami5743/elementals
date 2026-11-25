@@ -1300,6 +1300,67 @@ Entities:
   l  ack          lever      at (37,19)  -> w2
 ```
 
+## Cascade Relay (`cascade_relay`) — 2p, core `dependent-cargo-power-cascade`
+
+```
+Cascade Relay (cascade_relay) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ######.p..####################.p..######
+ 2  ######....####################....######
+ 3  ######....####################....######
+ 4  ######....####################....######
+ 5  ######....####################....######
+ 6  ######.p..####################.p..######
+ 7  ######.E..####################.E..######
+ 8  ########################################
+ 9  #........D.........D........D......D...#
+10  #........D.........D........D......D..X#
+11  #..@.....D....l....D....l...D...l..D.*X#
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #....D.....D.......D.........D.........#
+18  #.X..D.....D.......D.........D.........#
+19  #.X*.D..l..D..l....D....l....D.....l.@.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,11)  water (37,19)
+Entities:
+  E  A            elevator   at (7,7)  <- controlA  speed 0.6  path (7,7)-(7,2)
+  E  B            elevator   at (31,7)  <- a_low, controlB (needs 2)  speed 0.6  path (31,7)-(31,2)
+  O  stoneA       boulder    at (7,6)
+  O  stoneB       boulder    at (31,6)
+  p  a_low        plate      at (7,6)  -> B, w3  weight heavy
+  p  a_high       plate      at (7,1)  -> w1, f2, f4  weight heavy
+  p  b_low        plate      at (31,6)  -> w1, w4  weight heavy
+  p  b_high       plate      at (31,1)  -> f1, w2, f3  weight heavy
+  l  controlA     lever      at (14,11)  -> A
+  l  controlB     lever      at (35,19)  -> B
+  l  w_key1       lever      at (24,19)  -> f2
+  l  f_key2       lever      at (24,11)  -> w2
+  l  w_key2       lever      at (14,19)  -> f3
+  l  f_key3       lever      at (32,11)  -> w3, w4
+  l  w_key3       lever      at (8,19)  -> f4
+  D  f1           door       at (9,9)  1x3  <- b_high  latch
+  D  f2           door       at (19,9)  1x3  <- a_high, w_key1 (needs 2)  latch
+  D  f3           door       at (28,9)  1x3  <- b_high, w_key2 (needs 2)  latch
+  D  f4           door       at (35,9)  1x3  <- a_high, w_key3 (needs 2)
+  D  w1           door       at (29,17)  1x3  <- a_high, b_low (needs 2)  latch
+  D  w2           door       at (19,17)  1x3  <- b_high, f_key2 (needs 2)  latch
+  D  w3           door       at (11,17)  1x3  <- a_low, f_key3 (needs 2)  latch
+  D  w4           door       at (5,17)  1x3  <- b_low, f_key3 (needs 2)
+  *  gem_23       gem        at (37,11)  fire
+  X  exit_24      exit       at (38,10)  fire
+  *  gem_25       gem        at (3,19)  water
+  X  exit_26      exit       at (2,18)  water
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

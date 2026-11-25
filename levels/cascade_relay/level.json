@@ -1,0 +1,306 @@
+{
+  "id": "cascade_relay",
+  "name": "Cascade Relay",
+  "order": 126,
+  "description": "A cargo lift is powered by the other lift's parked stone: raising one machine removes the power of the other.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      11
+    ],
+    "water": [
+      37,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "A",
+      "type": "elevator",
+      "x": 7,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "speed": 0.6
+    },
+    {
+      "id": "B",
+      "type": "elevator",
+      "x": 31,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          31,
+          7
+        ],
+        [
+          31,
+          2
+        ]
+      ],
+      "speed": 0.6,
+      "required": 2
+    },
+    {
+      "id": "stoneA",
+      "type": "boulder",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "id": "stoneB",
+      "type": "boulder",
+      "x": 31,
+      "y": 6
+    },
+    {
+      "id": "a_low",
+      "type": "plate",
+      "x": 7,
+      "y": 6,
+      "weight": "heavy",
+      "targets": [
+        "B",
+        "w3"
+      ]
+    },
+    {
+      "id": "a_high",
+      "type": "plate",
+      "x": 7,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "f2",
+        "f4"
+      ]
+    },
+    {
+      "id": "b_low",
+      "type": "plate",
+      "x": 31,
+      "y": 6,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "w4"
+      ]
+    },
+    {
+      "id": "b_high",
+      "type": "plate",
+      "x": 31,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "w2",
+        "f3"
+      ]
+    },
+    {
+      "id": "controlA",
+      "type": "lever",
+      "x": 14,
+      "y": 11,
+      "targets": [
+        "A"
+      ]
+    },
+    {
+      "id": "controlB",
+      "type": "lever",
+      "x": 35,
+      "y": 19,
+      "targets": [
+        "B"
+      ]
+    },
+    {
+      "id": "w_key1",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f_key2",
+      "type": "lever",
+      "x": 24,
+      "y": 11,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "w_key2",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f3"
+      ]
+    },
+    {
+      "id": "f_key3",
+      "type": "lever",
+      "x": 32,
+      "y": 11,
+      "targets": [
+        "w3",
+        "w4"
+      ]
+    },
+    {
+      "id": "w_key3",
+      "type": "lever",
+      "x": 8,
+      "y": 19,
+      "targets": [
+        "f4"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 9,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 19,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 28,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f4",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w4",
+      "type": "door",
+      "x": 5,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    }
+  ],
+  "parTicks": 6540,
+  "hints": [
+    "The first stone must be at its bottom contact to power the second lift.",
+    "Record the high and low permissions, then return to the first control.",
+    "A high sensor on one lift and a low sensor on the other can be required together."
+  ]
+}

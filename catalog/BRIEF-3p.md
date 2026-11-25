@@ -53,23 +53,24 @@ together. `twist-undo`×10, `quorum`×8, `twist-order`×7, `machine-strands-oper
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `cargo-power-cascade` — A physical cargo contact supplies another independently enabled cargo lift. Raising the upstream load cuts power to the downstream lift, and lowering the upstream load automatically restarts it. The alternating high and low contacts become different permissions.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-filter + lift-corner-path
-- lift-corner-path + stand-aside-is-the-switch
-- invert-door + lock-per-element
-- mass-adds-on-the-beam + object-as-permanent-switch
-- object-as-permanent-switch + two-in-the-air-at-once
-- invert-door + lift-sorts-by-weight
-- counterweight-you-must-remove + stock-before-it-seals
-- hop-beats-belt + invert-door
-- fan-passenger + seesaw-balance
-- belt-filter + freeze-bridge
+- stand-aside-is-the-switch + timed-window
+- fan-band + invert-door
+- stock-before-it-seals + twist-self-block
+- liquid-lane + twist-order
 - twist-order + twist-sacrifice
-- fan-passenger + feed-the-engine-mid-ride
+- belt-reverse + lift-corner-path
+- counterweight-you-must-remove + stock-before-it-seals
+- seesaw-balance + twist-self-block
+- glide-passenger + invert-door
+- fan-passenger + hop-beats-belt
+- lift-sorts-by-weight + object-as-permanent-switch
+- stand-aside-is-the-switch + twist-self-block
 
 ## This repo's 3-player levels
 

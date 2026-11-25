@@ -2868,6 +2868,38 @@
   }
  },
  {
+  "id": "cascade_relay",
+  "name": "Cascade Relay",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6540,
+  "dark": false,
+  "challenge": "mind",
+  "core": "dependent-cargo-power-cascade",
+  "ideas": [
+   "cargo-power-cascade",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 126,
+  "line": "One cargo lift draws power from a contact on the other lift. Raising A removes power from B even while B's control remains on; restoring A's low position restarts B automatically.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "cataract",
   "name": "Cataract",
   "source": "mine",
