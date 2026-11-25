@@ -1,0 +1,330 @@
+{
+  "id": "travelling_jack",
+  "name": "Travelling Jack",
+  "order": 345,
+  "description": "One stone must become the permanent weight of two different jacks, in turn. Earth cannot hold the first high contact and its lower certificate simultaneously.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "#............################..........#",
+    "#............################..........#",
+    "#............################..........#",
+    "##########...################...########",
+    "##########...################...########",
+    "##########...################...########",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##########===################===########",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      11
+    ],
+    "water": [
+      6,
+      11
+    ],
+    "earth": [
+      16,
+      11
+    ],
+    "air": [
+      4,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "lift1",
+      "type": "elevator",
+      "x": 10,
+      "y": 12,
+      "w": 3,
+      "path": [
+        [
+          10,
+          12
+        ],
+        [
+          10,
+          6
+        ]
+      ],
+      "speed": 0.85
+    },
+    {
+      "id": "lift2",
+      "type": "elevator",
+      "x": 29,
+      "y": 12,
+      "w": 3,
+      "path": [
+        [
+          29,
+          12
+        ],
+        [
+          29,
+          6
+        ]
+      ],
+      "speed": 0.85
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 13,
+      "y": 11
+    },
+    {
+      "id": "press1",
+      "type": "plate",
+      "x": 10,
+      "y": 5,
+      "targets": [
+        "earth_cross",
+        "earth_auth"
+      ],
+      "w": 3,
+      "weight": "heavy"
+    },
+    {
+      "id": "press2",
+      "type": "plate",
+      "x": 29,
+      "y": 5,
+      "targets": [
+        "fire_exit",
+        "water_exit",
+        "earth_exit",
+        "air_exit"
+      ],
+      "w": 3,
+      "weight": "heavy"
+    },
+    {
+      "id": "fire_cert",
+      "type": "lever",
+      "x": 5,
+      "y": 5,
+      "targets": [
+        "earth_cross"
+      ]
+    },
+    {
+      "id": "fire_exit",
+      "type": "door",
+      "x": 2,
+      "y": 3,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fgem",
+      "type": "gem",
+      "x": 4,
+      "y": 5,
+      "element": "fire"
+    },
+    {
+      "id": "fexit",
+      "type": "exit",
+      "x": 1,
+      "y": 4,
+      "element": "fire"
+    },
+    {
+      "id": "water_cert",
+      "type": "lever",
+      "x": 34,
+      "y": 5,
+      "targets": [
+        "air_final_auth"
+      ]
+    },
+    {
+      "id": "water_exit",
+      "type": "door",
+      "x": 36,
+      "y": 3,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "wgem",
+      "type": "gem",
+      "x": 35,
+      "y": 5,
+      "element": "water"
+    },
+    {
+      "id": "wexit",
+      "type": "exit",
+      "x": 38,
+      "y": 4,
+      "element": "water"
+    },
+    {
+      "id": "earth_cross",
+      "type": "door",
+      "x": 22,
+      "y": 9,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "earth_weight",
+      "type": "plate",
+      "x": 25,
+      "y": 11,
+      "targets": [
+        "earth_auth"
+      ],
+      "weight": "heavy"
+    },
+    {
+      "id": "earth_auth",
+      "type": "door",
+      "x": 27,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "earth_cert",
+      "type": "lever",
+      "x": 28,
+      "y": 11,
+      "targets": [
+        "earth_cross",
+        "air_access"
+      ]
+    },
+    {
+      "id": "earth_cert2",
+      "type": "lever",
+      "x": 26,
+      "y": 11,
+      "targets": [
+        "earth_cross"
+      ]
+    },
+    {
+      "id": "earth_exit",
+      "type": "door",
+      "x": 36,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earth_last",
+      "type": "lever",
+      "x": 37,
+      "y": 11,
+      "targets": [
+        "water_exit",
+        "air_exit"
+      ]
+    },
+    {
+      "id": "egem",
+      "type": "gem",
+      "x": 25,
+      "y": 11,
+      "element": "earth"
+    },
+    {
+      "id": "eexit",
+      "type": "exit",
+      "x": 38,
+      "y": 10,
+      "element": "earth"
+    },
+    {
+      "id": "power1",
+      "type": "lever",
+      "x": 4,
+      "y": 19,
+      "targets": [
+        "lift1"
+      ]
+    },
+    {
+      "id": "air_access",
+      "type": "door",
+      "x": 15,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "power2",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "lift2"
+      ]
+    },
+    {
+      "id": "air_final_auth",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "air_exit",
+      "type": "door",
+      "x": 35,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "agem",
+      "type": "gem",
+      "x": 33,
+      "y": 19,
+      "element": "air"
+    },
+    {
+      "id": "aexit",
+      "type": "exit",
+      "x": 38,
+      "y": 18,
+      "element": "air"
+    }
+  ],
+  "parTicks": 9780,
+  "hints": [
+    "Use the first lift to deliver Fire to the loft. Then press the high contact with the stone while Earth holds the lower heavy contact.",
+    "Earth's two certificates replace the first press so the stone can be lowered and reused.",
+    "Deliver Water to the second loft before finally raising the same stone into the second high contact."
+  ]
+}

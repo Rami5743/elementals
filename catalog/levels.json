@@ -6949,6 +6949,39 @@
   ]
  },
  {
+  "id": "travelling_jack",
+  "name": "Travelling Jack",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 9780,
+  "dark": false,
+  "challenge": "mind",
+  "core": "single-stone-reused-across-two-pressing-jacks",
+  "ideas": [
+   "lift-press",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 345,
+  "line": "",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "travelling_step",
   "name": "Travelling Step",
   "source": "mine",

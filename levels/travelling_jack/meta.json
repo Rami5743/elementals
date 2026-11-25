@@ -1,0 +1,10 @@
+{
+  "order": 345,
+  "challenge": "mind",
+  "core": "single-stone-reused-across-two-pressing-jacks",
+  "ideas": [
+    "lift-press",
+    "twist-undo",
+    "quorum"
+  ]
+}

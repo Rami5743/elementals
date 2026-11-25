@@ -29,18 +29,18 @@ together. `twist-undo`×29, `invert-door`×6, `twist-order`×6, `twist-stranding
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- expiry-order-is-key + one-way-drop
+- door-pushes-you-through + twist-sacrifice
+- lock-per-element + transport-power-excludes-workshop
+- head-stack + one-way-drop
+- tower-presses-a-column + twist-undo
+- boulder-float + twist-undo
+- reversible-switch-maze + tower-presses-a-column
 - hop-beats-belt + lift-sorts-by-weight
-- freeze-invert + lift-sorts-by-weight
-- two-is-not-heavy + two-stage-piston-handoff
-- stand-aside-is-the-switch + tower-presses-a-column
-- boulder-float + trigger-from-above
-- stock-before-it-seals + two-is-not-heavy
+- one-way-drop + twist-setup
+- partner-builds-your-landing + plank-sums-plate-maxes
+- timed-window + tower-presses-a-column
+- door-pushes-you-through + object-as-permanent-switch
 - cargo-as-clock-contact + tower-presses-a-column
-- plank-sums-plate-maxes + twist-two-clocks
-- cargo-as-clock-contact + plank-sums-plate-maxes
-- glide-dismount + lock-per-element
-- mass-adds-on-the-beam + two-is-not-heavy
 
 ## This repo's 2-player levels
 

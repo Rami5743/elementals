@@ -8463,3 +8463,66 @@ Entities:
   *  agem         gem        at (1,20)  air
   X  aexit        exit       at (38,19)  air
 ```
+
+## Travelling Jack (`travelling_jack`) — 4p, core `single-stone-reused-across-two-pressing-jacks`
+
+```
+Travelling Jack (travelling_jack) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  #.D..........################.......D..#
+ 4  #XD..........################.......D.X#
+ 5  #XD.*l....ppp################ppp..l*D.X#
+ 6  ##########...################...########
+ 7  ##########...################...########
+ 8  ##########...################...########
+ 9  #.....................D....D........D..#
+10  #.....................D....D........D.X#
+11  #..@..@......O..@.....D..*lDl.......DlX#
+12  ##########EEE################EEE########
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #..............D.............D.....D...#
+18  #..............D.............D.....D..X#
+19  #...@..........D........l....D...*.D..X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,11)  water (6,11)  earth (16,11)  air (4,19)
+Entities:
+  E  lift1        elevator   at (10,12)  3x1  <- power1  speed 0.85  path (10,12)-(10,6)
+  E  lift2        elevator   at (29,12)  3x1  <- power2  speed 0.85  path (29,12)-(29,6)
+  O  stone        boulder    at (13,11)
+  p  press1       plate      at (10,5)  3x1  -> earth_cross, earth_auth  weight heavy
+  p  press2       plate      at (29,5)  3x1  -> fire_exit, water_exit, earth_exit, air_exit  weight heavy
+  l  fire_cert    lever      at (5,5)  -> earth_cross
+  D  fire_exit    door       at (2,3)  1x3  <- press2  latch
+  *  fgem         gem        at (4,5)  fire
+  X  fexit        exit       at (1,4)  fire
+  l  water_cert   lever      at (34,5)  -> air_final_auth
+  D  water_exit   door       at (36,3)  1x3  <- press2, earth_last (needs 2)  latch
+  *  wgem         gem        at (35,5)  water
+  X  wexit        exit       at (38,4)  water
+  D  earth_cross  door       at (22,9)  1x3  <- press1, fire_cert, earth_cert, earth_cert2 (needs 2)
+  p  earth_weight plate      at (25,11)  -> earth_auth  weight heavy
+  D  earth_auth   door       at (27,9)  1x3  <- press1, earth_weight (needs 2)  latch
+  l  earth_cert   lever      at (28,11)  -> earth_cross, air_access
+  l  earth_cert2  lever      at (26,11)  -> earth_cross
+  D  earth_exit   door       at (36,9)  1x3  <- press2  latch
+  l  earth_last   lever      at (37,11)  -> water_exit, air_exit
+  *  egem         gem        at (25,11)  earth
+  X  eexit        exit       at (38,10)  earth
+  l  power1       lever      at (4,19)  -> lift1
+  D  air_access   door       at (15,17)  1x3  <- earth_cert  latch
+  l  power2       lever      at (24,19)  -> lift2
+  D  air_final_auth door       at (29,17)  1x3  <- water_cert  latch
+  D  air_exit     door       at (35,17)  1x3  <- press2, earth_last (needs 2)  latch
+  *  agem         gem        at (33,19)  air
+  X  aexit        exit       at (38,18)  air
+```

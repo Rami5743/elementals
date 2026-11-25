@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 140 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 141 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (46)
@@ -671,7 +671,7 @@ Totals: 79 campaign levels, 140 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (46)
+## 4 players — this repo (47)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -852,6 +852,9 @@ Totals: 79 campaign levels, 140 in this repo, of which 11 now ship in the campai
 - **Double Veto** `double_veto` (4p: fire+water+earth+air) core=`two-independent-vetoes-before-one-way-commitments` challenge=mind par=8460
   - ideas: one-way-drop, twist-sacrifice, quorum, twist-undo
   - features: ent:door ent:lever opt:invert:door opt:latch opt:required:3 tile:one-way
+- **Travelling Jack** `travelling_jack` (4p: fire+water+earth+air) core=`single-stone-reused-across-two-pressing-jacks` challenge=mind par=9780
+  - ideas: lift-press, twist-undo, quorum
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate opt:heavy-plate opt:latch opt:required:2 tile:one-way
 
 ## 4 players — campaign (23)
 
