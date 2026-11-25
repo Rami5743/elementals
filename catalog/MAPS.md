@@ -2974,6 +2974,56 @@ Entities:
   t  Tlow         torch      at (1,10)  -> second
 ```
 
+## Complementary Roofs (`complementary_roofs`) — 2p, core `complementary-bridge-roofs-alternating-vaults`
+
+```
+Complementary Roofs (complementary_roofs) for fire+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  #..............................D.....D.#
+ 6  #..............................D.....DX#
+ 7  #.....@.@.........l............D...t*DX#
+ 8  ###EE###=DDDDDD#######=DDDDDD###########
+ 9  ###..###.......#######.......###########
+10  ###..#######c#############c#############
+11  #....................#........D.......X#
+12  #....................#....#...D....l*.X#
+13  #....................###################
+14  #....................###################
+15  #....................###################
+16  #.................l..###################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (6,7)  earth (8,7)
+Entities:
+  D  left         door       at (9,8)  6x1  <- select
+  D  right        door       at (23,8)  6x1  <- select  invert
+  l  select       lever      at (18,7)  -> left, right
+  c  panel1       cracked    at (12,10)
+  c  panel2       cracked    at (26,10)
+  E  recall       elevator   at (3,8)  2x1  mode loop  speed 1.5  pause 300  path (3,8)-(3,17)
+  l  E1           lever      at (18,16)  -> F_work, E_work
+  D  F_work       door       at (31,5)  1x3  <- E1  latch
+  t  F1           torch      at (35,7)  -> E_work
+  D  E_work       door       at (30,11)  1x2  <- E1, F1 (needs 2)  latch
+  l  E2           lever      at (35,12)  -> F_end
+  D  F_end        door       at (37,5)  1x3  <- E2  latch
+  *  gem_12       gem        at (36,7)  fire
+  X  exit_13      exit       at (38,6)  fire
+  *  gem_14       gem        at (36,12)  earth
+  X  exit_15      exit       at (38,11)  earth
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

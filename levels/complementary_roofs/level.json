@@ -1,0 +1,190 @@
+{
+  "id": "complementary_roofs",
+  "name": "Complementary Roofs",
+  "order": 154,
+  "description": "Alternate two complementary roofs to give Earth headroom to pound two floors; Fire needs the opposite state to cross above, and must restore the final bridge to exit.",
+  "supports": [
+    [
+      "fire",
+      "earth"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      7
+    ],
+    "earth": [
+      8,
+      7
+    ]
+  },
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###..###=......#######=......###########",
+    "###..###.......#######.......###########",
+    "###..#######.#############.#############",
+    "#....................#.................#",
+    "#....................#....#............#",
+    "#....................###################",
+    "#....................###################",
+    "#....................###################",
+    "#....................###################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "entities": [
+    {
+      "type": "door",
+      "id": "left",
+      "x": 9,
+      "y": 8,
+      "w": 6,
+      "h": 1
+    },
+    {
+      "type": "door",
+      "id": "right",
+      "x": 23,
+      "y": 8,
+      "w": 6,
+      "h": 1,
+      "invert": true
+    },
+    {
+      "type": "lever",
+      "id": "select",
+      "x": 18,
+      "y": 7,
+      "targets": [
+        "left",
+        "right"
+      ]
+    },
+    {
+      "type": "cracked",
+      "id": "panel1",
+      "x": 12,
+      "y": 10
+    },
+    {
+      "type": "cracked",
+      "id": "panel2",
+      "x": 26,
+      "y": 10
+    },
+    {
+      "type": "elevator",
+      "id": "recall",
+      "x": 3,
+      "y": 8,
+      "w": 2,
+      "path": [
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          17
+        ]
+      ],
+      "mode": "loop",
+      "pause": 300,
+      "speed": 1.5
+    },
+    {
+      "type": "lever",
+      "id": "E1",
+      "x": 18,
+      "y": 16,
+      "targets": [
+        "F_work",
+        "E_work"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "F_work",
+      "x": 31,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "torch",
+      "id": "F1",
+      "x": 35,
+      "y": 7,
+      "targets": [
+        "E_work"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "E_work",
+      "x": 30,
+      "y": 11,
+      "h": 2,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "type": "lever",
+      "id": "E2",
+      "x": 35,
+      "y": 12,
+      "targets": [
+        "F_end"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "F_end",
+      "x": 37,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 6
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 36,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 11
+    }
+  ],
+  "parTicks": 6120,
+  "hints": [
+    "Earth cannot pound under either closed slab.",
+    "The bridge that Fire needs to cross is the roof that Earth needs removed. Switch the two together from the island.",
+    "Return from the first vault on the lift. The far torch and first vault certificate release the second vault."
+  ]
+}

@@ -3552,6 +3552,41 @@
   ]
  },
  {
+  "id": "complementary_roofs",
+  "name": "Complementary Roofs",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 6120,
+  "dark": false,
+  "challenge": "mind",
+  "core": "complementary-bridge-roofs-alternating-vaults",
+  "ideas": [
+   "pound-needs-headroom",
+   "shutter-floor-wall-duality",
+   "twist-undo"
+  ],
+  "order": 154,
+  "line": "Two opposite sliding slabs are both bridges for the upper traveler and ceilings for the lower one. Earth needs each roof removed in turn, while Fire must cross the other bridge and ultimately restore it a third time.",
+  "tokens": [
+   "ent:cracked",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:torch",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:wide-door",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "confluence_switch",
   "name": "Confluence Switch",
   "source": "mine",
