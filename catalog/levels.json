@@ -2825,6 +2825,39 @@
   ]
  },
  {
+  "id": "beacon_chain",
+  "name": "Beacon Chain",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8340,
+  "dark": false,
+  "challenge": "mind",
+  "core": "permanent-torch-bridges-ordered-construction",
+  "ideas": [
+   "torch-bridge",
+   "invert-door",
+   "twist-order",
+   "quorum"
+  ],
+  "order": 342,
+  "line": "Two permanent beacons create bridges in different galleries. Access to the second beacon depends on successful use of the first.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "ent:torch",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:wide-door",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "brake_council",
   "name": "Brake Council",
   "source": "mine",

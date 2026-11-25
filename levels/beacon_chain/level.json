@@ -1,0 +1,297 @@
+{
+  "id": "beacon_chain",
+  "name": "Beacon Chain",
+  "order": 342,
+  "description": "Fire's two permanent beacons construct two separate bridges in sequence. The first traveler must authorize the second beacon, and the second traveler releases the final reciprocal relay.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##############...........###############",
+    "##############SSSSSSSSSSS###############",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##############...........###############",
+    "##############SSSSSSSSSSS###############",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      7,
+      3
+    ],
+    "water": [
+      7,
+      8
+    ],
+    "earth": [
+      31,
+      13
+    ],
+    "air": [
+      6,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "f_start",
+      "type": "door",
+      "x": 12,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "torch1",
+      "type": "torch",
+      "x": 34,
+      "y": 3,
+      "targets": [
+        "water_bridge"
+      ]
+    },
+    {
+      "id": "f_west",
+      "type": "door",
+      "x": 5,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "torch2",
+      "type": "torch",
+      "x": 2,
+      "y": 3,
+      "targets": [
+        "earth_bridge",
+        "a_east"
+      ]
+    },
+    {
+      "id": "f_final",
+      "type": "door",
+      "x": 36,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ffinal",
+      "type": "lever",
+      "x": 38,
+      "y": 3,
+      "targets": [
+        "a_west"
+      ]
+    },
+    {
+      "id": "water_bridge",
+      "type": "door",
+      "x": 14,
+      "y": 9,
+      "h": 1,
+      "w": 11,
+      "invert": true
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 35,
+      "y": 8,
+      "targets": [
+        "f_west"
+      ]
+    },
+    {
+      "id": "w_west",
+      "type": "door",
+      "x": 5,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 3,
+      "y": 8,
+      "targets": [
+        "e_east"
+      ]
+    },
+    {
+      "id": "w_exit",
+      "type": "door",
+      "x": 2,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earth_bridge",
+      "type": "door",
+      "x": 14,
+      "y": 14,
+      "h": 1,
+      "w": 11,
+      "invert": true
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 3,
+      "y": 13,
+      "targets": [
+        "a_east"
+      ]
+    },
+    {
+      "id": "e_east",
+      "type": "door",
+      "x": 34,
+      "y": 11,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 36,
+      "y": 13,
+      "targets": [
+        "f_final",
+        "a_west"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 37,
+      "y": 11,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Astart",
+      "type": "lever",
+      "x": 6,
+      "y": 19,
+      "targets": [
+        "f_start"
+      ]
+    },
+    {
+      "id": "a_east",
+      "type": "door",
+      "x": 28,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "A1",
+      "type": "lever",
+      "x": 36,
+      "y": 19,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "a_west",
+      "type": "door",
+      "x": 4,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Afinal",
+      "type": "lever",
+      "x": 2,
+      "y": 19,
+      "targets": [
+        "w_exit",
+        "e_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 2
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 8
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 7
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 13
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 12
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 2,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 1,
+      "y": 18
+    }
+  ],
+  "parTicks": 8340,
+  "hints": [
+    "Only Fire can light the beacons; each builds a different bridge.",
+    "Water crosses first to grant access to the second beacon. Earth crosses in the opposite direction.",
+    "Both return certificates are needed before the final exits open."
+  ]
+}

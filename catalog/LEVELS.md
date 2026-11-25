@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 131 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 132 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (43)
@@ -649,7 +649,7 @@ Totals: 79 campaign levels, 131 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (43)
+## 4 players — this repo (44)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -819,6 +819,10 @@ Totals: 79 campaign levels, 131 in this repo, of which 11 now ship in the campai
   - idea: Two coupled travelling steps have separate inspectors and operators. The inspector cannot change the geometry; the selector operator cannot authorize the next bank workshops.
   - ideas: crate-step, belt-reverse, quorum, twist-undo
   - features: ent:belt ent:box ent:door ent:lever opt:belt:blocks-fire-water opt:belt:reverse opt:latch opt:required:1 opt:required:2
+- **Beacon Chain** `beacon_chain` (4p: fire+water+earth+air) core=`permanent-torch-bridges-ordered-construction` challenge=mind par=8340
+  - idea: Two permanent beacons create bridges in different galleries. Access to the second beacon depends on successful use of the first.
+  - ideas: torch-bridge, invert-door, twist-order, quorum
+  - features: ent:door ent:lever ent:torch opt:invert:door opt:latch opt:required:2 opt:wide-door tile:sludge
 
 ## 4 players — campaign (23)
 

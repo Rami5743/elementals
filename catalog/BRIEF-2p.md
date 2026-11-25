@@ -31,18 +31,18 @@ together. `twist-undo`×26, `twist-order`×6, `quorum`×6, `invert-door`×5, `ob
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- position-as-volatile-key + pound-chain
-- torch-bridge + twist-self-block
-- lift-sorts-by-weight + no-hands-for-cargo
-- lock-per-element + twist-stranding
-- door-pushes-you-through + hold-switch
-- pound-chain + shuttle-strips-cargo-to-belt
-- pound-chain + sink-as-a-timer
-- boulder-carry + mass-adds-on-the-beam
-- stock-before-it-seals + torch-bridge
-- torch-bridge + twist-stranding
-- glide-dismount + pound-chain
-- liquid-lane + pound-chain
+- dark + lift-sorts-by-weight
+- dark + pound-chain
+- lock-per-element + machine-strands-operator
+- one-way-drop + twist-setup
+- head-stack + tower-presses-a-column
+- head-stack + lock-per-element
+- torch-bridge + twist-order
+- counterweight-you-must-remove + torch-bridge
+- boulder-float + twist-order
+- counterweight-you-must-remove + door-pushes-you-through
+- lift-sorts-by-weight + twist-undo
+- door-pushes-you-through + twist-sacrifice
 
 ## This repo's 2-player levels
 

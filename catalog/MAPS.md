@@ -7893,3 +7893,66 @@ Entities:
   *  gem_50       gem        at (35,19)  air
   X  exit_51      exit       at (38,18)  air
 ```
+
+## Beacon Chain (`beacon_chain`) — 4p, core `permanent-torch-bridges-ordered-construction`
+
+```
+Beacon Chain (beacon_chain) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #....D......D.......................D..#
+ 2  #....D......D.......................D.X#
+ 3  #.t..D.@....D.....................t.D*X#
+ 4  ########################################
+ 5  ########################################
+ 6  #.D..D.................................#
+ 7  #XD..D.................................#
+ 8  #XD*.D.@...........................l...#
+ 9  ##############DDDDDDDDDDD###############
+10  ##############SSSSSSSSSSS###############
+11  #.................................D..D.#
+12  #.................................D..DX#
+13  #..*...........................@..D.lDX#
+14  ##############DDDDDDDDDDD###############
+15  ##############SSSSSSSSSSS###############
+16  ########################################
+17  #...D.......................D..........#
+18  #X..D.......................D..........#
+19  #X*.D.@.....................D.......l..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (7,3)  water (7,8)  earth (31,13)  air (6,19)
+Entities:
+  D  f_start      door       at (12,1)  1x3  <- Astart  latch
+  t  torch1       torch      at (34,3)  -> water_bridge
+  D  f_west       door       at (5,1)  1x3  <- W1  latch
+  t  torch2       torch      at (2,3)  -> earth_bridge, a_east
+  D  f_final      door       at (36,1)  1x3  <- E2  latch
+  l  Ffinal       lever      at (38,3)  -> a_west
+  D  water_bridge door       at (14,9)  11x1  <- torch1  invert
+  l  W1           lever      at (35,8)  -> f_west
+  D  w_west       door       at (5,6)  1x3  <- A1  latch
+  l  W2           lever      at (3,8)  -> e_east
+  D  w_exit       door       at (2,6)  1x3  <- Afinal  latch
+  D  earth_bridge door       at (14,14)  11x1  <- torch2  invert
+  l  E1           lever      at (3,13)  -> a_east
+  D  e_east       door       at (34,11)  1x3  <- W2  latch
+  l  E2           lever      at (36,13)  -> f_final, a_west
+  D  e_exit       door       at (37,11)  1x3  <- Afinal  latch
+  l  Astart       lever      at (6,19)  -> f_start
+  D  a_east       door       at (28,17)  1x3  <- torch2, E1 (needs 2)  latch
+  l  A1           lever      at (36,19)  -> w_west
+  D  a_west       door       at (4,17)  1x3  <- Ffinal, E2 (needs 2)  latch
+  l  Afinal       lever      at (2,19)  -> w_exit, e_exit
+  *  gem_21       gem        at (37,3)  fire
+  X  exit_22      exit       at (38,2)  fire
+  *  gem_23       gem        at (3,8)  water
+  X  exit_24      exit       at (1,7)  water
+  *  gem_25       gem        at (3,13)  earth
+  X  exit_26      exit       at (38,12)  earth
+  *  gem_27       gem        at (2,19)  air
+  X  exit_28      exit       at (1,18)  air
+```
