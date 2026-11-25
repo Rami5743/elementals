@@ -4872,6 +4872,80 @@ Entities:
   D  w_exit       door       at (36,7)  1x3  <- wind  invert
 ```
 
+## Opposite Steps (`opposite_steps`) — 3p, core `linked-mobile-staircases`
+
+```
+Opposite Steps (opposite_steps) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #...D..D.......................D..D..D.#
+ 2  #...D..D.......................D..D..DX#
+ 3  #.*.D.lD.......................Dl.Dl.DX#
+ 4  ##########....................##########
+ 5  ##########....................##########
+ 6  ##########.....@...........x..##########
+ 7  ##########>>>>>>>>>>>>>>>>>>>>##########
+ 8  ########################################
+ 9  #.D..D..D.......................D..D...#
+10  #XD..D..D.......................D..D...#
+11  #XD.lD.lD.......................Dl.D.*.#
+12  ##########....................##########
+13  ##########....................##########
+14  ##########..x...........@.....##########
+15  ##########<<<<<<<<<<<<<<<<<<<<##########
+16  ########################################
+17  #.......D...........D....D...D.....D...#
+18  #.......D...........D....D...D.....D..X#
+19  #.@l....D...l.......D..l.D.l.D..*..D..X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (15,6)  earth (24,14)  water (2,19)
+Entities:
+  >  firebelt     belt       at (10,7)  20x1  <- selector  mode reverse  speed 3.3
+  x  firestep     box        at (27,6)
+  D  fireright1   door       at (31,1)  1x3  <- Wstart  latch
+  l  fireR1       lever      at (32,3)  -> selectaccess
+  D  fireright2   door       at (34,1)  1x3  <- Wcert  latch
+  l  fireR2       lever      at (35,3)  -> w_cert2
+  D  fireright3   door       at (37,1)  1x3  <- Wcert3  latch
+  l  fireR3       lever      at (38,3)  -> w_final
+  D  fireleft1    door       at (7,1)  1x3  <- Wstart  latch
+  l  fireL1       lever      at (6,3)  -> w_cert
+  D  fireleft2    door       at (4,1)  1x3  <- Wcert2  latch
+  l  fireL2       lever      at (2,3)  -> w_cert3
+  *  gem_12       gem        at (2,3)  fire
+  X  exit_13      exit       at (38,2)  fire
+  >  earthbelt    belt       at (10,15)  20x1  <- selector  mode reverse  speed -3.3
+  x  earthstep    box        at (12,14)
+  D  earthright1  door       at (8,9)  1x3  <- Wstart  latch
+  l  earthR1      lever      at (7,11)  -> selectaccess
+  D  earthright2  door       at (5,9)  1x3  <- Wcert  latch
+  l  earthR2      lever      at (4,11)  -> w_cert2
+  D  earthright3  door       at (2,9)  1x3  <- Wcert3  latch
+  l  earthR3      lever      at (1,11)  -> w_final
+  D  earthleft1   door       at (32,9)  1x3  <- Wstart  latch
+  l  earthL1      lever      at (33,11)  -> w_cert
+  D  earthleft2   door       at (35,9)  1x3  <- Wcert2  latch
+  l  earthL2      lever      at (37,11)  -> w_cert3
+  *  gem_26       gem        at (37,11)  earth
+  X  exit_27      exit       at (1,10)  earth
+  D  selectaccess door       at (8,17)  1x3  <- fireR1, earthR1 (needs 2)  latch
+  l  selector     lever      at (12,19)  -> firebelt, earthbelt
+  D  w_cert       door       at (20,17)  1x3  <- fireL1, earthL1 (needs 2)  latch
+  l  Wcert        lever      at (23,19)  -> fireright2, earthright2
+  D  w_cert2      door       at (25,17)  1x3  <- fireR2, earthR2 (needs 2)  latch
+  l  Wcert2       lever      at (27,19)  -> fireleft2, earthleft2
+  D  w_cert3      door       at (29,17)  1x3  <- fireL2, earthL2 (needs 2)  latch
+  l  Wcert3       lever      at (32,19)  -> fireright3, earthright3
+  D  w_final      door       at (35,17)  1x3  <- fireR3, earthR3 (needs 2)  latch
+  l  Wstart       lever      at (3,19)  -> fireright1, fireleft1, earthright1, earthleft1
+  *  gem_38       gem        at (32,19)  water
+  X  exit_39      exit       at (38,18)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

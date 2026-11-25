@@ -5080,6 +5080,39 @@
   ]
  },
  {
+  "id": "opposite_steps",
+  "name": "Opposite Steps",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7440,
+  "dark": false,
+  "challenge": "mind",
+  "core": "linked-mobile-staircases",
+  "ideas": [
+   "crate-step",
+   "belt-reverse",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 242,
+  "line": "A shared conveyor selector moves two portable steps in opposite directions. Both climbers must finish their bank tasks before the shared configuration can be changed productively.",
+  "tokens": [
+   "ent:belt",
+   "ent:box",
+   "ent:door",
+   "ent:lever",
+   "opt:belt:blocks-fire-water",
+   "opt:belt:reverse",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "parallel_flight",
   "name": "Parallel Flight",
   "source": "mine",

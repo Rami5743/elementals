@@ -1,0 +1,392 @@
+{
+  "id": "opposite_steps",
+  "name": "Opposite Steps",
+  "order": 242,
+  "description": "One selector drives two crates in opposite directions, creating temporary steps to opposite banks. The two climbers must both certify each configuration before it is changed.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      15,
+      6
+    ],
+    "earth": [
+      24,
+      14
+    ],
+    "water": [
+      2,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "firebelt",
+      "type": "belt",
+      "x": 10,
+      "y": 7,
+      "w": 20,
+      "speed": 3.3,
+      "mode": "reverse"
+    },
+    {
+      "id": "firestep",
+      "type": "box",
+      "x": 27,
+      "y": 6
+    },
+    {
+      "id": "fireright1",
+      "type": "door",
+      "x": 31,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireR1",
+      "type": "lever",
+      "x": 32,
+      "y": 3,
+      "targets": [
+        "selectaccess"
+      ]
+    },
+    {
+      "id": "fireright2",
+      "type": "door",
+      "x": 34,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireR2",
+      "type": "lever",
+      "x": 35,
+      "y": 3,
+      "targets": [
+        "w_cert2"
+      ]
+    },
+    {
+      "id": "fireright3",
+      "type": "door",
+      "x": 37,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireR3",
+      "type": "lever",
+      "x": 38,
+      "y": 3,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "fireleft1",
+      "type": "door",
+      "x": 7,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireL1",
+      "type": "lever",
+      "x": 6,
+      "y": 3,
+      "targets": [
+        "w_cert"
+      ]
+    },
+    {
+      "id": "fireleft2",
+      "type": "door",
+      "x": 4,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireL2",
+      "type": "lever",
+      "x": 2,
+      "y": 3,
+      "targets": [
+        "w_cert3"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 2
+    },
+    {
+      "id": "earthbelt",
+      "type": "belt",
+      "x": 10,
+      "y": 15,
+      "w": 20,
+      "speed": -3.3,
+      "mode": "reverse"
+    },
+    {
+      "id": "earthstep",
+      "type": "box",
+      "x": 12,
+      "y": 14
+    },
+    {
+      "id": "earthright1",
+      "type": "door",
+      "x": 8,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthR1",
+      "type": "lever",
+      "x": 7,
+      "y": 11,
+      "targets": [
+        "selectaccess"
+      ]
+    },
+    {
+      "id": "earthright2",
+      "type": "door",
+      "x": 5,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthR2",
+      "type": "lever",
+      "x": 4,
+      "y": 11,
+      "targets": [
+        "w_cert2"
+      ]
+    },
+    {
+      "id": "earthright3",
+      "type": "door",
+      "x": 2,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthR3",
+      "type": "lever",
+      "x": 1,
+      "y": 11,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "earthleft1",
+      "type": "door",
+      "x": 32,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthL1",
+      "type": "lever",
+      "x": 33,
+      "y": 11,
+      "targets": [
+        "w_cert"
+      ]
+    },
+    {
+      "id": "earthleft2",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthL2",
+      "type": "lever",
+      "x": 37,
+      "y": 11,
+      "targets": [
+        "w_cert3"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 1,
+      "y": 10
+    },
+    {
+      "id": "selectaccess",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "selector",
+      "type": "lever",
+      "x": 12,
+      "y": 19,
+      "targets": [
+        "firebelt",
+        "earthbelt"
+      ]
+    },
+    {
+      "id": "w_cert",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wcert",
+      "type": "lever",
+      "x": 23,
+      "y": 19,
+      "targets": [
+        "fireright2",
+        "earthright2"
+      ]
+    },
+    {
+      "id": "w_cert2",
+      "type": "door",
+      "x": 25,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wcert2",
+      "type": "lever",
+      "x": 27,
+      "y": 19,
+      "targets": [
+        "fireleft2",
+        "earthleft2"
+      ]
+    },
+    {
+      "id": "w_cert3",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wcert3",
+      "type": "lever",
+      "x": 32,
+      "y": 19,
+      "targets": [
+        "fireright3",
+        "earthright3"
+      ]
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 35,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wstart",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "fireright1",
+        "fireleft1",
+        "earthright1",
+        "earthleft1"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 32,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 7440,
+  "hints": [
+    "Neither climber can reach the three-tile bank without its crate.",
+    "The same selector reverses both belts in opposite directions.",
+    "Wait for both bank certificates before moving either step."
+  ]
+}

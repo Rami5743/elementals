@@ -1,0 +1,11 @@
+{
+  "order": 242,
+  "challenge": "mind",
+  "core": "linked-mobile-staircases",
+  "ideas": [
+    "crate-step",
+    "belt-reverse",
+    "quorum",
+    "twist-undo"
+  ]
+}
