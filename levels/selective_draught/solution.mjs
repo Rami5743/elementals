@@ -1,0 +1,10 @@
+import {go,interact,until,waitFlag,wait,IN_LEFT,IN_RIGHT} from "../../kit.mjs";
+function* gate(c,id){yield* until(c,()=>c.ent(id).s.open>=96,0,9000,id);}
+function* pull(c,x){yield* go(c,x);yield* interact(c);}
+function* rise(c,dir){yield* go(c,19.5);yield* until(c,()=>c.bottom<=4*32,0,4000,"top");yield* until(c,()=>c.me.grounded&&c.bottom===4*32,dir,700,"bank");}
+function* fall(c){yield* go(c,19.5);yield* until(c,()=>c.me.grounded&&c.bottom===20*32,0,4000,"bottom");}
+function fireRun(mode="normal"){return function*(c){yield* gate(c,"f_start");yield* pull(c,12);yield* waitFlag(c,"strong1");yield* rise(c,IN_RIGHT);yield* gate(c,"f_high");yield* pull(c,32);c.flag("top1");yield* waitFlag(c,"off1");yield* fall(c);yield* gate(c,"f_bottom");yield* pull(c,33);c.flag("low1");yield* waitFlag(c,"strong2");yield* rise(c,IN_RIGHT);yield* gate(c,"f_second");yield* pull(c,37);c.flag("top2");yield* waitFlag(c,"off2");yield* fall(c);yield* gate(c,"f_weakaccess");if(mode!=="keep")yield* pull(c,37);yield* go(c,38);};}
+function airRun(mode="normal"){return function*(c){yield* rise(c,IN_LEFT);yield* pull(c,14);yield* gate(c,"a_control");yield* pull(c,5);c.flag("strong1");if(mode==="retry"){yield* wait(c,160);yield* interact(c);yield* wait(c,100);yield* interact(c);}yield* waitFlag(c,"top1");if(mode!=="retain")yield* interact(c);c.flag("off1");yield* waitFlag(c,"low1");yield* gate(c,"a_second");yield* pull(c,2);yield* pull(c,5);c.flag("strong2");yield* waitFlag(c,"top2");yield* interact(c);c.flag("off2");yield* until(c,()=>!c.ent("weak").s.on,0,9000,"weak off");yield* fall(c);yield* gate(c,"a_exit");yield* go(c,1);};}
+const fire=fireRun(),air=airRun();
+const direct={fire:function*(c){yield* go(c,38)},air:function*(c){yield* go(c,1)}};
+export const solutions={sets:[{elements:["fire","air"],scripts:{fire,air},shortcuts:[{name:"direct",scripts:direct},{name:"leave the strong fan running",scripts:{fire,air:airRun("retain")}},{name:"leave the weak fan running",scripts:{fire:fireRun("keep"),air}}]}]};

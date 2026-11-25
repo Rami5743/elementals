@@ -5733,6 +5733,37 @@
   ]
  },
  {
+  "id": "selective_draught",
+  "name": "Selective Draught",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+air"
+  ],
+  "parTicks": 7440,
+  "dark": false,
+  "challenge": "mind",
+  "core": "overlapping-draughts-selective-release",
+  "ideas": [
+   "fan-band",
+   "wind-off-enables-descent",
+   "twist-undo"
+  ],
+  "order": 141,
+  "line": "Two overlapping fans give a selective lift: Air alone rises with the weak fan, Fire also rises with the strong fan. Removing the stronger current releases Fire without releasing Air.",
+  "tokens": [
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "opt:fan:hang-time",
+   "opt:fan:lifts-air",
+   "opt:invert:fan",
+   "opt:latch"
+  ]
+ },
+ {
   "id": "service_lift",
   "name": "Service Lift",
   "source": "mine",

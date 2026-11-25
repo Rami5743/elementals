@@ -1,0 +1,235 @@
+{
+  "id": "selective_draught",
+  "name": "Selective Draught",
+  "order": 141,
+  "description": "Two overlapping draughts share the shaft. The weaker one carries only Air; the stronger one allows Fire to climb. Selectively release Fire to the lower gallery before releasing Air.",
+  "supports": [
+    [
+      "fire",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      4,
+      19
+    ],
+    "air": [
+      16,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "weak",
+      "type": "fan",
+      "x": 18,
+      "y": 1,
+      "w": 4,
+      "h": 19,
+      "strength": 0.9,
+      "invert": true
+    },
+    {
+      "id": "strong",
+      "type": "fan",
+      "x": 18,
+      "y": 1,
+      "w": 4,
+      "h": 19,
+      "strength": 1.58
+    },
+    {
+      "id": "f_start",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 12,
+      "y": 19,
+      "targets": [
+        "a_control"
+      ]
+    },
+    {
+      "id": "a_control",
+      "type": "door",
+      "x": 10,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "A1",
+      "type": "lever",
+      "x": 14,
+      "y": 3,
+      "targets": [
+        "f_start"
+      ]
+    },
+    {
+      "id": "selector",
+      "type": "lever",
+      "x": 5,
+      "y": 3,
+      "targets": [
+        "strong",
+        "f_high"
+      ]
+    },
+    {
+      "id": "f_high",
+      "type": "door",
+      "x": 28,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ftop",
+      "type": "lever",
+      "x": 32,
+      "y": 3,
+      "targets": [
+        "f_bottom"
+      ]
+    },
+    {
+      "id": "f_bottom",
+      "type": "door",
+      "x": 26,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Fbottom",
+      "type": "lever",
+      "x": 33,
+      "y": 19,
+      "targets": [
+        "a_second"
+      ]
+    },
+    {
+      "id": "a_second",
+      "type": "door",
+      "x": 3,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "A2",
+      "type": "lever",
+      "x": 2,
+      "y": 3,
+      "targets": [
+        "f_second"
+      ]
+    },
+    {
+      "id": "f_second",
+      "type": "door",
+      "x": 35,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ftop2",
+      "type": "lever",
+      "x": 37,
+      "y": 3,
+      "targets": [
+        "f_weakaccess"
+      ]
+    },
+    {
+      "id": "f_weakaccess",
+      "type": "door",
+      "x": 35,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "weakoff",
+      "type": "lever",
+      "x": 37,
+      "y": 19,
+      "targets": [
+        "weak",
+        "a_exit"
+      ]
+    },
+    {
+      "id": "a_exit",
+      "type": "door",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 1,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 7440,
+  "hints": [
+    "The weak draught lifts Air but not Fire. Air must first visit the west controls.",
+    "Switch the stronger draught off to let Fire descend while Air can still use the shaft.",
+    "Collect the second upper certificate before turning off the weak draught to release Air."
+  ]
+}

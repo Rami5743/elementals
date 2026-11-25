@@ -2183,6 +2183,62 @@ Entities:
   p  middle       plate      at (19,19)  -> stage_access  weight heavy
 ```
 
+## Selective Draught (`selective_draught`) — 2p, core `overlapping-draughts-selective-release`
+
+```
+Selective Draught (selective_draught) for fire+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #..D......D.......^^^^......D......D...#
+ 2  #..D......D.......^^^^......D......D...#
+ 3  #.*D.l....D...l...^^^^......D...l..D.*.#
+ 4  ##################^^^^##################
+ 5  ##################^^^^##################
+ 6  ##################^^^^##################
+ 7  ##################^^^^##################
+ 8  ##################^^^^##################
+ 9  ##################^^^^##################
+10  ##################^^^^##################
+11  ##################^^^^##################
+12  ##################^^^^##################
+13  ##################^^^^##################
+14  ##################^^^^##################
+15  ##################^^^^##################
+16  ##################^^^^##################
+17  #.D.....D.........^^^^....D........D...#
+18  #XD.....D.........^^^^....D........D..X#
+19  #XD.@...D...l...@.^^^^....D......l.D.lX#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (4,19)  air (16,19)
+Entities:
+  ^  weak         fan        at (18,1)  4x19  <- weakoff  strength 0.9  invert
+  ^  strong       fan        at (18,1)  4x19  <- selector  strength 1.58
+  D  f_start      door       at (8,17)  1x3  <- A1  latch
+  l  F1           lever      at (12,19)  -> a_control
+  D  a_control    door       at (10,1)  1x3  <- F1  latch
+  l  A1           lever      at (14,3)  -> f_start
+  l  selector     lever      at (5,3)  -> strong, f_high
+  D  f_high       door       at (28,1)  1x3  <- selector  latch
+  l  Ftop         lever      at (32,3)  -> f_bottom
+  D  f_bottom     door       at (26,17)  1x3  <- Ftop  latch
+  l  Fbottom      lever      at (33,19)  -> a_second
+  D  a_second     door       at (3,1)  1x3  <- Fbottom  latch
+  l  A2           lever      at (2,3)  -> f_second
+  D  f_second     door       at (35,1)  1x3  <- A2  latch
+  l  Ftop2        lever      at (37,3)  -> f_weakaccess
+  D  f_weakaccess door       at (35,17)  1x3  <- Ftop2  latch
+  l  weakoff      lever      at (37,19)  -> weak, a_exit
+  D  a_exit       door       at (2,17)  1x3  <- weakoff  latch
+  *  gem_18       gem        at (2,3)  air
+  X  exit_19      exit       at (1,18)  air
+  *  gem_20       gem        at (37,3)  fire
+  X  exit_21      exit       at (38,18)  fire
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

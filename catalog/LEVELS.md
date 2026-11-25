@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 124 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 125 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (40)
+## 2 players — this repo (41)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -189,6 +189,10 @@ Totals: 79 campaign levels, 124 in this repo, of which 11 now ship in the campai
   - idea: A timed two-chamber cargo lock controlled from an isolated gallery. Heavy contacts grant the operator access to successive controls, and a permanent cargo contact must replace the carrier at the end.
   - ideas: stock-before-it-seals, shared-switch-two-gates, timed-window, twist-undo, object-as-permanent-switch
   - features: ent:boulder ent:button ent:door ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2
+- **Selective Draught** `selective_draught` (2p: fire+air) core=`overlapping-draughts-selective-release` challenge=mind par=7440
+  - idea: Two overlapping fans give a selective lift: Air alone rises with the weak fan, Fire also rises with the strong fan. Removing the stronger current releases Fire without releasing Air.
+  - ideas: fan-band, wind-off-enables-descent, twist-undo
+  - features: ent:door ent:fan ent:lever opt:fan:hang-time opt:fan:lifts-air opt:invert:fan opt:latch
 
 ## 2 players — campaign (34)
 

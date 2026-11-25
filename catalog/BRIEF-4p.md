@@ -45,18 +45,18 @@ together. `twist-undo`×22, `quorum`×21, `twist-order`×6, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- pound-to-move + turbine-out-of-reach
-- fan-band + single-file-stone
 - pound-to-move + timed-window
-- glide-passenger + reversible-switch-maze
-- boulder-carry + counterweight-you-must-remove
-- low-roof-no-jump + twist-sacrifice
-- crate-step + low-roof-no-jump
-- belt-cargo + torch-bridge
-- cargo-as-clock-contact + counterweight-you-must-remove
-- boulder-carry + mass-adds-on-the-beam
-- low-roof-no-jump + twist-stranding
-- liquid-lane + pound-chain
+- fan-passenger + head-stack
+- head-stack + tower-presses-a-column
+- glide-dismount + lock-per-element
+- fan-band + single-file-stone
+- glide-passenger + low-roof-no-jump
+- feed-the-engine-mid-ride + lock-per-element
+- door-pushes-you-through + fan-band
+- lock-per-element + stand-aside-is-the-switch
+- counterweight-you-must-remove + pound-chain
+- lift-corner-path + low-roof-no-jump
+- fan-band + feed-the-engine-mid-ride
 
 ## This repo's 4-player levels
 
