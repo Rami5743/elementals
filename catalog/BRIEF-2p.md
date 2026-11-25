@@ -53,18 +53,18 @@ together. `twist-undo`×7, `invert-door`×5, `hold-switch`×5, `object-as-perman
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-cargo + belt-filter
-- glide-dismount + hoist-one-way-for-cargo
+- belt-filter + glide-dismount
+- head-stack + no-overtaking
+- head-stack + lift-loop
+- glide-dismount + torch-bridge
+- belt-reverse + head-stack
+- glide-dismount + send-one-through
+- liquid-lane + pound-chain
+- dive-ahead-of-the-runaway + liquid-lane
+- glide-dismount + lift-loop
+- hoist-one-way-for-cargo + invert-door
 - one-way-drop + twist-undo
-- turbine-out-of-reach + twist-undo
-- liquid-lane + threshold-is-a-switch
-- send-one-through + shared-switch-two-gates
-- shared-switch-two-gates + two-stops-no-middle
-- crate-step + head-stack
-- lift-as-floor + liquid-lane
-- glide-dismount + lift-sorts-by-weight
-- glide-dismount + two-stops-no-middle
-- pound-chain + shared-switch-two-gates
+- head-stack + threshold-is-a-switch
 
 ## This repo's 2-player levels
 

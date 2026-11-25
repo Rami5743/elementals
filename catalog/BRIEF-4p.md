@@ -61,18 +61,18 @@ together. `lock-per-element`×4, `twist-order`×4, `machine-strands-operator`×4
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + two-stops-no-middle
-- boulder-float + torch-bridge
-- low-roof-no-jump + one-way-drop
-- partner-builds-your-landing + turbine-out-of-reach
-- lift-press + pound-chain
-- low-roof-no-jump + wide-door
-- pound-chain + wide-door
-- low-roof-no-jump + tower-presses-a-column
-- turbine-out-of-reach + unload-the-pan-you-ride
-- freeze-bridge + shared-switch-two-gates
-- head-stack + pound-to-move
-- freeze-bridge + stand-aside-is-the-switch
+- belt-filter + twist-setup
+- freeze-bridge + tower-presses-a-column
+- boulder-carry + sink-as-a-timer
+- glide-dismount + lock-per-element
+- shared-switch-two-gates + turbine-out-of-reach
+- door-pushes-you-through + head-stack
+- glide-dismount + low-roof-no-jump
+- head-stack + torch-bridge
+- boulder-carry + counterweight-you-must-remove
+- freeze-bridge + position-as-volatile-key
+- boulder-carry + shared-switch-two-gates
+- freeze-bridge + threshold-is-a-switch
 
 ## This repo's 4-player levels
 

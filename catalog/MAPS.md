@@ -2004,6 +2004,77 @@ Entities:
   "  sign_32      sign       at (9,1)  "A"
 ```
 
+## Phase Canon (`phase_canon`) — 3p, core `three-clock-expiration-canon`
+
+```
+Phase Canon (phase_canon) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #...........D..........D.......D......##
+ 3  #...........D..........D.......D......##
+ 4  #..@........D....l.....D...l...D......##
+ 5  ###################################EEE##
+ 6  ###################################...##
+ 7  #.........D.............D...D...D.....##
+ 8  #.X.......D.............D...D...D.....##
+ 9  #.X*..l...D.............D...D..lD.b...##
+10  ###################################...##
+11  ########################################
+12  ##...D.........D..D....D.D.....D.......#
+13  ##X..D.........D..D....D.D.....D.......#
+14  ##Xl.D.........D..D.b..D.D.l...D....@..#
+15  ########################################
+16  ########################################
+17  #.......D......D.D.....D........D.....##
+18  #.......D......D.D.....D........D....X##
+19  #..@....D...l..D.D..l..D..b.....D...*X##
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,4)  water (36,14)  earth (3,19)
+Entities:
+  X  exit_0       exit       at (2,8)  fire
+  *  gem_1        gem        at (3,9)  fire
+  X  exit_2       exit       at (2,13)  water
+  *  gem_3        gem        at (3,14)  water
+  X  exit_4       exit       at (37,18)  earth
+  *  gem_5        gem        at (36,19)  earth
+  E  lift         elevator   at (35,5)  3x1  mode loop  speed 2  pause 180  path (35,5)-(35,10)
+  l  lw0          lever      at (36,14)  -> f1, f3
+  D  f1           door       at (12,2)  1x3  <- lw0
+  D  f3           door       at (31,2)  1x3  <- lw0  invert
+  l  lf0          lever      at (17,4)  -> w1, w2a
+  D  w1           door       at (31,12)  1x3  <- lf0  latch
+  D  w2a          door       at (25,12)  1x3  <- lf0  invert
+  l  lw1          lever      at (27,14)  -> e1, e2a
+  D  e1           door       at (8,17)  1x3  <- lw1
+  D  e2a          door       at (15,17)  1x3  <- lw1  invert
+  l  le1          lever      at (12,19)  -> f2
+  D  f2           door       at (23,2)  1x3  <- le1
+  l  lf1          lever      at (27,4)  -> e2b
+  D  e2b          door       at (17,17)  1x3  <- lf1
+  l  le2          lever      at (20,19)  -> f_lower
+  D  f_lower      door       at (32,7)  1x3  <- le2
+  l  lf2          lever      at (31,9)  -> w2b, e3
+  D  w2b          door       at (23,12)  1x3  <- lf2
+  D  e3           door       at (23,17)  1x3  <- lf2
+  b  a            button     at (34,9)  -> f_latch, w_latch, f_off  mode timed  duration 600
+  b  b            button     at (20,14)  -> f_latch, w_latch, f_on, w_off  mode timed  duration 600
+  b  c            button     at (26,19)  -> f_latch, w_latch, w_on, e_final  mode timed  duration 600
+  D  f_latch      door       at (28,7)  1x3  <- a, b, c (needs 3)  latch
+  D  w_latch      door       at (18,12)  1x3  <- a, b, c (needs 3)  latch
+  D  f_off        door       at (24,7)  1x3  <- a  invert
+  D  f_on         door       at (10,7)  1x3  <- b
+  D  w_off        door       at (15,12)  1x3  <- b  invert
+  D  w_on         door       at (5,12)  1x3  <- c
+  l  f_end        lever      at (6,9)  -> e_final
+  l  w_end        lever      at (3,14)  -> e_final
+  D  e_final      door       at (32,17)  1x3  <- c, f_end, w_end (needs 3)  latch
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

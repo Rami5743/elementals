@@ -3799,6 +3799,40 @@
   ]
  },
  {
+  "id": "phase_canon",
+  "name": "Phase Canon",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8400,
+  "dark": false,
+  "challenge": "motor",
+  "core": "three-clock-expiration-canon",
+  "ideas": [
+   "expiry-order-is-key",
+   "twist-two-clocks",
+   "twist-undo"
+  ],
+  "order": 220,
+  "line": "Three equal clocks are first made to overlap, then expire in canon: each expiry opens one route while the next live clock provides the crossing window.",
+  "tokens": [
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "pillars",
   "name": "Pillars",
   "source": "mine",

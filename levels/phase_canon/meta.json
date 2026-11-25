@@ -1,0 +1,10 @@
+{
+  "order": 220,
+  "challenge": "motor",
+  "core": "three-clock-expiration-canon",
+  "ideas": [
+    "expiry-order-is-key",
+    "twist-two-clocks",
+    "twist-undo"
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "id": "phase_canon",
+  "name": "Phase Canon",
+  "order": 220,
+  "description": "Three equal clocks must overlap, then expire in order. Two players run in successive windows.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 8400,
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#.....................................##",
+    "#.....................................##",
+    "#.....................................##",
+    "###################################...##",
+    "###################################...##",
+    "#.....................................##",
+    "#.....................................##",
+    "#.....................................##",
+    "###################################...##",
+    "########################################",
+    "##.....................................#",
+    "##.....................................#",
+    "##.....................................#",
+    "########################################",
+    "########################################",
+    "#.....................................##",
+    "#.....................................##",
+    "#.....................................##",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      4
+    ],
+    "water": [
+      36,
+      14
+    ],
+    "earth": [
+      3,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 2,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 3,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 36,
+      "y": 19
+    },
+    {
+      "id": "lift",
+      "type": "elevator",
+      "x": 35,
+      "y": 5,
+      "w": 3,
+      "path": [
+        [
+          35,
+          5
+        ],
+        [
+          35,
+          10
+        ]
+      ],
+      "mode": "loop",
+      "pause": 180,
+      "speed": 2
+    },
+    {
+      "id": "lw0",
+      "type": "lever",
+      "x": 36,
+      "y": 14,
+      "targets": [
+        "f1",
+        "f3"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 12,
+      "y": 2,
+      "h": 3
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 31,
+      "y": 2,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "lf0",
+      "type": "lever",
+      "x": 17,
+      "y": 4,
+      "targets": [
+        "w1",
+        "w2a"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 31,
+      "y": 12,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w2a",
+      "type": "door",
+      "x": 25,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "lw1",
+      "type": "lever",
+      "x": 27,
+      "y": 14,
+      "targets": [
+        "e1",
+        "e2a"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3
+    },
+    {
+      "id": "e2a",
+      "type": "door",
+      "x": 15,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "le1",
+      "type": "lever",
+      "x": 12,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 23,
+      "y": 2,
+      "h": 3
+    },
+    {
+      "id": "lf1",
+      "type": "lever",
+      "x": 27,
+      "y": 4,
+      "targets": [
+        "e2b"
+      ]
+    },
+    {
+      "id": "e2b",
+      "type": "door",
+      "x": 17,
+      "y": 17,
+      "h": 3
+    },
+    {
+      "id": "le2",
+      "type": "lever",
+      "x": 20,
+      "y": 19,
+      "targets": [
+        "f_lower"
+      ]
+    },
+    {
+      "id": "f_lower",
+      "type": "door",
+      "x": 32,
+      "y": 7,
+      "h": 3
+    },
+    {
+      "id": "lf2",
+      "type": "lever",
+      "x": 31,
+      "y": 9,
+      "targets": [
+        "w2b",
+        "e3"
+      ]
+    },
+    {
+      "id": "w2b",
+      "type": "door",
+      "x": 23,
+      "y": 12,
+      "h": 3
+    },
+    {
+      "id": "e3",
+      "type": "door",
+      "x": 23,
+      "y": 17,
+      "h": 3
+    },
+    {
+      "id": "a",
+      "type": "button",
+      "x": 34,
+      "y": 9,
+      "mode": "timed",
+      "duration": 600,
+      "targets": [
+        "f_latch",
+        "w_latch",
+        "f_off"
+      ]
+    },
+    {
+      "id": "b",
+      "type": "button",
+      "x": 20,
+      "y": 14,
+      "mode": "timed",
+      "duration": 600,
+      "targets": [
+        "f_latch",
+        "w_latch",
+        "f_on",
+        "w_off"
+      ]
+    },
+    {
+      "id": "c",
+      "type": "button",
+      "x": 26,
+      "y": 19,
+      "mode": "timed",
+      "duration": 600,
+      "targets": [
+        "f_latch",
+        "w_latch",
+        "w_on",
+        "e_final"
+      ]
+    },
+    {
+      "id": "f_latch",
+      "type": "door",
+      "x": 28,
+      "y": 7,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "w_latch",
+      "type": "door",
+      "x": 18,
+      "y": 12,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "f_off",
+      "type": "door",
+      "x": 24,
+      "y": 7,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "f_on",
+      "type": "door",
+      "x": 10,
+      "y": 7,
+      "h": 3
+    },
+    {
+      "id": "w_off",
+      "type": "door",
+      "x": 15,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w_on",
+      "type": "door",
+      "x": 5,
+      "y": 12,
+      "h": 3
+    },
+    {
+      "id": "f_end",
+      "type": "lever",
+      "x": 6,
+      "y": 9,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "id": "w_end",
+      "type": "lever",
+      "x": 3,
+      "y": 14,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "id": "e_final",
+      "type": "door",
+      "x": 32,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    }
+  ],
+  "hints": [
+    "The old relays block the lift or timer access until they are turned off.",
+    "Start A, then B, then C. They all run for ten seconds.",
+    "Fire moves when A expires; Water moves when B expires. Do not start all three together."
+  ]
+}
