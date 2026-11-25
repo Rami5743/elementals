@@ -57,6 +57,11 @@ Otherwise:
    git checkout main && git pull --ff-only origin main
    git merge --no-edit origin/gpt
    ```
+   **Expect this to fast-forward, and never run `git commit --amend` after it.** The other agent
+   merges `main` into `gpt`, so `gpt` is usually already a descendant of `main` and the merge makes
+   no commit of yours. An `--amend` then rewrites *its* last commit instead — new author, new
+   message, and a level dated by your commit rather than by the one that introduced it. The
+   regeneration in step 4 is always **its own commit**, for the same reason.
    Conflicts are expected only in generated files — `catalog/BRIEF-*.md`, `catalog/LEVELS.md`,
    `catalog/MAPS.md`, `catalog/levels.json`, `index.html`. **Regenerate them, never hand-merge**
    (step 4 does it; `git add` them afterwards). `tools/ideas.mjs` is a source file whose edits are
