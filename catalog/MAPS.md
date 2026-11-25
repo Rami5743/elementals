@@ -843,6 +843,65 @@ Entities:
   p  p1_4         plate      at (25,19)  -> g0_3
 ```
 
+## Rope Register (`rope_register`) — 2p, core `balanced-rope-stores-height`
+
+```
+Rope Register (rope_register) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ####..##################################
+ 2  ####..##################################
+ 3  ####..##################################
+ 4  ####uu##################################
+ 5  ########################################
+ 6  #......D.......D.................D.....#
+ 7  #.X....D.......D.................D.....#
+ 8  #.X.*..D.....@.D..............p..D..l..#
+ 9  ###########EE###############uuu#########
+10  ###########..###############...#########
+11  ###########..###############...#########
+12  #......................................#
+13  #......................................#
+14  #..............l..............p........#
+15  ###########..###############...#########
+16  ###########..###############...#########
+17  #..........D...........D...D..D.....D..#
+18  #..........D...........D...D..D.....DX.#
+19  #..l.@.....D.....l.....D...D..D...l.DX.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (13,8)  water (5,19)
+Entities:
+  u  balance      pulley     at (28,9)  3x1  <- a, b (needs 2)  range 6  ratio 2  invert  second platform at (4,4)  platforms weigh 0 and 6
+  E  recall       elevator   at (11,9)  2x1  mode loop  speed 2  pause 300  path (11,9)-(11,15)
+  O  stone        boulder    at (30,8)
+  p  high         plate      at (30,8)  -> w_second, w_finish  weight heavy
+  p  low          plate      at (30,14)  -> w_first, w_final  weight heavy
+  l  a            lever      at (3,19)  -> f_upper, balance, w_invert
+  l  b            lever      at (17,19)  -> f_right, balance
+  l  f1           lever      at (15,14)  -> w_second
+  l  f2           lever      at (36,8)  -> w_final
+  l  c            lever      at (34,19)  -> f_exit, w_finish
+  D  f_upper      door       at (15,6)  1x3  <- a
+  D  f_right      door       at (33,6)  1x3  <- b
+  D  f_exit       door       at (7,6)  1x3  <- c
+  D  w_first      door       at (11,17)  1x3  <- low  latch
+  D  w_second     door       at (23,17)  1x3  <- high, f1 (needs 2)  latch
+  D  w_invert     door       at (27,17)  1x3  <- a  invert
+  D  w_final      door       at (30,17)  1x3  <- low, f2 (needs 2)  latch
+  D  w_finish     door       at (36,17)  1x3  <- high, c (needs 2)
+  *  gem_18       gem        at (4,8)  fire
+  *  gem_19       gem        at (37,19)  water
+  X  exit_20      exit       at (2,7)  fire
+  X  exit_21      exit       at (37,18)  water
+  "  sign_22      sign       at (2,17)  "A"
+  "  sign_23      sign       at (17,17)  "B"
+  "  sign_24      sign       at (34,17)  "C"
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

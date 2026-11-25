@@ -1,0 +1,10 @@
+{
+  "order": 118,
+  "challenge": "mind",
+  "core": "balanced-rope-stores-height",
+  "ideas": [
+    "balanced-rope-memory",
+    "twist-undo",
+    "quorum"
+  ]
+}

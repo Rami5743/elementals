@@ -55,23 +55,24 @@ together. `twist-order`×6, `machine-strands-operator`×3, `timed-window`×3, `o
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `position-as-volatile-key` — Player position is a temporary key, whereas a jointly activated latch retains permission after the players leave. The puzzle is to trade temporary occupancy for permanent permission and recover the earlier positions.
+- `balanced-rope-memory` — With the snatch block engaged, a stone alone balances the rope at whichever height was previously written. A rider adds weight to write the low state, and removing mechanical advantage erases it. Restoring the ratio after unloading retains the high state.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-filter + twist-backwards
-- counterweight-you-must-remove + stock-before-it-seals
-- dark + fan-passenger
-- boulder-float + counterweight-you-must-remove
-- object-as-permanent-switch + turbine-out-of-reach
-- crate-step + twist-stranding
-- hop-beats-belt + lift-corner-path
-- freeze-invert + lift-corner-path
+- stock-before-it-seals + twist-order
 - stock-before-it-seals + twist-stranding
-- lift-corner-path + liquid-lane
-- belt-filter + invert-door
-- machine-strands-operator + partner-builds-your-landing
+- door-pushes-you-through + timed-window
+- belt-filter + head-stack
+- freeze-invert + lift-corner-path
+- lock-per-element + twist-order
+- fan-band + object-as-permanent-switch
+- lift-corner-path + trigger-from-above
+- invert-door + lift-sheds-its-load
+- invert-door + two-in-the-air-at-once
+- position-as-volatile-key + timed-window
+- object-as-permanent-switch + turbine-out-of-reach
 
 ## This repo's 3-player levels
 

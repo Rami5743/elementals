@@ -54,23 +54,24 @@ together. `lock-per-element`×4, `twist-order`×4, `machine-strands-operator`×4
 - `dive-ahead-of-the-runaway` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance — the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
 - `position-as-volatile-key` — Player position is a temporary key, whereas a jointly activated latch retains permission after the players leave. The puzzle is to trade temporary occupancy for permanent permission and recover the earlier positions.
+- `balanced-rope-memory` — With the snatch block engaged, a stone alone balances the rope at whichever height was previously written. A rider adds weight to write the low state, and removing mechanical advantage erases it. Restoring the ratio after unloading retains the high state.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- low-roof-no-jump + twist-two-clocks
-- boulder-float + partner-builds-your-landing
-- freeze-bridge + twist-two-clocks
-- belt-filter + mass-adds-on-the-beam
-- freeze-bridge + liquid-lane
-- fan-passenger + lock-per-element
-- hop-beats-belt + no-hands-for-cargo
-- head-stack + twist-self-block
-- freeze-bridge + single-file-stone
-- boulder-carry + glide-passenger
-- fan-band + unload-the-pan-you-ride
-- freeze-bridge + mass-adds-on-the-beam
+- fan-passenger + turbine-out-of-reach
+- single-file-stone + turbine-out-of-reach
+- head-stack + single-file-stone
+- boulder-float + position-as-volatile-key
+- boulder-float + lift-corner-path
+- head-stack + wide-door
+- feed-the-engine-mid-ride + pound-chain
+- door-pushes-you-through + head-stack
+- freeze-bridge + twist-stranding
+- freeze-bridge + wide-door
+- door-pushes-you-through + turbine-out-of-reach
+- low-roof-no-jump + partner-builds-your-landing
 
 ## This repo's 4-player levels
 

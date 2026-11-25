@@ -3859,6 +3859,43 @@
   ]
  },
  {
+  "id": "rope_register",
+  "name": "Rope Register",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6060,
+  "dark": false,
+  "challenge": "mind",
+  "core": "balanced-rope-stores-height",
+  "ideas": [
+   "balanced-rope-memory",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 118,
+  "line": "A balanced pulley is a mechanical memory: a rider writes its low position, removing the snatch block erases it, and restoring the snatch block without a rider retains the high position.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:invert:pulley",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "service_lift",
   "name": "Service Lift",
   "source": "mine",

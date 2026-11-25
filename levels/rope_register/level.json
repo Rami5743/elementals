@@ -1,0 +1,276 @@
+{
+  "id": "rope_register",
+  "name": "Rope Register",
+  "order": 118,
+  "description": "A balanced rope remembers its height. Add your weight to write it, remove mechanical advantage to erase it.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "parTicks": 6060,
+  "tiles": [
+    "########################################",
+    "####..##################################",
+    "####..##################################",
+    "####..##################################",
+    "####..##################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###########..###############...#########",
+    "###########..###############...#########",
+    "###########..###############...#########",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###########..###############...#########",
+    "###########..###############...#########",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      13,
+      8
+    ],
+    "water": [
+      5,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "balance",
+      "type": "pulley",
+      "x": 28,
+      "y": 9,
+      "w": 3,
+      "to": [
+        4,
+        4,
+        2
+      ],
+      "range": 6,
+      "ratio": 2,
+      "weights": [
+        0,
+        6
+      ],
+      "required": 2,
+      "invert": true
+    },
+    {
+      "id": "recall",
+      "type": "elevator",
+      "x": 11,
+      "y": 9,
+      "w": 2,
+      "path": [
+        [
+          11,
+          9
+        ],
+        [
+          11,
+          15
+        ]
+      ],
+      "mode": "loop",
+      "pause": 300,
+      "speed": 2
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 30,
+      "y": 8
+    },
+    {
+      "id": "high",
+      "type": "plate",
+      "x": 30,
+      "y": 8,
+      "weight": "heavy",
+      "targets": [
+        "w_second",
+        "w_finish"
+      ]
+    },
+    {
+      "id": "low",
+      "type": "plate",
+      "x": 30,
+      "y": 14,
+      "weight": "heavy",
+      "targets": [
+        "w_first",
+        "w_final"
+      ]
+    },
+    {
+      "id": "a",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "f_upper",
+        "balance",
+        "w_invert"
+      ]
+    },
+    {
+      "id": "b",
+      "type": "lever",
+      "x": 17,
+      "y": 19,
+      "targets": [
+        "f_right",
+        "balance"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "lever",
+      "x": 15,
+      "y": 14,
+      "targets": [
+        "w_second"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "lever",
+      "x": 36,
+      "y": 8,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "c",
+      "type": "lever",
+      "x": 34,
+      "y": 19,
+      "targets": [
+        "f_exit",
+        "w_finish"
+      ]
+    },
+    {
+      "id": "f_upper",
+      "type": "door",
+      "x": 15,
+      "y": 6,
+      "h": 3
+    },
+    {
+      "id": "f_right",
+      "type": "door",
+      "x": 33,
+      "y": 6,
+      "h": 3
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 7,
+      "y": 6,
+      "h": 3
+    },
+    {
+      "id": "w_first",
+      "type": "door",
+      "x": 11,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w_second",
+      "type": "door",
+      "x": 23,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_invert",
+      "type": "door",
+      "x": 27,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_finish",
+      "type": "door",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 4,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 2,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 17,
+      "text": "A"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 17,
+      "text": "B"
+    },
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 17,
+      "text": "C"
+    }
+  ],
+  "hints": [
+    "The stone alone balances the rope while the snatch block is engaged.",
+    "Fire riding beside the stone makes the first platform descend. Leave the stone at the bottom, then come back to it.",
+    "Water can change the ratio with A and B. A previously stored height can be erased, then written again."
+  ]
+}

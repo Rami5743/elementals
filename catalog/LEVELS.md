@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 53 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 54 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (17)
+## 2 players — this repo (18)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -98,6 +98,10 @@ Totals: 79 campaign levels, 53 in this repo, of which 11 now ship in the campaig
   - idea: A player's location is a volatile key, but meeting on the right two plates records a permanent permission; the puzzle is to acquire those permissions without abandoning a position that a partner still needs.
   - ideas: position-as-volatile-key, quorum, twist-undo
   - features: ent:door ent:elevator ent:plate opt:elevator:loop opt:invert:door opt:latch opt:required:2
+- **Rope Register** `rope_register` (2p: fire+water) core=`balanced-rope-stores-height` challenge=mind par=6060
+  - idea: A balanced pulley is a mechanical memory: a rider writes its low position, removing the snatch block erases it, and restoring the snatch block without a rider retains the high position.
+  - ideas: balanced-rope-memory, twist-undo, quorum
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:pulley opt:elevator:loop opt:heavy-plate opt:invert:door opt:invert:pulley opt:latch opt:required:2 opt:seesaw-range
 
 ## 2 players — campaign (34)
 
