@@ -902,6 +902,66 @@ Entities:
   "  sign_24      sign       at (34,17)  "C"
 ```
 
+## Afterbeat (`afterbeat`) — 2p, core `asymmetric-expiration-interlock`
+
+```
+Afterbeat (afterbeat) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #...................D........D.D......##
+ 3  #...................D........D.D......##
+ 4  #..@..........l.....D.....l..D.D......##
+ 5  ###################################EEE##
+ 6  ###################################...##
+ 7  #....D...D..........D.................##
+ 8  #.X..D...D..........D.................##
+ 9  #.Xl.D...D..........D....l........b...##
+10  ###################################...##
+11  ########################################
+12  ##......D.D........D..........D........#
+13  ##......D.D........D..........D........#
+14  ##......D.D..l.....D.....l....D.....@..#
+15  ##EEE###################################
+16  ##...###################################
+17  ##.................D..........D........#
+18  ##.................D..........D......X.#
+19  ##...b.............D..........D.....*X.#
+20  ##...###################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,4)  water (36,14)
+Entities:
+  E  lift0        elevator   at (35,5)  3x1  mode loop  speed 2  pause 180  path (35,5)-(35,10)
+  X  exit_1       exit       at (2,8)  fire
+  *  gem_2        gem        at (3,9)  fire
+  E  lift1        elevator   at (2,15)  3x1  mode loop  speed 2  pause 180  path (2,15)-(2,20)
+  X  exit_4       exit       at (37,18)  water
+  *  gem_5        gem        at (36,19)  water
+  l  l0           lever      at (14,4)  -> w0
+  D  w0           door       at (30,12)  1x3  <- l0
+  l  l1           lever      at (25,14)  -> f1, f2a
+  D  f1           door       at (20,2)  1x3  <- l1
+  l  l2           lever      at (26,4)  -> w1, w2a
+  D  w1           door       at (19,12)  1x3  <- l2
+  l  l3           lever      at (13,14)  -> f2b
+  D  f2a          door       at (29,2)  1x3  <- l1  invert
+  D  f2b          door       at (31,2)  1x3  <- l3
+  l  l4           lever      at (25,9)  -> w2b
+  D  w2a          door       at (10,12)  1x3  <- l2  invert
+  D  w2b          door       at (8,12)  1x3  <- l4
+  b  b            button     at (34,9)  -> f3, w3, f5  mode timed  duration 440
+  b  a            button     at (5,19)  -> f3, w3, f4  mode timed  duration 400
+  D  f3           door       at (20,7)  1x3  <- b, a (needs 2)  latch
+  D  w3           door       at (19,17)  1x3  <- b, a (needs 2)  latch
+  D  f4           door       at (9,7)  1x3  <- a  invert
+  D  f5           door       at (5,7)  1x3  <- b
+  l  l5           lever      at (3,9)  -> w4
+  D  w4           door       at (30,17)  1x3  <- l5
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

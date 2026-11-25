@@ -1,0 +1,10 @@
+{
+  "order": 119,
+  "challenge": "motor",
+  "core": "asymmetric-expiration-interlock",
+  "ideas": [
+    "expiry-order-is-key",
+    "twist-two-clocks",
+    "twist-undo"
+  ]
+}

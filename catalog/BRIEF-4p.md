@@ -55,23 +55,24 @@ together. `lock-per-element`×4, `twist-order`×4, `machine-strands-operator`×4
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
 - `position-as-volatile-key` — Player position is a temporary key, whereas a jointly activated latch retains permission after the players leave. The puzzle is to trade temporary occupancy for permanent permission and recover the earlier positions.
 - `balanced-rope-memory` — With the snatch block engaged, a stone alone balances the rope at whichever height was previously written. A rider adds weight to write the low state, and removing mechanical advantage erases it. Restoring the ratio after unloading retains the high state.
+- `expiry-order-is-key` — Timers overlap to record permission, then one expires while the other remains active. A complementary signal and a live timed signal are the two halves of the exit key.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-passenger + turbine-out-of-reach
-- single-file-stone + turbine-out-of-reach
-- head-stack + single-file-stone
-- boulder-float + position-as-volatile-key
-- boulder-float + lift-corner-path
-- head-stack + wide-door
-- feed-the-engine-mid-ride + pound-chain
-- door-pushes-you-through + head-stack
-- freeze-bridge + twist-stranding
-- freeze-bridge + wide-door
-- door-pushes-you-through + turbine-out-of-reach
-- low-roof-no-jump + partner-builds-your-landing
+- boulder-float + hop-beats-belt
+- lift-as-floor + turbine-out-of-reach
+- fan-band + lift-press
+- low-roof-no-jump + torch-bridge
+- low-roof-no-jump + position-as-volatile-key
+- crate-step + low-roof-no-jump
+- pound-chain + threshold-is-a-switch
+- pound-chain + wide-door
+- head-stack + torch-bridge
+- freeze-bridge + shared-switch-two-gates
+- boulder-float + counterweight-you-must-remove
+- feed-the-engine-mid-ride + head-stack
 
 ## This repo's 4-player levels
 

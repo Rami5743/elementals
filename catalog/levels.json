@@ -2689,6 +2689,40 @@
   ]
  },
  {
+  "id": "afterbeat",
+  "name": "Afterbeat",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 8460,
+  "dark": false,
+  "challenge": "motor",
+  "core": "asymmetric-expiration-interlock",
+  "ideas": [
+   "expiry-order-is-key",
+   "twist-two-clocks",
+   "twist-undo"
+  ],
+  "order": 119,
+  "line": "Two clocks first form an AND signal, but the exit needs the clocks to disagree: one must expire while the other still runs.",
+  "tokens": [
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "aqueduct",
   "name": "Aqueduct",
   "source": "mine",

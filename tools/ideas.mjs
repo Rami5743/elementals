@@ -155,3 +155,5 @@ Object.assign(IDEAS, {
 Object.assign(IDEAS, { "position-as-volatile-key": {kind:'spine',note:"Player position is a temporary key, whereas a jointly activated latch retains permission after the players leave. The puzzle is to trade temporary occupancy for permanent permission and recover the earlier positions."} });
 
 Object.assign(IDEAS, { "balanced-rope-memory": {kind:'spine',note:"With the snatch block engaged, a stone alone balances the rope at whichever height was previously written. A rider adds weight to write the low state, and removing mechanical advantage erases it. Restoring the ratio after unloading retains the high state."} });
+
+Object.assign(IDEAS, { "expiry-order-is-key": {kind:'spine',note:"Timers overlap to record permission, then one expires while the other remains active. A complementary signal and a live timed signal are the two halves of the exit key."} });

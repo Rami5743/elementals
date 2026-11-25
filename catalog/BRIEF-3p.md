@@ -56,23 +56,24 @@ together. `twist-order`×6, `machine-strands-operator`×3, `timed-window`×3, `o
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `position-as-volatile-key` — Player position is a temporary key, whereas a jointly activated latch retains permission after the players leave. The puzzle is to trade temporary occupancy for permanent permission and recover the earlier positions.
 - `balanced-rope-memory` — With the snatch block engaged, a stone alone balances the rope at whichever height was previously written. A rider adds weight to write the low state, and removing mechanical advantage erases it. Restoring the ratio after unloading retains the high state.
+- `expiry-order-is-key` — Timers overlap to record permission, then one expires while the other remains active. A complementary signal and a live timed signal are the two halves of the exit key.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- stock-before-it-seals + twist-order
-- stock-before-it-seals + twist-stranding
-- door-pushes-you-through + timed-window
-- belt-filter + head-stack
-- freeze-invert + lift-corner-path
-- lock-per-element + twist-order
-- fan-band + object-as-permanent-switch
-- lift-corner-path + trigger-from-above
-- invert-door + lift-sheds-its-load
-- invert-door + two-in-the-air-at-once
-- position-as-volatile-key + timed-window
-- object-as-permanent-switch + turbine-out-of-reach
+- glide-passenger + twist-stranding
+- invert-door + low-roof-no-jump
+- expiry-order-is-key + machine-strands-operator
+- belt-filter + glide-dismount
+- counterweight-you-must-remove + hop-beats-belt
+- machine-strands-operator + trip-plate-in-the-shaft
+- feed-the-engine-mid-ride + machine-strands-operator
+- dark + machine-strands-operator
+- machine-strands-operator + unload-the-pan-you-ride
+- machine-strands-operator + single-file-stone
+- no-overtaking + object-as-permanent-switch
+- machine-strands-operator + send-one-through
 
 ## This repo's 3-player levels
 
