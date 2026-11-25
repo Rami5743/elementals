@@ -3602,6 +3602,45 @@
   ]
  },
  {
+  "id": "deposit_custodian",
+  "name": "Deposit Custodian",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6240,
+  "dark": false,
+  "challenge": "mind",
+  "core": "independent-custodian-inspects-and-releases-hoist",
+  "ideas": [
+   "lift-sheds-its-load",
+   "hoist-one-way-for-cargo",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 239,
+  "line": "A third, isolated custodian must inspect one raised load before its deposit grants access to the other hoist. Raising a load and leaving it on the grating are distinct permissions.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4",
+   "opt:required:6",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "dismount",
   "name": "Dismount",
   "source": "mine",

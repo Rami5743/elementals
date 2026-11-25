@@ -1,0 +1,511 @@
+{
+  "id": "deposit_custodian",
+  "name": "Deposit Custodian",
+  "order": 239,
+  "description": "The custodian inspects a raised cargo before it is deposited, then receives authorization to operate the other hoist. The raised and deposited positions are distinct keys.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#.....============================.....#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      7,
+      14
+    ],
+    "water": [
+      36,
+      19
+    ],
+    "earth": [
+      2,
+      3
+    ]
+  },
+  "parTicks": 6240,
+  "entities": [
+    {
+      "id": "Arock",
+      "type": "boulder",
+      "x": 10,
+      "y": 9
+    },
+    {
+      "id": "Brock",
+      "type": "boulder",
+      "x": 29,
+      "y": 9
+    },
+    {
+      "id": "Alift",
+      "type": "elevator",
+      "x": 10,
+      "y": 10,
+      "w": 1,
+      "path": [
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          6
+        ]
+      ],
+      "speed": 1.5
+    },
+    {
+      "id": "Blift",
+      "type": "elevator",
+      "x": 29,
+      "y": 10,
+      "w": 1,
+      "path": [
+        [
+          29,
+          10
+        ],
+        [
+          29,
+          6
+        ]
+      ],
+      "speed": 1.5
+    },
+    {
+      "id": "Alow",
+      "type": "plate",
+      "x": 10,
+      "y": 9,
+      "weight": "heavy",
+      "targets": [
+        "f_lower",
+        "w_lower"
+      ]
+    },
+    {
+      "id": "Blow",
+      "type": "plate",
+      "x": 29,
+      "y": 9,
+      "weight": "heavy",
+      "targets": [
+        "f_lower",
+        "w_lower",
+        "f_Blower"
+      ]
+    },
+    {
+      "id": "Ahigh",
+      "type": "plate",
+      "x": 10,
+      "y": 5,
+      "weight": "heavy",
+      "targets": [
+        "w_high",
+        "eA"
+      ]
+    },
+    {
+      "id": "Bhigh",
+      "type": "plate",
+      "x": 29,
+      "y": 5,
+      "weight": "heavy",
+      "targets": [
+        "f_high"
+      ]
+    },
+    {
+      "id": "Adeposit",
+      "type": "plate",
+      "x": 10,
+      "y": 7,
+      "weight": "heavy",
+      "targets": [
+        "w_deposit",
+        "f_Blower",
+        "f_exit",
+        "w_exit",
+        "f_return",
+        "eBaccess"
+      ]
+    },
+    {
+      "id": "Bdeposit",
+      "type": "plate",
+      "x": 29,
+      "y": 7,
+      "weight": "heavy",
+      "targets": [
+        "f_exit",
+        "w_exit",
+        "w_return",
+        "e_exit"
+      ]
+    },
+    {
+      "id": "f_lower",
+      "type": "door",
+      "x": 9,
+      "y": 12,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 13,
+      "y": 14,
+      "targets": [
+        "w_lower"
+      ]
+    },
+    {
+      "id": "f_control",
+      "type": "door",
+      "x": 17,
+      "y": 12,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "A",
+      "type": "lever",
+      "x": 20,
+      "y": 14,
+      "targets": [
+        "Alift",
+        "f_inv"
+      ]
+    },
+    {
+      "id": "f_inv",
+      "type": "door",
+      "x": 24,
+      "y": 12,
+      "h": 3,
+      "required": 1,
+      "invert": true
+    },
+    {
+      "id": "f_Blower",
+      "type": "door",
+      "x": 28,
+      "y": 12,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 31,
+      "y": 14,
+      "targets": [
+        "w_Baccess",
+        "f_return"
+      ]
+    },
+    {
+      "id": "f_high",
+      "type": "door",
+      "x": 33,
+      "y": 12,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "F3",
+      "type": "lever",
+      "x": 35,
+      "y": 14,
+      "targets": [
+        "w_exit",
+        "f_exit",
+        "w_return",
+        "e_certaccess"
+      ]
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 37,
+      "y": 12,
+      "h": 3,
+      "required": 6,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 13
+    },
+    {
+      "id": "w_lower",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "f_control"
+      ]
+    },
+    {
+      "id": "w_high",
+      "type": "door",
+      "x": 21,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 18,
+      "y": 19,
+      "targets": [
+        "f_Blower"
+      ]
+    },
+    {
+      "id": "w_deposit",
+      "type": "door",
+      "x": 15,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "w_Baccess",
+      "type": "door",
+      "x": 11,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "B",
+      "type": "lever",
+      "x": 22,
+      "y": 3,
+      "targets": [
+        "Blift",
+        "w_inv",
+        "e_inverse"
+      ]
+    },
+    {
+      "id": "w_inv",
+      "type": "door",
+      "x": 6,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "invert": true
+    },
+    {
+      "id": "W3",
+      "type": "lever",
+      "x": 4,
+      "y": 19,
+      "targets": [
+        "f_exit",
+        "w_exit"
+      ]
+    },
+    {
+      "id": "w_exit",
+      "type": "door",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "required": 6,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 1,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 18
+    },
+    {
+      "id": "f_return",
+      "type": "door",
+      "x": 5,
+      "y": 12,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Freturn",
+      "type": "lever",
+      "x": 3,
+      "y": 14,
+      "targets": [
+        "w_Baccess"
+      ]
+    },
+    {
+      "id": "w_return",
+      "type": "door",
+      "x": 37,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wreturn",
+      "type": "lever",
+      "x": 38,
+      "y": 19,
+      "targets": [
+        "w_exit",
+        "f_exit",
+        "e_exit"
+      ]
+    },
+    {
+      "id": "eA",
+      "type": "door",
+      "x": 8,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 12,
+      "y": 3,
+      "targets": [
+        "f_Blower"
+      ]
+    },
+    {
+      "id": "eBaccess",
+      "type": "door",
+      "x": 18,
+      "y": 1,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wauth",
+      "type": "lever",
+      "x": 8,
+      "y": 19,
+      "targets": [
+        "eBaccess"
+      ]
+    },
+    {
+      "id": "e_inverse",
+      "type": "door",
+      "x": 28,
+      "y": 1,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "e_certaccess",
+      "type": "door",
+      "x": 30,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ecert",
+      "type": "lever",
+      "x": 32,
+      "y": 3,
+      "targets": [
+        "f_exit",
+        "w_exit"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 35,
+      "y": 1,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 2
+    }
+  ],
+  "hints": [
+    "The lower certificates are needed before the first cargo is spent. Earth inspects the first raised state.",
+    "Lower the first hoist to make the deposit. Fire then proves A deposited and B still below; Water gives Earth the second hoist.",
+    "Earth must lower B after Fire's inspection. The final certificate requires both the deposition and the return authorizations."
+  ]
+}
