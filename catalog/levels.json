@@ -4640,6 +4640,43 @@
   ]
  },
  {
+  "id": "stripping_foreman",
+  "name": "Stripping Foreman",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 17400,
+  "dark": false,
+  "challenge": "mind",
+  "core": "separate-stripper-foreman",
+  "ideas": [
+   "shuttle-strips-cargo-to-belt",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 225,
+  "line": "separating the stripper from the loading controls so three operators must certify the same cargo circuit.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "tandem_ram",
   "name": "Tandem Ram",
   "source": "mine",

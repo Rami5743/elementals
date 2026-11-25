@@ -2674,6 +2674,73 @@ Entities:
   *  gem_30       gem        at (24,19)  earth
 ```
 
+## Stripping Foreman (`stripping_foreman`) — 3p, core `separate-stripper-foreman`
+
+```
+Stripping Foreman (stripping_foreman) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #..................D............p......#
+ 2  #......................................#
+ 3  #p...D................................p#
+ 4  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<#
+ 5  ########################################
+ 6  ########################################
+ 7  #........D.........D.........D.........#
+ 8  #........D.........D.........D.......X.#
+ 9  #..@.....D....l....D...l.....D....*..X.#
+10  ########################################
+11  #........D.........D.........D.........#
+12  #........D.........D.........D.......X.#
+13  #..@.....D....l....D...l.....D......*X.#
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.........D.........D.........D........#
+18  #.X.......D.........D.........D........#
+19  #.X*.l....D.....l...D....l....D.....@..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,13)  water (36,19)  earth (3,9)
+Entities:
+  E  lift         elevator   at (2,4)  3x1  <- motor  speed 1.5  path (2,4)-(2,2)-(30,2)
+  O  stone        boulder    at (1,3)
+  D  strip        door       at (19,1)  <- e_strip
+  >  belt         belt       at (1,4)  38x1  <- load  mode reverse  speed -2
+  D  stop         door       at (5,3)  <- load  invert
+  p  left         plate      at (1,3)  -> w2, e2  weight heavy
+  p  lower_right  plate      at (38,3)  -> w0, f1, e0  weight heavy
+  p  upper_right  plate      at (32,1)  -> f0, w1, f2, e1  weight heavy
+  X  exit_8       exit       at (37,12)  fire
+  *  gem_9        gem        at (36,13)  fire
+  X  exit_10      exit       at (2,18)  water
+  *  gem_11       gem        at (3,19)  water
+  l  motor        lever      at (3,13)  -> lift
+  l  load         lever      at (36,19)  -> belt, stop
+  D  w0           door       at (30,17)  1x3  <- lower_right  latch
+  l  wa           lever      at (25,19)  -> f0
+  D  f0           door       at (9,11)  1x3  <- upper_right, wa, e_strip (needs 3)  latch
+  l  fa           lever      at (14,13)  -> w1, e1
+  D  w1           door       at (20,17)  1x3  <- upper_right, fa (needs 2)  latch
+  l  wb           lever      at (16,19)  -> f1
+  D  f1           door       at (19,11)  1x3  <- lower_right, wb, e_b (needs 3)  latch
+  l  fb           lever      at (23,13)  -> w2, e2
+  D  w2           door       at (10,17)  1x3  <- left, fb, e_c (needs 3)  latch
+  l  wc           lever      at (5,19)  -> f2
+  D  f2           door       at (29,11)  1x3  <- upper_right, wc (needs 2)  latch
+  D  e0           door       at (9,7)  1x3  <- lower_right  latch
+  l  e_strip      lever      at (14,9)  -> strip, f0
+  D  e1           door       at (19,7)  1x3  <- upper_right, fa (needs 2)  latch
+  l  e_b          lever      at (23,9)  -> f1
+  D  e2           door       at (29,7)  1x3  <- left, fb (needs 2)  latch
+  l  e_c          lever      at (34,9)  -> w2
+  X  exit_31      exit       at (37,8)  earth
+  *  gem_32       gem        at (34,9)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

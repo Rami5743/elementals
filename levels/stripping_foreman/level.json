@@ -1,0 +1,356 @@
+{
+  "id": "stripping_foreman",
+  "name": "Stripping Foreman",
+  "order": 225,
+  "description": "The foreman controls the stripper separately from the loading operator. All three must certify the loaded and stripped journeys.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 17400,
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      13
+    ],
+    "water": [
+      36,
+      19
+    ],
+    "earth": [
+      3,
+      9
+    ]
+  },
+  "entities": [
+    {
+      "id": "lift",
+      "type": "elevator",
+      "x": 2,
+      "y": 4,
+      "w": 3,
+      "path": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          30,
+          2
+        ]
+      ],
+      "speed": 1.5
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "id": "strip",
+      "type": "door",
+      "x": 19,
+      "y": 1,
+      "h": 1
+    },
+    {
+      "id": "belt",
+      "type": "belt",
+      "x": 1,
+      "y": 4,
+      "w": 38,
+      "speed": -2,
+      "mode": "reverse"
+    },
+    {
+      "id": "stop",
+      "type": "door",
+      "x": 5,
+      "y": 3,
+      "h": 1,
+      "invert": true
+    },
+    {
+      "id": "left",
+      "type": "plate",
+      "x": 1,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "w2",
+        "e2"
+      ]
+    },
+    {
+      "id": "lower_right",
+      "type": "plate",
+      "x": 38,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "w0",
+        "f1",
+        "e0"
+      ]
+    },
+    {
+      "id": "upper_right",
+      "type": "plate",
+      "x": 32,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f0",
+        "w1",
+        "f2",
+        "e1"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 12
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 13
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "id": "motor",
+      "type": "lever",
+      "x": 3,
+      "y": 13,
+      "targets": [
+        "lift"
+      ]
+    },
+    {
+      "id": "load",
+      "type": "lever",
+      "x": 36,
+      "y": 19,
+      "targets": [
+        "belt",
+        "stop"
+      ]
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "wa",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "f0",
+      "type": "door",
+      "x": 9,
+      "y": 11,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "fa",
+      "type": "lever",
+      "x": 14,
+      "y": 13,
+      "targets": [
+        "w1",
+        "e1"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "wb",
+      "type": "lever",
+      "x": 16,
+      "y": 19,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 19,
+      "y": 11,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "fb",
+      "type": "lever",
+      "x": 23,
+      "y": 13,
+      "targets": [
+        "w2",
+        "e2"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "wc",
+      "type": "lever",
+      "x": 5,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 29,
+      "y": 11,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e0",
+      "type": "door",
+      "x": 9,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_strip",
+      "type": "lever",
+      "x": 14,
+      "y": 9,
+      "targets": [
+        "strip",
+        "f0"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 19,
+      "y": 7,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e_b",
+      "type": "lever",
+      "x": 23,
+      "y": 9,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 29,
+      "y": 7,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e_c",
+      "type": "lever",
+      "x": 34,
+      "y": 9,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 34,
+      "y": 9
+    }
+  ],
+  "hints": [
+    "The foreman opens the stripper only after the first stripped delivery.",
+    "On the return trip the stripper must be closed again, while the lower belt still runs right.",
+    "Return the stone left to certify the empty shuttle, then reload it for the last delivery."
+  ]
+}
