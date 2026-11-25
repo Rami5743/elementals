@@ -25,23 +25,24 @@ together. `twist-undo`×33, `quorum`×8, `invert-door`×7, `hold-switch`×6, `tw
 - `pound-needs-headroom` — A ground pound is a jump first: measured, Earth standing on a cracked panel with one tile of roof cannot leave the ground at all, so there is never an airborne Down press and the floor is simply unbreakable, while two tiles are enough. A cracked panel in a crawl therefore cannot be opened by the player who owns it, only by whoever can take the ceiling away — and when that ceiling is the floor of the storey above, giving Earth the room to pound means pulling the party's own road out from under them. The barrier is neither the floor nor the roof but the distance between them.
 - `moving-veto-silence` — A gate is closed by any of several spatial veto contacts and opens only in the intersection of two cargo objects' contact-free intervals; a third participant crosses during that temporary silence.
 - `fractional-rider-keeper` — Air's half-unit rope weight exactly balances a ballasted pan; Fire's full unit moves it and then leaves to perform a Fire-only task, while Air alone retains the mechanical permission.
+- `stone-held-from-below` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so the only thing that ever stops one is a body already standing in its path — and it comes to rest in the cell immediately UPHILL of that body, one row up, never on their head. A heavy plate hung in that cell is therefore an unforgeable key: the body standing under it is too light to press it and cannot climb to it, and the one who pushed the stone can never park it there, because you push from above and hold from below and nobody can be both. The eight ticks a free-rolling stone spends crossing the cell are far too few for anything that has to stay open long enough to walk through. And because the stone rolls on the instant the brake steps aside, and follows the brake downhill, one stone can be walked from a high berth to a lower one but never back up without Earth: gravity fixes the order of the berths, and giving up the high one is the price of the low.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fractional-rider-keeper + object-as-permanent-switch
-- head-stack + two-is-not-heavy
-- moving-veto-silence + twist-order
-- lift-sorts-by-weight + shared-switch-two-gates
-- pound-needs-headroom + twist-sacrifice
-- freeze-bridge + pound-needs-headroom
-- pound-needs-headroom + unload-the-pan-you-ride
-- door-pushes-you-through + twist-setup
-- invert-door + lift-sorts-by-weight
 - fractional-rider-keeper + quorum
-- quorum + two-is-not-heavy
-- boulder-carry + one-way-drop
+- door-pushes-you-through + hold-switch
+- machine-strands-operator + tower-presses-a-column
+- twist-order + two-is-not-heavy
+- hop-beats-belt + plank-sums-plate-maxes
+- lock-per-element + object-as-permanent-switch
+- lift-sorts-by-weight + twist-order
+- dark + plank-sums-plate-maxes
+- hop-beats-belt + lift-sorts-by-weight
+- dark + door-pushes-you-through
+- object-as-permanent-switch + pound-needs-headroom
+- low-roof-no-jump + plank-sums-plate-maxes
 
 ## This repo's 2-player levels
 

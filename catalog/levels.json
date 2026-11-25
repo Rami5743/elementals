@@ -3299,6 +3299,40 @@
   ]
  },
  {
+  "id": "chockstone",
+  "name": "Chockstone",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6000,
+  "dark": false,
+  "challenge": "mind",
+  "core": "stone-parked-by-a-body-is-an-unforgeable-key",
+  "ideas": [
+   "stone-held-from-below",
+   "twist-stranding",
+   "twist-order"
+  ],
+  "order": 245,
+  "line": "a runaway boulder that only a body can stop, coming to rest in the cell *uphill* of whoever stands in its path — so a heavy plate hung in that cell, over a walkway, is a key nobody can forge: the person holding the stone there is too light to press it, and the person who pushed the stone can never be the one holding it, because you push from above and hold from below.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:plate",
+   "opt:button:hold",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:3",
+   "opt:rolling-boulder",
+   "tile:slope"
+  ]
+ },
+ {
   "id": "chute_council",
   "name": "Chute Council",
   "source": "mine",

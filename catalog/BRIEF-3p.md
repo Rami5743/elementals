@@ -5,13 +5,13 @@ designing a 3-player level**, in place of the whole of `catalog/LEVELS.md`. It c
 novelty bar for this player count and nothing from the other counts, which you may reuse freely.
 
 - Next free `order`: **251**
-- Levels at this count: 51 here, 30 in the campaign
+- Levels at this count: 52 here, 30 in the campaign
 - Physics you do not need to measure: `catalog/PHYSICS.md`
 
 ## Ideas already used at 3 players
 
 Your level needs an idea nobody here has used, or a pairing of these that no level here has
-together. `twist-undo`×29, `quorum`×25, `twist-order`×8, `timed-window`×7, `invert-door`×5, `machine-strands-operator`×3, `twist-stranding`×3, `object-as-permanent-switch`×3, `fan-passenger`×3, `head-stack`×3, `belt-reverse`×3, `twist-self-block`×2, `twist-two-clocks`×2, `freeze-bridge`×2, `lift-as-floor`×2, `one-way-press`×2, `twist-backwards`×2, `hoist-one-way-for-cargo`×2, `hold-switch`×2, `shared-switch-two-gates`×2, `lift-loop`×2, `wind-off-enables-descent`×2, `switch-in-mid-flight`×2, `lift-corner-path`×1, `counterweight-you-must-remove`×1, `torch-bridge`×1, `reversible-switch-maze`×1, `lift-press`×1, `climb-then-steer`×1, `glide-dismount`×1, `one-way-drop`×1, `two-stops-no-middle`×1, `no-hands-for-cargo`×1, `dive-ahead-of-the-runaway`×1, `twist-setup`×1, `threshold-is-a-switch`×1, `cargo-as-clock-contact`×1, `belt-cargo`×1, `position-as-volatile-key`×1, `balanced-rope-memory`×1, `expiry-order-is-key`×1, `grating-memory-with-erase`×1, `two-stage-piston-handoff`×1, `transport-power-excludes-workshop`×1, `shutter-floor-wall-duality`×1, `shuttle-strips-cargo-to-belt`×1, `cargo-power-cascade`×1, `obstruction-as-third-state`×1, `brake-makes-transit-contact-stable`×1, `convergent-belt-seam`×1, `belt-filter`×1, `trip-plate-in-the-shaft`×1, `ratio-reverses-paired-cargo`×1, `stock-before-it-seals`×1, `hoist-unloads-comparator`×1, `seesaw-balance`×1, `freeze-invert`×1, `two-in-the-air-at-once`×1, `lift-sheds-its-load`×1, `no-overtaking`×1, `send-one-through`×1, `sink-as-a-timer`×1, `crate-step`×1, `fan-band`×1, `turbine-out-of-reach`×1, `pound-chain`×1, `twist-sacrifice`×1, `two-is-not-heavy`×1, `direction-qualified-transit-contact`×1, `boulder-float`×1, `causeway-as-veto`×1, `pound-to-move`×1, `drop-reconfigures-circuit`×1, `moving-veto-silence`×1, `spatial-clock-phase-rendezvous`×1, `tower-presses-a-column`×1
+together. `twist-undo`×29, `quorum`×25, `twist-order`×9, `timed-window`×7, `invert-door`×5, `twist-stranding`×4, `machine-strands-operator`×3, `object-as-permanent-switch`×3, `fan-passenger`×3, `head-stack`×3, `belt-reverse`×3, `twist-self-block`×2, `twist-two-clocks`×2, `freeze-bridge`×2, `lift-as-floor`×2, `one-way-press`×2, `twist-backwards`×2, `hoist-one-way-for-cargo`×2, `hold-switch`×2, `shared-switch-two-gates`×2, `lift-loop`×2, `wind-off-enables-descent`×2, `switch-in-mid-flight`×2, `lift-corner-path`×1, `counterweight-you-must-remove`×1, `torch-bridge`×1, `reversible-switch-maze`×1, `lift-press`×1, `climb-then-steer`×1, `glide-dismount`×1, `one-way-drop`×1, `two-stops-no-middle`×1, `no-hands-for-cargo`×1, `dive-ahead-of-the-runaway`×1, `twist-setup`×1, `threshold-is-a-switch`×1, `cargo-as-clock-contact`×1, `belt-cargo`×1, `position-as-volatile-key`×1, `balanced-rope-memory`×1, `expiry-order-is-key`×1, `grating-memory-with-erase`×1, `two-stage-piston-handoff`×1, `transport-power-excludes-workshop`×1, `shutter-floor-wall-duality`×1, `shuttle-strips-cargo-to-belt`×1, `cargo-power-cascade`×1, `obstruction-as-third-state`×1, `brake-makes-transit-contact-stable`×1, `convergent-belt-seam`×1, `belt-filter`×1, `trip-plate-in-the-shaft`×1, `ratio-reverses-paired-cargo`×1, `stock-before-it-seals`×1, `hoist-unloads-comparator`×1, `seesaw-balance`×1, `freeze-invert`×1, `two-in-the-air-at-once`×1, `lift-sheds-its-load`×1, `no-overtaking`×1, `send-one-through`×1, `sink-as-a-timer`×1, `crate-step`×1, `fan-band`×1, `turbine-out-of-reach`×1, `stone-held-from-below`×1, `pound-chain`×1, `twist-sacrifice`×1, `two-is-not-heavy`×1, `direction-qualified-transit-contact`×1, `boulder-float`×1, `causeway-as-veto`×1, `pound-to-move`×1, `drop-reconfigures-circuit`×1, `moving-veto-silence`×1, `spatial-clock-phase-rendezvous`×1, `tower-presses-a-column`×1
 
 ## Idea keys no 3-player level has touched
 
@@ -42,18 +42,18 @@ together. `twist-undo`×29, `quorum`×25, `twist-order`×8, `timed-window`×7, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- feed-the-engine-mid-ride + twist-two-clocks
-- hop-beats-belt + twist-order
-- single-file-stone + timed-window
-- boulder-carry + invert-door
-- feed-the-engine-mid-ride + twist-order
-- object-as-permanent-switch + unload-the-pan-you-ride
-- lift-corner-path + lock-per-element
-- door-pushes-you-through + object-as-permanent-switch
-- counterweight-you-must-remove + single-file-stone
-- low-roof-no-jump + object-as-permanent-switch
-- lift-sorts-by-weight + object-as-permanent-switch
-- counterweight-you-must-remove + trigger-from-above
+- hop-beats-belt + moving-veto-silence
+- hop-beats-belt + seesaw-balance
+- hop-beats-belt + transport-power-excludes-workshop
+- liquid-lane + quorum
+- drop-reconfigures-circuit + hop-beats-belt
+- fractional-rider-keeper + twist-undo
+- mass-adds-on-the-beam + quorum
+- lift-as-floor + plank-sums-plate-maxes
+- lift-sorts-by-weight + quorum
+- belt-cargo + hop-beats-belt
+- hop-beats-belt + pound-chain
+- lift-as-floor + lock-per-element
 
 ## This repo's 3-player levels
 
@@ -102,6 +102,7 @@ target.
 - **Opposite Steps** `opposite_steps` core=`linked-mobile-staircases` mind — crate-step, belt-reverse, quorum, twist-undo
 - **Draught Dispatcher** `draught_dispatcher` core=`three-level-lift-strength-dispatch` mind — fan-band, wind-off-enables-descent, twist-undo, quorum
 - **Shoulder Signalman** `shoulder_signalman` core=`high-turbine-withdrawn-station-permission` motor — turbine-out-of-reach, head-stack, timed-window, twist-undo, invert-door
+- **Chockstone** `chockstone` core=`stone-parked-by-a-body-is-an-unforgeable-key` mind — stone-held-from-below, twist-stranding, twist-order
 - **Sealed Descent** `sealed_descent` core=`exclusive-inspector-seal-for-cracked-descents` mind — pound-chain, twist-sacrifice, quorum, twist-undo
 - **Weight of Two** `weight_of_two` core=`rope-sum-versus-heavy-maximum-and-quorum` mind — two-is-not-heavy, quorum
 - **Stroke Inspector** `stroke_inspector` core=`independent-dispatcher-two-qualified-stroke-inspections` motor — direction-qualified-transit-contact, timed-window, quorum

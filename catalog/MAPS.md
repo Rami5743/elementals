@@ -5583,6 +5583,55 @@ Entities:
   X  exit_25      exit       at (38,18)  water
 ```
 
+## Chockstone (`chockstone`) — 3p, core `stone-parked-by-a-body-is-an-unforgeable-key`
+
+```
+Chockstone (chockstone) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  #....D.........#########################
+ 4  #..X.D..........########################
+ 5  #*.X.D.*@@@......#######################
+ 6  ##############\...######################
+ 7  ###############\pp.#####################
+ 8  ################\*..####################
+ 9  #################\...###################
+10  ##################\...##################
+11  ###################\...#################
+12  ####################\...################
+13  #####################\pp.###############
+14  ######################\...##############
+15  #######################\.........D.....#
+16  ########################\........D.X.X.#
+17  #########################\..O....D.X.X.#
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (8,5)  water (10,5)  earth (9,5)
+Entities:
+  O  stone        boulder    at (28,17)
+  p  berthHigh    plate      at (16,7)  2x1  -> hatch  weight heavy
+  D  hatch        door       at (5,3)  1x3  <- berthHigh
+  p  berthLow     plate      at (22,13)  2x1  -> wicket  weight heavy
+  p  anvil        plate      at (1,5)  -> wicket  weight heavy
+  b  grip         button     at (7,5)  -> wicket  mode hold
+  D  wicket       door       at (33,15)  1x3  <- berthLow, anvil, grip (needs 3)  latch
+  *  gem_7        gem        at (1,5)  earth
+  *  gem_8        gem        at (7,5)  fire
+  *  gem_9        gem        at (17,8)  water
+  X  exit_10      exit       at (3,4)  earth
+  X  exit_11      exit       at (35,16)  fire
+  X  exit_12      exit       at (37,16)  water
+  "  sign1        sign       at (1,3)  "Anvil"
+  "  sign2        sign       at (26,15)  "Spoil run"
+```
+
 ## Sealed Descent (`sealed_descent`) — 3p, core `exclusive-inspector-seal-for-cracked-descents`
 
 ```
