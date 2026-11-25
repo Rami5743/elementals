@@ -3784,6 +3784,43 @@
   ]
  },
  {
+  "id": "loading_inspector",
+  "name": "Loading Inspector",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 17400,
+  "dark": false,
+  "challenge": "mind",
+  "core": "independent-loading-stop-inspection",
+  "ideas": [
+   "shuttle-strips-cargo-to-belt",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 324,
+  "line": "the loading stop has its own operator, trapped in the enabling booth while the stop is engaged.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "lofts",
   "name": "Lofts",
   "source": "mine",

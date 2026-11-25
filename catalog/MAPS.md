@@ -4283,3 +4283,80 @@ Entities:
   X  exit_38      exit       at (37,14)  air
   *  gem_39       gem        at (24,15)  air
 ```
+
+## Loading Inspector (`loading_inspector`) — 4p, core `independent-loading-stop-inspection`
+
+```
+Loading Inspector (loading_inspector) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #..................D............p......#
+ 2  #......................................#
+ 3  #p...D................................p#
+ 4  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<#
+ 5  ########################################
+ 6  #........D.........D.........D.........#
+ 7  #........D.........D.........D.......X.#
+ 8  #..@.....D....l....D...l.....D....*..X.#
+ 9  ########################################
+10  #........D.........D.........D.........#
+11  #........D.........D.........D.......X.#
+12  #..@.....D....l....D...l.....D......*X.#
+13  ########################################
+14  #......D..D........D.........D.........#
+15  #......D..D........D.........D.......X.#
+16  #..@...D..D...l....D...l.....D....*..X.#
+17  ########################################
+18  #.........D.........D.........D........#
+19  #.X.......D.........D.........D........#
+20  #.X*.l....D.....l...D....l....D.....@..#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,12)  water (36,20)  earth (3,8)  air (3,16)
+Entities:
+  E  lift         elevator   at (2,4)  3x1  <- motor  speed 1.5  path (2,4)-(2,2)-(30,2)
+  O  stone        boulder    at (1,3)
+  D  strip        door       at (19,1)  <- e_strip
+  >  belt         belt       at (1,4)  38x1  <- load  mode reverse  speed -2
+  D  stop         door       at (5,3)  <- a_stop  invert
+  p  left         plate      at (1,3)  -> w2, e2, a2  weight heavy
+  p  lower_right  plate      at (38,3)  -> w0, f1, e0, a0  weight heavy
+  p  upper_right  plate      at (32,1)  -> f0, w1, f2, e1, a1  weight heavy
+  X  exit_8       exit       at (37,11)  fire
+  *  gem_9        gem        at (36,12)  fire
+  X  exit_10      exit       at (2,19)  water
+  *  gem_11       gem        at (3,20)  water
+  l  motor        lever      at (3,12)  -> lift
+  l  load         lever      at (36,20)  -> belt
+  D  w0           door       at (30,18)  1x3  <- lower_right  latch
+  l  wa           lever      at (25,20)  -> f0
+  D  f0           door       at (9,10)  1x3  <- upper_right, wa, e_strip, a_cert1 (needs 4)  latch
+  l  fa           lever      at (14,12)  -> w1, e1, a1
+  D  w1           door       at (20,18)  1x3  <- upper_right, fa (needs 2)  latch
+  l  wb           lever      at (16,20)  -> f1
+  D  f1           door       at (19,10)  1x3  <- lower_right, wb, e_b, a_cert2 (needs 4)  latch
+  l  fb           lever      at (23,12)  -> w2, e2, a2
+  D  w2           door       at (10,18)  1x3  <- left, fb, e_c, a_cert3 (needs 4)  latch
+  l  wc           lever      at (5,20)  -> f2
+  D  f2           door       at (29,10)  1x3  <- upper_right, wc (needs 2)  latch
+  D  e0           door       at (9,6)  1x3  <- lower_right  latch
+  l  e_strip      lever      at (14,8)  -> strip, f0
+  D  e1           door       at (19,6)  1x3  <- upper_right, fa (needs 2)  latch
+  l  e_b          lever      at (23,8)  -> f1
+  D  e2           door       at (29,6)  1x3  <- left, fb (needs 2)  latch
+  l  e_c          lever      at (34,8)  -> w2
+  X  exit_31      exit       at (37,7)  earth
+  *  gem_32       gem        at (34,8)  earth
+  l  a_stop       lever      at (3,16)  -> stop, a_inv
+  D  a_inv        door       at (7,14)  1x3  <- a_stop  invert
+  D  a0           door       at (10,14)  1x3  <- lower_right  latch
+  l  a_cert1      lever      at (14,16)  -> f0
+  D  a1           door       at (19,14)  1x3  <- upper_right, fa (needs 2)  latch
+  l  a_cert2      lever      at (23,16)  -> f1
+  D  a2           door       at (29,14)  1x3  <- left, fb (needs 2)  latch
+  l  a_cert3      lever      at (34,16)  -> w2
+  X  exit_41      exit       at (37,15)  air
+  *  gem_42       gem        at (34,16)  air
+```

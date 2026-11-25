@@ -1,0 +1,448 @@
+{
+  "id": "loading_inspector",
+  "name": "Loading Inspector",
+  "order": 324,
+  "description": "Separate the belt, shuttle, stripper and loading stop. The inspector must release the loading stop to leave the booth and certify the circuit.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 17400,
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      12
+    ],
+    "water": [
+      36,
+      20
+    ],
+    "earth": [
+      3,
+      8
+    ],
+    "air": [
+      3,
+      16
+    ]
+  },
+  "entities": [
+    {
+      "id": "lift",
+      "type": "elevator",
+      "x": 2,
+      "y": 4,
+      "w": 3,
+      "path": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          30,
+          2
+        ]
+      ],
+      "speed": 1.5
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "id": "strip",
+      "type": "door",
+      "x": 19,
+      "y": 1,
+      "h": 1
+    },
+    {
+      "id": "belt",
+      "type": "belt",
+      "x": 1,
+      "y": 4,
+      "w": 38,
+      "speed": -2,
+      "mode": "reverse"
+    },
+    {
+      "id": "stop",
+      "type": "door",
+      "x": 5,
+      "y": 3,
+      "h": 1,
+      "invert": true
+    },
+    {
+      "id": "left",
+      "type": "plate",
+      "x": 1,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "w2",
+        "e2",
+        "a2"
+      ]
+    },
+    {
+      "id": "lower_right",
+      "type": "plate",
+      "x": 38,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "w0",
+        "f1",
+        "e0",
+        "a0"
+      ]
+    },
+    {
+      "id": "upper_right",
+      "type": "plate",
+      "x": 32,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f0",
+        "w1",
+        "f2",
+        "e1",
+        "a1"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 19
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 20
+    },
+    {
+      "id": "motor",
+      "type": "lever",
+      "x": 3,
+      "y": 12,
+      "targets": [
+        "lift"
+      ]
+    },
+    {
+      "id": "load",
+      "type": "lever",
+      "x": 36,
+      "y": 20,
+      "targets": [
+        "belt"
+      ]
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "wa",
+      "type": "lever",
+      "x": 25,
+      "y": 20,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "f0",
+      "type": "door",
+      "x": 9,
+      "y": 10,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "fa",
+      "type": "lever",
+      "x": 14,
+      "y": 12,
+      "targets": [
+        "w1",
+        "e1",
+        "a1"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 18,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "wb",
+      "type": "lever",
+      "x": 16,
+      "y": 20,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 19,
+      "y": 10,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "fb",
+      "type": "lever",
+      "x": 23,
+      "y": 12,
+      "targets": [
+        "w2",
+        "e2",
+        "a2"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 10,
+      "y": 18,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "wc",
+      "type": "lever",
+      "x": 5,
+      "y": 20,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 29,
+      "y": 10,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e0",
+      "type": "door",
+      "x": 9,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_strip",
+      "type": "lever",
+      "x": 14,
+      "y": 8,
+      "targets": [
+        "strip",
+        "f0"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 19,
+      "y": 6,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e_b",
+      "type": "lever",
+      "x": 23,
+      "y": 8,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 29,
+      "y": 6,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e_c",
+      "type": "lever",
+      "x": 34,
+      "y": 8,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 7
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 34,
+      "y": 8
+    },
+    {
+      "id": "a_stop",
+      "type": "lever",
+      "x": 3,
+      "y": 16,
+      "targets": [
+        "stop",
+        "a_inv"
+      ]
+    },
+    {
+      "id": "a_inv",
+      "type": "door",
+      "x": 7,
+      "y": 14,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "a0",
+      "type": "door",
+      "x": 10,
+      "y": 14,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "a_cert1",
+      "type": "lever",
+      "x": 14,
+      "y": 16,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "a1",
+      "type": "door",
+      "x": 19,
+      "y": 14,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a_cert2",
+      "type": "lever",
+      "x": 23,
+      "y": 16,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "a2",
+      "type": "door",
+      "x": 29,
+      "y": 14,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a_cert3",
+      "type": "lever",
+      "x": 34,
+      "y": 16,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 37,
+      "y": 15
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 34,
+      "y": 16
+    }
+  ],
+  "hints": [
+    "Air closes the loading stop, Water runs the belt and Fire moves the shuttle. Earth operates the stripper.",
+    "Release the loading stop after the cargo has left the berth; the inspector cannot certify with the stop engaged.",
+    "After the cargo returns left, the inspector returns to the booth for the next load."
+  ]
+}
