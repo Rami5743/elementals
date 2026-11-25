@@ -44,18 +44,18 @@ together. `twist-undo`×16, `invert-door`×5, `hold-switch`×5, `quorum`×5, `ob
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- torch-bridge + twist-undo
-- hop-beats-belt + tower-presses-a-column
-- seesaw-balance + twist-undo
-- crate-step + hold-switch
-- hop-beats-belt + lift-as-floor
-- fan-band + twist-undo
-- fan-band + hop-beats-belt
-- hoist-one-way-for-cargo + shared-switch-two-gates
-- glide-dismount + two-stops-no-middle
-- liquid-lane + one-way-drop
-- boulder-float + twist-undo
-- hop-beats-belt + send-one-through
+- head-stack + lift-as-floor
+- hop-beats-belt + lift-sheds-its-load
+- door-pushes-you-through + low-roof-no-jump
+- shared-switch-two-gates + two-in-the-air-at-once
+- boulder-carry + twist-undo
+- low-roof-no-jump + torch-bridge
+- liquid-lane + pound-chain
+- crate-step + twist-undo
+- object-as-permanent-switch + plank-sums-plate-maxes
+- crate-step + head-stack
+- boulder-float + shared-switch-two-gates
+- lift-sorts-by-weight + liquid-lane
 
 ## This repo's 2-player levels
 

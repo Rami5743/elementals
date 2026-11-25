@@ -1,0 +1,10 @@
+{
+  "order": 231,
+  "challenge": "mind",
+  "core": "quorum-counterflow-directional-filter",
+  "ideas": [
+    "belt-filter",
+    "belt-reverse",
+    "quorum"
+  ]
+}

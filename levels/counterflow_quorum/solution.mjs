@@ -1,0 +1,10 @@
+import {go,interact,until,waitFlag,IN_RIGHT} from "../../kit.mjs";
+function* gate(c,id){yield* until(c,()=>c.ent(id).s.open>=96,0,6000,id);}
+function* state(c,id){yield* until(c,()=>c.ent(id).s.on===1,0,6000,id);}
+function* upstream(c){yield* until(c,()=>c.tx>=13.8,IN_RIGHT,2400,"counterflow belt");yield* go(c,14);yield* interact(c);}
+const fire=function*(c){yield* upstream(c);c.flag("Fready");yield* gate(c,"f1");yield* go(c,24);yield* interact(c);yield* gate(c,"f2");yield* go(c,32);yield* interact(c);yield* gate(c,"f3");yield* go(c,38);};
+const water=function*(c){yield* upstream(c);c.flag("Wready");yield* gate(c,"w1");yield* go(c,24);yield* interact(c);yield* waitFlag(c,"Eisland");yield* go(c,14);yield* interact(c);yield* gate(c,"w2");yield* go(c,32);yield* interact(c);yield* waitFlag(c,"Efinal");yield* go(c,14);yield* interact(c);yield* gate(c,"w3");yield* go(c,38);};
+const earth=function*(c){yield* waitFlag(c,"Fready");yield* waitFlag(c,"Wready");yield* go(c,24);yield* interact(c);yield* gate(c,"e_mid");yield* go(c,18);c.flag("Eisland");yield* until(c,()=>c.ent("water_reverse").s.on===0,0,6000,"second reversal");yield* go(c,8);yield* interact(c);yield* gate(c,"e_final");yield* go(c,2);c.flag("Efinal");};
+const direct={fire:function*(c){yield* until(c,()=>false,0,10000,"wait");},water:function*(c){yield* until(c,()=>false,0,10000,"wait");},earth:function*(c){yield* go(c,2);}};
+const noUndo={fire,water:function*(c){yield* upstream(c);c.flag("Wready");yield* gate(c,"w1");yield* go(c,24);yield* interact(c);yield* until(c,()=>false,0,10000,"keep current");},earth:function*(c){yield* waitFlag(c,"Fready");yield* waitFlag(c,"Wready");yield* go(c,24);yield* interact(c);yield* gate(c,"e_mid");yield* go(c,8);yield* interact(c);yield* go(c,2);}};
+export const solutions={sets:[{elements:["fire","water","earth"],scripts:{fire,water,earth},shortcuts:[{name:"Earth tries to cross against the initial current",scripts:direct,maxTicks:8000},{name:"keep the first current and walk against the second",scripts:noUndo,maxTicks:12000}]}]};

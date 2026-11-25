@@ -3242,6 +3242,42 @@
   ]
  },
  {
+  "id": "counterflow_quorum",
+  "name": "Counterflow Quorum",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8280,
+  "dark": false,
+  "challenge": "mind",
+  "core": "quorum-counterflow-directional-filter",
+  "ideas": [
+   "belt-filter",
+   "belt-reverse",
+   "quorum"
+  ],
+  "order": 231,
+  "line": "Two upstream couriers jointly control directional filters that Earth cannot oppose. One withdraws its permission to exchange which of Earth's two passages is traversable.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:blocks-earth",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "counterweight",
   "name": "Counterweight",
   "source": "mine",
