@@ -1,0 +1,11 @@
+{
+  "order": 256,
+  "challenge": "motor",
+  "core": "airborne-load-revocable-permit",
+  "ideas": [
+    "rope-keeps-the-jumper",
+    "twist-undo",
+    "quorum",
+    "switch-in-mid-flight"
+  ]
+}

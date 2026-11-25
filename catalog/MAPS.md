@@ -6511,6 +6511,66 @@ Entities:
   l  lower_cert   lever      at (2,20)  -> gate_e
 ```
 
+## Airborne Escrow (`airborne_escrow`) — 3p, core `airborne-load-revocable-permit`
+
+```
+Airborne Escrow (airborne_escrow) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #lDD@..............................*lDX#
+ 2  ######################################X#
+ 3  ###....^^D....D.................D......#
+ 4  ###....^^D....D.................D......#
+ 5  ###O...^^D..!.D.X...............D......#
+ 6  #.#uu##^^D..!.D.Xl..............D...l..#
+ 7  #.#..##^^############################..#
+ 8  #.#..##^^############################..#
+ 9  #.#..##^^############################..#
+10  #.#....^^############################..#
+11  #.#....^^############################..#
+12  #.#....^^############################..#
+13  #.#....^^############################..#
+14  #.#p*..^^############################..#
+15  #u#....^^############################..#
+16  #####..^^...................D...D......#
+17  #####..^^...................D...DX.....#
+18  #####.@^^.@.........pp..*...D.ppDp.....#
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (6,18)  earth (10,18)  fire (4,1)
+Entities:
+  u  rope         pulley     at (3,6)  2x1  speed 0.6  range 9  second platform at (1,15)  platforms weigh 0 and 3.5
+  O  stone        boulder    at (3,5)
+  p  pad          plate      at (3,14)  -> gate, hatch, inner  weight heavy
+  p  bellows      plate      at (20,18)  2x1  -> draught  weight heavy
+  p  bellows2     plate      at (30,18)  2x1  -> draught  weight heavy
+  ^  draught      fan        at (7,3)  2x16  <- bellows, bellows2, fan_permit (needs 2)  strength 2
+  D  gate         door       at (9,3)  1x4  <- pad
+  D  inner        door       at (14,3)  1x4  <- pad  invert
+  D  hatch        door       at (28,16)  1x3  <- pad
+  *  gem_9        gem        at (4,14)  water
+  *  gem_10       gem        at (24,18)  earth
+  X  exit_11      exit       at (16,5)  water
+  X  exit_12      exit       at (33,17)  earth
+  !  checkpoint_13 checkpoint at (12,5)
+  l  fan_permit   lever      at (36,1)  -> draught, fire_revoke
+  D  fire_revoke  door       at (3,1)  <- fan_permit  invert
+  D  receipt_gate door       at (2,1)  <- Wreceipt  latch
+  l  Wreceipt     lever      at (17,6)  -> receipt_gate
+  l  final_cert   lever      at (1,1)  -> earth_final, water_final
+  D  earth_final  door       at (32,16)  1x3  <- final_cert  latch
+  D  water_final  door       at (32,3)  1x4  <- final_cert  latch
+  p  earth_receipt plate      at (33,18)  -> fire_final
+  D  fire_final   door       at (37,1)  <- earth_receipt, Wfinal_receipt (needs 2)  latch
+  *  gem_23       gem        at (35,1)  fire
+  X  exit_24      exit       at (38,1)  fire
+  l  Wfinal_receipt lever      at (36,6)  -> fire_final
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

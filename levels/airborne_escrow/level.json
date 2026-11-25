@@ -1,0 +1,279 @@
+{
+  "id": "airborne_escrow",
+  "name": "Airborne Escrow",
+  "order": 256,
+  "description": "The rope keeps the airborne rider's weight until landing; an independent operator authorizes the draught, then must revoke that authorization after the landing receipt.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 6120,
+  "hints": [
+    "Fire authorizes the fan, but Earth must hold one of the heavy bellows to make it blow.",
+    "Water lowers the pan, then jumps directly into the draught without touching the floor. Land beyond the upper gate.",
+    "The upper receipt permits Fire to return west, revoke the fan, and issue the release. Earth reaches the final contact to free Fire."
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "########################################",
+    "###....................................#",
+    "###....................................#",
+    "###....................................#",
+    "#.#..##................................#",
+    "#.#..##..############################..#",
+    "#.#..##..############################..#",
+    "#.#..##..############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#####..................................#",
+    "#####..................................#",
+    "#####..................................#",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "water": [
+      6,
+      18
+    ],
+    "earth": [
+      10,
+      18
+    ],
+    "fire": [
+      4,
+      1
+    ]
+  },
+  "entities": [
+    {
+      "id": "rope",
+      "type": "pulley",
+      "x": 3,
+      "y": 6,
+      "w": 2,
+      "to": [
+        1,
+        15,
+        1
+      ],
+      "range": 9,
+      "weights": [
+        0,
+        3.5
+      ],
+      "speed": 0.6
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "id": "pad",
+      "type": "plate",
+      "x": 3,
+      "y": 14,
+      "weight": "heavy",
+      "targets": [
+        "gate",
+        "hatch",
+        "inner"
+      ]
+    },
+    {
+      "id": "bellows",
+      "type": "plate",
+      "x": 20,
+      "y": 18,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "draught"
+      ]
+    },
+    {
+      "id": "bellows2",
+      "type": "plate",
+      "x": 30,
+      "y": 18,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "draught"
+      ]
+    },
+    {
+      "id": "draught",
+      "type": "fan",
+      "x": 7,
+      "y": 3,
+      "w": 2,
+      "h": 16,
+      "strength": 2,
+      "required": 2
+    },
+    {
+      "id": "gate",
+      "type": "door",
+      "x": 9,
+      "y": 3,
+      "h": 4
+    },
+    {
+      "id": "inner",
+      "type": "door",
+      "x": 14,
+      "y": 3,
+      "h": 4,
+      "invert": true
+    },
+    {
+      "id": "hatch",
+      "type": "door",
+      "x": 28,
+      "y": 16,
+      "h": 3
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 4,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 24,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 16,
+      "y": 5
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 33,
+      "y": 17
+    },
+    {
+      "type": "checkpoint",
+      "x": 12,
+      "y": 5
+    },
+    {
+      "id": "fan_permit",
+      "type": "lever",
+      "x": 36,
+      "y": 1,
+      "targets": [
+        "draught",
+        "fire_revoke"
+      ]
+    },
+    {
+      "id": "fire_revoke",
+      "type": "door",
+      "x": 3,
+      "y": 1,
+      "h": 1,
+      "invert": true
+    },
+    {
+      "id": "receipt_gate",
+      "type": "door",
+      "x": 2,
+      "y": 1,
+      "h": 1,
+      "latch": true
+    },
+    {
+      "id": "Wreceipt",
+      "type": "lever",
+      "x": 17,
+      "y": 6,
+      "targets": [
+        "receipt_gate"
+      ]
+    },
+    {
+      "id": "final_cert",
+      "type": "lever",
+      "x": 1,
+      "y": 1,
+      "targets": [
+        "earth_final",
+        "water_final"
+      ]
+    },
+    {
+      "id": "earth_final",
+      "type": "door",
+      "x": 32,
+      "y": 16,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "water_final",
+      "type": "door",
+      "x": 32,
+      "y": 3,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "id": "earth_receipt",
+      "type": "plate",
+      "x": 33,
+      "y": 18,
+      "w": 1,
+      "targets": [
+        "fire_final"
+      ]
+    },
+    {
+      "id": "fire_final",
+      "type": "door",
+      "x": 37,
+      "y": 1,
+      "h": 1,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 35,
+      "y": 1
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 1
+    },
+    {
+      "id": "Wfinal_receipt",
+      "type": "lever",
+      "x": 36,
+      "y": 6,
+      "targets": [
+        "fire_final"
+      ]
+    }
+  ]
+}

@@ -27,18 +27,18 @@ together. `twist-undo`×35, `invert-door`×8, `timed-window`×8, `quorum`×8, `t
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hoist-unloads-comparator + lock-per-element
-- head-stack + lock-per-element
-- belt-cargo + door-pushes-you-through
-- door-pushes-you-through + timed-window
-- no-hands-for-cargo + plank-sums-plate-maxes
-- door-pushes-you-through + low-roof-no-jump
-- door-pushes-you-through + partner-builds-your-landing
-- plank-sums-plate-maxes + trigger-from-above
-- glide-passenger + plank-sums-plate-maxes
-- glide-dismount + lift-sorts-by-weight
-- freeze-bridge + lift-sorts-by-weight
-- liquid-lane + stone-held-from-below
+- plank-sums-plate-maxes + twist-order
+- fan-passenger + tower-presses-a-column
+- twist-sacrifice + two-is-not-heavy
+- brake-makes-transit-contact-stable + lift-sorts-by-weight
+- fractional-rider-keeper + lock-per-element
+- door-pushes-you-through + hold-switch
+- lift-sorts-by-weight + low-roof-no-jump
+- obstruction-as-third-state + stone-held-from-below
+- lift-as-floor + lock-per-element
+- fan-passenger + two-is-not-heavy
+- two-is-not-heavy + wide-door
+- shutter-floor-wall-duality + stone-held-from-below
 
 ## This repo's 2-player levels
 

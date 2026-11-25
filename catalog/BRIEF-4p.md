@@ -37,18 +37,18 @@ together. `twist-undo`×32, `quorum`×30, `twist-order`×8, `timed-window`×7, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-float + single-file-stone
-- cargo-as-clock-contact + stand-aside-is-the-switch
-- lift-corner-path + reversible-switch-maze
-- boulder-float + fan-passenger
-- glide-passenger + head-stack
-- boulder-float + mass-adds-on-the-beam
-- mass-adds-on-the-beam + turbine-out-of-reach
-- belt-filter + twist-stranding
-- fan-band + twist-self-block
-- belt-filter + fan-passenger
-- boulder-float + stand-aside-is-the-switch
-- boulder-float + door-pushes-you-through
+- counterweight-you-must-remove + lift-corner-path
+- door-pushes-you-through + quorum
+- glide-passenger + lift-sheds-its-load
+- pound-chain + tower-presses-a-column
+- quorum + wide-door
+- freeze-bridge + partner-builds-your-landing
+- boulder-carry + wide-door
+- lift-corner-path + machine-strands-operator
+- lift-corner-path + no-hands-for-cargo
+- boulder-carry + tower-presses-a-column
+- lift-loop + twist-stranding
+- low-roof-no-jump + unload-the-pan-you-ride
 
 ## This repo's 4-player levels
 

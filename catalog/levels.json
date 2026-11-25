@@ -2761,6 +2761,43 @@
   ]
  },
  {
+  "id": "airborne_escrow",
+  "name": "Airborne Escrow",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6120,
+  "dark": false,
+  "challenge": "motor",
+  "core": "airborne-load-revocable-permit",
+  "ideas": [
+   "rope-keeps-the-jumper",
+   "twist-undo",
+   "quorum",
+   "switch-in-mid-flight"
+  ],
+  "order": 256,
+  "line": "rope-keeps-the-jumper at three players, with independent revocable permission to energize the draught and a return receipt that requires the operator to revoke it.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:fan:lifts-fire-water",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "airborne_headway",
   "name": "Airborne Headway",
   "source": "mine",
