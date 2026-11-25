@@ -22,9 +22,17 @@ through the gate without ever touching down — the one thing that shuts the gat
 
 ## What fails
 
-- **Solve time 16.2 s is under the skill's 20-second floor**, so the level needs another phase (not
-  a longer walk). The phase being added: the hatch in the hall goes on the same wire as the gate,
-  and a second bellows plate sits beyond it, so Earth's one body is claimed by two jobs.
+- Nothing. Solve time is now **24.9 s** (par 70 s). Three things bought it, in order of effect:
+  the hatch joined the gate's wire with a second bellows beyond it (Earth's one body, two jobs);
+  the rope was slowed to `speed: 0.6`, so the pan grinds down over eight seconds; and a
+  complementary `inner` door (`invert` on the same `pad` wire) means the landing strip sits between
+  two doors that are never open together.
+
+## Still to do
+
+- Shortcut scripts in `solution.mjs` (the four listed at the bottom of this file).
+- NOTES.md in the house format; coin `rope-keeps-the-jumper` in `tools/ideas.mjs`; meta.json;
+  `tools/build.mjs` and `tools/catalog.mjs` in the same commit.
 
 ## Bugs fixed on the way
 

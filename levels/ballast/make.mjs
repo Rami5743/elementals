@@ -28,11 +28,11 @@ for (let y = 3; y <= 5; y++)                   // 3..5 left bay, draught shaft, 
 // 6  ledge at 5,6; the pan's berth at 3,4; shaft mouth at 7,8; gate column at 9; gallery air at 10+
 put([[1, 1, '.'], [3, 4, '.'], [7, 8, '.'], [9, 9, '.'], [10, 38, '.']]);
 // 7  the far gallery's floor, and the gate's sill at 9
-put([[1, 1, '.'], [3, 4, '.'], [7, 8, '.']]);
-for (let y = 8; y <= 9; y++)                   // 8,9 rock, bar the three shafts
-  put([[1, 1, '.'], [3, 4, '.'], [7, 8, '.']]);
-for (let y = 10; y <= 15; y++)                 // 10..15 pan shaft + the void + the draught
-  put([[1, 1, '.'], [3, 4, '.'], [5, 6, '.'], [7, 8, '.']]);
+put([[1, 1, '.'], [3, 4, '.'], [7, 8, '.'], [37, 38, '.']]);
+for (let y = 8; y <= 9; y++)                   // 8,9 rock, bar the shafts and the way back down
+  put([[1, 1, '.'], [3, 4, '.'], [7, 8, '.'], [37, 38, '.']]);
+for (let y = 10; y <= 15; y++)                 // 10..15 pan shaft + the void + draught + way back
+  put([[1, 1, '.'], [3, 4, '.'], [5, 6, '.'], [7, 8, '.'], [37, 38, '.']]);
 for (let y = 16; y <= 18; y++)                 // 16..18 the hall
   put([[5, 6, '.'], [7, 8, '.'], [9, 38, '.']]);
 put([]);                                       // 19 hall floor
@@ -56,23 +56,25 @@ const level = {
   spawns: { water: [6, 18], earth: [10, 18] },
   entities: [
     // --- the rope ---------------------------------------------------------------------------
-    { id: 'rope', type: 'pulley', x: 3, y: 6, w: 2, to: [1, 15, 1], range: 9, weights: [0, 3.5] },
+    { id: 'rope', type: 'pulley', x: 3, y: 6, w: 2, to: [1, 15, 1], range: 9, weights: [0, 3.5], speed: 0.6 },
     { id: 'stone', type: 'boulder', x: 3, y: 5 },
-    { id: 'pad', type: 'plate', x: 3, y: 14, weight: 'heavy', targets: ['gate'] },
+    { id: 'pad', type: 'plate', x: 3, y: 14, weight: 'heavy', targets: ['gate', 'hatch', 'inner'] },
     // --- the draught ------------------------------------------------------------------------
     { id: 'bellows', type: 'plate', x: 20, y: 18, w: 2, weight: 'heavy', targets: ['draught'] },
+    { id: 'bellows2', type: 'plate', x: 30, y: 18, w: 2, weight: 'heavy', targets: ['draught'] },
     { id: 'draught', type: 'fan', x: 7, y: 3, w: 2, h: 16, strength: 2 },
     // --- the gate and what lies beyond ------------------------------------------------------
     { id: 'gate', type: 'door', x: 9, y: 3, h: 4 },
-    { id: 'release', type: 'lever', x: 16, y: 6, targets: ['hatch'] },
+    { id: 'inner', type: 'door', x: 14, y: 3, h: 4, invert: true },
     { id: 'hatch', type: 'door', x: 28, y: 16, h: 3 },
     // --- gems, doors, furniture ---------------------------------------------------------------
     { type: 'gem', element: 'water', x: 4, y: 14 },
     { type: 'gem', element: 'earth', x: 24, y: 18 },
-    { type: 'exit', element: 'water', x: 19, y: 5 },
+    { type: 'exit', element: 'water', x: 34, y: 5 },
     { type: 'exit', element: 'earth', x: 33, y: 17 },
-    { type: 'checkpoint', x: 11, y: 5 },
-    { type: 'sign', x: 12, y: 4, text: 'The rope counts you till you land' },
+    { type: 'checkpoint', x: 12, y: 5 },
+    { type: 'sign', x: 17, y: 4, text: 'The rope counts you till you land' },
+    { type: 'sign', x: 22, y: 18, text: 'Two plates, one Earth' },
   ],
 };
 
