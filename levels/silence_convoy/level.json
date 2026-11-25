@@ -1,0 +1,397 @@
+{
+  "id": "silence_convoy",
+  "name": "Silence Convoy",
+  "order": 349,
+  "description": "Two cargo clocks must create a common silence for two travellers; the heavy traveller then releases the wind inspector.",
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      8,
+      11
+    ],
+    "water": [
+      8,
+      15
+    ],
+    "earth": [
+      15,
+      19
+    ],
+    "air": [
+      12,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "type": "elevator",
+      "id": "slow",
+      "x": 3,
+      "y": 3,
+      "w": 1,
+      "path": [
+        [
+          3,
+          3
+        ],
+        [
+          35,
+          3
+        ]
+      ],
+      "speed": 0.7
+    },
+    {
+      "type": "boulder",
+      "id": "slowcargo",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "type": "plate",
+      "id": "slow_home",
+      "x": 3,
+      "y": 2,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "F_exit",
+        "W_exit",
+        "E_exit"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "slow_far",
+      "x": 34,
+      "y": 2,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "F_work"
+      ]
+    },
+    {
+      "type": "elevator",
+      "id": "fast",
+      "x": 3,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          3,
+          7
+        ],
+        [
+          35,
+          7
+        ]
+      ],
+      "speed": 1.4
+    },
+    {
+      "type": "boulder",
+      "id": "fastcargo",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "type": "plate",
+      "id": "fast_home",
+      "x": 3,
+      "y": 6,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "F_exit",
+        "W_exit",
+        "E_exit"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "fast_far",
+      "x": 34,
+      "y": 6,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "W_work"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "slow_left",
+      "x": 1,
+      "y": 2,
+      "w": 18,
+      "weight": "heavy",
+      "targets": [
+        "E_silence"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "slow_right",
+      "x": 25,
+      "y": 2,
+      "w": 14,
+      "weight": "heavy",
+      "targets": [
+        "E_silence"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "fast_left",
+      "x": 1,
+      "y": 6,
+      "w": 9,
+      "weight": "heavy",
+      "targets": [
+        "E_silence"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "fast_right",
+      "x": 17,
+      "y": 6,
+      "w": 22,
+      "weight": "heavy",
+      "targets": [
+        "E_silence"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "cue",
+      "x": 17,
+      "y": 2,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "semaphore"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "semaphore",
+      "x": 38,
+      "y": 9,
+      "h": 3
+    },
+    {
+      "type": "button",
+      "id": "F_launch",
+      "x": 10,
+      "y": 11,
+      "mode": "timed",
+      "duration": 1550,
+      "targets": [
+        "slow"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "F_work",
+      "x": 24,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "F_cert",
+      "x": 34,
+      "y": 11,
+      "targets": [
+        "F_exit",
+        "W_exit",
+        "E_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "F_exit",
+      "x": 5,
+      "y": 9,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 35,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 10
+    },
+    {
+      "type": "button",
+      "id": "W_launch",
+      "x": 10,
+      "y": 15,
+      "mode": "timed",
+      "duration": 850,
+      "targets": [
+        "fast"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "W_work",
+      "x": 24,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "W_cert",
+      "x": 34,
+      "y": 15,
+      "targets": [
+        "F_exit",
+        "W_exit",
+        "E_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "W_exit",
+      "x": 5,
+      "y": 13,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 35,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 14
+    },
+    {
+      "type": "door",
+      "id": "E_silence",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "plate",
+      "id": "E_cert",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "A_gate"
+      ],
+      "w": 1,
+      "weight": "heavy"
+    },
+    {
+      "type": "door",
+      "id": "E_exit",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 34,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "door",
+      "id": "A_gate",
+      "x": 31,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "turbine",
+      "id": "A_cert",
+      "x": 33,
+      "y": 19,
+      "duration": 600,
+      "targets": [
+        "F_work",
+        "W_work"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 33,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 7680,
+  "hints": [
+    "Stagger the launches to make the four moving vetoes silent together.",
+    "Earth and Air both cross the silent gate. Earth releases the heavy gate.",
+    "Air powers the wind certificate until both workshops latch. Both cargo clocks must return home."
+  ]
+}

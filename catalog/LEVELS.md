@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 150 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 151 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (49)
@@ -693,7 +693,7 @@ Totals: 79 campaign levels, 150 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (50)
+## 4 players — this repo (51)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -888,6 +888,10 @@ Totals: 79 campaign levels, 150 in this repo, of which 11 now ship in the campai
   - idea: an irreversible transfer of a cargo key between two circuits, with an independent custodian who must approve the transfer and thereafter alone controls the new register.
   - ideas: drop-reconfigures-circuit, pound-to-move, twist-undo
   - features: ent:belt ent:boulder ent:cracked ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3 tile:one-way
+- **Silence Convoy** `silence_convoy` (4p: fire+water+earth+air) core=`two-travellers-through-intersecting-veto-gaps` challenge=motor par=7680
+  - idea: two independently moving cargo clocks create a shared absence of vetoes for a two-person convoy; the heavy traveller releases a wind-only inspector.
+  - ideas: moving-veto-silence, spatial-clock-phase-rendezvous, timed-window, quorum
+  - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate ent:turbine opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:4 opt:turbine-timed
 
 ## 4 players — campaign (23)
 

@@ -9094,3 +9094,72 @@ Entities:
   *  gem_34       gem        at (27,6)  air
   X  exit_35      exit       at (38,5)  air
 ```
+
+## Silence Convoy (`silence_convoy`) — 4p, core `two-travellers-through-intersecting-veto-gaps`
+
+```
+Silence Convoy (silence_convoy) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #......................................#
+ 2  #pppppppppppppppppp......pppppppppppppp#
+ 3  #..E...................................#
+ 4  ########################################
+ 5  #......................................#
+ 6  #ppppppppp.......pppppppppppppppppppppp#
+ 7  #..E...................................#
+ 8  ########################################
+ 9  #....D..................D.............D#
+10  #X...D..................D.............D#
+11  #X...D..@.b.............D.........l*..D#
+12  ########################################
+13  #....D..................D..............#
+14  #X...D..................D..............#
+15  #X...D..@.b.............D.........l*...#
+16  ########################################
+17  #...................D..........D....D..#
+18  #...................D..........D....DXX#
+19  #...........@..@....D...p......D.**.DXX#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (8,11)  water (8,15)  earth (15,19)  air (12,19)
+Entities:
+  E  slow         elevator   at (3,3)  <- F_launch  speed 0.7  path (3,3)-(35,3)
+  O  slowcargo    boulder    at (3,2)
+  p  slow_home    plate      at (3,2)  2x1  -> F_exit, W_exit, E_exit  weight heavy
+  p  slow_far     plate      at (34,2)  3x1  -> F_work  weight heavy
+  E  fast         elevator   at (3,7)  <- W_launch  speed 1.4  path (3,7)-(35,7)
+  O  fastcargo    boulder    at (3,6)
+  p  fast_home    plate      at (3,6)  2x1  -> F_exit, W_exit, E_exit  weight heavy
+  p  fast_far     plate      at (34,6)  3x1  -> W_work  weight heavy
+  p  slow_left    plate      at (1,2)  18x1  -> E_silence  weight heavy
+  p  slow_right   plate      at (25,2)  14x1  -> E_silence  weight heavy
+  p  fast_left    plate      at (1,6)  9x1  -> E_silence  weight heavy
+  p  fast_right   plate      at (17,6)  22x1  -> E_silence  weight heavy
+  p  cue          plate      at (17,2)  2x1  -> semaphore  weight heavy
+  D  semaphore    door       at (38,9)  1x3  <- cue
+  b  F_launch     button     at (10,11)  -> slow  mode timed  duration 1550
+  D  F_work       door       at (24,9)  1x3  <- slow_far, A_cert (needs 2)  latch
+  l  F_cert       lever      at (34,11)  -> F_exit, W_exit, E_exit
+  D  F_exit       door       at (5,9)  1x3  <- slow_home, fast_home, F_cert, W_cert (needs 4)  latch
+  *  gem_18       gem        at (35,11)  fire
+  X  exit_19      exit       at (1,10)  fire
+  b  W_launch     button     at (10,15)  -> fast  mode timed  duration 850
+  D  W_work       door       at (24,13)  1x3  <- fast_far, A_cert (needs 2)  latch
+  l  W_cert       lever      at (34,15)  -> F_exit, W_exit, E_exit
+  D  W_exit       door       at (5,13)  1x3  <- slow_home, fast_home, F_cert, W_cert (needs 4)  latch
+  *  gem_24       gem        at (35,15)  water
+  X  exit_25      exit       at (1,14)  water
+  D  E_silence    door       at (20,17)  1x3  <- slow_left, slow_right, fast_left, fast_right  invert
+  p  E_cert       plate      at (24,19)  -> A_gate  weight heavy
+  D  E_exit       door       at (36,17)  1x3  <- slow_home, fast_home, F_cert, W_cert (needs 4)  latch
+  *  gem_29       gem        at (34,19)  earth
+  X  exit_30      exit       at (37,18)  earth
+  D  A_gate       door       at (31,17)  1x3  <- E_cert  latch
+  T  A_cert       turbine    at (33,19)  -> F_work, W_work  duration 600
+  *  gem_33       gem        at (33,19)  air
+  X  exit_34      exit       at (38,18)  air
+```

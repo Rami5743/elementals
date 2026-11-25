@@ -6571,6 +6571,46 @@
   ]
  },
  {
+  "id": "silence_convoy",
+  "name": "Silence Convoy",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7680,
+  "dark": false,
+  "challenge": "motor",
+  "core": "two-travellers-through-intersecting-veto-gaps",
+  "ideas": [
+   "moving-veto-silence",
+   "spatial-clock-phase-rendezvous",
+   "timed-window",
+   "quorum"
+  ],
+  "order": 349,
+  "line": "two independently moving cargo clocks create a shared absence of vetoes for a two-person convoy; the heavy traveller releases a wind-only inspector.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:turbine",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4",
+   "opt:turbine-timed"
+  ]
+ },
+ {
   "id": "silent_interval",
   "name": "Silent Interval",
   "source": "mine",
