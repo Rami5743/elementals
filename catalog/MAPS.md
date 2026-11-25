@@ -8384,3 +8384,82 @@ Entities:
   *  gem_29       gem        at (37,20)  air
   X  exit_30      exit       at (38,19)  air
 ```
+
+## Double Veto (`double_veto`) — 4p, core `two-independent-vetoes-before-one-way-commitments`
+
+```
+Double Veto (double_veto) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.......D...............D..............#
+ 2  #.......D...............D..............#
+ 3  #.......D...@...........D...........l..#
+ 4  ###===##################################
+ 5  #.....................D......D.D.D.....#
+ 6  #.....................D......D.D.D.....#
+ 7  #......l..............D..l...D.D.D.....#
+ 8  ###################################===##
+ 9  #....................................D.#
+10  #....................................DX#
+11  #..*.................................DX#
+12  ########################################
+13  #.D.......D...D........D...D.D.......DX#
+14  #*D.@.....D...D...l....D...D.D....l..DX#
+15  ########################################
+16  #.D.....D............D..............D.X#
+17  #*D@....D.....l......D......l.......D.X#
+18  ########################################
+19  #.D.....D............D..............D.X#
+20  #*D@....D.....l......D......l.......D.X#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (12,3)  water (4,14)  fire (3,17)  air (3,20)
+Entities:
+  D  e_east1      door       at (24,1)  1x3  <- W1
+  l  E1           lever      at (36,3)  -> w2access, f_access, a_access
+  D  e_west1      door       at (8,1)  1x3  <- W2, seal, airseal (needs 3)
+  l  E2           lever      at (7,7)  -> w3access
+  D  e_east2      door       at (22,5)  1x3  <- W3
+  l  E3           lever      at (25,7)  -> hatch_access, f_west, a_west
+  D  hatch_access door       at (29,5)  1x3  <- E3  latch
+  D  e_hatch2     door       at (31,5)  1x3  <- seal  invert
+  l  E4           lever      at (3,11)  -> w_west
+  D  e_final      door       at (37,9)  1x3  <- W4  latch
+  l  E5           lever      at (38,11)  -> w_final, f_final, a_final
+  l  W1           lever      at (4,14)  -> e_east1, w_inv1
+  D  w_inv1       door       at (10,13)  1x2  <- W1  invert
+  D  w2access     door       at (14,13)  1x2  <- E1  latch
+  l  W2           lever      at (18,14)  -> e_west1, w_inv2
+  D  w_inv2       door       at (23,13)  1x2  <- W2  invert
+  D  w3access     door       at (27,13)  1x2  <- E2, F1, A1 (needs 3)  latch
+  l  W3           lever      at (34,14)  -> e_east2, w_inv3
+  D  w_inv3       door       at (29,13)  1x2  <- W3  invert
+  D  w_west       door       at (2,13)  1x2  <- E4, F2, A2 (needs 3)  latch
+  l  W4           lever      at (1,14)  -> e_final
+  D  w_final      door       at (37,13)  1x2  <- E5  latch
+  D  f_access     door       at (8,16)  1x2  <- E1  latch
+  l  seal         lever      at (14,17)  -> e_west1, e_hatch2, f_inverse
+  D  f_inverse    door       at (21,16)  1x2  <- seal  invert
+  l  F1           lever      at (28,17)  -> w3access
+  D  f_west       door       at (2,16)  1x2  <- E3  latch
+  l  F2           lever      at (1,17)  -> w_west
+  D  f_final      door       at (36,16)  1x2  <- E5  latch
+  *  gem_29       gem        at (3,11)  earth
+  X  exit_30      exit       at (38,10)  earth
+  *  gem_31       gem        at (1,14)  water
+  X  exit_32      exit       at (38,13)  water
+  *  gem_33       gem        at (1,17)  fire
+  X  exit_34      exit       at (38,16)  fire
+  D  e_air_veto   door       at (33,5)  1x3  <- airseal  invert
+  D  a_access     door       at (8,19)  1x2  <- E1  latch
+  l  airseal      lever      at (14,20)  -> e_west1, e_air_veto, a_inverse
+  D  a_inverse    door       at (21,19)  1x2  <- airseal  invert
+  l  A1           lever      at (28,20)  -> w3access
+  D  a_west       door       at (2,19)  1x2  <- E3  latch
+  l  A2           lever      at (1,20)  -> w_west
+  D  a_final      door       at (36,19)  1x2  <- E5  latch
+  *  agem         gem        at (1,20)  air
+  X  aexit        exit       at (38,19)  air
+```

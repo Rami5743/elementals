@@ -1,0 +1,438 @@
+{
+  "id": "double_veto",
+  "name": "Double Veto",
+  "order": 344,
+  "description": "The runner must commit to two one-way drops. Two inspectors must agree to the first, then independently withdraw their permissions before the second.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###===##################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###################################===##",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################"
+  ],
+  "spawns": {
+    "earth": [
+      12,
+      3
+    ],
+    "water": [
+      4,
+      14
+    ],
+    "fire": [
+      3,
+      17
+    ],
+    "air": [
+      3,
+      20
+    ]
+  },
+  "entities": [
+    {
+      "id": "e_east1",
+      "type": "door",
+      "x": 24,
+      "y": 1,
+      "h": 3
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 36,
+      "y": 3,
+      "targets": [
+        "w2access",
+        "f_access",
+        "a_access"
+      ]
+    },
+    {
+      "id": "e_west1",
+      "type": "door",
+      "x": 8,
+      "y": 1,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 7,
+      "y": 7,
+      "targets": [
+        "w3access"
+      ]
+    },
+    {
+      "id": "e_east2",
+      "type": "door",
+      "x": 22,
+      "y": 5,
+      "h": 3
+    },
+    {
+      "id": "E3",
+      "type": "lever",
+      "x": 25,
+      "y": 7,
+      "targets": [
+        "hatch_access",
+        "f_west",
+        "a_west"
+      ]
+    },
+    {
+      "id": "hatch_access",
+      "type": "door",
+      "x": 29,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_hatch2",
+      "type": "door",
+      "x": 31,
+      "y": 5,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "E4",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "e_final",
+      "type": "door",
+      "x": 37,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "E5",
+      "type": "lever",
+      "x": 38,
+      "y": 11,
+      "targets": [
+        "w_final",
+        "f_final",
+        "a_final"
+      ]
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 4,
+      "y": 14,
+      "targets": [
+        "e_east1",
+        "w_inv1"
+      ]
+    },
+    {
+      "id": "w_inv1",
+      "type": "door",
+      "x": 10,
+      "y": 13,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "w2access",
+      "type": "door",
+      "x": 14,
+      "y": 13,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 18,
+      "y": 14,
+      "targets": [
+        "e_west1",
+        "w_inv2"
+      ]
+    },
+    {
+      "id": "w_inv2",
+      "type": "door",
+      "x": 23,
+      "y": 13,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "w3access",
+      "type": "door",
+      "x": 27,
+      "y": 13,
+      "h": 2,
+      "latch": true,
+      "required": 3
+    },
+    {
+      "id": "W3",
+      "type": "lever",
+      "x": 34,
+      "y": 14,
+      "targets": [
+        "e_east2",
+        "w_inv3"
+      ]
+    },
+    {
+      "id": "w_inv3",
+      "type": "door",
+      "x": 29,
+      "y": 13,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "w_west",
+      "type": "door",
+      "x": 2,
+      "y": 13,
+      "h": 2,
+      "latch": true,
+      "required": 3
+    },
+    {
+      "id": "W4",
+      "type": "lever",
+      "x": 1,
+      "y": 14,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 37,
+      "y": 13,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "f_access",
+      "type": "door",
+      "x": 8,
+      "y": 16,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "seal",
+      "type": "lever",
+      "x": 14,
+      "y": 17,
+      "targets": [
+        "e_west1",
+        "e_hatch2",
+        "f_inverse"
+      ]
+    },
+    {
+      "id": "f_inverse",
+      "type": "door",
+      "x": 21,
+      "y": 16,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 28,
+      "y": 17,
+      "targets": [
+        "w3access"
+      ]
+    },
+    {
+      "id": "f_west",
+      "type": "door",
+      "x": 2,
+      "y": 16,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 1,
+      "y": 17,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "f_final",
+      "type": "door",
+      "x": 36,
+      "y": 16,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 1,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 1,
+      "y": 17
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 16
+    },
+    {
+      "id": "e_air_veto",
+      "type": "door",
+      "x": 33,
+      "y": 5,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "a_access",
+      "type": "door",
+      "x": 8,
+      "y": 19,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "airseal",
+      "type": "lever",
+      "x": 14,
+      "y": 20,
+      "targets": [
+        "e_west1",
+        "e_air_veto",
+        "a_inverse"
+      ]
+    },
+    {
+      "id": "a_inverse",
+      "type": "door",
+      "x": 21,
+      "y": 19,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "A1",
+      "type": "lever",
+      "x": 28,
+      "y": 20,
+      "targets": [
+        "w3access"
+      ]
+    },
+    {
+      "id": "a_west",
+      "type": "door",
+      "x": 2,
+      "y": 19,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "A2",
+      "type": "lever",
+      "x": 1,
+      "y": 20,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "a_final",
+      "type": "door",
+      "x": 36,
+      "y": 19,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "agem",
+      "type": "gem",
+      "x": 1,
+      "y": 20,
+      "element": "air"
+    },
+    {
+      "id": "aexit",
+      "type": "exit",
+      "x": 38,
+      "y": 19,
+      "element": "air"
+    }
+  ],
+  "parTicks": 8460,
+  "hints": [
+    "Record the upper certificate before leaving the floor; the one-way platforms cannot be jumped back up from four tiles below.",
+    "Both inspectors' seals and Water's route permission are needed for the first drop.",
+    "Withdraw both seals before the second drop. All three controllers must register their final permissions."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "order": 344,
+  "challenge": "mind",
+  "core": "two-independent-vetoes-before-one-way-commitments",
+  "ideas": [
+    "one-way-drop",
+    "twist-sacrifice",
+    "quorum",
+    "twist-undo"
+  ]
+}

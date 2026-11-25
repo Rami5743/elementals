@@ -40,18 +40,18 @@ together. `twist-undo`×27, `quorum`×25, `twist-order`×8, `timed-window`×6, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + twist-order
-- hop-beats-belt + one-way-press
-- boulder-carry + lift-corner-path
-- stand-aside-is-the-switch + twist-stranding
-- cargo-power-cascade + hop-beats-belt
-- liquid-lane + twist-self-block
-- plank-sums-plate-maxes + quorum
-- lift-sorts-by-weight + timed-window
-- partner-builds-your-landing + twist-backwards
-- hop-beats-belt + two-in-the-air-at-once
-- mass-adds-on-the-beam + one-way-press
-- object-as-permanent-switch + trigger-from-above
+- lock-per-element + quorum
+- mass-adds-on-the-beam + twist-stranding
+- lift-corner-path + low-roof-no-jump
+- mass-adds-on-the-beam + twist-backwards
+- plank-sums-plate-maxes + timed-window
+- quorum + unload-the-pan-you-ride
+- hop-beats-belt + shutter-floor-wall-duality
+- partner-builds-your-landing + twist-self-block
+- hoist-unloads-comparator + hop-beats-belt
+- feed-the-engine-mid-ride + twist-backwards
+- lift-sorts-by-weight + twist-backwards
+- counterweight-you-must-remove + door-pushes-you-through
 
 ## This repo's 3-player levels
 

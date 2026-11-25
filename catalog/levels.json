@@ -3946,6 +3946,37 @@
   ]
  },
  {
+  "id": "double_veto",
+  "name": "Double Veto",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8460,
+  "dark": false,
+  "challenge": "mind",
+  "core": "two-independent-vetoes-before-one-way-commitments",
+  "ideas": [
+   "one-way-drop",
+   "twist-sacrifice",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 344,
+  "line": "",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "draught",
   "name": "Draught",
   "source": "mine",
