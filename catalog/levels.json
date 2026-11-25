@@ -5178,6 +5178,43 @@
   ]
  },
  {
+  "id": "headway_courier",
+  "name": "Headway Courier",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "earth+water"
+  ],
+  "parTicks": 6180,
+  "dark": false,
+  "challenge": "motor",
+  "core": "head-carried-courier-credential",
+  "ideas": [
+   "boulder-carry",
+   "timed-window",
+   "twist-order"
+  ],
+  "order": 155,
+  "line": "boulder-carry as a courier credential, rather than as a final exit key. The swimmer deposits the stone using a low ceiling, then the pusher gains access to a clock above the river. Two distinct timed deliveries are required, with a round-trip authorization between them.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "tile:water"
+  ]
+ },
+ {
   "id": "home_current",
   "name": "Home Current",
   "source": "mine",

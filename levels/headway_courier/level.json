@@ -1,0 +1,195 @@
+{
+  "id": "headway_courier",
+  "name": "Headway Courier",
+  "order": 155,
+  "description": "Carry a stone over the river to authorize a remote clock, exchange a certificate during its first pulse, then return to the clock to issue a second pulse.",
+  "supports": [
+    [
+      "earth",
+      "water"
+    ]
+  ],
+  "parTicks": 6180,
+  "hints": [
+    "Earth tips the stone onto Water's head; the low roof deposits it on the far contact.",
+    "The stone releases the lift. Earth rides up and pulses the first shutter; Water certifies the far bank.",
+    "Earth crosses the upper gallery to authorize the second shutter, then returns to the clock. Water waits at the second shutter for the new pulse."
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###...##################################",
+    "###...##################################",
+    "###...##################################",
+    "###...##################################",
+    "###...##################################",
+    "#.....#....#......#...............#....#",
+    "#.....#....#......#...............#....#",
+    "#.....#....#......#...............#....#",
+    "#.....#....#......#...............#....#",
+    "#..........#......#...............#....#",
+    "#............####...........#####......#",
+    "#......................................#",
+    "####################WWWWWW##############",
+    "########################################"
+  ],
+  "spawns": {
+    "earth": [
+      9,
+      19
+    ],
+    "water": [
+      8,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 14,
+      "y": 17
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 22,
+      "y": 19
+    },
+    {
+      "id": "bould",
+      "type": "boulder",
+      "x": 15,
+      "y": 17
+    },
+    {
+      "id": "weigh",
+      "type": "plate",
+      "x": 26,
+      "y": 19,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "access"
+      ]
+    },
+    {
+      "id": "access",
+      "type": "door",
+      "x": 6,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "lift",
+      "type": "elevator",
+      "x": 3,
+      "y": 19,
+      "w": 3,
+      "path": [
+        [
+          3,
+          19
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "speed": 1.2,
+      "mode": "loop",
+      "pause": 150
+    },
+    {
+      "id": "pulse",
+      "type": "button",
+      "x": 6,
+      "y": 7,
+      "mode": "timed",
+      "duration": 250,
+      "targets": [
+        "shutter",
+        "wfinal"
+      ]
+    },
+    {
+      "id": "shutter",
+      "type": "door",
+      "x": 34,
+      "y": 18,
+      "h": 2
+    },
+    {
+      "id": "Wcert",
+      "type": "lever",
+      "x": 35,
+      "y": 19,
+      "targets": [
+        "return"
+      ]
+    },
+    {
+      "id": "return",
+      "type": "door",
+      "x": 10,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ecert",
+      "type": "lever",
+      "x": 35,
+      "y": 7,
+      "targets": [
+        "wfinal"
+      ]
+    },
+    {
+      "id": "wfinal",
+      "type": "door",
+      "x": 37,
+      "y": 18,
+      "h": 2,
+      "latch": false,
+      "required": 2
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 6
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 37,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "far_receipt",
+      "type": "plate",
+      "x": 38,
+      "y": 19,
+      "w": 1,
+      "targets": [
+        "e_exit"
+      ]
+    }
+  ]
+}

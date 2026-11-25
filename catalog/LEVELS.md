@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 165 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 166 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (55)
+## 2 players — this repo (56)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -247,6 +247,10 @@ Totals: 79 campaign levels, 165 in this repo, of which 11 now ship in the campai
   - idea: Two opposite sliding slabs are both bridges for the upper traveler and ceilings for the lower one. Earth needs each roof removed in turn, while Fire must cross the other bridge and ultimately restore it a third time.
   - ideas: pound-needs-headroom, shutter-floor-wall-duality, twist-undo
   - features: ent:cracked ent:door ent:elevator ent:lever ent:torch opt:elevator:loop opt:invert:door opt:latch opt:required:2 opt:wide-door tile:one-way
+- **Headway Courier** `headway_courier` (2p: earth+water) core=`head-carried-courier-credential` challenge=motor par=6180
+  - idea: boulder-carry as a courier credential, rather than as a final exit key. The swimmer deposits the stone using a low ceiling, then the pusher gains access to a clock above the river. Two distinct timed deliveries are required, with a round-trip authorization between them.
+  - ideas: boulder-carry, timed-window, twist-order
+  - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:elevator:loop opt:heavy-plate opt:latch opt:required:2 tile:water
 
 ## 2 players — campaign (34)
 

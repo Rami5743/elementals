@@ -3024,6 +3024,56 @@ Entities:
   X  exit_15      exit       at (38,11)  earth
 ```
 
+## Headway Courier (`headway_courier`) — 2p, core `head-carried-courier-credential`
+
+```
+Headway Courier (headway_courier) for earth+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  #.........D..........................D.#
+ 6  #.........D..........................DX#
+ 7  #.....b...D........................l.DX#
+ 8  ###...##################################
+ 9  ###...##################################
+10  ###...##################################
+11  ###...##################################
+12  ###...##################################
+13  #.....#....#......#...............#....#
+14  #.....#....#......#...............#....#
+15  #.....#....#......#...............#....#
+16  #.....#....#......#...............#....#
+17  #.....D....#..*O..#...............#....#
+18  #.....D......####...........#####.D..DX#
+19  #..EEED.@@............*...pp......Dl.Dp#
+20  ####################WWWWWW##############
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (9,19)  water (8,19)
+Entities:
+  *  gem_0        gem        at (14,17)  earth
+  *  gem_1        gem        at (22,19)  water
+  O  bould        boulder    at (15,17)
+  p  weigh        plate      at (26,19)  2x1  -> access  weight heavy
+  D  access       door       at (6,17)  1x3  <- weigh  latch
+  E  lift         elevator   at (3,19)  3x1  mode loop  speed 1.2  pause 150  path (3,19)-(3,8)
+  b  pulse        button     at (6,7)  -> shutter, wfinal  mode timed  duration 250
+  D  shutter      door       at (34,18)  1x2  <- pulse
+  l  Wcert        lever      at (35,19)  -> return
+  D  return       door       at (10,5)  1x3  <- Wcert  latch
+  l  Ecert        lever      at (35,7)  -> wfinal
+  D  wfinal       door       at (37,18)  1x2  <- pulse, Ecert (needs 2)
+  X  exit_12      exit       at (38,18)  water
+  X  exit_13      exit       at (38,6)  earth
+  D  e_exit       door       at (37,5)  1x3  <- far_receipt  latch
+  p  far_receipt  plate      at (38,19)  -> e_exit
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

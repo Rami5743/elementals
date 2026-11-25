@@ -37,18 +37,18 @@ together. `twist-undo`×32, `quorum`×30, `twist-order`×8, `timed-window`×7, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lift-corner-path + no-overtaking
-- belt-filter + tower-presses-a-column
-- lift-corner-path + turbine-out-of-reach
-- stone-held-from-below + timed-window
-- boulder-carry + unload-the-pan-you-ride
-- liquid-lane + twist-order
-- belt-reverse + mass-adds-on-the-beam
-- machine-strands-operator + twist-self-block
-- belt-filter + stone-held-from-below
-- boulder-float + glide-passenger
-- boulder-carry + fan-passenger
-- glide-passenger + lock-per-element
+- glide-passenger + low-roof-no-jump
+- fan-band + fan-passenger
+- lock-per-element + tower-presses-a-column
+- glide-passenger + machine-strands-operator
+- lift-corner-path + one-way-press
+- door-pushes-you-through + lock-per-element
+- head-stack + stand-aside-is-the-switch
+- door-pushes-you-through + send-one-through
+- lock-per-element + mass-adds-on-the-beam
+- turbine-out-of-reach + unload-the-pan-you-ride
+- lift-corner-path + lock-per-element
+- cargo-as-clock-contact + tower-presses-a-column
 
 ## This repo's 4-player levels
 
