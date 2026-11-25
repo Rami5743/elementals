@@ -1,0 +1,11 @@
+{
+  "order": 236,
+  "challenge": "mind",
+  "core": "master-enable-four-comparator-states",
+  "ideas": [
+    "hoist-unloads-comparator",
+    "seesaw-balance",
+    "quorum",
+    "twist-undo"
+  ]
+}

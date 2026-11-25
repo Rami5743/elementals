@@ -1,0 +1,493 @@
+{
+  "id": "scale_interlock",
+  "name": "Scale Interlock",
+  "order": 236,
+  "description": "Two load selectors and a master enable distinguish four states of a comparator: both raised, either imbalance, and both loaded at center.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      10
+    ],
+    "water": [
+      36,
+      14
+    ],
+    "earth": [
+      3,
+      18
+    ]
+  },
+  "parTicks": 8280,
+  "entities": [
+    {
+      "id": "scale",
+      "type": "seesaw",
+      "x": 12,
+      "y": 4,
+      "w": 12,
+      "range": 2
+    },
+    {
+      "id": "Lstone",
+      "type": "boulder",
+      "x": 14,
+      "y": 3
+    },
+    {
+      "id": "Rstone",
+      "type": "boulder",
+      "x": 21,
+      "y": 3
+    },
+    {
+      "id": "LA",
+      "type": "elevator",
+      "x": 14,
+      "y": 6,
+      "w": 1,
+      "path": [
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          2
+        ]
+      ],
+      "speed": 1.5,
+      "required": 2
+    },
+    {
+      "id": "RB",
+      "type": "elevator",
+      "x": 21,
+      "y": 6,
+      "w": 1,
+      "path": [
+        [
+          21,
+          6
+        ],
+        [
+          21,
+          2
+        ]
+      ],
+      "speed": 1.5,
+      "required": 2
+    },
+    {
+      "id": "LH",
+      "type": "plate",
+      "x": 14,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "w1",
+        "fexit",
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "id": "RL",
+      "type": "plate",
+      "x": 21,
+      "y": 4,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "w1",
+        "fexit",
+        "e1"
+      ]
+    },
+    {
+      "id": "RH",
+      "type": "plate",
+      "x": 21,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f2",
+        "w2",
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "id": "LL",
+      "type": "plate",
+      "x": 14,
+      "y": 4,
+      "weight": "heavy",
+      "targets": [
+        "f2",
+        "w2",
+        "e3"
+      ]
+    },
+    {
+      "id": "LM",
+      "type": "plate",
+      "x": 14,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "f3",
+        "w3",
+        "wexit",
+        "eexit"
+      ]
+    },
+    {
+      "id": "RM",
+      "type": "plate",
+      "x": 21,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "f3",
+        "w3",
+        "wexit",
+        "eexit"
+      ]
+    },
+    {
+      "id": "A",
+      "type": "lever",
+      "x": 3,
+      "y": 10,
+      "targets": [
+        "LA"
+      ]
+    },
+    {
+      "id": "B",
+      "type": "lever",
+      "x": 36,
+      "y": 14,
+      "targets": [
+        "RB"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 9,
+      "y": 8,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 29,
+      "y": 12,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 19,
+      "y": 8,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 12,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 28,
+      "y": 8,
+      "h": 3,
+      "required": 5,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 12,
+      "h": 3,
+      "required": 5,
+      "latch": true
+    },
+    {
+      "id": "fexit",
+      "type": "door",
+      "x": 35,
+      "y": 8,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "wexit",
+      "type": "door",
+      "x": 5,
+      "y": 12,
+      "h": 3,
+      "required": 6
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 14,
+      "y": 10,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 24,
+      "y": 14,
+      "targets": [
+        "f2",
+        "e2"
+      ]
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 24,
+      "y": 10,
+      "targets": [
+        "f3",
+        "w3",
+        "e3"
+      ]
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 14,
+      "y": 14,
+      "targets": [
+        "f3",
+        "w3",
+        "e3"
+      ]
+    },
+    {
+      "id": "F3",
+      "type": "lever",
+      "x": 32,
+      "y": 10,
+      "targets": [
+        "fexit",
+        "wexit"
+      ]
+    },
+    {
+      "id": "W3",
+      "type": "lever",
+      "x": 8,
+      "y": 14,
+      "targets": [
+        "fexit",
+        "wexit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 13
+    },
+    {
+      "id": "Fhome",
+      "type": "lever",
+      "x": 37,
+      "y": 10,
+      "targets": [
+        "wexit",
+        "eexit"
+      ]
+    },
+    {
+      "id": "master",
+      "type": "lever",
+      "x": 3,
+      "y": 18,
+      "targets": [
+        "LA",
+        "RB",
+        "e_last",
+        "w_inverse"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 9,
+      "y": 16,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 19,
+      "y": 16,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "e3",
+      "type": "door",
+      "x": 28,
+      "y": 16,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "e_last",
+      "type": "door",
+      "x": 34,
+      "y": 16,
+      "h": 3,
+      "required": 1,
+      "invert": true
+    },
+    {
+      "id": "eexit",
+      "type": "door",
+      "x": 35,
+      "y": 16,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 14,
+      "y": 18,
+      "targets": [
+        "e2"
+      ]
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 24,
+      "y": 18,
+      "targets": [
+        "f2",
+        "w2"
+      ]
+    },
+    {
+      "id": "E3",
+      "type": "lever",
+      "x": 32,
+      "y": 18,
+      "targets": [
+        "f3",
+        "w3"
+      ]
+    },
+    {
+      "id": "Ehome",
+      "type": "lever",
+      "x": 37,
+      "y": 18,
+      "targets": [
+        "wexit"
+      ]
+    },
+    {
+      "id": "w_inverse",
+      "type": "door",
+      "x": 9,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 17
+    }
+  ],
+  "hints": [
+    "The master enable powers neither hoist by itself: the corresponding selector is also required.",
+    "Both raised is a fourth contact pattern. Earth must record that pattern before either load is lowered.",
+    "Earth disables the master for the centered certificate, restores it for Fire's far certificate, and disables it once more to get home."
+  ]
+}

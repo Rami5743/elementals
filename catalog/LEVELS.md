@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 109 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 110 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (37)
@@ -320,7 +320,7 @@ Totals: 79 campaign levels, 109 in this repo, of which 11 now ship in the campai
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (36)
+## 3 players — this repo (37)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -466,6 +466,10 @@ Totals: 79 campaign levels, 109 in this repo, of which 11 now ship in the campai
   - idea: One timed airlock controller drives two successive cargo chambers; the second chamber is only authorized after the first delivery, and the authorization must be withdrawn after the second delivery.
   - ideas: stock-before-it-seals, shared-switch-two-gates, timed-window, twist-undo
   - features: ent:boulder ent:button ent:door ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2
+- **Scale Interlock** `scale_interlock` (3p: fire+water+earth) core=`master-enable-four-comparator-states` challenge=mind par=8280
+  - idea: Two independently selected hoists share a master enable. The two cargo loads and their seesaw create four distinct contact patterns; a third operator must certify the both-raised pattern and use the master to restore the loaded center.
+  - ideas: hoist-unloads-comparator, seesaw-balance, quorum, twist-undo
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:seesaw opt:heavy-plate opt:invert:door opt:latch opt:required:1 opt:required:2 opt:required:3 opt:required:4 opt:required:5 opt:required:6 opt:seesaw-range
 
 ## 3 players — campaign (30)
 

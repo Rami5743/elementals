@@ -5293,6 +5293,47 @@
   ]
  },
  {
+  "id": "scale_interlock",
+  "name": "Scale Interlock",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8280,
+  "dark": false,
+  "challenge": "mind",
+  "core": "master-enable-four-comparator-states",
+  "ideas": [
+   "hoist-unloads-comparator",
+   "seesaw-balance",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 236,
+  "line": "Two independently selected hoists share a master enable. The two cargo loads and their seesaw create four distinct contact patterns; a third operator must certify the both-raised pattern and use the master to restore the loaded center.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:seesaw",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4",
+   "opt:required:5",
+   "opt:required:6",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "service_lift",
   "name": "Service Lift",
   "source": "mine",

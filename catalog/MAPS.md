@@ -4088,6 +4088,85 @@ Entities:
   X  exit_21      exit       at (2,5)  water
 ```
 
+## Scale Interlock (`scale_interlock`) — 3p, core `master-enable-four-comparator-states`
+
+```
+Scale Interlock (scale_interlock) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.............p......p.................#
+ 2  #......................................#
+ 3  #.............p......p.................#
+ 4  #...........zzpzzzzzzpzz...............#
+ 5  #......................................#
+ 6  #.............E......E.................#
+ 7  ########################################
+ 8  #........D.........D........D......D...#
+ 9  #........D.........D........D......D..X#
+10  #..@.....D....l....D....l...D...l..D.lX#
+11  ########################################
+12  #....D...D.D.......D.........D.........#
+13  #.X..D...D.D.......D.........D.........#
+14  #.X*.D..lD.D..l....D....l....D......@..#
+15  ########################################
+16  #........D.........D........D.....DD...#
+17  #........D.........D........D.....DD..X#
+18  #..@.....D....l....D....l...D...l.DD.*X#
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,10)  water (36,14)  earth (3,18)
+Entities:
+  z  scale        seesaw     at (12,4)  12x1  range 2
+  O  Lstone       boulder    at (14,3)
+  O  Rstone       boulder    at (21,3)
+  E  LA           elevator   at (14,6)  <- A, master (needs 2)  speed 1.5  path (14,6)-(14,2)
+  E  RB           elevator   at (21,6)  <- B, master (needs 2)  speed 1.5  path (21,6)-(21,2)
+  p  LH           plate      at (14,1)  -> f1, w1, fexit, e1, e2  weight heavy
+  p  RL           plate      at (21,4)  -> f1, w1, fexit, e1  weight heavy
+  p  RH           plate      at (21,1)  -> f2, w2, e2, e3  weight heavy
+  p  LL           plate      at (14,4)  -> f2, w2, e3  weight heavy
+  p  LM           plate      at (14,3)  -> f3, w3, wexit, eexit  weight heavy
+  p  RM           plate      at (21,3)  -> f3, w3, wexit, eexit  weight heavy
+  l  A            lever      at (3,10)  -> LA
+  l  B            lever      at (36,14)  -> RB
+  D  f1           door       at (9,8)  1x3  <- LH, RL (needs 2)  latch
+  D  w1           door       at (29,12)  1x3  <- LH, RL (needs 2)  latch
+  D  f2           door       at (19,8)  1x3  <- RH, LL, W1, E2 (needs 4)  latch
+  D  w2           door       at (19,12)  1x3  <- RH, LL, F1, E2 (needs 4)  latch
+  D  f3           door       at (28,8)  1x3  <- LM, RM, F2, W2, E3 (needs 5)  latch
+  D  w3           door       at (11,12)  1x3  <- LM, RM, F2, W2, E3 (needs 5)  latch
+  D  fexit        door       at (35,8)  1x3  <- LH, RL, F3, W3 (needs 4)  latch
+  D  wexit        door       at (5,12)  1x3  <- LM, RM, F3, W3, Fhome, Ehome (needs 6)
+  l  F1           lever      at (14,10)  -> w2
+  l  W1           lever      at (24,14)  -> f2, e2
+  l  F2           lever      at (24,10)  -> f3, w3, e3
+  l  W2           lever      at (14,14)  -> f3, w3, e3
+  l  F3           lever      at (32,10)  -> fexit, wexit
+  l  W3           lever      at (8,14)  -> fexit, wexit
+  *  gem_27       gem        at (37,10)  fire
+  X  exit_28      exit       at (38,9)  fire
+  *  gem_29       gem        at (3,14)  water
+  X  exit_30      exit       at (2,13)  water
+  l  Fhome        lever      at (37,10)  -> wexit, eexit
+  l  master       lever      at (3,18)  -> LA, RB, e_last, w_inverse
+  D  e1           door       at (9,16)  1x3  <- LH, RL (needs 2)  latch
+  D  e2           door       at (19,16)  1x3  <- LH, RH, W1, E1 (needs 4)  latch
+  D  e3           door       at (28,16)  1x3  <- RH, LL, F2, W2 (needs 4)  latch
+  D  e_last       door       at (34,16)  1x3  <- master  invert
+  D  eexit        door       at (35,16)  1x3  <- LM, RM, Fhome (needs 3)
+  l  E1           lever      at (14,18)  -> e2
+  l  E2           lever      at (24,18)  -> f2, w2
+  l  E3           lever      at (32,18)  -> f3, w3
+  l  Ehome        lever      at (37,18)  -> wexit
+  D  w_inverse    door       at (9,12)  1x3  <- master  invert
+  *  gem_43       gem        at (37,18)  earth
+  X  exit_44      exit       at (38,17)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```
