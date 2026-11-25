@@ -189,3 +189,7 @@ Object.assign(IDEAS, { "three-load-rope-control": {kind:'spine',note:"A ballaste
 Object.assign(IDEAS, { "spatial-clock-phase-rendezvous": {kind:'spine',note:"Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home."} });
 
 Object.assign(IDEAS, { "causeway-as-veto": {kind:'spine',note:"A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge."} });
+// Coined while building Crawlspace (2026-11-25).
+Object.assign(IDEAS, {
+  'pound-needs-headroom': { kind: 'spine', note: "A ground pound is a jump first: measured, Earth standing on a cracked panel with one tile of roof cannot leave the ground at all, so there is never an airborne Down press and the floor is simply unbreakable, while two tiles are enough. A cracked panel in a crawl therefore cannot be opened by the player who owns it, only by whoever can take the ceiling away — and when that ceiling is the floor of the storey above, giving Earth the room to pound means pulling the party's own road out from under them. The barrier is neither the floor nor the roof but the distance between them." },
+});

@@ -36,23 +36,24 @@ together. `twist-undo`×28, `quorum`×25, `twist-order`×8, `timed-window`×6, `
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `three-load-rope-control` — A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact.
 - `spatial-clock-phase-rendezvous` — Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home.
+- `pound-needs-headroom` — A ground pound is a jump first: measured, Earth standing on a cracked panel with one tile of roof cannot leave the ground at all, so there is never an airborne Down press and the floor is simply unbreakable, while two tiles are enough. A cracked panel in a crawl therefore cannot be opened by the player who owns it, only by whoever can take the ceiling away — and when that ceiling is the floor of the storey above, giving Earth the room to pound means pulling the party's own road out from under them. The barrier is neither the floor nor the roof but the distance between them.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- head-stack + pound-to-move
-- counterweight-you-must-remove + mass-adds-on-the-beam
-- object-as-permanent-switch + stand-aside-is-the-switch
-- invert-door + lock-per-element
-- counterweight-you-must-remove + unload-the-pan-you-ride
-- invert-door + stand-aside-is-the-switch
-- counterweight-you-must-remove + pound-to-move
-- feed-the-engine-mid-ride + object-as-permanent-switch
-- counterweight-you-must-remove + liquid-lane
-- object-as-permanent-switch + partner-builds-your-landing
-- counterweight-you-must-remove + single-file-stone
-- counterweight-you-must-remove + low-roof-no-jump
+- hop-beats-belt + one-way-drop
+- counterweight-you-must-remove + feed-the-engine-mid-ride
+- machine-strands-operator + unload-the-pan-you-ride
+- lift-corner-path + liquid-lane
+- boulder-carry + machine-strands-operator
+- boulder-carry + twist-stranding
+- spatial-clock-phase-rendezvous + twist-stranding
+- glide-passenger + object-as-permanent-switch
+- feed-the-engine-mid-ride + lift-corner-path
+- twist-stranding + unload-the-pan-you-ride
+- lift-corner-path + unload-the-pan-you-ride
+- lift-corner-path + three-load-rope-control
 
 ## This repo's 3-player levels
 

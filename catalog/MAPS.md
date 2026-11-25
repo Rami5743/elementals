@@ -8832,3 +8832,55 @@ Entities:
   *  agem         gem        at (37,20)  air
   X  aexit        exit       at (38,19)  air
 ```
+
+## Crawlspace (`crawlspace`) — 4p, core `roof-must-go-before-the-floor-can`
+
+```
+Crawlspace (crawlspace) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  #########################.*.############
+ 9  #########################...############
+10  #......................................#
+11  #......................................#
+12  #..@..O@.@..@...............*..T...t...#
+13  ################=DDDDDD#################
+14  ################.....*.#################
+15  ####################c###################
+16  #.......................D..............#
+17  #.....................!.D.......X.X.X.X#
+18  #...................#*!.Df......X.X.X.X#
+19  ###########################WWWWW########
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (3,12)  air (7,12)  fire (9,12)  earth (12,12)
+Entities:
+  p  pad          plate      at (6,12)  -> slab  weight heavy
+  O  stone        boulder    at (6,12)
+  D  slab         door       at (17,13)  6x1  <- pad  invert
+  c  panel        cracked    at (20,15)
+  t  torch        torch      at (35,12)  -> gate
+  T  turbine      turbine    at (31,12)  -> gate
+  D  gate         door       at (24,16)  1x3  <- torch, turbine (needs 2)  latch
+  W  pool         pool       at (27,19)  5x1  <- icepad  duration 900
+  f  icepad       freezepad  at (25,18)  -> pool
+  !  checkpoint_9 checkpoint at (22,17)
+  *  gem_10       gem        at (21,14)  earth
+  *  gem_11       gem        at (28,12)  fire
+  *  gem_12       gem        at (26,8)  air
+  *  gem_13       gem        at (21,18)  water
+  X  exit_14      exit       at (32,17)  water
+  X  exit_15      exit       at (34,17)  fire
+  X  exit_16      exit       at (36,17)  earth
+  X  exit_17      exit       at (38,17)  air
+```

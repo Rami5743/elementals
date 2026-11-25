@@ -24,23 +24,24 @@ together. `twist-undo`×31, `quorum`×8, `invert-door`×6, `twist-order`×6, `ma
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `causeway-as-veto` — A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge.
+- `pound-needs-headroom` — A ground pound is a jump first: measured, Earth standing on a cracked panel with one tile of roof cannot leave the ground at all, so there is never an airborne Down press and the floor is simply unbreakable, while two tiles are enough. A cracked panel in a crawl therefore cannot be opened by the player who owns it, only by whoever can take the ceiling away — and when that ceiling is the floor of the storey above, giving Earth the room to pound means pulling the party's own road out from under them. The barrier is neither the floor nor the roof but the distance between them.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hop-beats-belt + lift-sorts-by-weight
-- boulder-float + quorum
-- boulder-carry + position-as-volatile-key
-- cargo-as-clock-contact + two-is-not-heavy
-- tower-presses-a-column + twist-sacrifice
-- door-pushes-you-through + fan-passenger
-- no-hands-for-cargo + two-is-not-heavy
-- no-hands-for-cargo + plank-sums-plate-maxes
-- boulder-float + freeze-bridge
-- lock-per-element + twist-undo
-- lift-sorts-by-weight + unload-the-pan-you-ride
-- lock-per-element + timed-window
+- door-pushes-you-through + machine-strands-operator
+- causeway-as-veto + counterweight-you-must-remove
+- door-pushes-you-through + head-stack
+- glide-dismount + lock-per-element
+- lift-sorts-by-weight + shared-switch-two-gates
+- causeway-as-veto + invert-door
+- door-pushes-you-through + shared-switch-two-gates
+- door-pushes-you-through + hop-beats-belt
+- boulder-carry + hop-beats-belt
+- hold-switch + pound-needs-headroom
+- glide-passenger + lock-per-element
+- tower-presses-a-column + twist-undo
 
 ## This repo's 2-player levels
 
