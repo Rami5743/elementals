@@ -1,0 +1,184 @@
+{
+  "id": "ballast",
+  "name": "Ballast",
+  "order": 150,
+  "description": "The rope keeps counting you until you land. So do not land.",
+  "supports": [
+    [
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 4200,
+  "hints": [
+    "The draught blows only while the bellows plate is held, and only Earth is heavy enough to hold it.",
+    "The gate is open while the boulder rests on the pad, and the pan sinks only while your weight is on the rope.",
+    "A pulley goes on counting whoever jumped off it until they land somewhere else."
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "###....................................#",
+    "###....................................#",
+    "###....................................#",
+    "#.#..##................................#",
+    "#.#..##..############################..#",
+    "#.#..##..############################..#",
+    "#.#..##..############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#.#......############################..#",
+    "#####..................................#",
+    "#####..................................#",
+    "#####..................................#",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "water": [
+      6,
+      18
+    ],
+    "earth": [
+      10,
+      18
+    ]
+  },
+  "entities": [
+    {
+      "id": "rope",
+      "type": "pulley",
+      "x": 3,
+      "y": 6,
+      "w": 2,
+      "to": [
+        1,
+        15,
+        1
+      ],
+      "range": 9,
+      "weights": [
+        0,
+        3.5
+      ],
+      "speed": 0.6
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "id": "pad",
+      "type": "plate",
+      "x": 3,
+      "y": 14,
+      "weight": "heavy",
+      "targets": [
+        "gate",
+        "hatch",
+        "inner"
+      ]
+    },
+    {
+      "id": "bellows",
+      "type": "plate",
+      "x": 20,
+      "y": 18,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "draught"
+      ]
+    },
+    {
+      "id": "bellows2",
+      "type": "plate",
+      "x": 30,
+      "y": 18,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "draught"
+      ]
+    },
+    {
+      "id": "draught",
+      "type": "fan",
+      "x": 7,
+      "y": 3,
+      "w": 2,
+      "h": 16,
+      "strength": 2
+    },
+    {
+      "id": "gate",
+      "type": "door",
+      "x": 9,
+      "y": 3,
+      "h": 4
+    },
+    {
+      "id": "inner",
+      "type": "door",
+      "x": 14,
+      "y": 3,
+      "h": 4,
+      "invert": true
+    },
+    {
+      "id": "hatch",
+      "type": "door",
+      "x": 28,
+      "y": 16,
+      "h": 3
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 4,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 24,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 34,
+      "y": 5
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 33,
+      "y": 17
+    },
+    {
+      "type": "checkpoint",
+      "x": 12,
+      "y": 5
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 4,
+      "text": "The rope counts you till you land"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 18,
+      "text": "Two plates, one Earth"
+    }
+  ]
+}

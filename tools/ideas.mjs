@@ -24,6 +24,7 @@ export const IDEAS = {
   'pound-chain': { kind: 'spine', note: 'Several cracked floors stacked or offset, broken in one descent.' },
   'pound-to-move': { kind: 'spine', note: 'Pounding the floor out from under an object instead of under yourself.' },
   'boulder-float': { kind: 'spine', note: 'A boulder rests on the surface of a liquid; pushed in, it becomes floor.' },
+  'rope-keeps-the-jumper': { kind: 'spine', note: 'A pulley goes on counting the weight of whoever jumped off it until they land somewhere else, so a draught that stops them landing keeps the rope loaded with nobody aboard.' },
   'boulder-carry': { kind: 'spine', note: 'Something that falls on a player rides on their head until a low roof scrapes it off.' },
   'one-way-press': { kind: 'spine', note: 'A closing door is the only thing that pushes an object through a one-way tile.' },
   'one-way-drop': { kind: 'spine', note: 'Down drops you through a ledge: a route that only runs one way.' },

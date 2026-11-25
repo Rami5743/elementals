@@ -18,6 +18,7 @@ together. `twist-undo`×28, `quorum`×25, `twist-order`×8, `timed-window`×6, `
 - `hop-beats-belt` — A hop breaks contact with a belt that cannot be walked against.
 - `glide-passenger` — Air carries somebody across a gap nobody else can cross.
 - `pound-to-move` — Pounding the floor out from under an object instead of under yourself.
+- `rope-keeps-the-jumper` — A pulley goes on counting the weight of whoever jumped off it until they land somewhere else, so a draught that stops them landing keeps the rope loaded with nobody aboard.
 - `boulder-carry` — Something that falls on a player rides on their head until a low roof scrapes it off.
 - `wide-door` — A door that opens sideways: a wall that becomes a bridge, or the reverse.
 - `dark` — The level is dark; lit torches are the only light, and the map has to be learned.
@@ -42,18 +43,18 @@ together. `twist-undo`×28, `quorum`×25, `twist-order`×8, `timed-window`×6, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hop-beats-belt + one-way-drop
-- counterweight-you-must-remove + feed-the-engine-mid-ride
-- machine-strands-operator + unload-the-pan-you-ride
-- lift-corner-path + liquid-lane
-- boulder-carry + machine-strands-operator
-- boulder-carry + twist-stranding
-- spatial-clock-phase-rendezvous + twist-stranding
-- glide-passenger + object-as-permanent-switch
-- feed-the-engine-mid-ride + lift-corner-path
+- single-file-stone + twist-undo
 - twist-stranding + unload-the-pan-you-ride
-- lift-corner-path + unload-the-pan-you-ride
-- lift-corner-path + three-load-rope-control
+- boulder-carry + twist-self-block
+- invert-door + partner-builds-your-landing
+- spatial-clock-phase-rendezvous + twist-two-clocks
+- low-roof-no-jump + timed-window
+- boulder-carry + twist-two-clocks
+- freeze-bridge + wide-door
+- freeze-bridge + pound-to-move
+- partner-builds-your-landing + twist-two-clocks
+- head-stack + wide-door
+- freeze-bridge + rope-keeps-the-jumper
 
 ## This repo's 3-player levels
 

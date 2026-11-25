@@ -20,6 +20,7 @@ together. `twist-undo`×27, `quorum`×27, `twist-order`×8, `timed-window`×5, `
 - `glide-dismount` — Stepping off Air in mid-glide, which reaches a place Air itself cannot.
 - `glide-passenger` — Air carries somebody across a gap nobody else can cross.
 - `pound-to-move` — Pounding the floor out from under an object instead of under yourself.
+- `rope-keeps-the-jumper` — A pulley goes on counting the weight of whoever jumped off it until they land somewhere else, so a draught that stops them landing keeps the rope loaded with nobody aboard.
 - `wide-door` — A door that opens sideways: a wall that becomes a bridge, or the reverse.
 - `dark` — The level is dark; lit torches are the only light, and the map has to be learned.
 - `liquid-lane` — Each element wades its own liquid to something the others need.
@@ -41,18 +42,18 @@ together. `twist-undo`×27, `quorum`×27, `twist-order`×8, `timed-window`×5, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- invert-door + three-load-rope-control
-- glide-dismount + twist-undo
-- causeway-as-veto + twist-undo
-- freeze-invert + lift-corner-path
-- three-load-rope-control + twist-undo
+- single-file-stone + turbine-out-of-reach
+- belt-reverse + mass-adds-on-the-beam
+- freeze-bridge + pound-to-move
 - invert-door + stand-aside-is-the-switch
-- lift-corner-path + shuttle-strips-cargo-to-belt
-- twist-self-block + twist-undo
-- lift-corner-path + trip-plate-in-the-shaft
-- lift-corner-path + lift-press
-- invert-door + mass-adds-on-the-beam
-- lift-corner-path + ratio-reverses-paired-cargo
+- belt-cargo + fan-passenger
+- door-pushes-you-through + timed-window
+- climb-then-steer + low-roof-no-jump
+- glide-passenger + twist-undo
+- belt-cargo + wide-door
+- pound-to-move + twist-undo
+- liquid-lane + reversible-switch-maze
+- single-file-stone + twist-undo
 
 ## This repo's 4-player levels
 
