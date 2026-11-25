@@ -1,0 +1,10 @@
+{
+  "order": 219,
+  "challenge": "mind",
+  "core": "three-party-pulley-register",
+  "ideas": [
+    "balanced-rope-memory",
+    "twist-undo",
+    "quorum"
+  ]
+}
