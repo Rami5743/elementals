@@ -1,0 +1,183 @@
+{
+  "id": "shoulder_dispatch",
+  "name": "Shoulder Dispatch",
+  "order": 143,
+  "description": "Air must use Earth's shoulders to reach two high timed turbines. Earth then races the pulse to turn each temporary passage into a stable return route.",
+  "supports": [
+    [
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###################################..###",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "earth": [
+      5,
+      9
+    ],
+    "air": [
+      7,
+      9
+    ]
+  },
+  "entities": [
+    {
+      "id": "T1",
+      "type": "turbine",
+      "x": 5,
+      "y": 4,
+      "duration": 480,
+      "targets": [
+        "gate1"
+      ]
+    },
+    {
+      "id": "gate1",
+      "type": "door",
+      "x": 28,
+      "y": 1,
+      "h": 9
+    },
+    {
+      "id": "west1",
+      "type": "door",
+      "x": 3,
+      "y": 1,
+      "h": 9,
+      "latch": true
+    },
+    {
+      "id": "far1",
+      "type": "lever",
+      "x": 31,
+      "y": 9,
+      "targets": [
+        "gate1",
+        "west1"
+      ]
+    },
+    {
+      "id": "near1",
+      "type": "lever",
+      "x": 1,
+      "y": 9,
+      "targets": [
+        "drop"
+      ]
+    },
+    {
+      "id": "drop",
+      "type": "door",
+      "x": 35,
+      "y": 10,
+      "h": 1,
+      "w": 2,
+      "latch": true
+    },
+    {
+      "id": "T2",
+      "type": "turbine",
+      "x": 35,
+      "y": 14,
+      "duration": 480,
+      "targets": [
+        "gate2"
+      ]
+    },
+    {
+      "id": "gate2",
+      "type": "door",
+      "x": 9,
+      "y": 11,
+      "h": 9
+    },
+    {
+      "id": "east2",
+      "type": "door",
+      "x": 37,
+      "y": 11,
+      "h": 9,
+      "latch": true
+    },
+    {
+      "id": "far2",
+      "type": "lever",
+      "x": 5,
+      "y": 19,
+      "targets": [
+        "gate2",
+        "east2"
+      ]
+    },
+    {
+      "id": "near2",
+      "type": "lever",
+      "x": 38,
+      "y": 19,
+      "targets": [
+        "finish"
+      ]
+    },
+    {
+      "id": "finish",
+      "type": "door",
+      "x": 3,
+      "y": 11,
+      "h": 9,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 38,
+      "y": 19
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 1,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 1,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 2,
+      "y": 18
+    }
+  ],
+  "parTicks": 9120,
+  "hints": [
+    "Each turbine is above Air's unassisted jump. Earth is the step.",
+    "The brief pulse opens the far gate; Earth must cross and turn its holding lever before the pulse expires.",
+    "Return for the near certificate, then repeat from the other side of the lower gallery."
+  ]
+}

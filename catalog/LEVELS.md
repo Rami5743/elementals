@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 126 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 127 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (42)
+## 2 players — this repo (43)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -197,6 +197,10 @@ Totals: 79 campaign levels, 126 in this repo, of which 11 now ship in the campai
   - idea: The crate is a travelling step: it gives access to either three-tile bank, but cannot provide both steps at once.
   - ideas: crate-step, belt-reverse, twist-undo
   - features: ent:belt ent:box ent:door ent:lever opt:belt:blocks-fire-water opt:belt:reverse opt:latch
+- **Shoulder Dispatch** `shoulder_dispatch` (2p: earth+air) core=`shoulder-activated-timed-pulse-to-holding-route` challenge=motor par=9120
+  - idea: Each of two high turbines needs a head stack, and produces a temporary passage rather than the final route. Turn the temporary passage into a permanent return route before retrieving the near-bank certificate.
+  - ideas: turbine-out-of-reach, head-stack, timed-window, twist-undo
+  - features: ent:door ent:lever ent:turbine opt:latch opt:turbine-timed opt:wide-door
 
 ## 2 players — campaign (34)
 

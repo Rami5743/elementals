@@ -2299,6 +2299,56 @@ Entities:
   X  exit_25      exit       at (38,18)  water
 ```
 
+## Shoulder Dispatch (`shoulder_dispatch`) — 2p, core `shoulder-activated-timed-pulse-to-holding-route`
+
+```
+Shoulder Dispatch (shoulder_dispatch) for earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #..D........................D..........#
+ 2  #..D........................D..........#
+ 3  #..D........................D..........#
+ 4  #..D.T......................D..........#
+ 5  #..D........................D..........#
+ 6  #..D........................D..........#
+ 7  #..D........................D..........#
+ 8  #..D........................D..........#
+ 9  #*.D.@.@....................D..l.......#
+10  ###################################DD###
+11  #..D.....D...........................D.#
+12  #..D.....D...........................D.#
+13  #..D.....D...........................D.#
+14  #..D.....D.........................T.D.#
+15  #..D.....D...........................D.#
+16  #..D.....D...........................D.#
+17  #..D.....D...........................D.#
+18  #XXD.....D...........................D.#
+19  #XXD.l...D...........................D*#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (5,9)  air (7,9)
+Entities:
+  T  T1           turbine    at (5,4)  -> gate1  duration 480
+  D  gate1        door       at (28,1)  1x9  <- T1, far1
+  D  west1        door       at (3,1)  1x9  <- far1  latch
+  l  far1         lever      at (31,9)  -> gate1, west1
+  l  near1        lever      at (1,9)  -> drop
+  D  drop         door       at (35,10)  2x1  <- near1  latch
+  T  T2           turbine    at (35,14)  -> gate2  duration 480
+  D  gate2        door       at (9,11)  1x9  <- T2, far2
+  D  east2        door       at (37,11)  1x9  <- far2  latch
+  l  far2         lever      at (5,19)  -> gate2, east2
+  l  near2        lever      at (38,19)  -> finish
+  D  finish       door       at (3,11)  1x9  <- near2  latch
+  *  gem_12       gem        at (38,19)  earth
+  *  gem_13       gem        at (1,9)  air
+  X  exit_14      exit       at (1,18)  earth
+  X  exit_15      exit       at (2,18)  air
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

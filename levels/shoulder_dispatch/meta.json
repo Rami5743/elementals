@@ -1,0 +1,11 @@
+{
+  "order": 143,
+  "challenge": "motor",
+  "core": "shoulder-activated-timed-pulse-to-holding-route",
+  "ideas": [
+    "turbine-out-of-reach",
+    "head-stack",
+    "timed-window",
+    "twist-undo"
+  ]
+}

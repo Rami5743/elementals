@@ -5792,6 +5792,37 @@
   ]
  },
  {
+  "id": "shoulder_dispatch",
+  "name": "Shoulder Dispatch",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "earth+air"
+  ],
+  "parTicks": 9120,
+  "dark": false,
+  "challenge": "motor",
+  "core": "shoulder-activated-timed-pulse-to-holding-route",
+  "ideas": [
+   "turbine-out-of-reach",
+   "head-stack",
+   "timed-window",
+   "twist-undo"
+  ],
+  "order": 143,
+  "line": "Each of two high turbines needs a head stack, and produces a temporary passage rather than the final route. Turn the temporary passage into a permanent return route before retrieving the near-bank certificate.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "ent:turbine",
+   "opt:latch",
+   "opt:turbine-timed",
+   "opt:wide-door"
+  ]
+ },
+ {
   "id": "shoulders",
   "name": "Shoulders",
   "source": "mine",
