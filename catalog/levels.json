@@ -5502,6 +5502,41 @@
   ]
  },
  {
+  "id": "live_counterweight",
+  "name": "Live Counterweight",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6240,
+  "dark": false,
+  "challenge": "mind",
+  "core": "live-third-unit-on-balance",
+  "ideas": [
+   "mass-adds-on-the-beam",
+   "unload-the-pan-you-ride",
+   "twist-order",
+   "hold-switch"
+  ],
+  "order": 255,
+  "line": "mass-adds-on-the-beam at three players. A live light rider is the third unit that tips a loaded balance against Earth, and the other light operator must leave the counterweight to certify a remote contact.",
+  "tokens": [
+   "ent:boulder",
+   "ent:box",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "ent:seesaw",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:3",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "living_register",
   "name": "Living Register",
   "source": "mine",

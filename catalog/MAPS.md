@@ -6457,6 +6457,60 @@ Entities:
   X  exit_19      exit       at (1,1)  fire
 ```
 
+## Live Counterweight (`live_counterweight`) — 3p, core `live-third-unit-on-balance`
+
+```
+Live Counterweight (live_counterweight) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ###########....D...................D..##
+ 9  ###########.X..D...................D..##
+10  ###########.X..D.*.....ppp*x@.x...@D..##
+11  ####################......##########..##
+12  #.........................##########..##
+13  #.........................##########..##
+14  #.......O.@...............##########..##
+15  #....###############zzzzzz............##
+16  #.....................................##
+17  #####.................................##
+18  #..D..................................##
+19  #X.D.####.........................X...##
+20  #XlD..*...........pp..........p...X...##
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (28,10)  earth (10,14)  water (34,10)
+Entities:
+  z  beam         seesaw     at (20,15)  6x1  range 8
+  O  stone        boulder    at (8,14)
+  p  hp           plate      at (18,20)  2x1  -> gate_e, lower_cert_gate  weight heavy
+  D  gate_e       door       at (15,8)  1x3  <- hp, live_contact, lower_cert (needs 3)
+  p  s1           plate      at (23,10)  -> chute
+  p  s2           plate      at (24,10)  -> chute
+  p  s3           plate      at (25,10)  -> chute
+  D  chute        door       at (35,8)  1x3  <- s1, s2, s3 (needs 3)  latch
+  x  c1           box        at (27,10)
+  x  c2           box        at (30,10)
+  X  exit_10      exit       at (12,9)  earth
+  X  exit_11      exit       at (1,19)  fire
+  *  gem_12       gem        at (6,20)  earth
+  *  gem_13       gem        at (26,10)  fire
+  *  gem_14       gem        at (17,10)  neutral
+  p  live_contact plate      at (30,20)  -> gate_e
+  *  gem_16       gem        at (34,10)  water
+  X  exit_17      exit       at (34,19)  water
+  D  lower_cert_gate door       at (3,18)  1x3  <- hp  latch
+  l  lower_cert   lever      at (2,20)  -> gate_e
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

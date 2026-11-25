@@ -1,0 +1,210 @@
+{
+  "id": "live_counterweight",
+  "name": "Live Counterweight",
+  "order": 255,
+  "description": "Two crates and a live rider outweigh Earth only after the boulder is shed. The other light operator must leave the pan to hold the final contact.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 6240,
+  "hints": [
+    "Load the far pan with two crates and Water while Earth still holds the stone on the near pan.",
+    "Earth sheds the stone onto the heavy pad. The two crates alone merely balance Earth; Water must stay aboard.",
+    "Fire descends to the left receipt lever, then holds the right contact until Earth gets home. Water then unloads; Fire returns to the western exit."
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "###########...........................##",
+    "###########...........................##",
+    "###########...........................##",
+    "####################......##########..##",
+    "#.........................##########..##",
+    "#.........................##########..##",
+    "#.........................##########..##",
+    "#....###############..................##",
+    "#.....................................##",
+    "#####.................................##",
+    "#.....................................##",
+    "#....####.............................##",
+    "#.....................................##",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      28,
+      10
+    ],
+    "earth": [
+      10,
+      14
+    ],
+    "water": [
+      34,
+      10
+    ]
+  },
+  "entities": [
+    {
+      "id": "beam",
+      "type": "seesaw",
+      "x": 20,
+      "y": 15,
+      "w": 6,
+      "range": 8
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 8,
+      "y": 14
+    },
+    {
+      "id": "hp",
+      "type": "plate",
+      "x": 18,
+      "y": 20,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "gate_e",
+        "lower_cert_gate"
+      ]
+    },
+    {
+      "id": "gate_e",
+      "type": "door",
+      "x": 15,
+      "y": 8,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "id": "s1",
+      "type": "plate",
+      "x": 23,
+      "y": 10,
+      "targets": [
+        "chute"
+      ]
+    },
+    {
+      "id": "s2",
+      "type": "plate",
+      "x": 24,
+      "y": 10,
+      "targets": [
+        "chute"
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "plate",
+      "x": 25,
+      "y": 10,
+      "targets": [
+        "chute"
+      ]
+    },
+    {
+      "id": "chute",
+      "type": "door",
+      "x": 35,
+      "y": 8,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "c1",
+      "type": "box",
+      "x": 27,
+      "y": 10
+    },
+    {
+      "id": "c2",
+      "type": "box",
+      "x": 30,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 12,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 19
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 6,
+      "y": 20
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 26,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "neutral",
+      "x": 17,
+      "y": 10
+    },
+    {
+      "id": "live_contact",
+      "type": "plate",
+      "x": 30,
+      "y": 20,
+      "w": 1,
+      "targets": [
+        "gate_e"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 34,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 34,
+      "y": 19
+    },
+    {
+      "id": "lower_cert_gate",
+      "type": "door",
+      "x": 3,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "lower_cert",
+      "type": "lever",
+      "x": 2,
+      "y": 20,
+      "targets": [
+        "gate_e"
+      ]
+    }
+  ]
+}
