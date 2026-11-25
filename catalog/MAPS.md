@@ -2349,6 +2349,63 @@ Entities:
   X  exit_15      exit       at (2,18)  air
 ```
 
+## Beacon Duet (`beacon_duet`) — 2p, core `permanent-bridge-revocable-descent-permission`
+
+```
+Beacon Duet (beacon_duet) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #.......D...............D..............#
+ 3  #.......D...............D..............#
+ 4  #.l.....D.@.............D...........t..#
+ 5  ####DD##################################
+ 6  ####..##################################
+ 7  #.D.........D........................D.#
+ 8  #.D.........D........................DX#
+ 9  #*D.........D......................t.DX#
+10  ########################################
+11  #......D...............................#
+12  #......D...............................#
+13  #......D@l..........................l..#
+14  ####DD########DDDDDDDDDDDD##############
+15  ####..########SSSSSSSSSSSS##############
+16  #.D....................................#
+17  #XD....................................#
+18  #XD....l............................*..#
+19  ##############DDDDDDDDDDDD##############
+20  ##############SSSSSSSSSSSS##############
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (10,4)  water (8,13)
+Entities:
+  D  f_east       door       at (24,2)  1x3  <- W0  latch
+  t  torch1       torch      at (36,4)  -> bridge1
+  D  f_west       door       at (8,2)  1x3  <- W1
+  l  F1           lever      at (2,4)  -> f_drop, w_drop
+  D  f_drop       door       at (4,5)  2x1  <- F1  latch
+  l  W0           lever      at (9,13)  -> f_east
+  D  bridge1      door       at (14,14)  12x1  <- torch1  invert
+  l  W1           lever      at (36,13)  -> f_west, w_inverse
+  D  w_inverse    door       at (7,11)  1x3  <- W1  invert
+  D  w_drop       door       at (4,14)  2x1  <- F1  latch
+  D  f_start2     door       at (12,7)  1x3  <- W2  latch
+  t  torch2       torch      at (35,9)  -> bridge2
+  D  f_west2      door       at (2,7)  1x3  <- W3  latch
+  l  F2           lever      at (1,9)  -> f_finish, w_finish
+  D  f_finish     door       at (37,7)  1x3  <- F2  latch
+  l  W2           lever      at (7,18)  -> f_start2
+  D  bridge2      door       at (14,19)  12x1  <- torch2  invert
+  l  W3           lever      at (36,18)  -> f_west2
+  D  w_finish     door       at (2,16)  1x3  <- F2  latch
+  *  gem_19       gem        at (1,9)  fire
+  X  exit_20      exit       at (38,8)  fire
+  *  gem_21       gem        at (36,18)  water
+  X  exit_22      exit       at (1,17)  water
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

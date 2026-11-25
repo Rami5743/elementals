@@ -1,0 +1,244 @@
+{
+  "id": "beacon_duet",
+  "name": "Beacon Duet",
+  "order": 144,
+  "description": "Two permanent torches construct Water's bridges. The first bridge must release a temporary authorization which Fire must use and Water must then withdraw to reach the second gallery.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "####..##################################",
+    "####..##################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "####..########............##############",
+    "####..########SSSSSSSSSSSS##############",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##############............##############",
+    "##############SSSSSSSSSSSS##############",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      10,
+      4
+    ],
+    "water": [
+      8,
+      13
+    ]
+  },
+  "entities": [
+    {
+      "id": "f_east",
+      "type": "door",
+      "x": 24,
+      "y": 2,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "torch1",
+      "type": "torch",
+      "x": 36,
+      "y": 4,
+      "targets": [
+        "bridge1"
+      ]
+    },
+    {
+      "id": "f_west",
+      "type": "door",
+      "x": 8,
+      "y": 2,
+      "h": 3
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 2,
+      "y": 4,
+      "targets": [
+        "f_drop",
+        "w_drop"
+      ]
+    },
+    {
+      "id": "f_drop",
+      "type": "door",
+      "x": 4,
+      "y": 5,
+      "w": 2,
+      "h": 1,
+      "latch": true
+    },
+    {
+      "id": "W0",
+      "type": "lever",
+      "x": 9,
+      "y": 13,
+      "targets": [
+        "f_east"
+      ]
+    },
+    {
+      "id": "bridge1",
+      "type": "door",
+      "x": 14,
+      "y": 14,
+      "w": 12,
+      "h": 1,
+      "invert": true
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 36,
+      "y": 13,
+      "targets": [
+        "f_west",
+        "w_inverse"
+      ]
+    },
+    {
+      "id": "w_inverse",
+      "type": "door",
+      "x": 7,
+      "y": 11,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w_drop",
+      "type": "door",
+      "x": 4,
+      "y": 14,
+      "w": 2,
+      "h": 1,
+      "latch": true
+    },
+    {
+      "id": "f_start2",
+      "type": "door",
+      "x": 12,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "torch2",
+      "type": "torch",
+      "x": 35,
+      "y": 9,
+      "targets": [
+        "bridge2"
+      ]
+    },
+    {
+      "id": "f_west2",
+      "type": "door",
+      "x": 2,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 1,
+      "y": 9,
+      "targets": [
+        "f_finish",
+        "w_finish"
+      ]
+    },
+    {
+      "id": "f_finish",
+      "type": "door",
+      "x": 37,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 7,
+      "y": 18,
+      "targets": [
+        "f_start2"
+      ]
+    },
+    {
+      "id": "bridge2",
+      "type": "door",
+      "x": 14,
+      "y": 19,
+      "w": 12,
+      "h": 1,
+      "invert": true
+    },
+    {
+      "id": "W3",
+      "type": "lever",
+      "x": 36,
+      "y": 18,
+      "targets": [
+        "f_west2"
+      ]
+    },
+    {
+      "id": "w_finish",
+      "type": "door",
+      "x": 2,
+      "y": 16,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 1,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 36,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 17
+    }
+  ],
+  "parTicks": 7440,
+  "hints": [
+    "Only Fire lights the beacons. Water's first authorization also closes the return passage in its own gallery.",
+    "Fire must pass the first authorized gate and reach its lower gallery before Water withdraws the authorization.",
+    "The second beacon builds another bridge. Water's far certificate opens Fire's west workshop, and both must return before exiting."
+  ]
+}

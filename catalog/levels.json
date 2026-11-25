@@ -2858,6 +2858,38 @@
   ]
  },
  {
+  "id": "beacon_duet",
+  "name": "Beacon Duet",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7440,
+  "dark": false,
+  "challenge": "mind",
+  "core": "permanent-bridge-revocable-descent-permission",
+  "ideas": [
+   "torch-bridge",
+   "invert-door",
+   "twist-undo",
+   "twist-stranding"
+  ],
+  "order": 144,
+  "line": "Permanent torch bridges and temporary reciprocal permissions have different lifetimes; the first bridge's far-bank authorization must be withdrawn after Fire has used it, before the party can reach the second pair of galleries.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "ent:torch",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:wide-door",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "brake_council",
   "name": "Brake Council",
   "source": "mine",
