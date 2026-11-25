@@ -1,0 +1,327 @@
+{
+  "id": "drop_register",
+  "name": "Drop Register",
+  "order": 249,
+  "description": "The stone begins as a permanent permission upstairs. Break its supporting floor only after recording the initial approvals; its lower position is a new two-state register.",
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###############.........################",
+    "#.......................################",
+    "#.......................################",
+    "#................===#==................#",
+    "#...................#..................#",
+    "#...................#..................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "spawns": {
+    "earth": [
+      32,
+      3
+    ],
+    "fire": [
+      4,
+      14
+    ],
+    "water": [
+      34,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "type": "cracked",
+      "id": "slab",
+      "x": 15,
+      "y": 4,
+      "w": 9,
+      "h": 1
+    },
+    {
+      "type": "boulder",
+      "id": "token",
+      "x": 16,
+      "y": 3
+    },
+    {
+      "type": "plate",
+      "id": "upper",
+      "x": 16,
+      "y": 3,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "f_access",
+        "w_access",
+        "f_inverse",
+        "w_inverse"
+      ]
+    },
+    {
+      "type": "belt",
+      "id": "belt",
+      "x": 1,
+      "y": 9,
+      "w": 19,
+      "speed": -0.55,
+      "mode": "reverse"
+    },
+    {
+      "type": "plate",
+      "id": "west",
+      "x": 1,
+      "y": 8,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f_west",
+        "w_west",
+        "f_exit",
+        "w_exit",
+        "e_exit"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "east",
+      "x": 17,
+      "y": 8,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "e_east",
+        "w_east"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "e_access",
+      "x": 25,
+      "y": 1,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "e_east",
+      "x": 30,
+      "y": 7,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Ecert",
+      "x": 34,
+      "y": 9,
+      "targets": [
+        "f_exit",
+        "w_east",
+        "w_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "e_exit",
+      "x": 37,
+      "y": 7,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "door",
+      "id": "f_access",
+      "x": 10,
+      "y": 12,
+      "h": 3
+    },
+    {
+      "type": "lever",
+      "id": "Fpre",
+      "x": 15,
+      "y": 14,
+      "targets": [
+        "w_access",
+        "e_access"
+      ]
+    },
+    {
+      "type": "lever",
+      "id": "reverse",
+      "x": 18,
+      "y": 14,
+      "targets": [
+        "belt"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_inverse",
+      "x": 21,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "door",
+      "id": "f_west",
+      "x": 24,
+      "y": 12,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Fwest",
+      "x": 28,
+      "y": 14,
+      "targets": [
+        "e_east"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_exit",
+      "x": 35,
+      "y": 12,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "w_access",
+      "x": 28,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "lever",
+      "id": "Wpre",
+      "x": 22,
+      "y": 19,
+      "targets": [
+        "e_access"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_inverse",
+      "x": 16,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "door",
+      "id": "w_west",
+      "x": 13,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Wwest",
+      "x": 10,
+      "y": 19,
+      "targets": [
+        "e_east"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_east",
+      "x": 6,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Wlast",
+      "x": 4,
+      "y": 19,
+      "targets": [
+        "e_exit",
+        "f_exit",
+        "w_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_exit",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 34,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 4,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 18
+    }
+  ],
+  "parTicks": 9180,
+  "hints": [
+    "Before dropping the stone, record both permissions above its future belt.",
+    "After the release, use the west position before reversing to the east.",
+    "After Earth's certificate, return the stone to the west for the final exit."
+  ]
+}

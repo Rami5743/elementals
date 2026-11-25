@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 148 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 155 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (50)
+## 2 players — this repo (52)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -227,6 +227,14 @@ Totals: 79 campaign levels, 148 in this repo, of which 11 now ship in the campai
   - idea: A pulley goes on counting the weight of whoever jumped off it until they land somewhere else — so a draught that stops you landing keeps the rope loaded with nobody aboard, and the way to hold the pan down while you leave it is to never touch the ground.
   - ideas: rope-keeps-the-jumper, twist-backwards, hold-switch, invert-door
   - features: ent:boulder ent:door ent:fan ent:plate ent:pulley opt:fan:lifts-fire-water opt:heavy-plate opt:invert:door opt:seesaw-range
+- **Causeway Embargo** `causeway_embargo` (2p: fire+earth) core=`floating-causeway-embargo-certificate` challenge=mind par=6120
+  - idea: a floating causeway is both the three-crossing physical floor and the persistent veto on the inspector's road. Adapted from the distinct three-player Stone Causeway, as allowed by the player-count-specific novelty rule.
+  - ideas: causeway-as-veto, boulder-float, twist-undo
+  - features: ent:boulder ent:door ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch opt:required:2 tile:sludge
+- **Falling Ledger** `falling_ledger` (2p: fire+earth) core=`fall-rewires-cargo-permissions` challenge=mind par=9420
+  - idea: the same heavy object switches circuits permanently by falling through its floor, changing a stationary permit into a reversible two-position register.
+  - ideas: drop-reconfigures-circuit, belt-reverse, twist-undo
+  - features: ent:belt ent:boulder ent:cracked ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:1 opt:required:2 opt:required:3 tile:one-way
 
 ## 2 players — campaign (34)
 
@@ -369,7 +377,7 @@ Totals: 79 campaign levels, 148 in this repo, of which 11 now ship in the campai
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (49)
+## 3 players — this repo (51)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -564,6 +572,14 @@ Totals: 79 campaign levels, 148 in this repo, of which 11 now ship in the campai
   - idea: a boulder floated into a single-tile sludge channel is simultaneously the persistent floor of a three-crossing route and the electrical input that vetoes a different player's passage. Establishing the physical route therefore costs an electrical permission.
   - ideas: boulder-float, causeway-as-veto, twist-undo
   - features: ent:boulder ent:door ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3 tile:sludge
+- **Drop Register** `drop_register` (3p: fire+water+earth) core=`irreversible-drop-reconfigures-cargo-register` challenge=mind par=9180
+  - idea: the same boulder is initially an upper stationary permission and, after Earth destroys its support, becomes the movable state of a lower reversible conveyor. This is an irreversible reconfiguration of the electrical circuit, not a succession of similar descents.
+  - ideas: pound-to-move, drop-reconfigures-circuit, belt-reverse, twist-undo
+  - features: ent:belt ent:boulder ent:cracked ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3 tile:one-way
+- **Silent Interval** `silent_interval` (3p: fire+water+earth) core=`intersection-of-moving-contact-free-intervals` challenge=motor par=7620
+  - idea: the gate is held shut by a union of four long cargo contacts. The useful signal is a moving hole in that union: both stones must simultaneously be between their two contacts. It is a negative rather than positive coincidence.
+  - ideas: moving-veto-silence, spatial-clock-phase-rendezvous, timed-window, invert-door
+  - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:4
 
 ## 3 players — campaign (30)
 
@@ -689,7 +705,7 @@ Totals: 79 campaign levels, 148 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (49)
+## 4 players — this repo (52)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -880,6 +896,18 @@ Totals: 79 campaign levels, 148 in this repo, of which 11 now ship in the campai
   - idea: a ground pound needs room to get airborne, so a cracked panel in a corridor one tile high cannot be broken at all — the roof has to be taken away first, and the roof is the bridge the rest of the party is standing on.
   - ideas: pound-needs-headroom, counterweight-you-must-remove, one-way-drop, twist-order
   - features: ent:boulder ent:cracked ent:door ent:freezepad ent:plate ent:pool ent:torch ent:turbine opt:heavy-plate opt:invert:door opt:latch opt:pool-timed opt:required:2 opt:wide-door tile:one-way tile:water
+- **Half-Weight Keeper** `half_weight_keeper` (4p: fire+water+earth+air) core=`half-unit-rider-keeps-torch-permission` challenge=mind par=7920
+  - idea: Air's fractional rope weight is exactly the missing ballast for a stable pan; Fire's full unit supplies the movement and is needed away from the pan to ignite the remote torch. Two separate uses of this division of mechanical and electrical roles are separated by a necessary full unload.
+  - ideas: fractional-rider-keeper, three-load-rope-control, machine-strands-operator, twist-undo
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:pulley ent:torch opt:elevator:loop opt:heavy-plate opt:latch opt:required:2 opt:seesaw-range
+- **Release Custodian** `release_custodian` (4p: fire+water+earth+air) core=`independent-custodian-of-released-circuit` challenge=mind par=8940
+  - idea: an irreversible transfer of a cargo key between two circuits, with an independent custodian who must approve the transfer and thereafter alone controls the new register.
+  - ideas: drop-reconfigures-circuit, pound-to-move, twist-undo
+  - features: ent:belt ent:boulder ent:cracked ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3 tile:one-way
+- **Silence Convoy** `silence_convoy` (4p: fire+water+earth+air) core=`two-travellers-through-intersecting-veto-gaps` challenge=motor par=7680
+  - idea: two independently moving cargo clocks create a shared absence of vetoes for a two-person convoy; the heavy traveller releases a wind-only inspector.
+  - ideas: moving-veto-silence, spatial-clock-phase-rendezvous, timed-window, quorum
+  - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate ent:turbine opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:4 opt:turbine-timed
 
 ## 4 players — campaign (23)
 

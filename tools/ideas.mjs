@@ -194,3 +194,9 @@ Object.assign(IDEAS, { "causeway-as-veto": {kind:'spine',note:"A floating boulde
 Object.assign(IDEAS, {
   'pound-needs-headroom': { kind: 'spine', note: "A ground pound is a jump first: measured, Earth standing on a cracked panel with one tile of roof cannot leave the ground at all, so there is never an airborne Down press and the floor is simply unbreakable, while two tiles are enough. A cracked panel in a crawl therefore cannot be opened by the player who owns it, only by whoever can take the ceiling away — and when that ceiling is the floor of the storey above, giving Earth the room to pound means pulling the party's own road out from under them. The barrier is neither the floor nor the roof but the distance between them." },
 });
+
+Object.assign(IDEAS, { "drop-reconfigures-circuit": {kind:'spine',note:"A cracked floor permanently transfers a cargo from a stationary upper contact to a separate reversible lower conveyor register, so the old permissions must be recorded before the circuit is reconfigured."} });
+
+Object.assign(IDEAS, { "moving-veto-silence": {kind:'spine',note:"A gate is closed by any of several spatial veto contacts and opens only in the intersection of two cargo objects' contact-free intervals; a third participant crosses during that temporary silence."} });
+
+Object.assign(IDEAS, { "fractional-rider-keeper": {kind:'spine',note:"Air's half-unit rope weight exactly balances a ballasted pan; Fire's full unit moves it and then leaves to perform a Fire-only task, while Air alone retains the mechanical permission."} });

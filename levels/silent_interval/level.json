@@ -1,0 +1,360 @@
+{
+  "id": "silent_interval",
+  "name": "Silent Interval",
+  "order": 250,
+  "description": "The gate opens not when two signals agree, but only when four moving veto contacts are simultaneously silent. Launch at different times to create a gap in the signals.",
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      8,
+      11
+    ],
+    "water": [
+      8,
+      15
+    ],
+    "earth": [
+      15,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "type": "elevator",
+      "id": "slow",
+      "x": 3,
+      "y": 3,
+      "w": 1,
+      "path": [
+        [
+          3,
+          3
+        ],
+        [
+          35,
+          3
+        ]
+      ],
+      "speed": 0.7
+    },
+    {
+      "type": "boulder",
+      "id": "slowcargo",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "type": "plate",
+      "id": "slow_home",
+      "x": 3,
+      "y": 2,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "F_exit",
+        "W_exit",
+        "E_exit"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "slow_far",
+      "x": 34,
+      "y": 2,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "F_work"
+      ]
+    },
+    {
+      "type": "elevator",
+      "id": "fast",
+      "x": 3,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          3,
+          7
+        ],
+        [
+          35,
+          7
+        ]
+      ],
+      "speed": 1.4
+    },
+    {
+      "type": "boulder",
+      "id": "fastcargo",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "type": "plate",
+      "id": "fast_home",
+      "x": 3,
+      "y": 6,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "F_exit",
+        "W_exit",
+        "E_exit"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "fast_far",
+      "x": 34,
+      "y": 6,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "W_work"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "slow_left",
+      "x": 1,
+      "y": 2,
+      "w": 18,
+      "weight": "heavy",
+      "targets": [
+        "E_silence"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "slow_right",
+      "x": 25,
+      "y": 2,
+      "w": 14,
+      "weight": "heavy",
+      "targets": [
+        "E_silence"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "fast_left",
+      "x": 1,
+      "y": 6,
+      "w": 9,
+      "weight": "heavy",
+      "targets": [
+        "E_silence"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "fast_right",
+      "x": 17,
+      "y": 6,
+      "w": 22,
+      "weight": "heavy",
+      "targets": [
+        "E_silence"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "cue",
+      "x": 17,
+      "y": 2,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "semaphore"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "semaphore",
+      "x": 38,
+      "y": 9,
+      "h": 3
+    },
+    {
+      "type": "button",
+      "id": "F_launch",
+      "x": 10,
+      "y": 11,
+      "mode": "timed",
+      "duration": 1550,
+      "targets": [
+        "slow"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "F_work",
+      "x": 24,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "F_cert",
+      "x": 34,
+      "y": 11,
+      "targets": [
+        "F_exit",
+        "W_exit",
+        "E_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "F_exit",
+      "x": 5,
+      "y": 9,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 35,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 10
+    },
+    {
+      "type": "button",
+      "id": "W_launch",
+      "x": 10,
+      "y": 15,
+      "mode": "timed",
+      "duration": 850,
+      "targets": [
+        "fast"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "W_work",
+      "x": 24,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "W_cert",
+      "x": 34,
+      "y": 15,
+      "targets": [
+        "F_exit",
+        "W_exit",
+        "E_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "W_exit",
+      "x": 5,
+      "y": 13,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 35,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 14
+    },
+    {
+      "type": "door",
+      "id": "E_silence",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "lever",
+      "id": "E_cert",
+      "x": 28,
+      "y": 19,
+      "targets": [
+        "F_work",
+        "W_work"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "E_exit",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 34,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 7620,
+  "hints": [
+    "Every long contact is a veto. The earth gate needs all four contacts to be off.",
+    "Launch the lower stone when the upper stone reaches the small cue contact; Earth waits just before the gate.",
+    "After Earth's far certificate the two far stone positions permit the workshops. Both stones must then return home."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "order": 348,
+  "challenge": "mind",
+  "core": "independent-custodian-of-released-circuit",
+  "ideas": [
+    "drop-reconfigures-circuit",
+    "pound-to-move",
+    "twist-undo"
+  ]
+}

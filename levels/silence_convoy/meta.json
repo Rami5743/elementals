@@ -1,0 +1,11 @@
+{
+  "order": 349,
+  "challenge": "motor",
+  "core": "two-travellers-through-intersecting-veto-gaps",
+  "ideas": [
+    "moving-veto-silence",
+    "spatial-clock-phase-rendezvous",
+    "timed-window",
+    "quorum"
+  ]
+}

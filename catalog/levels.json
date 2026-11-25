@@ -3233,6 +3233,39 @@
   ]
  },
  {
+  "id": "causeway_embargo",
+  "name": "Causeway Embargo",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 6120,
+  "dark": false,
+  "challenge": "mind",
+  "core": "floating-causeway-embargo-certificate",
+  "ideas": [
+   "causeway-as-veto",
+   "boulder-float",
+   "twist-undo"
+  ],
+  "order": 150,
+  "line": "a floating causeway is both the three-crossing physical floor and the persistent veto on the inspector's road. Adapted from the distinct three-player Stone Causeway, as allowed by the player-count-specific novelty rule.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "ceiling_committee",
   "name": "Ceiling Committee",
   "source": "mine",
@@ -4177,6 +4210,45 @@
   ]
  },
  {
+  "id": "drop_register",
+  "name": "Drop Register",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 9180,
+  "dark": false,
+  "challenge": "mind",
+  "core": "irreversible-drop-reconfigures-cargo-register",
+  "ideas": [
+   "pound-to-move",
+   "drop-reconfigures-circuit",
+   "belt-reverse",
+   "twist-undo"
+  ],
+  "order": 249,
+  "line": "the same boulder is initially an upper stationary permission and, after Earth destroys its support, becomes the movable state of a lower reversible conveyor. This is an irreversible reconfiguration of the electrical circuit, not a succession of similar descents.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "dumbwaiter",
   "name": "Dumbwaiter",
   "source": "mine",
@@ -4356,6 +4428,45 @@
    "opt:required:1",
    "opt:required:2",
    "opt:required:3"
+  ]
+ },
+ {
+  "id": "falling_ledger",
+  "name": "Falling Ledger",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 9420,
+  "dark": false,
+  "challenge": "mind",
+  "core": "fall-rewires-cargo-permissions",
+  "ideas": [
+   "drop-reconfigures-circuit",
+   "belt-reverse",
+   "twist-undo"
+  ],
+  "order": 151,
+  "line": "the same heavy object switches circuits permanently by falling through its floor, changing a stationary permit into a reversible two-position register.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
   ]
  },
  {
@@ -4666,6 +4777,43 @@
    "opt:latch",
    "opt:required:2",
    "tile:one-way"
+  ]
+ },
+ {
+  "id": "half_weight_keeper",
+  "name": "Half-Weight Keeper",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7920,
+  "dark": false,
+  "challenge": "mind",
+  "core": "half-unit-rider-keeps-torch-permission",
+  "ideas": [
+   "fractional-rider-keeper",
+   "three-load-rope-control",
+   "machine-strands-operator",
+   "twist-undo"
+  ],
+  "order": 347,
+  "line": "Air's fractional rope weight is exactly the missing ballast for a stable pan; Fire's full unit supplies the movement and is needed away from the pan to ignite the remote torch. Two separate uses of this division of mechanical and electrical roles are separated by a necessary full unload.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "ent:torch",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range"
   ]
  },
  {
@@ -5964,6 +6112,44 @@
   ]
  },
  {
+  "id": "release_custodian",
+  "name": "Release Custodian",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8940,
+  "dark": false,
+  "challenge": "mind",
+  "core": "independent-custodian-of-released-circuit",
+  "ideas": [
+   "drop-reconfigures-circuit",
+   "pound-to-move",
+   "twist-undo"
+  ],
+  "order": 348,
+  "line": "an irreversible transfer of a cargo key between two circuits, with an independent custodian who must approve the transfer and thereafter alone controls the new register.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "return_current",
   "name": "Return Current",
   "source": "mine",
@@ -6528,6 +6714,84 @@
    "opt:latch",
    "opt:required:2",
    "opt:required:3",
+   "opt:required:4"
+  ]
+ },
+ {
+  "id": "silence_convoy",
+  "name": "Silence Convoy",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7680,
+  "dark": false,
+  "challenge": "motor",
+  "core": "two-travellers-through-intersecting-veto-gaps",
+  "ideas": [
+   "moving-veto-silence",
+   "spatial-clock-phase-rendezvous",
+   "timed-window",
+   "quorum"
+  ],
+  "order": 349,
+  "line": "two independently moving cargo clocks create a shared absence of vetoes for a two-person convoy; the heavy traveller releases a wind-only inspector.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:turbine",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4",
+   "opt:turbine-timed"
+  ]
+ },
+ {
+  "id": "silent_interval",
+  "name": "Silent Interval",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7620,
+  "dark": false,
+  "challenge": "motor",
+  "core": "intersection-of-moving-contact-free-intervals",
+  "ideas": [
+   "moving-veto-silence",
+   "spatial-clock-phase-rendezvous",
+   "timed-window",
+   "invert-door"
+  ],
+  "order": 250,
+  "line": "the gate is held shut by a union of four long cargo contacts. The useful signal is a moving hole in that union: both stones must simultaneously be between their two contacts. It is a negative rather than positive coincidence.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
    "opt:required:4"
   ]
  },
