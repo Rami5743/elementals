@@ -58,18 +58,18 @@ together. `twist-order`×7, `twist-undo`×7, `quorum`×5, `machine-strands-opera
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- twist-order + unload-the-pan-you-ride
-- lift-corner-path + single-file-stone
-- liquid-lane + twist-stranding
-- door-pushes-you-through + lift-corner-path
-- single-file-stone + twist-self-block
-- fan-band + lift-corner-path
-- lift-corner-path + stand-aside-is-the-switch
-- fan-band + machine-strands-operator
-- lift-sheds-its-load + twist-stranding
-- low-roof-no-jump + twist-stranding
-- lift-corner-path + turbine-out-of-reach
-- machine-strands-operator + switch-in-mid-flight
+- sink-as-a-timer + twist-order
+- invert-door + pound-chain
+- boulder-carry + counterweight-you-must-remove
+- belt-reverse + object-as-permanent-switch
+- freeze-invert + lift-corner-path
+- crate-step + twist-order
+- fan-band + twist-two-clocks
+- invert-door + mass-adds-on-the-beam
+- fan-passenger + lock-per-element
+- glide-passenger + lift-corner-path
+- lift-sorts-by-weight + twist-order
+- counterweight-you-must-remove + single-file-stone
 
 ## This repo's 3-player levels
 

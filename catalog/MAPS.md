@@ -3616,3 +3616,79 @@ Entities:
   X  exit_39      exit       at (37,3)  air
   *  gem_40       gem        at (36,4)  air
 ```
+
+## Quartet Imprint (`quartet_imprint`) — 4p, core `quorum-released-hoist-imprint`
+
+```
+Quartet Imprint (quartet_imprint) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ################.p.#####################
+ 2  ################===#####################
+ 3  ################.p.#####################
+ 4  ################EEE#####################
+ 5  ########################################
+ 6  #........D.........D.........D.........#
+ 7  #........D.........D.........D.......X.#
+ 8  #..@.....D....l....D...l.....D......*X.#
+ 9  ########################################
+10  #.........D.......D.D.........D........#
+11  #.X.......D.......D.D.........D........#
+12  #.X*.l....D.....l.D.D....l....D...l.@..#
+13  ########################################
+14  #........D.........D.........D.........#
+15  #........D.........D.........D.......X.#
+16  #..@.....D....l....D...l.....D....l.*X.#
+17  ########################################
+18  #.........D.........D.........D.D......#
+19  #.X.......D.........D.........D.D......#
+20  #.X*.l....D.....l...D....l....D.D...@..#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,8)  water (36,12)  earth (3,16)  air (36,20)
+Entities:
+  E  hoist        elevator   at (16,4)  3x1  <- lift, permit (needs 2)  speed 1.5  path (16,4)-(16,2)
+  O  stone        boulder    at (17,3)
+  D  press        door       at (17,1)  <- hammer
+  p  top          plate      at (17,1)  -> w0, e0, w1, f1, f2, a0  weight heavy
+  p  bottom       plate      at (17,3)  -> f0, e1, e2, w2, a1, a2  weight heavy
+  X  exit_5       exit       at (37,7)  fire
+  *  gem_6        gem        at (36,8)  fire
+  X  exit_7       exit       at (2,11)  water
+  *  gem_8        gem        at (3,12)  water
+  X  exit_9       exit       at (37,15)  earth
+  *  gem_10       gem        at (36,16)  earth
+  l  lift         lever      at (3,8)  -> hoist
+  l  hammer       lever      at (3,16)  -> press  on
+  D  w0           door       at (30,10)  1x3  <- top  latch
+  l  wa           lever      at (25,12)  -> f0
+  D  e0           door       at (9,14)  1x3  <- top  latch
+  l  ea           lever      at (14,16)  -> f0
+  D  f0           door       at (9,6)  1x3  <- bottom, wa, ea, aa (needs 4)  latch
+  l  fa           lever      at (14,8)  -> e1, w1, a1
+  D  e1           door       at (19,14)  1x3  <- bottom, fa (needs 2)  latch
+  l  eb           lever      at (23,16)  -> w1
+  D  w1           door       at (20,10)  1x3  <- top, fa, eb, ab (needs 4)  latch
+  l  wb           lever      at (16,12)  -> f1, inv
+  D  inv          door       at (18,10)  1x3  <- wb  invert
+  D  f1           door       at (19,6)  1x3  <- top, wb (needs 2)  latch
+  l  fb           lever      at (23,8)  -> e2, w2, a2
+  l  return       lever      at (34,12)  -> e2, a2
+  D  e2           door       at (29,14)  1x3  <- bottom, fb, return, ac (needs 4)  latch
+  l  ec           lever      at (34,16)  -> w2
+  D  w2           door       at (10,10)  1x3  <- bottom, fb, ec (needs 3)  latch
+  l  wc           lever      at (5,12)  -> f2
+  D  f2           door       at (29,6)  1x3  <- top, wc (needs 2)  latch
+  l  permit       lever      at (36,20)  -> hoist, air_inv
+  D  air_inv      door       at (32,18)  1x3  <- permit  invert
+  D  a0           door       at (30,18)  1x3  <- top  latch
+  l  aa           lever      at (25,20)  -> f0
+  D  a1           door       at (20,18)  1x3  <- bottom, fa (needs 2)  latch
+  l  ab           lever      at (16,20)  -> w1
+  D  a2           door       at (10,18)  1x3  <- bottom, fb, return (needs 3)  latch
+  l  ac           lever      at (5,20)  -> e2
+  X  exit_40      exit       at (2,19)  air
+  *  gem_41       gem        at (3,20)  air
+```

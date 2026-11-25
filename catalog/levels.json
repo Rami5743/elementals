@@ -4057,6 +4057,44 @@
   ]
  },
  {
+  "id": "quartet_imprint",
+  "name": "Quartet Imprint",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8160,
+  "dark": false,
+  "challenge": "mind",
+  "core": "quorum-released-hoist-imprint",
+  "ideas": [
+   "grating-memory-with-erase",
+   "one-way-press",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 320,
+  "line": "A jointly powered hoist writes a physical memory onto a grate. Air cannot leave its control room while its power key is active, so the retained cargo state must substitute for its relinquished permission.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "relay_ferry",
   "name": "Relay Ferry",
   "source": "mine",

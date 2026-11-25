@@ -1,0 +1,440 @@
+{
+  "id": "quartet_imprint",
+  "name": "Quartet Imprint",
+  "order": 320,
+  "description": "Air must give up a hoist permission while the stone stays high; Earth erases that retained state, and Water exchanges its live relay for a recorded permission.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 8160,
+  "tiles": [
+    "########################################",
+    "################...#####################",
+    "################===#####################",
+    "################...#####################",
+    "################...#####################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      8
+    ],
+    "water": [
+      36,
+      12
+    ],
+    "earth": [
+      3,
+      16
+    ],
+    "air": [
+      36,
+      20
+    ]
+  },
+  "entities": [
+    {
+      "id": "hoist",
+      "type": "elevator",
+      "x": 16,
+      "y": 4,
+      "w": 3,
+      "path": [
+        [
+          16,
+          4
+        ],
+        [
+          16,
+          2
+        ]
+      ],
+      "speed": 1.5,
+      "required": 2
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 17,
+      "y": 3
+    },
+    {
+      "id": "press",
+      "type": "door",
+      "x": 17,
+      "y": 1,
+      "h": 1
+    },
+    {
+      "id": "top",
+      "type": "plate",
+      "x": 17,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "w0",
+        "e0",
+        "w1",
+        "f1",
+        "f2",
+        "a0"
+      ]
+    },
+    {
+      "id": "bottom",
+      "type": "plate",
+      "x": 17,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "f0",
+        "e1",
+        "e2",
+        "w2",
+        "a1",
+        "a2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 7
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 8
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 11
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 15
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 36,
+      "y": 16
+    },
+    {
+      "id": "lift",
+      "type": "lever",
+      "x": 3,
+      "y": 8,
+      "targets": [
+        "hoist"
+      ]
+    },
+    {
+      "id": "hammer",
+      "type": "lever",
+      "x": 3,
+      "y": 16,
+      "targets": [
+        "press"
+      ],
+      "on": true
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 10,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "wa",
+      "type": "lever",
+      "x": 25,
+      "y": 12,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "e0",
+      "type": "door",
+      "x": 9,
+      "y": 14,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "ea",
+      "type": "lever",
+      "x": 14,
+      "y": 16,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "f0",
+      "type": "door",
+      "x": 9,
+      "y": 6,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "fa",
+      "type": "lever",
+      "x": 14,
+      "y": 8,
+      "targets": [
+        "e1",
+        "w1",
+        "a1"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 19,
+      "y": 14,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "eb",
+      "type": "lever",
+      "x": 23,
+      "y": 16,
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 10,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "wb",
+      "type": "lever",
+      "x": 16,
+      "y": 12,
+      "targets": [
+        "f1",
+        "inv"
+      ]
+    },
+    {
+      "id": "inv",
+      "type": "door",
+      "x": 18,
+      "y": 10,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 19,
+      "y": 6,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "fb",
+      "type": "lever",
+      "x": 23,
+      "y": 8,
+      "targets": [
+        "e2",
+        "w2",
+        "a2"
+      ]
+    },
+    {
+      "id": "return",
+      "type": "lever",
+      "x": 34,
+      "y": 12,
+      "targets": [
+        "e2",
+        "a2"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 29,
+      "y": 14,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "ec",
+      "type": "lever",
+      "x": 34,
+      "y": 16,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 10,
+      "y": 10,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "wc",
+      "type": "lever",
+      "x": 5,
+      "y": 12,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 29,
+      "y": 6,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "permit",
+      "type": "lever",
+      "x": 36,
+      "y": 20,
+      "targets": [
+        "hoist",
+        "air_inv"
+      ]
+    },
+    {
+      "id": "air_inv",
+      "type": "door",
+      "x": 32,
+      "y": 18,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "a0",
+      "type": "door",
+      "x": 30,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "aa",
+      "type": "lever",
+      "x": 25,
+      "y": 20,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "a1",
+      "type": "door",
+      "x": 20,
+      "y": 18,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "ab",
+      "type": "lever",
+      "x": 16,
+      "y": 20,
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "a2",
+      "type": "door",
+      "x": 10,
+      "y": 18,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "ac",
+      "type": "lever",
+      "x": 5,
+      "y": 20,
+      "targets": [
+        "e2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 2,
+      "y": 19
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 3,
+      "y": 20
+    }
+  ],
+  "hints": [
+    "The hoist requires Fire and Air, but Air cannot leave its control room while its permission is live.",
+    "The grate keeps the high state when Air releases its permission. Earth alone can erase it with the press.",
+    "Water must also release its middle relay before returning to the first room."
+  ]
+}
