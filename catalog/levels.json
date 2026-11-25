@@ -5231,6 +5231,43 @@
   ]
  },
  {
+  "id": "windfall_quartet",
+  "name": "Windfall Quartet",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7440,
+  "dark": false,
+  "challenge": "motor",
+  "core": "windfall-serial-interruption-operators",
+  "ideas": [
+   "wind-off-enables-descent",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 325,
+  "line": "separate operators for two temporary wind interruptions, with the first operator's certification needed before the second is released.",
+  "tokens": [
+   "ent:button",
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:fan:lifts-fire-water",
+   "opt:invert:door",
+   "opt:invert:fan",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "windfall_relay",
   "name": "Windfall Relay",
   "source": "mine",

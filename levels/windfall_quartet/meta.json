@@ -1,0 +1,10 @@
+{
+  "order": 325,
+  "challenge": "motor",
+  "core": "windfall-serial-interruption-operators",
+  "ideas": [
+    "wind-off-enables-descent",
+    "quorum",
+    "twist-undo"
+  ]
+}

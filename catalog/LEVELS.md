@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 78 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 79 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (25)
@@ -507,7 +507,7 @@ Totals: 79 campaign levels, 78 in this repo, of which 11 now ship in the campaig
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (26)
+## 4 players — this repo (27)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -613,6 +613,10 @@ Totals: 79 campaign levels, 78 in this repo, of which 11 now ship in the campaig
   - idea: the loading stop has its own operator, trapped in the enabling booth while the stop is engaged.
   - ideas: shuttle-strips-cargo-to-belt, quorum, twist-undo
   - features: ent:belt ent:boulder ent:door ent:elevator ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:4
+- **Windfall Quartet** `windfall_quartet` (4p: fire+water+earth+air) core=`windfall-serial-interruption-operators` challenge=motor par=7440
+  - idea: separate operators for two temporary wind interruptions, with the first operator's certification needed before the second is released.
+  - ideas: wind-off-enables-descent, quorum, twist-undo
+  - features: ent:button ent:door ent:fan ent:lever ent:plate opt:button-timed opt:button:timed opt:fan:lifts-fire-water opt:invert:door opt:invert:fan opt:latch opt:required:2 opt:required:3
 
 ## 4 players — campaign (23)
 
