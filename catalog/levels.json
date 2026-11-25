@@ -2723,6 +2723,45 @@
   ]
  },
  {
+  "id": "airborne_headway",
+  "name": "Airborne Headway",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7020,
+  "dark": false,
+  "challenge": "motor",
+  "core": "airborne-upstream-during-two-reversed-pulses",
+  "ideas": [
+   "hop-beats-belt",
+   "timed-window",
+   "twist-undo"
+  ],
+  "order": 253,
+  "line": "the useful path opens onto a conveyor faster than a player's ground speed, so jumping rather than walking is the way upstream. Reversing the conveyor makes the return trip another upstream journey.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:blocks-all",
+   "opt:belt:reverse",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "aqueduct",
   "name": "Aqueduct",
   "source": "mine",

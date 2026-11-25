@@ -40,18 +40,18 @@ together. `twist-undo`×29, `quorum`×28, `twist-order`×8, `timed-window`×6, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- cargo-as-clock-contact + lift-corner-path
-- lift-corner-path + lock-per-element
-- head-stack + stand-aside-is-the-switch
-- climb-then-steer + freeze-bridge
-- low-roof-no-jump + twist-stranding
-- boulder-carry + glide-passenger
-- glide-passenger + turbine-out-of-reach
-- boulder-float + liquid-lane
-- low-roof-no-jump + unload-the-pan-you-ride
-- fan-passenger + turbine-out-of-reach
-- boulder-float + unload-the-pan-you-ride
-- send-one-through + single-file-stone
+- glide-dismount + lock-per-element
+- dark + twist-undo
+- send-one-through + tower-presses-a-column
+- belt-reverse + twist-stranding
+- low-roof-no-jump + stand-aside-is-the-switch
+- dark + pound-chain
+- freeze-bridge + glide-passenger
+- partner-builds-your-landing + pound-chain
+- glide-dismount + twist-undo
+- convergent-belt-seam + lift-corner-path
+- rope-keeps-the-jumper + twist-order
+- grating-memory-with-erase + lift-corner-path
 
 ## This repo's 4-player levels
 

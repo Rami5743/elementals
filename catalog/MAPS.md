@@ -6194,6 +6194,64 @@ Entities:
   X  exit_28      exit       at (1,6)  water
 ```
 
+## Airborne Headway (`airborne_headway`) — 3p, core `airborne-upstream-during-two-reversed-pulses`
+
+```
+Airborne Headway (airborne_headway) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #......................................#
+ 2  #..pp.......ppp........................#
+ 3  #..E...................................#
+ 4  ########################################
+ 5  ########################################
+ 6  #....D......D...........D..............#
+ 7  #X...D......D...........D..............#
+ 8  #X...D..l@..D...........D.......l.*....#
+ 9  #############<<<<<<<<<<<################
+10  ########################################
+11  #.....D........D.........D.............#
+12  #X....D........D.........D.............#
+13  #X....D..@.....D.........D......l.*....#
+14  ########################################
+15  ########################################
+16  ########################################
+17  #....D......................D..........#
+18  #....D......................D.........X#
+19  #.@..D...b..................D......*..X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (9,8)  water (9,13)  earth (2,19)
+Entities:
+  E  cargo        elevator   at (3,3)  <- pulse  speed 0.8  path (3,3)-(13,3)
+  O  load         boulder    at (3,2)
+  p  home         plate      at (3,2)  2x1  -> water_home, earth_final  weight heavy
+  p  far          plate      at (12,2)  3x1  -> water_work  weight heavy
+  >  headwind     belt       at (13,9)  11x1  <- w_phase  mode reverse  speed -4
+  D  inlet        door       at (12,6)  1x3  <- pulse
+  D  outlet       door       at (24,6)  1x3  <- pulse
+  D  fire_exit    door       at (5,6)  1x3  <- f_home, w_phase (needs 2)  latch
+  l  f_cert       lever      at (32,8)  -> water_work, water_home
+  l  f_home       lever      at (8,8)  -> fire_exit, earth_final, water_exit
+  l  w_start      lever      at (9,13)  -> earth_access
+  D  water_work   door       at (15,11)  1x3  <- far, f_cert (needs 2)  latch
+  D  water_home   door       at (25,11)  1x3  <- home, f_cert (needs 2)  latch
+  l  w_phase      lever      at (32,13)  -> headwind, fire_exit, earth_final
+  D  water_exit   door       at (6,11)  1x3  <- f_home
+  D  earth_access door       at (5,17)  1x3  <- w_start  latch
+  b  pulse        button     at (9,19)  -> cargo, inlet, outlet  mode timed  duration 650
+  D  earth_final  door       at (28,17)  1x3  <- home, f_home, w_phase (needs 3)  latch
+  *  fire_gem     gem        at (34,8)  fire
+  X  fire_end     exit       at (1,7)  fire
+  *  water_gem    gem        at (34,13)  water
+  X  water_end    exit       at (1,12)  water
+  *  earth_gem    gem        at (35,19)  earth
+  X  earth_end    exit       at (38,18)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

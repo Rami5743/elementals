@@ -1,0 +1,10 @@
+{
+  "order": 253,
+  "challenge": "motor",
+  "core": "airborne-upstream-during-two-reversed-pulses",
+  "ideas": [
+    "hop-beats-belt",
+    "timed-window",
+    "twist-undo"
+  ]
+}
