@@ -71,7 +71,14 @@ routine night   trig_01Ao4TL9buSs9qQkQgBEmvuU       19:51 every evening but Mond
 watchdog early  trig_013ApCmACEAB2xizxnBAGwHb       Mondays 19:17, fires into the owner's session
 watchdog after  trig_016bQsbwkJ31rkpaarwnDhYm       Mondays 23:52, fires into the owner's session
 watchdog daily  trig_018MFQddeABXnY9dZ6J7gZiF       00:23 after each routine night, owner's session
+branch sync     trig_01VrSHSm9zkiUpaF48d3N6dm       hourly at :54 UTC, fires into the standing host
 ```
+
+**A wake is not by itself the start of a night.** The branch sync above wakes this same standing
+session every hour, all day, to fold the `gpt` branch into `main` (`ops/BRANCH_SYNC.md`). Most of
+those wakes end in one line and nothing else. So read what actually woke you before you do
+anything: only the Monday and routine-night tasks start a night, and an hourly sync is never a
+reason to build a level, spawn an agent or touch the motor counters.
 
 A trigger's prompt can only be edited from the session it wakes, and its session cannot be changed
 at all — to move a night onto a new host, delete the trigger and create it again.
