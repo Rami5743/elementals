@@ -1,0 +1,243 @@
+{
+  "id": "chute_tandem",
+  "name": "Chute Tandem",
+  "order": 134,
+  "description": "Earth hauls the runaway and releases it only after Water authorizes the dive. After the catch, Water must return to the bay's west end to send Earth up to the final loft.",
+  "supports": [
+    [
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 7140,
+  "hints": [
+    "Earth must haul the stone to the pen, not just roll it around the bay.",
+    "The catwalk permit and the bay release control must both be on.",
+    "Dive ahead of the stone. Its parked weight opens the east workshop, whose key opens the west return control.",
+    "Return west to send Earth up the last lift."
+  ],
+  "tiles": [
+    "########################################",
+    "##...............................##....#",
+    "##...............................##....#",
+    "##....WWW........................##....#",
+    "##...########################==..##..###",
+    "##..#............................##..###",
+    "##==.............................##..###",
+    "##...............................##..###",
+    "#########==#...\\.................##..###",
+    "#########..#...#\\................##..###",
+    "#########==#...##\\...............##..###",
+    "#########..#...###\\..............##..###",
+    "#########==#...######\\...........##..###",
+    "#########..#...#######\\..........##..###",
+    "#########==#...##########\\.......##..###",
+    "#########..#...###########\\......##..###",
+    "#########==#...###############...##..###",
+    "#....................................###",
+    "#........==..........................###",
+    "#....................................###",
+    "############...##############....##..###",
+    "########################################"
+  ],
+  "spawns": {
+    "water": [
+      6,
+      19
+    ],
+    "earth": [
+      31,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "pen",
+      "type": "elevator",
+      "x": 16,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          16,
+          7
+        ],
+        [
+          16,
+          5
+        ]
+      ],
+      "speed": 0.25,
+      "required": 2
+    },
+    {
+      "id": "catgate",
+      "type": "door",
+      "x": 28,
+      "y": 1,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "hoist",
+      "type": "elevator",
+      "x": 12,
+      "y": 20,
+      "w": 3,
+      "path": [
+        [
+          12,
+          20
+        ],
+        [
+          12,
+          8
+        ]
+      ],
+      "mode": "powered",
+      "speed": 4
+    },
+    {
+      "id": "call",
+      "type": "button",
+      "mode": "hold",
+      "x": 12,
+      "y": 7,
+      "w": 3,
+      "h": 14,
+      "targets": [
+        "hoist"
+      ]
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 27,
+      "y": 19,
+      "rolls": true
+    },
+    {
+      "id": "pad",
+      "type": "plate",
+      "x": 27,
+      "y": 15,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "way"
+      ]
+    },
+    {
+      "id": "way",
+      "type": "door",
+      "x": 33,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 18,
+      "y": 19
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 27,
+      "y": 3
+    },
+    {
+      "type": "checkpoint",
+      "x": 5,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 2
+    },
+    {
+      "id": "permit",
+      "type": "lever",
+      "x": 23,
+      "y": 3,
+      "targets": [
+        "pen",
+        "catgate"
+      ]
+    },
+    {
+      "id": "release",
+      "type": "lever",
+      "x": 31,
+      "y": 19,
+      "targets": [
+        "pen",
+        "catgate",
+        "return_belt"
+      ]
+    },
+    {
+      "id": "return_gate",
+      "type": "door",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "return_key",
+      "type": "lever",
+      "x": 34,
+      "y": 19,
+      "targets": [
+        "return_gate"
+      ]
+    },
+    {
+      "id": "home_lift",
+      "type": "elevator",
+      "x": 35,
+      "y": 20,
+      "w": 2,
+      "path": [
+        [
+          35,
+          20
+        ],
+        [
+          35,
+          4
+        ]
+      ],
+      "speed": 1
+    },
+    {
+      "id": "home_key",
+      "type": "lever",
+      "x": 1,
+      "y": 19,
+      "targets": [
+        "home_lift"
+      ]
+    },
+    {
+      "id": "return_belt",
+      "type": "belt",
+      "x": 29,
+      "y": 20,
+      "w": 4,
+      "h": 1,
+      "speed": -2
+    }
+  ]
+}

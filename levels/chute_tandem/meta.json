@@ -1,0 +1,10 @@
+{
+  "order": 134,
+  "challenge": "motor",
+  "core": "two-party-runaway-dive-return-certificate",
+  "ideas": [
+    "dive-ahead-of-the-runaway",
+    "twist-order",
+    "twist-stranding"
+  ]
+}

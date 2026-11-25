@@ -56,18 +56,18 @@ together. `twist-undo`×14, `quorum`×13, `twist-order`×7, `machine-strands-ope
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- invert-door + two-in-the-air-at-once
-- counterweight-you-must-remove + dark
-- stand-aside-is-the-switch + twist-two-clocks
-- counterweight-you-must-remove + wide-door
-- belt-cargo + hop-beats-belt
-- lift-sorts-by-weight + timed-window
-- lift-corner-path + mass-adds-on-the-beam
-- lift-corner-path + ratio-reverses-paired-cargo
-- ratio-reverses-paired-cargo + twist-two-clocks
-- machine-strands-operator + twist-sacrifice
-- boulder-float + lift-corner-path
-- glide-passenger + lift-corner-path
+- crate-step + fan-passenger
+- hop-beats-belt + twist-self-block
+- lift-corner-path + seesaw-balance
+- invert-door + seesaw-balance
+- counterweight-you-must-remove + single-file-stone
+- boulder-float + counterweight-you-must-remove
+- glide-passenger + invert-door
+- invert-door + trigger-from-above
+- freeze-invert + invert-door
+- lift-corner-path + turbine-out-of-reach
+- glide-passenger + object-as-permanent-switch
+- counterweight-you-must-remove + pound-to-move
 
 ## This repo's 3-player levels
 

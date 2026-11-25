@@ -3137,6 +3137,48 @@
   ]
  },
  {
+  "id": "chute_tandem",
+  "name": "Chute Tandem",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "water+earth"
+  ],
+  "parTicks": 7140,
+  "dark": false,
+  "challenge": "motor",
+  "core": "two-party-runaway-dive-return-certificate",
+  "ideas": [
+   "dive-ahead-of-the-runaway",
+   "twist-order",
+   "twist-stranding"
+  ],
+  "order": 134,
+  "line": "A runner dives ahead of a rolling stone which is released by a slow rising barrier; a return conveyor recovers missed deliveries, and the captured load unlocks the partner's final hoist.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:walkable",
+   "opt:button:hold",
+   "opt:elevator:powered",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:rolling-boulder",
+   "tile:one-way",
+   "tile:slope",
+   "tile:water"
+  ]
+ },
+ {
   "id": "cistern",
   "name": "Cistern",
   "source": "mine",

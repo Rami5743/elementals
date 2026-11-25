@@ -1758,6 +1758,59 @@ Entities:
   l  wkey4        lever      at (35,19)  -> wexit, fexit
 ```
 
+## Chute Tandem (`chute_tandem`) — 2p, core `two-party-runaway-dive-return-certificate`
+
+```
+Chute Tandem (chute_tandem) for water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##..........................D....##....#
+ 2  ##..........................D....##...X#
+ 3  ##....WWW..............l...*D....##...X#
+ 4  ##...########################==..##..###
+ 5  ##..#............................##..###
+ 6  ##==.............................##..###
+ 7  ##..........bbb.E................##..###
+ 8  #########==#bbb\.................##..###
+ 9  #########..#bbb#\................##..###
+10  #########==#bbb##\...............##..###
+11  #########..#bbb###\..............##..###
+12  #########==#bbb######\...........##..###
+13  #########..#bbb#######\..........##..###
+14  #########==#bbb##########\.......##..###
+15  #########..#bbb###########\ppp...##..###
+16  #########==#bbb###############...##..###
+17  #.D.........bbb..................D...###
+18  #XD..!...==.bbb..................D...###
+19  #lD..!@.....bbb...*........O...@.Dl..###
+20  ############bbb##############<<<<##EE###
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (6,19)  earth (31,19)
+Entities:
+  E  pen          elevator   at (16,7)  <- permit, release (needs 2)  speed 0.25  path (16,7)-(16,5)
+  D  catgate      door       at (28,1)  1x3  <- permit, release (needs 2)
+  E  hoist        elevator   at (12,20)  3x1  <- call  mode powered  speed 4  path (12,20)-(12,8)
+  b  call         button     at (12,7)  3x14  -> hoist  mode hold
+  O  stone        boulder    at (27,19)
+  p  pad          plate      at (27,15)  3x1  -> way  weight heavy
+  D  way          door       at (33,17)  1x3  <- pad  latch
+  *  gem_7        gem        at (18,19)  earth
+  *  gem_8        gem        at (27,3)  water
+  !  checkpoint_9 checkpoint at (5,18)
+  X  exit_10      exit       at (1,18)  water
+  X  exit_11      exit       at (38,2)  earth
+  l  permit       lever      at (23,3)  -> pen, catgate
+  l  release      lever      at (31,19)  -> pen, catgate, return_belt
+  D  return_gate  door       at (2,17)  1x3  <- return_key  latch
+  l  return_key   lever      at (34,19)  -> return_gate
+  E  home_lift    elevator   at (35,20)  2x1  <- home_key  speed 1  path (35,20)-(35,4)
+  l  home_key     lever      at (1,19)  -> home_lift
+  >  return_belt  belt       at (29,20)  4x1  <- release  speed -2
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

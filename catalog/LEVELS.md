@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 99 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 100 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (33)
+## 2 players — this repo (34)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -162,6 +162,10 @@ Totals: 79 campaign levels, 99 in this repo, of which 11 now ship in the campaig
   - idea: Changing the mechanical advantage reverses which of two loaded pans is heavier; each direction produces a different pair of simultaneous, permanent-until-reversed cargo contacts.
   - ideas: ratio-reverses-paired-cargo, quorum, twist-undo
   - features: ent:boulder ent:door ent:lever ent:plate ent:pulley opt:heavy-plate opt:latch opt:required:1 opt:required:2 opt:required:3 opt:seesaw-range
+- **Chute Tandem** `chute_tandem` (2p: water+earth) core=`two-party-runaway-dive-return-certificate` challenge=motor par=7140
+  - idea: A runner dives ahead of a rolling stone which is released by a slow rising barrier; a return conveyor recovers missed deliveries, and the captured load unlocks the partner's final hoist.
+  - ideas: dive-ahead-of-the-runaway, twist-order, twist-stranding
+  - features: ent:belt ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:belt:walkable opt:button:hold opt:elevator:powered opt:heavy-plate opt:latch opt:required:1 opt:required:2 opt:rolling-boulder tile:one-way tile:slope tile:water
 
 ## 2 players — campaign (34)
 
