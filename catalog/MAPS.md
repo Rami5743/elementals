@@ -8526,3 +8526,70 @@ Entities:
   *  agem         gem        at (33,19)  air
   X  aexit        exit       at (38,18)  air
 ```
+
+## Phase Dispatch (`phase_dispatch`) — 4p, core `revocable-launch-permit-for-opposite-stroke-inspections`
+
+```
+Phase Dispatch (phase_dispatch) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #......................................#
+ 3  #..pp...........pppp..............ppp..#
+ 4  #..E...................................#
+ 5  ########################################
+ 6  #...D...............D..................#
+ 7  #...D...............D.................X#
+ 8  #.@.D....b..........D............l...*X#
+ 9  ########################################
+10  #....D......D...........D..............#
+11  #X...D......D...........D..............#
+12  #X*..D..@...D.....l.....D.....l........#
+13  ########################################
+14  #.........D....D.........D.........D...#
+15  #.........D....D.........D.........D..X#
+16  #..@......D....D.........D.....l...D.*X#
+17  ########################################
+18  #.........D....D...................D...#
+19  #.........D....D...................D..X#
+20  #..@......D....D......l............D.*X#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (2,8)  fire (8,12)  water (3,16)  air (3,20)
+Entities:
+  E  shuttle      elevator   at (3,4)  <- clock  speed 0.8  path (3,4)-(35,4)
+  O  cargo        boulder    at (3,3)
+  p  home         plate      at (3,3)  2x1  -> earth_home, fire_west, air_exit  weight heavy
+  p  mid          plate      at (16,3)  4x1  -> fire_mid, water_mid  weight heavy
+  p  far          plate      at (34,3)  3x1  -> fire_far  weight heavy
+  D  launch_auth  door       at (4,6)  1x3  <- start, phase (needs 2)  latch
+  b  clock        button     at (9,8)  -> shuttle, fire_mid, water_inverse  mode timed  duration 1360
+  D  earth_home   door       at (20,6)  1x3  <- home, delivery, receipt (needs 3)  latch
+  l  earth_cert   lever      at (33,8)  -> fire_west, water_exit, air_exit
+  *  egem         gem        at (37,8)  earth
+  X  eexit        exit       at (38,7)  earth
+  D  fire_west    door       at (5,10)  1x3  <- home, earth_cert, receipt (needs 3)  latch
+  D  fire_mid     door       at (12,10)  1x3  <- mid, clock, first, delivery (needs 2)
+  l  first        lever      at (18,12)  -> fire_mid
+  D  fire_far     door       at (24,10)  1x3  <- far  latch
+  l  delivery     lever      at (30,12)  -> fire_mid, water_access, water_mid, earth_home, air_record
+  *  fgem         gem        at (2,12)  fire
+  X  fexit        exit       at (1,11)  fire
+  l  start        lever      at (3,16)  -> launch_auth
+  D  water_access door       at (10,14)  1x3  <- delivery, return_permit (needs 2)  latch
+  D  water_inverse door       at (15,14)  1x3  <- clock  invert
+  D  water_mid    door       at (25,14)  1x3  <- mid, delivery (needs 2)
+  l  receipt      lever      at (31,16)  -> earth_home, fire_west
+  D  water_exit   door       at (35,14)  1x3  <- earth_cert  latch
+  *  wgem         gem        at (37,16)  water
+  X  wexit        exit       at (38,15)  water
+  l  phase        lever      at (3,20)  -> launch_auth, air_inverse
+  D  air_inverse  door       at (10,18)  1x3  <- phase  invert
+  D  air_record   door       at (15,18)  1x3  <- delivery  latch
+  l  return_permit lever      at (22,20)  -> water_access
+  D  air_exit     door       at (35,18)  1x3  <- home, earth_cert (needs 2)  latch
+  *  agem         gem        at (37,20)  air
+  X  aexit        exit       at (38,19)  air
+```

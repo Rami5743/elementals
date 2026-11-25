@@ -5376,6 +5376,44 @@
   ]
  },
  {
+  "id": "phase_dispatch",
+  "name": "Phase Dispatch",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8340,
+  "dark": false,
+  "challenge": "motor",
+  "core": "revocable-launch-permit-for-opposite-stroke-inspections",
+  "ideas": [
+   "direction-qualified-transit-contact",
+   "twist-undo",
+   "timed-window",
+   "quorum"
+  ],
+  "order": 346,
+  "line": "",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "pillars",
   "name": "Pillars",
   "source": "mine",

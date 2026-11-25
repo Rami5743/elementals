@@ -1,0 +1,10 @@
+import {go,interact,until,waitFlag,wait} from "../../kit.mjs";
+function* gate(c,id){yield* until(c,()=>c.ent(id).s.open>=96,0,10000,id);}
+function* pull(c,x){yield* go(c,x);yield* interact(c);}
+function fireRun(mode="normal"){return function*(c){yield* go(c,10);if(mode==="missFire")yield* waitFlag(c,"launch2");yield* gate(c,"fire_mid");if(mode==="delay")yield* wait(c,90);yield* pull(c,18);yield* gate(c,"fire_far");if(mode!=="skip")yield* pull(c,30);yield* gate(c,"fire_west");yield* go(c,1);}}
+function waterRun(mode="normal"){return function*(c){yield* pull(c,3);yield* gate(c,"water_access");yield* gate(c,"water_inverse");yield* go(c,23);if(mode==="missWater")yield* waitFlag(c,"launch2");yield* gate(c,"water_mid");if(mode==="delay")yield* wait(c,90);yield* pull(c,31);yield* gate(c,"water_exit");yield* go(c,38);}}
+function earthRun(mode="normal"){return function*(c){yield* gate(c,"launch_auth");yield* pull(c,9);c.flag("launch1");if(mode==="missFire"||mode==="missWater"){yield* wait(c,2800);yield* interact(c);c.flag("launch2");}yield* gate(c,"earth_home");yield* pull(c,33);yield* go(c,38);}}
+function airRun(mode="normal"){return function*(c){yield* pull(c,3);yield* waitFlag(c,"launch1");yield* until(c,()=>c.ent("air_record").s.open>=96,0,10000,"fire certificate");if(mode!=="retain")yield* interact(c);yield* gate(c,"air_inverse");yield* gate(c,"air_record");yield* pull(c,22);yield* gate(c,"air_exit");yield* go(c,38);}}
+const fire=fireRun(),water=waterRun(),earth=earthRun(),air=airRun();
+const noReceipt=function*(c){yield* pull(c,3);yield* gate(c,"water_access");yield* gate(c,"water_inverse");yield* go(c,23);yield* gate(c,"water_mid");yield* go(c,31);yield* wait(c,5000)};
+export const solutions={sets:[{elements:["fire","water","earth","air"],scripts:{fire,water,earth,air},shortcuts:[{name:"retain launch permission instead of authorizing return",scripts:{fire,water,earth,air:airRun("retain")}},{name:"outward inspector omits far certificate",scripts:{fire:fireRun("skip"),water,earth,air}},{name:"return inspector omits receipt",scripts:{fire,water:noReceipt,earth,air}}]}]};

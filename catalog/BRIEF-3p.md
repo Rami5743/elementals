@@ -40,18 +40,18 @@ together. `twist-undo`×27, `quorum`×25, `twist-order`×8, `timed-window`×6, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- invert-door + lift-sorts-by-weight
-- partner-builds-your-landing + twist-self-block
-- pound-to-move + twist-self-block
-- feed-the-engine-mid-ride + twist-order
-- glide-passenger + timed-window
-- twist-stranding + unload-the-pan-you-ride
-- low-roof-no-jump + twist-undo
-- plank-sums-plate-maxes + twist-stranding
-- fan-passenger + liquid-lane
-- glide-passenger + lift-corner-path
-- invert-door + single-file-stone
-- partner-builds-your-landing + twist-two-clocks
+- feed-the-engine-mid-ride + twist-two-clocks
+- lift-sorts-by-weight + twist-order
+- lock-per-element + torch-bridge
+- one-way-press + trigger-from-above
+- pound-to-move + twist-order
+- lift-corner-path + single-file-stone
+- lift-corner-path + unload-the-pan-you-ride
+- mass-adds-on-the-beam + object-as-permanent-switch
+- freeze-bridge + plank-sums-plate-maxes
+- boulder-float + reversible-switch-maze
+- timed-window + unload-the-pan-you-ride
+- stand-aside-is-the-switch + twist-stranding
 
 ## This repo's 3-player levels
 
