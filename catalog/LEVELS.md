@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 108 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 109 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (36)
+## 2 players — this repo (37)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -174,6 +174,10 @@ Totals: 79 campaign levels, 108 in this repo, of which 11 now ship in the campai
   - idea: Independent hoists lift the cargo off either half of a seesaw; the unweighted plank recenters when the loads are equal or absent. Opposite imbalances and the two loaded middle contacts authorize distinct phases.
   - ideas: seesaw-balance, twist-undo, hoist-unloads-comparator
   - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:seesaw opt:heavy-plate opt:latch opt:required:2 opt:required:3 opt:required:4 opt:required:5 opt:seesaw-range
+- **Parallel Flight** `parallel_flight` (2p: fire+water) core=`paired-airborne-contacts` challenge=motor par=6840
+  - idea: Two isolated pilots must overlap in the air to operate a shared pair of suspended contacts, then dismantle and reconstruct the reciprocal permission circuit before repeating the flight.
+  - ideas: two-in-the-air-at-once, switch-in-mid-flight, twist-undo
+  - features: ent:door ent:fan ent:lever ent:plate opt:fan:hang-time opt:invert:door opt:latch opt:required:2 opt:required:4 tile:one-way
 
 ## 2 players — campaign (34)
 

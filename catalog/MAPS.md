@@ -1933,6 +1933,78 @@ Entities:
   l  Fhome        lever      at (37,12)  -> wexit
 ```
 
+## Parallel Flight (`parallel_flight`) — 2p, core `paired-airborne-contacts`
+
+```
+Parallel Flight (parallel_flight) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #...........pppppppppppppppp....D....D.#
+ 2  #...........^^^^^^^^^^^^^^^^....D....D.#
+ 3  #...........^^^^^^^^^^^^^^^^....D.l..Dl#
+ 4  ######===###^^^^^^^^^^^^^^^^############
+ 5  ######......^^^^^^^^^^^^^^^^############
+ 6  ######===###############################
+ 7  #.D.DD....D.........D...D.D.############
+ 8  #XD.DD===.D.........D...D.D.############
+ 9  #XDlDD....D....l....D.l@D.Dl############
+10  ########################################
+11  ########################################
+12  #...........pppppppppppppppp....D....D.#
+13  #...........^^^^^^^^^^^^^^^^....D....D.#
+14  #...........^^^^^^^^^^^^^^^^....D.l..Dl#
+15  ######===###^^^^^^^^^^^^^^^^############
+16  ######......^^^^^^^^^^^^^^^^############
+17  ######===###############################
+18  #.D.DD....D.........D...D.D.############
+19  #XD.DD===.D.........D...D.D.############
+20  #XDlDD....D....l....D.l@D.Dl############
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (23,9)  water (23,20)
+Entities:
+  ^  ffan         fan        at (12,1)  16x5  <- wB  strength 1.56
+  p  fplate       plate      at (12,1)  16x1  -> f_gate, w_gate, f_final, w_final
+  D  f_gate       door       at (32,1)  1x3  <- fplate, wplate (needs 2)  latch
+  D  f_final      door       at (37,1)  1x3  <- fplate, fE, wplate, wE (needs 4)  latch
+  D  fAaccess     door       at (20,7)  1x3  <- wA  latch
+  D  fBaccess     door       at (10,7)  1x3  <- wB  latch
+  D  fCaccess     door       at (24,7)  1x3  <- wC  latch
+  D  fAinverse    door       at (26,7)  1x3  <- wA  invert
+  D  fDaccess     door       at (5,7)  1x3  <- wD  latch
+  D  fBinverse    door       at (4,7)  1x3  <- wB  invert
+  l  fA           lever      at (22,9)  -> wAaccess, wAinverse
+  l  fB           lever      at (15,9)  -> wBaccess, wfan, wBinverse
+  l  fC           lever      at (34,3)  -> wCaccess
+  l  fD           lever      at (27,9)  -> wDaccess
+  l  fE           lever      at (3,9)  -> f_final, w_final
+  *  gem_15       gem        at (38,3)  fire
+  X  exit_16      exit       at (1,8)  fire
+  ^  wfan         fan        at (12,12)  16x5  <- fB  strength 1.56
+  p  wplate       plate      at (12,12)  16x1  -> f_gate, w_gate, f_final, w_final
+  D  w_gate       door       at (32,12)  1x3  <- fplate, wplate (needs 2)  latch
+  D  w_final      door       at (37,12)  1x3  <- fplate, fE, wplate, wE (needs 4)  latch
+  D  wAaccess     door       at (20,18)  1x3  <- fA  latch
+  D  wBaccess     door       at (10,18)  1x3  <- fB  latch
+  D  wCaccess     door       at (24,18)  1x3  <- fC  latch
+  D  wAinverse    door       at (26,18)  1x3  <- fA  invert
+  D  wDaccess     door       at (5,18)  1x3  <- fD  latch
+  D  wBinverse    door       at (4,18)  1x3  <- fB  invert
+  l  wA           lever      at (22,20)  -> fAaccess, fAinverse
+  l  wB           lever      at (15,20)  -> fBaccess, ffan, fBinverse
+  l  wC           lever      at (34,14)  -> fCaccess
+  l  wD           lever      at (27,20)  -> fDaccess
+  l  wE           lever      at (3,20)  -> f_final, w_final
+  *  gem_32       gem        at (38,14)  water
+  X  exit_33      exit       at (1,19)  water
+  D  fhomegate    door       at (2,7)  1x3  <- fF, wF (needs 2)  latch
+  l  fF           lever      at (38,3)  -> fhomegate, whomegate
+  D  whomegate    door       at (2,18)  1x3  <- fF, wF (needs 2)  latch
+  l  wF           lever      at (38,14)  -> fhomegate, whomegate
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

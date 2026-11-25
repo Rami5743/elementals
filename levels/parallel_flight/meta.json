@@ -1,0 +1,10 @@
+{
+  "order": 137,
+  "challenge": "motor",
+  "core": "paired-airborne-contacts",
+  "ideas": [
+    "two-in-the-air-at-once",
+    "switch-in-mid-flight",
+    "twist-undo"
+  ]
+}

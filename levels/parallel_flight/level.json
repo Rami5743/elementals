@@ -1,0 +1,391 @@
+{
+  "id": "parallel_flight",
+  "name": "Parallel Flight",
+  "order": 137,
+  "description": "Two flights must overlap at suspended contacts. Dismantle and rebuild the launch permissions between them, then release the draught to get home.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "######===###................############",
+    "######......................############",
+    "######===###############################",
+    "#...........................############",
+    "#.....===...................############",
+    "#...........................############",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "######===###................############",
+    "######......................############",
+    "######===###############################",
+    "#...........................############",
+    "#.....===...................############",
+    "#...........................############",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      23,
+      9
+    ],
+    "water": [
+      23,
+      20
+    ]
+  },
+  "parTicks": 6840,
+  "entities": [
+    {
+      "id": "ffan",
+      "type": "fan",
+      "x": 12,
+      "y": 1,
+      "w": 16,
+      "h": 5,
+      "strength": 1.56
+    },
+    {
+      "id": "fplate",
+      "type": "plate",
+      "x": 12,
+      "y": 1,
+      "w": 16,
+      "targets": [
+        "f_gate",
+        "w_gate",
+        "f_final",
+        "w_final"
+      ]
+    },
+    {
+      "id": "f_gate",
+      "type": "door",
+      "x": 32,
+      "y": 1,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f_final",
+      "type": "door",
+      "x": 37,
+      "y": 1,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "fAaccess",
+      "type": "door",
+      "x": 20,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fBaccess",
+      "type": "door",
+      "x": 10,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fCaccess",
+      "type": "door",
+      "x": 24,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fAinverse",
+      "type": "door",
+      "x": 26,
+      "y": 7,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "fDaccess",
+      "type": "door",
+      "x": 5,
+      "y": 7,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fBinverse",
+      "type": "door",
+      "x": 4,
+      "y": 7,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "fA",
+      "type": "lever",
+      "x": 22,
+      "y": 9,
+      "targets": [
+        "wAaccess",
+        "wAinverse"
+      ]
+    },
+    {
+      "id": "fB",
+      "type": "lever",
+      "x": 15,
+      "y": 9,
+      "targets": [
+        "wBaccess",
+        "wfan",
+        "wBinverse"
+      ]
+    },
+    {
+      "id": "fC",
+      "type": "lever",
+      "x": 34,
+      "y": 3,
+      "targets": [
+        "wCaccess"
+      ]
+    },
+    {
+      "id": "fD",
+      "type": "lever",
+      "x": 27,
+      "y": 9,
+      "targets": [
+        "wDaccess"
+      ]
+    },
+    {
+      "id": "fE",
+      "type": "lever",
+      "x": 3,
+      "y": 9,
+      "targets": [
+        "f_final",
+        "w_final"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 38,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 8
+    },
+    {
+      "id": "wfan",
+      "type": "fan",
+      "x": 12,
+      "y": 12,
+      "w": 16,
+      "h": 5,
+      "strength": 1.56
+    },
+    {
+      "id": "wplate",
+      "type": "plate",
+      "x": 12,
+      "y": 12,
+      "w": 16,
+      "targets": [
+        "f_gate",
+        "w_gate",
+        "f_final",
+        "w_final"
+      ]
+    },
+    {
+      "id": "w_gate",
+      "type": "door",
+      "x": 32,
+      "y": 12,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 37,
+      "y": 12,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "wAaccess",
+      "type": "door",
+      "x": 20,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "wBaccess",
+      "type": "door",
+      "x": 10,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "wCaccess",
+      "type": "door",
+      "x": 24,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "wAinverse",
+      "type": "door",
+      "x": 26,
+      "y": 18,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "wDaccess",
+      "type": "door",
+      "x": 5,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "wBinverse",
+      "type": "door",
+      "x": 4,
+      "y": 18,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "wA",
+      "type": "lever",
+      "x": 22,
+      "y": 20,
+      "targets": [
+        "fAaccess",
+        "fAinverse"
+      ]
+    },
+    {
+      "id": "wB",
+      "type": "lever",
+      "x": 15,
+      "y": 20,
+      "targets": [
+        "fBaccess",
+        "ffan",
+        "fBinverse"
+      ]
+    },
+    {
+      "id": "wC",
+      "type": "lever",
+      "x": 34,
+      "y": 14,
+      "targets": [
+        "fCaccess"
+      ]
+    },
+    {
+      "id": "wD",
+      "type": "lever",
+      "x": 27,
+      "y": 20,
+      "targets": [
+        "fDaccess"
+      ]
+    },
+    {
+      "id": "wE",
+      "type": "lever",
+      "x": 3,
+      "y": 20,
+      "targets": [
+        "f_final",
+        "w_final"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 19
+    },
+    {
+      "id": "fhomegate",
+      "type": "door",
+      "x": 2,
+      "y": 7,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "fF",
+      "type": "lever",
+      "x": 38,
+      "y": 3,
+      "targets": [
+        "fhomegate",
+        "whomegate"
+      ]
+    },
+    {
+      "id": "whomegate",
+      "type": "door",
+      "x": 2,
+      "y": 18,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "wF",
+      "type": "lever",
+      "x": 38,
+      "y": 14,
+      "targets": [
+        "fhomegate",
+        "whomegate"
+      ]
+    }
+  ],
+  "hints": [
+    "Both lower controls must be granted to reach the launch decks and power the other draught.",
+    "The first overlapping flight permits the lower east workshop; revoke A, then revoke B for the west certificate.",
+    "Restore B after the west certificate. The second overlapping flight opens the final gates.",
+    "After collecting the far gems, both return to the lower deck and turn B off to release the exits."
+  ]
+}

@@ -55,18 +55,18 @@ together. `twist-undo`×17, `quorum`×15, `twist-order`×8, `timed-window`×4, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hop-beats-belt + wind-off-enables-descent
-- mass-adds-on-the-beam + twist-self-block
-- hop-beats-belt + lift-corner-path
-- boulder-float + machine-strands-operator
-- timed-window + turbine-out-of-reach
-- door-pushes-you-through + twist-self-block
-- boulder-carry + object-as-permanent-switch
-- crate-step + twist-self-block
-- fan-band + lift-corner-path
-- door-pushes-you-through + lift-corner-path
-- crate-step + lift-corner-path
-- boulder-float + timed-window
+- fan-passenger + wide-door
+- fan-passenger + two-in-the-air-at-once
+- hop-beats-belt + trip-plate-in-the-shaft
+- mass-adds-on-the-beam + object-as-permanent-switch
+- lift-corner-path + lift-sheds-its-load
+- lift-corner-path + partner-builds-your-landing
+- lift-corner-path + turbine-out-of-reach
+- machine-strands-operator + sink-as-a-timer
+- machine-strands-operator + switch-in-mid-flight
+- seesaw-balance + twist-stranding
+- lift-corner-path + two-in-the-air-at-once
+- lift-corner-path + liquid-lane
 
 ## This repo's 3-player levels
 

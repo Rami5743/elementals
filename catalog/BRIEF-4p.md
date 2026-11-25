@@ -53,18 +53,18 @@ together. `quorum`×17, `twist-undo`×16, `twist-order`×6, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-float + torch-bridge
-- lock-per-element + pound-to-move
-- head-stack + threshold-is-a-switch
-- head-stack + mass-adds-on-the-beam
-- door-pushes-you-through + head-stack
-- mass-adds-on-the-beam + turbine-out-of-reach
-- climb-then-steer + lock-per-element
-- lift-corner-path + lock-per-element
-- freeze-invert + turbine-out-of-reach
-- pound-to-move + turbine-out-of-reach
-- turbine-out-of-reach + unload-the-pan-you-ride
-- lift-press + lock-per-element
+- head-stack + two-stops-no-middle
+- head-stack + pound-to-move
+- fan-band + threshold-is-a-switch
+- door-pushes-you-through + lock-per-element
+- crate-step + fan-band
+- pound-chain + twist-self-block
+- crate-step + head-stack
+- crate-step + reversible-switch-maze
+- lock-per-element + twist-sacrifice
+- freeze-invert + low-roof-no-jump
+- hoist-one-way-for-cargo + invert-door
+- head-stack + one-way-drop
 
 ## This repo's 4-player levels
 

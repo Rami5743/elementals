@@ -4744,6 +4744,40 @@
   ]
  },
  {
+  "id": "parallel_flight",
+  "name": "Parallel Flight",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6840,
+  "dark": false,
+  "challenge": "motor",
+  "core": "paired-airborne-contacts",
+  "ideas": [
+   "two-in-the-air-at-once",
+   "switch-in-mid-flight",
+   "twist-undo"
+  ],
+  "order": 137,
+  "line": "Two isolated pilots must overlap in the air to operate a shared pair of suspended contacts, then dismantle and reconstruct the reciprocal permission circuit before repeating the flight.",
+  "tokens": [
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:fan:hang-time",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "passing_place",
   "name": "Passing Place",
   "source": "mine",
