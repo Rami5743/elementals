@@ -1,0 +1,9 @@
+import {go,interact,until,waitFlag} from "../../kit.mjs";
+function* gate(c,id){yield* until(c,()=>c.ent(id).s.open>=96,0,7000,id);}
+function* pull(c,x){yield* go(c,x);yield* interact(c);}
+const fire=function*(c){yield* pull(c,3);yield* gate(c,"f1");yield* pull(c,14);c.flag("F1");yield* waitFlag(c,"W1");yield* pull(c,3);yield* gate(c,"f2");yield* pull(c,24);c.flag("F2");yield* gate(c,"f3");yield* pull(c,32);c.flag("F3");yield* waitFlag(c,"W3");yield* pull(c,3);yield* gate(c,"fexit");yield* pull(c,37);yield* pull(c,3);yield* go(c,38);};
+const water=function*(c){yield* gate(c,"w1");yield* pull(c,24);yield* waitFlag(c,"F1");yield* pull(c,36);c.flag("W1");yield* gate(c,"w2");yield* pull(c,14);yield* waitFlag(c,"F2");yield* pull(c,36);yield* gate(c,"w3");yield* pull(c,8);c.flag("W3");yield* gate(c,"wexit");yield* go(c,2);};
+const direct={fire:function*(c){yield* go(c,38);},water:function*(c){yield* go(c,2);}};
+const retainA={water,fire:function*(c){yield* pull(c,3);yield* gate(c,"f1");yield* pull(c,14);c.flag("F1");yield* waitFlag(c,"W1");yield* go(c,24);}};
+const retainB={fire,water:function*(c){yield* gate(c,"w1");yield* pull(c,24);yield* waitFlag(c,"F1");yield* pull(c,36);c.flag("W1");yield* gate(c,"w2");yield* pull(c,14);yield* waitFlag(c,"F2");yield* go(c,8);}};
+export const solutions={sets:[{elements:["fire","water"],scripts:{fire,water},shortcuts:[{name:"walk directly",scripts:direct},{name:"keep the first hoist raised",scripts:retainA},{name:"keep the second hoist raised",scripts:retainB},{name:"leave the first hoist raised after final certificate",scripts:{water,fire:function*(c){yield* pull(c,3);yield* gate(c,"f1");yield* pull(c,14);c.flag("F1");yield* waitFlag(c,"W1");yield* pull(c,3);yield* gate(c,"f2");yield* pull(c,24);c.flag("F2");yield* gate(c,"f3");yield* pull(c,32);c.flag("F3");yield* waitFlag(c,"W3");yield* pull(c,3);yield* gate(c,"fexit");yield* pull(c,37);yield* go(c,38);}}}]}]};

@@ -1867,6 +1867,72 @@ Entities:
   *  gem_21       gem        at (35,19)  water
 ```
 
+## Empty Balance (`empty_balance`) — 2p, core `unload-comparator-to-recentre`
+
+```
+Empty Balance (empty_balance) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.............p......p.................#
+ 2  #......................................#
+ 3  #......................................#
+ 4  #.............p......p.................#
+ 5  #...........zzzzzzzzzzzz...............#
+ 6  #.............p......p.................#
+ 7  #......................................#
+ 8  #.............E......E.................#
+ 9  ########################################
+10  #........D.........D........D......D...#
+11  #........D.........D........D......D..X#
+12  #..@.....D....l....D....l...D...l..D.lX#
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #....D.....D.......D.........D.........#
+18  #.X..D.....D.......D.........D.........#
+19  #.X*.D..l..D..l....D....l....D......@..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,12)  water (36,19)
+Entities:
+  z  scale        seesaw     at (12,5)  12x1  range 4
+  O  Lstone       boulder    at (14,4)
+  O  Rstone       boulder    at (21,4)
+  E  LA           elevator   at (14,8)  <- A  speed 1.5  path (14,8)-(14,2)
+  E  RB           elevator   at (21,8)  <- B  speed 1.5  path (21,8)-(21,2)
+  p  LH           plate      at (14,1)  -> f1, w1, fexit  weight heavy
+  p  RL           plate      at (21,6)  -> f1, w1, fexit  weight heavy
+  p  RH           plate      at (21,1)  -> f2, w2  weight heavy
+  p  LL           plate      at (14,6)  -> f2, w2  weight heavy
+  p  LM           plate      at (14,4)  -> f3, w3, wexit  weight heavy
+  p  RM           plate      at (21,4)  -> f3, w3, wexit  weight heavy
+  l  A            lever      at (3,12)  -> LA
+  l  B            lever      at (36,19)  -> RB
+  D  f1           door       at (9,10)  1x3  <- LH, RL (needs 2)  latch
+  D  w1           door       at (29,17)  1x3  <- LH, RL (needs 2)  latch
+  D  f2           door       at (19,10)  1x3  <- RH, LL, W1 (needs 3)  latch
+  D  w2           door       at (19,17)  1x3  <- RH, LL, F1 (needs 3)  latch
+  D  f3           door       at (28,10)  1x3  <- LM, RM, F2, W2 (needs 4)  latch
+  D  w3           door       at (11,17)  1x3  <- LM, RM, F2, W2 (needs 4)  latch
+  D  fexit        door       at (35,10)  1x3  <- LH, RL, F3, W3 (needs 4)  latch
+  D  wexit        door       at (5,17)  1x3  <- LM, RM, F3, W3, Fhome (needs 5)
+  l  F1           lever      at (14,12)  -> w2
+  l  W1           lever      at (24,19)  -> f2
+  l  F2           lever      at (24,12)  -> f3, w3
+  l  W2           lever      at (14,19)  -> f3, w3
+  l  F3           lever      at (32,12)  -> fexit, wexit
+  l  W3           lever      at (8,19)  -> fexit, wexit
+  *  gem_27       gem        at (37,12)  fire
+  X  exit_28      exit       at (38,11)  fire
+  *  gem_29       gem        at (3,19)  water
+  X  exit_30      exit       at (2,18)  water
+  l  Fhome        lever      at (37,12)  -> wexit
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

@@ -3799,6 +3799,43 @@
   ]
  },
  {
+  "id": "empty_balance",
+  "name": "Empty Balance",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7320,
+  "dark": false,
+  "challenge": "mind",
+  "core": "unload-comparator-to-recentre",
+  "ideas": [
+   "seesaw-balance",
+   "twist-undo",
+   "hoist-unloads-comparator"
+  ],
+  "order": 136,
+  "line": "Independent hoists lift the cargo off either half of a seesaw; the unweighted plank recenters when the loads are equal or absent. Opposite imbalances and the two loaded middle contacts authorize distinct phases.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:seesaw",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4",
+   "opt:required:5",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "expiration_quartet",
   "name": "Expiration Quartet",
   "source": "mine",

@@ -47,23 +47,24 @@ together. `quorum`×17, `twist-undo`×16, `twist-order`×6, `lock-per-element`×
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `two-stops-no-middle` — A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
+- `hoist-unloads-comparator` — Two independent hoists lift loads away from a seesaw, so either imbalance and the loaded centered state give distinct paired contacts; an empty centered plank is not equivalent to a loaded one.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lift-press + pound-chain
-- lock-per-element + partner-builds-your-landing
-- freeze-bridge + freeze-invert
-- head-stack + unload-the-pan-you-ride
-- lock-per-element + seesaw-balance
-- mass-adds-on-the-beam + turbine-out-of-reach
-- head-stack + lift-press
-- fan-passenger + freeze-bridge
-- head-stack + wide-door
-- lock-per-element + twist-stranding
-- fan-passenger + lock-per-element
-- freeze-bridge + lift-corner-path
+- boulder-carry + freeze-invert
+- low-roof-no-jump + torch-bridge
+- head-stack + sink-as-a-timer
+- glide-dismount + reversible-switch-maze
+- fan-band + twist-stranding
+- pound-chain + twist-stranding
+- invert-door + seesaw-balance
+- belt-filter + freeze-invert
+- invert-door + one-way-drop
+- freeze-bridge + hoist-unloads-comparator
+- low-roof-no-jump + tower-presses-a-column
+- hop-beats-belt + ratio-reverses-paired-cargo
 
 ## This repo's 4-player levels
 
