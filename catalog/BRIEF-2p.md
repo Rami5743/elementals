@@ -30,18 +30,18 @@ together. `twist-undo`×33, `invert-door`×8, `quorum`×8, `timed-window`×7, `h
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- partner-builds-your-landing + two-is-not-heavy
-- door-pushes-you-through + shared-switch-two-gates
-- plank-sums-plate-maxes + quorum
-- pound-needs-headroom + stand-aside-is-the-switch
-- door-pushes-you-through + head-stack
-- cargo-as-clock-contact + tower-presses-a-column
-- boulder-carry + stand-aside-is-the-switch
-- fractional-rider-keeper + quorum
-- door-pushes-you-through + freeze-bridge
-- boulder-carry + threshold-is-a-switch
-- door-pushes-you-through + no-hands-for-cargo
-- hop-beats-belt + lift-sorts-by-weight
+- lock-per-element + low-roof-no-jump
+- fractional-rider-keeper + position-as-volatile-key
+- invert-door + pound-needs-headroom
+- boulder-carry + shared-switch-two-gates
+- glide-dismount + lift-sorts-by-weight
+- lift-sorts-by-weight + liquid-lane
+- head-stack + stone-held-from-below
+- fan-passenger + pound-needs-headroom
+- fractional-rider-keeper + low-roof-no-jump
+- invert-door + lock-per-element
+- machine-strands-operator + stone-held-from-below
+- freeze-bridge + tower-presses-a-column
 
 ## This repo's 2-player levels
 
