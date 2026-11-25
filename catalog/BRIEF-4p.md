@@ -55,18 +55,18 @@ together. `twist-undo`×14, `quorum`×14, `twist-order`×5, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- glide-dismount + invert-door
-- low-roof-no-jump + two-stops-no-middle
-- freeze-bridge + unload-the-pan-you-ride
-- freeze-bridge + glide-passenger
-- freeze-bridge + freeze-invert
-- lock-per-element + stand-aside-is-the-switch
-- freeze-bridge + liquid-lane
-- boulder-carry + glide-passenger
-- crate-step + lock-per-element
-- boulder-carry + freeze-invert
-- freeze-bridge + stand-aside-is-the-switch
-- glide-dismount + lock-per-element
+- invert-door + wide-door
+- fan-band + feed-the-engine-mid-ride
+- fan-band + glide-dismount
+- boulder-float + lift-corner-path
+- pound-chain + threshold-is-a-switch
+- boulder-float + lift-as-floor
+- pound-chain + twist-stranding
+- belt-filter + lift-press
+- fan-band + threshold-is-a-switch
+- fan-band + hoist-one-way-for-cargo
+- fan-band + unload-the-pan-you-ride
+- boulder-float + torch-bridge
 
 ## This repo's 4-player levels
 
