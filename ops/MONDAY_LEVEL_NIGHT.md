@@ -204,8 +204,13 @@ then back to the start. Keep a counter per chain (`built[2p] = 0, 1, 2, …`); t
 be built has motor **on** exactly when `built % 3 == 2`. Keep the counters in this conversation
 and restate them at every heartbeat so they survive a context compaction.
 
-The order bands keep `meta.json` `order` values from colliding between chains. Within a band,
-the agent takes the next free number.
+The order bands keep `meta.json` `order` values roughly apart between chains. Within a band, the
+agent takes the next free number it sees — and **a collision does not matter**. The page sorts
+every level by when it was made, read from the git history, so `order` only breaks a tie in the
+catalogue between levels committed together. The repo already carries duplicates (202, 301, 302)
+with no ill effect. Never renumber a finished level, and never hold up a merge over a duplicate:
+the 2026-11-25 night spent real time on exactly that, because the other agent's batch took the
+numbers between the brief being read and the level being built.
 
 ## 2. Spawning one level
 
@@ -226,7 +231,9 @@ prompt built from this template:
 >
 > Work on branch `{branch}`, cut fresh from the latest `main`:
 > `git fetch origin main && git checkout -B {branch} origin/main`.
-> Give the level an `order` in the band {band} that nothing else in `levels/` uses.
+> Give the level an `order` in the band {band}. Take the next free number you see; if something
+> else has taken it by the time you finish, leave it — duplicates are harmless and renumbering is
+> wasted work.
 >
 > Done means all of: `node kit.mjs check <id>` reports **no problems**; NOTES.md written as the
 > skill requires; `node tools/novelty.mjs <id>` passes; `node tools/build.mjs` and
@@ -247,7 +254,8 @@ know these; put them in the prompt:
 - the player count and the motor setting, and the chain's counter (`built[3p]=2`, so this is the ON);
 - **the `order` number you are assigning it** — the brief prints the next free one, but three
   chains reading it at once would all take the same number, so you allocate them: 2p from 1xx,
-  3p from 2xx, 4p from 3xx, one each, and say which;
+  3p from 2xx, 4p from 3xx, one each, and say which. Allocate once and do not revisit it: another
+  agent, or the other agent's batch, may take that number meanwhile, and that is fine;
 - its branch name, and the id of any frozen level it is resuming;
 - the two files to read — `catalog/BRIEF-<n>p.md` and `catalog/PHYSICS.md` — and that it should
   **not** read `catalog/LEVELS.md`, which is five times the size and mostly other player counts.
@@ -287,7 +295,7 @@ git add -A && git commit --no-edit
 `tools/ideas.mjs` can also conflict when two agents coin a new idea key in the same place: keep
 **both** keys, then `git add` and commit.
 
-A conflict anywhere else — two levels with the same id or the same `order`, a change to a file
+A conflict anywhere else — two levels with the same id, a change to a file
 outside `levels/`, `tools/ideas.mjs`, `catalog/` and `index.html` — is a real problem: abort
 (`git merge --abort`), look at what the agent did, and fix it on its branch before retrying.
 
