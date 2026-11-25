@@ -5580,6 +5580,39 @@
   }
  },
  {
+  "id": "two_station_return",
+  "name": "Two-Station Return",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 15780,
+  "dark": false,
+  "challenge": "motor",
+  "core": "distinct-runners-reverse-trip-sequence",
+  "ideas": [
+   "trip-plate-in-the-shaft",
+   "lift-loop",
+   "twist-stranding"
+  ],
+  "order": 232,
+  "line": "Two independent runners use the upper and lower contacts of a heavy rider in reverse spatial order. The rider must continue looping until both runners have recorded their crossings.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "undermine",
   "name": "Undermine",
   "source": "mine",

@@ -3480,6 +3480,61 @@ Entities:
   X  exit_29      exit       at (38,14)  water
 ```
 
+## Two-Station Return (`two_station_return`) — 3p, core `distinct-runners-reverse-trip-sequence`
+
+```
+Two-Station Return (two_station_return) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##.....D.......#########################
+ 2  ##.....D.....X.#########################
+ 3  ##.....D..l.*X.#########################
+ 4  ##..####################################
+ 5  ##..####################################
+ 6  ##..####################################
+ 7  ##pp####################################
+ 8  ##..#############.......D......D....D..#
+ 9  ##..#############.......D......D....D.X#
+10  ##..#############.@l....D...l..D..l.D*X#
+11  ##..####################################
+12  ##..####################################
+13  ##..#############.......D........D.....#
+14  ##pp#############.......D........D....X#
+15  ##..#############.@.....D...l....D...*X#
+16  ##..####################################
+17  ##....D........#########################
+18  ##....D........#########################
+19  ##....D.....@..#########################
+20  ##EE####################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (18,10)  earth (12,19)  water (18,15)
+Entities:
+  E  hoist        elevator   at (2,20)  2x1  mode loop  speed 0.5  pause 240  path (2,20)-(2,4)
+  p  upper_trip   plate      at (2,7)  2x1  -> f1  weight heavy
+  p  lower_trip   plate      at (2,14)  2x1  -> w1  weight heavy
+  l  start        lever      at (19,10)  -> shaft_gate
+  l  upper_ack    lever      at (28,10)  -> w1
+  l  lower_ack    lever      at (34,10)  -> loft_gate
+  l  loft_ack     lever      at (10,3)  -> f3, w2
+  D  shaft_gate   door       at (6,17)  1x3  <- start  latch
+  D  loft_gate    door       at (7,1)  1x3  <- lower_ack  latch
+  D  f1           door       at (24,8)  1x3  <- upper_trip
+  D  f2           door       at (31,8)  1x3  <- w_ack  latch
+  D  f3           door       at (36,8)  1x3  <- loft_ack  latch
+  *  gem_12       gem        at (37,10)  fire
+  X  exit_13      exit       at (38,9)  fire
+  *  gem_14       gem        at (12,3)  earth
+  X  exit_15      exit       at (13,2)  earth
+  D  w1           door       at (24,13)  1x3  <- lower_trip, upper_ack (needs 2)
+  l  w_ack        lever      at (28,15)  -> f2
+  D  w2           door       at (33,13)  1x3  <- loft_ack  latch
+  *  gem_19       gem        at (37,15)  water
+  X  exit_20      exit       at (38,14)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

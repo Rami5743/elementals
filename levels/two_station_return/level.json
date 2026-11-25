@@ -1,0 +1,244 @@
+{
+  "id": "two_station_return",
+  "name": "Two-Station Return",
+  "order": 232,
+  "description": "Two runners use distinct rider-powered trip contacts in reverse spatial order. Their acknowledgments release the rider only after both passages.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "##.............#########################",
+    "##.............#########################",
+    "##.............#########################",
+    "##..####################################",
+    "##..####################################",
+    "##..####################################",
+    "##..####################################",
+    "##..#############......................#",
+    "##..#############......................#",
+    "##..#############......................#",
+    "##..####################################",
+    "##..####################################",
+    "##..#############......................#",
+    "##..#############......................#",
+    "##..#############......................#",
+    "##..####################################",
+    "##.............#########################",
+    "##.............#########################",
+    "##.............#########################",
+    "##..####################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      18,
+      10
+    ],
+    "earth": [
+      12,
+      19
+    ],
+    "water": [
+      18,
+      15
+    ]
+  },
+  "entities": [
+    {
+      "id": "hoist",
+      "type": "elevator",
+      "x": 2,
+      "y": 20,
+      "w": 2,
+      "path": [
+        [
+          2,
+          20
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "mode": "loop",
+      "speed": 0.5,
+      "pause": 240
+    },
+    {
+      "id": "upper_trip",
+      "type": "plate",
+      "x": 2,
+      "y": 7,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "lower_trip",
+      "type": "plate",
+      "x": 2,
+      "y": 14,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "start",
+      "type": "lever",
+      "x": 19,
+      "y": 10,
+      "targets": [
+        "shaft_gate"
+      ]
+    },
+    {
+      "id": "upper_ack",
+      "type": "lever",
+      "x": 28,
+      "y": 10,
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "lower_ack",
+      "type": "lever",
+      "x": 34,
+      "y": 10,
+      "targets": [
+        "loft_gate"
+      ]
+    },
+    {
+      "id": "loft_ack",
+      "type": "lever",
+      "x": 10,
+      "y": 3,
+      "targets": [
+        "f3",
+        "w2"
+      ]
+    },
+    {
+      "id": "shaft_gate",
+      "type": "door",
+      "x": 6,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "loft_gate",
+      "type": "door",
+      "x": 7,
+      "y": 1,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 24,
+      "y": 8,
+      "h": 3,
+      "required": 1,
+      "latch": false
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 31,
+      "y": 8,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 36,
+      "y": 8,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 12,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 13,
+      "y": 2
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 24,
+      "y": 13,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "w_ack",
+      "type": "lever",
+      "x": 28,
+      "y": 15,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 33,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 14
+    }
+  ],
+  "parTicks": 15780,
+  "hints": [
+    "The empty lift cannot press heavy contacts. Earth must ride.",
+    "Use the upper trip first. The lower trip will come back on the return journey.",
+    "Earth must stay aboard until Fire has acknowledged both passages."
+  ]
+}

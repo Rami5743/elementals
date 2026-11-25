@@ -1,0 +1,10 @@
+{
+  "order": 232,
+  "challenge": "motor",
+  "core": "distinct-runners-reverse-trip-sequence",
+  "ideas": [
+    "trip-plate-in-the-shaft",
+    "lift-loop",
+    "twist-stranding"
+  ]
+}
