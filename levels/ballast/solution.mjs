@@ -27,20 +27,20 @@ function* edge(c, x, max = 600) {
 /** @type {import('../../kit.mjs').Script} */
 const water = function* (c) {
   // 1. Into the draught shaft, and wait for Earth to lean on the bellows.
-  yield* go(c, 7.5);
+  yield* go(c, 7);
   yield* until(c, () => c.ent('draught').s.on === 1, 0, 1200, 'the draught to start');
 
   // 2. Ride it to the roof and step off onto the gallery ledge beside the pan.
   yield* ride(c, 4.2);
-  yield* steerTo(c, 5.5);
+  yield* steerTo(c, 5);
 
   // 3. Board the pan beside the boulder. Its own weight is 3 against the
   //    counterweight's 3.5, so only a body on top of it sends it down.
-  yield* go(c, 4.5);
+  yield* edge(c, 4);
   yield* until(c, () => c.ent('rope').s.d >= 9 * TILE - 2, 0, 900, 'the pan to reach the bottom');
 
   // 4. Nine tiles down the boulder settles on the pad and the gate opens, eleven tiles up.
-  yield* until(c, () => c.ent('gate').s.open >= 120, 0, 600, 'the gate to open');
+  yield* until(c, () => c.ent('gate').s.open >= 128, 0, 600, 'the gate to open');
 
   // 5. The whole idea: leap off the pan into the draught. The rope goes on counting
   //    Water, so the boulder stays on the pad and the gate stays open all the way up.
@@ -48,13 +48,13 @@ const water = function* (c) {
   yield* ride(c, 4.2);
 
   // 6. Peel out of the column, through the open gate, and land beyond it.
-  yield* steerTo(c, 11.5);
+  yield* steerTo(c, 11);
 
   // 7. Throw the lever that lifts Earth's hatch, then home.
-  yield* go(c, 16.5);
+  yield* go(c, 16);
   yield* interact(c);
   c.flag('released');
-  yield* go(c, 19.5);
+  yield* go(c, 19);
 };
 
 /** Leap right off the pan, across the void, into the draught column. */
@@ -74,8 +74,8 @@ const earth = function* (c) {
   yield* until(c, () => c.has('released'), 0, 6000, 'Water to get through the gate');
   // 3. Collect the gem and walk out through the hatch Water opened.
   yield* until(c, () => c.ent('hatch').s.open >= 90, 0, 600, 'the hatch to open');
-  yield* go(c, 24.5);
-  yield* go(c, 33.5);
+  yield* go(c, 24);
+  yield* go(c, 33);
 };
 
 /** @type {import('../../kit.mjs').Solutions} */

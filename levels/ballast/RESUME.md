@@ -15,14 +15,25 @@ through the gate without ever touching down — the one thing that shuts the gat
 
 ## What passes
 
-- `level.json is valid`; both spawns safe; **no warnings** (see below).
+- **`check` reports no problems**: solved in 16.2 s, 2/2 gems, no deaths, both co-op necessity
+  tests pass, no warnings. The invented mechanic works in the real level: `probe-leap.mjs` shows
+  `rope.d` pinned at 288 px for the whole flight, so the boulder stays on the pad and the gate
+  stays open with nobody aboard the pan.
 
 ## What fails
 
-- `water+earth: the solution scripts failed: water timed out waiting for the pan to reach the bottom
-  at tick 1221 (at 5.00)` — Water rides the draught up and lands on the gallery ledge, but will not
-  walk left from the ledge at x=5 onto the pan at x=3,4. Suspect a lip at the berth: a two-pixel
-  step stops a walk dead.
+- **Solve time 16.2 s is under the skill's 20-second floor**, so the level needs another phase (not
+  a longer walk). The phase being added: the hatch in the hall goes on the same wire as the gate,
+  and a second bellows plate sits beyond it, so Earth's one body is claimed by two jobs.
+
+## Bugs fixed on the way
+
+1. `go(c, 4.5)` aims at *tile 5.0*: `go(c, x)` already targets the centre of tile x, so a half-tile
+   argument is an off-by-half. All targets are whole tiles now.
+2. Waiting for `gate.open >= 120` of 128 left an 8-px remnant of door at the very top of the shaft,
+   exactly where Water hovers against the roof; it hung there forever. Wait for the full 128.
+3. The leap off the pan banged Water's head on the overhang at (5,12) — `vy` snapped to 0 at row 13
+   and Water dropped into the void. The void (x=5,6) is now open from row 10, not row 13.
 
 ## Measured facts this design rests on (probed today, not in PHYSICS.md)
 

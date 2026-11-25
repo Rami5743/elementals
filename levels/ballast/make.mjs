@@ -29,9 +29,9 @@ for (let y = 3; y <= 5; y++)                   // 3..5 left bay, draught shaft, 
 put([[1, 1, '.'], [3, 4, '.'], [7, 8, '.'], [9, 9, '.'], [10, 38, '.']]);
 // 7  the far gallery's floor, and the gate's sill at 9
 put([[1, 1, '.'], [3, 4, '.'], [7, 8, '.']]);
-for (let y = 8; y <= 12; y++)                  // 8..12 rock, bar the three shafts
+for (let y = 8; y <= 9; y++)                   // 8,9 rock, bar the three shafts
   put([[1, 1, '.'], [3, 4, '.'], [7, 8, '.']]);
-for (let y = 13; y <= 15; y++)                 // 13..15 pan shaft + the void + the draught
+for (let y = 10; y <= 15; y++)                 // 10..15 pan shaft + the void + the draught
   put([[1, 1, '.'], [3, 4, '.'], [5, 6, '.'], [7, 8, '.']]);
 for (let y = 16; y <= 18; y++)                 // 16..18 the hall
   put([[5, 6, '.'], [7, 8, '.'], [9, 38, '.']]);
