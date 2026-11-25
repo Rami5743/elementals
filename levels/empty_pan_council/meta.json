@@ -1,0 +1,11 @@
+{
+  "order": 335,
+  "challenge": "mind",
+  "core": "double-inspector-loaded-equilibrium",
+  "ideas": [
+    "hoist-unloads-comparator",
+    "seesaw-balance",
+    "quorum",
+    "twist-undo"
+  ]
+}

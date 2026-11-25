@@ -1,0 +1,603 @@
+{
+  "id": "empty_pan_council",
+  "name": "Empty Pan Council",
+  "order": 335,
+  "description": "Two selectors and two independent hoist enables distinguish loaded and unloaded equilibrium; both inspectors must certify the empty beam before its load is restored.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      9
+    ],
+    "water": [
+      36,
+      12
+    ],
+    "earth": [
+      3,
+      15
+    ],
+    "air": [
+      3,
+      18
+    ]
+  },
+  "parTicks": 8580,
+  "entities": [
+    {
+      "id": "scale",
+      "type": "seesaw",
+      "x": 12,
+      "y": 4,
+      "w": 12,
+      "range": 2
+    },
+    {
+      "id": "Lstone",
+      "type": "boulder",
+      "x": 14,
+      "y": 3
+    },
+    {
+      "id": "Rstone",
+      "type": "boulder",
+      "x": 21,
+      "y": 3
+    },
+    {
+      "id": "LA",
+      "type": "elevator",
+      "x": 14,
+      "y": 6,
+      "w": 1,
+      "path": [
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          2
+        ]
+      ],
+      "speed": 1.5,
+      "required": 3
+    },
+    {
+      "id": "RB",
+      "type": "elevator",
+      "x": 21,
+      "y": 6,
+      "w": 1,
+      "path": [
+        [
+          21,
+          6
+        ],
+        [
+          21,
+          2
+        ]
+      ],
+      "speed": 1.5,
+      "required": 3
+    },
+    {
+      "id": "LH",
+      "type": "plate",
+      "x": 14,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "w1",
+        "fexit",
+        "e1",
+        "e2",
+        "a1",
+        "a2"
+      ]
+    },
+    {
+      "id": "RL",
+      "type": "plate",
+      "x": 21,
+      "y": 4,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "w1",
+        "fexit",
+        "e1",
+        "a1"
+      ]
+    },
+    {
+      "id": "RH",
+      "type": "plate",
+      "x": 21,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f2",
+        "w2",
+        "e2",
+        "e3",
+        "a2"
+      ]
+    },
+    {
+      "id": "LL",
+      "type": "plate",
+      "x": 14,
+      "y": 4,
+      "weight": "heavy",
+      "targets": [
+        "f2",
+        "w2",
+        "e3"
+      ]
+    },
+    {
+      "id": "LM",
+      "type": "plate",
+      "x": 14,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "f3",
+        "w3",
+        "wexit",
+        "eexit",
+        "a_center",
+        "a_exit"
+      ]
+    },
+    {
+      "id": "RM",
+      "type": "plate",
+      "x": 21,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "f3",
+        "w3",
+        "wexit",
+        "eexit",
+        "a_center",
+        "a_exit"
+      ]
+    },
+    {
+      "id": "A",
+      "type": "lever",
+      "x": 3,
+      "y": 9,
+      "targets": [
+        "LA"
+      ]
+    },
+    {
+      "id": "B",
+      "type": "lever",
+      "x": 36,
+      "y": 12,
+      "targets": [
+        "RB"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 9,
+      "y": 8,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 29,
+      "y": 11,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 19,
+      "y": 8,
+      "h": 2,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 11,
+      "h": 2,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 28,
+      "y": 8,
+      "h": 2,
+      "required": 6,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 11,
+      "h": 2,
+      "required": 6,
+      "latch": true
+    },
+    {
+      "id": "fexit",
+      "type": "door",
+      "x": 35,
+      "y": 8,
+      "h": 2,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "wexit",
+      "type": "door",
+      "x": 5,
+      "y": 11,
+      "h": 2,
+      "required": 7
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 14,
+      "y": 9,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 24,
+      "y": 12,
+      "targets": [
+        "f2",
+        "e2"
+      ]
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 24,
+      "y": 9,
+      "targets": [
+        "f3",
+        "w3",
+        "e3"
+      ]
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 14,
+      "y": 12,
+      "targets": [
+        "f3",
+        "w3",
+        "e3"
+      ]
+    },
+    {
+      "id": "F3",
+      "type": "lever",
+      "x": 32,
+      "y": 9,
+      "targets": [
+        "fexit",
+        "wexit"
+      ]
+    },
+    {
+      "id": "W3",
+      "type": "lever",
+      "x": 8,
+      "y": 12,
+      "targets": [
+        "fexit",
+        "wexit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 11
+    },
+    {
+      "id": "Fhome",
+      "type": "lever",
+      "x": 37,
+      "y": 9,
+      "targets": [
+        "wexit",
+        "eexit",
+        "a_exit"
+      ]
+    },
+    {
+      "id": "master",
+      "type": "lever",
+      "x": 3,
+      "y": 15,
+      "targets": [
+        "LA",
+        "RB",
+        "e_last",
+        "w_inverse"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 9,
+      "y": 14,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 19,
+      "y": 14,
+      "h": 2,
+      "required": 5,
+      "latch": true
+    },
+    {
+      "id": "e3",
+      "type": "door",
+      "x": 28,
+      "y": 14,
+      "h": 2,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "e_last",
+      "type": "door",
+      "x": 34,
+      "y": 14,
+      "h": 2,
+      "required": 1,
+      "invert": true
+    },
+    {
+      "id": "eexit",
+      "type": "door",
+      "x": 35,
+      "y": 14,
+      "h": 2,
+      "required": 3
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 14,
+      "y": 15,
+      "targets": [
+        "e2",
+        "a2"
+      ]
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 24,
+      "y": 15,
+      "targets": [
+        "f2",
+        "w2"
+      ]
+    },
+    {
+      "id": "E3",
+      "type": "lever",
+      "x": 32,
+      "y": 15,
+      "targets": [
+        "f3",
+        "w3"
+      ]
+    },
+    {
+      "id": "Ehome",
+      "type": "lever",
+      "x": 37,
+      "y": 15,
+      "targets": [
+        "wexit"
+      ]
+    },
+    {
+      "id": "w_inverse",
+      "type": "door",
+      "x": 9,
+      "y": 11,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "id": "amaster",
+      "type": "lever",
+      "x": 3,
+      "y": 18,
+      "targets": [
+        "LA",
+        "RB",
+        "a_inv"
+      ]
+    },
+    {
+      "id": "a1",
+      "type": "door",
+      "x": 9,
+      "y": 17,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a2",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 2,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "A2",
+      "type": "lever",
+      "x": 20,
+      "y": 18,
+      "targets": [
+        "e2"
+      ]
+    },
+    {
+      "id": "a_inv",
+      "type": "door",
+      "x": 22,
+      "y": 17,
+      "h": 2,
+      "required": 1,
+      "invert": true
+    },
+    {
+      "id": "a_center",
+      "type": "door",
+      "x": 25,
+      "y": 17,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "A3",
+      "type": "lever",
+      "x": 29,
+      "y": 18,
+      "targets": [
+        "f3",
+        "w3"
+      ]
+    },
+    {
+      "id": "a_exit",
+      "type": "door",
+      "x": 35,
+      "y": 17,
+      "h": 2,
+      "required": 3
+    },
+    {
+      "id": "Ahome",
+      "type": "lever",
+      "x": 37,
+      "y": 18,
+      "targets": [
+        "wexit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 17
+    }
+  ],
+  "hints": [
+    "Both inspectors must enable the hoists, and each load still needs its own selector.",
+    "Both raised is distinct from both loaded at center: Air must issue A2 while both raised.",
+    "Both inspectors must restore and then withdraw their enables before their final certificates can release Water."
+  ]
+}

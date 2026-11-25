@@ -3836,6 +3836,48 @@
   ]
  },
  {
+  "id": "empty_pan_council",
+  "name": "Empty Pan Council",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8580,
+  "dark": false,
+  "challenge": "mind",
+  "core": "double-inspector-loaded-equilibrium",
+  "ideas": [
+   "hoist-unloads-comparator",
+   "seesaw-balance",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 335,
+  "line": "",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:seesaw",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4",
+   "opt:required:5",
+   "opt:required:6",
+   "opt:required:7",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "expiration_quartet",
   "name": "Expiration Quartet",
   "source": "mine",
