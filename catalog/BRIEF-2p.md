@@ -29,18 +29,18 @@ together. `twist-undo`×28, `invert-door`×6, `twist-order`×6, `twist-stranding
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- twist-self-block + two-is-not-heavy
-- tower-presses-a-column + unload-the-pan-you-ride
-- lock-per-element + two-stage-piston-handoff
-- no-hands-for-cargo + tower-presses-a-column
-- invert-door + one-way-drop
-- tower-presses-a-column + twist-two-clocks
-- lift-sorts-by-weight + timed-window
-- tower-presses-a-column + twist-order
-- head-stack + tower-presses-a-column
-- position-as-volatile-key + tower-presses-a-column
-- boulder-carry + twist-self-block
-- door-pushes-you-through + twist-order
+- lift-sorts-by-weight + two-stage-piston-handoff
+- door-pushes-you-through + timed-window
+- boulder-float + twist-setup
+- plank-sums-plate-maxes + stock-before-it-seals
+- lift-sorts-by-weight + one-way-press
+- boulder-carry + timed-window
+- one-way-drop + single-file-stone
+- counterweight-you-must-remove + one-way-drop
+- partner-builds-your-landing + plank-sums-plate-maxes
+- door-pushes-you-through + one-way-press
+- door-pushes-you-through + partner-builds-your-landing
+- counterweight-you-must-remove + plank-sums-plate-maxes
 
 ## This repo's 2-player levels
 

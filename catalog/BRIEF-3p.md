@@ -43,18 +43,18 @@ together. `twist-undo`×26, `quorum`×22, `twist-order`×8, `timed-window`×5, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- dark + fan-passenger
-- single-file-stone + twist-undo
-- mass-adds-on-the-beam + torch-bridge
-- lift-corner-path + two-is-not-heavy
-- freeze-bridge + wide-door
-- glide-passenger + head-stack
-- lift-corner-path + twist-sacrifice
-- hop-beats-belt + twist-stranding
-- machine-strands-operator + wide-door
-- boulder-carry + torch-bridge
-- dark + reversible-switch-maze
-- lock-per-element + machine-strands-operator
+- invert-door + low-roof-no-jump
+- lift-corner-path + pound-to-move
+- twist-sacrifice + twist-undo
+- boulder-carry + lift-corner-path
+- timed-window + unload-the-pan-you-ride
+- boulder-float + twist-self-block
+- pound-to-move + timed-window
+- mass-adds-on-the-beam + twist-stranding
+- lift-corner-path + trigger-from-above
+- dark + twist-stranding
+- boulder-carry + twist-stranding
+- glide-passenger + twist-order
 
 ## This repo's 3-player levels
 

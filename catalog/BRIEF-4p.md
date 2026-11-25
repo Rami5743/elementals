@@ -42,18 +42,18 @@ together. `twist-undo`×24, `quorum`×24, `twist-order`×7, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- liquid-lane + twist-undo
-- door-pushes-you-through + low-roof-no-jump
-- boulder-float + counterweight-you-must-remove
-- boulder-float + dark
-- fan-band + glide-dismount
-- boulder-float + glide-dismount
-- boulder-float + lift-press
-- belt-filter + one-way-drop
-- belt-filter + fan-passenger
-- belt-filter + wide-door
-- glide-passenger + pound-chain
-- fan-passenger + low-roof-no-jump
+- boulder-float + fan-passenger
+- glide-dismount + pound-chain
+- counterweight-you-must-remove + low-roof-no-jump
+- belt-reverse + stand-aside-is-the-switch
+- fan-band + tower-presses-a-column
+- lift-corner-path + low-roof-no-jump
+- mass-adds-on-the-beam + pound-chain
+- pound-chain + pound-to-move
+- freeze-bridge + lift-corner-path
+- low-roof-no-jump + stand-aside-is-the-switch
+- freeze-bridge + tower-presses-a-column
+- head-stack + mass-adds-on-the-beam
 
 ## This repo's 4-player levels
 
