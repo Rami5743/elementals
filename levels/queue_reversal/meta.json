@@ -1,0 +1,10 @@
+{
+  "order": 139,
+  "challenge": "mind",
+  "core": "single-file-reversal-via-return-loop",
+  "ideas": [
+    "no-overtaking",
+    "send-one-through",
+    "twist-undo"
+  ]
+}

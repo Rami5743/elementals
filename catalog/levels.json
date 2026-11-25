@@ -5131,6 +5131,36 @@
   ]
  },
  {
+  "id": "queue_reversal",
+  "name": "Queue Reversal",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+air"
+  ],
+  "parTicks": 7260,
+  "dark": false,
+  "challenge": "mind",
+  "core": "single-file-reversal-via-return-loop",
+  "ideas": [
+   "no-overtaking",
+   "send-one-through",
+   "twist-undo"
+  ],
+  "order": 139,
+  "line": "A single-file throat, two distant plates, and a return gallery that reverses who is ahead. The second return requires withdrawing the plate holder in front of the returning partner, rather than attempting to pass in the throat.",
+  "tokens": [
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:fan:hang-time",
+   "opt:latch"
+  ]
+ },
+ {
   "id": "quorum_shutters",
   "name": "Quorum Shutters",
   "source": "mine",
