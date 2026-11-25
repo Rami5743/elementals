@@ -4946,6 +4946,69 @@ Entities:
   X  exit_39      exit       at (38,18)  water
 ```
 
+## Draught Dispatcher (`draught_dispatcher`) — 3p, core `three-level-lift-strength-dispatch`
+
+```
+Draught Dispatcher (draught_dispatcher) for fire+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #..D..............^^^^......I......D...#
+ 2  #..D..............^^^^......I......D...#
+ 3  #.*D..........l...^^^^......I...l..D.*.#
+ 4  ##################^^^^##################
+ 5  ##################^^^^##################
+ 6  ##################^^^^##################
+ 7  ##################^^^^##################
+ 8  ##################^^^^##################
+ 9  ##################^^^^##################
+10  ##################^^^^##################
+11  ##################^^^^##################
+12  ##################^^^^##################
+13  #.D.....D.........^^^^....D........D...#
+14  #XD.....D.........^^^^....D........D..X#
+15  #XD.@...D...l...@.^^^^....D......l.D.lX#
+16  ########################################
+17  #.......D.............D.........D......#
+18  #.......D.............D.........D.....X#
+19  #.@l....D....l........D..l......D..*..X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (4,15)  air (16,15)  earth (2,19)
+Entities:
+  ^  weak         fan        at (18,1)  4x15  <- weakoff  strength 0.9  invert
+  ^  strong       fan        at (18,1)  4x15  <- selector  strength 1.58
+  D  f_start      door       at (8,13)  1x3  <- A1, Estart (needs 2)  latch
+  l  F1           lever      at (12,15)  -> e_access
+  l  A1           lever      at (14,3)  -> f_start, e_access
+  I  ice          ice        at (28,1)  1x3
+  l  Ftop         lever      at (32,3)  -> f_bottom, e_cert
+  D  f_bottom     door       at (26,13)  1x3  <- Ftop  latch
+  l  Fbottom      lever      at (33,15)  -> e_cert
+  D  a_second     door       at (3,1)  1x3  <- Ecert  latch
+  l  A2           lever      at (2,3)  -> f_second
+  D  f_second     door       at (35,1)  1x3  <- A2  latch
+  l  Ftop2        lever      at (37,3)  -> f_final
+  D  f_final      door       at (35,13)  1x3  <- Ftop2  latch
+  l  Ffinal       lever      at (37,15)  -> e_final
+  D  a_exit       door       at (2,13)  1x3  <- weakoff  latch
+  l  Estart       lever      at (3,19)  -> f_start
+  D  e_access     door       at (8,17)  1x3  <- F1, A1 (needs 2)  latch
+  l  selector     lever      at (13,19)  -> strong
+  D  e_cert       door       at (22,17)  1x3  <- Ftop, Fbottom (needs 2)  latch
+  l  Ecert        lever      at (25,19)  -> a_second
+  D  e_final      door       at (32,17)  1x3  <- Ffinal  latch
+  l  weakoff      lever      at (35,19)  -> weak, a_exit
+  *  gem_23       gem        at (2,3)  air
+  X  exit_24      exit       at (1,14)  air
+  *  gem_25       gem        at (37,3)  fire
+  X  exit_26      exit       at (38,14)  fire
+  *  gem_27       gem        at (35,19)  earth
+  X  exit_28      exit       at (38,18)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

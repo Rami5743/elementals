@@ -45,18 +45,18 @@ together. `twist-undo`×22, `quorum`×21, `twist-order`×6, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-passenger + lock-per-element
-- counterweight-you-must-remove + twist-undo
-- glide-dismount + turbine-out-of-reach
-- cargo-as-clock-contact + stand-aside-is-the-switch
-- lift-press + pound-chain
-- stand-aside-is-the-switch + timed-window
-- belt-cargo + counterweight-you-must-remove
-- head-stack + twist-self-block
-- belt-cargo + lift-corner-path
-- boulder-float + lift-corner-path
-- cargo-as-clock-contact + twist-self-block
-- belt-cargo + climb-then-steer
+- one-way-drop + turbine-out-of-reach
+- dark + invert-door
+- lift-press + lock-per-element
+- liquid-lane + lock-per-element
+- head-stack + single-file-stone
+- lock-per-element + single-file-stone
+- glide-passenger + head-stack
+- feed-the-engine-mid-ride + pound-chain
+- boulder-float + climb-then-steer
+- counterweight-you-must-remove + pound-chain
+- lift-corner-path + lock-per-element
+- fan-band + glide-dismount
 
 ## This repo's 4-player levels
 

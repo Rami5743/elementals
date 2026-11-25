@@ -3885,6 +3885,40 @@
   ]
  },
  {
+  "id": "draught_dispatcher",
+  "name": "Draught Dispatcher",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+earth+air"
+  ],
+  "parTicks": 8820,
+  "dark": false,
+  "challenge": "mind",
+  "core": "three-level-lift-strength-dispatch",
+  "ideas": [
+   "fan-band",
+   "wind-off-enables-descent",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 243,
+  "line": "Overlapping weak and strong fans make three useful configurations. Earth has their controls, and only Air can initially travel up the weak current.",
+  "tokens": [
+   "ent:door",
+   "ent:fan",
+   "ent:ice",
+   "ent:lever",
+   "opt:fan:hang-time",
+   "opt:fan:lifts-air",
+   "opt:invert:fan",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "drill",
   "name": "Drill",
   "source": "mine",

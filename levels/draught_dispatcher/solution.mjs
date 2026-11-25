@@ -1,0 +1,11 @@
+import {go,interact,until,waitFlag,wait,IN_LEFT,IN_RIGHT} from "../../kit.mjs";
+function* gate(c,id){yield* until(c,()=>c.ent(id).s.open>=96,0,9000,id);}
+function* pull(c,x){yield* go(c,x);yield* interact(c);}
+function* rise(c,dir){yield* go(c,19.5);yield* until(c,()=>c.bottom<=4*32,0,4000,"top");yield* until(c,()=>c.me.grounded&&c.bottom===4*32,dir,700,"bank");}
+function* fall(c){yield* go(c,19.5);yield* until(c,()=>c.me.grounded&&c.bottom===16*32,0,4000,"bottom");}
+const fire=function*(c){yield* gate(c,"f_start");yield* pull(c,12);yield* waitFlag(c,"strong1");yield* rise(c,IN_RIGHT);yield* until(c,()=>c.ent("ice").s.gone===1,IN_RIGHT,900,"melt ice");yield* pull(c,32);c.flag("top1");yield* waitFlag(c,"off1");yield* fall(c);yield* gate(c,"f_bottom");yield* pull(c,33);c.flag("low1");yield* waitFlag(c,"strong2");yield* rise(c,IN_RIGHT);yield* gate(c,"f_second");yield* pull(c,37);c.flag("top2");yield* waitFlag(c,"off2");yield* fall(c);yield* gate(c,"f_final");yield* pull(c,37);yield* go(c,38);};
+const air=function*(c){yield* rise(c,IN_LEFT);yield* pull(c,14);yield* gate(c,"a_second");yield* pull(c,2);c.flag("A2");yield* until(c,()=>!c.ent("weak").s.on,0,9000,"weak off");yield* fall(c);yield* gate(c,"a_exit");yield* go(c,1);};
+function earthRun(mode="normal"){return function*(c){yield* pull(c,3);yield* gate(c,"e_access");yield* pull(c,13);c.flag("strong1");if(mode==="retry"){yield* wait(c,130);yield* interact(c);yield* wait(c,90);yield* interact(c);}yield* waitFlag(c,"top1");if(mode!=="retain")yield* interact(c);c.flag("off1");yield* gate(c,"e_cert");yield* pull(c,25);yield* waitFlag(c,"A2");yield* pull(c,13);c.flag("strong2");yield* waitFlag(c,"top2");yield* interact(c);c.flag("off2");yield* gate(c,"e_final");if(mode!=="keep")yield* pull(c,35);yield* go(c,38);};}
+const earth=earthRun();
+const direct={fire:function*(c){yield* go(c,38)},earth:function*(c){yield* go(c,38)},air:function*(c){yield* go(c,1)}};
+export const solutions={sets:[{elements:["fire","earth","air"],scripts:{fire,earth,air},shortcuts:[{name:"direct",scripts:direct},{name:"never reduce strong draught",scripts:{fire,air,earth:earthRun("retain")}},{name:"never shut weak draught",scripts:{fire,air,earth:earthRun("keep")}}]}]};

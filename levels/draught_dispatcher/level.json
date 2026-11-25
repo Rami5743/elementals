@@ -1,0 +1,298 @@
+{
+  "id": "draught_dispatcher",
+  "name": "Draught Dispatcher",
+  "order": 243,
+  "description": "Air can ascend on the weak draught, Fire requires the strong one, and Earth in the sealed control room alternates lift strengths according to certificates from both.",
+  "supports": [
+    [
+      "fire",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "##################....##################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      4,
+      15
+    ],
+    "air": [
+      16,
+      15
+    ],
+    "earth": [
+      2,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "weak",
+      "type": "fan",
+      "x": 18,
+      "y": 1,
+      "w": 4,
+      "h": 15,
+      "strength": 0.9,
+      "invert": true
+    },
+    {
+      "id": "strong",
+      "type": "fan",
+      "x": 18,
+      "y": 1,
+      "w": 4,
+      "h": 15,
+      "strength": 1.58
+    },
+    {
+      "id": "f_start",
+      "type": "door",
+      "x": 8,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 12,
+      "y": 15,
+      "targets": [
+        "e_access"
+      ]
+    },
+    {
+      "id": "A1",
+      "type": "lever",
+      "x": 14,
+      "y": 3,
+      "targets": [
+        "f_start",
+        "e_access"
+      ]
+    },
+    {
+      "id": "ice",
+      "type": "ice",
+      "x": 28,
+      "y": 1,
+      "h": 3
+    },
+    {
+      "id": "Ftop",
+      "type": "lever",
+      "x": 32,
+      "y": 3,
+      "targets": [
+        "f_bottom",
+        "e_cert"
+      ]
+    },
+    {
+      "id": "f_bottom",
+      "type": "door",
+      "x": 26,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Fbottom",
+      "type": "lever",
+      "x": 33,
+      "y": 15,
+      "targets": [
+        "e_cert"
+      ]
+    },
+    {
+      "id": "a_second",
+      "type": "door",
+      "x": 3,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "A2",
+      "type": "lever",
+      "x": 2,
+      "y": 3,
+      "targets": [
+        "f_second"
+      ]
+    },
+    {
+      "id": "f_second",
+      "type": "door",
+      "x": 35,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ftop2",
+      "type": "lever",
+      "x": 37,
+      "y": 3,
+      "targets": [
+        "f_final"
+      ]
+    },
+    {
+      "id": "f_final",
+      "type": "door",
+      "x": 35,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ffinal",
+      "type": "lever",
+      "x": 37,
+      "y": 15,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "id": "a_exit",
+      "type": "door",
+      "x": 2,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Estart",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "f_start"
+      ]
+    },
+    {
+      "id": "e_access",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "selector",
+      "type": "lever",
+      "x": 13,
+      "y": 19,
+      "targets": [
+        "strong"
+      ]
+    },
+    {
+      "id": "e_cert",
+      "type": "door",
+      "x": 22,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Ecert",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "a_second"
+      ]
+    },
+    {
+      "id": "e_final",
+      "type": "door",
+      "x": 32,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "weakoff",
+      "type": "lever",
+      "x": 35,
+      "y": 19,
+      "targets": [
+        "weak",
+        "a_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 1,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 35,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 8820,
+  "hints": [
+    "Air alone can rise initially. Both Air and Fire must authorize Earth's selector.",
+    "Earth must cut the strong current for Fire's return without eliminating Air's lift.",
+    "After the final lower certificate, Earth can shut off the remaining weak current."
+  ]
+}
