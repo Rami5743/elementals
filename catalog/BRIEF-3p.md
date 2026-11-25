@@ -20,6 +20,7 @@ together. `twist-undo`×26, `quorum`×22, `twist-order`×8, `timed-window`×5, `
 - `pound-chain` — Several cracked floors stacked or offset, broken in one descent.
 - `pound-to-move` — Pounding the floor out from under an object instead of under yourself.
 - `boulder-float` — A boulder rests on the surface of a liquid; pushed in, it becomes floor.
+- `rope-keeps-the-jumper` — A pulley goes on counting the weight of whoever jumped off it until they land somewhere else, so a draught that stops them landing keeps the rope loaded with nobody aboard.
 - `boulder-carry` — Something that falls on a player rides on their head until a low roof scrapes it off.
 - `wide-door` — A door that opens sideways: a wall that becomes a bridge, or the reverse.
 - `dark` — The level is dark; lit torches are the only light, and the map has to be learned.
@@ -43,18 +44,18 @@ together. `twist-undo`×26, `quorum`×22, `twist-order`×8, `timed-window`×5, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- invert-door + low-roof-no-jump
-- lift-corner-path + pound-to-move
-- twist-sacrifice + twist-undo
-- boulder-carry + lift-corner-path
-- timed-window + unload-the-pan-you-ride
-- boulder-float + twist-self-block
-- pound-to-move + timed-window
-- mass-adds-on-the-beam + twist-stranding
-- lift-corner-path + trigger-from-above
-- dark + twist-stranding
-- boulder-carry + twist-stranding
 - glide-passenger + twist-order
+- hop-beats-belt + twist-setup
+- door-pushes-you-through + twist-stranding
+- lift-corner-path + pound-to-move
+- low-roof-no-jump + object-as-permanent-switch
+- single-file-stone + timed-window
+- counterweight-you-must-remove + mass-adds-on-the-beam
+- lift-corner-path + twist-sacrifice
+- lift-corner-path + partner-builds-your-landing
+- object-as-permanent-switch + stand-aside-is-the-switch
+- boulder-carry + object-as-permanent-switch
+- boulder-float + object-as-permanent-switch
 
 ## This repo's 3-player levels
 

@@ -30,9 +30,20 @@ through the gate without ever touching down — the one thing that shuts the gat
 
 ## Still to do
 
-- Shortcut scripts in `solution.mjs` (the four listed at the bottom of this file).
-- NOTES.md in the house format; coin `rope-keeps-the-jumper` in `tools/ideas.mjs`; meta.json;
-  `tools/build.mjs` and `tools/catalog.mjs` in the same commit.
+- Nothing. The level is finished.
+
+## Final state
+
+- `node kit.mjs check ballast` — **no problems**: solved in 24.9 s (par 70 s), 2/2 gems, no deaths,
+  no warnings, both co-op necessity tests pass, and all four shortcut scripts fail for the reason
+  they were written to prove.
+- `node tools/novelty.mjs ballast` — **PASS (invented)**, core key `rope-keeps-the-jumper`, used by
+  no other level anywhere.
+- `node tools/physics.mjs --check` — still matches (the kit was not touched).
+- `tools/build.mjs` (136 levels, 46 at 2p) and `tools/catalog.mjs` run in the level's own commit.
+- `order` 146 is used by this level alone.
+- The generator and the two probe scripts live in the session scratchpad, not in `levels/`, to match
+  the layout of the other 45 levels here.
 
 ## Bugs fixed on the way
 

@@ -21,6 +21,7 @@ together. `twist-undo`×24, `quorum`×24, `twist-order`×7, `lock-per-element`×
 - `glide-dismount` — Stepping off Air in mid-glide, which reaches a place Air itself cannot.
 - `glide-passenger` — Air carries somebody across a gap nobody else can cross.
 - `pound-to-move` — Pounding the floor out from under an object instead of under yourself.
+- `rope-keeps-the-jumper` — A pulley goes on counting the weight of whoever jumped off it until they land somewhere else, so a draught that stops them landing keeps the rope loaded with nobody aboard.
 - `one-way-drop` — Down drops you through a ledge: a route that only runs one way.
 - `wide-door` — A door that opens sideways: a wall that becomes a bridge, or the reverse.
 - `dark` — The level is dark; lit torches are the only light, and the map has to be learned.
@@ -42,18 +43,18 @@ together. `twist-undo`×24, `quorum`×24, `twist-order`×7, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-float + fan-passenger
-- glide-dismount + pound-chain
-- counterweight-you-must-remove + low-roof-no-jump
-- belt-reverse + stand-aside-is-the-switch
-- fan-band + tower-presses-a-column
-- lift-corner-path + low-roof-no-jump
-- mass-adds-on-the-beam + pound-chain
-- pound-chain + pound-to-move
-- freeze-bridge + lift-corner-path
-- low-roof-no-jump + stand-aside-is-the-switch
-- freeze-bridge + tower-presses-a-column
-- head-stack + mass-adds-on-the-beam
+- timed-window + tower-presses-a-column
+- stand-aside-is-the-switch + turbine-out-of-reach
+- lock-per-element + wide-door
+- climb-then-steer + turbine-out-of-reach
+- boulder-float + liquid-lane
+- door-pushes-you-through + pound-chain
+- low-roof-no-jump + rope-keeps-the-jumper
+- turbine-out-of-reach + twist-self-block
+- pound-chain + twist-sacrifice
+- low-roof-no-jump + pound-to-move
+- boulder-carry + glide-passenger
+- lock-per-element + pound-to-move
 
 ## This repo's 4-player levels
 

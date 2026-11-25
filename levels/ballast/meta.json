@@ -1,0 +1,11 @@
+{
+  "order": 146,
+  "challenge": "motor",
+  "core": "airborne-weight-holds-the-rope",
+  "ideas": [
+    "rope-keeps-the-jumper",
+    "twist-backwards",
+    "hold-switch",
+    "invert-door"
+  ]
+}

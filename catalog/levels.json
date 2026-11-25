@@ -2825,6 +2825,40 @@
   ]
  },
  {
+  "id": "ballast",
+  "name": "Ballast",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "water+earth"
+  ],
+  "parTicks": 4200,
+  "dark": false,
+  "challenge": "motor",
+  "core": "airborne-weight-holds-the-rope",
+  "ideas": [
+   "rope-keeps-the-jumper",
+   "twist-backwards",
+   "hold-switch",
+   "invert-door"
+  ],
+  "order": 146,
+  "line": "A pulley goes on counting the weight of whoever jumped off it until they land somewhere else — so a draught that stops you landing keeps the rope loaded with nobody aboard, and the way to hold the pan down while you leave it is to never touch the ground.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:fan",
+   "ent:plate",
+   "ent:pulley",
+   "opt:fan:lifts-fire-water",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "beacon_chain",
   "name": "Beacon Chain",
   "source": "mine",

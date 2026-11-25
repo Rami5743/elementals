@@ -2467,6 +2467,56 @@ Entities:
   X  exit_26      exit       at (38,18)  water
 ```
 
+## Ballast (`ballast`) — 2p, core `airborne-weight-holds-the-rope`
+
+```
+Ballast (ballast) for water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ###....^^D....D........................#
+ 4  ###....^^D....D........................#
+ 5  ###O...^^D..!.D...................X....#
+ 6  #.#uu##^^D..!.D...................X....#
+ 7  #.#..##^^############################..#
+ 8  #.#..##^^############################..#
+ 9  #.#..##^^############################..#
+10  #.#....^^############################..#
+11  #.#....^^############################..#
+12  #.#....^^############################..#
+13  #.#....^^############################..#
+14  #.#p*..^^############################..#
+15  #u#....^^############################..#
+16  #####..^^...................D..........#
+17  #####..^^...................D....X.....#
+18  #####.@^^.@.........pp..*...D.pp.X.....#
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (6,18)  earth (10,18)
+Entities:
+  u  rope         pulley     at (3,6)  2x1  speed 0.6  range 9  second platform at (1,15)  platforms weigh 0 and 3.5
+  O  stone        boulder    at (3,5)
+  p  pad          plate      at (3,14)  -> gate, hatch, inner  weight heavy
+  p  bellows      plate      at (20,18)  2x1  -> draught  weight heavy
+  p  bellows2     plate      at (30,18)  2x1  -> draught  weight heavy
+  ^  draught      fan        at (7,3)  2x16  <- bellows, bellows2  strength 2
+  D  gate         door       at (9,3)  1x4  <- pad
+  D  inner        door       at (14,3)  1x4  <- pad  invert
+  D  hatch        door       at (28,16)  1x3  <- pad
+  *  gem_9        gem        at (4,14)  water
+  *  gem_10       gem        at (24,18)  earth
+  X  exit_11      exit       at (34,5)  water
+  X  exit_12      exit       at (33,17)  earth
+  !  checkpoint_13 checkpoint at (12,5)
+  "  sign_14      sign       at (17,4)  "The rope counts you till you land"
+  "  sign_15      sign       at (22,18)  "Two plates, one Earth"
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

@@ -1,6 +1,6 @@
 import {
   IN_LEFT, IN_RIGHT, IN_JUMP, TILE,
-  go, until, steerTo,
+  go, until, steerTo, wait,
 } from '../../kit.mjs';
 
 /** Ride the draught, holding nothing, until the feet are at or above `feetRow`. */
@@ -92,13 +92,89 @@ const earth = function* (c) {
   yield* go(c, 33);
 };
 
+
+// --- cheats that must fail -------------------------------------------------------------------
+
+/** Water climbs and walks straight at the gate, never boarding the pan. */
+const waterStraightAtTheGate = function* (c) {
+  yield* go(c, 7);
+  yield* until(c, () => c.ent('draught').s.on === 1, 0, 1800, 'the draught to start');
+  yield* ride(c, 4.2);
+  yield* steerTo(c, 11);
+  yield* go(c, 34);
+};
+
+/** Water flies the instant the gate opens, leaving Earth on the near side of the hatch. */
+const waterFliesEarly = function* (c) {
+  yield* go(c, 7);
+  yield* until(c, () => c.ent('draught').s.on === 1, 0, 1800, 'the draught to start');
+  yield* ride(c, 4.2);
+  yield* steerTo(c, 5);
+  yield* edge(c, 4);
+  yield* until(c, () => c.ent('gate').s.open >= 128, 0, 1500, 'the gate to open');
+  yield* jumpAcross(c);
+  yield* ride(c, 4.2);
+  yield* steerTo(c, 11);
+  c.flag('home');
+  yield* until(c, () => c.ent('inner').s.open >= 100, 0, 900, 'the inner door to open');
+  yield* go(c, 34);
+};
+
+/** Earth holds the first bellows throughout, then tries to walk out once Water is home. */
+const earthHoldsThenRuns = function* (c) {
+  yield* go(c, 24);
+  yield* go(c, 20);
+  yield* until(c, () => c.has('home'), 0, 6000, 'Water to land beyond the gate');
+  yield* go(c, 30);
+  yield* go(c, 33);
+};
+
+/** Water rides the pan down and then touches down in the hall before flying. */
+const waterTouchesDown = function* (c) {
+  yield* go(c, 7);
+  yield* until(c, () => c.ent('draught').s.on === 1, 0, 1800, 'the draught to start');
+  yield* ride(c, 4.2);
+  yield* steerTo(c, 5);
+  yield* edge(c, 4);
+  yield* until(c, () => c.ent('gate').s.open >= 128, 0, 1500, 'the gate to open');
+  yield* until(c, () => c.has('across'), 0, 4000, 'Earth to cross the hatch');
+  // Walk off the pan instead of leaping: the rope lets go the moment Water lands.
+  yield* until(c, () => c.me.grounded === 1 && c.bottom >= 18 * TILE, IN_RIGHT, 600, 'the hall floor');
+  yield* go(c, 7);
+  yield* until(c, () => c.ent('draught').s.on === 1, 0, 900, 'the draught');
+  yield* ride(c, 4.2);
+  yield* steerTo(c, 11);
+  yield* go(c, 34);
+};
+
+/** Water leans on the bellows so that Earth can ride the wind to the gallery. */
+const waterOnBellows = function* (c) {
+  yield* go(c, 20);
+  yield* wait(c, 1800);
+};
+
+/** Earth waits in the draught column for a wind that a mass-1 body cannot switch on. */
+const earthInTheColumn = function* (c) {
+  yield* go(c, 7);
+  yield* wait(c, 1800);
+};
+
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
   sets: [
     {
       elements: ['water', 'earth'],
       scripts: { water, earth },
-      shortcuts: [],
+      shortcuts: [
+        { name: 'Water walks straight at the gate without boarding the pan',
+          scripts: { water: waterStraightAtTheGate, earth } },
+        { name: 'Water flies the moment the gate opens, stranding Earth',
+          scripts: { water: waterFliesEarly, earth: earthHoldsThenRuns } },
+        { name: 'Water touches down in the hall and then goes for the gate',
+          scripts: { water: waterTouchesDown, earth } },
+        { name: 'Water holds the bellows so Earth can ride the wind',
+          scripts: { water: waterOnBellows, earth: earthInTheColumn } },
+      ],
     },
   ],
   roles: {
