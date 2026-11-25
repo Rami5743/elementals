@@ -3207,6 +3207,41 @@
   }
  },
  {
+  "id": "counterflow_exchange",
+  "name": "Counterflow Exchange",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 8280,
+  "dark": false,
+  "challenge": "mind",
+  "core": "opposite-counterflow-corridors-cargo-certificates",
+  "ideas": [
+   "belt-filter",
+   "belt-reverse",
+   "twist-undo"
+  ],
+  "order": 130,
+  "line": "A belt speed between the two players' running speeds creates a directional barrier for Earth but not Fire. A single reversal swaps two complementary directional barriers while also moving the cargo that certifies the journey.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:blocks-earth",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "counterweight",
   "name": "Counterweight",
   "source": "mine",

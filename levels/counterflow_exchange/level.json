@@ -1,0 +1,239 @@
+{
+  "id": "counterflow_exchange",
+  "name": "Counterflow Exchange",
+  "order": 130,
+  "description": "Fire can walk upstream where Earth cannot. The same reversal alternates Earth's two passages and moves the cargo that certifies them.",
+  "supports": [
+    [
+      "fire",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "########################################",
+    "#......................................#",
+    "#....#######...........................#",
+    "#......................................#",
+    "######.....#############################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#.........########........########.....#",
+    "#......................................#",
+    "###########......##########......#######",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      11
+    ],
+    "earth": [
+      37,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "cargo",
+      "type": "belt",
+      "x": 2,
+      "y": 7,
+      "w": 36,
+      "speed": 2,
+      "mode": "reverse"
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 35,
+      "y": 6
+    },
+    {
+      "id": "left",
+      "type": "plate",
+      "x": 2,
+      "y": 6,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "e_mid",
+        "f3"
+      ]
+    },
+    {
+      "id": "right",
+      "type": "plate",
+      "x": 35,
+      "y": 6,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f2",
+        "e_final"
+      ]
+    },
+    {
+      "id": "fire_belt",
+      "type": "belt",
+      "x": 6,
+      "y": 12,
+      "w": 5,
+      "speed": -2.9,
+      "mode": "reverse"
+    },
+    {
+      "id": "earth_first",
+      "type": "belt",
+      "x": 27,
+      "y": 20,
+      "w": 6,
+      "speed": 2.9,
+      "mode": "reverse"
+    },
+    {
+      "id": "earth_second",
+      "type": "belt",
+      "x": 11,
+      "y": 20,
+      "w": 6,
+      "speed": -2.9,
+      "mode": "reverse"
+    },
+    {
+      "id": "reverse",
+      "type": "lever",
+      "x": 14,
+      "y": 11,
+      "targets": [
+        "cargo",
+        "fire_belt",
+        "earth_first",
+        "earth_second"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "f1key",
+      "type": "lever",
+      "x": 24,
+      "y": 11,
+      "targets": [
+        "e_mid"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "lever",
+      "x": 8,
+      "y": 19,
+      "targets": [
+        "f2",
+        "f3"
+      ]
+    },
+    {
+      "id": "f2key",
+      "type": "lever",
+      "x": 32,
+      "y": 11,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 19,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 28,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": false
+    },
+    {
+      "id": "e_mid",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e_final",
+      "type": "door",
+      "x": 5,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 2,
+      "y": 18
+    }
+  ],
+  "parTicks": 8280,
+  "hints": [
+    "Fire can oppose these belts; Earth cannot, and the low roof prevents hopping.",
+    "Earth needs the two corridors in opposite states; wait on the dry island while Fire reverses the motor.",
+    "The cargo contact must be changed again after Earth has secured the return permission."
+  ]
+}

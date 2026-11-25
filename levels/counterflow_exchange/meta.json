@@ -1,0 +1,10 @@
+{
+  "order": 130,
+  "challenge": "mind",
+  "core": "opposite-counterflow-corridors-cargo-certificates",
+  "ideas": [
+    "belt-filter",
+    "belt-reverse",
+    "twist-undo"
+  ]
+}

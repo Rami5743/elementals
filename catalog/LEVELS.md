@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 89 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 90 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (29)
+## 2 players — this repo (30)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -146,6 +146,10 @@ Totals: 79 campaign levels, 89 in this repo, of which 11 now ship in the campaig
   - idea: Two reversible belts share a cargo track. When they point inward, their seam acts as a stable destination without a mechanical stop; when they point outward, a cargo token at an endpoint stays there.
   - ideas: convergent-belt-seam, twist-undo, belt-reverse
   - features: ent:belt ent:boulder ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:latch opt:required:1 opt:required:2 opt:required:3
+- **Counterflow Exchange** `counterflow_exchange` (2p: fire+earth) core=`opposite-counterflow-corridors-cargo-certificates` challenge=mind par=8280
+  - idea: A belt speed between the two players' running speeds creates a directional barrier for Earth but not Fire. A single reversal swaps two complementary directional barriers while also moving the cargo that certifies the journey.
+  - ideas: belt-filter, belt-reverse, twist-undo
+  - features: ent:belt ent:boulder ent:door ent:lever ent:plate opt:belt:blocks-earth opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:latch opt:required:2
 
 ## 2 players — campaign (34)
 

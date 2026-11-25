@@ -58,18 +58,18 @@ together. `twist-undo`×13, `quorum`×12, `twist-order`×5, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- head-stack + two-stops-no-middle
-- reversible-switch-maze + seesaw-balance
-- fan-band + stand-aside-is-the-switch
-- low-roof-no-jump + stand-aside-is-the-switch
-- pound-chain + single-file-stone
-- head-stack + twist-sacrifice
-- belt-reverse + hop-beats-belt
-- turbine-out-of-reach + twist-setup
-- turbine-out-of-reach + twist-self-block
-- belt-filter + twist-stranding
-- pound-chain + twist-sacrifice
-- balanced-rope-memory + hop-beats-belt
+- dive-ahead-of-the-runaway + turbine-out-of-reach
+- counterweight-you-must-remove + fan-band
+- freeze-invert + head-stack
+- pound-chain + twist-self-block
+- boulder-float + feed-the-engine-mid-ride
+- belt-filter + two-stops-no-middle
+- reversible-switch-maze + torch-bridge
+- dark + reversible-switch-maze
+- belt-filter + unload-the-pan-you-ride
+- glide-passenger + reversible-switch-maze
+- hop-beats-belt + transport-power-excludes-workshop
+- fan-band + tower-presses-a-column
 
 ## This repo's 4-player levels
 

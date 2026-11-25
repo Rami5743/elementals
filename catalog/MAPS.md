@@ -1537,6 +1537,61 @@ Entities:
   X  exit_26      exit       at (2,18)  water
 ```
 
+## Counterflow Exchange (`counterflow_exchange`) — 2p, core `opposite-counterflow-corridors-cargo-certificates`
+
+```
+Counterflow Exchange (counterflow_exchange) for fire+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ##....................................##
+ 5  ##....................................##
+ 6  ##ppp..............................ppp##
+ 7  ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>##
+ 8  ########################################
+ 9  #..................D........D......D...#
+10  #....#######.......D........D......D..X#
+11  #..@..........l....D....l...D...l..D.*X#
+12  ######<<<<<#############################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #....D..............D..................#
+18  #.X..D....########..D.....########.....#
+19  #.X*.D..l...........D...l............@.#
+20  ###########<<<<<<##########>>>>>>#######
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,11)  earth (37,19)
+Entities:
+  >  cargo        belt       at (2,7)  36x1  <- reverse  mode reverse  speed 2
+  O  stone        boulder    at (35,6)
+  p  left         plate      at (2,6)  3x1  -> f1, e_mid, f3  weight heavy
+  p  right        plate      at (35,6)  3x1  -> f2, e_final  weight heavy
+  >  fire_belt    belt       at (6,12)  5x1  <- reverse  mode reverse  speed -2.9
+  >  earth_first  belt       at (27,20)  6x1  <- reverse  mode reverse  speed 2.9
+  >  earth_second belt       at (11,20)  6x1  <- reverse  mode reverse  speed -2.9
+  l  reverse      lever      at (14,11)  -> cargo, fire_belt, earth_first, earth_second
+  l  e1           lever      at (24,19)  -> f1
+  l  f1key        lever      at (24,11)  -> e_mid
+  l  e2           lever      at (8,19)  -> f2, f3
+  l  f2key        lever      at (32,11)  -> e_final
+  D  f1           door       at (19,9)  1x3  <- left, e1 (needs 2)  latch
+  D  f2           door       at (28,9)  1x3  <- right, e2 (needs 2)  latch
+  D  f3           door       at (35,9)  1x3  <- left, e2 (needs 2)
+  D  e_mid        door       at (20,17)  1x3  <- left, f1key (needs 2)  latch
+  D  e_final      door       at (5,17)  1x3  <- right, f2key (needs 2)  latch
+  *  gem_17       gem        at (37,11)  fire
+  X  exit_18      exit       at (38,10)  fire
+  *  gem_19       gem        at (3,19)  earth
+  X  exit_20      exit       at (2,18)  earth
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```
