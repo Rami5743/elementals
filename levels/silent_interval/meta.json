@@ -1,0 +1,11 @@
+{
+  "order": 250,
+  "challenge": "motor",
+  "core": "intersection-of-moving-contact-free-intervals",
+  "ideas": [
+    "moving-veto-silence",
+    "spatial-clock-phase-rendezvous",
+    "timed-window",
+    "invert-door"
+  ]
+}

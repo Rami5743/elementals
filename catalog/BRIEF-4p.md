@@ -38,23 +38,24 @@ together. `twist-undo`×27, `quorum`×27, `twist-order`×7, `timed-window`×5, `
 - `spatial-clock-phase-rendezvous` — Two independently launched cargo shuttles with different travel times must overlap their physical contacts; their relative launch phase is the key, and both must eventually return home.
 - `causeway-as-veto` — A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge.
 - `drop-reconfigures-circuit` — A cracked floor permanently transfers a cargo from a stationary upper contact to a separate reversible lower conveyor register, so the old permissions must be recorded before the circuit is reconfigured.
+- `moving-veto-silence` — A gate is closed by any of several spatial veto contacts and opens only in the intersection of two cargo objects' contact-free intervals; a third participant crosses during that temporary silence.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-float + unload-the-pan-you-ride
-- low-roof-no-jump + twist-self-block
-- glide-dismount + pound-chain
-- three-load-rope-control + turbine-out-of-reach
-- glide-passenger + pound-chain
-- causeway-as-veto + freeze-bridge
-- climb-then-steer + head-stack
-- boulder-carry + fan-passenger
-- boulder-carry + unload-the-pan-you-ride
-- mass-adds-on-the-beam + turbine-out-of-reach
-- freeze-bridge + partner-builds-your-landing
-- causeway-as-veto + low-roof-no-jump
+- turbine-out-of-reach + twist-stranding
+- glide-passenger + invert-door
+- lift-corner-path + timed-window
+- lift-corner-path + obstruction-as-third-state
+- lift-corner-path + torch-bridge
+- turbine-out-of-reach + twist-self-block
+- cargo-as-clock-contact + glide-passenger
+- liquid-lane + lock-per-element
+- belt-cargo + drop-reconfigures-circuit
+- belt-reverse + partner-builds-your-landing
+- pound-to-move + turbine-out-of-reach
+- invert-door + moving-veto-silence
 
 ## This repo's 4-player levels
 

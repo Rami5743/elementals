@@ -6496,6 +6496,44 @@
   ]
  },
  {
+  "id": "silent_interval",
+  "name": "Silent Interval",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7620,
+  "dark": false,
+  "challenge": "motor",
+  "core": "intersection-of-moving-contact-free-intervals",
+  "ideas": [
+   "moving-veto-silence",
+   "spatial-clock-phase-rendezvous",
+   "timed-window",
+   "invert-door"
+  ],
+  "order": 250,
+  "line": "the gate is held shut by a union of four long cargo contacts. The useful signal is a moving hole in that union: both stones must simultaneously be between their two contacts. It is a negative rather than positive coincidence.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "single_file",
   "name": "Single File",
   "source": "mine",

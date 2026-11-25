@@ -191,3 +191,5 @@ Object.assign(IDEAS, { "spatial-clock-phase-rendezvous": {kind:'spine',note:"Two
 Object.assign(IDEAS, { "causeway-as-veto": {kind:'spine',note:"A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge."} });
 
 Object.assign(IDEAS, { "drop-reconfigures-circuit": {kind:'spine',note:"A cracked floor permanently transfers a cargo from a stationary upper contact to a separate reversible lower conveyor register, so the old permissions must be recorded before the circuit is reconfigured."} });
+
+Object.assign(IDEAS, { "moving-veto-silence": {kind:'spine',note:"A gate is closed by any of several spatial veto contacts and opens only in the intersection of two cargo objects' contact-free intervals; a third participant crosses during that temporary silence."} });
