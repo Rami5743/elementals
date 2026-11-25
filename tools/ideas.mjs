@@ -159,3 +159,5 @@ Object.assign(IDEAS, { "balanced-rope-memory": {kind:'spine',note:"With the snat
 Object.assign(IDEAS, { "expiry-order-is-key": {kind:'spine',note:"Timers overlap to record permission, then one expires while the other remains active. A complementary signal and a live timed signal are the two halves of the exit key."} });
 
 Object.assign(IDEAS, { "grating-memory-with-erase": {kind:'spine',note:"An elevator writes a stone onto a one-way grate; a separate closing press erases it by pushing the stone through after the elevator is removed. Two heavy contacts alternate, storing the previous physical state rather than merely following a switch."} });
+
+Object.assign(IDEAS, { "two-stage-piston-handoff": {kind:'spine',note:"Two adjacent sideways doors form a sequential ram: the short piston must transfer the cargo into the long piston's range while it is retracted. Closing the long piston prematurely blocks the transfer. A returning belt makes the three stationary contact states reusable."} });

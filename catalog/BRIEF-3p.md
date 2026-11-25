@@ -55,23 +55,24 @@ together. `twist-order`×6, `twist-undo`×5, `quorum`×4, `machine-strands-opera
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `grating-memory-with-erase` — An elevator writes a stone onto a one-way grate; a separate closing press erases it by pushing the stone through after the elevator is removed. Two heavy contacts alternate, storing the previous physical state rather than merely following a switch.
+- `two-stage-piston-handoff` — Two adjacent sideways doors form a sequential ram: the short piston must transfer the cargo into the long piston's range while it is retracted. Closing the long piston prematurely blocks the transfer. A returning belt makes the three stationary contact states reusable.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-passenger + trigger-from-above
-- turbine-out-of-reach + twist-self-block
-- dark + machine-strands-operator
-- machine-strands-operator + trigger-from-above
-- lift-corner-path + two-in-the-air-at-once
-- stand-aside-is-the-switch + twist-self-block
-- machine-strands-operator + sink-as-a-timer
-- lift-sheds-its-load + machine-strands-operator
-- lift-corner-path + trigger-from-above
-- machine-strands-operator + two-is-not-heavy
-- belt-filter + twist-stranding
-- freeze-invert + twist-self-block
+- belt-filter + twist-undo
+- dark + twist-self-block
+- partner-builds-your-landing + twist-order
+- counterweight-you-must-remove + stock-before-it-seals
+- counterweight-you-must-remove + switch-in-mid-flight
+- door-pushes-you-through + invert-door
+- invert-door + wide-door
+- counterweight-you-must-remove + sink-as-a-timer
+- fan-passenger + seesaw-balance
+- twist-order + wide-door
+- mass-adds-on-the-beam + twist-self-block
+- twist-sacrifice + twist-self-block
 
 ## This repo's 3-player levels
 

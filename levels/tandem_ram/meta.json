@@ -1,0 +1,10 @@
+{
+  "order": 121,
+  "challenge": "mind",
+  "core": "adjacent-piston-handoff",
+  "ideas": [
+    "two-stage-piston-handoff",
+    "twist-order",
+    "twist-backwards"
+  ]
+}

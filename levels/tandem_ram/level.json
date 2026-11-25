@@ -1,0 +1,257 @@
+{
+  "id": "tandem_ram",
+  "name": "Tandem Ram",
+  "order": 121,
+  "description": "A short piston can hand a stone to a long piston, but not if the long piston closes first.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "parTicks": 7800,
+  "tiles": [
+    "########################################",
+    "##.....................................#",
+    "##.....................................#",
+    "##.....................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      13
+    ],
+    "water": [
+      36,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "belt",
+      "type": "belt",
+      "x": 2,
+      "y": 3,
+      "w": 37,
+      "speed": -2
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 20,
+      "y": 2
+    },
+    {
+      "id": "short",
+      "type": "door",
+      "x": 2,
+      "y": 2,
+      "w": 8,
+      "h": 1
+    },
+    {
+      "id": "long",
+      "type": "door",
+      "x": 10,
+      "y": 2,
+      "w": 10,
+      "h": 1
+    },
+    {
+      "id": "left",
+      "type": "plate",
+      "x": 2,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "w0",
+        "f1"
+      ]
+    },
+    {
+      "id": "middle",
+      "type": "plate",
+      "x": 10,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "f0",
+        "w2"
+      ]
+    },
+    {
+      "id": "right",
+      "type": "plate",
+      "x": 20,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "f2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 12
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 13
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "id": "a",
+      "type": "lever",
+      "x": 3,
+      "y": 13,
+      "targets": [
+        "short"
+      ]
+    },
+    {
+      "id": "b",
+      "type": "lever",
+      "x": 36,
+      "y": 19,
+      "targets": [
+        "long"
+      ]
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "wa",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "f0"
+      ]
+    },
+    {
+      "id": "f0",
+      "type": "door",
+      "x": 9,
+      "y": 11,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "fa",
+      "type": "lever",
+      "x": 14,
+      "y": 13,
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "wb",
+      "type": "lever",
+      "x": 16,
+      "y": 19,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 19,
+      "y": 11,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "fb",
+      "type": "lever",
+      "x": 23,
+      "y": 13,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "wc",
+      "type": "lever",
+      "x": 5,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 29,
+      "y": 11,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    }
+  ],
+  "hints": [
+    "Both retracted: the belt brings the stone all the way left.",
+    "Close the short piston before the long one. The two adjacent pistons can hand the stone to one another.",
+    "The three heavy contacts enable different permissions; keep track of which one is still needed."
+  ]
+}

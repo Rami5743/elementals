@@ -1019,6 +1019,64 @@ Entities:
   D  g0_2         door       at (29,11)  1x3  <- top, r1_2 (needs 2)  latch
 ```
 
+## Tandem Ram (`tandem_ram`) — 2p, core `adjacent-piston-handoff`
+
+```
+Tandem Ram (tandem_ram) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##.....................................#
+ 2  ##pDDDDDDDpDDDDDDDDDp..................#
+ 3  ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<#
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  ########################################
+11  #........D.........D.........D.........#
+12  #........D.........D.........D.......X.#
+13  #..@.....D....l....D...l.....D......*X.#
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.........D.........D.........D........#
+18  #.X.......D.........D.........D........#
+19  #.X*.l....D.....l...D....l....D.....@..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,13)  water (36,19)
+Entities:
+  >  belt         belt       at (2,3)  37x1  speed -2
+  O  stone        boulder    at (20,2)
+  D  short        door       at (2,2)  8x1  <- a
+  D  long         door       at (10,2)  10x1  <- b
+  p  left         plate      at (2,2)  -> w0, f1  weight heavy
+  p  middle       plate      at (10,2)  -> f0, w2  weight heavy
+  p  right        plate      at (20,2)  -> w1, f2  weight heavy
+  X  exit_7       exit       at (37,12)  fire
+  *  gem_8        gem        at (36,13)  fire
+  X  exit_9       exit       at (2,18)  water
+  *  gem_10       gem        at (3,19)  water
+  l  a            lever      at (3,13)  -> short
+  l  b            lever      at (36,19)  -> long
+  D  w0           door       at (30,17)  1x3  <- left  latch
+  l  wa           lever      at (25,19)  -> f0
+  D  f0           door       at (9,11)  1x3  <- middle, wa (needs 2)  latch
+  l  fa           lever      at (14,13)  -> w1
+  D  w1           door       at (20,17)  1x3  <- right, fa (needs 2)  latch
+  l  wb           lever      at (16,19)  -> f1
+  D  f1           door       at (19,11)  1x3  <- left, wb (needs 2)  latch
+  l  fb           lever      at (23,13)  -> w2
+  D  w2           door       at (10,17)  1x3  <- middle, fb (needs 2)  latch
+  l  wc           lever      at (5,19)  -> f2
+  D  f2           door       at (29,11)  1x3  <- right, wc (needs 2)  latch
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

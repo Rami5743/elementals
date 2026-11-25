@@ -4364,6 +4364,40 @@
   ]
  },
  {
+  "id": "tandem_ram",
+  "name": "Tandem Ram",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7800,
+  "dark": false,
+  "challenge": "mind",
+  "core": "adjacent-piston-handoff",
+  "ideas": [
+   "two-stage-piston-handoff",
+   "twist-order",
+   "twist-backwards"
+  ],
+  "order": 121,
+  "line": "Two adjacent sideways doors act as a two-stage piston. The short piston must hand the stone to the long one before the long piston closes; closing the long one first blocks the handoff. The returning belt makes all three positions reusable.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:wide-door"
+  ]
+ },
+ {
   "id": "thaw",
   "name": "Thaw",
   "source": "mine",
