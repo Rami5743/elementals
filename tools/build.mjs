@@ -39,13 +39,14 @@ for (const id of ids) {
 // every `check`, so they would make every level look edited today.
 
 const AUTHORED = new Set(['level.json', 'solution.mjs', 'meta.json', 'NOTES.md']);
+const GPT_AUTHOR = '107263736+Rami5743@users.noreply.github.com';
 
 /** id -> { created, updated } as ISO days, plus `seq`: how many commits back the first one is. */
 function levelDates() {
   const dates = new Map();
   let log;
   try {
-    log = execFileSync('git', ['log', '--format=%x01%aI', '--name-only', '--', 'levels'],
+    log = execFileSync('git', ['log', '--format=%x01%aI %ae', '--name-only', '--', 'levels'],
                        { cwd: ROOT, encoding: 'utf8', maxBuffer: 1 << 28 });
   } catch {
     return dates;                                    // not a checkout: fall back to mtimes
@@ -54,12 +55,13 @@ function levelDates() {
   for (const [i, entry] of entries.entries()) {
     const [stamp, ...paths] = entry.split('\n');
     const day = stamp.slice(0, 10);
+    const email = stamp.slice(stamp.indexOf(' ') + 1).trim();
     for (const line of paths) {
       const m = /^levels\/([^/]+)\/(.+)$/.exec(line.trim());
       if (!m || !AUTHORED.has(m[2])) continue;
       const d = dates.get(m[1]);
-      if (!d) dates.set(m[1], { created: day, updated: day, seq: i });
-      else { d.created = day; d.seq = i; }   // the log runs newest first, so the last wins
+      if (!d) dates.set(m[1], { created: day, updated: day, seq: i, by: email });
+      else { d.created = day; d.seq = i; d.by = email; }   // newest first: the last wins
     }
   }
   return dates;
@@ -85,9 +87,12 @@ const DIRTY = dirtyLevels();
 const TODAY = new Date().toISOString().slice(0, 10);
 for (const l of levels) {
   // A level only in the working tree, or edited since its last commit, is dated today.
-  const git = DATES.get(l.id) ?? { created: TODAY, updated: TODAY, seq: -1 };
+  const git = DATES.get(l.id) ?? { created: TODAY, updated: TODAY, seq: -1, by: '' };
   l.dates = { created: git.created, updated: DIRTY.has(l.id) ? TODAY : git.updated };
   l.seq = git.seq;                     // a bigger seq is further back in the history
+  // Levels built by the other agent arrive on the `gpt` branch, committed under the account's
+  // own GitHub identity; this repo's own levels are committed as Claude.
+  l.fromGpt = git.by === GPT_AUTHOR;
 }
 
 // The page runs oldest level first within each player count. `order` in meta.json orders the
@@ -190,7 +195,7 @@ function card(l) {
         <img class="map" src="thumbs/${esc(l.id)}.svg" alt="Map of ${esc(l.name)}" width="40" height="${22 - l.thumbTop}" loading="lazy" decoding="async">
         <p class="dates">Added <time datetime="${l.dates.created}">${day(l.dates.created)}</time>${
           l.dates.updated === l.dates.created ? '' : ` · updated <time datetime="${l.dates.updated}">${day(l.dates.updated)}</time>`}</p>
-        <p class="tags"><span class="tag ${l.meta.challenge === 'motor' ? 'motor' : 'mind'}" title="${esc(ch.note)}">${ch.label}</span><span class="tag par">par ${seconds(l.parTicks)}</span></p>
+        <p class="tags"><span class="tag ${l.meta.challenge === 'motor' ? 'motor' : 'mind'}" title="${esc(ch.note)}">${ch.label}</span><span class="tag par">par ${seconds(l.parTicks)}</span>${l.fromGpt ? '<span class="tag src" title="Built on the gpt branch">gpt</span>' : ''}</p>
         <p class="links"><a class="play" href="${esc(l.link)}" target="_blank" rel="noopener">Play</a><a class="file" href="packed/${esc(l.id)}.elementals.json" download>level file</a></p>
       </article>`;
 }
@@ -260,6 +265,7 @@ h3 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
 .tag.mind { color: var(--mind); background: var(--mind-bg); }
 .tag.motor { color: var(--motor); background: var(--motor-bg); }
 .tag.par { color: var(--muted); border-color: var(--line); }
+.tag.src { color: var(--muted); border-color: var(--line); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
 .links { margin: 0; display: flex; gap: 10px; align-items: center; }
 a.play {
   background: var(--accent); color: var(--accent-ink); text-decoration: none;
