@@ -783,6 +783,66 @@ Entities:
   b  repeat_far   button     at (36,8)  -> carriage  mode timed  duration 1200
 ```
 
+## Footprint Ledger (`footprint_ledger`) — 2p, core `occupancy-latches-2`
+
+```
+Footprint Ledger (footprint_ledger) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #........D..........D..........D......##
+ 3  #........D..........D..........D......##
+ 4  #..@.....D....p.....D......p...D......##
+ 5  ###################################EEE##
+ 6  ###################################...##
+ 7  #........D..........D.................##
+ 8  #.X......D..........D.................##
+ 9  #.X*.....D....p.....D......p..........##
+10  ###################################...##
+11  ########################################
+12  ##......D..........D..........D........#
+13  ##......D..........D..........D........#
+14  ##......D...p......D.....p....D.....@..#
+15  ##EEE###################################
+16  ##...###################################
+17  ##.................D..........D........#
+18  ##.................D..........D......X.#
+19  ##..........p......D.....p....D.....*X.#
+20  ##...###################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,4)  water (36,14)
+Entities:
+  E  lift0        elevator   at (35,5)  3x1  mode loop  speed 2  pause 180  path (35,5)-(35,10)
+  D  g0_0         door       at (9,2)  1x3  <- p1_0  invert
+  D  g0_1         door       at (20,2)  1x3  <- p0_1, p1_1 (needs 2)  latch
+  D  g0_2         door       at (31,2)  1x3  <- p1_0
+  D  g0_3         door       at (20,7)  1x3  <- p1_1, p1_4  invert
+  D  g0_4         door       at (9,7)  1x3  <- p1_2, p1_3
+  X  exit_6       exit       at (2,8)  fire
+  *  gem_7        gem        at (3,9)  fire
+  E  lift1        elevator   at (2,15)  3x1  mode loop  speed 2  pause 180  path (2,15)-(2,20)
+  D  g1_0         door       at (30,12)  1x3  <- p0_3  invert
+  D  g1_1         door       at (19,12)  1x3  <- p0_4, p1_1 (needs 2)  latch
+  D  g1_2         door       at (8,12)  1x3  <- p0_0, p0_3
+  D  g1_3         door       at (19,17)  1x3  <- p0_2, p1_3 (needs 2)  latch
+  D  g1_4         door       at (30,17)  1x3  <- p0_2  invert
+  X  exit_14      exit       at (37,18)  water
+  *  gem_15       gem        at (36,19)  water
+  p  p0_0         plate      at (3,4)  -> g1_2
+  p  p0_1         plate      at (14,4)  -> g0_1
+  p  p0_2         plate      at (27,4)  -> g1_3, g1_4
+  p  p0_3         plate      at (27,9)  -> g1_0, g1_2
+  p  p0_4         plate      at (14,9)  -> g1_1
+  p  p1_0         plate      at (36,14)  -> g0_0, g0_2
+  p  p1_1         plate      at (25,14)  -> g0_1, g0_3, g1_1
+  p  p1_2         plate      at (12,14)  -> g0_4
+  p  p1_3         plate      at (12,19)  -> g0_4, g1_3
+  p  p1_4         plate      at (25,19)  -> g0_3
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

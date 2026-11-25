@@ -3283,6 +3283,37 @@
   ]
  },
  {
+  "id": "footprint_ledger",
+  "name": "Footprint Ledger",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 14820,
+  "dark": false,
+  "challenge": "mind",
+  "core": "occupancy-latches-2",
+  "ideas": [
+   "position-as-volatile-key",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 117,
+  "line": "A player's location is a volatile key, but meeting on the right two plates records a permanent permission; the puzzle is to acquire those permissions without abandoning a position that a partner still needs.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:plate",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "fourfold_interlock",
   "name": "Fourfold Interlock",
   "source": "mine",

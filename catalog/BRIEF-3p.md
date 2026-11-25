@@ -54,23 +54,24 @@ together. `twist-order`×6, `machine-strands-operator`×3, `timed-window`×3, `o
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `position-as-volatile-key` — Player position is a temporary key, whereas a jointly activated latch retains permission after the players leave. The puzzle is to trade temporary occupancy for permanent permission and recover the earlier positions.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- machine-strands-operator + trip-plate-in-the-shaft
-- glide-passenger + machine-strands-operator
-- lift-corner-path + turbine-out-of-reach
-- low-roof-no-jump + twist-stranding
-- hop-beats-belt + twist-stranding
-- glide-passenger + twist-stranding
-- belt-filter + twist-stranding
-- machine-strands-operator + wide-door
-- trigger-from-above + twist-stranding
-- lock-per-element + twist-stranding
-- lift-corner-path + partner-builds-your-landing
-- dark + twist-stranding
+- belt-filter + twist-backwards
+- counterweight-you-must-remove + stock-before-it-seals
+- dark + fan-passenger
+- boulder-float + counterweight-you-must-remove
+- object-as-permanent-switch + turbine-out-of-reach
+- crate-step + twist-stranding
+- hop-beats-belt + lift-corner-path
+- freeze-invert + lift-corner-path
+- stock-before-it-seals + twist-stranding
+- lift-corner-path + liquid-lane
+- belt-filter + invert-door
+- machine-strands-operator + partner-builds-your-landing
 
 ## This repo's 3-player levels
 

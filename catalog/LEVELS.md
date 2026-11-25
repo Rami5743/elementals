@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 52 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 53 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (16)
+## 2 players — this repo (17)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -94,6 +94,10 @@ Totals: 79 campaign levels, 52 in this repo, of which 11 now ship in the campaig
   - idea: A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.
   - ideas: cargo-as-clock-contact, belt-cargo, timed-window
   - features: ent:belt ent:boulder ent:button ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2
+- **Footprint Ledger** `footprint_ledger` (2p: fire+water) core=`occupancy-latches-2` challenge=mind par=14820
+  - idea: A player's location is a volatile key, but meeting on the right two plates records a permanent permission; the puzzle is to acquire those permissions without abandoning a position that a partner still needs.
+  - ideas: position-as-volatile-key, quorum, twist-undo
+  - features: ent:door ent:elevator ent:plate opt:elevator:loop opt:invert:door opt:latch opt:required:2
 
 ## 2 players — campaign (34)
 

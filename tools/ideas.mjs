@@ -151,3 +151,5 @@ Object.assign(IDEAS, {
   'reversible-switch-maze': { kind: 'spine', note: 'A distributed switch circuit is itself the puzzle: an on/off key opens one route while closing another, so the players must rewind a prior circuit state and move back through the maze to reconstruct the next one.' },
   'cargo-as-clock-contact': { kind: 'spine', note: 'A single moving heavy object is the electrical contact: its endpoints are mutually exclusive sustained signals, and crossing the intermediate contact is a physical clock pulse. Two relay chains must be armed before that pulse can be used.' },
 });
+
+Object.assign(IDEAS, { "position-as-volatile-key": {kind:'spine',note:"Player position is a temporary key, whereas a jointly activated latch retains permission after the players leave. The puzzle is to trade temporary occupancy for permanent permission and recover the earlier positions."} });

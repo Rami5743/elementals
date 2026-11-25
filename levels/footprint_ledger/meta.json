@@ -1,0 +1,10 @@
+{
+  "order": 117,
+  "challenge": "mind",
+  "core": "occupancy-latches-2",
+  "ideas": [
+    "position-as-volatile-key",
+    "quorum",
+    "twist-undo"
+  ]
+}
