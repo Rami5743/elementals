@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 60 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 61 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (19)
@@ -459,7 +459,7 @@ Totals: 79 campaign levels, 60 in this repo, of which 11 now ship in the campaig
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (20)
+## 4 players — this repo (21)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -541,6 +541,10 @@ Totals: 79 campaign levels, 60 in this repo, of which 11 now ship in the campaig
   - idea: A four-operator mechanical memory: the same balanced ratio retains the last written height, while three independent operators must cooperate to erase it.
   - ideas: balanced-rope-memory, twist-undo, quorum
   - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:pulley opt:elevator:loop opt:heavy-plate opt:invert:door opt:invert:pulley opt:latch opt:required:1 opt:required:2 opt:required:3 opt:seesaw-range
+- **Expiration Quartet** `expiration_quartet` (4p: fire+water+earth+air) core=`quartet-expiry-permission` challenge=motor par=6180
+  - idea: A fourth operator must undo the early permissions before three overlapping clocks can become successive complementary crossing windows.
+  - ideas: expiry-order-is-key, twist-two-clocks, twist-undo
+  - features: ent:button ent:door ent:lever opt:button-timed opt:button:timed opt:invert:door opt:latch opt:required:2 opt:required:3
 
 ## 4 players — campaign (23)
 

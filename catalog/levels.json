@@ -3275,6 +3275,39 @@
   ]
  },
  {
+  "id": "expiration_quartet",
+  "name": "Expiration Quartet",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6180,
+  "dark": false,
+  "challenge": "motor",
+  "core": "quartet-expiry-permission",
+  "ideas": [
+   "expiry-order-is-key",
+   "twist-two-clocks",
+   "twist-undo"
+  ],
+  "order": 319,
+  "line": "A fourth operator must undo the early permissions before three overlapping clocks can become successive complementary crossing windows.",
+  "tokens": [
+   "ent:button",
+   "ent:door",
+   "ent:lever",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "finale",
   "name": "Finale",
   "source": "mine",

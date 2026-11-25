@@ -1,0 +1,10 @@
+{
+  "order": 319,
+  "challenge": "motor",
+  "core": "quartet-expiry-permission",
+  "ideas": [
+    "expiry-order-is-key",
+    "twist-two-clocks",
+    "twist-undo"
+  ]
+}
