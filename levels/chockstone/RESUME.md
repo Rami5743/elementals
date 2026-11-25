@@ -14,7 +14,15 @@ brake.
 
 ## State
 
-- Design written. No JSON yet beyond `kit.mjs new`'s scaffold.
+- `level.json` written by a generator (`/tmp/claude-0/-home-user-elementals/21399c47-b54e-59c4-b8d3-8866955cc1ed/scratchpad/gen.mjs`) and **valid**.
+
+## The map
+
+Top shelf (floor row 6, x 1..11) with the grip at (2,5), the anvil at (5,5) and the stone parked on
+the lip at (11,5). A ten-tile slope `\` at (12+i, 6+i) runs down to a flat run (floor row 16,
+x 22..30) and the wicket at x=31 seals the exit hall (x 32..38). The brake's post is the walkway
+cell (17,10), standing on slope tile (17,11); a stone stopped there rests in cells (16,9)+(17,9),
+which is exactly the `berth` plate.
 
 ## Measured facts this design rests on (probed, 2026-11-25)
 
@@ -30,12 +38,14 @@ brake.
 
 ## What passes
 
-- Nothing yet.
+- `node kit.mjs check chockstone`: `level.json is valid`, `every spawn point is safe`.
 
 ## What fails
 
-- Nothing yet.
+- `✗ fire+water+earth: solution.mjs has no scripts for this group` — the scaffold's script is still
+  for Fire + Water.
 
 ## Next thing to try
 
-Write `level.json` from a generator script and get `node kit.mjs check chockstone` to validate.
+Write the three scripts: Water down to (17,10), Fire to the grip, Earth pushes the stone off the lip
+then walks back to the anvil.
