@@ -50,18 +50,18 @@ together. `twist-undo`×20, `quorum`×18, `twist-order`×8, `timed-window`×4, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- mass-adds-on-the-beam + twist-self-block
-- fan-passenger + feed-the-engine-mid-ride
-- counterweight-you-must-remove + send-one-through
-- single-file-stone + twist-self-block
-- head-stack + pound-chain
-- timed-window + trigger-from-above
-- pound-to-move + twist-two-clocks
-- fan-passenger + lock-per-element
-- pound-to-move + torch-bridge
-- twist-sacrifice + twist-two-clocks
+- pound-chain + timed-window
+- glide-passenger + machine-strands-operator
+- machine-strands-operator + send-one-through
+- glide-passenger + twist-self-block
+- hop-beats-belt + lift-corner-path
+- machine-strands-operator + sink-as-a-timer
+- lift-sheds-its-load + machine-strands-operator
+- hop-beats-belt + machine-strands-operator
 - door-pushes-you-through + freeze-bridge
-- fan-band + fan-passenger
+- lift-corner-path + low-roof-no-jump
+- boulder-float + lift-corner-path
+- lift-corner-path + partner-builds-your-landing
 
 ## This repo's 3-player levels
 

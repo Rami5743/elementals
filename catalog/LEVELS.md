@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 115 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 116 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (37)
+## 2 players — this repo (38)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -178,6 +178,9 @@ Totals: 79 campaign levels, 115 in this repo, of which 11 now ship in the campai
   - idea: Two isolated pilots must overlap in the air to operate a shared pair of suspended contacts, then dismantle and reconstruct the reciprocal permission circuit before repeating the flight.
   - ideas: two-in-the-air-at-once, switch-in-mid-flight, twist-undo
   - features: ent:door ent:fan ent:lever ent:plate opt:fan:hang-time opt:invert:door opt:latch opt:required:2 opt:required:4 tile:one-way
+- **Two Deposits** `two_deposits` (2p: fire+water) core=`ordered-irreversible-load-deposits` challenge=mind par=6300
+  - ideas: hoist-one-way-for-cargo, lift-sheds-its-load, twist-sacrifice, twist-order
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch opt:required:1 opt:required:2 opt:required:3 opt:required:5 tile:one-way
 
 ## 2 players — campaign (34)
 

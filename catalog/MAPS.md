@@ -2005,6 +2005,78 @@ Entities:
   l  wF           lever      at (38,14)  -> fhomegate, whomegate
 ```
 
+## Two Deposits (`two_deposits`) — 2p, core `ordered-irreversible-load-deposits`
+
+```
+Two Deposits (two_deposits) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.........p..................p.........#
+ 2  #......................................#
+ 3  #......................................#
+ 4  #.........p..................p.........#
+ 5  #.....============================.....#
+ 6  #......................................#
+ 7  #......................................#
+ 8  #......................................#
+ 9  #.........p..................p.........#
+10  #.........E..................E.........#
+11  ########################################
+12  #....D...D.......D......D...D....D...D.#
+13  #....D...D.......D......D...D....D...DX#
+14  #..l.D.@.D...l...D..l...D...D..l.D.l.DX#
+15  ########################################
+16  ########################################
+17  #.D...D....D...D.....D.......D.......D.#
+18  #XD...D....D...D.....D.......D.......D.#
+19  #XD.l.D.l..D...D..l..D...l...D......@Dl#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (7,14)  water (36,19)
+Entities:
+  O  Arock        boulder    at (10,9)
+  O  Brock        boulder    at (29,9)
+  E  Alift        elevator   at (10,10)  <- A  speed 1.5  path (10,10)-(10,2)
+  E  Blift        elevator   at (29,10)  <- B  speed 1.5  path (29,10)-(29,2)
+  p  Alow         plate      at (10,9)  -> f_lower, w_lower  weight heavy
+  p  Blow         plate      at (29,9)  -> f_lower, w_lower, f_Blower  weight heavy
+  p  Ahigh        plate      at (10,1)  -> w_high  weight heavy
+  p  Bhigh        plate      at (29,1)  -> f_high  weight heavy
+  p  Adeposit     plate      at (10,4)  -> w_deposit, f_Blower, f_exit, w_exit, f_return  weight heavy
+  p  Bdeposit     plate      at (29,4)  -> f_exit, w_exit, w_return  weight heavy
+  D  f_lower      door       at (9,12)  1x3  <- Alow, Blow (needs 2)  latch
+  l  F1           lever      at (13,14)  -> w_lower
+  D  f_control    door       at (17,12)  1x3  <- W1  latch
+  l  A            lever      at (20,14)  -> Alift, f_inv
+  D  f_inv        door       at (24,12)  1x3  <- A  invert
+  D  f_Blower     door       at (28,12)  1x3  <- Blow, Adeposit, W2 (needs 3)  latch
+  l  F2           lever      at (31,14)  -> w_Baccess, f_return
+  D  f_high       door       at (33,12)  1x3  <- Bhigh  latch
+  l  F3           lever      at (35,14)  -> w_exit, f_exit, w_return
+  D  f_exit       door       at (37,12)  1x3  <- Adeposit, Bdeposit, F3, W3, Wreturn (needs 5)  latch
+  *  gem_20       gem        at (38,14)  fire
+  X  exit_21      exit       at (38,13)  fire
+  D  w_lower      door       at (29,17)  1x3  <- Alow, Blow, F1 (needs 3)  latch
+  l  W1           lever      at (25,19)  -> f_control
+  D  w_high       door       at (21,17)  1x3  <- Ahigh  latch
+  l  W2           lever      at (18,19)  -> f_Blower
+  D  w_deposit    door       at (15,17)  1x3  <- Adeposit  latch
+  D  w_Baccess    door       at (11,17)  1x3  <- F2, Freturn (needs 2)  latch
+  l  B            lever      at (8,19)  -> Blift, w_inv
+  D  w_inv        door       at (6,17)  1x3  <- B  invert
+  l  W3           lever      at (4,19)  -> f_exit, w_exit
+  D  w_exit       door       at (2,17)  1x3  <- Adeposit, Bdeposit, F3, W3, Wreturn (needs 5)  latch
+  *  gem_32       gem        at (1,19)  water
+  X  exit_33      exit       at (1,18)  water
+  D  f_return     door       at (5,12)  1x3  <- Adeposit, F2 (needs 2)  latch
+  l  Freturn      lever      at (3,14)  -> w_Baccess
+  D  w_return     door       at (37,17)  1x3  <- Bdeposit, F3 (needs 2)  latch
+  l  Wreturn      lever      at (38,19)  -> w_exit, f_exit
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

@@ -6309,6 +6309,44 @@
   }
  },
  {
+  "id": "two_deposits",
+  "name": "Two Deposits",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6300,
+  "dark": false,
+  "challenge": "mind",
+  "core": "ordered-irreversible-load-deposits",
+  "ideas": [
+   "hoist-one-way-for-cargo",
+   "lift-sheds-its-load",
+   "twist-sacrifice",
+   "twist-order"
+  ],
+  "order": 138,
+  "line": "",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:5",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "two_station_return",
   "name": "Two-Station Return",
   "source": "mine",
