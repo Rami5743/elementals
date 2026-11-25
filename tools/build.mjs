@@ -265,7 +265,7 @@ h3 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
 .tag.mind { color: var(--mind); background: var(--mind-bg); }
 .tag.motor { color: var(--motor); background: var(--motor-bg); }
 .tag.par { color: var(--muted); border-color: var(--line); }
-.tag.src { color: var(--muted); border-color: var(--line); font-variant: all-small-caps; letter-spacing: 0.06em; }
+.tag.src { color: var(--muted); border-color: var(--line); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
 .links { margin: 0; display: flex; gap: 10px; align-items: center; }
 a.play {
   background: var(--accent); color: var(--accent-ink); text-decoration: none;
