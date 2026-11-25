@@ -1,0 +1,250 @@
+{
+  "id": "reversing_signal",
+  "name": "Reversing Signal",
+  "order": 116,
+  "description": "The only power source is a moving stone: pass the relays, reverse the current, then catch its return pulse.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "parTicks": 6120,
+  "tiles": [
+    "########################################",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###########..###########################",
+    "###########..###########################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      8
+    ],
+    "water": [
+      36,
+      18
+    ]
+  },
+  "entities": [
+    {
+      "id": "carriage",
+      "type": "belt",
+      "x": 2,
+      "y": 3,
+      "w": 36,
+      "speed": 2,
+      "mode": "reverse"
+    },
+    {
+      "id": "token",
+      "type": "boulder",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "id": "left_contact",
+      "type": "plate",
+      "x": 2,
+      "y": 2,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "g0_1",
+        "g1_1"
+      ]
+    },
+    {
+      "id": "right_contact",
+      "type": "plate",
+      "x": 35,
+      "y": 2,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "g0_0",
+        "g1_0"
+      ]
+    },
+    {
+      "id": "pulse_contact",
+      "type": "plate",
+      "x": 15,
+      "y": 2,
+      "w": 9,
+      "weight": "heavy",
+      "targets": [
+        "g0_2",
+        "g1_2"
+      ]
+    },
+    {
+      "id": "g0_0",
+      "type": "door",
+      "x": 9,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "g0_1",
+      "type": "door",
+      "x": 19,
+      "y": 6,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "g0_2",
+      "type": "door",
+      "x": 29,
+      "y": 6,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "r0_0",
+      "type": "lever",
+      "x": 14,
+      "y": 8,
+      "targets": [
+        "g1_0"
+      ]
+    },
+    {
+      "id": "r0_1",
+      "type": "lever",
+      "x": 23,
+      "y": 8,
+      "targets": [
+        "g1_1"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 7
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 35,
+      "y": 8
+    },
+    {
+      "id": "g1_0",
+      "type": "door",
+      "x": 30,
+      "y": 16,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "g1_1",
+      "type": "door",
+      "x": 20,
+      "y": 16,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "g1_2",
+      "type": "door",
+      "x": 10,
+      "y": 16,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "r1_0",
+      "type": "lever",
+      "x": 25,
+      "y": 18,
+      "targets": [
+        "g0_1"
+      ]
+    },
+    {
+      "id": "r1_1",
+      "type": "lever",
+      "x": 16,
+      "y": 18,
+      "targets": [
+        "g0_2",
+        "g1_2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 17
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 4,
+      "y": 18
+    },
+    {
+      "id": "dispatch",
+      "type": "button",
+      "mode": "timed",
+      "duration": 1200,
+      "targets": [
+        "carriage"
+      ],
+      "x": 3,
+      "y": 8
+    },
+    {
+      "id": "repeat_near",
+      "type": "button",
+      "mode": "timed",
+      "duration": 1200,
+      "targets": [
+        "carriage"
+      ],
+      "x": 25,
+      "y": 8
+    },
+    {
+      "id": "repeat_far",
+      "type": "button",
+      "mode": "timed",
+      "duration": 1200,
+      "targets": [
+        "carriage"
+      ],
+      "x": 36,
+      "y": 8
+    }
+  ],
+  "hints": [
+    "The stone powers the contact beneath it. Watch which gates light up.",
+    "Reach the first relay before sending the stone back. Fire can reverse the belt from the first room.",
+    "The middle contact is a brief pulse. Prepare at the final gate, and jump the recess when the pulse arrives."
+  ]
+}

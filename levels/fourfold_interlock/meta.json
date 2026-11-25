@@ -1,0 +1,10 @@
+{
+  "order": 307,
+  "challenge": "mind",
+  "core": "distributed-gate-logic",
+  "ideas": [
+    "reversible-switch-maze",
+    "invert-door",
+    "twist-undo"
+  ]
+}

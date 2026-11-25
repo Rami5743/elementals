@@ -145,3 +145,9 @@ Object.assign(IDEAS, {
 Object.assign(IDEAS, {
   'plank-sums-plate-maxes': { kind: 'spine', note: "The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause." },
 });
+
+// New ideas developed on the gpt branch.
+Object.assign(IDEAS, {
+  'reversible-switch-maze': { kind: 'spine', note: 'A distributed switch circuit is itself the puzzle: an on/off key opens one route while closing another, so the players must rewind a prior circuit state and move back through the maze to reconstruct the next one.' },
+  'cargo-as-clock-contact': { kind: 'spine', note: 'A single moving heavy object is the electrical contact: its endpoints are mutually exclusive sustained signals, and crossing the intermediate contact is a physical clock pulse. Two relay chains must be armed before that pulse can be used.' },
+});

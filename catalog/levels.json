@@ -2978,6 +2978,36 @@
   }
  },
  {
+  "id": "crossed_signals",
+  "name": "Crossed Signals",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 14160,
+  "dark": false,
+  "challenge": "mind",
+  "core": "crossed-gate-memory",
+  "ideas": [
+   "reversible-switch-maze",
+   "invert-door",
+   "twist-undo"
+  ],
+  "order": 115,
+  "line": "A reversible switch maze: the same remote lever is both a key and a lock, so you must deliberately rewind the circuit to finish.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "crosswire",
   "name": "Crosswire",
   "source": "mine",
@@ -3045,6 +3075,43 @@
    "opt:elevator:powered",
    "opt:invert:door",
    "tile:lava"
+  ]
+ },
+ {
+  "id": "dispatch_clock",
+  "name": "Dispatch Clock",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7860,
+  "dark": false,
+  "challenge": "motor",
+  "core": "single-power-token-dispatch",
+  "ideas": [
+   "cargo-as-clock-contact",
+   "belt-cargo",
+   "timed-window"
+  ],
+  "order": 308,
+  "line": "A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2"
   ]
  },
  {
@@ -3213,6 +3280,34 @@
    "opt:required:2",
    "opt:required:3",
    "tile:one-way"
+  ]
+ },
+ {
+  "id": "fourfold_interlock",
+  "name": "Fourfold Interlock",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6840,
+  "dark": false,
+  "challenge": "mind",
+  "core": "distributed-gate-logic",
+  "ideas": [
+   "reversible-switch-maze",
+   "invert-door",
+   "twist-undo"
+  ],
+  "order": 307,
+  "line": "A reversible switch maze: the same remote lever is both a key and a lock, so you must deliberately rewind the circuit to finish.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:required:2"
   ]
  },
  {
@@ -3601,6 +3696,43 @@
   ]
  },
  {
+  "id": "pulse_exchange",
+  "name": "Pulse Exchange",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7020,
+  "dark": false,
+  "challenge": "motor",
+  "core": "cargo-clock-relay-exchange",
+  "ideas": [
+   "cargo-as-clock-contact",
+   "belt-cargo",
+   "timed-window"
+  ],
+  "order": 208,
+  "line": "A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "quartet",
   "name": "Quartet",
   "source": "mine",
@@ -3628,6 +3760,71 @@
    "ent:lever",
    "ent:turbine",
    "opt:latch"
+  ]
+ },
+ {
+  "id": "return_current",
+  "name": "Return Current",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8220,
+  "dark": false,
+  "challenge": "mind",
+  "core": "remote-switch-rewind",
+  "ideas": [
+   "reversible-switch-maze",
+   "invert-door",
+   "twist-undo"
+  ],
+  "order": 207,
+  "line": "A reversible switch maze: the same remote lever is both a key and a lock, so you must deliberately rewind the circuit to finish.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:required:2"
+  ]
+ },
+ {
+  "id": "reversing_signal",
+  "name": "Reversing Signal",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6120,
+  "dark": false,
+  "challenge": "motor",
+  "core": "moving-contact-return-pulse",
+  "ideas": [
+   "cargo-as-clock-contact",
+   "belt-cargo",
+   "timed-window"
+  ],
+  "order": 116,
+  "line": "A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2"
   ]
  },
  {
