@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 106 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 107 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (34)
+## 2 players — this repo (35)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -166,6 +166,10 @@ Totals: 79 campaign levels, 106 in this repo, of which 11 now ship in the campai
   - idea: A runner dives ahead of a rolling stone which is released by a slow rising barrier; a return conveyor recovers missed deliveries, and the captured load unlocks the partner's final hoist.
   - ideas: dive-ahead-of-the-runaway, twist-order, twist-stranding
   - features: ent:belt ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:belt:walkable opt:button:hold opt:elevator:powered opt:heavy-plate opt:latch opt:required:1 opt:required:2 opt:rolling-boulder tile:one-way tile:slope tile:water
+- **Home Current** `home_current` (2p: fire+water) core=`home-selects-remote-cargo-current` challenge=mind par=6960
+  - idea: One player's own exit selects the direction of a remote cargo belt. The player must go home, leave home to earn a missing certificate, and return home to release the partner.
+  - ideas: threshold-is-a-switch, two-stops-no-middle, twist-undo
+  - features: ent:belt ent:boulder ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:latch opt:required:1 opt:required:2
 
 ## 2 players — campaign (34)
 

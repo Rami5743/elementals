@@ -54,18 +54,18 @@ together. `twist-undo`×17, `quorum`×15, `twist-order`×8, `timed-window`×4, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- low-roof-no-jump + twist-self-block
-- glide-dismount + hop-beats-belt
-- hop-beats-belt + invert-door
-- counterweight-you-must-remove + door-pushes-you-through
-- counterweight-you-must-remove + two-is-not-heavy
-- boulder-float + machine-strands-operator
-- crate-step + twist-stranding
-- machine-strands-operator + two-is-not-heavy
-- invert-door + partner-builds-your-landing
-- lift-sheds-its-load + twist-order
-- partner-builds-your-landing + twist-order
-- counterweight-you-must-remove + lift-sheds-its-load
+- low-roof-no-jump + twist-order
+- boulder-float + object-as-permanent-switch
+- stand-aside-is-the-switch + twist-self-block
+- timed-window + turbine-out-of-reach
+- lift-sorts-by-weight + twist-self-block
+- timed-window + twist-sacrifice
+- hop-beats-belt + timed-window
+- partner-builds-your-landing + timed-window
+- no-overtaking + timed-window
+- lift-sorts-by-weight + timed-window
+- single-file-stone + twist-self-block
+- freeze-invert + timed-window
 
 ## This repo's 3-player levels
 

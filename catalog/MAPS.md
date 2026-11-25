@@ -1811,6 +1811,62 @@ Entities:
   >  return_belt  belt       at (29,20)  4x1  <- release  speed -2
 ```
 
+## Home Current (`home_current`) — 2p, core `home-selects-remote-cargo-current`
+
+```
+Home Current (home_current) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ##....................................##
+ 4  ##....................................##
+ 5  ##ppp..............................ppp##
+ 6  ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>##
+ 7  ########################################
+ 8  ########################################
+ 9  #....D....D..............D.............#
+10  #....D....D..............D..........X..#
+11  #.*..D.@..D.....l........D..........X..#
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.........D...........D......D.......D.#
+18  #.........D...........D......D.......DX#
+19  #..@......D.....l.....D..l...D..l..*.DX#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (7,11)  water (3,19)
+Entities:
+  >  belt         belt       at (2,6)  36x1  <- home  mode reverse  speed 2
+  O  stone        boulder    at (36,5)
+  p  left         plate      at (2,5)  3x1  -> w2, wfinal  weight heavy
+  p  right        plate      at (35,5)  3x1  -> f1, fback, w3  weight heavy
+  p  home         plate      at (36,11)  -> belt
+  D  f1           door       at (10,9)  1x3  <- right, wstart (needs 2)  latch
+  D  f2           door       at (25,9)  1x3  <- wkey  latch
+  D  fback        door       at (5,9)  1x3  <- right, wleft (needs 2)  latch
+  D  w1           door       at (10,17)  1x3  <- fkey  latch
+  D  w2           door       at (22,17)  1x3  <- left, fkey (needs 2)  latch
+  D  w3           door       at (29,17)  1x3  <- right, fbackkey (needs 2)  latch
+  D  wfinal       door       at (37,17)  1x3  <- left, wlast (needs 2)
+  l  wstart       lever      at (3,19)  -> f1
+  l  fkey         lever      at (16,11)  -> w1, w2
+  l  wkey         lever      at (16,19)  -> f2
+  l  wleft        lever      at (25,19)  -> fback
+  l  fbackkey     lever      at (2,11)  -> w3
+  l  wlast        lever      at (32,19)  -> wfinal
+  X  exit_18      exit       at (36,10)  fire
+  *  gem_19       gem        at (2,11)  fire
+  X  exit_20      exit       at (38,18)  water
+  *  gem_21       gem        at (35,19)  water
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

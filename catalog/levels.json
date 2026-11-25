@@ -4138,6 +4138,41 @@
   ]
  },
  {
+  "id": "home_current",
+  "name": "Home Current",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6960,
+  "dark": false,
+  "challenge": "mind",
+  "core": "home-selects-remote-cargo-current",
+  "ideas": [
+   "threshold-is-a-switch",
+   "two-stops-no-middle",
+   "twist-undo"
+  ],
+  "order": 135,
+  "line": "One player's own exit selects the direction of a remote cargo belt. The player must go home, leave home to earn a missing certificate, and return home to release the partner.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "intermediate_stop",
   "name": "Intermediate Stop",
   "source": "mine",

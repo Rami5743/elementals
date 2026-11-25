@@ -1,0 +1,244 @@
+{
+  "id": "home_current",
+  "name": "Home Current",
+  "order": 135,
+  "description": "Fire's own exit is the belt selector. Arrive home, leave it to recover a certificate, then return to make Water's final route exist.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      7,
+      11
+    ],
+    "water": [
+      3,
+      19
+    ]
+  },
+  "parTicks": 6960,
+  "entities": [
+    {
+      "id": "belt",
+      "type": "belt",
+      "x": 2,
+      "y": 6,
+      "w": 36,
+      "speed": 2,
+      "mode": "reverse"
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 36,
+      "y": 5
+    },
+    {
+      "id": "left",
+      "type": "plate",
+      "x": 2,
+      "y": 5,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "w2",
+        "wfinal"
+      ]
+    },
+    {
+      "id": "right",
+      "type": "plate",
+      "x": 35,
+      "y": 5,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "fback",
+        "w3"
+      ]
+    },
+    {
+      "id": "home",
+      "type": "plate",
+      "x": 36,
+      "y": 11,
+      "targets": [
+        "belt"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 10,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 25,
+      "y": 9,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "fback",
+      "type": "door",
+      "x": 5,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 22,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "wfinal",
+      "type": "door",
+      "x": 37,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "wstart",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "fkey",
+      "type": "lever",
+      "x": 16,
+      "y": 11,
+      "targets": [
+        "w1",
+        "w2"
+      ]
+    },
+    {
+      "id": "wkey",
+      "type": "lever",
+      "x": 16,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "wleft",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "fback"
+      ]
+    },
+    {
+      "id": "fbackkey",
+      "type": "lever",
+      "x": 2,
+      "y": 11,
+      "targets": [
+        "w3"
+      ]
+    },
+    {
+      "id": "wlast",
+      "type": "lever",
+      "x": 32,
+      "y": 19,
+      "targets": [
+        "wfinal"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 36,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 2,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 35,
+      "y": 19
+    }
+  ],
+  "hints": [
+    "Fire's exit is a live switch, not the end of Fire's work.",
+    "Water must obtain the left contact certificate before Fire can return for the missing gem.",
+    "The last gate uses the left contact again; return Fire to its exit."
+  ]
+}
