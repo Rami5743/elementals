@@ -30,18 +30,18 @@ together. `twist-undo`×33, `invert-door`×8, `quorum`×8, `timed-window`×7, `h
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + timed-window
-- expiry-order-is-key + fractional-rider-keeper
-- belt-cargo + lift-sorts-by-weight
-- lock-per-element + one-way-press
-- lift-sorts-by-weight + one-way-press
-- glide-passenger + two-is-not-heavy
-- stand-aside-is-the-switch + two-is-not-heavy
-- boulder-carry + trigger-from-above
-- glide-passenger + tower-presses-a-column
-- fractional-rider-keeper + freeze-bridge
-- dark + door-pushes-you-through
-- belt-cargo + tower-presses-a-column
+- lift-sorts-by-weight + twist-self-block
+- quorum + stone-held-from-below
+- reversible-switch-maze + tower-presses-a-column
+- boulder-carry + lift-sheds-its-load
+- lift-sorts-by-weight + trigger-from-above
+- single-file-stone + stone-held-from-below
+- fractional-rider-keeper + timed-window
+- door-pushes-you-through + trigger-from-above
+- plank-sums-plate-maxes + position-as-volatile-key
+- lock-per-element + partner-builds-your-landing
+- balanced-rope-memory + boulder-carry
+- fractional-rider-keeper + quorum
 
 ## This repo's 2-player levels
 

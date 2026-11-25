@@ -38,18 +38,18 @@ together. `twist-undo`×31, `quorum`×30, `twist-order`×8, `timed-window`×6, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-cargo + dark
-- belt-reverse + climb-then-steer
-- cargo-as-clock-contact + lift-corner-path
-- convergent-belt-seam + lift-corner-path
-- dark + invert-door
-- quorum + single-file-stone
-- glide-dismount + pound-chain
-- low-roof-no-jump + tower-presses-a-column
-- boulder-carry + climb-then-steer
-- head-stack + tower-presses-a-column
-- boulder-carry + door-pushes-you-through
-- belt-cargo + climb-then-steer
+- causeway-as-veto + lift-corner-path
+- pound-chain + twist-self-block
+- reversible-switch-maze + twist-self-block
+- cargo-as-clock-contact + stone-held-from-below
+- belt-filter + tower-presses-a-column
+- belt-reverse + liquid-lane
+- dark + send-one-through
+- twist-order + unload-the-pan-you-ride
+- boulder-float + door-pushes-you-through
+- belt-reverse + dark
+- belt-reverse + wide-door
+- fan-passenger + twist-undo
 
 ## This repo's 4-player levels
 
