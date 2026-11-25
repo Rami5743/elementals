@@ -34,18 +34,18 @@ together. `twist-undo`×22, `twist-order`×6, `quorum`×6, `invert-door`×5, `ho
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- counterweight-you-must-remove + lift-sorts-by-weight
-- glide-passenger + plank-sums-plate-maxes
-- pound-chain + twist-stranding
-- door-pushes-you-through + glide-passenger
-- boulder-float + twist-stranding
-- dark + plank-sums-plate-maxes
-- machine-strands-operator + plank-sums-plate-maxes
-- tower-presses-a-column + trigger-from-above
-- head-stack + two-is-not-heavy
-- fan-band + hop-beats-belt
-- glide-passenger + two-is-not-heavy
-- glide-passenger + one-way-drop
+- freeze-invert + one-way-drop
+- torch-bridge + twist-sacrifice
+- lock-per-element + object-as-permanent-switch
+- fan-passenger + plank-sums-plate-maxes
+- no-hands-for-cargo + tower-presses-a-column
+- fan-band + twist-two-clocks
+- pound-chain + twist-sacrifice
+- boulder-float + twist-order
+- boulder-carry + object-as-permanent-switch
+- one-way-drop + trigger-from-above
+- object-as-permanent-switch + tower-presses-a-column
+- torch-bridge + twist-order
 
 ## This repo's 2-player levels
 
