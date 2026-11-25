@@ -7288,3 +7288,93 @@ Entities:
   *  gem_35       gem        at (36,19)  air
   X  exit_36      exit       at (38,18)  air
 ```
+
+## Deposit Registry (`deposit_registry`) — 4p, core `registered-sequential-irreversible-cargo-deposits`
+
+```
+Deposit Registry (deposit_registry) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.........p..................p.........#
+ 2  #.........p..................p.........#
+ 3  #.....============================.....#
+ 4  #.........p..................p.........#
+ 5  #.........E..................E.........#
+ 6  ########################################
+ 7  #....D...D.......D......D...D....D...D.#
+ 8  #....D...D.......D......D...D....D...DX#
+ 9  #..l.D.@.D...l...D..l...D...D..l.D.l.DX#
+10  ########################################
+11  #.D...D....D...D.....D.......D.......D.#
+12  #XD...D....D...D.....D.......D.......D.#
+13  #XD.l.D.l..D...D..l..D...l...D......@Dl#
+14  ########################################
+15  #.......D.........D.........D.D....D...#
+16  #.......D.........D.........D.D....D..X#
+17  #.@.....D...l.....D...l.....D.D.l..D.*X#
+18  ########################################
+19  #.......D........D........D...........X#
+20  #..@....D...l....D...l....D...l.....*.X#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (7,9)  water (36,13)  earth (2,17)  air (3,20)
+Entities:
+  O  Arock        boulder    at (10,4)
+  O  Brock        boulder    at (29,4)
+  E  Alift        elevator   at (10,5)  <- A  speed 1.5  path (10,5)-(10,2)
+  E  Blift        elevator   at (29,5)  <- B  speed 1.5  path (29,5)-(29,2)
+  p  Alow         plate      at (10,4)  -> f_lower, w_lower, a_low  weight heavy
+  p  Blow         plate      at (29,4)  -> f_lower, w_lower, f_Blower, a_low  weight heavy
+  p  Ahigh        plate      at (10,1)  -> w_high, eA, a_high  weight heavy
+  p  Bhigh        plate      at (29,1)  -> f_high  weight heavy
+  p  Adeposit     plate      at (10,2)  -> w_deposit, f_Blower, f_exit, w_exit, f_return, eBaccess, a_deposit  weight heavy
+  p  Bdeposit     plate      at (29,2)  -> f_exit, w_exit, w_return, e_exit, a_deposit  weight heavy
+  D  f_lower      door       at (9,7)  1x3  <- Alow, Blow (needs 2)  latch
+  l  F1           lever      at (13,9)  -> w_lower
+  D  f_control    door       at (17,7)  1x3  <- W1, Ainit (needs 2)  latch
+  l  A            lever      at (20,9)  -> Alift, f_inv
+  D  f_inv        door       at (24,7)  1x3  <- A  invert
+  D  f_Blower     door       at (28,7)  1x3  <- Blow, Adeposit, W2, E1, Ainspect (needs 5)  latch
+  l  F2           lever      at (31,9)  -> w_Baccess, f_return
+  D  f_high       door       at (33,7)  1x3  <- Bhigh  latch
+  l  F3           lever      at (35,9)  -> w_exit, f_exit, w_return, e_certaccess
+  D  f_exit       door       at (37,7)  1x3  <- Adeposit, Bdeposit, F3, W3, Wreturn, Ecert, Afinal (needs 7)  latch
+  *  gem_20       gem        at (38,9)  fire
+  X  exit_21      exit       at (38,8)  fire
+  D  w_lower      door       at (29,11)  1x3  <- Alow, Blow, F1 (needs 3)  latch
+  l  W1           lever      at (25,13)  -> f_control
+  D  w_high       door       at (21,11)  1x3  <- Ahigh  latch
+  l  W2           lever      at (18,13)  -> f_Blower
+  D  w_deposit    door       at (15,11)  1x3  <- Adeposit  latch
+  D  w_Baccess    door       at (11,11)  1x3  <- F2, Freturn (needs 2)  latch
+  l  B            lever      at (22,17)  -> Blift, w_inv, e_inverse
+  D  w_inv        door       at (6,11)  1x3  <- B  invert
+  l  W3           lever      at (4,13)  -> f_exit, w_exit
+  D  w_exit       door       at (2,11)  1x3  <- Adeposit, Bdeposit, F3, W3, Wreturn, Ecert, Afinal (needs 7)  latch
+  *  gem_32       gem        at (1,13)  water
+  X  exit_33      exit       at (1,12)  water
+  D  f_return     door       at (5,7)  1x3  <- Adeposit, F2 (needs 2)  latch
+  l  Freturn      lever      at (3,9)  -> w_Baccess
+  D  w_return     door       at (37,11)  1x3  <- Bdeposit, F3 (needs 2)  latch
+  l  Wreturn      lever      at (38,13)  -> w_exit, f_exit, e_exit
+  D  eA           door       at (8,15)  1x3  <- Ahigh  latch
+  l  E1           lever      at (12,17)  -> f_Blower
+  D  eBaccess     door       at (18,15)  1x3  <- Adeposit, Wauth (needs 2)  latch
+  l  Wauth        lever      at (8,13)  -> eBaccess
+  D  e_inverse    door       at (28,15)  1x3  <- B  invert
+  D  e_certaccess door       at (30,15)  1x3  <- F3  latch
+  l  Ecert        lever      at (32,17)  -> f_exit, w_exit
+  D  e_exit       door       at (35,15)  1x3  <- Bdeposit, Wreturn, Afinal (needs 3)  latch
+  *  gem_46       gem        at (37,17)  earth
+  X  exit_47      exit       at (38,16)  earth
+  D  a_low        door       at (8,19)  1x2  <- Alow, Blow (needs 2)  latch
+  l  Ainit        lever      at (12,20)  -> f_control
+  D  a_high       door       at (17,19)  1x2  <- Ahigh  latch
+  l  Ainspect     lever      at (21,20)  -> f_Blower
+  D  a_deposit    door       at (26,19)  1x2  <- Adeposit, Bdeposit (needs 2)  latch
+  l  Afinal       lever      at (30,20)  -> f_exit, w_exit, e_exit
+  *  gem_54       gem        at (36,20)  air
+  X  exit_55      exit       at (38,19)  air
+```

@@ -3641,6 +3641,45 @@
   ]
  },
  {
+  "id": "deposit_registry",
+  "name": "Deposit Registry",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6060,
+  "dark": false,
+  "challenge": "mind",
+  "core": "registered-sequential-irreversible-cargo-deposits",
+  "ideas": [
+   "hoist-one-way-for-cargo",
+   "lift-sheds-its-load",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 339,
+  "line": "Two irreversible cargo deposits, each with three useful positions. The registrar must record both lower contacts before the first transfer, then a high certificate and finally the two deposited contacts.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:5",
+   "opt:required:7",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "descent_exchange",
   "name": "Descent Exchange",
   "source": "mine",
