@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 102 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 103 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (34)
@@ -308,7 +308,7 @@ Totals: 79 campaign levels, 102 in this repo, of which 11 now ship in the campai
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (35)
+## 3 players — this repo (36)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -450,6 +450,10 @@ Totals: 79 campaign levels, 102 in this repo, of which 11 now ship in the campai
   - idea: A bridge with two incompatible deck positions rises only by joint consent; each operator must rescind their own consent to reach the next acknowledgment.
   - ideas: lift-as-floor, quorum, twist-undo, twist-order
   - features: ent:door ent:elevator ent:lever opt:invert:door opt:latch opt:required:2 tile:sludge
+- **Lock Train** `lock_train` (3p: fire+water+earth) core=`serial-stocked-airlocks-shared-clock` challenge=motor par=6120
+  - idea: One timed airlock controller drives two successive cargo chambers; the second chamber is only authorized after the first delivery, and the authorization must be withdrawn after the second delivery.
+  - ideas: stock-before-it-seals, shared-switch-two-gates, timed-window, twist-undo
+  - features: ent:boulder ent:button ent:door ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2
 
 ## 3 players — campaign (30)
 

@@ -42,18 +42,18 @@ together. `twist-undo`×18, `quorum`×6, `invert-door`×5, `hold-switch`×5, `tw
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-band + no-hands-for-cargo
-- lock-per-element + pound-to-move
-- fan-passenger + seesaw-balance
-- invert-door + no-overtaking
-- glide-dismount + two-in-the-air-at-once
-- head-stack + two-is-not-heavy
-- lift-sheds-its-load + object-as-permanent-switch
+- fan-band + sink-as-a-timer
+- fan-band + glide-dismount
+- low-roof-no-jump + tower-presses-a-column
+- hold-switch + lock-per-element
+- head-stack + pound-chain
+- low-roof-no-jump + send-one-through
+- object-as-permanent-switch + torch-bridge
 - liquid-lane + pound-chain
-- freeze-bridge + turbine-out-of-reach
-- glide-dismount + threshold-is-a-switch
-- head-stack + threshold-is-a-switch
-- head-stack + no-overtaking
+- hop-beats-belt + two-is-not-heavy
+- object-as-permanent-switch + threshold-is-a-switch
+- turbine-out-of-reach + twist-sacrifice
+- head-stack + lock-per-element
 
 ## This repo's 2-player levels
 

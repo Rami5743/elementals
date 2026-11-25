@@ -1,0 +1,234 @@
+{
+  "id": "lock_train",
+  "name": "Lock Train",
+  "order": 235,
+  "description": "One clock swaps both pairs of airlock doors. Stock the first chamber, certify the middle berth, stock the second, then release the selector and leave the stone on the final contact.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      19
+    ],
+    "water": [
+      12,
+      6
+    ],
+    "earth": [
+      2,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "in1",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3
+    },
+    {
+      "id": "out1",
+      "type": "door",
+      "x": 16,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "in2",
+      "type": "door",
+      "x": 22,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "out2",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "clock",
+      "type": "button",
+      "x": 5,
+      "y": 6,
+      "mode": "timed",
+      "duration": 420,
+      "targets": [
+        "in1",
+        "out1",
+        "in2",
+        "out2"
+      ]
+    },
+    {
+      "id": "clock_access",
+      "type": "door",
+      "x": 8,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "start",
+      "type": "lever",
+      "x": 6,
+      "y": 19,
+      "targets": [
+        "clock_access"
+      ]
+    },
+    {
+      "id": "stage_access",
+      "type": "door",
+      "x": 20,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "middle",
+      "type": "lever",
+      "x": 20,
+      "y": 19,
+      "targets": [
+        "stage_access"
+      ]
+    },
+    {
+      "id": "stage",
+      "type": "lever",
+      "x": 28,
+      "y": 6,
+      "targets": [
+        "in2",
+        "stage_inverse"
+      ]
+    },
+    {
+      "id": "stage_inverse",
+      "type": "door",
+      "x": 33,
+      "y": 4,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 4,
+      "y": 19
+    },
+    {
+      "id": "weigh",
+      "type": "plate",
+      "x": 31,
+      "y": 19,
+      "w": 1,
+      "weight": "heavy",
+      "targets": [
+        "final_access",
+        "final_door"
+      ]
+    },
+    {
+      "id": "final_access",
+      "type": "door",
+      "x": 35,
+      "y": 4,
+      "h": 3
+    },
+    {
+      "id": "cert",
+      "type": "lever",
+      "x": 37,
+      "y": 6,
+      "targets": [
+        "final_door"
+      ]
+    },
+    {
+      "id": "final_door",
+      "type": "door",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 28,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 19,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 6
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 5
+    }
+  ],
+  "parTicks": 6120,
+  "hints": [
+    "The first clock cycle delivers both people and the stone to the middle berth.",
+    "The middle relay releases the selector for the second cycle.",
+    "Turn off the selector after the second shipment. The stone is needed to keep the final contact powered."
+  ]
+}
