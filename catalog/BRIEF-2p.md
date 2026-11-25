@@ -51,18 +51,18 @@ together. `twist-undo`×9, `invert-door`×5, `hold-switch`×5, `object-as-perman
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hold-switch + turbine-out-of-reach
-- hop-beats-belt + one-way-drop
-- head-stack + hoist-one-way-for-cargo
-- boulder-carry + shared-switch-two-gates
-- twist-undo + two-is-not-heavy
-- glide-dismount + lift-sheds-its-load
-- hoist-one-way-for-cargo + shared-switch-two-gates
-- glide-dismount + lift-corner-path
-- head-stack + torch-bridge
-- head-stack + two-stops-no-middle
-- invert-door + lock-per-element
-- shared-switch-two-gates + turbine-out-of-reach
+- twist-undo + two-in-the-air-at-once
+- belt-filter + cargo-as-clock-contact
+- dive-ahead-of-the-runaway + head-stack
+- boulder-carry + liquid-lane
+- belt-filter + hop-beats-belt
+- climb-then-steer + twist-undo
+- liquid-lane + two-is-not-heavy
+- no-overtaking + object-as-permanent-switch
+- fan-band + liquid-lane
+- shared-switch-two-gates + two-stops-no-middle
+- lift-sorts-by-weight + liquid-lane
+- belt-reverse + freeze-bridge
 
 ## This repo's 2-player levels
 

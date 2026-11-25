@@ -4057,6 +4057,39 @@
   ]
  },
  {
+  "id": "relay_ferry",
+  "name": "Relay Ferry",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8760,
+  "dark": false,
+  "challenge": "motor",
+  "core": "quorum-ferry-traps-power-operator",
+  "ideas": [
+   "transport-power-excludes-workshop",
+   "lift-loop",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 223,
+  "line": "The ferry requires two motor keys. Transport power closes the workshop gate, and one of the operators is also trapped in its own control room while its motor key is on.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "return_current",
   "name": "Return Current",
   "source": "mine",

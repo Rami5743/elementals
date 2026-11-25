@@ -60,18 +60,18 @@ together. `twist-undo`×5, `lock-per-element`×4, `twist-order`×4, `machine-str
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- low-roof-no-jump + single-file-stone
-- boulder-float + single-file-stone
-- lift-corner-path + pound-chain
-- belt-filter + hoist-one-way-for-cargo
-- climb-then-steer + pound-chain
-- head-stack + torch-bridge
-- boulder-carry + pound-to-move
-- hop-beats-belt + machine-strands-operator
-- lift-as-floor + lock-per-element
-- belt-cargo + hop-beats-belt
-- liquid-lane + low-roof-no-jump
-- stand-aside-is-the-switch + turbine-out-of-reach
+- boulder-carry + lift-as-floor
+- lock-per-element + tower-presses-a-column
+- climb-then-steer + head-stack
+- counterweight-you-must-remove + fan-band
+- lock-per-element + stand-aside-is-the-switch
+- boulder-carry + glide-passenger
+- freeze-bridge + seesaw-balance
+- low-roof-no-jump + wide-door
+- freeze-bridge + twist-sacrifice
+- head-stack + pound-to-move
+- boulder-carry + transport-power-excludes-workshop
+- liquid-lane + turbine-out-of-reach
 
 ## This repo's 4-player levels
 

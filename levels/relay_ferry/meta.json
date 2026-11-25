@@ -1,0 +1,11 @@
+{
+  "order": 223,
+  "challenge": "motor",
+  "core": "quorum-ferry-traps-power-operator",
+  "ideas": [
+    "transport-power-excludes-workshop",
+    "lift-loop",
+    "twist-undo",
+    "quorum"
+  ]
+}

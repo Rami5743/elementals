@@ -1,0 +1,280 @@
+{
+  "id": "relay_ferry",
+  "name": "Relay Ferry",
+  "order": 223,
+  "description": "Two operators power a single ferry; the same power keeps a workshop and one operator’s return gate closed.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 8760,
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#########===#.................##########",
+    "#########...#.................##########",
+    "#########===#.................##########",
+    "#########...#.................##########",
+    "#########===..................##########",
+    "#########.....................##########",
+    "#########===..................##########",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      10,
+      7
+    ],
+    "water": [
+      36,
+      19
+    ],
+    "earth": [
+      3,
+      3
+    ]
+  },
+  "entities": [
+    {
+      "id": "ferry",
+      "type": "elevator",
+      "x": 15,
+      "y": 8,
+      "w": 3,
+      "path": [
+        [
+          15,
+          8
+        ],
+        [
+          27,
+          8
+        ]
+      ],
+      "mode": "loop",
+      "pause": 150,
+      "speed": 1,
+      "required": 2
+    },
+    {
+      "id": "start",
+      "type": "lever",
+      "x": 10,
+      "y": 7,
+      "targets": [
+        "w0",
+        "e_start"
+      ]
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "motor",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "ferry",
+        "far_gate",
+        "w2"
+      ]
+    },
+    {
+      "id": "far_gate",
+      "type": "door",
+      "x": 34,
+      "y": 5,
+      "h": 3,
+      "invert": true,
+      "required": 2
+    },
+    {
+      "id": "far",
+      "type": "lever",
+      "x": 37,
+      "y": 7,
+      "targets": [
+        "w1",
+        "e_far"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "ack",
+      "type": "lever",
+      "x": 13,
+      "y": 19,
+      "targets": [
+        "e_ack"
+      ]
+    },
+    {
+      "id": "home",
+      "type": "door",
+      "x": 8,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "finish",
+      "type": "lever",
+      "x": 6,
+      "y": 7,
+      "targets": [
+        "w2",
+        "e_exit"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 7,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 6,
+      "text": "Ferry"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 17,
+      "text": "Motor"
+    },
+    {
+      "id": "e_start",
+      "type": "door",
+      "x": 4,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_motor",
+      "type": "lever",
+      "x": 7,
+      "y": 3,
+      "targets": [
+        "ferry",
+        "far_gate",
+        "e_return"
+      ]
+    },
+    {
+      "id": "e_return",
+      "type": "door",
+      "x": 11,
+      "y": 1,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "e_far",
+      "type": "door",
+      "x": 16,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_ack",
+      "type": "door",
+      "x": 25,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_home",
+      "type": "lever",
+      "x": 29,
+      "y": 3,
+      "targets": [
+        "home"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 34,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 36,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 2
+    }
+  ],
+  "hints": [
+    "The ferry needs both the water and earth motor keys.",
+    "Stop it to open the workshop. Earth must also switch its own key off to leave the control room.",
+    "After the far and home permissions are set, restart both keys. Earth cannot leave until Fire returns."
+  ]
+}
