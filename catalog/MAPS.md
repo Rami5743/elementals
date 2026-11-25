@@ -7807,3 +7807,89 @@ Entities:
   *  gem_30       gem        at (36,20)  air
   X  exit_31      exit       at (38,19)  air
 ```
+
+## Step Council (`step_council`) — 4p, core `separate-inspection-and-control-of-mobile-stairs`
+
+```
+Step Council (step_council) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.D.D..D.......................D..D..D.#
+ 2  #XD.D..D.......................D..D..D.#
+ 3  #lDlD.lD.......................Dl.Dl.Dl#
+ 4  ##########....................##########
+ 5  ##########....................##########
+ 6  ##########.....@...........x..##########
+ 7  ##########>>>>>>>>>>>>>>>>>>>>##########
+ 8  ########################################
+ 9  #.D..D..D.......................D..D.D.#
+10  #.D..D..D.......................D..D.DX#
+11  #lD.lD.lD.......................Dl.DlDl#
+12  ##########....................##########
+13  ##########....................##########
+14  ##########..x...........@.....##########
+15  ##########<<<<<<<<<<<<<<<<<<<<##########
+16  ########################################
+17  #.......D.......D...#.D..D..D..D..D..D.#
+18  #.......D.......D..X#.D..D..D..D..D..DX#
+19  #.@l....D...l...D.*X#@Dl.Dl.Dl.Dl.D*.DX#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (15,6)  earth (24,14)  water (2,19)  air (21,19)
+Entities:
+  >  firebelt     belt       at (10,7)  20x1  <- selector  mode reverse  speed 3.3
+  x  firestep     box        at (27,6)
+  D  fireright1   door       at (31,1)  1x3  <- Wstart  latch
+  l  fireR1       lever      at (32,3)  -> a1
+  D  fireright2   door       at (34,1)  1x3  <- A2  latch
+  l  fireR2       lever      at (35,3)  -> a3
+  D  fireright3   door       at (37,1)  1x3  <- A4  latch
+  l  fireR3       lever      at (38,3)  -> a5
+  D  fireleft1    door       at (7,1)  1x3  <- Wstart  latch
+  l  fireL1       lever      at (6,3)  -> a2
+  D  fireleft2    door       at (4,1)  1x3  <- A3  latch
+  l  fireL2       lever      at (3,3)  -> a4
+  *  gem_12       gem        at (1,3)  fire
+  X  exit_13      exit       at (1,2)  fire
+  >  earthbelt    belt       at (10,15)  20x1  <- selector  mode reverse  speed -3.3
+  x  earthstep    box        at (12,14)
+  D  earthright1  door       at (8,9)  1x3  <- Wstart  latch
+  l  earthR1      lever      at (7,11)  -> a1
+  D  earthright2  door       at (5,9)  1x3  <- A2  latch
+  l  earthR2      lever      at (4,11)  -> a3
+  D  earthright3  door       at (2,9)  1x3  <- A4  latch
+  l  earthR3      lever      at (1,11)  -> a5
+  D  earthleft1   door       at (32,9)  1x3  <- Wstart  latch
+  l  earthL1      lever      at (33,11)  -> a2
+  D  earthleft2   door       at (35,9)  1x3  <- A3  latch
+  l  earthL2      lever      at (36,11)  -> a4
+  *  gem_26       gem        at (38,11)  earth
+  X  exit_27      exit       at (38,10)  earth
+  D  selectaccess door       at (8,17)  1x3  <- A1  latch
+  l  selector     lever      at (12,19)  -> firebelt, earthbelt
+  l  Wstart       lever      at (3,19)  -> fireright1, fireleft1, earthright1, earthleft1
+  D  fireleft3    door       at (2,1)  1x3  <- A5  latch
+  l  fireL3       lever      at (1,3)  -> w_final
+  D  earthleft3   door       at (37,9)  1x3  <- A5  latch
+  l  earthL3      lever      at (38,11)  -> w_final
+  D  a1           door       at (22,17)  1x3  <- fireR1, earthR1 (needs 2)  latch
+  D  a2           door       at (25,17)  1x3  <- fireL1, earthL1 (needs 2)  latch
+  D  a3           door       at (28,17)  1x3  <- fireR2, earthR2 (needs 2)  latch
+  D  a4           door       at (31,17)  1x3  <- fireL2, earthL2 (needs 2)  latch
+  D  a5           door       at (34,17)  1x3  <- fireR3, earthR3 (needs 2)  latch
+  l  A1           lever      at (23,19)  -> selectaccess
+  l  A2           lever      at (26,19)  -> fireright2, earthright2
+  l  A3           lever      at (29,19)  -> fireleft2, earthleft2
+  l  A4           lever      at (32,19)  -> fireright3, earthright3
+  l  A5           lever      at (35,19)  -> fireleft3, earthleft3
+  D  a_final      door       at (37,17)  1x3  <- Wfinish  latch
+  D  w_final      door       at (16,17)  1x3  <- fireL3, earthL3 (needs 2)  latch
+  l  Wfinish      lever      at (18,19)  -> a_final
+  *  gem_48       gem        at (18,19)  water
+  X  exit_49      exit       at (19,18)  water
+  *  gem_50       gem        at (35,19)  air
+  X  exit_51      exit       at (38,18)  air
+```

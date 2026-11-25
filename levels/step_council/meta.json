@@ -1,0 +1,11 @@
+{
+  "order": 341,
+  "challenge": "mind",
+  "core": "separate-inspection-and-control-of-mobile-stairs",
+  "ideas": [
+    "crate-step",
+    "belt-reverse",
+    "quorum",
+    "twist-undo"
+  ]
+}

@@ -6196,6 +6196,40 @@
   ]
  },
  {
+  "id": "step_council",
+  "name": "Step Council",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6180,
+  "dark": false,
+  "challenge": "mind",
+  "core": "separate-inspection-and-control-of-mobile-stairs",
+  "ideas": [
+   "crate-step",
+   "belt-reverse",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 341,
+  "line": "Two coupled travelling steps have separate inspectors and operators. The inspector cannot change the geometry; the selector operator cannot authorize the next bank workshops.",
+  "tokens": [
+   "ent:belt",
+   "ent:box",
+   "ent:door",
+   "ent:lever",
+   "opt:belt:blocks-fire-water",
+   "opt:belt:reverse",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "stepped_ram",
   "name": "Stepped Ram",
   "source": "mine",

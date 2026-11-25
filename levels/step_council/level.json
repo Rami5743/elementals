@@ -1,0 +1,497 @@
+{
+  "id": "step_council",
+  "name": "Step Council",
+  "order": 341,
+  "description": "Two paired moving steps are controlled by one operator, but another operator must inspect each pair of bank visits and authorize the next pair.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "##########....................##########",
+    "########################################",
+    "#...................#..................#",
+    "#...................#..................#",
+    "#...................#..................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      15,
+      6
+    ],
+    "earth": [
+      24,
+      14
+    ],
+    "water": [
+      2,
+      19
+    ],
+    "air": [
+      21,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "firebelt",
+      "type": "belt",
+      "x": 10,
+      "y": 7,
+      "w": 20,
+      "speed": 3.3,
+      "mode": "reverse"
+    },
+    {
+      "id": "firestep",
+      "type": "box",
+      "x": 27,
+      "y": 6
+    },
+    {
+      "id": "fireright1",
+      "type": "door",
+      "x": 31,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireR1",
+      "type": "lever",
+      "x": 32,
+      "y": 3,
+      "targets": [
+        "a1"
+      ]
+    },
+    {
+      "id": "fireright2",
+      "type": "door",
+      "x": 34,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireR2",
+      "type": "lever",
+      "x": 35,
+      "y": 3,
+      "targets": [
+        "a3"
+      ]
+    },
+    {
+      "id": "fireright3",
+      "type": "door",
+      "x": 37,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireR3",
+      "type": "lever",
+      "x": 38,
+      "y": 3,
+      "targets": [
+        "a5"
+      ]
+    },
+    {
+      "id": "fireleft1",
+      "type": "door",
+      "x": 7,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireL1",
+      "type": "lever",
+      "x": 6,
+      "y": 3,
+      "targets": [
+        "a2"
+      ]
+    },
+    {
+      "id": "fireleft2",
+      "type": "door",
+      "x": 4,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireL2",
+      "type": "lever",
+      "x": 3,
+      "y": 3,
+      "targets": [
+        "a4"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "id": "earthbelt",
+      "type": "belt",
+      "x": 10,
+      "y": 15,
+      "w": 20,
+      "speed": -3.3,
+      "mode": "reverse"
+    },
+    {
+      "id": "earthstep",
+      "type": "box",
+      "x": 12,
+      "y": 14
+    },
+    {
+      "id": "earthright1",
+      "type": "door",
+      "x": 8,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthR1",
+      "type": "lever",
+      "x": 7,
+      "y": 11,
+      "targets": [
+        "a1"
+      ]
+    },
+    {
+      "id": "earthright2",
+      "type": "door",
+      "x": 5,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthR2",
+      "type": "lever",
+      "x": 4,
+      "y": 11,
+      "targets": [
+        "a3"
+      ]
+    },
+    {
+      "id": "earthright3",
+      "type": "door",
+      "x": 2,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthR3",
+      "type": "lever",
+      "x": 1,
+      "y": 11,
+      "targets": [
+        "a5"
+      ]
+    },
+    {
+      "id": "earthleft1",
+      "type": "door",
+      "x": 32,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthL1",
+      "type": "lever",
+      "x": 33,
+      "y": 11,
+      "targets": [
+        "a2"
+      ]
+    },
+    {
+      "id": "earthleft2",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthL2",
+      "type": "lever",
+      "x": 36,
+      "y": 11,
+      "targets": [
+        "a4"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 38,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "id": "selectaccess",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "selector",
+      "type": "lever",
+      "x": 12,
+      "y": 19,
+      "targets": [
+        "firebelt",
+        "earthbelt"
+      ]
+    },
+    {
+      "id": "Wstart",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "fireright1",
+        "fireleft1",
+        "earthright1",
+        "earthleft1"
+      ]
+    },
+    {
+      "id": "fireleft3",
+      "type": "door",
+      "x": 2,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "fireL3",
+      "type": "lever",
+      "x": 1,
+      "y": 3,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "earthleft3",
+      "type": "door",
+      "x": 37,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "earthL3",
+      "type": "lever",
+      "x": 38,
+      "y": 11,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "a1",
+      "type": "door",
+      "x": 22,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a2",
+      "type": "door",
+      "x": 25,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a3",
+      "type": "door",
+      "x": 28,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a4",
+      "type": "door",
+      "x": 31,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a5",
+      "type": "door",
+      "x": 34,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "A1",
+      "type": "lever",
+      "x": 23,
+      "y": 19,
+      "targets": [
+        "selectaccess"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "lever",
+      "x": 26,
+      "y": 19,
+      "targets": [
+        "fireright2",
+        "earthright2"
+      ]
+    },
+    {
+      "id": "A3",
+      "type": "lever",
+      "x": 29,
+      "y": 19,
+      "targets": [
+        "fireleft2",
+        "earthleft2"
+      ]
+    },
+    {
+      "id": "A4",
+      "type": "lever",
+      "x": 32,
+      "y": 19,
+      "targets": [
+        "fireright3",
+        "earthright3"
+      ]
+    },
+    {
+      "id": "A5",
+      "type": "lever",
+      "x": 35,
+      "y": 19,
+      "targets": [
+        "fireleft3",
+        "earthleft3"
+      ]
+    },
+    {
+      "id": "a_final",
+      "type": "door",
+      "x": 37,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 16,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wfinish",
+      "type": "lever",
+      "x": 18,
+      "y": 19,
+      "targets": [
+        "a_final"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 18,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 19,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 35,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "parTicks": 6180,
+  "hints": [
+    "Two climbers must use their movable steps at the selected banks.",
+    "Air inspects both certificates and releases each next pair of workshops; Water operates the common selector.",
+    "For the final visit both climbers need the opposite bank again. Their joint last certificate releases Water, who releases Air."
+  ]
+}

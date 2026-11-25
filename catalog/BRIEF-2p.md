@@ -31,18 +31,18 @@ together. `twist-undo`×26, `twist-order`×6, `quorum`×6, `invert-door`×5, `ob
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-float + stand-aside-is-the-switch
-- lock-per-element + timed-window
-- boulder-float + reversible-switch-maze
-- pound-chain + stand-aside-is-the-switch
-- grating-memory-with-erase + pound-chain
-- tower-presses-a-column + twist-stranding
-- quorum + tower-presses-a-column
-- pound-chain + twist-two-clocks
-- boulder-carry + trigger-from-above
+- position-as-volatile-key + pound-chain
+- torch-bridge + twist-self-block
+- lift-sorts-by-weight + no-hands-for-cargo
 - lock-per-element + twist-stranding
-- mass-adds-on-the-beam + tower-presses-a-column
-- dark + door-pushes-you-through
+- door-pushes-you-through + hold-switch
+- pound-chain + shuttle-strips-cargo-to-belt
+- pound-chain + sink-as-a-timer
+- boulder-carry + mass-adds-on-the-beam
+- stock-before-it-seals + torch-bridge
+- torch-bridge + twist-stranding
+- glide-dismount + pound-chain
+- liquid-lane + pound-chain
 
 ## This repo's 2-player levels
 

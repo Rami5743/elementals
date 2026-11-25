@@ -43,18 +43,18 @@ together. `twist-undo`×26, `quorum`×22, `twist-order`×8, `timed-window`×5, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- dark + invert-door
-- belt-cargo + hop-beats-belt
-- pound-chain + twist-stranding
-- lift-sorts-by-weight + twist-stranding
-- boulder-carry + lift-corner-path
-- twist-stranding + two-is-not-heavy
-- twist-sacrifice + twist-stranding
-- lift-corner-path + pound-to-move
-- lock-per-element + twist-stranding
+- plank-sums-plate-maxes + twist-undo
+- counterweight-you-must-remove + mass-adds-on-the-beam
+- lift-corner-path + twist-sacrifice
+- liquid-lane + machine-strands-operator
+- pound-to-move + timed-window
+- boulder-carry + timed-window
+- lift-corner-path + lock-per-element
 - feed-the-engine-mid-ride + machine-strands-operator
-- twist-stranding + wide-door
-- lift-corner-path + lift-sorts-by-weight
+- mass-adds-on-the-beam + twist-stranding
+- hop-beats-belt + twist-stranding
+- boulder-float + machine-strands-operator
+- feed-the-engine-mid-ride + twist-self-block
 
 ## This repo's 3-player levels
 
