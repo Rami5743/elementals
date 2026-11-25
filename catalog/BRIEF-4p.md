@@ -57,18 +57,18 @@ together. `twist-undo`×10, `quorum`×9, `twist-order`×5, `lock-per-element`×4
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- pound-chain + twist-stranding
-- pound-chain + tower-presses-a-column
-- belt-filter + lift-as-floor
-- counterweight-you-must-remove + pound-chain
-- fan-band + threshold-is-a-switch
-- belt-filter + shared-switch-two-gates
-- belt-filter + tower-presses-a-column
-- pound-chain + wide-door
-- lock-per-element + pound-to-move
-- boulder-float + stand-aside-is-the-switch
-- lock-per-element + stock-before-it-seals
-- climb-then-steer + freeze-bridge
+- freeze-bridge + glide-dismount
+- glide-passenger + lock-per-element
+- head-stack + single-file-stone
+- head-stack + shared-switch-two-gates
+- low-roof-no-jump + mass-adds-on-the-beam
+- boulder-carry + wide-door
+- head-stack + twist-sacrifice
+- boulder-carry + twist-self-block
+- dark + low-roof-no-jump
+- low-roof-no-jump + twist-self-block
+- lift-corner-path + lock-per-element
+- dive-ahead-of-the-runaway + freeze-bridge
 
 ## This repo's 4-player levels
 

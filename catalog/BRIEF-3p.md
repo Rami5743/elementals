@@ -58,18 +58,18 @@ together. `twist-undo`×10, `quorum`×8, `twist-order`×7, `machine-strands-oper
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- counterweight-you-must-remove + freeze-invert
-- dark + machine-strands-operator
-- plank-sums-plate-maxes + twist-self-block
-- plank-sums-plate-maxes + timed-window
-- lift-corner-path + turbine-out-of-reach
 - belt-filter + lift-corner-path
-- fan-passenger + send-one-through
-- fan-passenger + partner-builds-your-landing
-- turbine-out-of-reach + twist-two-clocks
-- glide-passenger + twist-self-block
-- belt-filter + twist-self-block
-- fan-passenger + two-is-not-heavy
+- lift-corner-path + stand-aside-is-the-switch
+- invert-door + lock-per-element
+- mass-adds-on-the-beam + object-as-permanent-switch
+- object-as-permanent-switch + two-in-the-air-at-once
+- invert-door + lift-sorts-by-weight
+- counterweight-you-must-remove + stock-before-it-seals
+- hop-beats-belt + invert-door
+- fan-passenger + seesaw-balance
+- belt-filter + freeze-bridge
+- twist-order + twist-sacrifice
+- fan-passenger + feed-the-engine-mid-ride
 
 ## This repo's 3-player levels
 
