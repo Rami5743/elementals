@@ -42,18 +42,18 @@ together. `twist-undo`×27, `quorum`×27, `twist-order`×7, `timed-window`×5, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- glide-passenger + twist-undo
-- freeze-bridge + tower-presses-a-column
-- climb-then-steer + fan-band
-- low-roof-no-jump + pound-to-move
-- cargo-as-clock-contact + stand-aside-is-the-switch
-- belt-cargo + climb-then-steer
-- glide-dismount + machine-strands-operator
-- partner-builds-your-landing + twist-undo
-- belt-filter + single-file-stone
-- lock-per-element + single-file-stone
-- counterweight-you-must-remove + head-stack
-- reversible-switch-maze + wide-door
+- fan-passenger + invert-door
+- fan-passenger + machine-strands-operator
+- dark + twist-undo
+- glide-passenger + machine-strands-operator
+- mass-adds-on-the-beam + timed-window
+- belt-reverse + tower-presses-a-column
+- reversible-switch-maze + stand-aside-is-the-switch
+- timed-window + unload-the-pan-you-ride
+- belt-reverse + single-file-stone
+- door-pushes-you-through + invert-door
+- belt-reverse + partner-builds-your-landing
+- counterweight-you-must-remove + twist-order
 
 ## This repo's 4-player levels
 

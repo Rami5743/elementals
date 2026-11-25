@@ -41,18 +41,18 @@ together. `twist-undo`×28, `quorum`×25, `twist-order`×8, `timed-window`×6, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- dark + quorum
-- partner-builds-your-landing + twist-undo
-- torch-bridge + unload-the-pan-you-ride
-- freeze-bridge + lift-sorts-by-weight
-- lift-as-floor + partner-builds-your-landing
-- twist-two-clocks + unload-the-pan-you-ride
-- quorum + wide-door
-- stand-aside-is-the-switch + twist-undo
-- hop-beats-belt + stock-before-it-seals
-- glide-dismount + hop-beats-belt
-- hop-beats-belt + twist-undo
-- feed-the-engine-mid-ride + torch-bridge
+- head-stack + pound-to-move
+- counterweight-you-must-remove + mass-adds-on-the-beam
+- object-as-permanent-switch + stand-aside-is-the-switch
+- invert-door + lock-per-element
+- counterweight-you-must-remove + unload-the-pan-you-ride
+- invert-door + stand-aside-is-the-switch
+- counterweight-you-must-remove + pound-to-move
+- feed-the-engine-mid-ride + object-as-permanent-switch
+- counterweight-you-must-remove + liquid-lane
+- object-as-permanent-switch + partner-builds-your-landing
+- counterweight-you-must-remove + single-file-stone
+- counterweight-you-must-remove + low-roof-no-jump
 
 ## This repo's 3-player levels
 

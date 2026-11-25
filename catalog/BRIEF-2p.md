@@ -29,18 +29,18 @@ together. `twist-undo`×31, `quorum`×8, `invert-door`×6, `twist-order`×6, `ma
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- plank-sums-plate-maxes + twist-stranding
-- twist-stranding + two-is-not-heavy
-- glide-passenger + two-is-not-heavy
-- freeze-bridge + tower-presses-a-column
-- twist-self-block + two-is-not-heavy
-- door-pushes-you-through + glide-dismount
-- boulder-float + dark
-- shared-switch-two-gates + tower-presses-a-column
-- boulder-carry + twist-undo
-- twist-undo + two-is-not-heavy
-- boulder-float + glide-passenger
-- plank-sums-plate-maxes + twist-order
+- hop-beats-belt + lift-sorts-by-weight
+- boulder-float + quorum
+- boulder-carry + position-as-volatile-key
+- cargo-as-clock-contact + two-is-not-heavy
+- tower-presses-a-column + twist-sacrifice
+- door-pushes-you-through + fan-passenger
+- no-hands-for-cargo + two-is-not-heavy
+- no-hands-for-cargo + plank-sums-plate-maxes
+- boulder-float + freeze-bridge
+- lock-per-element + twist-undo
+- lift-sorts-by-weight + unload-the-pan-you-ride
+- lock-per-element + timed-window
 
 ## This repo's 2-player levels
 
