@@ -39,18 +39,18 @@ together. `twist-undo`×20, `quorum`×6, `invert-door`×5, `hold-switch`×5, `tw
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hoist-one-way-for-cargo + no-hands-for-cargo
-- invert-door + plank-sums-plate-maxes
-- liquid-lane + pound-chain
-- door-pushes-you-through + liquid-lane
-- belt-cargo + boulder-carry
-- freeze-invert + no-overtaking
-- low-roof-no-jump + two-in-the-air-at-once
-- pound-chain + twist-sacrifice
-- glide-dismount + two-is-not-heavy
-- belt-cargo + send-one-through
-- no-hands-for-cargo + two-in-the-air-at-once
-- no-hands-for-cargo + turbine-out-of-reach
+- belt-cargo + boulder-float
+- boulder-float + hold-switch
+- pound-to-move + two-is-not-heavy
+- lift-sorts-by-weight + pound-to-move
+- freeze-bridge + one-way-drop
+- boulder-float + no-hands-for-cargo
+- belt-cargo + one-way-drop
+- boulder-carry + pound-to-move
+- pound-to-move + two-in-the-air-at-once
+- door-pushes-you-through + pound-to-move
+- boulder-float + pound-to-move
+- door-pushes-you-through + machine-strands-operator
 
 ## This repo's 2-player levels
 

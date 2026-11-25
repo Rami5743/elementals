@@ -1,4 +1,4 @@
-import {IN_INTERACT,IN_JUMP,IN_LEFT,IN_RIGHT,TILE,interact,go,jump,until,wait,drop} from "../../kit.mjs";
+import {IN_INTERACT,IN_JUMP,IN_LEFT,IN_RIGHT,TILE,interact,go,jump,until,wait,drop,waitFlag} from "../../kit.mjs";
 const BAY_FLOOR = 20 * TILE;      // the hoist's bottom stop, flush with the bay floor
 const GALLERY = 8 * TILE;         // the hoist's top stop, flush with the gallery floor
 const LEDGE_TOP = 16 * TILE;      // the landing ledge at the foot of the chute
