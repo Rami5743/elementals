@@ -58,18 +58,18 @@ together. `lock-per-element`×4, `twist-order`×4, `machine-strands-operator`×4
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-filter + glide-dismount
-- boulder-carry + one-way-drop
-- freeze-bridge + liquid-lane
-- low-roof-no-jump + one-way-drop
-- boulder-carry + dive-ahead-of-the-runaway
-- boulder-carry + twist-setup
-- lift-corner-path + low-roof-no-jump
-- boulder-carry + freeze-invert
-- turbine-out-of-reach + two-stops-no-middle
-- fan-passenger + freeze-bridge
-- boulder-carry + liquid-lane
-- glide-dismount + low-roof-no-jump
+- boulder-carry + feed-the-engine-mid-ride
+- pound-chain + twist-setup
+- freeze-bridge + freeze-invert
+- freeze-bridge + one-way-drop
+- freeze-bridge + single-file-stone
+- head-stack + stand-aside-is-the-switch
+- partner-builds-your-landing + turbine-out-of-reach
+- freeze-bridge + torch-bridge
+- low-roof-no-jump + twist-sacrifice
+- mass-adds-on-the-beam + turbine-out-of-reach
+- boulder-carry + hop-beats-belt
+- head-stack + hop-beats-belt
 
 ## This repo's 4-player levels
 

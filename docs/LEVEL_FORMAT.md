@@ -81,7 +81,7 @@ Every trigger needs `"targets": ["<id>", ...]`.
 
 ### Targets (things triggers drive)
 
-A target's signal is on when at least `required` (default 1) of its inputs are on. `"invert": true` flips the signal. `"latch": true` keeps it on once it has been on. A door with no inputs never opens; an elevator, fan or belt with no inputs is always on.
+A target's signal is on when at least `required` (default 1) of its inputs are on. `"invert": true` flips the signal. `"latch": true` keeps it on once it has been on. A door with no inputs never opens; an elevator, fan or belt with no inputs is always on, and so is a pulley's snatch block.
 
 | Type | What it does | Fields |
 |---|---|---|
@@ -89,13 +89,14 @@ A target's signal is on when at least `required` (default 1) of its inputs are o
 | `elevator` | A platform `w` tiles wide and 16 px thick that moves along `path`. | `path`: `[[x, y], ...]` tile positions of its top-left, each step horizontal or vertical. `mode`: `"powered"` (default: travels to the end of the path while on, back while off) or `"loop"` (shuttles end to end while on, waiting `pause` ticks at each end). `speed` px a tick (default 1.5). |
 | `fan` | An updraft filling its `w` × `h` area while on. | `strength` (default 0.9: lifts Air only; see docs/MECHANICS.md for heavier winds). |
 | `belt` | A solid conveyor that carries whatever stands on it. | `speed` px a tick (default 2, negative runs left). Wired, it runs while on; with `mode: "reverse"` it always runs and turns back while on. |
+| `pulley` | *Format 3.* Two platforms on one rope over two wheels. The first is `w` tiles wide at `x`, `y`; the second starts at `to`, `[x, y]`, as wide as the first, or `[x, y, width]`. The heavier side goes down and lifts the other, `speed` px a tick (default 1.5), until the first platform has dropped `range` tiles (default 2) or the second has risen as far. On a rope, Fire and Water weigh 1, Air ½, Earth 2, a crate 1 and a boulder 3: everything standing on a platform, stacks included, and whoever jumped off it until they land somewhere else. `weights` gives the platforms a weight of their own, `[first, second]` (default `[0, 0]`, halves allowed): a platform heavier than the other sinks back by itself when nobody is on either. Balanced, a pulley stays where it is, empty or not. A jump off a platform kicks it down a few pixels; balanced, it springs back to where the jumper left it. `ratio` (2 to 4) hangs the second platform from a snatch block: its load (and its own weight) pulls with only 1/`ratio`, and it moves 1/`ratio` as far. Wired, the snatch block is in only while the signal is on. Like lifts, it never crushes: it stops on whatever is in the way. | `to`: `[x, y]` or `[x, y, width]`, `range`, `ratio`, `weights`, `speed`, `required`, `invert`, `latch` |
 | `pool` | Covers a row of `W` tiles; while frozen, everyone can walk on it. | `w`; `duration`: ticks it stays frozen after its freeze pad is left (default 300); `invert`. |
 
 ### Objects and obstacles
 
 | Type | What it is |
 |---|---|
-| `box` | A crate anyone can push (mass 1). Stands on plates, rides lifts, can be carried on a head. |
+| `box` | A crate anyone can push (mass 1). Stands on plates, rides lifts, can be carried on a head. A crate standing on a wooden ledge (`=`) is lifted onto the head of whoever jumps up under it. |
 | `boulder` | Only Earth can push it (mass 3: holds heavy plates). *Format 2:* `"rolls": true` makes it roll down slopes (`/`, `\`) and on along level ground until it slows to a stop; it flies on off a ledge. Whoever stands in its way stops it (it pushes nobody), and Earth can push it back up. Without `rolls` it stays where it is put, even on a slope. |
 | `seesaw` | A plank `w` tiles wide in two halves: the heavier side goes down by `range` tiles in all (default 2). |
 | `ice` | Solid; Fire melts it by touching it for a third of a second. |
@@ -135,6 +136,7 @@ A **play link** is the game's address followed by `#level=` and the bundle packe
 Everything in this document is **level format 1** unless it is marked otherwise. As the game gains features, later formats add to it; they never change what an existing field means.
 
 - **Format 2** added `"rolls"` on boulders.
+- **Format 3** added the `pulley` entity, with its fields `"to"`, `"ratio"` and `"weights"`.
 
 - A bundle's `requires` is the format its level needs. The kit sets it from what the level actually uses.
 - A level that uses only format 1 keeps working in every version of the game.

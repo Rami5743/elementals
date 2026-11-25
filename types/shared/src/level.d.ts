@@ -1,5 +1,5 @@
 import { type Element } from './constants.js';
-export declare const ENTITY_TYPES: readonly ["plate", "button", "lever", "door", "elevator", "fan", "belt", "box", "boulder", "seesaw", "ice", "firewall", "cracked", "torch", "turbine", "freezepad", "pool", "gem", "exit", "checkpoint", "sign"];
+export declare const ENTITY_TYPES: readonly ["plate", "button", "lever", "door", "elevator", "fan", "belt", "box", "boulder", "seesaw", "pulley", "ice", "firewall", "cracked", "torch", "turbine", "freezepad", "pool", "gem", "exit", "checkpoint", "sign"];
 export type EntityType = (typeof ENTITY_TYPES)[number];
 /** Entities that drive wiring. */
 export declare const TRIGGER_TYPES: readonly EntityType[];
@@ -38,6 +38,12 @@ export interface EntityDef {
     text?: string;
     /** Boulders: roll down slopes (format 2). Without it a boulder stays where it is put. */
     rolls?: boolean;
+    /** Pulleys: where the second platform starts, [x, y] in tiles, and optionally its width if not `w` (format 3). */
+    to?: [number, number] | [number, number, number];
+    /** Pulleys: a snatch block under the second platform, 1 (none) to 4 (format 3): its load counts 1/ratio as much, and it moves 1/ratio as far. */
+    ratio?: number;
+    /** Pulleys: what each platform weighs itself, [first, second], in the weights of the elements (Fire 1); halves allowed (format 3). */
+    weights?: [number, number];
 }
 export interface LevelDef {
     id: string;

@@ -31,6 +31,15 @@ export declare const RESTART_HOLD_TICKS = 60;
 export declare const ROLL_ACCEL = 0.12;
 export declare const ROLL_MAX = 4;
 export declare const ROLL_FRICTION = 0.08;
+/**
+ * What each body weighs on a pulley, in half-units (format 3). Air is the lightest here, as it is in a
+ * draught; seesaws and heavy plates (format 1) keep weighing Air like Fire and Water.
+ */
+export declare const PULLEY_WEIGHT: Record<Element, number>;
+export declare const PULLEY_WEIGHT_BOX = 2;
+export declare const PULLEY_WEIGHT_BOULDER = 6;
+/** Pulleys: how many pixels a jump kicks its platform down before it springs back. */
+export declare const PULLEY_KICK = 6;
 export interface Physique {
     w: number;
     h: number;

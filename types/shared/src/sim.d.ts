@@ -22,6 +22,12 @@ export interface PlayerState {
     inDoor: number;
     drop: number;
     cp: number;
+    /**
+     * The pulley platform this player last stood on (directly or on top of others), as entity index * 2
+     * + side, or -1. A jump doesn't take a player's weight off the rope: they count on that platform
+     * until they land somewhere else, so hopping can't pump a pulley up.
+     */
+    ride: number;
 }
 /** Mutable per-entity state. Every field is a number so state hashes and serializes trivially. */
 export interface EntState {
@@ -114,6 +120,41 @@ export declare function deadlyLiquidHit(world: World, ents: readonly EntState[],
 export declare function deadlyLiquidAt(world: World, ents: readonly EntState[], element: Element, r: Rect): number | null;
 export declare function doorRect(e: WEnt, s: EntState): Rect;
 export declare function seesawRects(e: WEnt, s: EntState): [Rect, Rect];
+/**
+ * The two platforms of a pulley: the first, `d` pixels below where it starts, and the second, at the
+ * state's x and y. Both are as wide as the pulley and as thick as a lift.
+ */
+export declare function pulleyRects(e: WEnt, s: Pick<EntState, 'x' | 'y' | 'd'>): [Rect, Rect];
+/** The second platform's width in pixels: `to`'s third number, in tiles, or as wide as the first. */
+export declare function pulleyFarW(e: WEnt): number;
+/**
+ * Where a pulley's two wheels hang, for drawing its rope: over the middle of each platform, under
+ * the first rock above the highest point that platform reaches (or the top of the level).
+ */
+export declare function pulleyWheels(world: World, e: WEnt): [{
+    x: number;
+    y: number;
+}, {
+    x: number;
+    y: number;
+}];
+/**
+ * The rope between a pulley's two wheels runs square: across and up (or up and across), round a
+ * third wheel at the corner. Of the two corners, the one whose rope crosses less rock. Null when the
+ * wheels hang at the same height.
+ */
+export declare function pulleyCorner(world: World, a: {
+    x: number;
+    y: number;
+}, b: {
+    x: number;
+    y: number;
+}): {
+    x: number;
+    y: number;
+} | null;
+/** The snatch block's ratio a pulley works with now: its `ratio` while its signal is on (always, if nothing is wired to it), else 1. */
+export declare function pulleyRatio(e: WEnt, s: EntState): number;
 /** Rect of a solid entity, or null if it is not currently solid. */
 export declare function solidRect(e: WEnt, s: EntState): Rect | null;
 /** Signal for a target: how many of its inputs are on, compared with "required". */
@@ -140,6 +181,7 @@ export declare class Sim {
      * carry riders. Upward moves lift riders first so stacks move together.
      */
     moveActorPx(ref: Ref, dx: number, dy: number, push: boolean, depth?: number): boolean;
+    /** A crate standing on a wooden ledge (and nothing solid), which a player jumping up under it lifts. */
     /** Move an actor by a float amount along one axis. Returns the blocker if stopped. */
     moveActor(ref: Ref, axis: 'x' | 'y', amount: number, push: boolean, rem: {
         r: number;
@@ -161,6 +203,7 @@ export declare class Sim {
      * only falls more slowly.
      */
     /** Every actor resting on rect r, directly or on top of others (each once). */
+    /** Which pulley platform (entity index * 2 + side) standing on `ground` puts a body at `r` on, or -1. */
     updateMovable(i: number): void;
     /**
      * A rolling boulder speeds up down a slope, keeps rolling on level ground until friction stops it,
@@ -179,6 +222,28 @@ export declare class Sim {
      * "reverse" mode, always, backwards while the signal is on. `d` counts the pixels run, for drawing.
      */
     /** Pixel delta for moving one unit along an axis-aligned path from distance d. */
+    /**
+     * What weighs on one side of a pulley, in half-units (see PULLEY_WEIGHT): the platform's own weight,
+     * everything stacked on it, and whoever jumped off it and hasn't landed yet.
+     */
+    /**
+     * A pulley: two platforms on one rope. The heavier side goes down and lifts the other, `speed`
+     * pixels a tick, until the first platform has dropped `range` tiles or is back where it started.
+     * Balanced, it stays where it is, empty or not. A platform can weigh something itself (`weights`).
+     * A jump off a platform kicks it down a little (`vy` ticks left, `vx` the direction, one pixel a
+     * tick); while the pulley is balanced, it then springs back to where the jumper left it (`ry`, while
+     * `rx` is set) and waits there.
+     * A snatch block (`ratio` k) under the second platform halves (or thirds...) the pull of its load
+     * and its travel: it rises one pixel for every k the first platform drops. `t` counts the first
+     * platform's pixels towards the second's next one, so going back retraces the same steps.
+     */
+    /** A jump off side `side` of pulley `i` kicks that platform down a few pixels. */
+    /**
+     * Move a pulley `n` pixels (of its first platform) in direction `sign`. On the way out it stops as
+     * soon as either platform is at its end. After the snatch block is put in or taken out mid-way, the
+     * two may get back at different times: then the other one carries on alone, so a pulley going back
+     * to the start gets all the way there. Like lifts, it stops on whatever is in its way.
+     */
     /** Liquid tile kind the player is touching with feet (below) or sides, or null. */
     touchingLiquid(p: PlayerState): number | null;
     frozenAt(tx: number, ty: number): boolean;

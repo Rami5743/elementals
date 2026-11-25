@@ -157,6 +157,51 @@ function rollMeasure(slopeTiles) {
   return { top, runOut: flatStart !== null && flatEnd !== null ? (flatEnd - flatStart) / TILE : null };
 }
 
+/**
+ * Pulleys (format 3): a shaft with one pulley, something on each platform, left to settle.
+ * `first`/`second` are an element, 'box', 'boulder' or null. Returns how far the first platform
+ * dropped and how far the second rose, in tiles, and how many ticks it moved for.
+ */
+function pulleyTrial({ first = null, second = null, ratio = 1, weights = [0, 0], range = 2, ticks = 500 }) {
+  const open = [];
+  for (let y = 0; y < 22; y++) open.push(y < 2 || y >= 19 ? rock : '#' + '.'.repeat(38) + '#');
+  const ents = [{ id: 'p', type: 'pulley', x: 8, y: 10, w: 2, to: [20, 10], ratio, weights, range }];
+  const spawns = {}, pair = [];
+  for (const [side, what] of [['first', first], ['second', second]]) {
+    if (!what) continue;
+    const x = side === 'first' ? 8 : 20;
+    if (ELS.includes(what)) { pair.push(what); spawns[what] = [x, 9]; }
+    else ents.push({ id: side, type: what, x, y: 9 });
+  }
+  while (pair.length < 2) {                              // fill the group out, well away from the shaft
+    const e = ELS.find((x) => !pair.includes(x));
+    pair.push(e); spawns[e] = [30 + pair.length * 2, 18];
+  }
+  const level = {
+    id: 'probe', name: 'Probe', order: 999, supports: [pair], tiles: open, spawns,
+    entities: [...ents, ...pair.map((e, i) => ({ type: 'exit', element: e, x: 2 + i * 2, y: 17 }))],
+  };
+  const w = buildWorld(level, pair);
+  const pi = w.ents.findIndex((e) => e.def.id === 'p');
+  let s = createState(w);
+  const y0 = s.ents[pi].y;
+  let moving = 0, prev = s.ents[pi].d;
+  for (let t = 0; t < ticks; t++) {
+    s = stepGame(w, s, pair.map(() => 0));
+    if (s.ents[pi].d !== prev) moving++;
+    prev = s.ents[pi].d;
+  }
+  return { drop: s.ents[pi].d / TILE, rise: (y0 - s.ents[pi].y) / TILE, moving, dropPx: s.ents[pi].d };
+}
+
+/** What a body pulls with on a rope: the smallest weight of its own the far platform needs to hold it. */
+function ropeWeight(what) {
+  for (let w2 = 0; w2 <= 8; w2 += 0.5) {
+    if (pulleyTrial({ first: what, weights: [0, w2], ticks: 400 }).drop < 0.05) return w2;
+  }
+  return null;
+}
+
 const n = (x, d = 2) => x.toFixed(d);
 const rows = [];
 
@@ -180,6 +225,20 @@ rows.push('|---|---|---|');
 for (const sl of [2, 3, 5]) {
   const r = rollMeasure(sl);
   rows.push(`| ${sl} tiles | ${n(r.top)} px/tick | ${r.runOut === null ? 'did not settle' : n(r.runOut, 1) + ' tiles'} |`);
+}
+
+rows.push('\n## Pulleys (`pulley`, format 3) — what a body pulls with on the rope\n');
+rows.push('| air | fire | water | earth | crate | boulder |');
+rows.push('|---|---|---|---|---|---|');
+rows.push(`| ${['air', 'fire', 'water', 'earth', 'box', 'boulder'].map((b) => ropeWeight(b)).join(' | ')} |`);
+rows.push('\nThe heavier side goes down; equal sides stay where they are. `weights` adds a weight of the');
+rows.push('platform\'s own to either side, and a snatch block divides everything on the second side,');
+rows.push('its own weight included, by `ratio`.\n');
+rows.push('| `range` | `ratio` | the first platform drops | the second rises | speed |');
+rows.push('|---|---|---|---|---|');
+for (const [range, ratio] of [[2, 1], [4, 1], [6, 1], [2, 2], [2, 4]]) {
+  const r = pulleyTrial({ first: 'fire', range, ratio });
+  rows.push(`| ${range} | ${ratio} | ${n(r.drop, 1)} tiles | ${n(r.rise, 2)} tiles | ${n(r.dropPx / r.moving)} px/tick (${n(r.moving / 60, 1)} s) |`);
 }
 
 const body = `# Measured physics

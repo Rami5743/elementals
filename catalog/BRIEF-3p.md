@@ -59,18 +59,18 @@ together. `twist-order`×6, `machine-strands-operator`×3, `timed-window`×3, `o
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lift-corner-path + two-in-the-air-at-once
-- invert-door + send-one-through
-- belt-filter + twist-self-block
-- lift-corner-path + pound-chain
-- turbine-out-of-reach + twist-self-block
-- send-one-through + twist-stranding
-- plank-sums-plate-maxes + twist-stranding
-- twist-self-block + two-is-not-heavy
-- lift-corner-path + no-overtaking
-- single-file-stone + twist-self-block
-- boulder-carry + twist-self-block
-- lift-corner-path + liquid-lane
+- machine-strands-operator + trip-plate-in-the-shaft
+- glide-passenger + machine-strands-operator
+- lift-corner-path + turbine-out-of-reach
+- low-roof-no-jump + twist-stranding
+- hop-beats-belt + twist-stranding
+- glide-passenger + twist-stranding
+- belt-filter + twist-stranding
+- machine-strands-operator + wide-door
+- trigger-from-above + twist-stranding
+- lock-per-element + twist-stranding
+- lift-corner-path + partner-builds-your-landing
+- dark + twist-stranding
 
 ## This repo's 3-player levels
 

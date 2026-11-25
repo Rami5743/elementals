@@ -78,7 +78,7 @@ the shape to throw away, however good the central idea is.
 
 ## 5. Build it
 
-Read `catalog/PHYSICS.md` (the measured table: jumps, gaps, fans, rolling boulders) and
+Read `catalog/PHYSICS.md` (the measured table: jumps, gaps, fans, rolling boulders, pulleys) and
 `references/engine-facts.md` **before** writing tiles or a solution script. It is the measured
 behaviour of this simulation, and most of it is not guessable; skipping it costs many wasted
 check-and-fix loops. `references/building.md` has the practical recipe: the generator-script

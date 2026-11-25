@@ -34,6 +34,24 @@ ledge from reachable into unreachable.
 | 3 tiles | 4.00 px/tick | 3.1 tiles |
 | 5 tiles | 4.00 px/tick | 3.1 tiles |
 
+## Pulleys (`pulley`, format 3) — what a body pulls with on the rope
+
+| air | fire | water | earth | crate | boulder |
+|---|---|---|---|---|---|
+| 0.5 | 1 | 1 | 2 | 1 | 3 |
+
+The heavier side goes down; equal sides stay where they are. `weights` adds a weight of the
+platform's own to either side, and a snatch block divides everything on the second side,
+its own weight included, by `ratio`.
+
+| `range` | `ratio` | the first platform drops | the second rises | speed |
+|---|---|---|---|---|
+| 2 | 1 | 2.0 tiles | 2.00 tiles | 1.49 px/tick (0.7 s) |
+| 4 | 1 | 4.0 tiles | 4.00 tiles | 1.49 px/tick (1.4 s) |
+| 6 | 1 | 6.0 tiles | 6.00 tiles | 1.50 px/tick (2.1 s) |
+| 2 | 2 | 2.0 tiles | 1.00 tiles | 1.49 px/tick (0.7 s) |
+| 2 | 4 | 2.0 tiles | 0.50 tiles | 1.49 px/tick (0.7 s) |
+
 Widest gap is the largest hole, in whole tiles, that the element gets across and lands on the far
 side of: with a run-up from eight tiles back, or starting at the lip. A rider on your head, a low
 ceiling, or a slope changes these, so a design that sits on the boundary still wants its own probe.
