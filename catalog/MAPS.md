@@ -6131,6 +6131,69 @@ Entities:
   X  exit_21      exit       at (38,14)  water
 ```
 
+## Roof Embargo (`roof_embargo`) — 3p, core `remote-roof-veto-with-repeated-complementary-permissions`
+
+```
+Roof Embargo (roof_embargo) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #..D...D....D................D.........#
+ 2  #X.D...D....D................D.........#
+ 3  #X.D.@.D....D...l............D.....*...#
+ 4  ########################################
+ 5  #.D.......D...........D...D.........D..#
+ 6  #XD.......D...........D...D.........D..#
+ 7  #XDl@.....D.....l.....D...D.......l.D*.#
+ 8  ########################################
+ 9  ########################################
+10  #......................................#
+11  #......................................#
+12  #...........@.....................l....#
+13  ################=DDDDDD#################
+14  ################.....*.#################
+15  ####################c###################
+16  #.......................D...D.......D..#
+17  #.......................D...D.......D.X#
+18  #.......l...........#...D...D.....l.D.X#
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (5,3)  water (4,7)  earth (12,12)
+Entities:
+  D  slab         door       at (17,13)  6x1  <- roof
+  c  panel        cracked    at (20,15)
+  l  Etop         lever      at (34,12)  -> W1gate
+  D  W1gate       door       at (10,5)  1x3  <- Etop  latch
+  l  W1           lever      at (16,7)  -> Faccess
+  D  Faccess      door       at (12,1)  1x3  <- W1  latch
+  l  roof         lever      at (16,3)  -> slab, Wroof, Eroof, Wfinalgate, Freturn
+  D  Freturn      door       at (7,1)  1x3  <- roof  invert
+  D  Fexit        door       at (3,1)  1x3  <- Whome  latch
+  l  Ewest        lever      at (8,18)  -> W2gate
+  D  W2gate       door       at (22,5)  1x3  <- Ewest  latch
+  D  Wroof        door       at (26,5)  1x3  <- roof  invert
+  l  W2           lever      at (34,7)  -> E2gate
+  D  Eroof        door       at (24,16)  1x3  <- roof  invert
+  D  E2gate       door       at (28,16)  1x3  <- W2  latch
+  l  Eeast        lever      at (34,18)  -> F2gate
+  D  F2gate       door       at (29,1)  1x3  <- Eeast  latch
+  l  F2           lever      at (35,3)  -> Wfinalgate
+  D  Wfinalgate   door       at (36,5)  1x3  <- roof, F2 (needs 2)  latch
+  l  Wfinal       lever      at (37,7)  -> Wexit
+  D  Wexit        door       at (2,5)  1x3  <- Wfinal  latch
+  l  Whome        lever      at (3,7)  -> Fexit, Eexit
+  D  Eexit        door       at (36,16)  1x3  <- Whome  latch
+  *  gem_23       gem        at (21,14)  earth
+  *  gem_24       gem        at (35,3)  fire
+  *  gem_25       gem        at (37,7)  water
+  X  exit_26      exit       at (38,17)  earth
+  X  exit_27      exit       at (1,2)  fire
+  X  exit_28      exit       at (1,6)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

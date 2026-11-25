@@ -6355,6 +6355,38 @@
   ]
  },
  {
+  "id": "roof_embargo",
+  "name": "Roof Embargo",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6240,
+  "dark": false,
+  "challenge": "mind",
+  "core": "remote-roof-veto-with-repeated-complementary-permissions",
+  "ideas": [
+   "pound-needs-headroom",
+   "shutter-floor-wall-duality",
+   "twist-undo"
+  ],
+  "order": 252,
+  "line": "the same retractable slab serves as Earth's upper bridge and the ceiling that prevents a pound. A remote selector must alternate four times because the other workshops use complementary permissions.",
+  "tokens": [
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:wide-door",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "rope_palindrome",
   "name": "Rope Palindrome",
   "source": "mine",

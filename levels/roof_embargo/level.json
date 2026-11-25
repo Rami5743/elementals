@@ -1,0 +1,292 @@
+{
+  "id": "roof_embargo",
+  "name": "Roof Embargo",
+  "order": 252,
+  "description": "The gallery floor is also the ceiling that prevents Earth from pounding. The dispatcher must withdraw it for the descent, then use its complementary permissions on the two other galleries.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 6240,
+  "hints": [
+    "Earth needs the closed roof to reach the upper certificate, then the open roof to break the floor.",
+    "The same selector controls the lower east route and Water's second workshop. They require the roof closed.",
+    "The final Water workshop requires the roof open again; close it once more so Water can return and release Fire."
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "################=......#################",
+    "################.......#################",
+    "####################.###################",
+    "#......................................#",
+    "#......................................#",
+    "#...................#..................#",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      5,
+      3
+    ],
+    "water": [
+      4,
+      7
+    ],
+    "earth": [
+      12,
+      12
+    ]
+  },
+  "entities": [
+    {
+      "type": "door",
+      "id": "slab",
+      "x": 17,
+      "y": 13,
+      "w": 6,
+      "h": 1
+    },
+    {
+      "type": "cracked",
+      "id": "panel",
+      "x": 20,
+      "y": 15
+    },
+    {
+      "type": "lever",
+      "id": "Etop",
+      "x": 34,
+      "y": 12,
+      "targets": [
+        "W1gate"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "W1gate",
+      "x": 10,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "W1",
+      "x": 16,
+      "y": 7,
+      "targets": [
+        "Faccess"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "Faccess",
+      "x": 12,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "roof",
+      "x": 16,
+      "y": 3,
+      "targets": [
+        "slab",
+        "Wroof",
+        "Eroof",
+        "Wfinalgate",
+        "Freturn"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "Freturn",
+      "x": 7,
+      "y": 1,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "door",
+      "id": "Fexit",
+      "x": 3,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Ewest",
+      "x": 8,
+      "y": 18,
+      "targets": [
+        "W2gate"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "W2gate",
+      "x": 22,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "Wroof",
+      "x": 26,
+      "y": 5,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "lever",
+      "id": "W2",
+      "x": 34,
+      "y": 7,
+      "targets": [
+        "E2gate"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "Eroof",
+      "x": 24,
+      "y": 16,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "door",
+      "id": "E2gate",
+      "x": 28,
+      "y": 16,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Eeast",
+      "x": 34,
+      "y": 18,
+      "targets": [
+        "F2gate"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "F2gate",
+      "x": 29,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "F2",
+      "x": 35,
+      "y": 3,
+      "targets": [
+        "Wfinalgate"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "Wfinalgate",
+      "x": 36,
+      "y": 5,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Wfinal",
+      "x": 37,
+      "y": 7,
+      "targets": [
+        "Wexit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "Wexit",
+      "x": 2,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Whome",
+      "x": 3,
+      "y": 7,
+      "targets": [
+        "Fexit",
+        "Eexit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "Eexit",
+      "x": 36,
+      "y": 16,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 21,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 35,
+      "y": 3
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 17
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 6
+    }
+  ]
+}
