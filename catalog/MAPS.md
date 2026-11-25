@@ -5465,3 +5465,76 @@ Entities:
   *  gem_42       gem        at (37,16)  air
   X  exit_43      exit       at (38,15)  air
 ```
+
+## Counterflow Council (`counterflow_council`) — 4p, core `triple-vote-complementary-current-route`
+
+```
+Counterflow Council (counterflow_council) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #....#######.......D........D......D..X#
+ 2  #..@..........l....D....l...D...l..D.*X#
+ 3  ######<<<<<#############################
+ 4  ########################################
+ 5  ##....................................##
+ 6  ##ppp..............................ppp##
+ 7  ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>##
+ 8  ########################################
+ 9  #..................D........D......D...#
+10  #....#######.......D........D......D..X#
+11  #..@..........l....D....l...D...l..D.*X#
+12  ######<<<<<#############################
+13  #.....#####........D........D......D...#
+14  #....#######.......D........D......D..X#
+15  #..@..........l....D....l...D...l..D.*X#
+16  ######<<<<<#############################
+17  #....D#####.........D..................#
+18  #.X..D....########..D.....########.....#
+19  #.X*.D..l...........D...l............@.#
+20  ###########<<<<<<##########>>>>>>#######
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,11)  earth (37,19)  water (3,15)  air (3,2)
+Entities:
+  >  cargo        belt       at (2,7)  36x1  <- reverse, water_reverse, air_reverse (needs 3)  mode reverse  speed 2
+  O  stone        boulder    at (35,6)
+  p  left         plate      at (2,6)  3x1  -> f1, e_mid, f3, w1, w3, a1, a3  weight heavy
+  p  right        plate      at (35,6)  3x1  -> f2, e_final, w2, a2  weight heavy
+  >  fire_belt    belt       at (6,12)  5x1  <- reverse, water_reverse, air_reverse (needs 3)  mode reverse  speed -2.9
+  >  earth_first  belt       at (27,20)  6x1  <- reverse, water_reverse, air_reverse (needs 3)  mode reverse  speed 2.9
+  >  earth_second belt       at (11,20)  6x1  <- reverse, water_reverse, air_reverse (needs 3)  mode reverse  speed -2.9
+  l  reverse      lever      at (14,11)  -> cargo, fire_belt, earth_first, earth_second, water_belt, air_belt
+  l  e1           lever      at (24,19)  -> f1, w1, a1
+  l  f1key        lever      at (24,11)  -> e_mid
+  l  e2           lever      at (8,19)  -> f2, f3, w2, w3, a2, a3
+  l  f2key        lever      at (32,11)  -> e_final, w3, a3
+  D  f1           door       at (19,9)  1x3  <- left, e1 (needs 2)  latch
+  D  f2           door       at (28,9)  1x3  <- right, e2 (needs 2)  latch
+  D  f3           door       at (35,9)  1x3  <- left, e2 (needs 2)
+  D  e_mid        door       at (20,17)  1x3  <- left, f1key, wkey1, akey1 (needs 4)  latch
+  D  e_final      door       at (5,17)  1x3  <- right, f2key, wkey2, akey2 (needs 4)  latch
+  *  gem_17       gem        at (37,11)  fire
+  X  exit_18      exit       at (38,10)  fire
+  *  gem_19       gem        at (3,19)  earth
+  X  exit_20      exit       at (2,18)  earth
+  >  water_belt   belt       at (6,16)  5x1  <- reverse, water_reverse, air_reverse (needs 3)  mode reverse  speed -2.9
+  l  water_reverse lever      at (14,15)  -> cargo, fire_belt, water_belt, earth_first, earth_second, air_belt
+  D  w1           door       at (19,13)  1x3  <- left, e1 (needs 2)  latch
+  D  w2           door       at (28,13)  1x3  <- right, e2 (needs 2)  latch
+  D  w3           door       at (35,13)  1x3  <- left, e2, f2key (needs 3)
+  l  wkey1        lever      at (24,15)  -> e_mid
+  l  wkey2        lever      at (32,15)  -> e_final
+  *  gem_28       gem        at (37,15)  water
+  X  exit_29      exit       at (38,14)  water
+  >  air_belt     belt       at (6,3)  5x1  <- reverse, water_reverse, air_reverse (needs 3)  mode reverse  speed -2.9
+  l  air_reverse  lever      at (14,2)  -> cargo, fire_belt, water_belt, air_belt, earth_first, earth_second
+  D  a1           door       at (19,1)  1x2  <- left, e1 (needs 2)  latch
+  D  a2           door       at (28,1)  1x2  <- right, e2 (needs 2)  latch
+  D  a3           door       at (35,1)  1x2  <- left, e2, f2key (needs 3)
+  l  akey1        lever      at (24,2)  -> e_mid
+  l  akey2        lever      at (32,2)  -> e_final
+  *  gem_37       gem        at (37,2)  air
+  X  exit_38      exit       at (38,1)  air
+```

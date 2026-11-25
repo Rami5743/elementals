@@ -3207,6 +3207,43 @@
   }
  },
  {
+  "id": "counterflow_council",
+  "name": "Counterflow Council",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8280,
+  "dark": false,
+  "challenge": "mind",
+  "core": "triple-vote-complementary-current-route",
+  "ideas": [
+   "belt-filter",
+   "belt-reverse",
+   "quorum"
+  ],
+  "order": 330,
+  "line": "Three upstream couriers jointly control two complementary directional filters. The slow player must use one state for each passage, while a cargo token certifies the states independently.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:blocks-earth",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "counterflow_exchange",
   "name": "Counterflow Exchange",
   "source": "mine",

@@ -1,0 +1,10 @@
+{
+  "order": 330,
+  "challenge": "mind",
+  "core": "triple-vote-complementary-current-route",
+  "ideas": [
+    "belt-filter",
+    "belt-reverse",
+    "quorum"
+  ]
+}
