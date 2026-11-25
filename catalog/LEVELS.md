@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 161 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 162 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (53)
@@ -725,7 +725,7 @@ Totals: 79 campaign levels, 161 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (53)
+## 4 players — this repo (54)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -932,6 +932,10 @@ Totals: 79 campaign levels, 161 in this repo, of which 11 now ship in the campai
   - idea: a floating stone is both the route and an irreversible electrical veto. Two independent operators must revoke both live approach permits, not merely one, and later restore them.
   - ideas: causeway-as-veto, boulder-float, twist-undo, quorum
   - features: ent:boulder ent:door ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:4 tile:sludge
+- **Absent Ballast** `absent_ballast` (4p: fire+water+earth+air) core=`airborne-rope-load-permission-handoff` challenge=mind par=6180
+  - idea: the rope remembers the weight of a jumper until landing, allowing the rider to leave a loaded contact behind in midair. The required draught is temporarily revoked for a separate inspection while the rider waits on the pan.
+  - ideas: rope-keeps-the-jumper, twist-undo, quorum, hold-switch
+  - features: ent:boulder ent:door ent:fan ent:lever ent:plate ent:pulley opt:fan:lifts-fire-water opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3 opt:seesaw-range
 
 ## 4 players — campaign (23)
 

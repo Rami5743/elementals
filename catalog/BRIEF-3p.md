@@ -38,18 +38,18 @@ together. `twist-undo`×32, `quorum`×25, `twist-order`×9, `timed-window`×8, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- single-file-stone + twist-stranding
-- dark + quorum
-- lift-sorts-by-weight + twist-stranding
-- door-pushes-you-through + twist-stranding
-- feed-the-engine-mid-ride + machine-strands-operator
-- twist-stranding + wide-door
-- glide-passenger + lift-corner-path
-- mass-adds-on-the-beam + twist-stranding
-- machine-strands-operator + single-file-stone
-- glide-passenger + hoist-unloads-comparator
-- dark + lift-as-floor
-- machine-strands-operator + stand-aside-is-the-switch
+- lift-press + unload-the-pan-you-ride
+- invert-door + wide-door
+- lift-sorts-by-weight + timed-window
+- single-file-stone + twist-self-block
+- lift-as-floor + rope-keeps-the-jumper
+- lift-sorts-by-weight + machine-strands-operator
+- reversible-switch-maze + rope-keeps-the-jumper
+- mass-adds-on-the-beam + reversible-switch-maze
+- twist-undo + wide-door
+- dark + twist-undo
+- low-roof-no-jump + twist-self-block
+- mass-adds-on-the-beam + torch-bridge
 
 ## This repo's 3-player levels
 

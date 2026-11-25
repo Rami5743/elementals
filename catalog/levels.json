@@ -2689,6 +2689,44 @@
   ]
  },
  {
+  "id": "absent_ballast",
+  "name": "Absent Ballast",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6180,
+  "dark": false,
+  "challenge": "mind",
+  "core": "airborne-rope-load-permission-handoff",
+  "ideas": [
+   "rope-keeps-the-jumper",
+   "twist-undo",
+   "quorum",
+   "hold-switch"
+  ],
+  "order": 351,
+  "line": "the rope remembers the weight of a jumper until landing, allowing the rider to leave a loaded contact behind in midair. The required draught is temporarily revoked for a separate inspection while the rider waits on the pan.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:fan:lifts-fire-water",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "afterbeat",
   "name": "Afterbeat",
   "source": "mine",

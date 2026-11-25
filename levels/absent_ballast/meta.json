@@ -1,0 +1,11 @@
+{
+  "order": 351,
+  "challenge": "mind",
+  "core": "airborne-rope-load-permission-handoff",
+  "ideas": [
+    "rope-keeps-the-jumper",
+    "twist-undo",
+    "quorum",
+    "hold-switch"
+  ]
+}

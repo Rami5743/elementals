@@ -9737,3 +9737,72 @@ Entities:
   *  air_gem      gem        at (37,3)  air
   X  air_exit     exit       at (38,2)  air
 ```
+
+## Absent Ballast (`absent_ballast`) — 4p, core `airborne-rope-load-permission-handoff`
+
+```
+Absent Ballast (absent_ballast) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ###....^^D....D.......D..........D.....#
+ 4  ###....^^D....D.......D..........D.....#
+ 5  ###O...^^D..!.D.......D..........D.X...#
+ 6  #.#uu##^^D..!.D..l....D....l.....D.X...#
+ 7  #.#..##^^############################..#
+ 8  #.#..##^^#...D......D.....D.........#..#
+ 9  #.#..##^^#X..D......D.....D.........#..#
+10  #.#....^^#Xl.D..@...D.....D.....l.*.#..#
+11  #.#....^^############################..#
+12  #.#....^^#.D......D.....D.........D.#..#
+13  #.#....^^#.D......D.....D.........DX#..#
+14  #.#p*..^^#*D.l....D.....D.......@.DX#..#
+15  #u#....^^############################..#
+16  #####..^^...................D......D...#
+17  #####..^^...................D......D.X.#
+18  #####.@^^.@.........pp..*...D.pp...D.X.#
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (6,18)  earth (10,18)  fire (16,10)  air (32,14)
+Entities:
+  u  rope         pulley     at (3,6)  2x1  speed 0.6  range 9  second platform at (1,15)  platforms weigh 0 and 3.5
+  O  stone        boulder    at (3,5)
+  p  pad          plate      at (3,14)  -> gate, hatch, inner, f_low  weight heavy
+  p  bellows      plate      at (20,18)  2x1  -> draught  weight heavy
+  p  bellows2     plate      at (30,18)  2x1  -> draught  weight heavy
+  ^  draught      fan        at (7,3)  2x16  <- bellows, bellows2, A0 (needs 2)  strength 2
+  D  gate         door       at (9,3)  1x4  <- pad
+  D  inner        door       at (14,3)  1x4  <- pad  invert
+  D  hatch        door       at (28,16)  1x3  <- pad, Acert, Fcert (needs 3)
+  *  gem_9        gem        at (4,14)  water
+  *  gem_10       gem        at (24,18)  earth
+  X  exit_11      exit       at (35,5)  water
+  X  exit_12      exit       at (37,17)  earth
+  !  checkpoint_13 checkpoint at (12,5)
+  l  Warrival     lever      at (17,6)  -> a_finalAccess
+  D  w_next       door       at (22,3)  1x4  <- Afinal  latch
+  D  w_final      door       at (33,3)  1x4  <- Fend  latch
+  l  Wcert        lever      at (27,6)  -> f_return, a_exit, e_final
+  D  e_final      door       at (35,16)  1x3  <- Wcert, Fend (needs 2)  latch
+  l  A0           lever      at (32,14)  -> draught, f_start, a_inverse
+  D  a_inverse    door       at (24,12)  1x3  <- A0  invert
+  D  a_access     door       at (18,12)  1x3  <- Fcert  latch
+  l  Acert        lever      at (13,14)  -> hatch
+  D  a_finalAccess door       at (11,12)  1x3  <- Warrival  latch
+  l  Afinal       lever      at (10,14)  -> w_next
+  D  a_exit       door       at (34,12)  1x3  <- Wcert, Fend (needs 2)  latch
+  D  f_start      door       at (20,8)  1x3  <- A0  latch
+  D  f_low        door       at (26,8)  1x3  <- pad  latch
+  l  Fcert        lever      at (32,10)  -> hatch, a_access
+  D  f_return     door       at (13,8)  1x3  <- Wcert  latch
+  l  Fend         lever      at (11,10)  -> w_final, a_exit, e_final
+  *  f_gem        gem        at (34,10)  fire
+  X  f_exit       exit       at (10,9)  fire
+  *  a_gem        gem        at (10,14)  air
+  X  a_home       exit       at (35,13)  air
+```
