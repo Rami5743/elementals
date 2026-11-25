@@ -58,18 +58,18 @@ together. `twist-undo`×13, `quorum`×12, `twist-order`×5, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- low-roof-no-jump + twist-self-block
-- counterweight-you-must-remove + lock-per-element
-- reversible-switch-maze + torch-bridge
-- convergent-belt-seam + pound-chain
-- boulder-float + convergent-belt-seam
-- dive-ahead-of-the-runaway + low-roof-no-jump
-- counterweight-you-must-remove + freeze-bridge
-- single-file-stone + turbine-out-of-reach
-- lock-per-element + twist-sacrifice
-- boulder-float + dive-ahead-of-the-runaway
-- hop-beats-belt + pound-chain
-- belt-filter + twist-sacrifice
+- freeze-bridge + lift-as-floor
+- boulder-float + lift-corner-path
+- glide-passenger + lock-per-element
+- lift-corner-path + reversible-switch-maze
+- boulder-float + sink-as-a-timer
+- fan-band + one-way-drop
+- hoist-one-way-for-cargo + low-roof-no-jump
+- turbine-out-of-reach + wide-door
+- counterweight-you-must-remove + pound-chain
+- glide-dismount + turbine-out-of-reach
+- lift-corner-path + lock-per-element
+- feed-the-engine-mid-ride + lock-per-element
 
 ## This repo's 4-player levels
 

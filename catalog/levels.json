@@ -3954,6 +3954,43 @@
   }
  },
  {
+  "id": "junction_dispatch",
+  "name": "Junction Dispatch",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 9840,
+  "dark": false,
+  "challenge": "mind",
+  "core": "junction-direction-dispatch-permissions",
+  "ideas": [
+   "convergent-belt-seam",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 230,
+  "line": "Two independently directed conveyors share a seam. The third operator owns the second direction, which must change only after the team's left-position work is complete.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "lantern",
   "name": "Lantern",
   "source": "mine",

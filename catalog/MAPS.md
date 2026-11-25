@@ -3347,6 +3347,75 @@ Entities:
   X  exit_28      exit       at (38,14)  earth
 ```
 
+## Junction Dispatch (`junction_dispatch`) — 3p, core `junction-direction-dispatch-permissions`
+
+```
+Junction Dispatch (junction_dispatch) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ##....................................##
+ 5  ##....................................##
+ 6  ##ppp.............pppp.............ppp##
+ 7  ##>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<##
+ 8  ########################################
+ 9  #........D.........D........D......D...#
+10  #........D.........D........D......D..X#
+11  #..@.....D....l....D....l...D...l..D.*X#
+12  ########################################
+13  #.......D..........D........D......D...#
+14  #.......D..........D........D......D..X#
+15  #..@....D.....l....D....l...D...l..D.*X#
+16  ########################################
+17  #....D.....D.......D.........D.........#
+18  #.X..D.....D.......D.........D.........#
+19  #.Xl.D..l..D..l....D....l....D.......@.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,11)  water (37,19)  earth (3,15)
+Entities:
+  >  left_belt    belt       at (2,7)  18x1  <- L  mode reverse  speed 2
+  >  right_belt   belt       at (20,7)  18x1  <- R  mode reverse  speed -2
+  O  token        boulder    at (19,6)
+  p  center       plate      at (18,6)  4x1  -> f1, w1, w4, e3  weight heavy
+  p  left         plate      at (2,6)  3x1  -> f2, w2, f4, e1, e4  weight heavy
+  p  right        plate      at (35,6)  3x1  -> f3, w3, e2  weight heavy
+  l  L            lever      at (3,11)  -> left_belt
+  l  R            lever      at (14,15)  -> right_belt
+  l  fkey1        lever      at (14,11)  -> w1
+  l  wkey1        lever      at (24,19)  -> f2
+  l  fkey2        lever      at (24,11)  -> w2, e1
+  l  wkey2        lever      at (14,19)  -> f3
+  l  fkey3        lever      at (32,11)  -> w3, w4, e2
+  l  wkey3        lever      at (8,19)  -> w4, e3
+  l  wlast        lever      at (3,19)  -> f4, e4
+  D  f1           door       at (9,9)  1x3  <- center  latch
+  D  f2           door       at (19,9)  1x3  <- left, wkey1 (needs 2)  latch
+  D  f3           door       at (28,9)  1x3  <- right, wkey2 (needs 2)  latch
+  D  f4           door       at (35,9)  1x3  <- left, wlast (needs 2)
+  D  w1           door       at (29,17)  1x3  <- center, fkey1 (needs 2)  latch
+  D  w2           door       at (19,17)  1x3  <- left, fkey2 (needs 2)  latch
+  D  w3           door       at (11,17)  1x3  <- right, fkey3, ekey1 (needs 3)  latch
+  D  w4           door       at (5,17)  1x3  <- center, fkey3, wkey3, ekey2 (needs 4)  latch
+  *  gem_23       gem        at (37,11)  fire
+  X  exit_24      exit       at (38,10)  fire
+  *  gem_25       gem        at (2,19)  water
+  X  exit_26      exit       at (2,18)  water
+  D  e1           door       at (8,13)  1x3  <- left, fkey2 (needs 2)  latch
+  D  e2           door       at (19,13)  1x3  <- right, fkey3 (needs 2)  latch
+  D  e3           door       at (28,13)  1x3  <- center, wkey3 (needs 2)  latch
+  D  e4           door       at (35,13)  1x3  <- left, wlast (needs 2)
+  l  ekey1        lever      at (24,15)  -> w3
+  l  ekey2        lever      at (32,15)  -> w4
+  *  gem_33       gem        at (37,15)  earth
+  X  exit_34      exit       at (38,14)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```
