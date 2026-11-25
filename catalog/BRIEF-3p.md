@@ -54,18 +54,18 @@ together. `twist-undo`×17, `quorum`×15, `twist-order`×8, `timed-window`×4, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- freeze-invert + twist-self-block
-- invert-door + seesaw-balance
-- boulder-carry + timed-window
-- partner-builds-your-landing + timed-window
-- counterweight-you-must-remove + liquid-lane
-- invert-door + send-one-through
-- boulder-carry + counterweight-you-must-remove
-- fan-passenger + glide-passenger
-- lock-per-element + object-as-permanent-switch
-- sink-as-a-timer + timed-window
-- seesaw-balance + twist-self-block
-- machine-strands-operator + plank-sums-plate-maxes
+- fan-passenger + send-one-through
+- crate-step + object-as-permanent-switch
+- seesaw-balance + timed-window
+- feed-the-engine-mid-ride + timed-window
+- freeze-invert + timed-window
+- lift-sheds-its-load + twist-stranding
+- freeze-invert + object-as-permanent-switch
+- counterweight-you-must-remove + fan-band
+- timed-window + trigger-from-above
+- feed-the-engine-mid-ride + twist-self-block
+- lift-corner-path + seesaw-balance
+- lift-corner-path + turbine-out-of-reach
 
 ## This repo's 3-player levels
 

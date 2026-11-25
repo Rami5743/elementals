@@ -1,0 +1,11 @@
+{
+  "order": 332,
+  "challenge": "mind",
+  "core": "triple-vote-revocation-bridge",
+  "ideas": [
+    "lift-as-floor",
+    "quorum",
+    "twist-undo",
+    "twist-order"
+  ]
+}

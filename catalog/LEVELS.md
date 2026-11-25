@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 103 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 104 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (34)
@@ -579,7 +579,7 @@ Totals: 79 campaign levels, 103 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (33)
+## 4 players — this repo (34)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -712,6 +712,10 @@ Totals: 79 campaign levels, 103 in this repo, of which 11 now ship in the campai
 - **Chute Council** `chute_council` (4p: fire+water+earth+air) core=`runaway-dive-certificate-hoist` challenge=motor par=6300
   - ideas: dive-ahead-of-the-runaway, shared-switch-two-gates, twist-setup
   - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate ent:turbine opt:button:hold opt:elevator:powered opt:heavy-plate opt:required:2 opt:rolling-boulder tile:one-way tile:slope tile:water
+- **Three Votes** `three_votes` (4p: fire+water+earth+air) core=`triple-vote-revocation-bridge` challenge=mind par=6840
+  - idea: A two-deck crossing needs three independent votes to rise, and two voters must revoke their approvals to reach the middle acknowledgment before all three votes are reassembled.
+  - ideas: lift-as-floor, quorum, twist-undo, twist-order
+  - features: ent:door ent:elevator ent:lever opt:invert:door opt:latch opt:required:2 opt:required:3 tile:sludge
 
 ## 4 players — campaign (23)
 

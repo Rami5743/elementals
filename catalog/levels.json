@@ -5759,6 +5759,39 @@
   ]
  },
  {
+  "id": "three_votes",
+  "name": "Three Votes",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6840,
+  "dark": false,
+  "challenge": "mind",
+  "core": "triple-vote-revocation-bridge",
+  "ideas": [
+   "lift-as-floor",
+   "quorum",
+   "twist-undo",
+   "twist-order"
+  ],
+  "order": 332,
+  "line": "A two-deck crossing needs three independent votes to rise, and two voters must revoke their approvals to reach the middle acknowledgment before all three votes are reassembled.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "three_way_imprint",
   "name": "Three-Way Imprint",
   "source": "mine",

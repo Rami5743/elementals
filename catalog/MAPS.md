@@ -5951,3 +5951,69 @@ Entities:
   *  gem_18       gem        at (37,3)  fire
   X  exit_19      exit       at (38,2)  fire
 ```
+
+## Three Votes (`three_votes`) — 4p, core `triple-vote-revocation-bridge`
+
+```
+Three Votes (three_votes) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #...........D..........................#
+ 2  #...........D..........................#
+ 3  #..l*.......D...................l......#
+ 4  ################.......#################
+ 5  ################.......#################
+ 6  ################.......#################
+ 7  ################.......#################
+ 8  #........D.........................D...#
+ 9  #........D..!......................D..X#
+10  #...l....D..@.................l....D..X#
+11  ################EEEEEEE#################
+12  ################SSSSSSS#################
+13  #...D...D.D.........#...D......D....D..#
+14  #.X.D...D.D.........#...D......D....D.X#
+15  #.X*D.l.D.D.@..l....#.@.D.l....D..l.D*X#
+16  ########################################
+17  #....D............D......D.............#
+18  #.X..D............D......D.............#
+19  #.X*.D....l.......D......D.....l@......#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (12,10)  water (22,15)  earth (12,15)  air (32,19)
+Entities:
+  E  bridge       elevator   at (16,11)  7x1  <- lift_control, earth_approval, air_approval (needs 3)  speed 0.9  path (16,11)-(16,4)
+  D  west_lower   door       at (9,8)  1x3  <- upper_east  latch
+  D  west_upper   door       at (12,1)  1x3  <- ack  latch
+  D  east_exit    door       at (35,8)  1x3  <- upper_west, water_final (needs 2)
+  D  control_access door       at (24,13)  1x3  <- lower_east  latch
+  D  ack_access   door       at (8,13)  1x3  <- lower_west, air_cert (needs 2)  latch
+  D  water_exit   door       at (36,13)  1x3  <- upper_west  latch
+  l  lower_east   lever      at (30,10)  -> control_access
+  l  lift_control lever      at (26,15)  -> bridge, water_inverse
+  l  upper_east   lever      at (32,3)  -> west_lower
+  l  lower_west   lever      at (4,10)  -> ack_access, air_access
+  l  ack          lever      at (6,15)  -> west_upper
+  l  upper_west   lever      at (3,3)  -> east_exit, water_exit, earth_exit, air_exit
+  l  water_final  lever      at (34,15)  -> east_exit
+  *  gem_14       gem        at (4,3)  fire
+  X  exit_15      exit       at (38,9)  fire
+  *  gem_16       gem        at (37,15)  water
+  X  exit_17      exit       at (38,14)  water
+  !  checkpoint_18 checkpoint at (12,9)
+  l  earth_approval lever      at (15,15)  -> bridge, earth_inverse
+  D  earth_inverse door       at (10,13)  1x3  <- earth_approval  invert
+  D  water_inverse door       at (31,13)  1x3  <- lift_control  invert
+  D  earth_exit   door       at (4,13)  1x3  <- upper_west  latch
+  *  gem_23       gem        at (3,15)  earth
+  X  exit_24      exit       at (2,14)  earth
+  l  air_approval lever      at (31,19)  -> bridge, air_inverse
+  D  air_inverse  door       at (25,17)  1x3  <- air_approval  invert
+  D  air_access   door       at (18,17)  1x3  <- lower_west  latch
+  l  air_cert     lever      at (10,19)  -> ack_access
+  D  air_exit     door       at (5,17)  1x3  <- upper_west  latch
+  *  gem_30       gem        at (3,19)  air
+  X  exit_31      exit       at (2,18)  air
+```

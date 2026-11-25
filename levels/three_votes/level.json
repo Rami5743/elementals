@@ -1,0 +1,330 @@
+{
+  "id": "three_votes",
+  "name": "Three Votes",
+  "order": 332,
+  "description": "The crossing changes decks only with three votes. The middle certification is possible only while two votes are withdrawn, and the crossing must be restored afterward.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "################.......#################",
+    "################.......#################",
+    "################.......#################",
+    "################.......#################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "################.......#################",
+    "################SSSSSSS#################",
+    "#...................#..................#",
+    "#...................#..................#",
+    "#...................#..................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      12,
+      10
+    ],
+    "water": [
+      22,
+      15
+    ],
+    "earth": [
+      12,
+      15
+    ],
+    "air": [
+      32,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "bridge",
+      "type": "elevator",
+      "x": 16,
+      "y": 11,
+      "w": 7,
+      "path": [
+        [
+          16,
+          11
+        ],
+        [
+          16,
+          4
+        ]
+      ],
+      "speed": 0.9,
+      "required": 3
+    },
+    {
+      "id": "west_lower",
+      "type": "door",
+      "x": 9,
+      "y": 8,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "west_upper",
+      "type": "door",
+      "x": 12,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "east_exit",
+      "type": "door",
+      "x": 35,
+      "y": 8,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "control_access",
+      "type": "door",
+      "x": 24,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "ack_access",
+      "type": "door",
+      "x": 8,
+      "y": 13,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "water_exit",
+      "type": "door",
+      "x": 36,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "lower_east",
+      "type": "lever",
+      "x": 30,
+      "y": 10,
+      "targets": [
+        "control_access"
+      ]
+    },
+    {
+      "id": "lift_control",
+      "type": "lever",
+      "x": 26,
+      "y": 15,
+      "targets": [
+        "bridge",
+        "water_inverse"
+      ]
+    },
+    {
+      "id": "upper_east",
+      "type": "lever",
+      "x": 32,
+      "y": 3,
+      "targets": [
+        "west_lower"
+      ]
+    },
+    {
+      "id": "lower_west",
+      "type": "lever",
+      "x": 4,
+      "y": 10,
+      "targets": [
+        "ack_access",
+        "air_access"
+      ]
+    },
+    {
+      "id": "ack",
+      "type": "lever",
+      "x": 6,
+      "y": 15,
+      "targets": [
+        "west_upper"
+      ]
+    },
+    {
+      "id": "upper_west",
+      "type": "lever",
+      "x": 3,
+      "y": 3,
+      "targets": [
+        "east_exit",
+        "water_exit",
+        "earth_exit",
+        "air_exit"
+      ]
+    },
+    {
+      "id": "water_final",
+      "type": "lever",
+      "x": 34,
+      "y": 15,
+      "targets": [
+        "east_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "type": "checkpoint",
+      "x": 12,
+      "y": 9
+    },
+    {
+      "id": "earth_approval",
+      "type": "lever",
+      "x": 15,
+      "y": 15,
+      "targets": [
+        "bridge",
+        "earth_inverse"
+      ]
+    },
+    {
+      "id": "earth_inverse",
+      "type": "door",
+      "x": 10,
+      "y": 13,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "water_inverse",
+      "type": "door",
+      "x": 31,
+      "y": 13,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "earth_exit",
+      "type": "door",
+      "x": 4,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 2,
+      "y": 14
+    },
+    {
+      "id": "air_approval",
+      "type": "lever",
+      "x": 31,
+      "y": 19,
+      "targets": [
+        "bridge",
+        "air_inverse"
+      ]
+    },
+    {
+      "id": "air_inverse",
+      "type": "door",
+      "x": 25,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "air_access",
+      "type": "door",
+      "x": 18,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "air_cert",
+      "type": "lever",
+      "x": 10,
+      "y": 19,
+      "targets": [
+        "ack_access"
+      ]
+    },
+    {
+      "id": "air_exit",
+      "type": "door",
+      "x": 5,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 2,
+      "y": 18
+    }
+  ],
+  "parTicks": 6840,
+  "hints": [
+    "All three votes are needed for the upper deck.",
+    "The middle acknowledgment needs two operators to withdraw their votes.",
+    "Reassemble the quorum for the upper west berth, then release the votes for the return."
+  ]
+}
