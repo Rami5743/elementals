@@ -33,8 +33,6 @@ for (const id of ids) {
   levels.push({ ...level, meta, link: fs.readFileSync(linkFile, 'utf8').trim() });
 }
 
-levels.sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0) || a.id.localeCompare(b.id));
-
 // ---- dates ----------------------------------------------------------------
 // When a level first appeared and when it last changed, read from git. Only the
 // authored files count: replays, play links and packed files are rewritten by
@@ -42,7 +40,7 @@ levels.sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0) || a.id.localeCo
 
 const AUTHORED = new Set(['level.json', 'solution.mjs', 'meta.json', 'NOTES.md']);
 
-/** id -> { created, updated } as ISO days, from one pass over the git log. */
+/** id -> { created, updated } as ISO days, plus `seq`: how many commits back the first one is. */
 function levelDates() {
   const dates = new Map();
   let log;
@@ -52,15 +50,16 @@ function levelDates() {
   } catch {
     return dates;                                    // not a checkout: fall back to mtimes
   }
-  for (const entry of log.split('\u0001').slice(1)) {
+  const entries = log.split('\u0001').slice(1);
+  for (const [i, entry] of entries.entries()) {
     const [stamp, ...paths] = entry.split('\n');
     const day = stamp.slice(0, 10);
     for (const line of paths) {
       const m = /^levels\/([^/]+)\/(.+)$/.exec(line.trim());
       if (!m || !AUTHORED.has(m[2])) continue;
       const d = dates.get(m[1]);
-      if (!d) dates.set(m[1], { created: day, updated: day });
-      else d.created = day;             // the log runs newest first, so the last wins
+      if (!d) dates.set(m[1], { created: day, updated: day, seq: i });
+      else { d.created = day; d.seq = i; }   // the log runs newest first, so the last wins
     }
   }
   return dates;
@@ -86,9 +85,15 @@ const DIRTY = dirtyLevels();
 const TODAY = new Date().toISOString().slice(0, 10);
 for (const l of levels) {
   // A level only in the working tree, or edited since its last commit, is dated today.
-  const git = DATES.get(l.id) ?? { created: TODAY, updated: TODAY };
+  const git = DATES.get(l.id) ?? { created: TODAY, updated: TODAY, seq: -1 };
   l.dates = { created: git.created, updated: DIRTY.has(l.id) ? TODAY : git.updated };
+  l.seq = git.seq;                     // a bigger seq is further back in the history
 }
+
+// The page runs oldest level first within each player count. `order` in meta.json orders the
+// catalogue, not the page: it only breaks a tie between levels that arrived in the same commit.
+levels.sort((a, b) => b.seq - a.seq || (a.meta.order ?? 0) - (b.meta.order ?? 0)
+                      || a.id.localeCompare(b.id));
 
 // ---- thumbnails -----------------------------------------------------------
 // One SVG map per level, drawn straight from its tiles and entities. Runs of

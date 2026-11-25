@@ -25,8 +25,10 @@ Work on `main`.
 - After `kit.mjs check` passes, run `node tools/build.mjs` **and** `node tools/catalog.mjs`, or the
   level is invisible to the page and to the next novelty check.
 - The page dates every level (**Added** / **updated**) from the git history of its `level.json`,
-  `solution.mjs`, `meta.json` and `NOTES.md`, so run `tools/build.mjs` in the same commit as a level
-  change, not one commit later, and never hand-edit `index.html`.
+  `solution.mjs`, `meta.json` and `NOTES.md`, and runs oldest first within each player count, so run
+  `tools/build.mjs` in the same commit as a level change, not one commit later, and never hand-edit
+  `index.html`. `order` in `meta.json` orders the catalogue, and only breaks a tie on the page
+  between levels that arrived in the same commit.
 - After any kit update, run `node tools/physics.mjs` and commit the result: `catalog/PHYSICS.md`
   is measured from the simulation, so a kit change can silently invalidate it.
   `node tools/physics.mjs --check` fails when it no longer matches.

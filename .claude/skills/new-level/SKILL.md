@@ -191,6 +191,9 @@ git add -A && git commit && git push -u origin main
 rebuilds `catalog/LEVELS.md`, `catalog/MAPS.md` and `catalog/levels.json`. Both must be run, or the
 level is invisible to the page and to the next novelty check.
 
+The page runs the levels of each player count oldest first, from the same history, so a new level
+lands at the end of its section whatever `order` says.
+
 Each card on the page carries **Added** and, when they differ, **updated** — the day the level's
 `level.json`, `solution.mjs`, `meta.json` or `NOTES.md` first appeared in the git history and the
 day one of them last changed. `tools/build.mjs` reads both from `git log`, and dates a level that is
