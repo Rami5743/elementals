@@ -3475,6 +3475,40 @@
   }
  },
  {
+  "id": "grate_register",
+  "name": "Grate Register",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7080,
+  "dark": false,
+  "challenge": "mind",
+  "core": "grate-and-press-state-register",
+  "ideas": [
+   "grating-memory-with-erase",
+   "one-way-press",
+   "twist-undo"
+  ],
+  "order": 120,
+  "line": "The hoist writes a physical bit by placing a stone above a one-way grate. Lowering the hoist does not erase it; only a separate closing press can send the stone down through the grate. The high and low contacts therefore have incompatible jobs, and the two operators must deliberately relinquish a permission to exchange them.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "headlong",
   "name": "Headlong",
   "source": "mine",

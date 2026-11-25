@@ -1,0 +1,259 @@
+{
+  "id": "grate_register",
+  "name": "Grate Register",
+  "order": 120,
+  "description": "A lift writes a stone onto a grate, a closing press erases it. Neither can do the other job.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "parTicks": 7080,
+  "tiles": [
+    "########################################",
+    "################...#####################",
+    "################===#####################",
+    "################...#####################",
+    "################...#####################",
+    "################...#####################",
+    "################...#####################",
+    "################...#####################",
+    "################...#####################",
+    "################...#####################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      13
+    ],
+    "water": [
+      36,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "hoist",
+      "type": "elevator",
+      "x": 16,
+      "y": 9,
+      "w": 3,
+      "path": [
+        [
+          16,
+          9
+        ],
+        [
+          16,
+          2
+        ]
+      ],
+      "speed": 1.5
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 17,
+      "y": 8
+    },
+    {
+      "id": "press",
+      "type": "door",
+      "x": 17,
+      "y": 1,
+      "h": 1
+    },
+    {
+      "id": "top",
+      "type": "plate",
+      "x": 17,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "g1_0",
+        "g1_1",
+        "g0_1",
+        "g0_2"
+      ]
+    },
+    {
+      "id": "bottom",
+      "type": "plate",
+      "x": 17,
+      "y": 8,
+      "weight": "heavy",
+      "targets": [
+        "g0_0",
+        "g1_2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 12
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 13
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "id": "lift",
+      "type": "lever",
+      "x": 3,
+      "y": 13,
+      "targets": [
+        "hoist"
+      ]
+    },
+    {
+      "id": "hammer",
+      "type": "lever",
+      "x": 36,
+      "y": 19,
+      "on": true,
+      "targets": [
+        "press"
+      ]
+    },
+    {
+      "id": "g1_0",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "r1_0",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "g0_0"
+      ]
+    },
+    {
+      "id": "g0_0",
+      "type": "door",
+      "x": 9,
+      "y": 11,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "r0_0",
+      "type": "lever",
+      "x": 14,
+      "y": 13,
+      "targets": [
+        "g1_1"
+      ]
+    },
+    {
+      "id": "g1_1",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "r1_1",
+      "type": "lever",
+      "x": 16,
+      "y": 19,
+      "targets": [
+        "g0_1",
+        "inv"
+      ]
+    },
+    {
+      "id": "inv",
+      "type": "door",
+      "x": 18,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "g0_1",
+      "type": "door",
+      "x": 19,
+      "y": 11,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "r0_1",
+      "type": "lever",
+      "x": 23,
+      "y": 13,
+      "targets": [
+        "g1_2"
+      ]
+    },
+    {
+      "id": "g1_2",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "r1_2",
+      "type": "lever",
+      "x": 5,
+      "y": 19,
+      "targets": [
+        "g0_2"
+      ]
+    },
+    {
+      "id": "g0_2",
+      "type": "door",
+      "x": 29,
+      "y": 11,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    }
+  ],
+  "hints": [
+    "Raise the stone while the press is open; lower the lift and the grate keeps the stone.",
+    "To send the stone back down, close the press after the lift is clear.",
+    "The two height contacts record different permissions."
+  ]
+}

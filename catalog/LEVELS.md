@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 61 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 62 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (19)
+## 2 players — this repo (20)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -106,6 +106,10 @@ Totals: 79 campaign levels, 61 in this repo, of which 11 now ship in the campaig
   - idea: Two clocks first form an AND signal, but the exit needs the clocks to disagree: one must expire while the other still runs.
   - ideas: expiry-order-is-key, twist-two-clocks, twist-undo
   - features: ent:button ent:door ent:elevator ent:lever opt:button-timed opt:button:timed opt:elevator:loop opt:invert:door opt:latch opt:required:2
+- **Grate Register** `grate_register` (2p: fire+water) core=`grate-and-press-state-register` challenge=mind par=7080
+  - idea: The hoist writes a physical bit by placing a stone above a one-way grate. Lowering the hoist does not erase it; only a separate closing press can send the stone down through the grate. The high and low contacts therefore have incompatible jobs, and the two operators must deliberately relinquish a permission to exchange them.
+  - ideas: grating-memory-with-erase, one-way-press, twist-undo
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch opt:required:2 tile:one-way
 
 ## 2 players — campaign (34)
 

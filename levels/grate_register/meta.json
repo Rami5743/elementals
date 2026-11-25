@@ -1,0 +1,10 @@
+{
+  "order": 120,
+  "challenge": "mind",
+  "core": "grate-and-press-state-register",
+  "ideas": [
+    "grating-memory-with-erase",
+    "one-way-press",
+    "twist-undo"
+  ]
+}
