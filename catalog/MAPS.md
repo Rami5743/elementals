@@ -1875,6 +1875,68 @@ Entities:
   b  repeat_far   button     at (36,6)  -> carriage  mode timed  duration 1350
 ```
 
+## Attendance (`attendance`) — 3p, core `occupancy-latches-3`
+
+```
+Attendance (attendance) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  #......D.......D.......D.......D......##
+ 4  #......D.......D.......D.......D.....X##
+ 5  #..@...D...p...D.......D...p...D...*.X##
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  ##......D.......D.......D.......D......#
+11  ##X.....D.......D.......D.......D......#
+12  ##X.*...D...p...D...p...D...p...D...@..#
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #......D.......D.......D.......D......##
+18  #......D.......D.......D.......D.....X##
+19  #..@...D...p...D...p...D...p...D...*.X##
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,5)  water (36,12)  earth (3,19)
+Entities:
+  D  g0_0         door       at (7,3)  1x3  <- p0_0, p1_3 (needs 2)  latch
+  D  g0_1         door       at (15,3)  1x3  <- p0_1, p1_2 (needs 2)  latch
+  D  g0_2         door       at (23,3)  1x3  <- p1_3, p2_2
+  D  g0_3         door       at (31,3)  1x3  <- p0_3, p1_1 (needs 2)  latch
+  X  exit_4       exit       at (37,4)  fire
+  *  gem_5        gem        at (35,5)  fire
+  D  g1_0         door       at (32,10)  1x3  <- p0_0, p2_3
+  D  g1_1         door       at (24,10)  1x3  <- p0_3, p2_1  invert
+  D  g1_2         door       at (16,10)  1x3  <- p0_0
+  D  g1_3         door       at (8,10)  1x3  <- p1_0, p2_1 (needs 2)  latch
+  X  exit_10      exit       at (2,11)  water
+  *  gem_11       gem        at (4,12)  water
+  D  g2_0         door       at (7,17)  1x3  <- p0_3
+  D  g2_1         door       at (15,17)  1x3  <- p0_3
+  D  g2_2         door       at (23,17)  1x3  <- p0_0, p1_3
+  D  g2_3         door       at (31,17)  1x3  <- p1_1, p1_3  invert
+  X  exit_16      exit       at (37,18)  earth
+  *  gem_17       gem        at (35,19)  earth
+  p  p0_0         plate      at (3,5)  -> g0_0, g1_0, g1_2, g2_2
+  p  p0_1         plate      at (11,5)  -> g0_1
+  p  p0_3         plate      at (27,5)  -> g0_3, g1_1, g2_0, g2_1
+  p  p1_0         plate      at (36,12)  -> g1_3
+  p  p1_1         plate      at (28,12)  -> g0_3, g2_3
+  p  p1_2         plate      at (20,12)  -> g0_1
+  p  p1_3         plate      at (12,12)  -> g0_0, g0_2, g2_2, g2_3
+  p  p2_1         plate      at (11,19)  -> g1_1, g1_3
+  p  p2_2         plate      at (19,19)  -> g0_2
+  p  p2_3         plate      at (27,19)  -> g1_0
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

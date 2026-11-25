@@ -2753,6 +2753,35 @@
   ]
  },
  {
+  "id": "attendance",
+  "name": "Attendance",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 9600,
+  "dark": false,
+  "challenge": "mind",
+  "core": "occupancy-latches-3",
+  "ideas": [
+   "position-as-volatile-key",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 218,
+  "line": "A group cannot keep all location-dependent keys active; simultaneous occupancy records permanent permission, so the players must decide which earlier rooms to abandon and revisit.",
+  "tokens": [
+   "ent:door",
+   "ent:plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "backshunt",
   "name": "Backshunt",
   "source": "mine",
