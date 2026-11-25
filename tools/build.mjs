@@ -148,6 +148,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elementals Levels</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
 <meta name="description" content="Fan-made co-op levels for Elementals: open a link and the level is in your My Levels.">
 <style>
 :root {
@@ -174,7 +175,9 @@ body {
 }
 .wrap { max-width: 1040px; margin: 0 auto; padding: 48px 16px 80px; }
 header.top { border-bottom: 1px solid var(--line); padding-bottom: 28px; margin-bottom: 36px; }
-h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 10px; letter-spacing: -0.02em; }
+h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 10px; letter-spacing: -0.02em;
+     display: flex; align-items: center; gap: 14px; }
+.mark { width: clamp(34px, 6vw, 46px); height: auto; flex: none; }
 .lede { color: var(--muted); max-width: 62ch; margin: 0 0 18px; }
 .how { max-width: 62ch; margin: 0; padding-left: 20px; color: var(--muted); font-size: 15px; }
 .how li { margin: 4px 0; }
@@ -206,7 +209,7 @@ footer a { color: inherit; }
 <body>
 <div class="wrap">
   <header class="top">
-    <h1>Elementals Levels</h1>
+    <h1><img class="mark" src="icon.svg" alt="" width="46" height="46">Elementals Levels</h1>
     <p class="lede">Co-op puzzle levels for <strong>Elementals</strong>, made with the Level Kit. Every level has been run against the game's own simulation: it is solvable, every gem is reachable within par, and no player is a passenger.</p>
     <ol class="how">
       <li>Open a level's <strong>Play</strong> link. The game loads with the level added to <em>My Levels</em> in that browser.</li>

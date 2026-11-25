@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Dodecahedron">
+  <title>Elementals levels</title>
+  <style>
+    :root { color-scheme: light dark }
+    .face { stroke: var(--edge, #7c2d06); stroke-width: 2.1; stroke-linejoin: round; fill: var(--fill, #c2410c) }
+    @media (prefers-color-scheme: dark) { svg { --fill: #f97316; --edge: #1a1008 } }
+  </style>
+  <polygon class="face" points="41.03,12.97 35.67,5.37 64.33,10.56 87.40,21.37 73.00,22.86" fill-opacity="0.490"/>
+  <polygon class="face" points="35.67,5.37 41.03,12.97 21.27,38.97 3.70,47.44 12.60,26.67" fill-opacity="0.547"/>
+  <polygon class="face" points="73.00,22.86 87.40,21.37 96.30,52.56 87.40,73.33 73.00,54.97" fill-opacity="0.647"/>
+  <polygon class="face" points="3.70,47.44 21.27,38.97 41.03,64.93 35.67,89.44 12.60,78.63" fill-opacity="0.740"/>
+  <polygon class="face" points="41.03,64.93 73.00,54.97 87.40,73.33 64.33,94.63 35.67,89.44" fill-opacity="0.801"/>
+  <polygon class="face" points="41.03,12.97 73.00,22.86 73.00,54.97 41.03,64.93 21.27,38.97" fill-opacity="0.972"/>
+</svg>
