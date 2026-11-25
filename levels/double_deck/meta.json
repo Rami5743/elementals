@@ -1,0 +1,10 @@
+{
+  "order": 132,
+  "challenge": "mind",
+  "core": "two-deck-bridge-alternating-berths",
+  "ideas": [
+    "lift-as-floor",
+    "twist-undo",
+    "twist-order"
+  ]
+}

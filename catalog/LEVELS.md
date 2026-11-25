@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 97 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 98 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (31)
+## 2 players — this repo (32)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -154,6 +154,10 @@ Totals: 79 campaign levels, 97 in this repo, of which 11 now ship in the campaig
   - idea: A heavy rider turns a moving lift into a periodic switch. The runner needs the upper trip contact before the lower one, so the rider cannot get off at the first upper berth.
   - ideas: trip-plate-in-the-shaft, lift-loop, twist-stranding
   - features: ent:door ent:elevator ent:lever ent:plate opt:elevator:loop opt:heavy-plate opt:latch opt:required:1 opt:required:2
+- **Double Deck** `double_deck` (2p: fire+water) core=`two-deck-bridge-alternating-berths` challenge=mind par=6720
+  - idea: The same platform is the only bridge on two decks; each deck has work that the other deck must authorize, so the platform must change decks four times.
+  - ideas: lift-as-floor, twist-undo, twist-order
+  - features: ent:door ent:elevator ent:lever opt:latch opt:required:2 tile:sludge
 
 ## 2 players — campaign (34)
 

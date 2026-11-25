@@ -1,0 +1,213 @@
+{
+  "id": "double_deck",
+  "name": "Double Deck",
+  "order": 132,
+  "description": "The only bridge between the banks is also the lift. Work below before each ascent, and give up the upper bridge to restore the lower road.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "################.......#################",
+    "################.......#################",
+    "################.......#################",
+    "################.......#################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "################.......#################",
+    "################SSSSSSS#################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      12,
+      11
+    ],
+    "water": [
+      12,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "bridge",
+      "type": "elevator",
+      "x": 16,
+      "y": 12,
+      "w": 7,
+      "path": [
+        [
+          16,
+          12
+        ],
+        [
+          16,
+          5
+        ]
+      ],
+      "speed": 1
+    },
+    {
+      "id": "west_lower",
+      "type": "door",
+      "x": 9,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "west_upper",
+      "type": "door",
+      "x": 12,
+      "y": 2,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "east_exit",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "control_access",
+      "type": "door",
+      "x": 16,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "ack_access",
+      "type": "door",
+      "x": 9,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "water_exit",
+      "type": "door",
+      "x": 5,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "lower_east",
+      "type": "lever",
+      "x": 30,
+      "y": 11,
+      "targets": [
+        "control_access"
+      ]
+    },
+    {
+      "id": "lift_control",
+      "type": "lever",
+      "x": 28,
+      "y": 19,
+      "targets": [
+        "bridge"
+      ]
+    },
+    {
+      "id": "upper_east",
+      "type": "lever",
+      "x": 32,
+      "y": 4,
+      "targets": [
+        "west_lower"
+      ]
+    },
+    {
+      "id": "lower_west",
+      "type": "lever",
+      "x": 4,
+      "y": 11,
+      "targets": [
+        "ack_access"
+      ]
+    },
+    {
+      "id": "ack",
+      "type": "lever",
+      "x": 7,
+      "y": 19,
+      "targets": [
+        "west_upper"
+      ]
+    },
+    {
+      "id": "upper_west",
+      "type": "lever",
+      "x": 3,
+      "y": 4,
+      "targets": [
+        "east_exit",
+        "water_exit"
+      ]
+    },
+    {
+      "id": "water_final",
+      "type": "lever",
+      "x": 31,
+      "y": 19,
+      "targets": [
+        "east_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "checkpoint",
+      "x": 12,
+      "y": 10
+    }
+  ],
+  "parTicks": 6720,
+  "hints": [
+    "First cross the lower bridge to obtain the lift operator's access.",
+    "The two upper berths owe different permissions; descend between them.",
+    "The lift is also the only road home. Restore it to the lower floor."
+  ]
+}

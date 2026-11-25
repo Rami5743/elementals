@@ -1642,6 +1642,59 @@ Entities:
   X  exit_15      exit       at (13,2)  earth
 ```
 
+## Double Deck (`double_deck`) — 2p, core `two-deck-bridge-alternating-berths`
+
+```
+Double Deck (double_deck) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #...........D..........................#
+ 3  #...........D..........................#
+ 4  #..l*.......D...................l......#
+ 5  ################.......#################
+ 6  ################.......#################
+ 7  ################.......#################
+ 8  ################.......#################
+ 9  #........D.........................D...#
+10  #........D..!......................D..X#
+11  #...l....D..@.................l....D..X#
+12  ################EEEEEEE#################
+13  ################SSSSSSS#################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #....D...D......D......................#
+18  #.X..D...D......D......................#
+19  #.X*.D.l.D..@...D...........l..l.......#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (12,11)  water (12,19)
+Entities:
+  E  bridge       elevator   at (16,12)  7x1  <- lift_control  speed 1  path (16,12)-(16,5)
+  D  west_lower   door       at (9,9)  1x3  <- upper_east  latch
+  D  west_upper   door       at (12,2)  1x3  <- ack  latch
+  D  east_exit    door       at (35,9)  1x3  <- upper_west, water_final (needs 2)
+  D  control_access door       at (16,17)  1x3  <- lower_east  latch
+  D  ack_access   door       at (9,17)  1x3  <- lower_west  latch
+  D  water_exit   door       at (5,17)  1x3  <- upper_west  latch
+  l  lower_east   lever      at (30,11)  -> control_access
+  l  lift_control lever      at (28,19)  -> bridge
+  l  upper_east   lever      at (32,4)  -> west_lower
+  l  lower_west   lever      at (4,11)  -> ack_access
+  l  ack          lever      at (7,19)  -> west_upper
+  l  upper_west   lever      at (3,4)  -> east_exit, water_exit
+  l  water_final  lever      at (31,19)  -> east_exit
+  *  gem_14       gem        at (4,4)  fire
+  X  exit_15      exit       at (38,10)  fire
+  *  gem_16       gem        at (3,19)  water
+  X  exit_17      exit       at (2,18)  water
+  !  checkpoint_18 checkpoint at (12,10)
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

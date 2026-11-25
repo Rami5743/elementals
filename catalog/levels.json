@@ -3561,6 +3561,36 @@
   ]
  },
  {
+  "id": "double_deck",
+  "name": "Double Deck",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6720,
+  "dark": false,
+  "challenge": "mind",
+  "core": "two-deck-bridge-alternating-berths",
+  "ideas": [
+   "lift-as-floor",
+   "twist-undo",
+   "twist-order"
+  ],
+  "order": 132,
+  "line": "The same platform is the only bridge on two decks; each deck has work that the other deck must authorize, so the platform must change decks four times.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:latch",
+   "opt:required:2",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "draught",
   "name": "Draught",
   "source": "mine",
