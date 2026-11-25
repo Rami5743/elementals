@@ -2698,6 +2698,64 @@ Entities:
   D  cue_gate     door       at (38,11)  1x3  <- cue
 ```
 
+## Causeway Embargo (`causeway_embargo`) — 2p, core `floating-causeway-embargo-certificate`
+
+```
+Causeway Embargo (causeway_embargo) for fire+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  #...D...D..#######......D......D....D..#
+ 7  #...D...D..#######......D......D....D.X#
+ 8  #.l.D.@.D...O...........D...l..D.l*.D.X#
+ 9  #################p######################
+10  #################S######################
+11  #..D...D..D...........D............D...#
+12  #X.D...D..D...........D............D...#
+13  #X.D.l.D..D.@...l.....D.........l..D.*.#
+14  ########################################
+15  ########################################
+16  ########################################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (6,8)  fire (12,13)
+Entities:
+  O  bridge       boulder    at (12,8)
+  p  bridge_contact plate      at (17,9)  -> f_bridge, f_inverse  weight heavy
+  D  e_access     door       at (8,6)  1x3  <- F0
+  D  e_east       door       at (24,6)  1x3  <- Ffar  latch
+  D  e_left       door       at (4,6)  1x3  <- Fwest  latch
+  D  e_final      door       at (36,6)  1x3  <- Eleft, Flast (needs 2)  latch
+  l  Eeast        lever      at (28,8)  -> f_left
+  l  Eleft        lever      at (2,8)  -> e_final, e_second
+  l  Efinal       lever      at (38,8)  -> f_exit
+  l  F0           lever      at (16,13)  -> e_access, f_inverse
+  D  f_bridge     door       at (22,11)  1x3  <- bridge_contact  latch
+  l  Ffar         lever      at (32,13)  -> e_east
+  D  f_late       door       at (35,11)  1x3  <- Esecond  latch
+  l  Flast        lever      at (37,13)  -> e_final
+  D  f_exit       door       at (3,11)  1x3  <- Efinal  latch
+  D  e_second     door       at (31,6)  1x3  <- Eleft  latch
+  l  Esecond      lever      at (33,8)  -> f_late
+  D  f_inverse    door       at (10,11)  1x3  <- bridge_contact, F0 (needs 2)  invert
+  D  f_left       door       at (7,11)  1x3  <- Eeast  latch
+  l  Fwest        lever      at (5,13)  -> e_left
+  *  gem_20       gem        at (34,8)  earth
+  X  exit_21      exit       at (38,7)  earth
+  *  gem_22       gem        at (37,13)  fire
+  X  exit_23      exit       at (1,12)  fire
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

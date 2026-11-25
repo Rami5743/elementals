@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 151 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 152 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (49)
+## 2 players — this repo (50)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -223,6 +223,10 @@ Totals: 79 campaign levels, 151 in this repo, of which 11 now ship in the campai
   - idea: Two independent moving cargo contacts with different physical travel times; the relative launch phase, rather than either clock's absolute expiry, is the key.
   - ideas: spatial-clock-phase-rendezvous, timed-window, quorum, twist-undo
   - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2 opt:required:4
+- **Causeway Embargo** `causeway_embargo` (2p: fire+earth) core=`floating-causeway-embargo-certificate` challenge=mind par=6120
+  - idea: a floating causeway is both the three-crossing physical floor and the persistent veto on the inspector's road. Adapted from the distinct three-player Stone Causeway, as allowed by the player-count-specific novelty rule.
+  - ideas: causeway-as-veto, boulder-float, twist-undo
+  - features: ent:boulder ent:door ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch opt:required:2 tile:sludge
 
 ## 2 players — campaign (34)
 

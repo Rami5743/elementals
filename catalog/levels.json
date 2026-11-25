@@ -3199,6 +3199,39 @@
   ]
  },
  {
+  "id": "causeway_embargo",
+  "name": "Causeway Embargo",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 6120,
+  "dark": false,
+  "challenge": "mind",
+  "core": "floating-causeway-embargo-certificate",
+  "ideas": [
+   "causeway-as-veto",
+   "boulder-float",
+   "twist-undo"
+  ],
+  "order": 150,
+  "line": "a floating causeway is both the three-crossing physical floor and the persistent veto on the inspector's road. Adapted from the distinct three-player Stone Causeway, as allowed by the player-count-specific novelty rule.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "ceiling_committee",
   "name": "Ceiling Committee",
   "source": "mine",
