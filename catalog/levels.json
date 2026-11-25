@@ -2868,6 +2868,39 @@
   }
  },
  {
+  "id": "cascade_quorum",
+  "name": "Cascade Quorum",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7200,
+  "dark": false,
+  "challenge": "mind",
+  "core": "dual-control-cargo-supply-cycle",
+  "ideas": [
+   "cargo-power-cascade",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 326,
+  "line": "Two independent operators share a supply hoist, whose low cargo contact powers the second hoist. The fourth operator owns the reversible half of the supply quorum.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "cascade_relay",
   "name": "Cascade Relay",
   "source": "mine",

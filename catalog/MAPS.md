@@ -4806,3 +4806,82 @@ Entities:
   X  exit_33      exit       at (26,9)  air
   *  gem_34       gem        at (25,10)  air
 ```
+
+## Cascade Quorum (`cascade_quorum`) — 4p, core `dual-control-cargo-supply-cycle`
+
+```
+Cascade Quorum (cascade_quorum) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ######.p..####################.p..######
+ 2  ######....####################....######
+ 3  ######....####################....######
+ 4  ######....####################....######
+ 5  ######....####################....######
+ 6  ######.p..####################.p..######
+ 7  ######.E..####################.E..######
+ 8  ########################################
+ 9  #........D.........D........D......D..X#
+10  #..@.....D....l....D....l...D...l..D.*X#
+11  ########################################
+12  #.......D..........D........D......D..X#
+13  #..@....D.....l....D....l...D...l..D.*X#
+14  ########################################
+15  #.......D..........D........D......D..X#
+16  #..@....D.....l....D....l...D...l..D.*X#
+17  ########################################
+18  #.X..D.....D.......D.........D.........#
+19  #.X*.D..l..D..l....D....l....D.....l.@.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,10)  water (37,19)  earth (3,13)  air (3,16)
+Entities:
+  E  A            elevator   at (7,7)  <- controlA, a_control (needs 2)  speed 0.6  path (7,7)-(7,2)
+  E  B            elevator   at (31,7)  <- a_low, controlB (needs 2)  speed 0.6  path (31,7)-(31,2)
+  O  stoneA       boulder    at (7,6)
+  O  stoneB       boulder    at (31,6)
+  p  a_low        plate      at (7,6)  -> B, w3, e3  weight heavy
+  p  a_high       plate      at (7,1)  -> w1, f2, f4, e4, a2, a4  weight heavy
+  p  b_low        plate      at (31,6)  -> w1, w4  weight heavy
+  p  b_high       plate      at (31,1)  -> f1, w2, f3, e2, a1, a3  weight heavy
+  l  controlA     lever      at (14,10)  -> A
+  l  controlB     lever      at (14,13)  -> B
+  l  w_key1       lever      at (24,19)  -> f2
+  l  f_key2       lever      at (24,10)  -> w2, e2, a2
+  l  w_key2       lever      at (14,19)  -> f3
+  l  f_key3       lever      at (32,10)  -> w3, w4, e3
+  l  w_key3       lever      at (8,19)  -> f4, e4, a4
+  D  f1           door       at (9,9)  1x2  <- b_high  latch
+  D  f2           door       at (19,9)  1x2  <- a_high, w_key1 (needs 2)  latch
+  D  f3           door       at (28,9)  1x2  <- b_high, w_key2 (needs 2)  latch
+  D  f4           door       at (35,9)  1x2  <- a_high, w_key3, e_key2, a_key2 (needs 4)
+  D  w1           door       at (29,18)  1x2  <- a_high, b_low (needs 2)  latch
+  D  w2           door       at (19,18)  1x2  <- b_high, f_key2, e_key1, a_key1 (needs 4)  latch
+  D  w3           door       at (11,18)  1x2  <- a_low, f_key3 (needs 2)  latch
+  D  w4           door       at (5,18)  1x2  <- b_low, f_key3 (needs 2)
+  *  gem_23       gem        at (37,10)  fire
+  X  exit_24      exit       at (38,9)  fire
+  *  gem_25       gem        at (3,19)  water
+  X  exit_26      exit       at (2,18)  water
+  l  w_start      lever      at (35,19)  -> e1, a1
+  D  e1           door       at (8,12)  1x2  <- w_start  latch
+  D  e2           door       at (19,12)  1x2  <- b_high, f_key2 (needs 2)  latch
+  D  e3           door       at (28,12)  1x2  <- a_low, f_key3 (needs 2)  latch
+  D  e4           door       at (35,12)  1x2  <- a_high, w_key3 (needs 2)
+  l  e_key1       lever      at (24,13)  -> w2, a3
+  l  e_key2       lever      at (32,13)  -> f4
+  *  gem_34       gem        at (37,13)  earth
+  X  exit_35      exit       at (38,12)  earth
+  D  a1           door       at (8,15)  1x2  <- b_high, w_start (needs 2)  latch
+  D  a2           door       at (19,15)  1x2  <- a_high, f_key2 (needs 2)  latch
+  D  a3           door       at (28,15)  1x2  <- b_high, e_key1 (needs 2)  latch
+  D  a4           door       at (35,15)  1x2  <- a_high, w_key3 (needs 2)
+  l  a_control    lever      at (14,16)  -> A
+  l  a_key1       lever      at (24,16)  -> w2
+  l  a_key2       lever      at (32,16)  -> f4
+  *  gem_43       gem        at (37,16)  air
+  X  exit_44      exit       at (38,15)  air
+```
