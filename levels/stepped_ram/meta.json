@@ -1,0 +1,10 @@
+{
+  "order": 222,
+  "challenge": "mind",
+  "core": "three-piston-relay-handoff",
+  "ideas": [
+    "two-stage-piston-handoff",
+    "twist-order",
+    "twist-backwards"
+  ]
+}

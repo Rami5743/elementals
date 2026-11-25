@@ -1,0 +1,367 @@
+{
+  "id": "stepped_ram",
+  "name": "Stepped Ram",
+  "order": 222,
+  "description": "Each piston must hand the stone forward to the next retracted piston. Record permissions at intermediate stops, then return the same stone.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 14700,
+  "tiles": [
+    "########################################",
+    "##.....................................#",
+    "##.....................................#",
+    "##.....................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      9
+    ],
+    "water": [
+      36,
+      14
+    ],
+    "earth": [
+      3,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "belt",
+      "type": "belt",
+      "x": 2,
+      "y": 3,
+      "w": 37,
+      "speed": -2
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "ram0",
+      "type": "door",
+      "x": 2,
+      "y": 2,
+      "w": 8,
+      "h": 1
+    },
+    {
+      "id": "ctrl0",
+      "type": "lever",
+      "x": 3,
+      "y": 9,
+      "targets": [
+        "ram0"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 37,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 9
+    },
+    {
+      "id": "ram1",
+      "type": "door",
+      "x": 10,
+      "y": 2,
+      "w": 9,
+      "h": 1
+    },
+    {
+      "id": "ctrl1",
+      "type": "lever",
+      "x": 36,
+      "y": 14,
+      "targets": [
+        "ram1"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 14
+    },
+    {
+      "id": "ram2",
+      "type": "door",
+      "x": 19,
+      "y": 2,
+      "w": 9,
+      "h": 1
+    },
+    {
+      "id": "ctrl2",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "ram2"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 36,
+      "y": 19
+    },
+    {
+      "id": "gate0",
+      "type": "door",
+      "x": 30,
+      "y": 12,
+      "h": 3,
+      "latch": true,
+      "required": 1
+    },
+    {
+      "id": "relay0",
+      "type": "lever",
+      "x": 25,
+      "y": 14,
+      "targets": [
+        "gate1",
+        "return_gate"
+      ]
+    },
+    {
+      "id": "gate1",
+      "type": "door",
+      "x": 9,
+      "y": 17,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "relay1",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "gate2"
+      ]
+    },
+    {
+      "id": "gate2",
+      "type": "door",
+      "x": 9,
+      "y": 7,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "relay2",
+      "type": "lever",
+      "x": 14,
+      "y": 9,
+      "targets": [
+        "gate3"
+      ]
+    },
+    {
+      "id": "gate3",
+      "type": "door",
+      "x": 20,
+      "y": 12,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "relay3",
+      "type": "lever",
+      "x": 16,
+      "y": 14,
+      "targets": [
+        "gate4"
+      ]
+    },
+    {
+      "id": "gate4",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "relay4",
+      "type": "lever",
+      "x": 23,
+      "y": 19,
+      "targets": [
+        "gate5"
+      ]
+    },
+    {
+      "id": "gate5",
+      "type": "door",
+      "x": 19,
+      "y": 7,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "relay5",
+      "type": "lever",
+      "x": 23,
+      "y": 9,
+      "targets": [
+        "gate6"
+      ]
+    },
+    {
+      "id": "gate6",
+      "type": "door",
+      "x": 10,
+      "y": 12,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "relay6",
+      "type": "lever",
+      "x": 5,
+      "y": 14,
+      "targets": [
+        "gate7"
+      ]
+    },
+    {
+      "id": "gate7",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "relay7",
+      "type": "lever",
+      "x": 34,
+      "y": 19,
+      "targets": [
+        "gate8"
+      ]
+    },
+    {
+      "id": "gate8",
+      "type": "door",
+      "x": 29,
+      "y": 7,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "return_gate",
+      "type": "door",
+      "x": 28,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "sensor0",
+      "type": "plate",
+      "x": 2,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "gate0",
+        "gate4",
+        "gate8"
+      ]
+    },
+    {
+      "id": "sensor1",
+      "type": "plate",
+      "x": 10,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "gate1",
+        "gate5"
+      ]
+    },
+    {
+      "id": "sensor2",
+      "type": "plate",
+      "x": 19,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "gate2",
+        "gate6"
+      ]
+    },
+    {
+      "id": "sensor3",
+      "type": "plate",
+      "x": 28,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "gate3",
+        "gate7"
+      ]
+    }
+  ],
+  "hints": [
+    "The belt returns the stone left only when the pistons retract.",
+    "A piston cannot capture the stone from behind its origin; extend them in order.",
+    "The first relay closes its operator’s return gate. Once the next permission latches, release it before returning to the control."
+  ]
+}

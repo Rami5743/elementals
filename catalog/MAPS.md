@@ -2307,6 +2307,76 @@ Entities:
   D  f2           door       at (29,8)  1x3  <- top, wc (needs 2)  latch
 ```
 
+## Stepped Ram (`stepped_ram`) — 3p, core `three-piston-relay-handoff`
+
+```
+Stepped Ram (stepped_ram) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##.....................................#
+ 2  ##pDDDDDDDpDDDDDDDDpDDDDDDDDp..........#
+ 3  ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<#
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  #........D.........D.........D.........#
+ 8  #........D.........D.........D.......X.#
+ 9  #..@.....D....l....D...l.....D......*X.#
+10  ########################################
+11  ########################################
+12  #.........D.........D.......D.D........#
+13  #.X.......D.........D.......D.D........#
+14  #.X*.l....D.....l...D....l..D.D.....@..#
+15  ########################################
+16  ########################################
+17  #........D.........D.........D.........#
+18  #........D.........D.........D.......X.#
+19  #..@.....D....l....D...l.....D....l.*X.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,9)  water (36,14)  earth (3,19)
+Entities:
+  >  belt         belt       at (2,3)  37x1  speed -2
+  O  stone        boulder    at (28,2)
+  D  ram0         door       at (2,2)  8x1  <- ctrl0
+  l  ctrl0        lever      at (3,9)  -> ram0
+  X  exit_4       exit       at (37,8)  fire
+  *  gem_5        gem        at (36,9)  fire
+  D  ram1         door       at (10,2)  9x1  <- ctrl1
+  l  ctrl1        lever      at (36,14)  -> ram1
+  X  exit_8       exit       at (2,13)  water
+  *  gem_9        gem        at (3,14)  water
+  D  ram2         door       at (19,2)  9x1  <- ctrl2
+  l  ctrl2        lever      at (3,19)  -> ram2
+  X  exit_12      exit       at (37,18)  earth
+  *  gem_13       gem        at (36,19)  earth
+  D  gate0        door       at (30,12)  1x3  <- sensor0  latch
+  l  relay0       lever      at (25,14)  -> gate1, return_gate
+  D  gate1        door       at (9,17)  1x3  <- relay0, sensor1 (needs 2)  latch
+  l  relay1       lever      at (14,19)  -> gate2
+  D  gate2        door       at (9,7)  1x3  <- relay1, sensor2 (needs 2)  latch
+  l  relay2       lever      at (14,9)  -> gate3
+  D  gate3        door       at (20,12)  1x3  <- relay2, sensor3 (needs 2)  latch
+  l  relay3       lever      at (16,14)  -> gate4
+  D  gate4        door       at (19,17)  1x3  <- relay3, sensor0 (needs 2)  latch
+  l  relay4       lever      at (23,19)  -> gate5
+  D  gate5        door       at (19,7)  1x3  <- relay4, sensor1 (needs 2)  latch
+  l  relay5       lever      at (23,9)  -> gate6
+  D  gate6        door       at (10,12)  1x3  <- relay5, sensor2 (needs 2)  latch
+  l  relay6       lever      at (5,14)  -> gate7
+  D  gate7        door       at (29,17)  1x3  <- relay6, sensor3 (needs 2)  latch
+  l  relay7       lever      at (34,19)  -> gate8
+  D  gate8        door       at (29,7)  1x3  <- relay7, sensor0 (needs 2)  latch
+  D  return_gate  door       at (28,12)  1x3  <- relay0  invert
+  p  sensor0      plate      at (2,2)  -> gate0, gate4, gate8  weight heavy
+  p  sensor1      plate      at (10,2)  -> gate1, gate5  weight heavy
+  p  sensor2      plate      at (19,2)  -> gate2, gate6  weight heavy
+  p  sensor3      plate      at (28,2)  -> gate3, gate7  weight heavy
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

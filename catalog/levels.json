@@ -4396,6 +4396,42 @@
   ]
  },
  {
+  "id": "stepped_ram",
+  "name": "Stepped Ram",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 14700,
+  "dark": false,
+  "challenge": "mind",
+  "core": "three-piston-relay-handoff",
+  "ideas": [
+   "two-stage-piston-handoff",
+   "twist-order",
+   "twist-backwards"
+  ],
+  "order": 222,
+  "line": "Three adjacent pistons form a sequential handoff of one stone, with four stationary contacts. A piston cannot capture the stone from behind its origin; its predecessor must first deliver it to that boundary. The first live permission also locks its operator out of the return route.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:wide-door"
+  ]
+ },
+ {
   "id": "tandem_ram",
   "name": "Tandem Ram",
   "source": "mine",
