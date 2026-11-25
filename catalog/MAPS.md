@@ -9806,3 +9806,70 @@ Entities:
   *  a_gem        gem        at (10,14)  air
   X  a_home       exit       at (35,13)  air
 ```
+
+## Draught Relay (`draught_relay`) — 4p, core `branch-floor-draught-docking`
+
+```
+Draught Relay (draught_relay) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ###########################^^^^...D....#
+ 2  #.D....D.........D.......##^^^^...D....#
+ 3  #XD....D.........D.......##^^^^...D.l*.#
+ 4  #XD.@..D....b....D....l*.##^^^^#########
+ 5  ###########################^^^^#########
+ 6  #.pp..................ppp##^^^^#########
+ 7  #.E......................##^^^^#########
+ 8  ###########################^^^^#########
+ 9  #.D..D........D..........##^^^^...D....#
+10  #XD..D........D..........##^^^^...D....#
+11  #XD..D...@....D.......l*.##^^^^...D..l.#
+12  ###########################^^^^#########
+13  ###########################^^^^#########
+14  ###########################^^^^#########
+15  ###########################^^^^#########
+16  ###########################^^^^#########
+17  #....D........D..........##^^^^...D....#
+18  #X...D........D..........##^^^^...D...X#
+19  #X.l.D...@....D.......l*.##^^^^.@.D...X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (4,4)  water (9,11)  earth (9,19)  air (32,19)
+Entities:
+  ^  wind         fan        at (27,1)  4x19  <- first, second  strength 0.9
+  D  mid_gate     door       at (34,9)  1x3  <- first, second
+  D  top_gate     door       at (34,1)  1x3  <- second  latch
+  D  air_end      door       at (34,17)  1x3  <- E_last  latch
+  l  mid_cert     lever      at (37,11)  -> F_work, W_select
+  l  top_cert     lever      at (36,3)  -> E_return, F_end, W_end
+  D  F_access     door       at (7,2)  1x3  <- E_cert  latch
+  D  F_work       door       at (17,2)  1x3  <- mid_cert  latch
+  D  F_end        door       at (2,2)  1x3  <- top_cert, E_last (needs 2)  latch
+  l  F_start      lever      at (4,4)  -> W_access
+  b  first        button     at (12,4)  -> wind, mid_gate  mode timed  duration 450
+  l  F_cert       lever      at (22,4)  -> W_select
+  D  W_access     door       at (14,9)  1x3  <- F_start  latch
+  D  W_select     door       at (5,9)  1x3  <- mid_cert, F_cert, far (needs 3)  latch
+  D  W_end        door       at (2,9)  1x3  <- top_cert, E_last (needs 2)  latch
+  l  W_cert       lever      at (22,11)  -> E_access, cargo
+  b  second       button     at (3.5,11)  -> wind, mid_gate, top_gate  mode timed  duration 450
+  D  E_access     door       at (14,17)  1x3  <- W_cert  latch
+  D  E_return     door       at (5,17)  1x3  <- top_cert, home (needs 2)  latch
+  l  E_cert       lever      at (22,19)  -> F_access
+  l  E_last       lever      at (3,19)  -> air_end, F_end, W_end
+  *  fire_gem     gem        at (23,4)  fire
+  X  fire_exit    exit       at (1,3)  fire
+  *  water_gem    gem        at (23,11)  water
+  X  water_exit   exit       at (1,10)  water
+  *  earth_gem    gem        at (23,19)  earth
+  X  earth_exit   exit       at (1,18)  earth
+  *  air_gem      gem        at (37,3)  air
+  X  air_exit     exit       at (38,18)  air
+  E  cargo        elevator   at (2,7)  <- W_cert  speed 0.7  path (2,7)-(23,7)
+  O  weight       boulder    at (2,6)
+  p  home         plate      at (2,6)  2x1  -> E_return  weight heavy
+  p  far          plate      at (22,6)  3x1  -> W_select  weight heavy
+```

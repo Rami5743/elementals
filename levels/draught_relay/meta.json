@@ -1,0 +1,11 @@
+{
+  "order": 352,
+  "challenge": "motor",
+  "core": "branch-floor-draught-docking",
+  "ideas": [
+    "climb-then-steer",
+    "transport-power-excludes-workshop",
+    "timed-window",
+    "twist-undo"
+  ]
+}

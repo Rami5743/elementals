@@ -38,18 +38,18 @@ together. `twist-undo`×32, `quorum`×25, `twist-order`×9, `timed-window`×8, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- stand-aside-is-the-switch + timed-window
-- machine-strands-operator + stand-aside-is-the-switch
-- low-roof-no-jump + quorum
-- boulder-carry + lift-corner-path
-- fan-passenger + unload-the-pan-you-ride
-- liquid-lane + twist-backwards
-- fan-passenger + stand-aside-is-the-switch
-- boulder-carry + torch-bridge
-- lift-corner-path + wide-door
-- machine-strands-operator + rope-keeps-the-jumper
-- quorum + unload-the-pan-you-ride
-- low-roof-no-jump + twist-two-clocks
+- plank-sums-plate-maxes + twist-two-clocks
+- plank-sums-plate-maxes + twist-backwards
+- quorum + trigger-from-above
+- door-pushes-you-through + reversible-switch-maze
+- boulder-carry + lift-as-floor
+- lock-per-element + torch-bridge
+- one-way-press + rope-keeps-the-jumper
+- liquid-lane + quorum
+- liquid-lane + reversible-switch-maze
+- mass-adds-on-the-beam + reversible-switch-maze
+- lift-sorts-by-weight + one-way-press
+- door-pushes-you-through + quorum
 
 ## This repo's 3-player levels
 

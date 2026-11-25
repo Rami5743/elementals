@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 162 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 163 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (53)
@@ -725,7 +725,7 @@ Totals: 79 campaign levels, 162 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (54)
+## 4 players — this repo (55)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -936,6 +936,10 @@ Totals: 79 campaign levels, 162 in this repo, of which 11 now ship in the campai
   - idea: the rope remembers the weight of a jumper until landing, allowing the rider to leave a loaded contact behind in midair. The required draught is temporarily revoked for a separate inspection while the rider waits on the pan.
   - ideas: rope-keeps-the-jumper, twist-undo, quorum, hold-switch
   - features: ent:boulder ent:door ent:fan ent:lever ent:plate ent:pulley opt:fan:lifts-fire-water opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3 opt:seesaw-range
+- **Draught Relay** `draught_relay` (4p: fire+water+earth+air) core=`branch-floor-draught-docking` challenge=motor par=6420
+  - idea: A vertical draught has a middle-floor exit that must be selected while rising, not at the roof; its second launch is unlocked by a cargo arriving at a dock, and the cargo must be recalled to release the final return route.
+  - ideas: climb-then-steer, transport-power-excludes-workshop, timed-window, twist-undo
+  - features: ent:boulder ent:button ent:door ent:elevator ent:fan ent:lever ent:plate opt:button-timed opt:button:timed opt:fan:lifts-air opt:heavy-plate opt:latch opt:required:2 opt:required:3
 
 ## 4 players — campaign (23)
 

@@ -4293,6 +4293,45 @@
   ]
  },
  {
+  "id": "draught_relay",
+  "name": "Draught Relay",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6420,
+  "dark": false,
+  "challenge": "motor",
+  "core": "branch-floor-draught-docking",
+  "ideas": [
+   "climb-then-steer",
+   "transport-power-excludes-workshop",
+   "timed-window",
+   "twist-undo"
+  ],
+  "order": 352,
+  "line": "A vertical draught has a middle-floor exit that must be selected while rising, not at the roof; its second launch is unlocked by a cargo arriving at a dock, and the cargo must be recalled to release the final return route.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:fan:lifts-air",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "drill",
   "name": "Drill",
   "source": "mine",
