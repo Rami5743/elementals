@@ -55,23 +55,24 @@ together. `twist-order`×7, `twist-undo`×7, `quorum`×5, `machine-strands-opera
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `shutter-floor-wall-duality` — A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route.
 - `shuttle-strips-cargo-to-belt` — An overhead shuttle passes under a closed shutter which blocks its cargo, stripping the load onto a lower belt. The belt and loading stop recover the cargo for a subsequent intact delivery; high and low deliveries serve distinct requests.
+- `wind-off-enables-descent` — A running upward fan prevents reaching a side balcony; temporarily disable it, then restore it for return ascent.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hop-beats-belt + twist-order
-- liquid-lane + object-as-permanent-switch
-- stock-before-it-seals + twist-stranding
-- belt-reverse + twist-self-block
-- trip-plate-in-the-shaft + twist-self-block
-- shutter-floor-wall-duality + twist-stranding
-- lift-corner-path + pound-chain
-- lift-corner-path + lock-per-element
-- no-overtaking + twist-self-block
-- glide-passenger + twist-self-block
-- freeze-invert + twist-stranding
-- stand-aside-is-the-switch + twist-self-block
+- freeze-invert + invert-door
+- belt-reverse + timed-window
+- object-as-permanent-switch + turbine-out-of-reach
+- seesaw-balance + timed-window
+- counterweight-you-must-remove + low-roof-no-jump
+- belt-cargo + belt-filter
+- plank-sums-plate-maxes + twist-order
+- counterweight-you-must-remove + freeze-invert
+- crate-step + twist-self-block
+- fan-passenger + two-is-not-heavy
+- lock-per-element + timed-window
+- belt-filter + climb-then-steer
 
 ## This repo's 3-player levels
 

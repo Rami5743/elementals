@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 72 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 73 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (24)
+## 2 players — this repo (25)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -126,6 +126,10 @@ Totals: 79 campaign levels, 72 in this repo, of which 11 now ship in the campaig
   - idea: A low shutter strips a stone from an overhead moving shuttle but does not stop the shuttle itself. A reversible lower belt and a loading stop recover the stripped cargo. The same far destination has two different height contacts, and intentionally unloading the cargo is as important as delivering it.
   - ideas: shuttle-strips-cargo-to-belt, lift-corner-path, twist-backwards
   - features: ent:belt ent:boulder ent:door ent:elevator ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:2
+- **Windfall Switch** `windfall_switch` (2p: fire+water) core=`timed-wind-absence-side-descent` challenge=motor par=6780
+  - idea: temporarily stopping an upward fan in order to descend into a side balcony, rather than using wind to ascend.
+  - ideas: wind-off-enables-descent, climb-then-steer, twist-undo
+  - features: ent:button ent:door ent:fan ent:lever ent:plate opt:button-timed opt:button:timed opt:fan:lifts-fire-water opt:invert:door opt:invert:fan opt:latch opt:required:2
 
 ## 2 players — campaign (34)
 

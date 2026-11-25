@@ -1,0 +1,10 @@
+{
+  "order": 125,
+  "challenge": "motor",
+  "core": "timed-wind-absence-side-descent",
+  "ideas": [
+    "wind-off-enables-descent",
+    "climb-then-steer",
+    "twist-undo"
+  ]
+}

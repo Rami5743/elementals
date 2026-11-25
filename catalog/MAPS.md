@@ -1243,6 +1243,63 @@ Entities:
   D  f2           door       at (29,11)  1x3  <- upper_right, wc (needs 2)  latch
 ```
 
+## Windfall Switch (`windfall_switch`) — 2p, core `timed-wind-absence-side-descent`
+
+```
+Windfall Switch (windfall_switch) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #######.^^^........D........^^^.########
+ 2  #######.^^^........D........^^^.########
+ 3  #######.^^^........D........^^^.########
+ 4  #######.^^^#################^^^.########
+ 5  #######.^^^#################^^^.########
+ 6  #######.^^^#################^^^.########
+ 7  #.D.....^^^#################^^^........#
+ 8  #XD.....^^^#################^^^........#
+ 9  #pD.l...^^^#################^^^....*...#
+10  ########^^^#################^^^#########
+11  #######.^^^#################^^^.########
+12  #.......^^^.................^^^........#
+13  #.......^^^.................^^^........#
+14  #..l@...^^^.................^^^........#
+15  ########################################
+16  ########################################
+17  #.D.......D.......D.D.........D.....D..#
+18  #XD.......D.......D.D.........D.....D..#
+19  #XD..*....D....b..D.D....b....D..l@.Dl.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (4,14)  water (34,19)
+Entities:
+  ^  leftwind     fan        at (8,1)  3x14  <- l_stop  strength 2  invert
+  ^  rightwind    fan        at (28,1)  3x14  <- r_stop  strength 2  invert
+  l  start        lever      at (3,14)  -> w0
+  D  w0           door       at (30,17)  1x3  <- start  latch
+  l  selector     lever      at (33,19)  -> top_gate, w_inv, f_exit
+  D  top_gate     door       at (19,1)  1x3  <- selector
+  b  r_stop       button     at (25,19)  -> rightwind  mode timed  duration 360
+  l  right        lever      at (35,9)  -> w1
+  D  w1           door       at (20,17)  1x3  <- right  latch
+  D  w_inv        door       at (18,17)  1x3  <- selector  invert
+  b  l_stop       button     at (15,19)  -> leftwind  mode timed  duration 360
+  l  left         lever      at (4,9)  -> w2, ack_gate
+  D  w2           door       at (10,17)  1x3  <- left, ack (needs 2)  latch
+  l  finish       lever      at (5,19)  -> f_exit
+  D  f_exit       door       at (2,7)  1x3  <- selector, finish (needs 2)  latch
+  D  w_exit       door       at (2,17)  1x3  <- home_contact  latch
+  X  exit_16      exit       at (1,8)  fire
+  *  gem_17       gem        at (35,9)  fire
+  X  exit_18      exit       at (1,18)  water
+  *  gem_19       gem        at (5,19)  water
+  p  home_contact plate      at (1,9)  -> w_exit
+  D  ack_gate     door       at (36,17)  1x3  <- left  latch
+  l  ack          lever      at (37,19)  -> w2
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

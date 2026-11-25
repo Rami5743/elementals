@@ -5090,6 +5090,42 @@
   ]
  },
  {
+  "id": "windfall_switch",
+  "name": "Windfall Switch",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6780,
+  "dark": false,
+  "challenge": "motor",
+  "core": "timed-wind-absence-side-descent",
+  "ideas": [
+   "wind-off-enables-descent",
+   "climb-then-steer",
+   "twist-undo"
+  ],
+  "order": 125,
+  "line": "temporarily stopping an upward fan in order to descend into a side balcony, rather than using wind to ascend.",
+  "tokens": [
+   "ent:button",
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:fan:lifts-fire-water",
+   "opt:invert:door",
+   "opt:invert:fan",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "windlass",
   "name": "Windlass",
   "source": "mine",

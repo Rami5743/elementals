@@ -167,3 +167,5 @@ Object.assign(IDEAS, { "transport-power-excludes-workshop": {kind:'spine',note:"
 Object.assign(IDEAS, { "shutter-floor-wall-duality": {kind:'spine',note:"A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route."} });
 
 Object.assign(IDEAS, { "shuttle-strips-cargo-to-belt": {kind:'spine',note:"An overhead shuttle passes under a closed shutter which blocks its cargo, stripping the load onto a lower belt. The belt and loading stop recover the cargo for a subsequent intact delivery; high and low deliveries serve distinct requests."} });
+
+Object.assign(IDEAS, { "wind-off-enables-descent": {kind:'spine',note:"A running upward fan prevents reaching a side balcony; temporarily disable it, then restore it for return ascent."} });

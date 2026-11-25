@@ -54,23 +54,24 @@ together. `twist-undo`×7, `quorum`×6, `twist-order`×5, `lock-per-element`×4,
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
 - `shutter-floor-wall-duality` — A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route.
 - `shuttle-strips-cargo-to-belt` — An overhead shuttle passes under a closed shutter which blocks its cargo, stripping the load onto a lower belt. The belt and loading stop recover the cargo for a subsequent intact delivery; high and low deliveries serve distinct requests.
+- `wind-off-enables-descent` — A running upward fan prevents reaching a side balcony; temporarily disable it, then restore it for return ascent.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
+- freeze-bridge + sink-as-a-timer
+- pound-chain + unload-the-pan-you-ride
+- freeze-bridge + lift-press
+- pound-chain + threshold-is-a-switch
+- boulder-float + twist-setup
+- belt-filter + sink-as-a-timer
+- boulder-float + glide-passenger
+- belt-filter + twist-setup
+- lock-per-element + sink-as-a-timer
+- belt-filter + stock-before-it-seals
 - belt-filter + torch-bridge
-- lock-per-element + seesaw-balance
-- lock-per-element + pound-to-move
-- head-stack + one-way-drop
-- freeze-bridge + lift-as-floor
-- freeze-invert + head-stack
-- door-pushes-you-through + lock-per-element
-- freeze-bridge + shuttle-strips-cargo-to-belt
-- lift-press + lock-per-element
-- boulder-float + stock-before-it-seals
-- crate-step + freeze-bridge
-- boulder-carry + liquid-lane
+- dark + turbine-out-of-reach
 
 ## This repo's 4-player levels
 
