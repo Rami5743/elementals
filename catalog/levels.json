@@ -3442,6 +3442,42 @@
   ]
  },
  {
+  "id": "four_stage_ram",
+  "name": "Four-Stage Ram",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 16920,
+  "dark": false,
+  "challenge": "mind",
+  "core": "four-piston-relay-handoff",
+  "ideas": [
+   "two-stage-piston-handoff",
+   "twist-order",
+   "twist-backwards"
+  ],
+  "order": 321,
+  "line": "Four adjacent pistons make a serial mechanical handoff of a single stone. Five stationary contacts serve different requests. The return belt permits resetting the entire register, but a previously issued live permission has to be relinquished to allow a piston operator to return.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:wide-door"
+  ]
+ },
+ {
   "id": "fourfold_interlock",
   "name": "Fourfold Interlock",
   "source": "mine",

@@ -3692,3 +3692,84 @@ Entities:
   X  exit_40      exit       at (2,19)  air
   *  gem_41       gem        at (3,20)  air
 ```
+
+## Four-Stage Ram (`four_stage_ram`) — 4p, core `four-piston-relay-handoff`
+
+```
+Four-Stage Ram (four_stage_ram) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##.....................................#
+ 2  ##pDDDDDDpDDDDDDpDDDDDDpDDDDDDp........#
+ 3  ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<#
+ 4  ########################################
+ 5  #........D.........D.........D.........#
+ 6  #........D.........D.........D.......X.#
+ 7  #..@.....D....l....D...l.....D......*X.#
+ 8  ########################################
+ 9  #.........D.........D.......D.D........#
+10  #.X.......D.........D.......D.D........#
+11  #.X*.l....D.....l...D....l..D.D.....@..#
+12  ########################################
+13  #........D.........D.........D.........#
+14  #........D.........D.........D.......X.#
+15  #..@.....D....l....D...l.....D....l.*X.#
+16  ########################################
+17  #.........D.........D.........D........#
+18  #.X.......D.........D.........D........#
+19  #.X*.l....D.....l...D....l....D.....@..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,7)  water (36,11)  earth (3,15)  air (36,19)
+Entities:
+  >  belt         belt       at (2,3)  37x1  speed -2
+  O  stone        boulder    at (30,2)
+  D  ram0         door       at (2,2)  7x1  <- ctrl0
+  l  ctrl0        lever      at (3,7)  -> ram0
+  X  exit_4       exit       at (37,6)  fire
+  *  gem_5        gem        at (36,7)  fire
+  D  ram1         door       at (9,2)  7x1  <- ctrl1
+  l  ctrl1        lever      at (36,11)  -> ram1
+  X  exit_8       exit       at (2,10)  water
+  *  gem_9        gem        at (3,11)  water
+  D  ram2         door       at (16,2)  7x1  <- ctrl2
+  l  ctrl2        lever      at (3,15)  -> ram2
+  X  exit_12      exit       at (37,14)  earth
+  *  gem_13       gem        at (36,15)  earth
+  D  ram3         door       at (23,2)  7x1  <- ctrl3
+  l  ctrl3        lever      at (36,19)  -> ram3
+  X  exit_16      exit       at (2,18)  air
+  *  gem_17       gem        at (3,19)  air
+  D  gate0        door       at (30,9)  1x3  <- sensor0  latch
+  l  relay0       lever      at (25,11)  -> gate1, return_gate
+  D  gate1        door       at (30,17)  1x3  <- relay0, sensor1 (needs 2)  latch
+  l  relay1       lever      at (25,19)  -> gate2
+  D  gate2        door       at (9,13)  1x3  <- relay1, sensor2 (needs 2)  latch
+  l  relay2       lever      at (14,15)  -> gate3
+  D  gate3        door       at (9,5)  1x3  <- relay2, sensor3 (needs 2)  latch
+  l  relay3       lever      at (14,7)  -> gate4
+  D  gate4        door       at (20,9)  1x3  <- relay3, sensor4 (needs 2)  latch
+  l  relay4       lever      at (16,11)  -> gate5
+  D  gate5        door       at (20,17)  1x3  <- relay4, sensor0 (needs 2)  latch
+  l  relay5       lever      at (16,19)  -> gate6
+  D  gate6        door       at (19,13)  1x3  <- relay5, sensor1 (needs 2)  latch
+  l  relay6       lever      at (23,15)  -> gate7
+  D  gate7        door       at (19,5)  1x3  <- relay6, sensor2 (needs 2)  latch
+  l  relay7       lever      at (23,7)  -> gate8
+  D  gate8        door       at (10,9)  1x3  <- relay7, sensor3 (needs 2)  latch
+  l  relay8       lever      at (5,11)  -> gate9
+  D  gate9        door       at (10,17)  1x3  <- relay8, sensor4 (needs 2)  latch
+  l  relay9       lever      at (5,19)  -> gate10
+  D  gate10       door       at (29,13)  1x3  <- relay9, sensor0 (needs 2)  latch
+  l  relay10      lever      at (34,15)  -> gate11
+  D  gate11       door       at (29,5)  1x3  <- relay10, sensor1 (needs 2)  latch
+  D  return_gate  door       at (28,9)  1x3  <- relay0  invert
+  p  sensor0      plate      at (2,2)  -> gate0, gate5, gate10  weight heavy
+  p  sensor1      plate      at (9,2)  -> gate1, gate6, gate11  weight heavy
+  p  sensor2      plate      at (16,2)  -> gate2, gate7  weight heavy
+  p  sensor3      plate      at (23,2)  -> gate3, gate8  weight heavy
+  p  sensor4      plate      at (30,2)  -> gate4, gate9  weight heavy
+```

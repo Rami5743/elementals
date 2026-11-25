@@ -58,18 +58,18 @@ together. `twist-order`×7, `twist-undo`×7, `quorum`×5, `machine-strands-opera
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- sink-as-a-timer + twist-order
-- invert-door + pound-chain
-- boulder-carry + counterweight-you-must-remove
-- belt-reverse + object-as-permanent-switch
+- mass-adds-on-the-beam + timed-window
 - freeze-invert + lift-corner-path
-- crate-step + twist-order
-- fan-band + twist-two-clocks
-- invert-door + mass-adds-on-the-beam
+- lift-corner-path + mass-adds-on-the-beam
+- lock-per-element + machine-strands-operator
+- object-as-permanent-switch + single-file-stone
+- lift-corner-path + stock-before-it-seals
+- machine-strands-operator + send-one-through
+- belt-filter + hold-switch
+- fan-passenger + single-file-stone
+- counterweight-you-must-remove + plank-sums-plate-maxes
 - fan-passenger + lock-per-element
-- glide-passenger + lift-corner-path
-- lift-sorts-by-weight + twist-order
-- counterweight-you-must-remove + single-file-stone
+- belt-filter + lift-corner-path
 
 ## This repo's 3-player levels
 
