@@ -98,6 +98,9 @@ const air = function* (c) {
   yield* wait(c, 30, IN_JUMP);
   yield* until(c, () => c.me.grounded === 1, 0, 300, 'back on the gallery floor');
 
+  yield* go(c, 29);                                  // in position, a stride short of the turbine
+  c.flag('air_across');
+
   // The gate wants both keys on at the same moment, and only the torch stays on by itself.
   yield* waitFlag(c, 'torch_lit');
   yield* go(c, 31);
@@ -148,17 +151,88 @@ const earthHoldsThePad = function* (c) {
   yield* wait(c, 4000);
 };
 
-/** Fire tries to jump the six-tile hole once the slab has gone. */
+/**
+ * The stone comes off the pad before Fire has lit the torch. Fire, left behind on the near side,
+ * runs at the six-tile hole again and again to get back to the far end. If it ever lands over
+ * there the torch gets lit, Air closes the gate's pair and the level finishes — so `check`
+ * failing this one is the proof that the hole cannot be jumped.
+ */
 const fireJumpsTheHole = function* (c) {
-  yield* waitFlag(c, 'hole');
-  for (let i = 0; i < 12; i++) {
-    yield* go(c, 12, { max: 900 });
-    yield* until(c, () => c.tx >= 15.4 || c.bottom > GALLERY, IN_RIGHT, 300, 'the lip');
+  yield* waitFlag(c, 'earth_out');
+  yield* go(c, 13);                                  // out of the way of Earth's push to the pad
+  yield* waitFlag(c, 'hole');                        // Earth is down; the mouth and crawl are clear
+  for (let attempt = 0; attempt < 4 && c.tx < 23; attempt++) {
+    if (c.bottom >= PEDESTAL) break;                 // fell all the way to the hall: give up
+    if (c.bottom > GALLERY) {                        // in the crawl: climb back out at the mouth
+      yield* creep(c, 16);
+      yield* wait(c, 20, IN_JUMP);
+      yield* until(c, () => c.me.grounded === 1 && c.bottom <= GALLERY, 0, 500, 'the wooden ledge');
+    }
+    yield* go(c, 11, { max: 900 });                  // a long run-up at the lip
+    yield* until(c, () => c.tx >= 15.4 || c.bottom > GALLERY, IN_RIGHT, 400, 'the lip');
     yield* wait(c, 30, IN_RIGHT | IN_JUMP);
-    yield* until(c, () => c.me.grounded === 1, IN_RIGHT, 300, 'a landing');
-    if (c.tx > 23) break;
-    if (c.bottom > GALLERY) return;                  // fell into the crawl: the hole is not jumpable
+    yield* until(c, () => c.me.grounded === 1, IN_RIGHT, 400, 'a landing');
   }
+  if (c.tx > 23 && c.bottom <= GALLERY) {            // it worked: finish the level the normal way
+    yield* go(c, 35);
+    yield* until(c, () => c.ent('torch').s.on === 1, 0, 300, 'the torch to light');
+    c.flag('torch_lit');
+    c.flag('fire_clear');
+    yield* waitFlag(c, 'air_down');
+    yield* go(c, 23);
+    yield* downTheHole(c);
+    yield* intoTheHall(c, 34);
+    c.flag('fire_in');
+    yield* wait(c, 2000);
+    return;
+  }
+  // beaten: get out of the crawl and out of everybody's way, so nothing else is blamed for this
+  if (c.bottom > GALLERY && c.bottom < PEDESTAL) {
+    yield* creep(c, 16);
+    yield* wait(c, 20, IN_JUMP);
+    yield* until(c, () => c.me.grounded === 1 && c.bottom <= GALLERY, 0, 500, 'the wooden ledge');
+  }
+  if (c.bottom <= GALLERY) yield* go(c, 11, { max: 900 });
+  c.flag('fire_clear');
+  yield* wait(c, 3000);
+};
+
+/** Water, in that shortcut only, waits for Fire to stop using the crawl before going down. */
+const waterAfterFire = function* (c) {
+  yield* waitFlag(c, 'fire_clear');
+  try { yield* water(c); } catch { /* stopped at the gate: the torch was never lit */ }
+  yield* wait(c, 2500);
+};
+
+/** Earth takes the stone off the pad as soon as Air is across, without waiting for the torch. */
+const earthImpatient = function* (c) {
+  yield* go(c, 16);
+  yield* drop(c);
+  yield* creep(c, 21);
+  yield* creep(c, 16);
+  yield* wait(c, 20, IN_JUMP);
+  yield* until(c, () => c.me.grounded === 1 && c.bottom <= GALLERY, 0, 500, 'the gallery floor');
+  yield* go(c, 11);
+  c.flag('earth_out');
+  yield* waitFlag(c, 'air_across');
+  yield* until(c, () => c.tx <= 6.35, IN_LEFT, 1500, 'the stone off the pad');
+  yield* go(c, 16);
+  yield* until(c, () => slabGone(c), 0, 900, 'the slab to slide away');
+  yield* drop(c);
+  yield* creep(c, 20);
+  yield* wait(c, 14, IN_JUMP);
+  yield* pound(c);
+  yield* until(c, () => c.ent('panel').s.gone === 1, 0, 400, 'the panel to break');
+  yield* until(c, () => c.bottom >= PEDESTAL && c.me.grounded === 1, 0, 600, 'the pedestal');
+  c.flag('hole');
+  yield* until(c, () => c.bottom >= HALL && c.me.grounded === 1, IN_RIGHT, 400, 'the hall floor');
+  yield* go(c, 23);                                  // as far as the gate, which is still shut
+  c.flag('earth_in');
+  for (let i = 0; i < 3000; i++) {
+    if (c.ent('gate').s.open >= 90) break;
+    yield 0;
+  }
+  try { yield* go(c, 36, { max: 1200 }); } catch { /* the gate never opened */ }
   yield* wait(c, 600);
 };
 
@@ -204,8 +278,8 @@ export const solutions = {
           scripts: { fire: fireTriesAlone, water: idle, earth: earthHoldsThePad, air: airTriesAlone },
         },
         {
-          name: 'Fire jumps the slab hole',
-          scripts: { fire: fireJumpsTheHole, water, earth, air },
+          name: 'Fire jumps the slab hole to reach the torch',
+          scripts: { fire: fireJumpsTheHole, water: waterAfterFire, earth: earthImpatient, air },
         },
       ],
     },

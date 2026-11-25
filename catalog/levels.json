@@ -3568,6 +3568,47 @@
   }
  },
  {
+  "id": "crawlspace",
+  "name": "Crawlspace",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 5400,
+  "dark": false,
+  "challenge": "mind",
+  "core": "roof-must-go-before-the-floor-can",
+  "ideas": [
+   "pound-needs-headroom",
+   "counterweight-you-must-remove",
+   "one-way-drop",
+   "twist-order"
+  ],
+  "order": 344,
+  "line": "a ground pound needs room to get airborne, so a cracked panel in a corridor one tile high cannot be broken at all — the roof has to be taken away first, and the roof is the bridge the rest of the party is standing on.",
+  "tokens": [
+   "ent:boulder",
+   "ent:cracked",
+   "ent:door",
+   "ent:freezepad",
+   "ent:plate",
+   "ent:pool",
+   "ent:torch",
+   "ent:turbine",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:pool-timed",
+   "opt:required:2",
+   "opt:wide-door",
+   "tile:one-way",
+   "tile:water"
+  ]
+ },
+ {
   "id": "crossed_signals",
   "name": "Crossed Signals",
   "source": "mine",

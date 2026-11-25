@@ -22,8 +22,8 @@ floor has the cracked panel, and under that is the lower hall where all four doo
    for good. (Touching the turbine before the torch is lit does nothing — the gate wants both at
    the same moment.)
 5. Air jumps for the gem in the gallery roof, which is three tiles up and so Air's alone.
-6. Earth hops over the boulder, gets on its right and pushes it **left**, off the heavy pad. The
-   slab slides away. The gallery is now cut in two by a six-tile hole: Fire and Water cannot cross
+6. Earth walks back down the gallery to the boulder and pushes it **left**, off the heavy pad —
+   and then has to step off the pad itself, because Earth is heavy too. The slab slides away. The gallery is now cut in two by a six-tile hole: Fire and Water cannot cross
    it any more, and the only way off the far end is to drop in.
 7. Everyone drops into the crawl. It is two tiles high now, so Earth can get airborne: Earth
    pounds the panel and falls through into the lower hall, landing on the pedestal under the hole.

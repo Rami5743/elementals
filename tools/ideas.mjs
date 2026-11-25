@@ -181,3 +181,8 @@ Object.assign(IDEAS, { "convergent-belt-seam": {kind:'spine',note:"Independent r
 Object.assign(IDEAS, { "ratio-reverses-paired-cargo": {kind:'spine',note:"Fixed cargo on both rope pans is unequal in weight. A selectable snatch block reverses which pan is heavier, producing two complementary pairs of stationary sensor permissions with unequal excursions; no rider or balance memory is needed."} });
 
 Object.assign(IDEAS, { "hoist-unloads-comparator": {kind:'spine',note:"Two independent hoists lift loads away from a seesaw, so either imbalance and the loaded centered state give distinct paired contacts; an empty centered plank is not equivalent to a loaded one."} });
+
+// Coined while building Crawlspace (2026-11-25).
+Object.assign(IDEAS, {
+  'pound-needs-headroom': { kind: 'spine', note: "A ground pound is a jump first: measured, Earth standing on a cracked panel with one tile of roof cannot leave the ground at all, so there is never an airborne Down press and the floor is simply unbreakable, while two tiles are enough. A cracked panel in a crawl therefore cannot be opened by the player who owns it, only by whoever can take the ceiling away — and when that ceiling is the floor of the storey above, giving Earth the room to pound means pulling the party's own road out from under them. The barrier is neither the floor nor the roof but the distance between them." },
+});

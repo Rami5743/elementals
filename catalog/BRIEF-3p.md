@@ -38,23 +38,24 @@ together. `twist-undo`×26, `quorum`×22, `twist-order`×8, `timed-window`×5, `
 - `unload-the-pan-you-ride` — A seesaw used as the only route between three storeys, one flush with each of its positions. Only the heavier pan is ever at floor level, so the far pan can never be loaded from below: a weight has to be put on your OWN pan to send theirs up to the storey where it can be loaded at all, and that same weight has to be shed again before your pan will carry you anywhere. You rise by what is taken off, never by what is added. (The campaign's scales — Assay, Counterpoise — sum weights too, but to balance a pan under a floating plate or to hoist cargo past a ledge; here the sum decides which storey each of you can reach, and the beam has no switch and no wiring at all.)
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `pound-needs-headroom` — A ground pound is a jump first: measured, Earth standing on a cracked panel with one tile of roof cannot leave the ground at all, so there is never an airborne Down press and the floor is simply unbreakable, while two tiles are enough. A cracked panel in a crawl therefore cannot be opened by the player who owns it, only by whoever can take the ceiling away — and when that ceiling is the floor of the storey above, giving Earth the room to pound means pulling the party's own road out from under them. The barrier is neither the floor nor the roof but the distance between them.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- invert-door + low-roof-no-jump
-- lift-corner-path + pound-to-move
-- twist-sacrifice + twist-undo
-- boulder-carry + lift-corner-path
-- timed-window + unload-the-pan-you-ride
-- boulder-float + twist-self-block
-- pound-to-move + timed-window
-- mass-adds-on-the-beam + twist-stranding
-- lift-corner-path + trigger-from-above
-- dark + twist-stranding
-- boulder-carry + twist-stranding
-- glide-passenger + twist-order
+- hop-beats-belt + switch-in-mid-flight
+- hop-beats-belt + reversible-switch-maze
+- freeze-bridge + partner-builds-your-landing
+- pound-to-move + twist-two-clocks
+- stand-aside-is-the-switch + twist-two-clocks
+- freeze-bridge + pound-to-move
+- pound-chain + reversible-switch-maze
+- torch-bridge + two-is-not-heavy
+- feed-the-engine-mid-ride + twist-two-clocks
+- freeze-bridge + stand-aside-is-the-switch
+- freeze-bridge + plank-sums-plate-maxes
+- fan-passenger + single-file-stone
 
 ## This repo's 3-player levels
 

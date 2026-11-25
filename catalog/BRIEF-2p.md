@@ -24,23 +24,24 @@ together. `twist-undo`×28, `invert-door`×6, `twist-order`×6, `twist-stranding
 - `tower-presses-a-column` — Switches stacked up a wall that nothing but a tower of players reaches, with the order of the tower forced by what stands at the bottom. (Campaign: Totem.)
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `pound-needs-headroom` — A ground pound is a jump first: measured, Earth standing on a cracked panel with one tile of roof cannot leave the ground at all, so there is never an airborne Down press and the floor is simply unbreakable, while two tiles are enough. A cracked panel in a crawl therefore cannot be opened by the player who owns it, only by whoever can take the ceiling away — and when that ceiling is the floor of the storey above, giving Earth the room to pound means pulling the party's own road out from under them. The barrier is neither the floor nor the roof but the distance between them.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lift-sorts-by-weight + two-stage-piston-handoff
-- door-pushes-you-through + timed-window
-- boulder-float + twist-setup
-- plank-sums-plate-maxes + stock-before-it-seals
-- lift-sorts-by-weight + one-way-press
-- boulder-carry + timed-window
-- one-way-drop + single-file-stone
-- counterweight-you-must-remove + one-way-drop
-- partner-builds-your-landing + plank-sums-plate-maxes
+- one-way-drop + shared-switch-two-gates
+- boulder-float + stock-before-it-seals
 - door-pushes-you-through + one-way-press
-- door-pushes-you-through + partner-builds-your-landing
 - counterweight-you-must-remove + plank-sums-plate-maxes
+- lift-sorts-by-weight + twist-stranding
+- fan-passenger + lock-per-element
+- lift-sorts-by-weight + twist-setup
+- lift-sorts-by-weight + liquid-lane
+- lock-per-element + timed-window
+- object-as-permanent-switch + tower-presses-a-column
+- door-pushes-you-through + twist-sacrifice
+- glide-dismount + lift-sorts-by-weight
 
 ## This repo's 2-player levels
 
