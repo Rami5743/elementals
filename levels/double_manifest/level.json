@@ -1,0 +1,305 @@
+{
+  "id": "double_manifest",
+  "name": "Double Manifest",
+  "order": 334,
+  "description": "A shared clock drives two cargo locks; the second shipment needs two independent approvals that must both be withdrawn to certify delivery.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      19
+    ],
+    "water": [
+      12,
+      6
+    ],
+    "earth": [
+      2,
+      19
+    ],
+    "air": [
+      3,
+      12
+    ]
+  },
+  "entities": [
+    {
+      "id": "in1",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3
+    },
+    {
+      "id": "out1",
+      "type": "door",
+      "x": 16,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "in2",
+      "type": "door",
+      "x": 22,
+      "y": 17,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "id": "out2",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "clock",
+      "type": "button",
+      "x": 5,
+      "y": 6,
+      "mode": "timed",
+      "duration": 420,
+      "targets": [
+        "in1",
+        "out1",
+        "in2",
+        "out2"
+      ]
+    },
+    {
+      "id": "clock_access",
+      "type": "door",
+      "x": 8,
+      "y": 4,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "start",
+      "type": "lever",
+      "x": 6,
+      "y": 19,
+      "targets": [
+        "clock_access"
+      ]
+    },
+    {
+      "id": "stage_access",
+      "type": "door",
+      "x": 20,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "middle",
+      "type": "lever",
+      "x": 20,
+      "y": 19,
+      "targets": [
+        "stage_access",
+        "air_access"
+      ]
+    },
+    {
+      "id": "stage",
+      "type": "lever",
+      "x": 28,
+      "y": 6,
+      "targets": [
+        "in2",
+        "stage_inverse"
+      ]
+    },
+    {
+      "id": "stage_inverse",
+      "type": "door",
+      "x": 33,
+      "y": 4,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 4,
+      "y": 19
+    },
+    {
+      "id": "weigh",
+      "type": "plate",
+      "x": 31,
+      "y": 19,
+      "w": 1,
+      "weight": "heavy",
+      "targets": [
+        "final_access",
+        "final_door",
+        "air_final_access"
+      ]
+    },
+    {
+      "id": "final_access",
+      "type": "door",
+      "x": 35,
+      "y": 4,
+      "h": 3
+    },
+    {
+      "id": "cert",
+      "type": "lever",
+      "x": 37,
+      "y": 6,
+      "targets": [
+        "final_door"
+      ]
+    },
+    {
+      "id": "final_door",
+      "type": "door",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 28,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 19,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 6
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 5
+    },
+    {
+      "id": "air_start",
+      "type": "lever",
+      "x": 4,
+      "y": 12,
+      "targets": [
+        "clock_access"
+      ]
+    },
+    {
+      "id": "air_access",
+      "type": "door",
+      "x": 14,
+      "y": 10,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "air_stage",
+      "type": "lever",
+      "x": 20,
+      "y": 12,
+      "targets": [
+        "in2",
+        "air_inverse"
+      ]
+    },
+    {
+      "id": "air_inverse",
+      "type": "door",
+      "x": 28,
+      "y": 10,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "air_final_access",
+      "type": "door",
+      "x": 32,
+      "y": 10,
+      "h": 3
+    },
+    {
+      "id": "air_cert",
+      "type": "lever",
+      "x": 37,
+      "y": 12,
+      "targets": [
+        "final_door"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 37,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 2,
+      "y": 11
+    }
+  ],
+  "parTicks": 6120,
+  "hints": [
+    "Both the start and the second shipment require permission from the other gallery.",
+    "The same timer swaps the two pairs of entrances and outlets.",
+    "Both selectors must be off to collect the final certificates; leave the stone on the contact."
+  ]
+}

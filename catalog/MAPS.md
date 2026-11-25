@@ -6099,3 +6099,67 @@ Entities:
   *  gem_46       gem        at (27,6)  air
   X  exit_47      exit       at (28,5)  air
 ```
+
+## Double Manifest (`double_manifest`) — 4p, core `dual-manifest-stocked-airlocks`
+
+```
+Double Manifest (double_manifest) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  #.......D...........D............D.D...#
+ 5  #.X.....D...........D............D.D...#
+ 6  #.X..b..D...@.......D.......l....D.D.*.#
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  #.............D.............D...D......#
+11  #.X...........D.............D...D......#
+12  #.X@l.........D.....l.......D...D....*.#
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.......D.......D.....D......D......D..#
+18  #.......D.......D.....D......D......DXX#
+19  #.@.O.@.D.......D..*l.D.....*D.p....DXX#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (6,19)  water (12,6)  earth (2,19)  air (3,12)
+Entities:
+  D  in1          door       at (8,17)  1x3  <- clock
+  D  out1         door       at (16,17)  1x3  <- clock  invert
+  D  in2          door       at (22,17)  1x3  <- clock, stage, air_stage (needs 3)
+  D  out2         door       at (29,17)  1x3  <- clock  invert
+  b  clock        button     at (5,6)  -> in1, out1, in2, out2  mode timed  duration 420
+  D  clock_access door       at (8,4)  1x3  <- start, air_start (needs 2)  latch
+  l  start        lever      at (6,19)  -> clock_access
+  D  stage_access door       at (20,4)  1x3  <- middle  latch
+  l  middle       lever      at (20,19)  -> stage_access, air_access
+  l  stage        lever      at (28,6)  -> in2, stage_inverse
+  D  stage_inverse door       at (33,4)  1x3  <- stage  invert
+  O  stone        boulder    at (4,19)
+  p  weigh        plate      at (31,19)  -> final_access, final_door, air_final_access  weight heavy
+  D  final_access door       at (35,4)  1x3  <- weigh
+  l  cert         lever      at (37,6)  -> final_door
+  D  final_door   door       at (36,17)  1x3  <- weigh, cert, air_cert (needs 3)
+  *  gem_16       gem        at (28,19)  fire
+  X  exit_17      exit       at (38,18)  fire
+  *  gem_18       gem        at (19,19)  earth
+  X  exit_19      exit       at (37,18)  earth
+  *  gem_20       gem        at (37,6)  water
+  X  exit_21      exit       at (2,5)  water
+  l  air_start    lever      at (4,12)  -> clock_access
+  D  air_access   door       at (14,10)  1x3  <- middle  latch
+  l  air_stage    lever      at (20,12)  -> in2, air_inverse
+  D  air_inverse  door       at (28,10)  1x3  <- air_stage  invert
+  D  air_final_access door       at (32,10)  1x3  <- weigh
+  l  air_cert     lever      at (37,12)  -> final_door
+  *  gem_28       gem        at (37,12)  air
+  X  exit_29      exit       at (2,11)  air
+```

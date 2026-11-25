@@ -3665,6 +3665,43 @@
   ]
  },
  {
+  "id": "double_manifest",
+  "name": "Double Manifest",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6120,
+  "dark": false,
+  "challenge": "motor",
+  "core": "dual-manifest-stocked-airlocks",
+  "ideas": [
+   "stock-before-it-seals",
+   "shared-switch-two-gates",
+   "timed-window",
+   "quorum"
+  ],
+  "order": 334,
+  "line": "Two successive cargo locks share one clock, but the second delivery requires two separate manifests that both have to be revoked to register delivery.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "draught",
   "name": "Draught",
   "source": "mine",

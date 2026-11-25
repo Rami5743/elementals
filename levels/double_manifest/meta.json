@@ -1,0 +1,11 @@
+{
+  "order": 334,
+  "challenge": "motor",
+  "core": "dual-manifest-stocked-airlocks",
+  "ideas": [
+    "stock-before-it-seals",
+    "shared-switch-two-gates",
+    "timed-window",
+    "quorum"
+  ]
+}
