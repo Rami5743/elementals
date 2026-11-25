@@ -26,23 +26,24 @@ together. `twist-undo`×31, `quorum`×8, `invert-door`×6, `twist-order`×6, `ma
 - `causeway-as-veto` — A floating boulder is both a reusable physical bridge and an electrical veto that closes another route, forcing the original approach permit to be repeatedly withdrawn and restored without removing the bridge.
 - `drop-reconfigures-circuit` — A cracked floor permanently transfers a cargo from a stationary upper contact to a separate reversible lower conveyor register, so the old permissions must be recorded before the circuit is reconfigured.
 - `moving-veto-silence` — A gate is closed by any of several spatial veto contacts and opens only in the intersection of two cargo objects' contact-free intervals; a third participant crosses during that temporary silence.
+- `fractional-rider-keeper` — Air's half-unit rope weight exactly balances a ballasted pan; Fire's full unit moves it and then leaves to perform a Fire-only task, while Air alone retains the mechanical permission.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- glide-dismount + lift-sorts-by-weight
-- door-pushes-you-through + twist-setup
-- door-pushes-you-through + reversible-switch-maze
-- head-stack + two-is-not-heavy
-- drop-reconfigures-circuit + low-roof-no-jump
-- lock-per-element + stand-aside-is-the-switch
-- lock-per-element + object-as-permanent-switch
-- door-pushes-you-through + twist-sacrifice
-- quorum + tower-presses-a-column
-- belt-cargo + plank-sums-plate-maxes
-- moving-veto-silence + trigger-from-above
-- boulder-float + unload-the-pan-you-ride
+- boulder-float + brake-makes-transit-contact-stable
+- boulder-float + seesaw-balance
+- drop-reconfigures-circuit + twist-self-block
+- causeway-as-veto + freeze-invert
+- partner-builds-your-landing + tower-presses-a-column
+- boulder-float + lift-loop
+- counterweight-you-must-remove + fractional-rider-keeper
+- moving-veto-silence + twist-sacrifice
+- belt-cargo + lock-per-element
+- boulder-float + partner-builds-your-landing
+- lift-sorts-by-weight + twist-self-block
+- boulder-carry + twist-self-block
 
 ## This repo's 2-player levels
 

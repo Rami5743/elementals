@@ -4633,6 +4633,43 @@
   ]
  },
  {
+  "id": "half_weight_keeper",
+  "name": "Half-Weight Keeper",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7920,
+  "dark": false,
+  "challenge": "mind",
+  "core": "half-unit-rider-keeps-torch-permission",
+  "ideas": [
+   "fractional-rider-keeper",
+   "three-load-rope-control",
+   "machine-strands-operator",
+   "twist-undo"
+  ],
+  "order": 347,
+  "line": "Air's fractional rope weight is exactly the missing ballast for a stable pan; Fire's full unit supplies the movement and is needed away from the pan to ignite the remote torch. Two separate uses of this division of mechanical and electrical roles are separated by a necessary full unload.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "ent:torch",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "headlong",
   "name": "Headlong",
   "source": "mine",

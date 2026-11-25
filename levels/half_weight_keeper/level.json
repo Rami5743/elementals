@@ -1,0 +1,315 @@
+{
+  "id": "half_weight_keeper",
+  "name": "Half-Weight Keeper",
+  "order": 347,
+  "description": "Air's half-unit weight balances a ballasted rope while Fire's full unit lowers it. Keep Air aboard while Fire records the two high certificates; unload between them.",
+  "tiles": [
+    "########################################",
+    "#################################..#####",
+    "#...................#############..#####",
+    "#...................#############..#####",
+    "#...................#############..#####",
+    "#####...######......#############..#####",
+    "#####...######......#############..#####",
+    "#####...######......####################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#####...################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      10,
+      4
+    ],
+    "air": [
+      12,
+      4
+    ],
+    "water": [
+      4,
+      15
+    ],
+    "earth": [
+      34,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "type": "pulley",
+      "id": "scale",
+      "x": 14,
+      "y": 5,
+      "w": 6,
+      "to": [
+        33,
+        6,
+        2
+      ],
+      "range": 6,
+      "ratio": 2,
+      "weights": [
+        1,
+        0
+      ],
+      "speed": 1.5
+    },
+    {
+      "type": "boulder",
+      "id": "stone",
+      "x": 33,
+      "y": 5
+    },
+    {
+      "type": "plate",
+      "id": "high",
+      "x": 33,
+      "y": 2,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "first",
+        "second"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "low",
+      "x": 33,
+      "y": 5,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "w2",
+        "e_exit",
+        "f_exit"
+      ]
+    },
+    {
+      "type": "elevator",
+      "id": "recall",
+      "x": 5,
+      "y": 5,
+      "w": 3,
+      "path": [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "mode": "loop",
+      "pause": 300,
+      "speed": 2
+    },
+    {
+      "type": "door",
+      "id": "first",
+      "x": 27,
+      "y": 8,
+      "h": 3
+    },
+    {
+      "type": "torch",
+      "id": "T1",
+      "x": 33,
+      "y": 10,
+      "targets": [
+        "first",
+        "w1"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "second",
+      "x": 34,
+      "y": 8,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "lever",
+      "id": "F2",
+      "x": 35,
+      "y": 10,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_exit",
+      "x": 37,
+      "y": 8,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "a_exit",
+      "x": 3,
+      "y": 2,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "w1",
+      "x": 10,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "W1",
+      "x": 17,
+      "y": 15,
+      "targets": [
+        "e_access"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w2",
+      "x": 24,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "W2",
+      "x": 32,
+      "y": 15,
+      "targets": [
+        "a_exit",
+        "f_exit",
+        "e_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_exit",
+      "x": 36,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "e_access",
+      "x": 28,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "E1",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "second"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "e_exit",
+      "x": 6,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "E2",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "w_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 34,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 1,
+      "y": 18
+    }
+  ],
+  "parTicks": 7920,
+  "hints": [
+    "Air weighs half on the pulley. Alone, it holds the pan still; Fire adds enough to lower it.",
+    "Fire must leave the pan for the torch while Air stays aboard. Later unload Air to lower the stone.",
+    "Use the recall lift to repeat the high state after Earth authorizes the second workshop. Air exits upstairs."
+  ]
+}

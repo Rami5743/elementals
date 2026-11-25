@@ -193,3 +193,5 @@ Object.assign(IDEAS, { "causeway-as-veto": {kind:'spine',note:"A floating boulde
 Object.assign(IDEAS, { "drop-reconfigures-circuit": {kind:'spine',note:"A cracked floor permanently transfers a cargo from a stationary upper contact to a separate reversible lower conveyor register, so the old permissions must be recorded before the circuit is reconfigured."} });
 
 Object.assign(IDEAS, { "moving-veto-silence": {kind:'spine',note:"A gate is closed by any of several spatial veto contacts and opens only in the intersection of two cargo objects' contact-free intervals; a third participant crosses during that temporary silence."} });
+
+Object.assign(IDEAS, { "fractional-rider-keeper": {kind:'spine',note:"Air's half-unit rope weight exactly balances a ballasted pan; Fire's full unit moves it and then leaves to perform a Fire-only task, while Air alone retains the mechanical permission."} });

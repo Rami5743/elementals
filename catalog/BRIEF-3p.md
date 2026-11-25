@@ -34,23 +34,24 @@ together. `twist-undo`×29, `quorum`×25, `twist-order`×8, `timed-window`×7, `
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `three-load-rope-control` — A ballasted pulley has three rider-load regimes: two light riders lower it, one balances it, and no riders reverse it. The middle regime retains the elevated contact while one operator works remotely; unloading transfers the same counterweight to a complementary contact.
+- `fractional-rider-keeper` — Air's half-unit rope weight exactly balances a ballasted pan; Fire's full unit moves it and then leaves to perform a Fire-only task, while Air alone retains the mechanical permission.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + twist-undo
-- hop-beats-belt + object-as-permanent-switch
-- dark + fan-passenger
-- freeze-bridge + partner-builds-your-landing
-- boulder-carry + fan-passenger
-- twist-stranding + unload-the-pan-you-ride
-- lift-corner-path + plank-sums-plate-maxes
-- hoist-unloads-comparator + hop-beats-belt
-- freeze-bridge + liquid-lane
-- grating-memory-with-erase + hop-beats-belt
-- lift-press + three-load-rope-control
-- trigger-from-above + twist-self-block
+- dive-ahead-of-the-runaway + hop-beats-belt
+- reversible-switch-maze + single-file-stone
+- hop-beats-belt + moving-veto-silence
+- hop-beats-belt + reversible-switch-maze
+- mass-adds-on-the-beam + twist-undo
+- hop-beats-belt + seesaw-balance
+- feed-the-engine-mid-ride + head-stack
+- hop-beats-belt + pound-chain
+- liquid-lane + reversible-switch-maze
+- fractional-rider-keeper + quorum
+- feed-the-engine-mid-ride + reversible-switch-maze
+- mass-adds-on-the-beam + reversible-switch-maze
 
 ## This repo's 3-player levels
 

@@ -1,0 +1,12 @@
+import {go,interact,until,waitFlag,wait} from "../../kit.mjs";
+function* gate(c,id){yield* until(c,()=>c.ent(id).s.open>=96,0,15000,id);}
+function* on(c,id){yield* until(c,()=>c.ent(id).s.on===1,0,15000,id);}
+function* floor(c,r){yield* until(c,()=>c.me.grounded&&c.bottom===r*32,0,6000,"floor "+r);}
+function* pull(c,x){yield* go(c,x);yield* interact(c);}
+function* recall(c){yield* go(c,9);yield* until(c,()=>c.ent("recall").s.y===11*32,0,1800,"recall low");yield* go(c,6);yield* floor(c,5);yield* go(c,10);}
+function* fireMode(c,mode){yield* waitFlag(c,"air_on");yield* go(c,18);yield* floor(c,11);yield* go(c,23);if(mode==="rush"){yield* go(c,33);yield* wait(c,6000);return;}yield* gate(c,"first");if(mode==="early"){yield* go(c,30);c.flag("entered");yield* waitFlag(c,"unloaded");}yield* go(c,33);yield* on(c,"T1");c.flag("torch");yield* waitFlag(c,"air2");yield* recall(c);yield* go(c,18);yield* floor(c,11);yield* go(c,23);yield* gate(c,"second");yield* pull(c,35);c.flag("F2");yield* gate(c,"f_exit");yield* go(c,38);}
+function* airMode(c,mode){yield* go(c,15);c.flag("air_on");if(mode==="solo"){yield* go(c,10);yield* wait(c,6000);return;}yield* floor(c,11);if(mode==="early"){yield* waitFlag(c,"entered");yield* go(c,10);yield* on(c,"low");yield* until(c,()=>c.ent("first").s.open===0,0,1000,"closed first");c.flag("unloaded");}yield* waitFlag(c,"torch");if(mode==="stay"){yield* wait(c,6000);return;}yield* go(c,10);yield* on(c,"low");yield* waitFlag(c,"E1");yield* recall(c);yield* go(c,15);c.flag("air2");yield* floor(c,11);yield* waitFlag(c,"F2");yield* go(c,10);yield* recall(c);yield* gate(c,"a_exit");yield* go(c,1);}
+function* water(c){yield* gate(c,"w1");yield* pull(c,17);yield* gate(c,"w2");yield* pull(c,32);yield* gate(c,"w_exit");yield* go(c,38);}
+function* earth(c){yield* gate(c,"e_access");yield* pull(c,24);c.flag("E1");yield* gate(c,"e_exit");yield* pull(c,3);yield* go(c,1);}
+const fire=c=>fireMode(c,"normal"),air=c=>airMode(c,"normal");
+export const solutions={sets:[{elements:["fire","water","earth","air"],scripts:{fire,water,earth,air},shortcuts:[{name:"Fire rushes to the torch without a balancing rider",scripts:{fire:c=>fireMode(c,"rush"),water,earth,air:c=>airMode(c,"solo")}},{name:"never unload the balancing rider",scripts:{fire,water,earth,air:c=>airMode(c,"stay")}}]}]};
