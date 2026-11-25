@@ -19,7 +19,10 @@ through the gate without ever touching down — the one thing that shuts the gat
 
 ## What fails
 
-- `water+earth: solution.mjs has no scripts for this group` — no solution script written yet.
+- `water+earth: the solution scripts failed: water timed out waiting for the pan to reach the bottom
+  at tick 1221 (at 5.00)` — Water rides the draught up and lands on the gallery ledge, but will not
+  walk left from the ledge at x=5 onto the pan at x=3,4. Suspect a lip at the berth: a two-pixel
+  step stops a walk dead.
 
 ## Measured facts this design rests on (probed today, not in PHYSICS.md)
 
@@ -35,7 +38,8 @@ through the gate without ever touching down — the one thing that shuts the gat
 
 ## The next thing to try
 
-Write `solution.mjs` for water+earth. Then probe the two flights: the leap from the pan across the
+Trace where the pan platform actually sits against the ledge (`--trace 20 --ents rope`) and close
+the lip, by dropping the ledge a row or widening the berth. Then probe the two flights: the leap from the pan across the
 void into the draught, and the peel-out through the gate.
 
 ### Why the gallery is stepped
