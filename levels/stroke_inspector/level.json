@@ -1,0 +1,297 @@
+{
+  "id": "stroke_inspector",
+  "name": "Stroke Inspector",
+  "order": 247,
+  "description": "A dispatcher starts the shuttle. Two inspectors use the same contact on opposite strokes, then authorize the dispatcher to leave only after the cargo returns home.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      8,
+      13
+    ],
+    "water": [
+      3,
+      19
+    ],
+    "earth": [
+      2,
+      8
+    ]
+  },
+  "entities": [
+    {
+      "id": "shuttle",
+      "type": "elevator",
+      "x": 3,
+      "y": 4,
+      "w": 1,
+      "path": [
+        [
+          3,
+          4
+        ],
+        [
+          35,
+          4
+        ]
+      ],
+      "speed": 0.8
+    },
+    {
+      "id": "cargo",
+      "type": "boulder",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "id": "home",
+      "type": "plate",
+      "x": 3,
+      "y": 3,
+      "targets": [
+        "earth_home",
+        "fire_west"
+      ],
+      "w": 2,
+      "weight": "heavy"
+    },
+    {
+      "id": "mid",
+      "type": "plate",
+      "x": 16,
+      "y": 3,
+      "targets": [
+        "fire_mid",
+        "water_mid"
+      ],
+      "w": 4,
+      "weight": "heavy"
+    },
+    {
+      "id": "far",
+      "type": "plate",
+      "x": 34,
+      "y": 3,
+      "targets": [
+        "fire_far"
+      ],
+      "w": 3,
+      "weight": "heavy"
+    },
+    {
+      "id": "launch_auth",
+      "type": "door",
+      "x": 4,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "clock",
+      "type": "button",
+      "x": 9,
+      "y": 8,
+      "mode": "timed",
+      "duration": 1360,
+      "targets": [
+        "shuttle",
+        "fire_mid",
+        "water_inverse"
+      ]
+    },
+    {
+      "id": "earth_home",
+      "type": "door",
+      "x": 20,
+      "y": 6,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "earth_cert",
+      "type": "lever",
+      "x": 33,
+      "y": 8,
+      "targets": [
+        "fire_west",
+        "water_exit"
+      ]
+    },
+    {
+      "id": "egem",
+      "type": "gem",
+      "x": 37,
+      "y": 8,
+      "element": "earth"
+    },
+    {
+      "id": "eexit",
+      "type": "exit",
+      "x": 38,
+      "y": 7,
+      "element": "earth"
+    },
+    {
+      "id": "fire_west",
+      "type": "door",
+      "x": 5,
+      "y": 11,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "fire_mid",
+      "type": "door",
+      "x": 12,
+      "y": 11,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "first",
+      "type": "lever",
+      "x": 18,
+      "y": 13,
+      "targets": [
+        "fire_mid"
+      ]
+    },
+    {
+      "id": "fire_far",
+      "type": "door",
+      "x": 24,
+      "y": 11,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "delivery",
+      "type": "lever",
+      "x": 30,
+      "y": 13,
+      "targets": [
+        "fire_mid",
+        "water_access",
+        "water_mid",
+        "earth_home"
+      ]
+    },
+    {
+      "id": "fgem",
+      "type": "gem",
+      "x": 2,
+      "y": 13,
+      "element": "fire"
+    },
+    {
+      "id": "fexit",
+      "type": "exit",
+      "x": 1,
+      "y": 12,
+      "element": "fire"
+    },
+    {
+      "id": "start",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "launch_auth"
+      ]
+    },
+    {
+      "id": "water_access",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "water_inverse",
+      "type": "door",
+      "x": 15,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "water_mid",
+      "type": "door",
+      "x": 25,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "receipt",
+      "type": "lever",
+      "x": 31,
+      "y": 19,
+      "targets": [
+        "earth_home",
+        "fire_west"
+      ]
+    },
+    {
+      "id": "water_exit",
+      "type": "door",
+      "x": 35,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "wgem",
+      "type": "gem",
+      "x": 37,
+      "y": 19,
+      "element": "water"
+    },
+    {
+      "id": "wexit",
+      "type": "exit",
+      "x": 38,
+      "y": 18,
+      "element": "water"
+    }
+  ],
+  "parTicks": 8340,
+  "hints": [
+    "Water authorizes Earth's launch. Fire must cross the middle gate during the powered outward stroke.",
+    "Fire records the far delivery before Water can enter the return gallery. Water's inverse gate only opens after power expires.",
+    "If either crossing is missed, Earth can start a new cycle from the launch station. The final route needs the home contact and both certificates."
+  ]
+}

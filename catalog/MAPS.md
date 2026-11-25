@@ -5372,6 +5372,66 @@ Entities:
   X  eexit        exit       at (38,12)  earth
 ```
 
+## Stroke Inspector (`stroke_inspector`) — 3p, core `independent-dispatcher-two-qualified-stroke-inspections`
+
+```
+Stroke Inspector (stroke_inspector) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #......................................#
+ 3  #..pp...........pppp..............ppp..#
+ 4  #..E...................................#
+ 5  ########################################
+ 6  #...D...............D..................#
+ 7  #...D...............D.................X#
+ 8  #.@.D....b..........D............l...*X#
+ 9  ########################################
+10  ########################################
+11  #....D......D...........D..............#
+12  #X...D......D...........D..............#
+13  #X*..D..@...D.....l.....D.....l........#
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.........D....D.........D.........D...#
+18  #.........D....D.........D.........D..X#
+19  #..@......D....D.........D.....l...D.*X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (8,13)  water (3,19)  earth (2,8)
+Entities:
+  E  shuttle      elevator   at (3,4)  <- clock  speed 0.8  path (3,4)-(35,4)
+  O  cargo        boulder    at (3,3)
+  p  home         plate      at (3,3)  2x1  -> earth_home, fire_west  weight heavy
+  p  mid          plate      at (16,3)  4x1  -> fire_mid, water_mid  weight heavy
+  p  far          plate      at (34,3)  3x1  -> fire_far  weight heavy
+  D  launch_auth  door       at (4,6)  1x3  <- start  latch
+  b  clock        button     at (9,8)  -> shuttle, fire_mid, water_inverse  mode timed  duration 1360
+  D  earth_home   door       at (20,6)  1x3  <- home, delivery, receipt (needs 3)  latch
+  l  earth_cert   lever      at (33,8)  -> fire_west, water_exit
+  *  egem         gem        at (37,8)  earth
+  X  eexit        exit       at (38,7)  earth
+  D  fire_west    door       at (5,11)  1x3  <- home, earth_cert, receipt (needs 3)  latch
+  D  fire_mid     door       at (12,11)  1x3  <- mid, clock, first, delivery (needs 2)
+  l  first        lever      at (18,13)  -> fire_mid
+  D  fire_far     door       at (24,11)  1x3  <- far  latch
+  l  delivery     lever      at (30,13)  -> fire_mid, water_access, water_mid, earth_home
+  *  fgem         gem        at (2,13)  fire
+  X  fexit        exit       at (1,12)  fire
+  l  start        lever      at (3,19)  -> launch_auth
+  D  water_access door       at (10,17)  1x3  <- delivery  latch
+  D  water_inverse door       at (15,17)  1x3  <- clock  invert
+  D  water_mid    door       at (25,17)  1x3  <- mid, delivery (needs 2)
+  l  receipt      lever      at (31,19)  -> earth_home, fire_west
+  D  water_exit   door       at (35,17)  1x3  <- earth_cert  latch
+  *  wgem         gem        at (37,19)  water
+  X  wexit        exit       at (38,18)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

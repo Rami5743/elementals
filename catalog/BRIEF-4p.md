@@ -43,18 +43,18 @@ together. `twist-undo`×24, `quorum`×24, `twist-order`×7, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lift-press + two-is-not-heavy
-- pound-chain + twist-sacrifice
-- belt-filter + door-pushes-you-through
-- pound-chain + unload-the-pan-you-ride
-- boulder-float + fan-passenger
-- door-pushes-you-through + pound-chain
-- low-roof-no-jump + partner-builds-your-landing
-- pound-chain + twist-self-block
-- dark + low-roof-no-jump
-- boulder-float + twist-stranding
-- boulder-float + lift-corner-path
-- pound-chain + tower-presses-a-column
+- reversible-switch-maze + wide-door
+- glide-dismount + twist-undo
+- invert-door + lift-corner-path
+- lift-corner-path + twist-undo
+- counterweight-you-must-remove + invert-door
+- invert-door + stand-aside-is-the-switch
+- timed-window + tower-presses-a-column
+- belt-reverse + counterweight-you-must-remove
+- belt-reverse + fan-passenger
+- cargo-as-clock-contact + mass-adds-on-the-beam
+- reversible-switch-maze + unload-the-pan-you-ride
+- tower-presses-a-column + twist-undo
 
 ## This repo's 4-player levels
 

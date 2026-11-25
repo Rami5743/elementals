@@ -6539,6 +6539,43 @@
   ]
  },
  {
+  "id": "stroke_inspector",
+  "name": "Stroke Inspector",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8340,
+  "dark": false,
+  "challenge": "motor",
+  "core": "independent-dispatcher-two-qualified-stroke-inspections",
+  "ideas": [
+   "direction-qualified-transit-contact",
+   "timed-window",
+   "quorum"
+  ],
+  "order": 247,
+  "line": "",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "tandem_ram",
   "name": "Tandem Ram",
   "source": "mine",

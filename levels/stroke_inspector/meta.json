@@ -1,0 +1,10 @@
+{
+  "order": 247,
+  "challenge": "motor",
+  "core": "independent-dispatcher-two-qualified-stroke-inspections",
+  "ideas": [
+    "direction-qualified-transit-contact",
+    "timed-window",
+    "quorum"
+  ]
+}

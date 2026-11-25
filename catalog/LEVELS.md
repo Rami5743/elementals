@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 138 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 139 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (46)
@@ -355,7 +355,7 @@ Totals: 79 campaign levels, 138 in this repo, of which 11 now ship in the campai
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (47)
+## 3 players — this repo (48)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -543,6 +543,9 @@ Totals: 79 campaign levels, 138 in this repo, of which 11 now ship in the campai
 - **Weight of Two** `weight_of_two` (3p: fire+water+earth) core=`rope-sum-versus-heavy-maximum-and-quorum` challenge=mind par=6060
   - ideas: two-is-not-heavy, quorum
   - features: ent:box ent:door ent:lever ent:plate ent:pulley opt:heavy-plate opt:latch opt:required:2 opt:seesaw-range opt:wide-door
+- **Stroke Inspector** `stroke_inspector` (3p: fire+water+earth) core=`independent-dispatcher-two-qualified-stroke-inspections` challenge=motor par=8340
+  - ideas: direction-qualified-transit-contact, timed-window, quorum
+  - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3
 
 ## 3 players — campaign (30)
 
