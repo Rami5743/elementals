@@ -1,0 +1,13 @@
+import {go,interact,until,waitFlag,wait,IN_RIGHT,IN_LEFT,IN_JUMP} from "../../kit.mjs";
+function* gate(c,id){yield* until(c,()=>c.ent(id).s.open>=96,0,8000,id);}
+function* pull(c,x){yield* go(c,x);yield* interact(c);}
+function* descent(c){yield* go(c,10);yield* until(c,()=>c.me.grounded&&c.bottom===20*32,0,9000,"bottom landing");}
+const fire=function*(c){yield* waitFlag(c,"wind1");yield* descent(c);yield* pull(c,10);c.flag("Fland");yield* go(c,4);yield* until(c,()=>c.me.grounded&&c.bottom===20*32,0,1000,"return lift");c.flag("aboard");yield* until(c,()=>c.me.grounded&&c.bottom===4*32,0,2000,"top landing");yield* go(c,6);c.flag("Ftop");yield* waitFlag(c,"ready2");yield* descent(c);c.flag("Fland2");yield* gate(c,"f_exit");yield* go(c,1);};
+const earth=function*(c){yield* go(c,24);c.flag("Eready");yield* gate(c,"e_pulse");yield* pull(c,29);yield* pull(c,15);yield* gate(c,"e_exit");yield* go(c,38);};
+const water=function*(c){yield* gate(c,"w_access");yield* go(c,21);yield* waitFlag(c,"aboard");yield* interact(c);yield* waitFlag(c,"Ftop");yield* interact(c);yield* pull(c,23);yield* gate(c,"w_phase");yield* go(c,28);yield* waitFlag(c,"wind2");c.flag("ready2");yield* gate(c,"w_pulse");yield* pull(c,33);yield* gate(c,"w_exit");yield* go(c,38);};
+const air=function*(c){yield* waitFlag(c,"Eready");yield* pull(c,15);c.flag("wind1");yield* gate(c,"a_access");yield* pull(c,15);yield* gate(c,"a_inverse");yield* pull(c,24);yield* pull(c,15);c.flag("wind2");yield* waitFlag(c,"Fland2");yield* gate(c,"a_last_access");yield* pull(c,15);yield* gate(c,"a_last");yield* pull(c,34);yield* go(c,38);};
+const lateEarth={fire,water,air,earth:function*(c){yield* go(c,24);c.flag("Eready");yield* waitFlag(c,"Fland");yield* gate(c,"e_pulse");yield* pull(c,29);}};
+const lateWater={fire,earth,air,water:function*(c){yield* gate(c,"w_access");yield* go(c,21);yield* waitFlag(c,"aboard");yield* interact(c);yield* waitFlag(c,"Ftop");yield* interact(c);yield* pull(c,23);yield* gate(c,"w_phase");yield* go(c,28);yield* waitFlag(c,"wind2");c.flag("ready2");yield* waitFlag(c,"Fland2");yield* gate(c,"w_pulse");yield* pull(c,33);}};
+const keepWind={fire,water,earth,air:function*(c){yield* waitFlag(c,"Eready");yield* pull(c,15);c.flag("wind1");yield* gate(c,"a_access");yield* gate(c,"a_inverse");yield* pull(c,24);}};
+const direct={fire:function*(c){yield* go(c,1)},water:function*(c){yield* go(c,38)},earth:function*(c){yield* go(c,38)},air:function*(c){yield* go(c,38)}};
+export const solutions={sets:[{elements:["fire","water","earth","air"],scripts:{fire,water,earth,air},shortcuts:[{name:"walk directly",scripts:direct},{name:"miss first pulse",scripts:lateEarth},{name:"miss second pulse",scripts:lateWater},{name:"keep the fan on",scripts:keepWind}]}]};

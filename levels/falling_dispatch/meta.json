@@ -1,0 +1,10 @@
+{
+  "order": 337,
+  "challenge": "motor",
+  "core": "slow-fall-two-recipient-pulse",
+  "ideas": [
+    "sink-as-a-timer",
+    "switch-in-mid-flight",
+    "twist-undo"
+  ]
+}

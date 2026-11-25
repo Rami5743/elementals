@@ -6761,3 +6761,74 @@ Entities:
   D  west_pad_gate door       at (17,6)  1x3  <- consent  invert
   D  east_pad_gate door       at (20,6)  1x3  <- consent
 ```
+
+## Falling Dispatch (`falling_dispatch`) — 4p, core `slow-fall-two-recipient-pulse`
+
+```
+Falling Dispatch (falling_dispatch) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.......^^^^^#...........D.........D...#
+ 2  #.......^^^^^#...........D.........D..X#
+ 3  #.....@.^^^^^#.@.........D...l.....D.*X#
+ 4  ###...##^^^^^###########################
+ 5  #.#...##^^^^^###########################
+ 6  #.#...##ppppp###########################
+ 7  #.#...##ppppp#.....D.....D...D.....D...#
+ 8  #.#...##ppppp#.....D.....D...D.....D..X#
+ 9  #.#...##ppppp#.@...D.l.l.D...D...l.D.*X#
+10  #.#...##ppppp###########################
+11  #.#...##ppppp###########################
+12  #.#...##ppppp###########################
+13  #.#...##^^^^^#.....D.D......D.D........#
+14  #.#...##^^^^^#.....D.D......D.D.......X#
+15  #.#...##^^^^^#.@...D.D..l...D.D...l..*X#
+16  #.#...##^^^^^###########################
+17  #.D...##^^^^^###########################
+18  #XD...##^^^^^###########################
+19  #XD.......l..###########################
+20  ###EEE##################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (6,3)  earth (15,3)  water (15,9)  air (15,15)
+Entities:
+  ^  shaft        fan        at (8,1)  5x18  <- wind  strength 1.565
+  p  pulse        plate      at (8,6)  5x1  -> e_pulse, w_pulse
+  E  return_lift  elevator   at (3,20)  3x1  <- lift_control  speed 2  path (3,20)-(3,4)
+  l  wind         lever      at (15,15)  -> shaft, a_inverse, a_last
+  D  e_pulse      door       at (25,1)  1x3  <- pulse, E1, pulse7, pulse8, pulse9, pulse10, pulse11, pulse12
+  l  E1           lever      at (29,3)  -> e_pulse
+  D  e_exit       door       at (35,1)  1x3  <- Wcert, Ahome (needs 2)  latch
+  *  gem_7        gem        at (37,3)  earth
+  X  exit_8       exit       at (38,2)  earth
+  D  w_access     door       at (19,7)  1x3  <- F1  latch
+  l  lift_control lever      at (21,9)  -> return_lift
+  l  Wmode        lever      at (23,9)  -> w_phase
+  D  w_pulse      door       at (29,7)  1x3  <- pulse, pulse7, pulse8, pulse9, pulse10, pulse11, pulse12
+  l  Wcert        lever      at (33,9)  -> a_last_access, e_exit, f_exit
+  D  w_exit       door       at (35,7)  1x3  <- Ahome  latch
+  *  gem_15       gem        at (37,9)  water
+  X  exit_16      exit       at (38,8)  water
+  D  a_access     door       at (19,13)  1x3  <- F1, Eback (needs 2)  latch
+  D  a_inverse    door       at (21,13)  1x3  <- wind  invert
+  l  A2           lever      at (24,15)  -> w_phase
+  D  a_last_access door       at (28,13)  1x3  <- Wcert  latch
+  D  a_last       door       at (30,13)  1x3  <- wind  invert
+  l  Ahome        lever      at (34,15)  -> e_exit, f_exit, w_exit
+  *  gem_23       gem        at (37,15)  air
+  X  exit_24      exit       at (38,14)  air
+  l  F1           lever      at (10,19)  -> w_access, a_access
+  D  f_exit       door       at (2,17)  1x3  <- Wcert, Ahome (needs 2)  latch
+  *  gem_27       gem        at (1,19)  fire
+  X  exit_28      exit       at (1,18)  fire
+  p  pulse7       plate      at (8,7)  5x1  -> e_pulse, w_pulse
+  p  pulse8       plate      at (8,8)  5x1  -> e_pulse, w_pulse
+  p  pulse9       plate      at (8,9)  5x1  -> e_pulse, w_pulse
+  p  pulse10      plate      at (8,10)  5x1  -> e_pulse, w_pulse
+  p  pulse11      plate      at (8,11)  5x1  -> e_pulse, w_pulse
+  p  pulse12      plate      at (8,12)  5x1  -> e_pulse, w_pulse
+  l  Eback        lever      at (15,3)  -> a_access, w_phase
+  D  w_phase      door       at (25,7)  1x3  <- Wmode, A2, Eback (needs 3)  latch
+```

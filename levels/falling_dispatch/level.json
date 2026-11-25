@@ -1,0 +1,402 @@
+{
+  "id": "falling_dispatch",
+  "name": "Falling Dispatch",
+  "order": 337,
+  "description": "A slow descent is a temporary contact. Send two different recipients through the same pulse, reversing the draught authorization between deliveries.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#............#.........................#",
+    "#............#.........................#",
+    "#............#.........................#",
+    "###...##.....###########################",
+    "#.#...##.....###########################",
+    "#.#...##.....###########################",
+    "#.#...##.....#.........................#",
+    "#.#...##.....#.........................#",
+    "#.#...##.....#.........................#",
+    "#.#...##.....###########################",
+    "#.#...##.....###########################",
+    "#.#...##.....###########################",
+    "#.#...##.....#.........................#",
+    "#.#...##.....#.........................#",
+    "#.#...##.....#.........................#",
+    "#.#...##.....###########################",
+    "#.....##.....###########################",
+    "#.....##.....###########################",
+    "#............###########################",
+    "###...##################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      3
+    ],
+    "earth": [
+      15,
+      3
+    ],
+    "water": [
+      15,
+      9
+    ],
+    "air": [
+      15,
+      15
+    ]
+  },
+  "parTicks": 6300,
+  "entities": [
+    {
+      "id": "shaft",
+      "type": "fan",
+      "x": 8,
+      "y": 1,
+      "w": 5,
+      "h": 18,
+      "strength": 1.565
+    },
+    {
+      "id": "pulse",
+      "type": "plate",
+      "x": 8,
+      "y": 6,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "return_lift",
+      "type": "elevator",
+      "x": 3,
+      "y": 20,
+      "w": 3,
+      "path": [
+        [
+          3,
+          20
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "speed": 2
+    },
+    {
+      "id": "wind",
+      "type": "lever",
+      "x": 15,
+      "y": 15,
+      "targets": [
+        "shaft",
+        "a_inverse",
+        "a_last"
+      ]
+    },
+    {
+      "id": "e_pulse",
+      "type": "door",
+      "x": 25,
+      "y": 1,
+      "h": 3,
+      "required": 1
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 29,
+      "y": 3,
+      "targets": [
+        "e_pulse"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 35,
+      "y": 1,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 2
+    },
+    {
+      "id": "w_access",
+      "type": "door",
+      "x": 19,
+      "y": 7,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "lift_control",
+      "type": "lever",
+      "x": 21,
+      "y": 9,
+      "targets": [
+        "return_lift"
+      ]
+    },
+    {
+      "id": "Wmode",
+      "type": "lever",
+      "x": 23,
+      "y": 9,
+      "targets": [
+        "w_phase"
+      ]
+    },
+    {
+      "id": "w_pulse",
+      "type": "door",
+      "x": 29,
+      "y": 7,
+      "h": 3,
+      "required": 1
+    },
+    {
+      "id": "Wcert",
+      "type": "lever",
+      "x": 33,
+      "y": 9,
+      "targets": [
+        "a_last_access",
+        "e_exit",
+        "f_exit"
+      ]
+    },
+    {
+      "id": "w_exit",
+      "type": "door",
+      "x": 35,
+      "y": 7,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 8
+    },
+    {
+      "id": "a_access",
+      "type": "door",
+      "x": 19,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a_inverse",
+      "type": "door",
+      "x": 21,
+      "y": 13,
+      "h": 3,
+      "required": 1,
+      "invert": true
+    },
+    {
+      "id": "A2",
+      "type": "lever",
+      "x": 24,
+      "y": 15,
+      "targets": [
+        "w_phase"
+      ]
+    },
+    {
+      "id": "a_last_access",
+      "type": "door",
+      "x": 28,
+      "y": 13,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "a_last",
+      "type": "door",
+      "x": 30,
+      "y": 13,
+      "h": 3,
+      "required": 1,
+      "invert": true
+    },
+    {
+      "id": "Ahome",
+      "type": "lever",
+      "x": 34,
+      "y": 15,
+      "targets": [
+        "e_exit",
+        "f_exit",
+        "w_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 37,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 10,
+      "y": 19,
+      "targets": [
+        "w_access",
+        "a_access"
+      ]
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 1,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 18
+    },
+    {
+      "id": "pulse7",
+      "type": "plate",
+      "x": 8,
+      "y": 7,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse8",
+      "type": "plate",
+      "x": 8,
+      "y": 8,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse9",
+      "type": "plate",
+      "x": 8,
+      "y": 9,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse10",
+      "type": "plate",
+      "x": 8,
+      "y": 10,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse11",
+      "type": "plate",
+      "x": 8,
+      "y": 11,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "pulse12",
+      "type": "plate",
+      "x": 8,
+      "y": 12,
+      "w": 5,
+      "targets": [
+        "e_pulse",
+        "w_pulse"
+      ]
+    },
+    {
+      "id": "Eback",
+      "type": "lever",
+      "x": 15,
+      "y": 3,
+      "targets": [
+        "a_access",
+        "w_phase"
+      ]
+    },
+    {
+      "id": "w_phase",
+      "type": "door",
+      "x": 25,
+      "y": 7,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    }
+  ],
+  "hints": [
+    "Air powers the near-neutral fan; Fire falls slowly through the floating plate while Earth crosses.",
+    "The first certificate and Fire's landing open the return-lift control. Air withdraws power to issue the second permission, then restores it.",
+    "Fire descends again to dispatch Water; Air finally switches the fan off and records the final certificate."
+  ]
+}

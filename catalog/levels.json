@@ -3911,6 +3911,41 @@
   ]
  },
  {
+  "id": "falling_dispatch",
+  "name": "Falling Dispatch",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6300,
+  "dark": false,
+  "challenge": "motor",
+  "core": "slow-fall-two-recipient-pulse",
+  "ideas": [
+   "sink-as-a-timer",
+   "switch-in-mid-flight",
+   "twist-undo"
+  ],
+  "order": 337,
+  "line": "",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:fan:hang-time",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "finale",
   "name": "Finale",
   "source": "mine",
