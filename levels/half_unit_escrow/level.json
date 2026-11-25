@@ -1,0 +1,219 @@
+{
+  "id": "half_unit_escrow",
+  "name": "Half-Unit Escrow",
+  "order": 153,
+  "description": "A half-unit rider preserves the high state while the full-unit rider leaves. Unload the rope to light the low certificate, then repeat the high state to release both exits.",
+  "tiles": [
+    "########################################",
+    "#################################..#####",
+    "#...................#############..#####",
+    "#...................#############..#####",
+    "#...................#############..#####",
+    "#####...######......#############..#####",
+    "#####...######......#############..#####",
+    "#####...######......####################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#####...################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "supports": [
+    [
+      "fire",
+      "air"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      10,
+      4
+    ],
+    "air": [
+      12,
+      4
+    ]
+  },
+  "entities": [
+    {
+      "type": "pulley",
+      "id": "scale",
+      "x": 14,
+      "y": 5,
+      "w": 6,
+      "to": [
+        33,
+        6,
+        2
+      ],
+      "range": 6,
+      "ratio": 2,
+      "weights": [
+        1,
+        0
+      ],
+      "speed": 1.5
+    },
+    {
+      "type": "boulder",
+      "id": "stone",
+      "x": 33,
+      "y": 5
+    },
+    {
+      "type": "plate",
+      "id": "high",
+      "x": 33,
+      "y": 2,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "first",
+        "second"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "low",
+      "x": 33,
+      "y": 5,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "low_gate",
+        "f_exit",
+        "a_exit"
+      ]
+    },
+    {
+      "type": "elevator",
+      "id": "recall",
+      "x": 5,
+      "y": 5,
+      "w": 3,
+      "path": [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "mode": "loop",
+      "pause": 300,
+      "speed": 2
+    },
+    {
+      "type": "door",
+      "id": "first",
+      "x": 27,
+      "y": 8,
+      "h": 3
+    },
+    {
+      "type": "torch",
+      "id": "T1",
+      "x": 33,
+      "y": 10,
+      "targets": [
+        "first",
+        "low_gate"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "second",
+      "x": 34,
+      "y": 8,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "lever",
+      "id": "F2",
+      "x": 35,
+      "y": 10,
+      "targets": [
+        "f_exit",
+        "a_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_exit",
+      "x": 37,
+      "y": 8,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "a_exit",
+      "x": 3,
+      "y": 2,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "type": "door",
+      "id": "low_gate",
+      "x": 3,
+      "y": 8,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "torch",
+      "id": "Tlow",
+      "x": 1,
+      "y": 10,
+      "targets": [
+        "second"
+      ]
+    }
+  ],
+  "parTicks": 7560,
+  "hints": [
+    "Air weighs one half on a rope, so Air alone balances this ballasted pan.",
+    "Fire must leave the pan to light the first torch; Air must remain on it. Then both unload so the low torch is accessible.",
+    "Restore the high position for the second workshop, then unload again to release the exits."
+  ]
+}

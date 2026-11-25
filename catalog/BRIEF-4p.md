@@ -37,18 +37,18 @@ together. `twist-undo`×32, `quorum`×30, `twist-order`×8, `timed-window`×7, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- machine-strands-operator + unload-the-pan-you-ride
-- lock-per-element + single-file-stone
-- dark + freeze-bridge
-- glide-passenger + head-stack
-- freeze-bridge + liquid-lane
-- freeze-bridge + twist-stranding
-- freeze-bridge + twist-self-block
-- dark + low-roof-no-jump
-- head-stack + wide-door
-- boulder-carry + stone-held-from-below
-- door-pushes-you-through + reversible-switch-maze
-- boulder-float + unload-the-pan-you-ride
+- reversible-switch-maze + twist-self-block
+- liquid-lane + twist-order
+- cargo-as-clock-contact + twist-self-block
+- boulder-carry + glide-dismount
+- pound-chain + tower-presses-a-column
+- machine-strands-operator + stand-aside-is-the-switch
+- fan-band + mass-adds-on-the-beam
+- fan-passenger + head-stack
+- liquid-lane + send-one-through
+- mass-adds-on-the-beam + pound-chain
+- freeze-bridge + unload-the-pan-you-ride
+- send-one-through + twist-self-block
 
 ## This repo's 4-player levels
 

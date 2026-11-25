@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 163 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 164 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (53)
+## 2 players — this repo (54)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -239,6 +239,10 @@ Totals: 79 campaign levels, 163 in this repo, of which 11 now ship in the campai
   - idea: the crossing is controlled by the absence of every moving veto, not a positive rendezvous; the dispatcher must phase two cargo clocks and then use their far contacts and home contacts in different phases.
   - ideas: moving-veto-silence, spatial-clock-phase-rendezvous, timed-window, invert-door
   - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:3
+- **Half-Unit Escrow** `half_unit_escrow` (2p: fire+air) core=`half-unit-escrow-repeated-ignition` challenge=mind par=7560
+  - idea: A half-unit rider holds a ballasted pulley in its high-contact state after a full-unit rider leaves; the full-unit rider must ignite high, low and high-again certificates, in that order.
+  - ideas: fractional-rider-keeper, twist-undo, machine-strands-operator
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:pulley ent:torch opt:elevator:loop opt:heavy-plate opt:latch opt:required:2 opt:seesaw-range
 
 ## 2 players — campaign (34)
 

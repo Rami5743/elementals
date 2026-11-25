@@ -2923,6 +2923,57 @@ Entities:
   b  F_fast       button     at (14,11)  -> fast  mode timed  duration 850
 ```
 
+## Half-Unit Escrow (`half_unit_escrow`) — 2p, core `half-unit-escrow-repeated-ignition`
+
+```
+Half-Unit Escrow (half_unit_escrow) for fire+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #################################..#####
+ 2  #..D................#############pp#####
+ 3  #X.D................#############..#####
+ 4  #X*D......@.@.......#############..#####
+ 5  #####EEE######uuuuuu#############pp#####
+ 6  #####...######......#############uu#####
+ 7  #####...######......####################
+ 8  #..D.......................D......D..D.#
+ 9  #..D.......................D......D..DX#
+10  #t.D.......................D.....tDl*DX#
+11  #####...################################
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (10,4)  air (12,4)
+Entities:
+  u  scale        pulley     at (14,5)  6x1  speed 1.5  range 6  ratio 2  second platform at (33,6)  platforms weigh 1 and 0
+  O  stone        boulder    at (33,5)
+  p  high         plate      at (33,2)  2x1  -> first, second  weight heavy
+  p  low          plate      at (33,5)  2x1  -> low_gate, f_exit, a_exit  weight heavy
+  E  recall       elevator   at (5,5)  3x1  mode loop  speed 2  pause 300  path (5,5)-(5,11)
+  D  first        door       at (27,8)  1x3  <- high, T1
+  t  T1           torch      at (33,10)  -> first, low_gate
+  D  second       door       at (34,8)  1x3  <- high, Tlow (needs 2)
+  l  F2           lever      at (35,10)  -> f_exit, a_exit
+  D  f_exit       door       at (37,8)  1x3  <- low, F2 (needs 2)  latch
+  D  a_exit       door       at (3,2)  1x3  <- low, F2 (needs 2)  latch
+  *  gem_11       gem        at (36,10)  fire
+  X  exit_12      exit       at (38,9)  fire
+  *  gem_13       gem        at (2,4)  air
+  X  exit_14      exit       at (1,3)  air
+  D  low_gate     door       at (3,8)  1x3  <- low, T1 (needs 2)  latch
+  t  Tlow         torch      at (1,10)  -> second
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

@@ -5001,6 +5001,42 @@
   ]
  },
  {
+  "id": "half_unit_escrow",
+  "name": "Half-Unit Escrow",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+air"
+  ],
+  "parTicks": 7560,
+  "dark": false,
+  "challenge": "mind",
+  "core": "half-unit-escrow-repeated-ignition",
+  "ideas": [
+   "fractional-rider-keeper",
+   "twist-undo",
+   "machine-strands-operator"
+  ],
+  "order": 153,
+  "line": "A half-unit rider holds a ballasted pulley in its high-contact state after a full-unit rider leaves; the full-unit rider must ignite high, low and high-again certificates, in that order.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "ent:torch",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "half_weight_keeper",
   "name": "Half-Weight Keeper",
   "source": "mine",
