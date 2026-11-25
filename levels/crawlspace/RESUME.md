@@ -25,19 +25,24 @@ moment — have to be won before the stone comes off the pad.
 
 ## What passes
 
-- `node kit.mjs check crawlspace`: `level.json is valid`, `every spawn point is safe`.
+- `node kit.mjs check crawlspace`: **no problems**. Solved in 30.0 s (par 90.0 s), 4/4 gems, no
+  deaths; all four co-op idle tests pass; three shortcuts blocked.
+- Shortcut `Earth pounds under the closed slab` fails for exactly the right reason:
+  `earth@(20.1,14.1)` — standing on the panel in the one-tile crawl, unable to break it.
+- Shortcut `Earth holds the pad for the others` fails with `earth@(6.1,12.1)` — on the pad.
 
 ## What fails
 
-- `✗ no solution.mjs: every supported group needs a solution script` — expected, not written yet.
+- Shortcut `Fire jumps the slab hole` currently fails for the WRONG reason: it deadlocks, because
+  that variant of Fire never sets `torch_lit`, so Air never sets `keys` and Earth never moves the
+  stone (`fire@(9.2,12.1)` — Fire never even got to the lip). Being rewritten as "the stone comes
+  off the pad before the torch is lit, and Fire tries to jump back to the far end", with Air
+  flagging `air_across` so only Fire's mistake is under test.
 
 ## Next thing to try
 
-Write `solution.mjs` for `fire+water+earth+air`. Running order: Earth recces the crawl for its gem
-(and cannot pound); Fire/Water/Air cross the slab; Fire lights the torch, Air touches the turbine
-(torch first — the gate wants both at once), Air takes the roof gem at (26,8); Earth pushes the
-stone left off the pad at tile 6; Earth drops through the ledge at 16, crawls to 20, pounds; the
-others walk left off the lip at tile 23 and fall into the crawl, then drop through the panel; Water
-takes its gem at (22,18); through the latched gate; Water on the freeze pad at 25, everybody over
-the pool, Water last. Generator lives at
+Rewrite that third shortcut, then meta.json (order 344, challenge mind, core
+`roof-must-go-before-the-floor-can`), coin `pound-needs-headroom` in `tools/ideas.mjs`, run
+`node tools/novelty.mjs crawlspace`, then `tools/build.mjs` and `tools/catalog.mjs` in the same
+commit. Generator:
 `/tmp/claude-0/-home-user-elementals/21399c47-b54e-59c4-b8d3-8866955cc1ed/scratchpad/a56c/gen.mjs`.
