@@ -38,14 +38,26 @@ which is exactly the `berth` plate.
 
 ## What passes
 
-- `node kit.mjs check chockstone`: `level.json is valid`, `every spawn point is safe`.
+- `node kit.mjs check chockstone` reports **no problems**: solved in 10.5 s, 3/3 gems, no deaths,
+  all three co-op idle tests pass, and both shortcut scripts fail with the wicket never latching.
 
 ## What fails
 
-- `✗ fire+water+earth: solution.mjs has no scripts for this group` — the scaffold's script is still
-  for Fire + Water.
+- **Too small.** 10.5 s against the skill's 20 s floor (30 s is the mark). One mechanism plus a
+  three-way contact is not enough; it needs a second phase, not a longer walk.
+- The no-brake shortcut is currently blocked only by *distance* (Earth's walk back to the anvil is
+  about 150 ticks against the stone's 70 to the berth). That is a timing argument, and brittle.
 
 ## Next thing to try
 
-Write the three scripts: Water down to (17,10), Fire to the grip, Earth pushes the stone off the lip
-then walks back to the anvil.
+Two berths instead of one, and a structural block in place of the distance argument:
+
+- `berthHigh` (high on the hill) drives a `hatch` on the shelf with **no latch** — open only while
+  the stone is actually held there, which an eight-tick rolling press can never do for long enough
+  to walk through.
+- Behind the hatch is the anvil bay, with the anvil and **Earth's own exit** in it. Earth walks in
+  while the stone is held high and can never come out — so the anvil can never be pressed during a
+  free roll, which kills the rolling-pass shortcut structurally.
+- The brake then walks the stone *down* the hill to `berthLow`, which the stone never touches on a
+  free roll (it would have had to stop at berthHigh first), and `wicket` latches on
+  berthLow + anvil + grip.

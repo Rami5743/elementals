@@ -126,19 +126,19 @@
     },
     {
       "type": "exit",
-      "element": "fire",
+      "element": "earth",
       "x": 33,
       "y": 14
     },
     {
       "type": "exit",
-      "element": "water",
+      "element": "fire",
       "x": 35,
       "y": 14
     },
     {
       "type": "exit",
-      "element": "earth",
+      "element": "water",
       "x": 37,
       "y": 14
     },
