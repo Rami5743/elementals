@@ -6403,6 +6403,60 @@ Entities:
   X  earth_end    exit       at (38,18)  earth
 ```
 
+## Passing Permit (`passing_permit`) — 3p, core `single-file-stone-inspection-permit`
+
+```
+Passing Permit (passing_permit) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #XD.@l...........D................l*...#
+ 2  #X######################################
+ 3  ##........D.....................########
+ 4  ##...X....D.....................########
+ 5  ##...X....D.......*.............########
+ 6  ##..#########################===########
+ 7  #.......#################........#######
+ 8  #.......#################....===.#######
+ 9  #.......#################........#######
+10  #.......######........###....===.#######
+11  #.......######..ppp...###........#######
+12  #.......######..###...###....===.#######
+13  #........O............*.D........#######
+14  #......##################....===.#######
+15  #......################..........F.D...#
+16  #.....#################......===.F.D.X.#
+17  #.@.@.#################...*......FlDlX.#
+18  ############################p###########
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (2,17)  earth (4,17)  fire (4,1)
+Entities:
+  p  shelf        plate      at (16,11)  3x1  -> hatch, gallerygate
+  D  hatch        door       at (24,13)  <- shelf, release, permit (needs 2)
+  D  gallerygate  door       at (10,3)  1x3  <- shelf  invert
+  l  release      lever      at (36,17)  -> hatch, fire_exit
+  p  load         plate      at (28,18)  -> vault  weight heavy
+  D  vault        door       at (35,15)  1x3  <- load, vaultpermit (needs 2)
+  F  blaze        firewall   at (33,15)  1x3
+  O  stone        boulder    at (9,13)
+  *  gem_8        gem        at (18,5)  neutral
+  *  gem_9        gem        at (22,13)  water
+  *  gem_10       gem        at (26,17)  earth
+  X  exit_11      exit       at (5,4)  earth
+  X  exit_12      exit       at (37,16)  water
+  l  permit       lever      at (5,1)  -> hatch
+  D  fire_middle  door       at (17,1)  <- inspection  latch
+  l  inspection   lever      at (34,17)  -> fire_middle
+  l  vaultpermit  lever      at (34,1)  -> vault
+  D  fire_exit    door       at (2,1)  <- release  latch
+  *  gem_18       gem        at (35,1)  fire
+  X  exit_19      exit       at (1,1)  fire
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

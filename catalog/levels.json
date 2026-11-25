@@ -5925,6 +5925,41 @@
   ]
  },
  {
+  "id": "passing_permit",
+  "name": "Passing Permit",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6480,
+  "dark": false,
+  "challenge": "mind",
+  "core": "single-file-stone-inspection-permit",
+  "ideas": [
+   "single-file-stone",
+   "stand-aside-is-the-switch",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 254,
+  "line": "single-file-stone and stand-aside-is-the-switch at three players, with a separate inspector who cannot replace the shelf holder and whose authorization is obtained only by a runner on the other side of the stone.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:firewall",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "passing_place",
   "name": "Passing Place",
   "source": "mine",

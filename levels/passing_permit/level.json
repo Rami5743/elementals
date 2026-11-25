@@ -1,0 +1,213 @@
+{
+  "id": "passing_permit",
+  "name": "Passing Permit",
+  "order": 254,
+  "description": "The single-file stone needs a two-person shelf relay and a third operator who authorizes the passage, then certifies the vault only after the far runner extinguishes the firewall.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 6480,
+  "hints": [
+    "Earth parks the stone in the high-roof niche. Fire authorizes the hatch; Earth holds the shelf while Water passes.",
+    "Water extinguishes the far flames and certifies the upper operator, then returns over the gallery. Earth must step off the shelf to let Water return.",
+    "Fire authorizes the vault. Water takes over the shelf; Earth deposits the stone and pulls the permanent release."
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "########################################",
+    "##..............................########",
+    "##..............................########",
+    "##..............................########",
+    "##..#########################===########",
+    "#.......#################........#######",
+    "#.......#################....===.#######",
+    "#.......#################........#######",
+    "#.......######........###....===.#######",
+    "#.......######........###........#######",
+    "#.......######..###...###....===.#######",
+    "#................................#######",
+    "#......##################....===.#######",
+    "#......################................#",
+    "#.....#################......===.......#",
+    "#.....#################................#",
+    "############################.###########",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "water": [
+      2,
+      17
+    ],
+    "earth": [
+      4,
+      17
+    ],
+    "fire": [
+      4,
+      1
+    ]
+  },
+  "entities": [
+    {
+      "id": "shelf",
+      "type": "plate",
+      "x": 16,
+      "y": 11,
+      "w": 3,
+      "targets": [
+        "hatch",
+        "gallerygate"
+      ]
+    },
+    {
+      "id": "hatch",
+      "type": "door",
+      "x": 24,
+      "y": 13,
+      "w": 1,
+      "h": 1,
+      "required": 2
+    },
+    {
+      "id": "gallerygate",
+      "type": "door",
+      "x": 10,
+      "y": 3,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "release",
+      "type": "lever",
+      "x": 36,
+      "y": 17,
+      "targets": [
+        "hatch",
+        "fire_exit"
+      ]
+    },
+    {
+      "id": "load",
+      "type": "plate",
+      "x": 28,
+      "y": 18,
+      "weight": "heavy",
+      "targets": [
+        "vault"
+      ]
+    },
+    {
+      "id": "vault",
+      "type": "door",
+      "x": 35,
+      "y": 15,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "blaze",
+      "type": "firewall",
+      "x": 33,
+      "y": 15,
+      "h": 3
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 9,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "neutral",
+      "x": 18,
+      "y": 5
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 22,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 26,
+      "y": 17
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 37,
+      "y": 16
+    },
+    {
+      "id": "permit",
+      "type": "lever",
+      "x": 5,
+      "y": 1,
+      "targets": [
+        "hatch"
+      ]
+    },
+    {
+      "id": "fire_middle",
+      "type": "door",
+      "x": 17,
+      "y": 1,
+      "h": 1,
+      "latch": true
+    },
+    {
+      "id": "inspection",
+      "type": "lever",
+      "x": 34,
+      "y": 17,
+      "targets": [
+        "fire_middle"
+      ]
+    },
+    {
+      "id": "vaultpermit",
+      "type": "lever",
+      "x": 34,
+      "y": 1,
+      "targets": [
+        "vault"
+      ]
+    },
+    {
+      "id": "fire_exit",
+      "type": "door",
+      "x": 2,
+      "y": 1,
+      "h": 1,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 35,
+      "y": 1
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 1
+    }
+  ]
+}

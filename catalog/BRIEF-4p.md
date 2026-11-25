@@ -37,18 +37,18 @@ together. `twist-undo`×32, `quorum`×30, `twist-order`×8, `timed-window`×7, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- glide-passenger + low-roof-no-jump
-- fan-band + fan-passenger
-- lock-per-element + tower-presses-a-column
-- glide-passenger + machine-strands-operator
-- lift-corner-path + one-way-press
-- door-pushes-you-through + lock-per-element
-- head-stack + stand-aside-is-the-switch
-- door-pushes-you-through + send-one-through
-- lock-per-element + mass-adds-on-the-beam
-- turbine-out-of-reach + unload-the-pan-you-ride
-- lift-corner-path + lock-per-element
-- cargo-as-clock-contact + tower-presses-a-column
+- timed-window + wide-door
+- cargo-as-clock-contact + twist-self-block
+- door-pushes-you-through + timed-window
+- lift-loop + partner-builds-your-landing
+- liquid-lane + timed-window
+- belt-reverse + twist-stranding
+- tower-presses-a-column + twist-order
+- liquid-lane + twist-order
+- liquid-lane + trip-plate-in-the-shaft
+- fan-passenger + twist-order
+- cargo-as-clock-contact + single-file-stone
+- timed-window + twist-stranding
 
 ## This repo's 4-player levels
 
