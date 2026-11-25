@@ -1,0 +1,434 @@
+{
+  "id": "ratio_tribunal",
+  "name": "Ratio Tribunal",
+  "order": 233,
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      11
+    ],
+    "water": [
+      31,
+      15
+    ],
+    "earth": [
+      3,
+      19
+    ]
+  },
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "parTicks": 8700,
+  "entities": [
+    {
+      "id": "rope",
+      "type": "pulley",
+      "x": 7,
+      "y": 2,
+      "w": 1,
+      "to": [
+        31,
+        7,
+        1
+      ],
+      "range": 4,
+      "ratio": 2,
+      "weights": [
+        0,
+        1
+      ],
+      "speed": 1.5,
+      "required": 3
+    },
+    {
+      "id": "aStone",
+      "type": "boulder",
+      "x": 7,
+      "y": 1
+    },
+    {
+      "id": "bStone",
+      "type": "boulder",
+      "x": 31,
+      "y": 6
+    },
+    {
+      "id": "a",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "rope"
+      ]
+    },
+    {
+      "id": "b",
+      "type": "lever",
+      "x": 30,
+      "y": 15,
+      "targets": [
+        "rope"
+      ]
+    },
+    {
+      "id": "AH",
+      "type": "plate",
+      "x": 7,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f2",
+        "e2",
+        "eexit"
+      ]
+    },
+    {
+      "id": "AL",
+      "type": "plate",
+      "x": 7,
+      "y": 5,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "f3",
+        "fexit",
+        "e1"
+      ]
+    },
+    {
+      "id": "BH",
+      "type": "plate",
+      "x": 31,
+      "y": 4,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "w3",
+        "wexit",
+        "e3"
+      ]
+    },
+    {
+      "id": "BL",
+      "type": "plate",
+      "x": 31,
+      "y": 6,
+      "weight": "heavy",
+      "targets": [
+        "w2",
+        "eexit"
+      ]
+    },
+    {
+      "id": "fexit",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 4
+    },
+    {
+      "id": "wexit",
+      "type": "door",
+      "x": 5,
+      "y": 13,
+      "h": 3,
+      "required": 4
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 15
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 9,
+      "y": 9,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 19,
+      "y": 9,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 28,
+      "y": 9,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 29,
+      "y": 13,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 13,
+      "h": 3,
+      "required": 3,
+      "latch": false
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 13,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "wback",
+      "type": "door",
+      "x": 32,
+      "y": 13,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "fkey1",
+      "type": "lever",
+      "x": 14,
+      "y": 11,
+      "targets": [
+        "w2",
+        "e2"
+      ]
+    },
+    {
+      "id": "wkey1",
+      "type": "lever",
+      "x": 24,
+      "y": 15,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "fkey2",
+      "type": "lever",
+      "x": 24,
+      "y": 11,
+      "targets": [
+        "w3"
+      ]
+    },
+    {
+      "id": "wkey2",
+      "type": "lever",
+      "x": 14,
+      "y": 15,
+      "targets": [
+        "f3",
+        "e3"
+      ]
+    },
+    {
+      "id": "fkey3",
+      "type": "lever",
+      "x": 32,
+      "y": 11,
+      "targets": [
+        "wexit"
+      ]
+    },
+    {
+      "id": "wkey3",
+      "type": "lever",
+      "x": 8,
+      "y": 15,
+      "targets": [
+        "fexit",
+        "wback"
+      ]
+    },
+    {
+      "id": "wkey4",
+      "type": "lever",
+      "x": 35,
+      "y": 15,
+      "targets": [
+        "wexit",
+        "fexit",
+        "eexit"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 9,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e3",
+      "type": "door",
+      "x": 28,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "eexit",
+      "type": "door",
+      "x": 35,
+      "y": 17,
+      "h": 3,
+      "required": 5,
+      "latch": false
+    },
+    {
+      "id": "c",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "rope"
+      ]
+    },
+    {
+      "id": "ekey1",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f2",
+        "w2"
+      ]
+    },
+    {
+      "id": "ekey2",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f3",
+        "w3"
+      ]
+    },
+    {
+      "id": "ekey3",
+      "type": "lever",
+      "x": 32,
+      "y": 19,
+      "targets": [
+        "fexit",
+        "wexit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 18
+    },
+    {
+      "id": "fhome",
+      "type": "lever",
+      "x": 37,
+      "y": 11,
+      "targets": [
+        "eexit"
+      ]
+    },
+    {
+      "id": "whome",
+      "type": "lever",
+      "x": 3,
+      "y": 15,
+      "targets": [
+        "eexit"
+      ]
+    }
+  ],
+  "description": "Three operators share the rope ratio. Fire and Water must finish on one pair of cargo contacts, but Earth cannot leave until that pair has been relinquished.",
+  "hints": [
+    "Engage all three inputs to reverse the heavier side.",
+    "The lower workshop is an independent permit chain; all three galleries must record each phase.",
+    "Fire and Water leave while the block is engaged. Earth must then give up its input and leave on the opposite contact pair."
+  ]
+}

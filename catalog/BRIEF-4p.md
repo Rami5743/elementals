@@ -55,18 +55,18 @@ together. `twist-undo`×14, `quorum`×14, `twist-order`×5, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- climb-then-steer + turbine-out-of-reach
-- lock-per-element + stock-before-it-seals
-- boulder-carry + crate-step
-- glide-dismount + head-stack
-- hop-beats-belt + lock-per-element
-- low-roof-no-jump + twist-sacrifice
-- boulder-carry + counterweight-you-must-remove
-- low-roof-no-jump + one-way-drop
-- lock-per-element + pound-to-move
-- crate-step + lock-per-element
-- head-stack + seesaw-balance
-- hoist-one-way-for-cargo + lock-per-element
+- belt-filter + stock-before-it-seals
+- dark + reversible-switch-maze
+- reversible-switch-maze + sink-as-a-timer
+- door-pushes-you-through + fan-band
+- boulder-carry + stock-before-it-seals
+- turbine-out-of-reach + twist-self-block
+- boulder-float + threshold-is-a-switch
+- boulder-float + twist-sacrifice
+- fan-band + single-file-stone
+- stand-aside-is-the-switch + turbine-out-of-reach
+- head-stack + tower-presses-a-column
+- boulder-float + door-pushes-you-through
 
 ## This repo's 4-player levels
 

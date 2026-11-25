@@ -4801,6 +4801,43 @@
   ]
  },
  {
+  "id": "ratio_tribunal",
+  "name": "Ratio Tribunal",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8700,
+  "dark": false,
+  "challenge": "mind",
+  "core": "three-party-ratio-opposite-final-certificates",
+  "ideas": [
+   "ratio-reverses-paired-cargo",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 233,
+  "line": "Three operators jointly select the heavier side of a loaded rope; two must finish on one paired contact state and the third must relinquish that state to finish.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4",
+   "opt:required:5",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "relay_ferry",
   "name": "Relay Ferry",
   "source": "mine",
