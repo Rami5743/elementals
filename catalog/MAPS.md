@@ -7217,3 +7217,74 @@ Entities:
   l  Eback        lever      at (15,3)  -> a_access, w_phase
   D  w_phase      door       at (25,7)  1x3  <- Wmode, A2, Eback (needs 3)  latch
 ```
+
+## Home Dispatch (`home_dispatch`) — 4p, core `exit-selected-cargo-dispatch-with-alternating-inspectors`
+
+```
+Home Dispatch (home_dispatch) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##....................................##
+ 2  ##ppp..............................ppp##
+ 3  ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>##
+ 4  ########################################
+ 5  #....D....D..............D.............#
+ 6  #....D....D..............D..........X..#
+ 7  #.*..D.@..D.....l........D..........X..#
+ 8  ########################################
+ 9  #.........D...........D......D.......D.#
+10  #.........D...........D......D.......DX#
+11  #..@......D.....l.....D..l...D..l..*.DX#
+12  ########################################
+13  #.......D..........D..........D........#
+14  #.......D..........D..........D.......X#
+15  #..@....D...l......D....l.....D...l.*.X#
+16  ########################################
+17  #.......D............D...........D.....#
+18  #.......D............D...........D....X#
+19  #..@....D....l.......D....l......D..*.X#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (7,7)  water (3,11)  earth (3,15)  air (3,19)
+Entities:
+  >  belt         belt       at (2,3)  36x1  <- home  mode reverse  speed 2
+  O  stone        boulder    at (36,2)
+  p  left         plate      at (2,2)  3x1  -> w2, wfinal, e_left, e_last  weight heavy
+  p  right        plate      at (35,2)  3x1  -> f1, fback, w3, e1, a_back  weight heavy
+  p  home         plate      at (36,7)  -> belt
+  D  f1           door       at (10,5)  1x3  <- right, wstart, Einit (needs 3)  latch
+  D  f2           door       at (25,5)  1x3  <- wkey, Ainit (needs 2)  latch
+  D  fback        door       at (5,5)  1x3  <- right, wleft, Eleft (needs 3)  latch
+  D  w1           door       at (10,9)  1x3  <- fkey  latch
+  D  w2           door       at (22,9)  1x3  <- left, fkey (needs 2)  latch
+  D  w3           door       at (29,9)  1x3  <- right, fbackkey, Aback (needs 3)  latch
+  D  wfinal       door       at (37,9)  1x3  <- left, wlast, Efinish (needs 3)
+  l  wstart       lever      at (3,11)  -> f1
+  l  fkey         lever      at (16,7)  -> w1, w2
+  l  wkey         lever      at (16,11)  -> f2, a1, e_left
+  l  wleft        lever      at (25,11)  -> fback
+  l  fbackkey     lever      at (2,7)  -> w3
+  l  wlast        lever      at (32,11)  -> wfinal, e_last
+  X  exit_18      exit       at (36,6)  fire
+  *  gem_19       gem        at (2,7)  fire
+  X  exit_20      exit       at (38,10)  water
+  *  gem_21       gem        at (35,11)  water
+  D  e1           door       at (8,13)  1x3  <- right  latch
+  l  Einit        lever      at (12,15)  -> f1
+  D  e_left       door       at (19,13)  1x3  <- left, wkey (needs 2)  latch
+  l  Eleft        lever      at (24,15)  -> fback, a_back
+  D  e_last       door       at (30,13)  1x3  <- left, wlast (needs 2)  latch
+  l  Efinish      lever      at (34,15)  -> wfinal, a_exit
+  *  gem_28       gem        at (36,15)  earth
+  X  exit_29      exit       at (38,14)  earth
+  D  a1           door       at (8,17)  1x3  <- wkey  latch
+  l  Ainit        lever      at (13,19)  -> f2
+  D  a_back       door       at (21,17)  1x3  <- right, Eleft (needs 2)  latch
+  l  Aback        lever      at (26,19)  -> w3
+  D  a_exit       door       at (33,17)  1x3  <- Efinish  latch
+  *  gem_35       gem        at (36,19)  air
+  X  exit_36      exit       at (38,18)  air
+```

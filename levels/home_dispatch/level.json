@@ -1,0 +1,383 @@
+{
+  "id": "home_dispatch",
+  "name": "Home Dispatch",
+  "order": 338,
+  "description": "One home threshold reverses a remote cargo belt, and the two end contacts distribute mutually exclusive permissions to three other operators.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      7,
+      7
+    ],
+    "water": [
+      3,
+      11
+    ],
+    "earth": [
+      3,
+      15
+    ],
+    "air": [
+      3,
+      19
+    ]
+  },
+  "parTicks": 8460,
+  "entities": [
+    {
+      "id": "belt",
+      "type": "belt",
+      "x": 2,
+      "y": 3,
+      "w": 36,
+      "speed": 2,
+      "mode": "reverse"
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 36,
+      "y": 2
+    },
+    {
+      "id": "left",
+      "type": "plate",
+      "x": 2,
+      "y": 2,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "w2",
+        "wfinal",
+        "e_left",
+        "e_last"
+      ]
+    },
+    {
+      "id": "right",
+      "type": "plate",
+      "x": 35,
+      "y": 2,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "fback",
+        "w3",
+        "e1",
+        "a_back"
+      ]
+    },
+    {
+      "id": "home",
+      "type": "plate",
+      "x": 36,
+      "y": 7,
+      "targets": [
+        "belt"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 10,
+      "y": 5,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 25,
+      "y": 5,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "fback",
+      "type": "door",
+      "x": 5,
+      "y": 5,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 10,
+      "y": 9,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 22,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 29,
+      "y": 9,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "wfinal",
+      "type": "door",
+      "x": 37,
+      "y": 9,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "id": "wstart",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "fkey",
+      "type": "lever",
+      "x": 16,
+      "y": 7,
+      "targets": [
+        "w1",
+        "w2"
+      ]
+    },
+    {
+      "id": "wkey",
+      "type": "lever",
+      "x": 16,
+      "y": 11,
+      "targets": [
+        "f2",
+        "a1",
+        "e_left"
+      ]
+    },
+    {
+      "id": "wleft",
+      "type": "lever",
+      "x": 25,
+      "y": 11,
+      "targets": [
+        "fback"
+      ]
+    },
+    {
+      "id": "fbackkey",
+      "type": "lever",
+      "x": 2,
+      "y": 7,
+      "targets": [
+        "w3"
+      ]
+    },
+    {
+      "id": "wlast",
+      "type": "lever",
+      "x": 32,
+      "y": 11,
+      "targets": [
+        "wfinal",
+        "e_last"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 36,
+      "y": 6
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 2,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 35,
+      "y": 11
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 8,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Einit",
+      "type": "lever",
+      "x": 12,
+      "y": 15,
+      "targets": [
+        "f1"
+      ]
+    },
+    {
+      "id": "e_left",
+      "type": "door",
+      "x": 19,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Eleft",
+      "type": "lever",
+      "x": 24,
+      "y": 15,
+      "targets": [
+        "fback",
+        "a_back"
+      ]
+    },
+    {
+      "id": "e_last",
+      "type": "door",
+      "x": 30,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Efinish",
+      "type": "lever",
+      "x": 34,
+      "y": 15,
+      "targets": [
+        "wfinal",
+        "a_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 36,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "id": "a1",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ainit",
+      "type": "lever",
+      "x": 13,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "a_back",
+      "type": "door",
+      "x": 21,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Aback",
+      "type": "lever",
+      "x": 26,
+      "y": 19,
+      "targets": [
+        "w3"
+      ]
+    },
+    {
+      "id": "a_exit",
+      "type": "door",
+      "x": 33,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 36,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 18
+    }
+  ],
+  "hints": [
+    "Fire's exit reverses the cargo belt. Earth must first certify the right contact.",
+    "The left delivery permits Earth to open the right-contact return workshop; Fire must leave home and Air must certify that right state.",
+    "Fire returns home after the last relay. Earth certifies the last left delivery, which releases Water and Air."
+  ]
+}

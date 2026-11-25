@@ -1,0 +1,11 @@
+{
+  "order": 338,
+  "challenge": "mind",
+  "core": "exit-selected-cargo-dispatch-with-alternating-inspectors",
+  "ideas": [
+    "threshold-is-a-switch",
+    "two-stops-no-middle",
+    "twist-undo",
+    "quorum"
+  ]
+}

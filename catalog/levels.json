@@ -4470,6 +4470,43 @@
   ]
  },
  {
+  "id": "home_dispatch",
+  "name": "Home Dispatch",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8460,
+  "dark": false,
+  "challenge": "mind",
+  "core": "exit-selected-cargo-dispatch-with-alternating-inspectors",
+  "ideas": [
+   "threshold-is-a-switch",
+   "two-stops-no-middle",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 338,
+  "line": "Fire's own exit selects a remote cargo belt. Two inspectors must certify opposite cargo states in a forced order.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "intermediate_stop",
   "name": "Intermediate Stop",
   "source": "mine",
