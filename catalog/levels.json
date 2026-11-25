@@ -5084,6 +5084,39 @@
   ]
  },
  {
+  "id": "three_stop_dispatch",
+  "name": "Three-Stop Dispatch",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6780,
+  "dark": false,
+  "challenge": "mind",
+  "core": "binary-hoist-obstructed-middle-stop",
+  "ideas": [
+   "obstruction-as-third-state",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 228,
+  "line": "A binary hoist acquires a stable third stop by pushing against a retractable ceiling. The third operator owns that ceiling and must acknowledge different stops.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "three_way_imprint",
   "name": "Three-Way Imprint",
   "source": "mine",

@@ -47,18 +47,18 @@ together. `twist-undo`×14, `invert-door`×5, `hold-switch`×5, `quorum`×5, `ob
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-passenger + lift-sheds-its-load
-- belt-filter + expiry-order-is-key
-- hold-switch + no-overtaking
-- hold-switch + lift-as-floor
-- belt-filter + partner-builds-your-landing
-- belt-filter + twist-self-block
-- freeze-invert + seesaw-balance
-- hold-switch + pound-chain
-- freeze-invert + tower-presses-a-column
-- balanced-rope-memory + belt-filter
+- fan-band + twist-undo
+- belt-filter + fan-passenger
+- hop-beats-belt + seesaw-balance
 - belt-filter + shutter-floor-wall-duality
-- fan-passenger + tower-presses-a-column
+- liquid-lane + plank-sums-plate-maxes
+- boulder-carry + freeze-invert
+- glide-dismount + two-in-the-air-at-once
+- belt-filter + hop-beats-belt
+- fan-band + shared-switch-two-gates
+- liquid-lane + trip-plate-in-the-shaft
+- liquid-lane + one-way-drop
+- head-stack + two-in-the-air-at-once
 
 ## This repo's 2-player levels
 

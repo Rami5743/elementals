@@ -1,0 +1,10 @@
+{
+  "order": 228,
+  "challenge": "mind",
+  "core": "binary-hoist-obstructed-middle-stop",
+  "ideas": [
+    "obstruction-as-third-state",
+    "twist-undo",
+    "quorum"
+  ]
+}
