@@ -1,0 +1,321 @@
+{
+  "id": "quorum_shutters",
+  "name": "Quorum Shutters",
+  "order": 224,
+  "description": "A third operator enables the complementary shutters, but must abandon the enabling key to certify each exchange.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 10440,
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "######===#......########......##########",
+    "#......................................#",
+    "#.....===..............................#",
+    "#......................................#",
+    "#.....===..............................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      8,
+      6
+    ],
+    "water": [
+      8,
+      11
+    ],
+    "earth": [
+      3,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "shutterA",
+      "type": "door",
+      "x": 10,
+      "y": 7,
+      "w": 6,
+      "h": 5,
+      "required": 2
+    },
+    {
+      "id": "shutterB",
+      "type": "door",
+      "x": 24,
+      "y": 7,
+      "w": 6,
+      "h": 5,
+      "invert": true,
+      "required": 2
+    },
+    {
+      "id": "upper",
+      "type": "lever",
+      "x": 19,
+      "y": 6,
+      "targets": [
+        "shutterA",
+        "shutterB"
+      ]
+    },
+    {
+      "id": "lower",
+      "type": "lever",
+      "x": 19,
+      "y": 11,
+      "targets": [
+        "shutterA",
+        "shutterB"
+      ]
+    },
+    {
+      "id": "f_far",
+      "type": "lever",
+      "x": 33,
+      "y": 6,
+      "targets": [
+        "w_far_gate"
+      ]
+    },
+    {
+      "id": "w_far_gate",
+      "type": "door",
+      "x": 32,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "id": "w_far",
+      "type": "lever",
+      "x": 35,
+      "y": 11,
+      "targets": [
+        "f_left_gate",
+        "w_left_gate",
+        "e_first"
+      ]
+    },
+    {
+      "id": "f_left_gate",
+      "type": "door",
+      "x": 4,
+      "y": 4,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "w_left_gate",
+      "type": "door",
+      "x": 5,
+      "y": 8,
+      "h": 4,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "f_left",
+      "type": "lever",
+      "x": 3,
+      "y": 6,
+      "targets": [
+        "f_final_gate",
+        "e_second"
+      ]
+    },
+    {
+      "id": "w_left",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "f_final_gate",
+        "e_second"
+      ]
+    },
+    {
+      "id": "f_final_gate",
+      "type": "door",
+      "x": 36,
+      "y": 4,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "f_final",
+      "type": "lever",
+      "x": 37,
+      "y": 6,
+      "targets": [
+        "w_final_gate",
+        "e_exit"
+      ]
+    },
+    {
+      "id": "w_final_gate",
+      "type": "door",
+      "x": 37,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 5
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 6
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 4,
+      "text": "Upper key"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 8,
+      "text": "Lower key"
+    },
+    {
+      "id": "exit_contact",
+      "type": "plate",
+      "x": 38,
+      "y": 11,
+      "targets": [
+        "f_exit",
+        "e_exit"
+      ]
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 2,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_key",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "shutterA",
+        "shutterB",
+        "e_inv"
+      ]
+    },
+    {
+      "id": "e_inv",
+      "type": "door",
+      "x": 7,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "e_first",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_cert1",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f_left_gate",
+        "w_left_gate"
+      ]
+    },
+    {
+      "id": "e_second",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e_cert2",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f_final_gate"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 33,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 24,
+      "y": 19
+    }
+  ],
+  "hints": [
+    "The shutters need two keys. Earth enables the other two operators, but Earth cannot leave the key booth while its key is on.",
+    "Certify the first far relay and the two left relays before each next exchange.",
+    "Earth waits until Fire has returned before abandoning the enabling key."
+  ]
+}

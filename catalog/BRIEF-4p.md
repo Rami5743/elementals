@@ -60,18 +60,18 @@ together. `twist-undo`×7, `quorum`×6, `twist-order`×5, `lock-per-element`×4,
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- freeze-bridge + sink-as-a-timer
-- pound-chain + unload-the-pan-you-ride
-- freeze-bridge + lift-press
-- pound-chain + threshold-is-a-switch
-- boulder-float + twist-setup
-- belt-filter + sink-as-a-timer
-- boulder-float + glide-passenger
-- belt-filter + twist-setup
-- lock-per-element + sink-as-a-timer
-- belt-filter + stock-before-it-seals
-- belt-filter + torch-bridge
+- hop-beats-belt + two-is-not-heavy
+- glide-passenger + pound-chain
+- boulder-float + fan-passenger
+- freeze-bridge + freeze-invert
+- climb-then-steer + head-stack
 - dark + turbine-out-of-reach
+- pound-chain + torch-bridge
+- dark + head-stack
+- partner-builds-your-landing + pound-chain
+- lock-per-element + shared-switch-two-gates
+- head-stack + hoist-one-way-for-cargo
+- pound-chain + single-file-stone
 
 ## This repo's 4-player levels
 

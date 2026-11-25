@@ -4131,6 +4131,39 @@
   ]
  },
  {
+  "id": "quorum_shutters",
+  "name": "Quorum Shutters",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 10440,
+  "dark": false,
+  "challenge": "mind",
+  "core": "quorum-shutters-certification",
+  "ideas": [
+   "shutter-floor-wall-duality",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 224,
+  "line": "a complementary bridge pair requiring two enabling keys; the third operator must abandon its key to certify the route.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:wide-door",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "relay_ferry",
   "name": "Relay Ferry",
   "source": "mine",

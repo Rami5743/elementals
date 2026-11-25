@@ -2609,6 +2609,71 @@ Entities:
   X  exit_25      exit       at (37,2)  earth
 ```
 
+## Quorum Shutters (`quorum_shutters`) — 3p, core `quorum-shutters-certification`
+
+```
+Quorum Shutters (quorum_shutters) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  #.D.D...............................D..#
+ 5  #XD.D...............................D..#
+ 6  #XDlD...@..........l.............l..D*.#
+ 7  ######===#DDDDDD########DDDDDD##########
+ 8  #....D....DDDDDD........DDDDDD..D....D.#
+ 9  #....D===.DDDDDD........DDDDDD..D....D.#
+10  #....D....DDDDDD........DDDDDD..D....DX#
+11  #..*.D==@.DDDDDD...l....DDDDDD..D..l.Dp#
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #......D..D........D.............D.....#
+18  #......D..D........D.............D...X.#
+19  #..@...D..D...l....D....*........D...X.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (8,6)  water (8,11)  earth (3,19)
+Entities:
+  D  shutterA     door       at (10,7)  6x5  <- upper, lower, e_key (needs 2)
+  D  shutterB     door       at (24,7)  6x5  <- upper, lower, e_key (needs 2)  invert
+  l  upper        lever      at (19,6)  -> shutterA, shutterB
+  l  lower        lever      at (19,11)  -> shutterA, shutterB
+  l  f_far        lever      at (33,6)  -> w_far_gate
+  D  w_far_gate   door       at (32,8)  1x4  <- f_far  latch
+  l  w_far        lever      at (35,11)  -> f_left_gate, w_left_gate, e_first
+  D  f_left_gate  door       at (4,4)  1x3  <- w_far, e_cert1 (needs 2)  latch
+  D  w_left_gate  door       at (5,8)  1x4  <- w_far, e_cert1 (needs 2)  latch
+  l  f_left       lever      at (3,6)  -> f_final_gate, e_second
+  l  w_left       lever      at (3,11)  -> f_final_gate, e_second
+  D  f_final_gate door       at (36,4)  1x3  <- f_left, w_left, e_cert2 (needs 3)  latch
+  l  f_final      lever      at (37,6)  -> w_final_gate, e_exit
+  D  w_final_gate door       at (37,8)  1x4  <- f_final  latch
+  X  exit_14      exit       at (1,5)  fire
+  *  gem_15       gem        at (37,6)  fire
+  X  exit_16      exit       at (38,10)  water
+  *  gem_17       gem        at (3,11)  water
+  "  sign_18      sign       at (18,4)  "Upper key"
+  "  sign_19      sign       at (18,8)  "Lower key"
+  p  exit_contact plate      at (38,11)  -> f_exit, e_exit
+  D  f_exit       door       at (2,4)  1x3  <- exit_contact  latch
+  l  e_key        lever      at (3,19)  -> shutterA, shutterB, e_inv
+  D  e_inv        door       at (7,17)  1x3  <- e_key  invert
+  D  e_first      door       at (10,17)  1x3  <- w_far  latch
+  l  e_cert1      lever      at (14,19)  -> f_left_gate, w_left_gate
+  D  e_second     door       at (19,17)  1x3  <- f_left, w_left (needs 2)  latch
+  l  e_cert2      lever      at (24,19)  -> f_final_gate
+  D  e_exit       door       at (33,17)  1x3  <- f_final, exit_contact (needs 2)  latch
+  X  exit_29      exit       at (37,18)  earth
+  *  gem_30       gem        at (24,19)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

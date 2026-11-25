@@ -48,18 +48,18 @@ together. `twist-undo`×11, `invert-door`×5, `hold-switch`×5, `object-as-perma
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- freeze-invert + lock-per-element
-- freeze-invert + two-in-the-air-at-once
-- freeze-bridge + two-is-not-heavy
-- low-roof-no-jump + two-in-the-air-at-once
+- belt-filter + one-way-press
+- no-overtaking + pound-to-move
+- pound-to-move + two-stops-no-middle
 - belt-filter + lift-corner-path
+- lift-sheds-its-load + pound-to-move
 - dive-ahead-of-the-runaway + freeze-bridge
-- crate-step + freeze-invert
-- freeze-bridge + two-stops-no-middle
-- boulder-carry + pound-to-move
-- freeze-bridge + torch-bridge
-- boulder-carry + twist-order
-- boulder-float + object-as-permanent-switch
+- freeze-bridge + lift-press
+- belt-filter + twist-sacrifice
+- belt-filter + sink-as-a-timer
+- freeze-bridge + lock-per-element
+- dive-ahead-of-the-runaway + object-as-permanent-switch
+- belt-filter + fan-passenger
 
 ## This repo's 2-player levels
 
