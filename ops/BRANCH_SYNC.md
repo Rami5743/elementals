@@ -130,7 +130,8 @@ Then:
 ## Notes
 
 - Never delete a level, rewrite another agent's commits, or "fix" a level's design. This task
-  merges and verifies; it does not edit levels, except an `order` collision as in step 3.
+  merges and verifies; it does not edit levels at all. An `order` collision is reported, not
+  renumbered — see step 3.
 - The hourly wake is not a reason to build anything. Level building is the night task's job
   (`ops/MONDAY_LEVEL_NIGHT.md`).
 - Check `date` when you wake. If the previous hour's run is somehow still going, do nothing.
