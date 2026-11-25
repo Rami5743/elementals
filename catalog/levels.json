@@ -3098,6 +3098,45 @@
   ]
  },
  {
+  "id": "chute_council",
+  "name": "Chute Council",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6300,
+  "dark": false,
+  "challenge": "motor",
+  "core": "runaway-dive-certificate-hoist",
+  "ideas": [
+   "dive-ahead-of-the-runaway",
+   "shared-switch-two-gates",
+   "twist-setup"
+  ],
+  "order": 331,
+  "line": "",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:turbine",
+   "opt:button:hold",
+   "opt:elevator:powered",
+   "opt:heavy-plate",
+   "opt:required:2",
+   "opt:rolling-boulder",
+   "tile:one-way",
+   "tile:slope",
+   "tile:water"
+  ]
+ },
+ {
   "id": "cistern",
   "name": "Cistern",
   "source": "mine",

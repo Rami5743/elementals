@@ -55,18 +55,18 @@ together. `twist-undo`×14, `quorum`×13, `twist-order`×7, `machine-strands-ope
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-float + object-as-permanent-switch
-- switch-in-mid-flight + twist-order
-- machine-strands-operator + partner-builds-your-landing
-- twist-two-clocks + wide-door
-- freeze-invert + lift-corner-path
-- stand-aside-is-the-switch + twist-two-clocks
-- machine-strands-operator + pound-to-move
-- lift-corner-path + lift-sheds-its-load
-- lift-corner-path + sink-as-a-timer
-- machine-strands-operator + seesaw-balance
-- lock-per-element + machine-strands-operator
-- stand-aside-is-the-switch + twist-stranding
+- counterweight-you-must-remove + hop-beats-belt
+- object-as-permanent-switch + single-file-stone
+- object-as-permanent-switch + pound-chain
+- lift-corner-path + wide-door
+- boulder-float + twist-two-clocks
+- machine-strands-operator + turbine-out-of-reach
+- cargo-power-cascade + hop-beats-belt
+- feed-the-engine-mid-ride + lift-corner-path
+- object-as-permanent-switch + twist-sacrifice
+- fan-band + twist-two-clocks
+- object-as-permanent-switch + pound-to-move
+- belt-reverse + hop-beats-belt
 
 ## This repo's 3-player levels
 

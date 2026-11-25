@@ -5538,3 +5538,57 @@ Entities:
   *  gem_37       gem        at (37,2)  air
   X  exit_38      exit       at (38,1)  air
 ```
+
+## Chute Council (`chute_council`) — 4p, core `runaway-dive-certificate-hoist`
+
+```
+Chute Council (chute_council) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##...........................D...##....#
+ 2  ##...........................D...##...X#
+ 3  ##....WWW..................*.D...##..*X#
+ 4  ##...#########################...##..###
+ 5  ##..#............................##..###
+ 6  ##==............D................##..###
+ 7  ##......T.*.....D................##..###
+ 8  #########==#bbb\D................##..###
+ 9  #########..#bbb#\................##..###
+10  #########==#bbb##\...............##..###
+11  #########..#bbb###\..............##..###
+12  #########==#bbb######\...........##....#
+13  #########..#bbb#######\..........##....#
+14  #########==#bbb##########\.......##...@#
+15  #########..#bbb###########\ppp...##EE###
+16  #########==#bbb###############...#######
+17  ##..........bbb..................D...###
+18  ##...!...==.bbb..................DXXX###
+19  ##...!@.@...bbb...*........O...@.DXXX###
+20  ############bbb#########################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (6,19)  earth (31,19)  air (8,19)  fire (38,14)
+Entities:
+  T  spin         turbine    at (8,7)  -> pen, catgate
+  D  pen          door       at (16,6)  1x3  <- spin, permit (needs 2)
+  D  catgate      door       at (29,1)  1x3  <- spin, permit (needs 2)
+  E  hoist        elevator   at (12,20)  3x1  <- call  mode powered  speed 4  path (12,20)-(12,8)
+  b  call         button     at (12,8)  3x13  -> hoist  mode hold
+  O  stone        boulder    at (27,19)
+  p  pad          plate      at (27,15)  3x1  -> way, cert_lift  weight heavy
+  D  way          door       at (33,17)  1x3  <- pad, certificate (needs 2)
+  *  gem_8        gem        at (18,19)  earth
+  *  gem_9        gem        at (27,3)  water
+  *  gem_10       gem        at (10,7)  air
+  !  checkpoint_11 checkpoint at (5,18)
+  X  exit_12      exit       at (34,18)  water
+  X  exit_13      exit       at (35,18)  earth
+  X  exit_14      exit       at (36,18)  air
+  l  permit       lever      at (38,14)  -> pen, catgate
+  E  cert_lift    elevator   at (35,15)  2x1  <- pad  speed 0.65  path (35,15)-(35,4)
+  l  certificate  lever      at (37,3)  -> way
+  *  gem_18       gem        at (37,3)  fire
+  X  exit_19      exit       at (38,2)  fire
+```
