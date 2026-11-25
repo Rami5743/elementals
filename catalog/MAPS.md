@@ -2129,6 +2129,60 @@ Entities:
   X  a_exit       exit       at (38,4)  air
 ```
 
+## Cargo Turnstile (`cargo_turnstile`) — 2p, core `two-chamber-heavy-contact-clock-reauthorization`
+
+```
+Cargo Turnstile (cargo_turnstile) for water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  #.......D...........D.............DD...#
+ 5  #.X.....D...........D.............DD...#
+ 6  #.X.....D.........@.D..........l..DD.*.#
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  ########################################
+11  ########################################
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.......D.......D.....D......D......D..#
+18  #.......D.......D.....D......D......DX.#
+19  #.@.Op..D.......D..p..D......D.p....DX.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): water (18,6)  earth (2,19)
+Entities:
+  D  in1          door       at (8,17)  1x3  <- clock
+  D  out1         door       at (16,17)  1x3  <- clock  invert
+  D  in2          door       at (22,17)  1x3  <- clock, stage (needs 2)
+  D  out2         door       at (29,17)  1x3  <- clock  invert
+  b  clock        button     at (2,6)  -> in1, out1, in2, out2  mode timed  duration 360
+  D  clock_access door       at (8,4)  1x3  <- start  latch
+  D  stage_access door       at (20,4)  1x3  <- middle  latch
+  l  stage        lever      at (31,6)  -> in2, stage_inverse
+  D  stage_inverse door       at (34,4)  1x3  <- stage  invert
+  O  stone        boulder    at (4,19)
+  p  weigh        plate      at (31,19)  -> final_access, final_door  weight heavy
+  D  final_access door       at (35,4)  1x3  <- weigh
+  l  cert         lever      at (37,6)  -> final_door
+  D  final_door   door       at (36,17)  1x3  <- weigh, cert (needs 2)
+  *  gem_14       gem        at (19,19)  earth
+  X  exit_15      exit       at (37,18)  earth
+  *  gem_16       gem        at (37,6)  water
+  X  exit_17      exit       at (2,5)  water
+  p  start        plate      at (5,19)  -> clock_access  weight heavy
+  p  middle       plate      at (19,19)  -> stage_access  weight heavy
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

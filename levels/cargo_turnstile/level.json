@@ -1,0 +1,221 @@
+{
+  "id": "cargo_turnstile",
+  "name": "Cargo Turnstile",
+  "order": 140,
+  "description": "One pulse admits a heavy token to a chamber and seals its outlet. Reauthorize the second pulse from the middle berth, then let the cargo replace its pusher on the final contact.",
+  "supports": [
+    [
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "water": [
+      18,
+      6
+    ],
+    "earth": [
+      2,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "in1",
+      "type": "door",
+      "x": 8,
+      "y": 17,
+      "h": 3
+    },
+    {
+      "id": "out1",
+      "type": "door",
+      "x": 16,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "in2",
+      "type": "door",
+      "x": 22,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "out2",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "clock",
+      "type": "button",
+      "x": 2,
+      "y": 6,
+      "mode": "timed",
+      "duration": 360,
+      "targets": [
+        "in1",
+        "out1",
+        "in2",
+        "out2"
+      ]
+    },
+    {
+      "id": "clock_access",
+      "type": "door",
+      "x": 8,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "stage_access",
+      "type": "door",
+      "x": 20,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "stage",
+      "type": "lever",
+      "x": 31,
+      "y": 6,
+      "targets": [
+        "in2",
+        "stage_inverse"
+      ]
+    },
+    {
+      "id": "stage_inverse",
+      "type": "door",
+      "x": 34,
+      "y": 4,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 4,
+      "y": 19
+    },
+    {
+      "id": "weigh",
+      "type": "plate",
+      "x": 31,
+      "y": 19,
+      "w": 1,
+      "weight": "heavy",
+      "targets": [
+        "final_access",
+        "final_door"
+      ]
+    },
+    {
+      "id": "final_access",
+      "type": "door",
+      "x": 35,
+      "y": 4,
+      "h": 3
+    },
+    {
+      "id": "cert",
+      "type": "lever",
+      "x": 37,
+      "y": 6,
+      "targets": [
+        "final_door"
+      ]
+    },
+    {
+      "id": "final_door",
+      "type": "door",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 19,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 6
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 5
+    },
+    {
+      "id": "start",
+      "type": "plate",
+      "x": 5,
+      "y": 19,
+      "w": 1,
+      "weight": "heavy",
+      "targets": [
+        "clock_access"
+      ]
+    },
+    {
+      "id": "middle",
+      "type": "plate",
+      "x": 19,
+      "y": 19,
+      "w": 1,
+      "weight": "heavy",
+      "targets": [
+        "stage_access"
+      ]
+    }
+  ],
+  "parTicks": 6420,
+  "hints": [
+    "The heavy load grants access to the clock. Its pulse opens the inlets and closes the outlets.",
+    "After the first pulse expires, the middle contact grants authorization for the second pulse. Return to the clock.",
+    "Remove the selector authorization, and leave the load on the final contact before returning to the exit."
+  ]
+}

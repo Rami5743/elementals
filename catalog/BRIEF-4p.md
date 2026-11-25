@@ -49,17 +49,17 @@ together. `twist-undo`×19, `quorum`×19, `twist-order`×6, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-filter + tower-presses-a-column
-- fan-band + hoist-one-way-for-cargo
-- boulder-float + tower-presses-a-column
-- hop-beats-belt + trip-plate-in-the-shaft
-- boulder-float + two-stops-no-middle
-- twist-undo + wide-door
-- fan-band + single-file-stone
-- hop-beats-belt + reversible-switch-maze
-- cargo-as-clock-contact + dark
-- invert-door + single-file-stone
-- glide-passenger + invert-door
+- hop-beats-belt + pound-chain
+- turbine-out-of-reach + wide-door
+- feed-the-engine-mid-ride + reversible-switch-maze
+- lock-per-element + stand-aside-is-the-switch
+- stand-aside-is-the-switch + turbine-out-of-reach
+- head-stack + torch-bridge
+- lock-per-element + one-way-drop
+- cargo-as-clock-contact + torch-bridge
+- freeze-bridge + one-way-drop
+- pound-to-move + reversible-switch-maze
+- boulder-carry + feed-the-engine-mid-ride
 - reversible-switch-maze + single-file-stone
 
 ## This repo's 4-player levels

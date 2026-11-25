@@ -1,0 +1,12 @@
+{
+  "order": 140,
+  "challenge": "motor",
+  "core": "two-chamber-heavy-contact-clock-reauthorization",
+  "ideas": [
+    "stock-before-it-seals",
+    "shared-switch-two-gates",
+    "timed-window",
+    "twist-undo",
+    "object-as-permanent-switch"
+  ]
+}
