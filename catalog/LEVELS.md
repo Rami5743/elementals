@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 171 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 172 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (56)
@@ -749,7 +749,7 @@ Totals: 79 campaign levels, 171 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (57)
+## 4 players — this repo (58)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -972,6 +972,10 @@ Totals: 79 campaign levels, 171 in this repo, of which 11 now ship in the campai
   - idea: Independent wide shutters create two additional physical states that complementary shutters cannot: both bridges present and both lower passages open. Each state is a key to one of the controller's certificates.
   - ideas: wide-door, shutter-floor-wall-duality, twist-undo, quorum
   - features: ent:door ent:lever ent:plate opt:invert:door opt:latch opt:required:4 opt:wide-door tile:one-way
+- **Falling Authority** `falling_authority` (4p: fire+water+earth+air) core=`repeated-self-dropping-clock-rearm` challenge=motor par=6300
+  - idea: A timed launch that removes the operator's floor, and must be rearmed for a second crossing after the first traveller's receipt changes who is authorized to use that same clock.
+  - ideas: twist-self-block, timed-window, twist-undo, quorum
+  - features: ent:button ent:door ent:elevator ent:lever opt:button-timed opt:button:timed opt:elevator:loop opt:invert:door opt:latch opt:required:2 opt:wide-door
 
 ## 4 players — campaign (23)
 

@@ -4690,6 +4690,42 @@
   ]
  },
  {
+  "id": "falling_authority",
+  "name": "Falling Authority",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6300,
+  "dark": false,
+  "challenge": "motor",
+  "core": "repeated-self-dropping-clock-rearm",
+  "ideas": [
+   "twist-self-block",
+   "timed-window",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 355,
+  "line": "A timed launch that removes the operator's floor, and must be rearmed for a second crossing after the first traveller's receipt changes who is authorized to use that same clock.",
+  "tokens": [
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:wide-door"
+  ]
+ },
+ {
   "id": "falling_dispatch",
   "name": "Falling Dispatch",
   "source": "mine",

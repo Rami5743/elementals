@@ -1,0 +1,11 @@
+{
+  "order": 355,
+  "challenge": "motor",
+  "core": "repeated-self-dropping-clock-rearm",
+  "ideas": [
+    "twist-self-block",
+    "timed-window",
+    "twist-undo",
+    "quorum"
+  ]
+}

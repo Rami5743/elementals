@@ -1,0 +1,300 @@
+{
+  "id": "falling_authority",
+  "name": "Falling Authority",
+  "order": 355,
+  "description": "The launch button drops its own operator into the lower chamber. Two trips with the same clock need opposite authorization; the returning runner and the second runner share the last pulse.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 6300,
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#########...#######...##################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################"
+  ],
+  "spawns": {
+    "air": [
+      2,
+      4
+    ],
+    "fire": [
+      10,
+      12
+    ],
+    "water": [
+      2,
+      16
+    ],
+    "earth": [
+      15,
+      20
+    ]
+  },
+  "entities": [
+    {
+      "id": "Astart",
+      "type": "door",
+      "x": 6,
+      "y": 2,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "drop",
+      "type": "door",
+      "x": 9,
+      "y": 5,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "id": "pulse",
+      "type": "button",
+      "x": 10,
+      "y": 4,
+      "mode": "timed",
+      "duration": 300,
+      "targets": [
+        "drop",
+        "Fgate",
+        "Wgate"
+      ]
+    },
+    {
+      "id": "lift",
+      "type": "elevator",
+      "x": 19,
+      "y": 5,
+      "w": 3,
+      "path": [
+        [
+          19,
+          5
+        ],
+        [
+          19,
+          9
+        ]
+      ],
+      "mode": "loop",
+      "pause": 180,
+      "speed": 0.6
+    },
+    {
+      "id": "Alower",
+      "type": "door",
+      "x": 26,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Areceipt",
+      "type": "lever",
+      "x": 30,
+      "y": 8,
+      "targets": [
+        "EreceiptGate"
+      ]
+    },
+    {
+      "id": "Aend",
+      "type": "door",
+      "x": 35,
+      "y": 6,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Fgate",
+      "type": "door",
+      "x": 22,
+      "y": 10,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "Freceipt",
+      "type": "lever",
+      "x": 33,
+      "y": 12,
+      "targets": [
+        "Alower"
+      ]
+    },
+    {
+      "id": "Fend",
+      "type": "door",
+      "x": 5,
+      "y": 10,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Wgate",
+      "type": "door",
+      "x": 22,
+      "y": 14,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "Wreceipt",
+      "type": "lever",
+      "x": 35,
+      "y": 16,
+      "targets": [
+        "Fend",
+        "Eend"
+      ]
+    },
+    {
+      "id": "Eoff",
+      "type": "door",
+      "x": 12,
+      "y": 18,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "EreceiptGate",
+      "type": "door",
+      "x": 7,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "first",
+      "type": "lever",
+      "x": 30,
+      "y": 20,
+      "targets": [
+        "Fgate",
+        "Astart",
+        "Eoff"
+      ]
+    },
+    {
+      "id": "second",
+      "type": "lever",
+      "x": 2,
+      "y": 20,
+      "targets": [
+        "Fgate",
+        "Wgate"
+      ]
+    },
+    {
+      "id": "Eend",
+      "type": "door",
+      "x": 35,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 30,
+      "y": 8
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 7
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 33,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 2,
+      "y": 11
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 34,
+      "y": 16
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 15
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 2,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 19
+    },
+    {
+      "id": "Efinal",
+      "type": "lever",
+      "x": 37,
+      "y": 20,
+      "targets": [
+        "Aend"
+      ]
+    },
+    {
+      "id": "Afinal",
+      "type": "lever",
+      "x": 37,
+      "y": 8,
+      "targets": [
+        "Wend"
+      ]
+    },
+    {
+      "id": "Wend",
+      "type": "door",
+      "x": 37,
+      "y": 14,
+      "h": 3,
+      "latch": true
+    }
+  ],
+  "hints": [
+    "Earth arms the first crossing. Air's button opens the runner gate and removes the floor under Air.",
+    "Fire's far receipt lets Air reach the lower receipt. Air can ride the return lift even if a run was missed.",
+    "Earth must revoke the first permit and obtain the second. Fire returns and Water goes forward during the second pulse."
+  ]
+}

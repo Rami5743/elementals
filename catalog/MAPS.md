@@ -10322,3 +10322,65 @@ Entities:
   D  Aother       door       at (26,18)  1x3  <- f_final, Econtrol
   D  Eother       door       at (26,14)  1x3  <- f_final, Acontrol
 ```
+
+## Falling Authority (`falling_authority`) — 4p, core `repeated-self-dropping-clock-rearm`
+
+```
+Falling Authority (falling_authority) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #.....D................................#
+ 3  #.....D................................#
+ 4  #.@...D...b............................#
+ 5  #########DDD#######EEE##################
+ 6  #.........................D........D...#
+ 7  #.........................D........D..X#
+ 8  #.........................D...*....D.lX#
+ 9  ########################################
+10  #....D................D................#
+11  #.X..D................D................#
+12  #.X..D....@...........D..........*.....#
+13  ########################################
+14  #.....................D..............D.#
+15  #.....................D..............DX#
+16  #.@...................D...........*l.DX#
+17  ########################################
+18  #......D....D......................D...#
+19  #......D....D......................D..X#
+20  #.*....D....D..@..............l....D.lX#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): air (2,4)  fire (10,12)  water (2,16)  earth (15,20)
+Entities:
+  D  Astart       door       at (6,2)  1x3  <- first  latch
+  D  drop         door       at (9,5)  3x1  <- pulse
+  b  pulse        button     at (10,4)  -> drop, Fgate, Wgate  mode timed  duration 300
+  E  lift         elevator   at (19,5)  3x1  mode loop  speed 0.6  pause 180  path (19,5)-(19,9)
+  D  Alower       door       at (26,6)  1x3  <- Freceipt  latch
+  l  Areceipt     lever      at (30,8)  -> EreceiptGate
+  D  Aend         door       at (35,6)  1x3  <- Efinal  latch
+  D  Fgate        door       at (22,10)  1x3  <- pulse, first, second (needs 2)
+  l  Freceipt     lever      at (33,12)  -> Alower
+  D  Fend         door       at (5,10)  1x3  <- Wreceipt  latch
+  D  Wgate        door       at (22,14)  1x3  <- pulse, second (needs 2)
+  l  Wreceipt     lever      at (35,16)  -> Fend, Eend
+  D  Eoff         door       at (12,18)  1x3  <- first  invert
+  D  EreceiptGate door       at (7,18)  1x3  <- Areceipt  latch
+  l  first        lever      at (30,20)  -> Fgate, Astart, Eoff
+  l  second       lever      at (2,20)  -> Fgate, Wgate
+  D  Eend         door       at (35,18)  1x3  <- Wreceipt  latch
+  *  gem_17       gem        at (30,8)  air
+  X  exit_18      exit       at (38,7)  air
+  *  gem_19       gem        at (33,12)  fire
+  X  exit_20      exit       at (2,11)  fire
+  *  gem_21       gem        at (34,16)  water
+  X  exit_22      exit       at (38,15)  water
+  *  gem_23       gem        at (2,20)  earth
+  X  exit_24      exit       at (38,19)  earth
+  l  Efinal       lever      at (37,20)  -> Aend
+  l  Afinal       lever      at (37,8)  -> Wend
+  D  Wend         door       at (37,14)  1x3  <- Afinal  latch
+```
