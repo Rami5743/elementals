@@ -1,0 +1,390 @@
+{
+  "id": "cascade_triad",
+  "name": "Cascade Triad",
+  "order": 227,
+  "description": "Two cargo lifts share a supply contact; the third operator must obtain both renewed power and the final loss of power.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "######....####################....######",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      11
+    ],
+    "water": [
+      37,
+      19
+    ],
+    "earth": [
+      3,
+      15
+    ]
+  },
+  "entities": [
+    {
+      "id": "A",
+      "type": "elevator",
+      "x": 7,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "speed": 0.6
+    },
+    {
+      "id": "B",
+      "type": "elevator",
+      "x": 31,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          31,
+          7
+        ],
+        [
+          31,
+          2
+        ]
+      ],
+      "speed": 0.6,
+      "required": 2
+    },
+    {
+      "id": "stoneA",
+      "type": "boulder",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "id": "stoneB",
+      "type": "boulder",
+      "x": 31,
+      "y": 6
+    },
+    {
+      "id": "a_low",
+      "type": "plate",
+      "x": 7,
+      "y": 6,
+      "weight": "heavy",
+      "targets": [
+        "B",
+        "w3",
+        "e3"
+      ]
+    },
+    {
+      "id": "a_high",
+      "type": "plate",
+      "x": 7,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "f2",
+        "f4",
+        "e4"
+      ]
+    },
+    {
+      "id": "b_low",
+      "type": "plate",
+      "x": 31,
+      "y": 6,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "w4"
+      ]
+    },
+    {
+      "id": "b_high",
+      "type": "plate",
+      "x": 31,
+      "y": 1,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "w2",
+        "f3",
+        "e2"
+      ]
+    },
+    {
+      "id": "controlA",
+      "type": "lever",
+      "x": 14,
+      "y": 11,
+      "targets": [
+        "A"
+      ]
+    },
+    {
+      "id": "controlB",
+      "type": "lever",
+      "x": 14,
+      "y": 15,
+      "targets": [
+        "B"
+      ]
+    },
+    {
+      "id": "w_key1",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f_key2",
+      "type": "lever",
+      "x": 24,
+      "y": 11,
+      "targets": [
+        "w2",
+        "e2"
+      ]
+    },
+    {
+      "id": "w_key2",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f3"
+      ]
+    },
+    {
+      "id": "f_key3",
+      "type": "lever",
+      "x": 32,
+      "y": 11,
+      "targets": [
+        "w3",
+        "w4",
+        "e3"
+      ]
+    },
+    {
+      "id": "w_key3",
+      "type": "lever",
+      "x": 8,
+      "y": 19,
+      "targets": [
+        "f4",
+        "e4"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 9,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 19,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 28,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f4",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w4",
+      "type": "door",
+      "x": 5,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "id": "w_start",
+      "type": "lever",
+      "x": 35,
+      "y": 19,
+      "targets": [
+        "e1"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 8,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 19,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e3",
+      "type": "door",
+      "x": 28,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e4",
+      "type": "door",
+      "x": 35,
+      "y": 13,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "e_key1",
+      "type": "lever",
+      "x": 24,
+      "y": 15,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "e_key2",
+      "type": "lever",
+      "x": 32,
+      "y": 15,
+      "targets": [
+        "f4"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 14
+    }
+  ],
+  "parTicks": 7380,
+  "hints": [
+    "The first stone must be at its bottom contact to power the second lift.",
+    "Record the high and low permissions, then return to the first control.",
+    "A high sensor on one lift and a low sensor on the other can be required together."
+  ]
+}

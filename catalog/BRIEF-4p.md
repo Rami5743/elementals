@@ -60,18 +60,18 @@ together. `twist-undo`×10, `quorum`×9, `twist-order`×5, `lock-per-element`×4
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- turbine-out-of-reach + twist-sacrifice
-- hop-beats-belt + lock-per-element
-- head-stack + wide-door
-- belt-filter + cargo-power-cascade
-- head-stack + stock-before-it-seals
-- head-stack + hop-beats-belt
-- head-stack + lift-as-floor
-- dark + lock-per-element
-- boulder-carry + fan-passenger
-- freeze-bridge + stand-aside-is-the-switch
-- dive-ahead-of-the-runaway + head-stack
-- door-pushes-you-through + head-stack
+- head-stack + torch-bridge
+- boulder-float + twist-setup
+- low-roof-no-jump + twist-sacrifice
+- lift-as-floor + turbine-out-of-reach
+- belt-filter + lift-as-floor
+- counterweight-you-must-remove + lock-per-element
+- hop-beats-belt + pound-chain
+- counterweight-you-must-remove + turbine-out-of-reach
+- glide-dismount + lock-per-element
+- head-stack + seesaw-balance
+- hold-switch + hop-beats-belt
+- belt-reverse + hop-beats-belt
 
 ## This repo's 4-player levels
 

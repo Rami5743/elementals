@@ -2900,6 +2900,39 @@
   ]
  },
  {
+  "id": "cascade_triad",
+  "name": "Cascade Triad",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7380,
+  "dark": false,
+  "challenge": "mind",
+  "core": "cascade-power-three-operators",
+  "ideas": [
+   "cargo-power-cascade",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 227,
+  "line": "The first cargo lift's bottom contact is the power supply of the second. Three operators must alternate supply loss and restoration, with acknowledgments made at opposite machine states.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "cataract",
   "name": "Cataract",
   "source": "mine",
