@@ -4167,6 +4167,76 @@ Entities:
   X  exit_44      exit       at (38,17)  earth
 ```
 
+## Winter Relay (`winter_relay`) — 3p, core `complementary-ice-two-return-certificates`
+
+```
+Winter Relay (winter_relay) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  #....D..............D..............D...#
+ 5  #.X..D!...........!.D..........!...D...#
+ 6  #.Xl.D@.........l.!.D..........!...D.*.#
+ 7  ########WWWWWW#########WWWWWW###########
+ 8  ########################################
+ 9  ########################################
+10  #....D....D...............D......D.....#
+11  #.X..D....D...............D......D.....#
+12  #.X..D.@..D.......f.......D......D...*.#
+13  ########################################
+14  ########################################
+15  ########################################
+16  #..D............D....................D.#
+17  #..D.!..........D...!..............!.DX#
+18  #.*D.!..........D...!..............@.DX#
+19  ########WWWWWW#########WWWWWW###########
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (6,6)  water (7,12)  earth (35,18)
+Entities:
+  W  FA           pool       at (8,7)  6x1  <- pad  duration 1
+  W  FB           pool       at (23,7)  6x1  <- pad  duration 1  invert
+  W  EA           pool       at (8,19)  6x1  <- pad  duration 1
+  W  EB           pool       at (23,19)  6x1  <- pad  duration 1  invert
+  f  pad          freezepad  at (18,12)  -> FA, FB, EA, EB
+  D  fmiddle      door       at (20,4)  1x3  <- E1  latch
+  D  emiddle      door       at (16,16)  1x3  <- F1  latch
+  D  fhome        door       at (5,4)  1x3  <- F2, E2 (needs 2)  latch
+  D  ehome        door       at (37,16)  1x3  <- F2, E2 (needs 2)  latch
+  D  fend         door       at (35,4)  1x3  <- Fback, Eback (needs 2)  latch
+  D  eend         door       at (3,16)  1x3  <- Fback, Eback (needs 2)  latch
+  D  pad_access   door       at (10,10)  1x3  <- E1  latch
+  D  w_workshop   door       at (26,10)  1x3  <- F2, E2 (needs 2)  latch
+  D  w_final      door       at (33,10)  1x3  <- F3, E3 (needs 2)  latch
+  D  w_exit       door       at (5,10)  1x3  <- Wcert  latch
+  l  F1           lever      at (16,6)  -> emiddle
+  l  E1           lever      at (20,18)  -> fmiddle, pad_access
+  l  F2           lever      at (31,6)  -> fhome, ehome, w_workshop
+  l  E2           lever      at (5,18)  -> fhome, ehome, w_workshop
+  l  Fback        lever      at (3,6)  -> fend, eend
+  l  Eback        lever      at (38,18)  -> fend, eend
+  l  F3           lever      at (37,6)  -> w_final
+  l  E3           lever      at (2,18)  -> w_final
+  l  Wcert        lever      at (37,12)  -> w_exit
+  *  gem_24       gem        at (37,6)  fire
+  *  gem_25       gem        at (2,18)  earth
+  *  gem_26       gem        at (37,12)  water
+  X  exit_27      exit       at (2,5)  fire
+  X  exit_28      exit       at (38,17)  earth
+  X  exit_29      exit       at (2,11)  water
+  !  checkpoint_30 checkpoint at (6,5)
+  !  checkpoint_31 checkpoint at (18,5)
+  !  checkpoint_32 checkpoint at (31,5)
+  !  checkpoint_33 checkpoint at (35,17)
+  !  checkpoint_34 checkpoint at (20,17)
+  !  checkpoint_35 checkpoint at (5,17)
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

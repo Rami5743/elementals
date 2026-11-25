@@ -6505,5 +6505,39 @@
    "opt:required:2",
    "tile:one-way"
   ]
+ },
+ {
+  "id": "winter_relay",
+  "name": "Winter Relay",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7380,
+  "dark": false,
+  "challenge": "mind",
+  "core": "complementary-ice-two-return-certificates",
+  "ideas": [
+   "freeze-invert",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 237,
+  "line": "A single Water pad exchanges the frozen roads of two isolated travelers. Each must return home with a first certificate before either can earn its final far-bank certificate.",
+  "tokens": [
+   "ent:door",
+   "ent:freezepad",
+   "ent:lever",
+   "ent:pool",
+   "opt:invert:pool",
+   "opt:latch",
+   "opt:pool-timed",
+   "opt:required:1",
+   "opt:required:2",
+   "tile:water"
+  ]
  }
 ]

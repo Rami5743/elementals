@@ -1,0 +1,349 @@
+{
+  "id": "winter_relay",
+  "name": "Winter Relay",
+  "order": 237,
+  "description": "One ice selector exchanges two complementary routes. Each traveler must bring back an initial certificate before either can collect the final one.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      6
+    ],
+    "water": [
+      7,
+      12
+    ],
+    "earth": [
+      35,
+      18
+    ]
+  },
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########WWWWWW#########WWWWWW###########",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########WWWWWW#########WWWWWW###########",
+    "########################################",
+    "########################################"
+  ],
+  "parTicks": 7380,
+  "entities": [
+    {
+      "id": "FA",
+      "type": "pool",
+      "x": 8,
+      "y": 7,
+      "w": 6,
+      "duration": 1
+    },
+    {
+      "id": "FB",
+      "type": "pool",
+      "x": 23,
+      "y": 7,
+      "w": 6,
+      "duration": 1,
+      "invert": true
+    },
+    {
+      "id": "EA",
+      "type": "pool",
+      "x": 8,
+      "y": 19,
+      "w": 6,
+      "duration": 1
+    },
+    {
+      "id": "EB",
+      "type": "pool",
+      "x": 23,
+      "y": 19,
+      "w": 6,
+      "duration": 1,
+      "invert": true
+    },
+    {
+      "id": "pad",
+      "type": "freezepad",
+      "x": 18,
+      "y": 12,
+      "targets": [
+        "FA",
+        "FB",
+        "EA",
+        "EB"
+      ]
+    },
+    {
+      "id": "fmiddle",
+      "type": "door",
+      "x": 20,
+      "y": 4,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "emiddle",
+      "type": "door",
+      "x": 16,
+      "y": 16,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "fhome",
+      "type": "door",
+      "x": 5,
+      "y": 4,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "ehome",
+      "type": "door",
+      "x": 37,
+      "y": 16,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "fend",
+      "type": "door",
+      "x": 35,
+      "y": 4,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "eend",
+      "type": "door",
+      "x": 3,
+      "y": 16,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "pad_access",
+      "type": "door",
+      "x": 10,
+      "y": 10,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "w_workshop",
+      "type": "door",
+      "x": 26,
+      "y": 10,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 33,
+      "y": 10,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_exit",
+      "type": "door",
+      "x": 5,
+      "y": 10,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 16,
+      "y": 6,
+      "targets": [
+        "emiddle"
+      ]
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 20,
+      "y": 18,
+      "targets": [
+        "fmiddle",
+        "pad_access"
+      ]
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 31,
+      "y": 6,
+      "targets": [
+        "fhome",
+        "ehome",
+        "w_workshop"
+      ]
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 5,
+      "y": 18,
+      "targets": [
+        "fhome",
+        "ehome",
+        "w_workshop"
+      ]
+    },
+    {
+      "id": "Fback",
+      "type": "lever",
+      "x": 3,
+      "y": 6,
+      "targets": [
+        "fend",
+        "eend"
+      ]
+    },
+    {
+      "id": "Eback",
+      "type": "lever",
+      "x": 38,
+      "y": 18,
+      "targets": [
+        "fend",
+        "eend"
+      ]
+    },
+    {
+      "id": "F3",
+      "type": "lever",
+      "x": 37,
+      "y": 6,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "E3",
+      "type": "lever",
+      "x": 2,
+      "y": 18,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "Wcert",
+      "type": "lever",
+      "x": 37,
+      "y": 12,
+      "targets": [
+        "w_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 6
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 2,
+      "y": 5
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 17
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 11
+    },
+    {
+      "type": "checkpoint",
+      "x": 6,
+      "y": 5
+    },
+    {
+      "type": "checkpoint",
+      "x": 18,
+      "y": 5
+    },
+    {
+      "type": "checkpoint",
+      "x": 31,
+      "y": 5
+    },
+    {
+      "type": "checkpoint",
+      "x": 35,
+      "y": 17
+    },
+    {
+      "type": "checkpoint",
+      "x": 20,
+      "y": 17
+    },
+    {
+      "type": "checkpoint",
+      "x": 5,
+      "y": 17
+    }
+  ],
+  "hints": [
+    "Earth can cross the eastern pools while Water is off the pad; Fire needs the western pools frozen first.",
+    "Both travelers must certify the first far banks and then return to their own banks before the last workshops open.",
+    "The final crossings repeat the alternating states. Water's last workshop requires both final certificates."
+  ]
+}
