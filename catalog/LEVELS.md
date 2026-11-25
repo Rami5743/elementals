@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 142 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 143 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (46)
+## 2 players — this repo (47)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -213,6 +213,9 @@ Totals: 79 campaign levels, 142 in this repo, of which 11 now ship in the campai
   - idea: A single cargo contact means two different things on a powered outward stroke and an unpowered return stroke. The first stroke grants Water's passage; the second requires the far certificate and grants Fire's passage.
   - ideas: direction-qualified-transit-contact, trip-plate-in-the-shaft, timed-window, twist-undo
   - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2
+- **Commitment Bureau** `commitment_bureau` (2p: water+earth) core=`withdrawal-permit-before-second-descent` challenge=mind par=8040
+  - ideas: one-way-drop, twist-sacrifice, twist-undo
+  - features: ent:door ent:lever opt:invert:door opt:latch tile:one-way
 
 ## 2 players — campaign (34)
 

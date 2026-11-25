@@ -1,0 +1,264 @@
+{
+  "id": "commitment_bureau",
+  "name": "Commitment Bureau",
+  "order": 147,
+  "description": "A permit that admits the first descent must be withdrawn to permit the second. Commit only after recording each floor's certificate.",
+  "supports": [
+    [
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###===##################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###################################===##",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "earth": [
+      12,
+      3
+    ],
+    "water": [
+      4,
+      14
+    ]
+  },
+  "entities": [
+    {
+      "id": "e_east1",
+      "type": "door",
+      "x": 24,
+      "y": 1,
+      "h": 3
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 36,
+      "y": 3,
+      "targets": [
+        "w2access"
+      ]
+    },
+    {
+      "id": "e_west1",
+      "type": "door",
+      "x": 8,
+      "y": 1,
+      "h": 3
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 7,
+      "y": 7,
+      "targets": [
+        "w3access"
+      ]
+    },
+    {
+      "id": "e_east2",
+      "type": "door",
+      "x": 22,
+      "y": 5,
+      "h": 3
+    },
+    {
+      "id": "E3",
+      "type": "lever",
+      "x": 25,
+      "y": 7,
+      "targets": [
+        "hatch_access"
+      ]
+    },
+    {
+      "id": "hatch_access",
+      "type": "door",
+      "x": 29,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_hatch2",
+      "type": "door",
+      "x": 31,
+      "y": 5,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "E4",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "e_final",
+      "type": "door",
+      "x": 37,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "E5",
+      "type": "lever",
+      "x": 38,
+      "y": 11,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 4,
+      "y": 14,
+      "targets": [
+        "e_east1",
+        "w_inv1"
+      ]
+    },
+    {
+      "id": "w_inv1",
+      "type": "door",
+      "x": 10,
+      "y": 13,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "w2access",
+      "type": "door",
+      "x": 14,
+      "y": 13,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 18,
+      "y": 14,
+      "targets": [
+        "e_west1",
+        "w_inv2",
+        "e_hatch2"
+      ]
+    },
+    {
+      "id": "w_inv2",
+      "type": "door",
+      "x": 23,
+      "y": 13,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "w3access",
+      "type": "door",
+      "x": 27,
+      "y": 13,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "W3",
+      "type": "lever",
+      "x": 34,
+      "y": 14,
+      "targets": [
+        "e_east2",
+        "w_inv3"
+      ]
+    },
+    {
+      "id": "w_inv3",
+      "type": "door",
+      "x": 29,
+      "y": 13,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "w_west",
+      "type": "door",
+      "x": 2,
+      "y": 13,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "W4",
+      "type": "lever",
+      "x": 1,
+      "y": 14,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 37,
+      "y": 13,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 1,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 13
+    }
+  ],
+  "parTicks": 8040,
+  "hints": [
+    "Earth's east certificate opens the controller's next station.",
+    "The west permit is also a veto on the second drop. Water must withdraw it after the first commitment.",
+    "The bottom west certificate opens the controller's route back to the final key."
+  ]
+}

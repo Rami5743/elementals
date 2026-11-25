@@ -39,18 +39,18 @@ together. `twist-undo`×27, `quorum`×27, `twist-order`×7, `timed-window`×5, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- freeze-bridge + tower-presses-a-column
-- machine-strands-operator + stand-aside-is-the-switch
-- counterweight-you-must-remove + quorum
-- lift-corner-path + twist-two-clocks
-- cargo-as-clock-contact + fan-passenger
-- belt-cargo + counterweight-you-must-remove
-- expiry-order-is-key + lift-corner-path
-- belt-reverse + dark
-- single-file-stone + twist-order
-- hop-beats-belt + lift-corner-path
-- quorum + tower-presses-a-column
-- liquid-lane + timed-window
+- direction-qualified-transit-contact + lift-corner-path
+- fan-band + glide-dismount
+- send-one-through + unload-the-pan-you-ride
+- machine-strands-operator + twist-stranding
+- pound-chain + tower-presses-a-column
+- fan-band + partner-builds-your-landing
+- pound-to-move + quorum
+- counterweight-you-must-remove + lock-per-element
+- fan-passenger + low-roof-no-jump
+- send-one-through + stand-aside-is-the-switch
+- machine-strands-operator + partner-builds-your-landing
+- boulder-float + liquid-lane
 
 ## This repo's 4-player levels
 

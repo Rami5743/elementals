@@ -2522,6 +2522,66 @@ Entities:
   X  exit_20      exit       at (1,18)  water
 ```
 
+## Commitment Bureau (`commitment_bureau`) — 2p, core `withdrawal-permit-before-second-descent`
+
+```
+Commitment Bureau (commitment_bureau) for water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.......D...............D..............#
+ 2  #.......D...............D..............#
+ 3  #.......D...@...........D...........l..#
+ 4  ###===##################################
+ 5  #.....................D......D.D.......#
+ 6  #.....................D......D.D.......#
+ 7  #......l..............D..l...D.D.......#
+ 8  ###################################===##
+ 9  #....................................D.#
+10  #....................................DX#
+11  #..*.................................DX#
+12  ########################################
+13  #.D.......D...D........D...D.D.......DX#
+14  #*D.@.....D...D...l....D...D.D....l..DX#
+15  ########################################
+16  ########################################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (12,3)  water (4,14)
+Entities:
+  D  e_east1      door       at (24,1)  1x3  <- W1
+  l  E1           lever      at (36,3)  -> w2access
+  D  e_west1      door       at (8,1)  1x3  <- W2
+  l  E2           lever      at (7,7)  -> w3access
+  D  e_east2      door       at (22,5)  1x3  <- W3
+  l  E3           lever      at (25,7)  -> hatch_access
+  D  hatch_access door       at (29,5)  1x3  <- E3  latch
+  D  e_hatch2     door       at (31,5)  1x3  <- W2  invert
+  l  E4           lever      at (3,11)  -> w_west
+  D  e_final      door       at (37,9)  1x3  <- W4  latch
+  l  E5           lever      at (38,11)  -> w_final
+  l  W1           lever      at (4,14)  -> e_east1, w_inv1
+  D  w_inv1       door       at (10,13)  1x2  <- W1  invert
+  D  w2access     door       at (14,13)  1x2  <- E1  latch
+  l  W2           lever      at (18,14)  -> e_west1, w_inv2, e_hatch2
+  D  w_inv2       door       at (23,13)  1x2  <- W2  invert
+  D  w3access     door       at (27,13)  1x2  <- E2  latch
+  l  W3           lever      at (34,14)  -> e_east2, w_inv3
+  D  w_inv3       door       at (29,13)  1x2  <- W3  invert
+  D  w_west       door       at (2,13)  1x2  <- E4  latch
+  l  W4           lever      at (1,14)  -> e_final
+  D  w_final      door       at (37,13)  1x2  <- E5  latch
+  *  gem_22       gem        at (3,11)  earth
+  X  exit_23      exit       at (38,10)  earth
+  *  gem_24       gem        at (1,14)  water
+  X  exit_25      exit       at (38,13)  water
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```
