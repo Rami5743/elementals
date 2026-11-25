@@ -4661,6 +4661,43 @@
   ]
  },
  {
+  "id": "signalman_brake",
+  "name": "Signalman Brake",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8460,
+  "dark": false,
+  "challenge": "motor",
+  "core": "braked-transit-acknowledgments",
+  "ideas": [
+   "brake-makes-transit-contact-stable",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 229,
+  "line": "A moving cargo contact becomes a stable permission only when the signalman applies a brake. Two independent acknowledgments determine when the same shuttle may be moved again.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:invert:elevator",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "single_file",
   "name": "Single File",
   "source": "mine",

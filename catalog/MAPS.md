@@ -3118,6 +3118,69 @@ Entities:
   X  exit_33      exit       at (38,14)  earth
 ```
 
+## Signalman Brake (`signalman_brake`) — 3p, core `braked-transit-acknowledgments`
+
+```
+Signalman Brake (signalman_brake) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ##....................................##
+ 5  ##....................................##
+ 6  ##.O....pppp.............pppp.........##
+ 7  ##.E..................................##
+ 8  ########################################
+ 9  #.........D.............D.........D....#
+10  #.........D.............D.........D...X#
+11  #.@.l.....D.....l.......D...l.....D..*X#
+12  ########################################
+13  #.......D..........D.........D.....D...#
+14  #.......D..........D.........D.....D..X#
+15  #..@....D.....l....D....l....D..l..D.*X#
+16  ########################################
+17  #......D...D.......D...........D.......#
+18  #.X....D...D.......D...........D.......#
+19  #.X*l..D...D..l....D...........D.....@.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (2,11)  water (37,19)  earth (3,15)
+Entities:
+  E  shuttle      elevator   at (3,7)  <- brake  mode loop  speed 1  pause 90  invert  path (3,7)-(35,7)
+  O  stone        boulder    at (3,6)
+  p  far          plate      at (25,6)  4x1  -> f1, e2  weight heavy
+  p  near         plate      at (8,6)  4x1  -> f2, e3  weight heavy
+  l  brake        lever      at (14,15)  -> shuttle, f1, f2, w_release, e2, e3, e4  on
+  l  f_start      lever      at (4,11)  -> w1, e1
+  l  f_a          lever      at (16,11)  -> w2, e2
+  l  w_ack        lever      at (14,19)  -> f2, e3
+  l  f_b          lever      at (28,11)  -> w3
+  l  w_last       lever      at (4,19)  -> f3
+  D  w1           door       at (31,17)  1x3  <- f_start  latch
+  D  w2           door       at (19,17)  1x3  <- f_a  latch
+  D  w3           door       at (11,17)  1x3  <- f_b  latch
+  D  w_release    door       at (7,17)  1x3  <- brake  invert
+  D  f1           door       at (10,9)  1x3  <- far, brake (needs 2)  latch
+  D  f2           door       at (24,9)  1x3  <- near, brake, w_ack, e_key1 (needs 4)  latch
+  D  f3           door       at (34,9)  1x3  <- w_last, e_key2 (needs 2)  latch
+  *  gem_17       gem        at (37,11)  fire
+  X  exit_18      exit       at (38,10)  fire
+  *  gem_19       gem        at (3,19)  water
+  X  exit_20      exit       at (2,18)  water
+  D  e1           door       at (8,13)  1x3  <- f_start  latch
+  D  e2           door       at (19,13)  1x3  <- far, brake, f_a (needs 3)  latch
+  D  e3           door       at (29,13)  1x3  <- near, brake, w_ack (needs 3)  latch
+  D  e4           door       at (35,13)  1x3  <- brake  invert
+  l  e_key1       lever      at (24,15)  -> f2
+  l  e_key2       lever      at (32,15)  -> f3
+  *  gem_27       gem        at (37,15)  earth
+  X  exit_28      exit       at (38,14)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

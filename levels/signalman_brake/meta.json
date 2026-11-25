@@ -1,0 +1,10 @@
+{
+  "order": 229,
+  "challenge": "motor",
+  "core": "braked-transit-acknowledgments",
+  "ideas": [
+    "brake-makes-transit-contact-stable",
+    "twist-undo",
+    "quorum"
+  ]
+}

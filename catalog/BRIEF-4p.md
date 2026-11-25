@@ -60,18 +60,18 @@ together. `twist-undo`×10, `quorum`×9, `twist-order`×5, `lock-per-element`×4
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-carry + feed-the-engine-mid-ride
-- glide-dismount + lock-per-element
-- turbine-out-of-reach + twist-stranding
-- mass-adds-on-the-beam + pound-chain
-- torch-bridge + turbine-out-of-reach
-- hop-beats-belt + quorum
-- head-stack + single-file-stone
-- brake-makes-transit-contact-stable + head-stack
-- door-pushes-you-through + low-roof-no-jump
-- head-stack + obstruction-as-third-state
-- sink-as-a-timer + turbine-out-of-reach
-- head-stack + two-stops-no-middle
+- fan-band + one-way-drop
+- hop-beats-belt + turbine-out-of-reach
+- boulder-carry + sink-as-a-timer
+- tower-presses-a-column + turbine-out-of-reach
+- freeze-bridge + hoist-one-way-for-cargo
+- fan-band + pound-to-move
+- head-stack + twist-stranding
+- crate-step + head-stack
+- low-roof-no-jump + twist-sacrifice
+- lift-press + lock-per-element
+- head-stack + unload-the-pan-you-ride
+- brake-makes-transit-contact-stable + turbine-out-of-reach
 
 ## This repo's 4-player levels
 
