@@ -1,0 +1,193 @@
+{
+  "id": "crawlspace",
+  "name": "Crawlspace",
+  "order": 344,
+  "description": "A pound is a jump first, and the crawl is one tile high.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 5400,
+  "hints": [
+    "Earth cannot jump in the crawl, and a ground pound starts with a jump.",
+    "The slab is the floor of the gallery and the roof of the crawl. It cannot be both.",
+    "The far end of the gallery is entered over the slab and left by falling."
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#########################...############",
+    "#########################...############",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "################=......#################",
+    "################.......#################",
+    "####################.###################",
+    "#......................................#",
+    "#......................................#",
+    "#...................#..................#",
+    "###########################WWWWW########",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "air": [
+      9,
+      12
+    ],
+    "fire": [
+      11,
+      12
+    ],
+    "water": [
+      13,
+      12
+    ],
+    "earth": [
+      15,
+      12
+    ]
+  },
+  "entities": [
+    {
+      "id": "pad",
+      "type": "plate",
+      "weight": "heavy",
+      "x": 6,
+      "y": 12,
+      "targets": [
+        "slab"
+      ]
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 6,
+      "y": 12
+    },
+    {
+      "id": "slab",
+      "type": "door",
+      "x": 17,
+      "y": 13,
+      "w": 6,
+      "h": 1,
+      "invert": true
+    },
+    {
+      "id": "panel",
+      "type": "cracked",
+      "x": 20,
+      "y": 15
+    },
+    {
+      "id": "torch",
+      "type": "torch",
+      "x": 35,
+      "y": 12,
+      "targets": [
+        "gate"
+      ]
+    },
+    {
+      "id": "turbine",
+      "type": "turbine",
+      "x": 31,
+      "y": 12,
+      "targets": [
+        "gate"
+      ]
+    },
+    {
+      "id": "gate",
+      "type": "door",
+      "x": 24,
+      "y": 16,
+      "w": 1,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "pool",
+      "type": "pool",
+      "x": 27,
+      "y": 19,
+      "w": 5,
+      "duration": 900
+    },
+    {
+      "id": "icepad",
+      "type": "freezepad",
+      "x": 25,
+      "y": 18,
+      "targets": [
+        "pool"
+      ]
+    },
+    {
+      "type": "checkpoint",
+      "x": 22,
+      "y": 17
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 21,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 28,
+      "y": 12
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 26,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 22,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 32,
+      "y": 17
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 34,
+      "y": 17
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 36,
+      "y": 17
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 17
+    }
+  ]
+}
