@@ -962,6 +962,63 @@ Entities:
   D  w4           door       at (30,17)  1x3  <- l5
 ```
 
+## Grate Register (`grate_register`) — 2p, core `grate-and-press-state-register`
+
+```
+Grate Register (grate_register) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ################.p.#####################
+ 2  ################===#####################
+ 3  ################...#####################
+ 4  ################...#####################
+ 5  ################...#####################
+ 6  ################...#####################
+ 7  ################...#####################
+ 8  ################.p.#####################
+ 9  ################EEE#####################
+10  ########################################
+11  #........D.........D.........D.........#
+12  #........D.........D.........D.......X.#
+13  #..@.....D....l....D...l.....D......*X.#
+14  ########################################
+15  ########################################
+16  ########################################
+17  #.........D.......D.D.........D........#
+18  #.X.......D.......D.D.........D........#
+19  #.X*.l....D.....l.D.D....l....D.....@..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,13)  water (36,19)
+Entities:
+  E  hoist        elevator   at (16,9)  3x1  <- lift  speed 1.5  path (16,9)-(16,2)
+  O  stone        boulder    at (17,8)
+  D  press        door       at (17,1)  <- hammer
+  p  top          plate      at (17,1)  -> g1_0, g1_1, g0_1, g0_2  weight heavy
+  p  bottom       plate      at (17,8)  -> g0_0, g1_2  weight heavy
+  X  exit_5       exit       at (37,12)  fire
+  *  gem_6        gem        at (36,13)  fire
+  X  exit_7       exit       at (2,18)  water
+  *  gem_8        gem        at (3,19)  water
+  l  lift         lever      at (3,13)  -> hoist
+  l  hammer       lever      at (36,19)  -> press  on
+  D  g1_0         door       at (30,17)  1x3  <- top  latch
+  l  r1_0         lever      at (25,19)  -> g0_0
+  D  g0_0         door       at (9,11)  1x3  <- bottom, r1_0 (needs 2)  latch
+  l  r0_0         lever      at (14,13)  -> g1_1
+  D  g1_1         door       at (20,17)  1x3  <- top, r0_0 (needs 2)  latch
+  l  r1_1         lever      at (16,19)  -> g0_1, inv
+  D  inv          door       at (18,17)  1x3  <- r1_1  invert
+  D  g0_1         door       at (19,11)  1x3  <- top, r1_1 (needs 2)  latch
+  l  r0_1         lever      at (23,13)  -> g1_2
+  D  g1_2         door       at (10,17)  1x3  <- bottom, r0_1 (needs 2)  latch
+  l  r1_2         lever      at (5,19)  -> g0_2
+  D  g0_2         door       at (29,11)  1x3  <- top, r1_2 (needs 2)  latch
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

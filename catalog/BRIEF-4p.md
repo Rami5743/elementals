@@ -52,23 +52,24 @@ together. `twist-undo`×5, `lock-per-element`×4, `twist-order`×4, `machine-str
 - `two-stops-no-middle` — A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.
 - `dive-ahead-of-the-runaway` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance — the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
+- `grating-memory-with-erase` — An elevator writes a stone onto a one-way grate; a separate closing press erases it by pushing the stone through after the elevator is removed. Two heavy contacts alternate, storing the previous physical state rather than merely following a switch.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- threshold-is-a-switch + turbine-out-of-reach
-- door-pushes-you-through + low-roof-no-jump
-- lock-per-element + stock-before-it-seals
-- lock-per-element + threshold-is-a-switch
+- freeze-bridge + glide-passenger
+- pound-chain + stand-aside-is-the-switch
+- hoist-one-way-for-cargo + lock-per-element
 - dark + lock-per-element
-- head-stack + partner-builds-your-landing
-- freeze-bridge + wide-door
-- freeze-invert + lock-per-element
-- freeze-bridge + hoist-one-way-for-cargo
-- head-stack + one-way-drop
-- boulder-carry + stock-before-it-seals
-- lift-as-floor + pound-chain
+- lift-as-floor + low-roof-no-jump
+- freeze-bridge + torch-bridge
+- grating-memory-with-erase + lock-per-element
+- freeze-bridge + freeze-invert
+- boulder-carry + door-pushes-you-through
+- hop-beats-belt + lock-per-element
+- lift-corner-path + lock-per-element
+- turbine-out-of-reach + twist-stranding
 
 ## This repo's 4-player levels
 

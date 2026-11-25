@@ -54,23 +54,24 @@ together. `twist-order`×6, `twist-undo`×5, `quorum`×4, `machine-strands-opera
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `grating-memory-with-erase` — An elevator writes a stone onto a one-way grate; a separate closing press erases it by pushing the stone through after the elevator is removed. Two heavy contacts alternate, storing the previous physical state rather than merely following a switch.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-band + timed-window
-- dark + invert-door
-- no-overtaking + object-as-permanent-switch
-- invert-door + partner-builds-your-landing
-- invert-door + mass-adds-on-the-beam
-- freeze-invert + twist-order
-- belt-filter + no-hands-for-cargo
-- boulder-carry + twist-two-clocks
-- mass-adds-on-the-beam + twist-order
-- fan-passenger + two-in-the-air-at-once
-- invert-door + unload-the-pan-you-ride
-- belt-filter + position-as-volatile-key
+- fan-passenger + trigger-from-above
+- turbine-out-of-reach + twist-self-block
+- dark + machine-strands-operator
+- machine-strands-operator + trigger-from-above
+- lift-corner-path + two-in-the-air-at-once
+- stand-aside-is-the-switch + twist-self-block
+- machine-strands-operator + sink-as-a-timer
+- lift-sheds-its-load + machine-strands-operator
+- lift-corner-path + trigger-from-above
+- machine-strands-operator + two-is-not-heavy
+- belt-filter + twist-stranding
+- freeze-invert + twist-self-block
 
 ## This repo's 3-player levels
 
