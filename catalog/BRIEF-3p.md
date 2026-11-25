@@ -33,18 +33,18 @@ together. `twist-undo`×34, `quorum`×27, `twist-order`×10, `timed-window`×8, 
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- dive-ahead-of-the-runaway + door-pushes-you-through
-- glide-passenger + object-as-permanent-switch
-- low-roof-no-jump + machine-strands-operator
-- plank-sums-plate-maxes + timed-window
-- lift-corner-path + trigger-from-above
-- dark + timed-window
-- dark + twist-order
-- plank-sums-plate-maxes + twist-stranding
-- liquid-lane + twist-stranding
-- dark + lift-corner-path
+- lift-sorts-by-weight + object-as-permanent-switch
+- counterweight-you-must-remove + door-pushes-you-through
+- boulder-carry + invert-door
+- door-pushes-you-through + lift-corner-path
+- counterweight-you-must-remove + trigger-from-above
+- partner-builds-your-landing + timed-window
+- feed-the-engine-mid-ride + timed-window
 - boulder-carry + twist-self-block
-- glide-passenger + twist-order
+- low-roof-no-jump + machine-strands-operator
+- counterweight-you-must-remove + feed-the-engine-mid-ride
+- counterweight-you-must-remove + lift-sorts-by-weight
+- plank-sums-plate-maxes + twist-self-block
 
 ## This repo's 3-player levels
 

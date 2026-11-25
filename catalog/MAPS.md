@@ -10192,3 +10192,61 @@ Entities:
   p  home         plate      at (2,6)  2x1  -> E_return  weight heavy
   p  far          plate      at (22,6)  3x1  -> W_select  weight heavy
 ```
+
+## Elbow Recall (`elbow_recall`) — 4p, core `corner-shuttle-recall-certificates`
+
+```
+Elbow Recall (elbow_recall) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #.........D....D.........D...........D.#
+ 3  #.........D....D.........D...........DX#
+ 4  #...@.....D....D.........D........l*.DX#
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  #.D............................F.X.X.X.#
+11  #.D..........................*.F.l.XlX.#
+12  #.D........................#############
+13  #.D.....#..............................#
+14  #.D.....#..............................#
+15  #.D.....#..............................#
+16  #.D.....I..............................#
+17  #.D..*..I*.............................#
+18  #lDp..O.I@@@........*..................#
+19  ############EEE............#############
+20  ############...............#############
+21  ############SSSSSSSSSSSSSSS#############
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (9,18)  water (10,18)  earth (11,18)  air (4,4)
+Entities:
+  *  gem_0        gem        at (5,17)  earth
+  *  gem_1        gem        at (9,17)  fire
+  *  gem_2        gem        at (20,18)  neutral
+  *  gem_3        gem        at (29,11)  water
+  p  weigh        plate      at (2,18)  2x1  -> lift  weight heavy
+  O  bould        boulder    at (6,18)
+  I  ice          ice        at (8,16)  1x3
+  E  lift         elevator   at (12,19)  3x1  <- weigh, first, second (needs 2)  speed 0.8  path (12,19)-(24,19)-(24,12)
+  F  flames       firewall   at (31,10)  1x2
+  X  exit_9       exit       at (35,10)  fire
+  X  exit_10      exit       at (37,10)  water
+  X  exit_11      exit       at (33,10)  earth
+  l  first        lever      at (4,4)  -> lift, inverse
+  D  inverse      door       at (10,2)  1x3  <- first  invert
+  D  A_first      door       at (15,2)  1x3  <- Wreceipt  latch
+  l  Wreceipt     lever      at (36,11)  -> A_first, lower_cert_gate
+  l  Ereceipt     lever      at (1,18)  -> A_second
+  D  A_second     door       at (25,2)  1x3  <- Ereceipt  latch
+  l  second       lever      at (34,4)  -> lift
+  l  Eupper       lever      at (33,11)  -> A_exit
+  D  A_exit       door       at (37,2)  1x3  <- Eupper  latch
+  *  gem_21       gem        at (35,4)  air
+  X  exit_22      exit       at (38,3)  air
+  D  lower_cert_gate door       at (2,10)  1x9  <- Wreceipt  latch
+```

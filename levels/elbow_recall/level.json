@@ -1,0 +1,259 @@
+{
+  "id": "elbow_recall",
+  "name": "Elbow Recall",
+  "order": 353,
+  "description": "The same corner shuttle crosses the pit and climbs the far bank. Recall it after the first inspection to obtain the lower certificate, then dispatch it from a different control.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 7440,
+  "hints": [
+    "Fire clears the ice and Earth parks the boulder on the heavy contact. Air's permit plus the contact powers the corner shuttle.",
+    "Send Fire and Water first. Water clears the upper flames and issues the receipt, then Air must revoke the first permit to recall the shuttle.",
+    "Earth issues the newly enabled lower receipt, then rides after Air authorizes the second dispatch."
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#..........................#############",
+    "#.......#..............................#",
+    "#.......#..............................#",
+    "#.......#..............................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "############...............#############",
+    "############...............#############",
+    "############SSSSSSSSSSSSSSS#############"
+  ],
+  "spawns": {
+    "fire": [
+      9,
+      18
+    ],
+    "water": [
+      10,
+      18
+    ],
+    "earth": [
+      11,
+      18
+    ],
+    "air": [
+      4,
+      4
+    ]
+  },
+  "entities": [
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 5,
+      "y": 17
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 9,
+      "y": 17
+    },
+    {
+      "type": "gem",
+      "element": "neutral",
+      "x": 20,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 29,
+      "y": 11
+    },
+    {
+      "id": "weigh",
+      "type": "plate",
+      "x": 2,
+      "y": 18,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "lift"
+      ]
+    },
+    {
+      "id": "bould",
+      "type": "boulder",
+      "x": 6,
+      "y": 18
+    },
+    {
+      "id": "ice",
+      "type": "ice",
+      "x": 8,
+      "y": 16,
+      "h": 3
+    },
+    {
+      "id": "lift",
+      "type": "elevator",
+      "x": 12,
+      "y": 19,
+      "w": 3,
+      "path": [
+        [
+          12,
+          19
+        ],
+        [
+          24,
+          19
+        ],
+        [
+          24,
+          12
+        ]
+      ],
+      "speed": 0.8,
+      "required": 2
+    },
+    {
+      "id": "flames",
+      "type": "firewall",
+      "x": 31,
+      "y": 10,
+      "h": 2
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 35,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 37,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 33,
+      "y": 10
+    },
+    {
+      "id": "first",
+      "type": "lever",
+      "x": 4,
+      "y": 4,
+      "targets": [
+        "lift",
+        "inverse"
+      ]
+    },
+    {
+      "id": "inverse",
+      "type": "door",
+      "x": 10,
+      "y": 2,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "A_first",
+      "type": "door",
+      "x": 15,
+      "y": 2,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Wreceipt",
+      "type": "lever",
+      "x": 36,
+      "y": 11,
+      "targets": [
+        "A_first",
+        "lower_cert_gate"
+      ]
+    },
+    {
+      "id": "Ereceipt",
+      "type": "lever",
+      "x": 1,
+      "y": 18,
+      "targets": [
+        "A_second"
+      ]
+    },
+    {
+      "id": "A_second",
+      "type": "door",
+      "x": 25,
+      "y": 2,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "second",
+      "type": "lever",
+      "x": 34,
+      "y": 4,
+      "targets": [
+        "lift"
+      ]
+    },
+    {
+      "id": "Eupper",
+      "type": "lever",
+      "x": 33,
+      "y": 11,
+      "targets": [
+        "A_exit"
+      ]
+    },
+    {
+      "id": "A_exit",
+      "type": "door",
+      "x": 37,
+      "y": 2,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 35,
+      "y": 4
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 3
+    },
+    {
+      "id": "lower_cert_gate",
+      "type": "door",
+      "x": 2,
+      "y": 10,
+      "h": 9,
+      "latch": true
+    }
+  ]
+}

@@ -4541,6 +4541,43 @@
   ]
  },
  {
+  "id": "elbow_recall",
+  "name": "Elbow Recall",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7440,
+  "dark": false,
+  "challenge": "mind",
+  "core": "corner-shuttle-recall-certificates",
+  "ideas": [
+   "lift-corner-path",
+   "twist-stranding",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 353,
+  "line": "lift-corner-path at four players. A corner shuttle is both the bridge across a pit and the only elevator to the far gallery; two geographically separated controls must power successive trips with an intervening lower receipt.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:firewall",
+   "ent:ice",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "empty_balance",
   "name": "Empty Balance",
   "source": "mine",

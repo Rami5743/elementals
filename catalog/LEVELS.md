@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 169 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 170 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (56)
@@ -749,7 +749,7 @@ Totals: 79 campaign levels, 169 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (55)
+## 4 players — this repo (56)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -964,6 +964,10 @@ Totals: 79 campaign levels, 169 in this repo, of which 11 now ship in the campai
   - idea: A vertical draught has a middle-floor exit that must be selected while rising, not at the roof; its second launch is unlocked by a cargo arriving at a dock, and the cargo must be recalled to release the final return route.
   - ideas: climb-then-steer, transport-power-excludes-workshop, timed-window, twist-undo
   - features: ent:boulder ent:button ent:door ent:elevator ent:fan ent:lever ent:plate opt:button-timed opt:button:timed opt:fan:lifts-air opt:heavy-plate opt:latch opt:required:2 opt:required:3
+- **Elbow Recall** `elbow_recall` (4p: fire+water+earth+air) core=`corner-shuttle-recall-certificates` challenge=mind par=7440
+  - idea: lift-corner-path at four players. A corner shuttle is both the bridge across a pit and the only elevator to the far gallery; two geographically separated controls must power successive trips with an intervening lower receipt.
+  - ideas: lift-corner-path, twist-stranding, quorum, twist-undo
+  - features: ent:boulder ent:door ent:elevator ent:firewall ent:ice ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch opt:required:2 tile:sludge
 
 ## 4 players — campaign (23)
 
