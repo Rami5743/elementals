@@ -53,23 +53,24 @@ together. `twist-order`×7, `twist-undo`×7, `quorum`×5, `machine-strands-opera
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `shutter-floor-wall-duality` — A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- object-as-permanent-switch + two-in-the-air-at-once
-- lift-corner-path + trip-plate-in-the-shaft
-- mass-adds-on-the-beam + twist-self-block
-- belt-filter + two-stage-piston-handoff
-- lift-corner-path + switch-in-mid-flight
-- belt-reverse + machine-strands-operator
-- object-as-permanent-switch + single-file-stone
-- sink-as-a-timer + twist-order
-- belt-reverse + twist-order
-- lift-corner-path + pound-chain
-- belt-filter + lift-corner-path
-- turbine-out-of-reach + twist-two-clocks
+- fan-passenger + lift-sorts-by-weight
+- send-one-through + twist-stranding
+- machine-strands-operator + pound-chain
+- timed-window + two-is-not-heavy
+- freeze-invert + object-as-permanent-switch
+- pound-chain + timed-window
+- object-as-permanent-switch + pound-chain
+- boulder-carry + object-as-permanent-switch
+- timed-window + wide-door
+- send-one-through + timed-window
+- timed-window + unload-the-pan-you-ride
+- pound-to-move + timed-window
 
 ## This repo's 3-player levels
 

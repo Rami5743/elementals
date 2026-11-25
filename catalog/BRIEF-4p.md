@@ -52,23 +52,24 @@ together. `twist-undo`×7, `quorum`×6, `twist-order`×5, `lock-per-element`×4,
 - `two-stops-no-middle` — A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.
 - `dive-ahead-of-the-runaway` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance — the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
+- `shutter-floor-wall-duality` — A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- low-roof-no-jump + stock-before-it-seals
-- crate-step + freeze-bridge
-- hoist-one-way-for-cargo + turbine-out-of-reach
-- lift-press + lock-per-element
-- reversible-switch-maze + twist-self-block
-- fan-band + stock-before-it-seals
-- boulder-float + twist-setup
-- reversible-switch-maze + seesaw-balance
-- lock-per-element + single-file-stone
-- dark + reversible-switch-maze
-- boulder-carry + twist-stranding
-- counterweight-you-must-remove + pound-chain
+- lock-per-element + stand-aside-is-the-switch
+- boulder-carry + shared-switch-two-gates
+- boulder-carry + shutter-floor-wall-duality
+- fan-band + hoist-one-way-for-cargo
+- belt-filter + shutter-floor-wall-duality
+- fan-band + glide-passenger
+- boulder-carry + torch-bridge
+- feed-the-engine-mid-ride + freeze-bridge
+- turbine-out-of-reach + unload-the-pan-you-ride
+- fan-band + seesaw-balance
+- crate-step + head-stack
+- pound-chain + twist-sacrifice
 
 ## This repo's 4-player levels
 

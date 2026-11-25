@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 70 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 71 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (22)
+## 2 players — this repo (23)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -118,6 +118,10 @@ Totals: 79 campaign levels, 70 in this repo, of which 11 now ship in the campaig
   - idea: The single powered ferry is needed to reach a workshop, but its motor simultaneously closes that workshop's entrance. To enter, stop the ferry after docking. To get back, reopen the motor circuit only after the rider has returned to the dock.
   - ideas: transport-power-excludes-workshop, lift-loop, twist-undo
   - features: ent:door ent:elevator ent:lever opt:elevator:loop opt:invert:door opt:latch opt:required:2 tile:one-way
+- **Shutter Exchange** `shutter_exchange` (2p: fire+water) core=`complementary-shutters-key-handoff` challenge=mind par=7260
+  - idea: Two wide horizontal shutters are complementary. Each is simultaneously a floor for the upper gallery and a wall for the lower gallery. The players must hand over the live selector and exchange which gallery can cross which gap.
+  - ideas: shutter-floor-wall-duality, wide-door, twist-undo
+  - features: ent:door ent:lever ent:plate opt:invert:door opt:latch opt:required:2 opt:wide-door tile:one-way
 
 ## 2 players — campaign (34)
 

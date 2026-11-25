@@ -1,0 +1,231 @@
+{
+  "id": "shutter_exchange",
+  "name": "Shutter Exchange",
+  "order": 123,
+  "description": "One shutter is a bridge above and a wall below. The other is its complement. Hand over the live key so both can cross.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "parTicks": 7260,
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "######===#......########......##########",
+    "#......................................#",
+    "#.....===..............................#",
+    "#......................................#",
+    "#.....===..............................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      8,
+      6
+    ],
+    "water": [
+      8,
+      11
+    ]
+  },
+  "entities": [
+    {
+      "id": "shutterA",
+      "type": "door",
+      "x": 10,
+      "y": 7,
+      "w": 6,
+      "h": 5
+    },
+    {
+      "id": "shutterB",
+      "type": "door",
+      "x": 24,
+      "y": 7,
+      "w": 6,
+      "h": 5,
+      "invert": true
+    },
+    {
+      "id": "upper",
+      "type": "lever",
+      "x": 19,
+      "y": 6,
+      "targets": [
+        "shutterA",
+        "shutterB"
+      ]
+    },
+    {
+      "id": "lower",
+      "type": "lever",
+      "x": 19,
+      "y": 11,
+      "targets": [
+        "shutterA",
+        "shutterB"
+      ]
+    },
+    {
+      "id": "f_far",
+      "type": "lever",
+      "x": 33,
+      "y": 6,
+      "targets": [
+        "w_far_gate"
+      ]
+    },
+    {
+      "id": "w_far_gate",
+      "type": "door",
+      "x": 32,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "id": "w_far",
+      "type": "lever",
+      "x": 35,
+      "y": 11,
+      "targets": [
+        "f_left_gate",
+        "w_left_gate"
+      ]
+    },
+    {
+      "id": "f_left_gate",
+      "type": "door",
+      "x": 4,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w_left_gate",
+      "type": "door",
+      "x": 5,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "id": "f_left",
+      "type": "lever",
+      "x": 3,
+      "y": 6,
+      "targets": [
+        "f_final_gate"
+      ]
+    },
+    {
+      "id": "w_left",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "f_final_gate"
+      ]
+    },
+    {
+      "id": "f_final_gate",
+      "type": "door",
+      "x": 36,
+      "y": 4,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f_final",
+      "type": "lever",
+      "x": 37,
+      "y": 6,
+      "targets": [
+        "w_final_gate"
+      ]
+    },
+    {
+      "id": "w_final_gate",
+      "type": "door",
+      "x": 37,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 5
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 6
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 4,
+      "text": "Upper key"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 8,
+      "text": "Lower key"
+    },
+    {
+      "id": "exit_contact",
+      "type": "plate",
+      "x": 38,
+      "y": 11,
+      "targets": [
+        "f_exit"
+      ]
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 2,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    }
+  ],
+  "hints": [
+    "A closed shutter supports the upper corridor but obstructs the lower one. The other shutter is always complementary.",
+    "Either middle lever can select the second bridge. Have the second operator take over before the first releases its key.",
+    "After both return for the left keys, exchange the shutters again. Water must leave its own exit temporarily to return Fire."
+  ]
+}

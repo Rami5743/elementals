@@ -1128,6 +1128,62 @@ Entities:
   "  sign_16      sign       at (25,17)  "Motor"
 ```
 
+## Shutter Exchange (`shutter_exchange`) — 2p, core `complementary-shutters-key-handoff`
+
+```
+Shutter Exchange (shutter_exchange) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  #.D.D...............................D..#
+ 5  #XD.D...............................D..#
+ 6  #XDlD...@..........l.............l..D*.#
+ 7  ######===#DDDDDD########DDDDDD##########
+ 8  #....D....DDDDDD........DDDDDD..D....D.#
+ 9  #....D===.DDDDDD........DDDDDD..D....D.#
+10  #....D....DDDDDD........DDDDDD..D....DX#
+11  #..*.D==@.DDDDDD...l....DDDDDD..D..l.Dp#
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (8,6)  water (8,11)
+Entities:
+  D  shutterA     door       at (10,7)  6x5  <- upper, lower
+  D  shutterB     door       at (24,7)  6x5  <- upper, lower  invert
+  l  upper        lever      at (19,6)  -> shutterA, shutterB
+  l  lower        lever      at (19,11)  -> shutterA, shutterB
+  l  f_far        lever      at (33,6)  -> w_far_gate
+  D  w_far_gate   door       at (32,8)  1x4  <- f_far  latch
+  l  w_far        lever      at (35,11)  -> f_left_gate, w_left_gate
+  D  f_left_gate  door       at (4,4)  1x3  <- w_far  latch
+  D  w_left_gate  door       at (5,8)  1x4  <- w_far  latch
+  l  f_left       lever      at (3,6)  -> f_final_gate
+  l  w_left       lever      at (3,11)  -> f_final_gate
+  D  f_final_gate door       at (36,4)  1x3  <- f_left, w_left (needs 2)  latch
+  l  f_final      lever      at (37,6)  -> w_final_gate
+  D  w_final_gate door       at (37,8)  1x4  <- f_final  latch
+  X  exit_14      exit       at (1,5)  fire
+  *  gem_15       gem        at (37,6)  fire
+  X  exit_16      exit       at (38,10)  water
+  *  gem_17       gem        at (3,11)  water
+  "  sign_18      sign       at (18,4)  "Upper key"
+  "  sign_19      sign       at (18,8)  "Lower key"
+  p  exit_contact plate      at (38,11)  -> f_exit
+  D  f_exit       door       at (2,4)  1x3  <- exit_contact  latch
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

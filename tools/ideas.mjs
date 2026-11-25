@@ -163,3 +163,5 @@ Object.assign(IDEAS, { "grating-memory-with-erase": {kind:'spine',note:"An eleva
 Object.assign(IDEAS, { "two-stage-piston-handoff": {kind:'spine',note:"Two adjacent sideways doors form a sequential ram: the short piston must transfer the cargo into the long piston's range while it is retracted. Closing the long piston prematurely blocks the transfer. A returning belt makes the three stationary contact states reusable."} });
 
 Object.assign(IDEAS, { "transport-power-excludes-workshop": {kind:'spine',note:"One switch powers a ferry and closes the workshop gate on its far bank. Dock, stop the machine to enter, relinquish the far position, and restart the machine to get back; the transport and access permissions are incompatible."} });
+
+Object.assign(IDEAS, { "shutter-floor-wall-duality": {kind:'spine',note:"A wide horizontal shutter is a floor above and a wall below; complementary shutters require a live key handoff so a bridge for one gallery does not obstruct the other gallery's route."} });

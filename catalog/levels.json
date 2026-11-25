@@ -4362,6 +4362,38 @@
   ]
  },
  {
+  "id": "shutter_exchange",
+  "name": "Shutter Exchange",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7260,
+  "dark": false,
+  "challenge": "mind",
+  "core": "complementary-shutters-key-handoff",
+  "ideas": [
+   "shutter-floor-wall-duality",
+   "wide-door",
+   "twist-undo"
+  ],
+  "order": 123,
+  "line": "Two wide horizontal shutters are complementary. Each is simultaneously a floor for the upper gallery and a wall for the lower gallery. The players must hand over the live selector and exchange which gallery can cross which gap.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:wide-door",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "signal_fire",
   "name": "Signal Fire",
   "source": "mine",
