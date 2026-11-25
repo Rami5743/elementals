@@ -46,9 +46,13 @@ each a distinct resting tile. The reliable arrangement is:
 
 ## Solution scripts
 
-- Export `solutions = { level: '<id>', sets: [{ elements: [...], scripts: {...}, shortcuts: [...] }], roles: {...} }`.
-  `shortcuts` is a list of `{ name, scripts }` that each *try* a cheat you believe is blocked; `check`
-  fails if one of them finishes the level. Write them as you close each hole, not at the end.
+- Export `solutions = { sets: [{ elements: [...], scripts: {...}, shortcuts: [...] }], roles: {...} }`.
+  The kit reads exactly one thing — `solutions` with a `sets` list — so anything else is ignored:
+  older files here carry a `level: '<id>'` field that does nothing, and new ones should leave it out.
+- `shortcuts` is a list of `{ name, scripts, maxTicks }` that each *try* a cheat you believe is
+  blocked; `check` runs each for `maxTicks` (default 6000, about 100 s) and fails if one finishes
+  the level. Write them as you close each hole, not at the end — `kit.mjs new` now scaffolds one
+  for you to copy.
 - Sequence with `c.flag(name)` and `waitFlag`; never rely on two players' timings lining up.
 - `go(c, x)` walks to a tile centre and stops; `until(c, pred, bits, max, what)` is the workhorse
   for waiting on a door, a lift or a partner; `pound(c)` after about 14 ticks of held jump.
