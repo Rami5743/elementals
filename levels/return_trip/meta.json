@@ -1,0 +1,10 @@
+{
+  "order": 131,
+  "challenge": "motor",
+  "core": "upper-then-lower-rider-trip",
+  "ideas": [
+    "trip-plate-in-the-shaft",
+    "lift-loop",
+    "twist-stranding"
+  ]
+}

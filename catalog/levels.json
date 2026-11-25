@@ -4569,6 +4569,39 @@
   ]
  },
  {
+  "id": "return_trip",
+  "name": "Return Trip",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 15600,
+  "dark": false,
+  "challenge": "motor",
+  "core": "upper-then-lower-rider-trip",
+  "ideas": [
+   "trip-plate-in-the-shaft",
+   "lift-loop",
+   "twist-stranding"
+  ],
+  "order": 131,
+  "line": "A heavy rider turns a moving lift into a periodic switch. The runner needs the upper trip contact before the lower one, so the rider cannot get off at the first upper berth.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "reversing_signal",
   "name": "Reversing Signal",
   "source": "mine",

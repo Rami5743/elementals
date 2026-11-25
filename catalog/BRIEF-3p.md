@@ -59,18 +59,18 @@ together. `twist-undo`×13, `quorum`×11, `twist-order`×7, `machine-strands-ope
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- counterweight-you-must-remove + feed-the-engine-mid-ride
-- lift-sheds-its-load + machine-strands-operator
-- liquid-lane + twist-order
-- feed-the-engine-mid-ride + invert-door
-- lift-corner-path + lock-per-element
-- belt-filter + machine-strands-operator
-- belt-filter + lift-as-floor
-- liquid-lane + timed-window
-- hop-beats-belt + timed-window
-- timed-window + twist-sacrifice
-- belt-filter + invert-door
-- lock-per-element + twist-order
+- fan-passenger + no-overtaking
+- boulder-float + twist-order
+- dark + invert-door
+- convergent-belt-seam + counterweight-you-must-remove
+- boulder-carry + invert-door
+- invert-door + no-overtaking
+- invert-door + seesaw-balance
+- counterweight-you-must-remove + stock-before-it-seals
+- invert-door + plank-sums-plate-maxes
+- counterweight-you-must-remove + lock-per-element
+- object-as-permanent-switch + sink-as-a-timer
+- hop-beats-belt + invert-door
 
 ## This repo's 3-player levels
 
