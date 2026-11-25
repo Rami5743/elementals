@@ -55,18 +55,18 @@ together. `twist-undo`×14, `quorum`×13, `twist-order`×7, `machine-strands-ope
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- fan-passenger + lift-sheds-its-load
-- freeze-bridge + seesaw-balance
-- object-as-permanent-switch + trigger-from-above
-- lift-corner-path + mass-adds-on-the-beam
+- boulder-carry + freeze-bridge
+- crate-step + timed-window
+- object-as-permanent-switch + plank-sums-plate-maxes
+- crate-step + twist-self-block
+- lift-corner-path + pound-chain
+- machine-strands-operator + no-overtaking
+- lift-corner-path + sink-as-a-timer
+- counterweight-you-must-remove + turbine-out-of-reach
 - machine-strands-operator + two-in-the-air-at-once
-- boulder-float + twist-stranding
-- freeze-bridge + glide-passenger
-- counterweight-you-must-remove + feed-the-engine-mid-ride
-- plank-sums-plate-maxes + twist-stranding
-- seesaw-balance + twist-order
-- fan-passenger + low-roof-no-jump
-- counterweight-you-must-remove + low-roof-no-jump
+- machine-strands-operator + wide-door
+- lift-corner-path + no-overtaking
+- pound-to-move + twist-stranding
 
 ## This repo's 3-player levels
 

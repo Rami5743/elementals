@@ -5387,3 +5387,81 @@ Entities:
   *  gem_35       gem        at (37,16)  air
   X  exit_36      exit       at (38,15)  air
 ```
+
+## Junction Council (`junction_council`) — 4p, core `dual-approval-conveyor-junction`
+
+```
+Junction Council (junction_council) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ##....................................##
+ 5  ##....................................##
+ 6  ##ppp.............pppp.............ppp##
+ 7  ##>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<##
+ 8  ########################################
+ 9  #........D.........D........D......D..X#
+10  #..@.....D....l....D....l...D...l..D.*X#
+11  ########################################
+12  #.......D..........D........D......D..X#
+13  #..@....D.....l....D....l...D...l..D.*X#
+14  ########################################
+15  #.......D..........D........D......D..X#
+16  #..@....D.....l....D....l...D...l..D.*X#
+17  ########################################
+18  #.X..D.....D.......D.........D.........#
+19  #.Xl.D..l..D..l....D....l....D.......@.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,10)  water (37,19)  earth (3,13)  air (3,16)
+Entities:
+  >  left_belt    belt       at (2,7)  18x1  <- L  mode reverse  speed 2
+  >  right_belt   belt       at (20,7)  18x1  <- R, a_control (needs 2)  mode reverse  speed -2
+  O  token        boulder    at (19,6)
+  p  center       plate      at (18,6)  4x1  -> f1, w1, w4, e3, a3  weight heavy
+  p  left         plate      at (2,6)  3x1  -> f2, w2, f4, e1, e4, a1, a4  weight heavy
+  p  right        plate      at (35,6)  3x1  -> f3, w3, e2, a2  weight heavy
+  l  L            lever      at (3,10)  -> left_belt
+  l  R            lever      at (14,13)  -> right_belt
+  l  fkey1        lever      at (14,10)  -> w1
+  l  wkey1        lever      at (24,19)  -> f2
+  l  fkey2        lever      at (24,10)  -> w2, e1, a1
+  l  wkey2        lever      at (14,19)  -> f3
+  l  fkey3        lever      at (32,10)  -> w3, w4, e2, a2
+  l  wkey3        lever      at (8,19)  -> w4, e3, a3
+  l  wlast        lever      at (3,19)  -> f4, e4, a4
+  D  f1           door       at (9,9)  1x2  <- center  latch
+  D  f2           door       at (19,9)  1x2  <- left, wkey1 (needs 2)  latch
+  D  f3           door       at (28,9)  1x2  <- right, wkey2 (needs 2)  latch
+  D  f4           door       at (35,9)  1x2  <- left, wlast (needs 2)
+  D  w1           door       at (29,18)  1x2  <- center, fkey1 (needs 2)  latch
+  D  w2           door       at (19,18)  1x2  <- left, fkey2 (needs 2)  latch
+  D  w3           door       at (11,18)  1x2  <- right, fkey3, ekey1, akey1 (needs 4)  latch
+  D  w4           door       at (5,18)  1x2  <- center, fkey3, wkey3, ekey2, akey2 (needs 5)  latch
+  *  gem_23       gem        at (37,10)  fire
+  X  exit_24      exit       at (38,9)  fire
+  *  gem_25       gem        at (2,19)  water
+  X  exit_26      exit       at (2,18)  water
+  D  e1           door       at (8,12)  1x2  <- left, fkey2 (needs 2)  latch
+  D  e2           door       at (19,12)  1x2  <- right, fkey3 (needs 2)  latch
+  D  e3           door       at (28,12)  1x2  <- center, wkey3 (needs 2)  latch
+  D  e4           door       at (35,12)  1x2  <- left, wlast (needs 2)
+  l  ekey1        lever      at (24,13)  -> w3
+  l  ekey2        lever      at (32,13)  -> w4
+  *  gem_33       gem        at (37,13)  earth
+  X  exit_34      exit       at (38,12)  earth
+  D  a1           door       at (8,15)  1x2  <- left, fkey2 (needs 2)  latch
+  D  a2           door       at (19,15)  1x2  <- right, fkey3 (needs 2)  latch
+  D  a3           door       at (28,15)  1x2  <- center, wkey3 (needs 2)  latch
+  D  a4           door       at (35,15)  1x2  <- left, wlast (needs 2)
+  l  a_control    lever      at (14,16)  -> right_belt
+  l  akey1        lever      at (24,16)  -> w3
+  l  akey2        lever      at (32,16)  -> w4
+  *  gem_42       gem        at (37,16)  air
+  X  exit_43      exit       at (38,15)  air
+```

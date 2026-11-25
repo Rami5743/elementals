@@ -3990,6 +3990,43 @@
   }
  },
  {
+  "id": "junction_council",
+  "name": "Junction Council",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 9480,
+  "dark": false,
+  "challenge": "mind",
+  "core": "dual-approval-conveyor-junction",
+  "ideas": [
+   "convergent-belt-seam",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 329,
+  "line": "Two conveyors meet at a stable seam. Reversing the right-hand conveyor requires two approvals, and the same quorum must later be broken to gather the token.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:4",
+   "opt:required:5"
+  ]
+ },
+ {
   "id": "junction_dispatch",
   "name": "Junction Dispatch",
   "source": "mine",
