@@ -1,0 +1,411 @@
+{
+  "id": "shutter_council",
+  "name": "Shutter Council",
+  "order": 323,
+  "description": "Two isolated operators must relinquish their quorum keys to certify each bridge exchange, then return to restore the quorum.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 11100,
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "######===#......########......##########",
+    "#......................................#",
+    "#.....===..............................#",
+    "#......................................#",
+    "#.....===..............................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      8,
+      6
+    ],
+    "water": [
+      8,
+      11
+    ],
+    "earth": [
+      3,
+      19
+    ],
+    "air": [
+      3,
+      15
+    ]
+  },
+  "entities": [
+    {
+      "id": "shutterA",
+      "type": "door",
+      "x": 10,
+      "y": 7,
+      "w": 6,
+      "h": 5,
+      "required": 3
+    },
+    {
+      "id": "shutterB",
+      "type": "door",
+      "x": 24,
+      "y": 7,
+      "w": 6,
+      "h": 5,
+      "invert": true,
+      "required": 3
+    },
+    {
+      "id": "upper",
+      "type": "lever",
+      "x": 19,
+      "y": 6,
+      "targets": [
+        "shutterA",
+        "shutterB"
+      ]
+    },
+    {
+      "id": "lower",
+      "type": "lever",
+      "x": 19,
+      "y": 11,
+      "targets": [
+        "shutterA",
+        "shutterB"
+      ]
+    },
+    {
+      "id": "f_far",
+      "type": "lever",
+      "x": 33,
+      "y": 6,
+      "targets": [
+        "w_far_gate"
+      ]
+    },
+    {
+      "id": "w_far_gate",
+      "type": "door",
+      "x": 32,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "id": "w_far",
+      "type": "lever",
+      "x": 35,
+      "y": 11,
+      "targets": [
+        "f_left_gate",
+        "w_left_gate",
+        "e_first",
+        "a_first"
+      ]
+    },
+    {
+      "id": "f_left_gate",
+      "type": "door",
+      "x": 4,
+      "y": 4,
+      "h": 3,
+      "latch": true,
+      "required": 3
+    },
+    {
+      "id": "w_left_gate",
+      "type": "door",
+      "x": 5,
+      "y": 8,
+      "h": 4,
+      "latch": true,
+      "required": 3
+    },
+    {
+      "id": "f_left",
+      "type": "lever",
+      "x": 3,
+      "y": 6,
+      "targets": [
+        "f_final_gate",
+        "e_second",
+        "a_second"
+      ]
+    },
+    {
+      "id": "w_left",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "f_final_gate",
+        "e_second",
+        "a_second"
+      ]
+    },
+    {
+      "id": "f_final_gate",
+      "type": "door",
+      "x": 36,
+      "y": 4,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "f_final",
+      "type": "lever",
+      "x": 37,
+      "y": 6,
+      "targets": [
+        "w_final_gate",
+        "e_exit",
+        "a_exit"
+      ]
+    },
+    {
+      "id": "w_final_gate",
+      "type": "door",
+      "x": 37,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 5
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 6
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 4,
+      "text": "Upper key"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 8,
+      "text": "Lower key"
+    },
+    {
+      "id": "exit_contact",
+      "type": "plate",
+      "x": 38,
+      "y": 11,
+      "targets": [
+        "f_exit",
+        "e_exit",
+        "a_exit"
+      ]
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 2,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_key",
+      "type": "lever",
+      "x": 3,
+      "y": 19,
+      "targets": [
+        "shutterA",
+        "shutterB",
+        "e_inv"
+      ]
+    },
+    {
+      "id": "e_inv",
+      "type": "door",
+      "x": 7,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "e_first",
+      "type": "door",
+      "x": 10,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_cert1",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f_left_gate",
+        "w_left_gate",
+        "a_first"
+      ]
+    },
+    {
+      "id": "e_second",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "e_cert2",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f_final_gate",
+        "a_second"
+      ]
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 33,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 24,
+      "y": 19
+    },
+    {
+      "id": "a_key",
+      "type": "lever",
+      "x": 3,
+      "y": 15,
+      "targets": [
+        "shutterA",
+        "shutterB",
+        "a_inv"
+      ]
+    },
+    {
+      "id": "a_inv",
+      "type": "door",
+      "x": 7,
+      "y": 13,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "a_first",
+      "type": "door",
+      "x": 10,
+      "y": 13,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "a_cert1",
+      "type": "lever",
+      "x": 14,
+      "y": 15,
+      "targets": [
+        "f_left_gate",
+        "w_left_gate",
+        "e_second"
+      ]
+    },
+    {
+      "id": "a_second",
+      "type": "door",
+      "x": 19,
+      "y": 13,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "a_cert2",
+      "type": "lever",
+      "x": 24,
+      "y": 15,
+      "targets": [
+        "f_final_gate"
+      ]
+    },
+    {
+      "id": "a_exit",
+      "type": "door",
+      "x": 33,
+      "y": 13,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 37,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 24,
+      "y": 15
+    }
+  ],
+  "hints": [
+    "Three keys select the complementary shutters. Earth and Air must enable the two travelers.",
+    "Earth certifies the far relay first, then Air. On the return, both left contacts and Air's first certificate release Earth, then Earth's second certificate releases Air.",
+    "Both isolated operators must return to their key booths before each exchange."
+  ]
+}

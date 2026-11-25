@@ -4395,6 +4395,40 @@
   ]
  },
  {
+  "id": "shutter_council",
+  "name": "Shutter Council",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 11100,
+  "dark": false,
+  "challenge": "mind",
+  "core": "shutter-council-serial-certificates",
+  "ideas": [
+   "shutter-floor-wall-duality",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 323,
+  "line": "three-key bridge selection and two serially interdependent certification operators.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:required:4",
+   "opt:wide-door",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "shutter_exchange",
   "name": "Shutter Exchange",
   "source": "mine",
