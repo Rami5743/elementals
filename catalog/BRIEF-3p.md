@@ -42,18 +42,18 @@ together. `twist-undo`×29, `quorum`×25, `twist-order`×9, `timed-window`×7, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hop-beats-belt + moving-veto-silence
-- hop-beats-belt + seesaw-balance
-- hop-beats-belt + transport-power-excludes-workshop
-- liquid-lane + quorum
-- drop-reconfigures-circuit + hop-beats-belt
-- fractional-rider-keeper + twist-undo
+- boulder-carry + twist-self-block
 - mass-adds-on-the-beam + quorum
-- lift-as-floor + plank-sums-plate-maxes
-- lift-sorts-by-weight + quorum
-- belt-cargo + hop-beats-belt
-- hop-beats-belt + pound-chain
-- lift-as-floor + lock-per-element
+- stand-aside-is-the-switch + twist-self-block
+- lift-sorts-by-weight + twist-stranding
+- boulder-carry + torch-bridge
+- head-stack + mass-adds-on-the-beam
+- three-load-rope-control + twist-order
+- stand-aside-is-the-switch + twist-two-clocks
+- plank-sums-plate-maxes + twist-two-clocks
+- head-stack + lock-per-element
+- pound-needs-headroom + twist-two-clocks
+- freeze-bridge + plank-sums-plate-maxes
 
 ## This repo's 3-player levels
 

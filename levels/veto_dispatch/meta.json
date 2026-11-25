@@ -1,0 +1,11 @@
+{
+  "order": 152,
+  "challenge": "motor",
+  "core": "one-dispatcher-phases-negative-cargo-window",
+  "ideas": [
+    "moving-veto-silence",
+    "spatial-clock-phase-rendezvous",
+    "timed-window",
+    "invert-door"
+  ]
+}

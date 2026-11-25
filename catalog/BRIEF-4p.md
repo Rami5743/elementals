@@ -40,18 +40,18 @@ together. `twist-undo`×29, `quorum`×28, `twist-order`×8, `timed-window`×6, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- partner-builds-your-landing + turbine-out-of-reach
-- glide-passenger + lock-per-element
-- belt-cargo + single-file-stone
-- dark + twist-order
-- twist-order + unload-the-pan-you-ride
-- liquid-lane + twist-undo
-- timed-window + wide-door
-- liquid-lane + twist-order
-- climb-then-steer + timed-window
-- stone-held-from-below + timed-window
-- cargo-as-clock-contact + lift-corner-path
-- belt-reverse + glide-dismount
+- direction-qualified-transit-contact + lift-corner-path
+- mass-adds-on-the-beam + send-one-through
+- stand-aside-is-the-switch + twist-order
+- invert-door + unload-the-pan-you-ride
+- belt-cargo + climb-then-steer
+- machine-strands-operator + single-file-stone
+- machine-strands-operator + stand-aside-is-the-switch
+- lift-corner-path + two-is-not-heavy
+- lift-as-floor + lift-corner-path
+- send-one-through + stand-aside-is-the-switch
+- belt-reverse + partner-builds-your-landing
+- door-pushes-you-through + send-one-through
 
 ## This repo's 4-player levels
 

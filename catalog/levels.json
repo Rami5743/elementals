@@ -7846,6 +7846,43 @@
   ]
  },
  {
+  "id": "veto_dispatch",
+  "name": "Veto Dispatch",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7620,
+  "dark": false,
+  "challenge": "motor",
+  "core": "one-dispatcher-phases-negative-cargo-window",
+  "ideas": [
+   "moving-veto-silence",
+   "spatial-clock-phase-rendezvous",
+   "timed-window",
+   "invert-door"
+  ],
+  "order": 152,
+  "line": "the crossing is controlled by the absence of every moving veto, not a positive rendezvous; the dispatcher must phase two cargo clocks and then use their far contacts and home contacts in different phases.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:3"
+  ]
+ },
+ {
   "id": "weight_of_two",
   "name": "Weight of Two",
   "source": "mine",

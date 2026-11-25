@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 156 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 157 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (52)
+## 2 players — this repo (53)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -235,6 +235,10 @@ Totals: 79 campaign levels, 156 in this repo, of which 11 now ship in the campai
   - idea: the same heavy object switches circuits permanently by falling through its floor, changing a stationary permit into a reversible two-position register.
   - ideas: drop-reconfigures-circuit, belt-reverse, twist-undo
   - features: ent:belt ent:boulder ent:cracked ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:1 opt:required:2 opt:required:3 tile:one-way
+- **Veto Dispatch** `veto_dispatch` (2p: fire+water) core=`one-dispatcher-phases-negative-cargo-window` challenge=motor par=7620
+  - idea: the crossing is controlled by the absence of every moving veto, not a positive rendezvous; the dispatcher must phase two cargo clocks and then use their far contacts and home contacts in different phases.
+  - ideas: moving-veto-silence, spatial-clock-phase-rendezvous, timed-window, invert-door
+  - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:3
 
 ## 2 players — campaign (34)
 
