@@ -43,18 +43,18 @@ together. `twist-undo`×17, `invert-door`×5, `hold-switch`×5, `quorum`×5, `ob
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + twist-sacrifice
-- dive-ahead-of-the-runaway + freeze-invert
-- no-hands-for-cargo + seesaw-balance
-- freeze-invert + turbine-out-of-reach
-- low-roof-no-jump + no-overtaking
-- no-overtaking + pound-to-move
-- boulder-float + liquid-lane
-- dive-ahead-of-the-runaway + twist-sacrifice
-- twist-order + two-stops-no-middle
-- boulder-float + hold-switch
-- twist-sacrifice + two-is-not-heavy
-- crate-step + low-roof-no-jump
+- shared-switch-two-gates + turbine-out-of-reach
+- fan-band + twist-setup
+- freeze-invert + two-is-not-heavy
+- freeze-invert + seesaw-balance
+- hold-switch + no-overtaking
+- fan-band + liquid-lane
+- pound-to-move + two-stops-no-middle
+- crate-step + pound-to-move
+- lift-sheds-its-load + twist-order
+- low-roof-no-jump + torch-bridge
+- fan-passenger + two-in-the-air-at-once
+- liquid-lane + pound-chain
 
 ## This repo's 2-player levels
 

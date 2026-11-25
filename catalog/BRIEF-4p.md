@@ -54,18 +54,18 @@ together. `twist-undo`×14, `quorum`×14, `twist-order`×5, `lock-per-element`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- door-pushes-you-through + low-roof-no-jump
-- boulder-float + tower-presses-a-column
-- belt-filter + twist-stranding
-- hop-beats-belt + lock-per-element
-- fan-band + lift-press
-- seesaw-balance + turbine-out-of-reach
 - invert-door + twist-self-block
-- pound-chain + stand-aside-is-the-switch
-- freeze-bridge + mass-adds-on-the-beam
-- head-stack + single-file-stone
-- hop-beats-belt + trigger-from-above
-- hop-beats-belt + quorum
+- hop-beats-belt + low-roof-no-jump
+- single-file-stone + turbine-out-of-reach
+- door-pushes-you-through + lock-per-element
+- feed-the-engine-mid-ride + lock-per-element
+- torch-bridge + turbine-out-of-reach
+- climb-then-steer + lock-per-element
+- turbine-out-of-reach + wide-door
+- hoist-one-way-for-cargo + turbine-out-of-reach
+- stock-before-it-seals + turbine-out-of-reach
+- freeze-bridge + hop-beats-belt
+- freeze-bridge + glide-dismount
 
 ## This repo's 4-player levels
 

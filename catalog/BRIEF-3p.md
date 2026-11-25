@@ -55,18 +55,18 @@ together. `twist-undo`×14, `quorum`×13, `twist-order`×7, `machine-strands-ope
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- hop-beats-belt + twist-stranding
-- invert-door + pound-to-move
-- glide-passenger + twist-order
-- invert-door + sink-as-a-timer
-- lift-sorts-by-weight + timed-window
-- turbine-out-of-reach + twist-self-block
-- twist-self-block + unload-the-pan-you-ride
-- freeze-bridge + wide-door
+- lift-corner-path + unload-the-pan-you-ride
+- dark + machine-strands-operator
+- fan-passenger + lift-sorts-by-weight
+- counterweight-you-must-remove + crate-step
+- counterweight-you-must-remove + fan-band
+- twist-order + unload-the-pan-you-ride
+- object-as-permanent-switch + plank-sums-plate-maxes
+- fan-passenger + glide-passenger
+- hop-beats-belt + lift-corner-path
+- send-one-through + twist-stranding
+- invert-door + switch-in-mid-flight
 - fan-passenger + wide-door
-- object-as-permanent-switch + pound-to-move
-- fan-band + twist-order
-- object-as-permanent-switch + wide-door
 
 ## This repo's 3-player levels
 
