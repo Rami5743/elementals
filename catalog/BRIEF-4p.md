@@ -54,23 +54,24 @@ together. `twist-undo`×5, `lock-per-element`×4, `twist-order`×4, `machine-str
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
 - `grating-memory-with-erase` — An elevator writes a stone onto a one-way grate; a separate closing press erases it by pushing the stone through after the elevator is removed. Two heavy contacts alternate, storing the previous physical state rather than merely following a switch.
 - `two-stage-piston-handoff` — Two adjacent sideways doors form a sequential ram: the short piston must transfer the cargo into the long piston's range while it is retracted. Closing the long piston prematurely blocks the transfer. A returning belt makes the three stationary contact states reusable.
+- `transport-power-excludes-workshop` — One switch powers a ferry and closes the workshop gate on its far bank. Dock, stop the machine to enter, relinquish the far position, and restart the machine to get back; the transport and access permissions are incompatible.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- crate-step + fan-band
-- freeze-bridge + two-stops-no-middle
-- boulder-float + liquid-lane
-- low-roof-no-jump + two-stops-no-middle
-- door-pushes-you-through + low-roof-no-jump
-- door-pushes-you-through + lock-per-element
-- hoist-one-way-for-cargo + pound-chain
-- head-stack + twist-stranding
-- lock-per-element + threshold-is-a-switch
-- lock-per-element + twist-setup
-- door-pushes-you-through + pound-chain
-- head-stack + liquid-lane
+- lock-per-element + shared-switch-two-gates
+- dark + fan-band
+- fan-band + hoist-one-way-for-cargo
+- hop-beats-belt + twist-order
+- freeze-bridge + transport-power-excludes-workshop
+- one-way-drop + turbine-out-of-reach
+- dive-ahead-of-the-runaway + turbine-out-of-reach
+- belt-filter + transport-power-excludes-workshop
+- freeze-bridge + stock-before-it-seals
+- head-stack + twist-setup
+- freeze-bridge + grating-memory-with-erase
+- hop-beats-belt + lift-loop
 
 ## This repo's 4-player levels
 

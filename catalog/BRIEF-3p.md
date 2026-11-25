@@ -56,23 +56,24 @@ together. `twist-order`×6, `twist-undo`×5, `quorum`×4, `machine-strands-opera
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `grating-memory-with-erase` — An elevator writes a stone onto a one-way grate; a separate closing press erases it by pushing the stone through after the elevator is removed. Two heavy contacts alternate, storing the previous physical state rather than merely following a switch.
 - `two-stage-piston-handoff` — Two adjacent sideways doors form a sequential ram: the short piston must transfer the cargo into the long piston's range while it is retracted. Closing the long piston prematurely blocks the transfer. A returning belt makes the three stationary contact states reusable.
+- `transport-power-excludes-workshop` — One switch powers a ferry and closes the workshop gate on its far bank. Dock, stop the machine to enter, relinquish the far position, and restart the machine to get back; the transport and access permissions are incompatible.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-filter + twist-undo
-- dark + twist-self-block
-- partner-builds-your-landing + twist-order
-- counterweight-you-must-remove + stock-before-it-seals
-- counterweight-you-must-remove + switch-in-mid-flight
-- door-pushes-you-through + invert-door
-- invert-door + wide-door
-- counterweight-you-must-remove + sink-as-a-timer
-- fan-passenger + seesaw-balance
-- twist-order + wide-door
-- mass-adds-on-the-beam + twist-self-block
-- twist-sacrifice + twist-self-block
+- fan-passenger + trigger-from-above
+- timed-window + turbine-out-of-reach
+- lift-corner-path + wide-door
+- turbine-out-of-reach + twist-order
+- timed-window + transport-power-excludes-workshop
+- counterweight-you-must-remove + two-in-the-air-at-once
+- lift-corner-path + liquid-lane
+- invert-door + two-is-not-heavy
+- sink-as-a-timer + twist-stranding
+- pound-chain + twist-order
+- door-pushes-you-through + twist-self-block
+- invert-door + send-one-through
 
 ## This repo's 3-player levels
 

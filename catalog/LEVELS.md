@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 63 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 64 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (21)
+## 2 players — this repo (22)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -114,6 +114,10 @@ Totals: 79 campaign levels, 63 in this repo, of which 11 now ship in the campaig
   - idea: Two adjacent sideways doors act as a two-stage piston. The short piston must hand the stone to the long one before the long piston closes; closing the long one first blocks the handoff. The returning belt makes all three positions reusable.
   - ideas: two-stage-piston-handoff, twist-order, twist-backwards
   - features: ent:belt ent:boulder ent:door ent:lever ent:plate opt:belt:walkable opt:heavy-plate opt:latch opt:required:2 opt:wide-door
+- **Deadman Dock** `deadman_dock` (2p: fire+water) core=`ferry-motor-opens-complementary-workshop` challenge=motor par=7260
+  - idea: The single powered ferry is needed to reach a workshop, but its motor simultaneously closes that workshop's entrance. To enter, stop the ferry after docking. To get back, reopen the motor circuit only after the rider has returned to the dock.
+  - ideas: transport-power-excludes-workshop, lift-loop, twist-undo
+  - features: ent:door ent:elevator ent:lever opt:elevator:loop opt:invert:door opt:latch opt:required:2 tile:one-way
 
 ## 2 players — campaign (34)
 

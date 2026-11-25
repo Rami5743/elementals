@@ -3108,6 +3108,38 @@
   }
  },
  {
+  "id": "deadman_dock",
+  "name": "Deadman Dock",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7260,
+  "dark": false,
+  "challenge": "motor",
+  "core": "ferry-motor-opens-complementary-workshop",
+  "ideas": [
+   "transport-power-excludes-workshop",
+   "lift-loop",
+   "twist-undo"
+  ],
+  "order": 122,
+  "line": "The single powered ferry is needed to reach a workshop, but its motor simultaneously closes that workshop's entrance. To enter, stop the ferry after docking. To get back, reopen the motor circuit only after the rider has returned to the dock.",
+  "tokens": [
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "opt:elevator:loop",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "dismount",
   "name": "Dismount",
   "source": "mine",

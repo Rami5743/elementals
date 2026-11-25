@@ -1,0 +1,198 @@
+{
+  "id": "deadman_dock",
+  "name": "Deadman Dock",
+  "order": 122,
+  "description": "The ferry runs in one state of the motor; the workshop gate opens in the opposite state.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "parTicks": 7260,
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#########===#.................##########",
+    "#########...#.................##########",
+    "#########===#.................##########",
+    "#########...#.................##########",
+    "#########===..................##########",
+    "#########.....................##########",
+    "#########===..................##########",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      10,
+      7
+    ],
+    "water": [
+      36,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "ferry",
+      "type": "elevator",
+      "x": 15,
+      "y": 8,
+      "w": 3,
+      "path": [
+        [
+          15,
+          8
+        ],
+        [
+          27,
+          8
+        ]
+      ],
+      "mode": "loop",
+      "pause": 150,
+      "speed": 1
+    },
+    {
+      "id": "start",
+      "type": "lever",
+      "x": 10,
+      "y": 7,
+      "targets": [
+        "w0"
+      ]
+    },
+    {
+      "id": "w0",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "motor",
+      "type": "lever",
+      "x": 25,
+      "y": 19,
+      "targets": [
+        "ferry",
+        "far_gate",
+        "w2"
+      ]
+    },
+    {
+      "id": "far_gate",
+      "type": "door",
+      "x": 34,
+      "y": 5,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "far",
+      "type": "lever",
+      "x": 37,
+      "y": 7,
+      "targets": [
+        "w1"
+      ]
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 20,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "ack",
+      "type": "lever",
+      "x": 13,
+      "y": 19,
+      "targets": [
+        "home"
+      ]
+    },
+    {
+      "id": "home",
+      "type": "door",
+      "x": 8,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "finish",
+      "type": "lever",
+      "x": 6,
+      "y": 7,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 7,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 6,
+      "text": "Ferry"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 17,
+      "text": "Motor"
+    }
+  ],
+  "hints": [
+    "The ferry and the far gate use opposite states of the motor lever.",
+    "Jump aboard the ferry near its left stop. If you miss, return up the ladder of one-way ledges in the safe trench.",
+    "Once the far relay is set, switch the motor on again only after Fire has returned to the dock."
+  ]
+}

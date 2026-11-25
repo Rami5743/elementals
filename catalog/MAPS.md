@@ -1077,6 +1077,57 @@ Entities:
   D  f2           door       at (29,11)  1x3  <- right, wc (needs 2)  latch
 ```
 
+## Deadman Dock (`deadman_dock`) — 2p, core `ferry-motor-opens-complementary-workshop`
+
+```
+Deadman Dock (deadman_dock) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  #.......D.........................D....#
+ 6  #....X..D.........................D....#
+ 7  #....Xl.D.@.......................D.*l.#
+ 8  #########===#..EEE............##########
+ 9  #########...#.................##########
+10  #########===#.................##########
+11  #########...#.................##########
+12  #########===..................##########
+13  #########.....................##########
+14  #########===..................##########
+15  ########################################
+16  ########################################
+17  #......D............D.........D........#
+18  #.X....D............D.........D........#
+19  #.X*...D.....l......D....l....D.....@..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (10,7)  water (36,19)
+Entities:
+  E  ferry        elevator   at (15,8)  3x1  <- motor  mode loop  speed 1  pause 150  path (15,8)-(27,8)
+  l  start        lever      at (10,7)  -> w0
+  D  w0           door       at (30,17)  1x3  <- start  latch
+  l  motor        lever      at (25,19)  -> ferry, far_gate, w2
+  D  far_gate     door       at (34,5)  1x3  <- motor  invert
+  l  far          lever      at (37,7)  -> w1
+  D  w1           door       at (20,17)  1x3  <- far  latch
+  l  ack          lever      at (13,19)  -> home
+  D  home         door       at (8,5)  1x3  <- ack  latch
+  l  finish       lever      at (6,7)  -> w2
+  D  w2           door       at (7,17)  1x3  <- motor, finish (needs 2)  latch
+  X  exit_11      exit       at (5,6)  fire
+  *  gem_12       gem        at (36,7)  fire
+  X  exit_13      exit       at (2,18)  water
+  *  gem_14       gem        at (3,19)  water
+  "  sign_15      sign       at (14,6)  "Ferry"
+  "  sign_16      sign       at (25,17)  "Motor"
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```
