@@ -15,11 +15,11 @@ through the gate without ever touching down — the one thing that shuts the gat
 
 ## What passes
 
-- Nothing yet — design milestone only, no level JSON written.
+- `level.json is valid`; both spawns safe; **no warnings** (see below).
 
 ## What fails
 
-- Nothing yet.
+- `water+earth: solution.mjs has no scripts for this group` — no solution script written yet.
 
 ## Measured facts this design rests on (probed today, not in PHYSICS.md)
 
@@ -35,8 +35,19 @@ through the gate without ever touching down — the one thing that shuts the gat
 
 ## The next thing to try
 
-Write `level.json`: the two shafts, the draught, the boulder on the pan, and the two plates. Then
-probe the weights arithmetic (below) before writing any solution script.
+Write `solution.mjs` for water+earth. Then probe the two flights: the leap from the pan across the
+void into the draught, and the peel-out through the gate.
+
+### Why the gallery is stepped
+
+The first draft put the far gallery's floor on the same row (6) as the left ledge, and `check`
+warned that both players "can jump over door gate at (9,3) from the left". That is a false
+positive: the heuristic teleports the player four tiles left of the door with its feet at the
+door's base, walks it right for 240 ticks, and reports success if its **x** ever passes the door —
+so falling thirteen tiles down the draught shaft and strolling along the hall counts as getting
+past a gate that is in fact sealed. Dropping the far gallery to row 7 (gate `h: 4`, sill at row 7)
+means the player is no longer grounded at the door's base four tiles to its left, the heuristic
+breaks out, and the warning goes. It also buys the flight a tile more airtime.
 
 ## The machine
 
