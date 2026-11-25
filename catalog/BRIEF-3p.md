@@ -43,18 +43,18 @@ together. `twist-undo`×26, `quorum`×22, `twist-order`×8, `timed-window`×5, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- partner-builds-your-landing + twist-two-clocks
-- head-stack + two-is-not-heavy
-- counterweight-you-must-remove + unload-the-pan-you-ride
-- lock-per-element + machine-strands-operator
-- object-as-permanent-switch + pound-to-move
-- lift-as-floor + pound-chain
-- hop-beats-belt + timed-window
-- partner-builds-your-landing + quorum
-- feed-the-engine-mid-ride + lift-corner-path
-- climb-then-steer + hop-beats-belt
-- door-pushes-you-through + machine-strands-operator
-- boulder-carry + object-as-permanent-switch
+- mass-adds-on-the-beam + object-as-permanent-switch
+- twist-undo + wide-door
+- lift-as-floor + liquid-lane
+- pound-to-move + twist-stranding
+- head-stack + wide-door
+- machine-strands-operator + pound-chain
+- lock-per-element + torch-bridge
+- boulder-carry + reversible-switch-maze
+- machine-strands-operator + plank-sums-plate-maxes
+- single-file-stone + torch-bridge
+- lock-per-element + quorum
+- boulder-carry + head-stack
 
 ## This repo's 3-player levels
 

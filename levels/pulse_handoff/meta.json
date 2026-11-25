@@ -1,0 +1,11 @@
+{
+  "order": 343,
+  "challenge": "motor",
+  "core": "finite-pulse-handoff-with-return-certificate",
+  "ideas": [
+    "feed-the-engine-mid-ride",
+    "timed-window",
+    "twist-undo",
+    "quorum"
+  ]
+}

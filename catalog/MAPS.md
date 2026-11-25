@@ -7956,3 +7956,68 @@ Entities:
   *  gem_27       gem        at (2,19)  air
   X  exit_28      exit       at (1,18)  air
 ```
+
+## Pulse Handoff (`pulse_handoff`) — 4p, core `finite-pulse-handoff-with-return-certificate`
+
+```
+Pulse Handoff (pulse_handoff) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #......................................#
+ 2  #..pp..........ppp................ppp..#
+ 3  #..E...................................#
+ 4  ########################################
+ 5  #.......D...............D...........D..#
+ 6  #.......D...............D...........D.X#
+ 7  #..@....D.....b.........D........l..D*X#
+ 8  ########################################
+ 9  #.........D..............D....D.....D..#
+10  #.........D..............D....D.....D.X#
+11  #.......@.D......b.......D....D...l.D*X#
+12  ########################################
+13  #......................D............D..#
+14  #......................D............D.X#
+15  #...................@..D......l.....D*X#
+16  ########################################
+17  ########################################
+18  #...........D.............D............#
+19  #...........D.............D...........X#
+20  #..@.l......D.............D.......l..*X#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,7)  water (8,11)  earth (20,15)  air (3,20)
+Entities:
+  E  shuttle      elevator   at (3,3)  <- launch, feed  speed 1.5  path (3,3)-(35,3)
+  O  load         boulder    at (3,2)
+  p  home         plate      at (3,2)  2x1  -> f_return, a_home  weight heavy
+  p  middle       plate      at (15,2)  3x1  -> w_feed  weight heavy
+  p  far          plate      at (34,2)  3x1  -> e_cross  weight heavy
+  D  f_start      door       at (8,5)  1x3  <- Astart  latch
+  b  launch       button     at (14,7)  -> shuttle  mode timed  duration 520
+  D  f_return     door       at (24,5)  1x3  <- home, Ecert (needs 2)  latch
+  l  Fcert        lever      at (33,7)  -> w_finish
+  D  f_exit       door       at (36,5)  1x3  <- Acert  latch
+  D  w_feed       door       at (10,9)  1x3  <- middle  latch
+  b  feed         button     at (17,11)  -> shuttle, e_cross, w_invert  mode timed  duration 520
+  D  w_invert     door       at (25,9)  1x3  <- feed  invert
+  D  w_finish     door       at (30,9)  1x3  <- Fcert  latch
+  l  Wcert        lever      at (34,11)  -> a_finish
+  D  w_exit       door       at (36,9)  1x3  <- Acert  latch
+  D  e_cross      door       at (23,13)  1x3  <- far, feed (needs 2)
+  l  Ecert        lever      at (30,15)  -> f_return, a_home
+  D  e_exit       door       at (36,13)  1x3  <- Acert  latch
+  l  Astart       lever      at (5,20)  -> f_start
+  D  a_home       door       at (12,18)  1x3  <- home, Ecert (needs 2)  latch
+  D  a_finish     door       at (26,18)  1x3  <- Wcert  latch
+  l  Acert        lever      at (34,20)  -> f_exit, w_exit, e_exit
+  *  gem_23       gem        at (37,7)  fire
+  X  exit_24      exit       at (38,6)  fire
+  *  gem_25       gem        at (37,11)  water
+  X  exit_26      exit       at (38,10)  water
+  *  gem_27       gem        at (37,15)  earth
+  X  exit_28      exit       at (38,14)  earth
+  *  gem_29       gem        at (37,20)  air
+  X  exit_30      exit       at (38,19)  air
+```

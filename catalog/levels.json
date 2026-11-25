@@ -5349,6 +5349,43 @@
   ]
  },
  {
+  "id": "pulse_handoff",
+  "name": "Pulse Handoff",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6360,
+  "dark": false,
+  "challenge": "motor",
+  "core": "finite-pulse-handoff-with-return-certificate",
+  "ideas": [
+   "feed-the-engine-mid-ride",
+   "timed-window",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 343,
+  "line": "The finite first power pulse is insufficient to reach the far contact. A second operator receives access only during transit, and must take over the power; the far certificate then needs both the cargo and the live second pulse.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "quartet",
   "name": "Quartet",
   "source": "mine",
