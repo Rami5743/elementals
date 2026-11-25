@@ -5965,6 +5965,44 @@
   ]
  },
  {
+  "id": "release_custodian",
+  "name": "Release Custodian",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8940,
+  "dark": false,
+  "challenge": "mind",
+  "core": "independent-custodian-of-released-circuit",
+  "ideas": [
+   "drop-reconfigures-circuit",
+   "pound-to-move",
+   "twist-undo"
+  ],
+  "order": 348,
+  "line": "an irreversible transfer of a cargo key between two circuits, with an independent custodian who must approve the transfer and thereafter alone controls the new register.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "return_current",
   "name": "Return Current",
   "source": "mine",

@@ -1,0 +1,373 @@
+{
+  "id": "release_custodian",
+  "name": "Release Custodian",
+  "order": 348,
+  "description": "Three approvals release the stone from its original circuit. The isolated custodian then changes its lower direction, and must return it home before leaving.",
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###############.........################",
+    "#.......................#..............#",
+    "#.......................#..............#",
+    "#................===#==..###############",
+    "#...................#..................#",
+    "#...................#..................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "spawns": {
+    "earth": [
+      32,
+      3
+    ],
+    "fire": [
+      4,
+      14
+    ],
+    "water": [
+      34,
+      19
+    ],
+    "air": [
+      35,
+      6
+    ]
+  },
+  "entities": [
+    {
+      "type": "cracked",
+      "id": "slab",
+      "x": 15,
+      "y": 4,
+      "w": 9,
+      "h": 1
+    },
+    {
+      "type": "boulder",
+      "id": "token",
+      "x": 16,
+      "y": 3
+    },
+    {
+      "type": "plate",
+      "id": "upper",
+      "x": 16,
+      "y": 3,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "f_access",
+        "w_access",
+        "f_inverse",
+        "w_inverse"
+      ]
+    },
+    {
+      "type": "belt",
+      "id": "belt",
+      "x": 1,
+      "y": 9,
+      "w": 19,
+      "speed": -0.55,
+      "mode": "reverse"
+    },
+    {
+      "type": "plate",
+      "id": "west",
+      "x": 1,
+      "y": 8,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f_west",
+        "w_west",
+        "f_exit",
+        "w_exit",
+        "e_exit",
+        "a_exit"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "east",
+      "x": 17,
+      "y": 8,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "e_east",
+        "w_east"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "e_access",
+      "x": 25,
+      "y": 1,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "e_east",
+      "x": 30,
+      "y": 8,
+      "h": 2,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Ecert",
+      "x": 34,
+      "y": 9,
+      "targets": [
+        "f_exit",
+        "w_east",
+        "w_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "e_exit",
+      "x": 37,
+      "y": 8,
+      "h": 2,
+      "required": 2
+    },
+    {
+      "type": "door",
+      "id": "f_access",
+      "x": 10,
+      "y": 12,
+      "h": 3
+    },
+    {
+      "type": "lever",
+      "id": "Fpre",
+      "x": 15,
+      "y": 14,
+      "targets": [
+        "w_access",
+        "e_access"
+      ]
+    },
+    {
+      "type": "lever",
+      "id": "reverse",
+      "x": 25,
+      "y": 6,
+      "targets": [
+        "belt"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_inverse",
+      "x": 21,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "door",
+      "id": "f_west",
+      "x": 24,
+      "y": 12,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Fwest",
+      "x": 28,
+      "y": 14,
+      "targets": [
+        "e_east"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_exit",
+      "x": 35,
+      "y": 12,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "w_access",
+      "x": 28,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "lever",
+      "id": "Wpre",
+      "x": 22,
+      "y": 19,
+      "targets": [
+        "e_access",
+        "a_access"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_inverse",
+      "x": 16,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "door",
+      "id": "w_west",
+      "x": 13,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Wwest",
+      "x": 10,
+      "y": 19,
+      "targets": [
+        "e_east"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_east",
+      "x": 6,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Wlast",
+      "x": 4,
+      "y": 19,
+      "targets": [
+        "e_exit",
+        "f_exit",
+        "w_exit",
+        "a_exit"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "w_exit",
+      "x": 2,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 34,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 4,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 18
+    },
+    {
+      "type": "door",
+      "id": "a_access",
+      "x": 33,
+      "y": 5,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Apre",
+      "x": 29,
+      "y": 6,
+      "targets": [
+        "e_access"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "a_exit",
+      "x": 37,
+      "y": 5,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 27,
+      "y": 6
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 5
+    }
+  ],
+  "parTicks": 8940,
+  "hints": [
+    "Three approvals are needed before Earth can release the upper stone.",
+    "The isolated custodian controls the direction of the lower register; wait for both western certificates.",
+    "The lower stone must return west after the last inspection."
+  ]
+}

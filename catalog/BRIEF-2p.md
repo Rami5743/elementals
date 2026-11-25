@@ -32,18 +32,18 @@ together. `twist-undo`×31, `quorum`×8, `invert-door`×6, `twist-order`×6, `ma
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
+- moving-veto-silence + twist-self-block
+- belt-cargo + two-is-not-heavy
+- boulder-float + transport-power-excludes-workshop
+- moving-veto-silence + no-hands-for-cargo
 - boulder-float + brake-makes-transit-contact-stable
-- boulder-float + seesaw-balance
-- drop-reconfigures-circuit + twist-self-block
-- causeway-as-veto + freeze-invert
-- partner-builds-your-landing + tower-presses-a-column
-- boulder-float + lift-loop
-- counterweight-you-must-remove + fractional-rider-keeper
-- moving-veto-silence + twist-sacrifice
-- belt-cargo + lock-per-element
-- boulder-float + partner-builds-your-landing
-- lift-sorts-by-weight + twist-self-block
-- boulder-carry + twist-self-block
+- fractional-rider-keeper + partner-builds-your-landing
+- door-pushes-you-through + mass-adds-on-the-beam
+- boulder-float + two-stops-no-middle
+- causeway-as-veto + head-stack
+- door-pushes-you-through + invert-door
+- boulder-float + no-hands-for-cargo
+- causeway-as-veto + no-hands-for-cargo
 
 ## This repo's 2-player levels
 

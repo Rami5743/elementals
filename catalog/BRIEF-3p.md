@@ -40,18 +40,18 @@ together. `twist-undo`×29, `quorum`×25, `twist-order`×8, `timed-window`×7, `
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- dive-ahead-of-the-runaway + hop-beats-belt
-- reversible-switch-maze + single-file-stone
-- hop-beats-belt + moving-veto-silence
-- hop-beats-belt + reversible-switch-maze
-- mass-adds-on-the-beam + twist-undo
-- hop-beats-belt + seesaw-balance
-- feed-the-engine-mid-ride + head-stack
-- hop-beats-belt + pound-chain
-- liquid-lane + reversible-switch-maze
-- fractional-rider-keeper + quorum
-- feed-the-engine-mid-ride + reversible-switch-maze
-- mass-adds-on-the-beam + reversible-switch-maze
+- fractional-rider-keeper + twist-backwards
+- hop-beats-belt + invert-door
+- dark + lift-corner-path
+- object-as-permanent-switch + partner-builds-your-landing
+- lift-corner-path + three-load-rope-control
+- mass-adds-on-the-beam + twist-stranding
+- twist-self-block + wide-door
+- door-pushes-you-through + lift-corner-path
+- lift-corner-path + wide-door
+- partner-builds-your-landing + quorum
+- glide-passenger + twist-self-block
+- hop-beats-belt + machine-strands-operator
 
 ## This repo's 3-player levels
 

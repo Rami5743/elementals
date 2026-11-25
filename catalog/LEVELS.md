@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 149 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 150 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (49)
@@ -693,7 +693,7 @@ Totals: 79 campaign levels, 149 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (49)
+## 4 players — this repo (50)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -884,6 +884,10 @@ Totals: 79 campaign levels, 149 in this repo, of which 11 now ship in the campai
   - idea: Air's fractional rope weight is exactly the missing ballast for a stable pan; Fire's full unit supplies the movement and is needed away from the pan to ignite the remote torch. Two separate uses of this division of mechanical and electrical roles are separated by a necessary full unload.
   - ideas: fractional-rider-keeper, three-load-rope-control, machine-strands-operator, twist-undo
   - features: ent:boulder ent:door ent:elevator ent:lever ent:plate ent:pulley ent:torch opt:elevator:loop opt:heavy-plate opt:latch opt:required:2 opt:seesaw-range
+- **Release Custodian** `release_custodian` (4p: fire+water+earth+air) core=`independent-custodian-of-released-circuit` challenge=mind par=8940
+  - idea: an irreversible transfer of a cargo key between two circuits, with an independent custodian who must approve the transfer and thereafter alone controls the new register.
+  - ideas: drop-reconfigures-circuit, pound-to-move, twist-undo
+  - features: ent:belt ent:boulder ent:cracked ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:required:3 tile:one-way
 
 ## 4 players — campaign (23)
 
