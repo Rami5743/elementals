@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 135 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 136 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (45)
+## 2 players — this repo (46)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -209,6 +209,10 @@ Totals: 79 campaign levels, 135 in this repo, of which 11 now ship in the campai
   - idea: A series of irreversible cracked-floor descents whose permissions have to be spent in reverse order: Earth must record a certificate, use the current authorization and go down, before Water can revoke that authorization to reach the next control.
   - ideas: pound-chain, twist-sacrifice, twist-undo, machine-strands-operator
   - features: ent:cracked ent:door ent:lever opt:invert:door opt:latch
+- **Return Stroke** `return_stroke` (2p: fire+water) core=`one-contact-two-qualified-strokes` challenge=motor par=7440
+  - idea: A single cargo contact means two different things on a powered outward stroke and an unpowered return stroke. The first stroke grants Water's passage; the second requires the far certificate and grants Fire's passage.
+  - ideas: direction-qualified-transit-contact, trip-plate-in-the-shaft, timed-window, twist-undo
+  - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:heavy-plate opt:invert:door opt:latch opt:required:2
 
 ## 2 players — campaign (34)
 

@@ -5745,6 +5745,43 @@
   ]
  },
  {
+  "id": "return_stroke",
+  "name": "Return Stroke",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7440,
+  "dark": false,
+  "challenge": "motor",
+  "core": "one-contact-two-qualified-strokes",
+  "ideas": [
+   "direction-qualified-transit-contact",
+   "trip-plate-in-the-shaft",
+   "timed-window",
+   "twist-undo"
+  ],
+  "order": 146,
+  "line": "A single cargo contact means two different things on a powered outward stroke and an unpowered return stroke. The first stroke grants Water's passage; the second requires the far certificate and grants Fire's passage.",
+  "tokens": [
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "return_trip",
   "name": "Return Trip",
   "source": "mine",

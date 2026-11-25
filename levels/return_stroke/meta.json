@@ -1,0 +1,11 @@
+{
+  "order": 146,
+  "challenge": "motor",
+  "core": "one-contact-two-qualified-strokes",
+  "ideas": [
+    "direction-qualified-transit-contact",
+    "trip-plate-in-the-shaft",
+    "timed-window",
+    "twist-undo"
+  ]
+}

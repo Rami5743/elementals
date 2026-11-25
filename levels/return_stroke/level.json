@@ -1,0 +1,246 @@
+{
+  "id": "return_stroke",
+  "name": "Return Stroke",
+  "order": 146,
+  "description": "One moving cargo contact has two meanings: the powered outward stroke authorizes Water, and the unpowered return stroke authorizes Fire. Record delivery before attempting the return.",
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      6,
+      11
+    ],
+    "water": [
+      8,
+      19
+    ]
+  },
+  "entities": [
+    {
+      "id": "shuttle",
+      "type": "elevator",
+      "x": 3,
+      "y": 4,
+      "w": 1,
+      "path": [
+        [
+          3,
+          4
+        ],
+        [
+          35,
+          4
+        ]
+      ],
+      "speed": 0.8
+    },
+    {
+      "id": "cargo",
+      "type": "boulder",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "id": "home",
+      "type": "plate",
+      "x": 3,
+      "y": 3,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "f_final",
+        "w_west"
+      ]
+    },
+    {
+      "id": "mid",
+      "type": "plate",
+      "x": 16,
+      "y": 3,
+      "w": 4,
+      "weight": "heavy",
+      "targets": [
+        "w_mid",
+        "f_mid"
+      ]
+    },
+    {
+      "id": "far",
+      "type": "plate",
+      "x": 34,
+      "y": 3,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "w_far"
+      ]
+    },
+    {
+      "id": "clock",
+      "type": "button",
+      "x": 6,
+      "y": 11,
+      "mode": "timed",
+      "duration": 1360,
+      "targets": [
+        "shuttle",
+        "w_mid",
+        "f_inverse"
+      ]
+    },
+    {
+      "id": "f_access",
+      "type": "door",
+      "x": 10,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "f_inverse",
+      "type": "door",
+      "x": 15,
+      "y": 9,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "f_mid",
+      "type": "door",
+      "x": 25,
+      "y": 9,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 31,
+      "y": 11,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "f_final",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_west",
+      "type": "door",
+      "x": 5,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wfinal",
+      "type": "lever",
+      "x": 2,
+      "y": 19,
+      "targets": [
+        "f_final"
+      ]
+    },
+    {
+      "id": "w_mid",
+      "type": "door",
+      "x": 12,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 18,
+      "y": 19,
+      "targets": [
+        "w_mid"
+      ]
+    },
+    {
+      "id": "w_far",
+      "type": "door",
+      "x": 24,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 30,
+      "y": 19,
+      "targets": [
+        "w_mid",
+        "f_mid",
+        "f_access"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 2,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 1,
+      "y": 18
+    }
+  ],
+  "parTicks": 7440,
+  "hints": [
+    "The middle contact flashes twice. Water needs it while the clock is powered; Fire needs it after the clock has expired.",
+    "At the far contact, Water can secure the outward gate and authorize Fire's return-stroke crossing.",
+    "Let the cargo reach home before the final permissions. A missed stroke can be repeated from the launch station."
+  ]
+}

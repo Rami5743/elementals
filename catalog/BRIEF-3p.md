@@ -38,23 +38,24 @@ together. `twist-undo`×26, `quorum`×22, `twist-order`×8, `timed-window`×5, `
 - `unload-the-pan-you-ride` — A seesaw used as the only route between three storeys, one flush with each of its positions. Only the heavier pan is ever at floor level, so the far pan can never be loaded from below: a weight has to be put on your OWN pan to send theirs up to the storey where it can be loaded at all, and that same weight has to be shed again before your pan will carry you anywhere. You rise by what is taken off, never by what is added. (The campaign's scales — Assay, Counterpoise — sum weights too, but to balance a pan under a floating plate or to hoist cargo past a ledge; here the sum decides which storey each of you can reach, and the beam has no switch and no wiring at all.)
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `direction-qualified-transit-contact` — The same physical mid-track sensor supplies different permissions on the outward and return strokes of a powered shuttle: the first is qualified by the live power pulse and the second by a far-bank certificate and the expired power. No second sensor or brake can substitute.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- invert-door + low-roof-no-jump
-- lift-corner-path + pound-to-move
-- twist-sacrifice + twist-undo
-- boulder-carry + lift-corner-path
-- timed-window + unload-the-pan-you-ride
-- boulder-float + twist-self-block
-- pound-to-move + timed-window
+- door-pushes-you-through + twist-self-block
+- freeze-bridge + wide-door
+- machine-strands-operator + pound-chain
 - mass-adds-on-the-beam + twist-stranding
-- lift-corner-path + trigger-from-above
-- dark + twist-stranding
-- boulder-carry + twist-stranding
-- glide-passenger + twist-order
+- boulder-float + reversible-switch-maze
+- counterweight-you-must-remove + single-file-stone
+- lift-corner-path + twist-sacrifice
+- freeze-bridge + lift-sorts-by-weight
+- feed-the-engine-mid-ride + twist-self-block
+- head-stack + pound-to-move
+- object-as-permanent-switch + single-file-stone
+- lock-per-element + torch-bridge
 
 ## This repo's 3-player levels
 

@@ -2467,6 +2467,61 @@ Entities:
   X  exit_26      exit       at (38,18)  water
 ```
 
+## Return Stroke (`return_stroke`) — 2p, core `one-contact-two-qualified-strokes`
+
+```
+Return Stroke (return_stroke) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #......................................#
+ 3  #..pp...........pppp..............ppp..#
+ 4  #..E...................................#
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  #.........D....D.........D.........D...#
+10  #.........D....D.........D.........D..X#
+11  #.....@...D....D.........D.....l...D.*X#
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #....D......D...........D..............#
+18  #X...D......D...........D..............#
+19  #X*..D..@...D.....l.....D.....l........#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (6,11)  water (8,19)
+Entities:
+  E  shuttle      elevator   at (3,4)  <- clock  speed 0.8  path (3,4)-(35,4)
+  O  cargo        boulder    at (3,3)
+  p  home         plate      at (3,3)  2x1  -> f_final, w_west  weight heavy
+  p  mid          plate      at (16,3)  4x1  -> w_mid, f_mid  weight heavy
+  p  far          plate      at (34,3)  3x1  -> w_far  weight heavy
+  b  clock        button     at (6,11)  -> shuttle, w_mid, f_inverse  mode timed  duration 1360
+  D  f_access     door       at (10,9)  1x3  <- W2  latch
+  D  f_inverse    door       at (15,9)  1x3  <- clock  invert
+  D  f_mid        door       at (25,9)  1x3  <- mid, W2 (needs 2)
+  l  F1           lever      at (31,11)  -> w_west
+  D  f_final      door       at (35,9)  1x3  <- home, Wfinal (needs 2)  latch
+  D  w_west       door       at (5,17)  1x3  <- home, F1 (needs 2)  latch
+  l  Wfinal       lever      at (2,19)  -> f_final
+  D  w_mid        door       at (12,17)  1x3  <- mid, clock, W1, W2 (needs 2)
+  l  W1           lever      at (18,19)  -> w_mid
+  D  w_far        door       at (24,17)  1x3  <- far  latch
+  l  W2           lever      at (30,19)  -> w_mid, f_mid, f_access
+  *  gem_17       gem        at (37,11)  fire
+  X  exit_18      exit       at (38,10)  fire
+  *  gem_19       gem        at (2,19)  water
+  X  exit_20      exit       at (1,18)  water
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

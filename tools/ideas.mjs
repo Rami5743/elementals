@@ -181,3 +181,5 @@ Object.assign(IDEAS, { "convergent-belt-seam": {kind:'spine',note:"Independent r
 Object.assign(IDEAS, { "ratio-reverses-paired-cargo": {kind:'spine',note:"Fixed cargo on both rope pans is unequal in weight. A selectable snatch block reverses which pan is heavier, producing two complementary pairs of stationary sensor permissions with unequal excursions; no rider or balance memory is needed."} });
 
 Object.assign(IDEAS, { "hoist-unloads-comparator": {kind:'spine',note:"Two independent hoists lift loads away from a seesaw, so either imbalance and the loaded centered state give distinct paired contacts; an empty centered plank is not equivalent to a loaded one."} });
+
+Object.assign(IDEAS, { "direction-qualified-transit-contact": {kind:'spine',note:"The same physical mid-track sensor supplies different permissions on the outward and return strokes of a powered shuttle: the first is qualified by the live power pulse and the second by a far-bank certificate and the expired power. No second sensor or brake can substitute."} });
