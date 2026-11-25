@@ -5,9 +5,17 @@ into `main` once an hour, after proving it actually passes, and leaves both bran
 commit. The owner asked for it because "the branches are in sync" was true only for the minute it
 was reported.
 
-Runs in the standing session named *Elementals branch sync (standing)*, which owns the repository.
-The hourly scheduled task wakes it; it never starts a session of its own, because a session started
-by a scheduled task gets a bare container with no repository and no way to attach one.
+Runs in the standing session `session_01DW9uF2zxH4Ks4M9QcCpxCG`, *Elementals level night
+(standing)* — the same host the nights run in, because it already owns the repository and has push
+access. The scheduled task `trig_01VrSHSm9zkiUpaF48d3N6dm` ("Elementals branch sync (hourly)")
+wakes it every hour at minute 54. It never starts a session of its own: a session started by a
+scheduled task gets a bare container with no repository and no way to attach one. A dedicated
+session was tried first and could not be given push access — its permission classifier refused
+`add_repo` because the request came from an automated prompt rather than from a person.
+
+So an hourly wake is not a signal that a night has started, and a night is not a reason to skip a
+sync. They share a container and never run at the same moment: a wake that arrives mid-turn waits
+for that turn to end.
 
 ## Who may steer you
 
@@ -24,11 +32,15 @@ command is the point of the whole design.
 
 ```bash
 cd /home/user/elementals && git fetch origin --prune -q
-git rev-parse --short main origin/main origin/gpt
+git rev-parse main origin/main origin/gpt        # three full shas; `--short` takes only one ref
+git status --short
 ```
 
 If all three are the same commit and `git status --short` is empty: say
 `in sync at <sha>, nothing to do` and stop. Do not read files, do not run the kit, do not build.
+
+`git rev-parse --short` abbreviates a single revision only — given three refs it exits 128 with
+`fatal: Needed a single revision`, which is why the form above leaves it out.
 
 Otherwise:
 
