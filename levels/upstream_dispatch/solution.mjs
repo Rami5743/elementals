@@ -1,0 +1,11 @@
+import {go,interact,until,waitFlag,wait,IN_LEFT,IN_RIGHT,IN_JUMP,TILE} from "../../kit.mjs";
+function* gate(c,id){yield* until(c,()=>c.ent(id).s.open>=96,0,8000,id);}
+function* pull(c,x){yield* go(c,x);yield* interact(c);}
+function* hop(c,x,walk=false){const goal=x*TILE+TILE/2;for(let t=0;t<2400;t++){const d=goal-c.cx;if(Math.abs(d)<10&&c.me.grounded)return;yield (Math.abs(d)<5?0:d>0?IN_RIGHT:IN_LEFT)|(!walk&&Math.abs(d)>10&&c.me.grounded?IN_JUMP:0);}throw Error("cannot go upstream "+x+" at "+c.tx);}
+function earthRun(mode="normal"){return function*(c){yield* waitFlag(c,"pulse1");if(mode==="delay")yield* wait(c,90);yield* hop(c,8,mode==="walk");if(mode==="miss"){yield* waitFlag(c,"retry1");}yield* gate(c,"e_left");yield* pull(c,3);c.flag("Eleft");yield* waitFlag(c,"pulse2");if(mode==="delay")yield* wait(c,90);yield* hop(c,32,mode==="walk");if(mode==="miss"){yield* waitFlag(c,"retry2");}yield* gate(c,"e_right");yield* pull(c,36);c.flag("Eright");yield* go(c,38);};}
+function waterRun(mode="normal"){return function*(c){yield* gate(c,"w_start");yield* go(c,12);yield* interact(c);c.flag("pulse1");if(mode==="miss"){yield* wait(c,720);yield* interact(c);c.flag("retry1");}yield* pull(c,16);yield* gate(c,"w_left");yield* pull(c,29);yield* gate(c,"w_end");yield* go(c,38);};}
+function airRun(mode="normal"){return function*(c){yield* pull(c,3);yield* gate(c,"a_pulse");yield* go(c,23);yield* interact(c);c.flag("pulse2");if(mode==="miss"){yield* wait(c,720);yield* interact(c);c.flag("retry2");}yield* gate(c,"a_end");yield* go(c,38);};}
+function fireRun(mode="normal"){return function*(c){yield* gate(c,"f_access");yield* pull(c,20);yield* waitFlag(c,"Eright");if(mode!=="retain")yield* interact(c);yield* gate(c,"f_inverse");yield* gate(c,"f_end");yield* pull(c,35);yield* go(c,38);};}
+const fire=fireRun(),water=waterRun(),earth=earthRun(),air=airRun();
+const direct=Object.fromEntries(["fire","water","earth","air"].map(e=>[e,function*(c){yield* go(c,38)}]));
+export const solutions={sets:[{elements:["fire","water","earth","air"],scripts:{fire,water,earth,air},shortcuts:[{name:"direct",scripts:direct},{name:"walk against the current",scripts:{fire,water,earth:earthRun("walk"),air}},{name:"retain reversed direction",scripts:{fire:fireRun("retain"),water,earth,air}}]}]};

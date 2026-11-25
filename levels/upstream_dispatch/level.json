@@ -1,0 +1,336 @@
+{
+  "id": "upstream_dispatch",
+  "name": "Upstream Dispatch",
+  "order": 340,
+  "description": "A shared direction selector controls both a remote cargo token and the runner's conveyor. Dispatch the runner against the current in both directions, then restore the original cargo endpoint.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "##....................................##",
+    "##....................................##",
+    "##....................................##",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#########......................#########",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      7
+    ],
+    "water": [
+      3,
+      11
+    ],
+    "earth": [
+      32,
+      15
+    ],
+    "air": [
+      3,
+      20
+    ]
+  },
+  "entities": [
+    {
+      "id": "cargo_belt",
+      "type": "belt",
+      "x": 2,
+      "y": 3,
+      "w": 36,
+      "speed": 2,
+      "mode": "reverse"
+    },
+    {
+      "id": "runner_belt",
+      "type": "belt",
+      "x": 9,
+      "y": 16,
+      "w": 22,
+      "speed": 3.3,
+      "mode": "reverse"
+    },
+    {
+      "id": "token",
+      "type": "boulder",
+      "x": 36,
+      "y": 2
+    },
+    {
+      "id": "right",
+      "type": "plate",
+      "x": 35,
+      "y": 2,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "w_start",
+        "w_end",
+        "a_end"
+      ]
+    },
+    {
+      "id": "left",
+      "type": "plate",
+      "x": 2,
+      "y": 2,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "w_left",
+        "a_pulse"
+      ]
+    },
+    {
+      "id": "f_access",
+      "type": "door",
+      "x": 14,
+      "y": 5,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "selector",
+      "type": "lever",
+      "x": 20,
+      "y": 7,
+      "targets": [
+        "cargo_belt",
+        "runner_belt",
+        "f_inverse"
+      ]
+    },
+    {
+      "id": "f_inverse",
+      "type": "door",
+      "x": 29,
+      "y": 5,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "f_end",
+      "type": "door",
+      "x": 32,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Fcert",
+      "type": "lever",
+      "x": 35,
+      "y": 7,
+      "targets": [
+        "a_end"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 36,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 6
+    },
+    {
+      "id": "w_start",
+      "type": "door",
+      "x": 8,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "pulse1",
+      "type": "button",
+      "x": 12,
+      "y": 11,
+      "mode": "timed",
+      "duration": 660,
+      "targets": [
+        "e_left"
+      ]
+    },
+    {
+      "id": "Wstart",
+      "type": "lever",
+      "x": 16,
+      "y": 11,
+      "targets": [
+        "f_access"
+      ]
+    },
+    {
+      "id": "w_left",
+      "type": "door",
+      "x": 25,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "Wleft",
+      "type": "lever",
+      "x": 29,
+      "y": 11,
+      "targets": [
+        "a_pulse"
+      ]
+    },
+    {
+      "id": "w_end",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "id": "e_left",
+      "type": "door",
+      "x": 7,
+      "y": 13,
+      "h": 3
+    },
+    {
+      "id": "Eleft",
+      "type": "lever",
+      "x": 3,
+      "y": 15,
+      "targets": [
+        "e_left",
+        "f_access",
+        "w_left"
+      ]
+    },
+    {
+      "id": "e_right",
+      "type": "door",
+      "x": 34,
+      "y": 13,
+      "h": 3
+    },
+    {
+      "id": "Eright",
+      "type": "lever",
+      "x": 36,
+      "y": 15,
+      "targets": [
+        "e_right",
+        "f_end",
+        "w_end"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "id": "Astart",
+      "type": "lever",
+      "x": 3,
+      "y": 20,
+      "targets": [
+        "w_start"
+      ]
+    },
+    {
+      "id": "a_pulse",
+      "type": "door",
+      "x": 18,
+      "y": 18,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "pulse2",
+      "type": "button",
+      "x": 23,
+      "y": 20,
+      "mode": "timed",
+      "duration": 660,
+      "targets": [
+        "e_right"
+      ]
+    },
+    {
+      "id": "a_end",
+      "type": "door",
+      "x": 32,
+      "y": 18,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 36,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 19
+    }
+  ],
+  "parTicks": 7020,
+  "hints": [
+    "The cargo and runner belts reverse together. Earth must hop against the first current.",
+    "Earth's left certificate authorizes the reversal; the left cargo contact unlocks the second timer.",
+    "Return Earth against the reversed current, then restore the original current to release the final inspectors."
+  ]
+}

@@ -34,18 +34,18 @@ together. `twist-undo`×23, `twist-order`×6, `quorum`×6, `invert-door`×5, `ob
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- low-roof-no-jump + torch-bridge
-- freeze-invert + two-is-not-heavy
-- boulder-float + counterweight-you-must-remove
-- glide-passenger + two-is-not-heavy
-- belt-cargo + tower-presses-a-column
-- crate-step + freeze-invert
-- glide-dismount + turbine-out-of-reach
-- twist-stranding + two-is-not-heavy
-- fan-band + twist-order
-- fan-band + freeze-bridge
-- glide-dismount + one-way-drop
-- door-pushes-you-through + twist-stranding
+- boulder-float + glide-dismount
+- shared-switch-two-gates + torch-bridge
+- one-way-drop + twist-order
+- turbine-out-of-reach + twist-undo
+- fan-band + liquid-lane
+- boulder-float + freeze-bridge
+- machine-strands-operator + plank-sums-plate-maxes
+- crate-step + twist-stranding
+- plank-sums-plate-maxes + stock-before-it-seals
+- glide-dismount + pound-chain
+- liquid-lane + one-way-drop
+- glide-passenger + lift-sorts-by-weight
 
 ## This repo's 2-player levels
 

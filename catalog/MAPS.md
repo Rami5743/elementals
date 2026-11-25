@@ -7378,3 +7378,69 @@ Entities:
   *  gem_54       gem        at (36,20)  air
   X  exit_55      exit       at (38,19)  air
 ```
+
+## Upstream Dispatch (`upstream_dispatch`) — 4p, core `opposing-runner-and-cargo-shared-reversible-current`
+
+```
+Upstream Dispatch (upstream_dispatch) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##....................................##
+ 2  ##ppp..............................ppp##
+ 3  ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>##
+ 4  ########################################
+ 5  #.............D..............D..D......#
+ 6  #.............D..............D..D.....X#
+ 7  #..@..........D.....l........D..D..l*.X#
+ 8  ########################################
+ 9  #.......D................D.........D...#
+10  #.......D................D.........D..X#
+11  #..@....D...b...l........D...l.....D.*X#
+12  ########################################
+13  #......D..........................D....#
+14  #......D..........................D...X#
+15  #..l...D........................@.D.l*X#
+16  #########>>>>>>>>>>>>>>>>>>>>>>#########
+17  ########################################
+18  #.................D.............D......#
+19  #.................D.............D.....X#
+20  #..@..............D....b........D...*.X#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,7)  water (3,11)  earth (32,15)  air (3,20)
+Entities:
+  >  cargo_belt   belt       at (2,3)  36x1  <- selector  mode reverse  speed 2
+  >  runner_belt  belt       at (9,16)  22x1  <- selector  mode reverse  speed 3.3
+  O  token        boulder    at (36,2)
+  p  right        plate      at (35,2)  3x1  -> w_start, w_end, a_end  weight heavy
+  p  left         plate      at (2,2)  3x1  -> w_left, a_pulse  weight heavy
+  D  f_access     door       at (14,5)  1x3  <- Wstart, Eleft (needs 2)  latch
+  l  selector     lever      at (20,7)  -> cargo_belt, runner_belt, f_inverse
+  D  f_inverse    door       at (29,5)  1x3  <- selector  invert
+  D  f_end        door       at (32,5)  1x3  <- Eright  latch
+  l  Fcert        lever      at (35,7)  -> a_end
+  *  gem_10       gem        at (36,7)  fire
+  X  exit_11      exit       at (38,6)  fire
+  D  w_start      door       at (8,9)  1x3  <- right, Astart (needs 2)  latch
+  b  pulse1       button     at (12,11)  -> e_left  mode timed  duration 660
+  l  Wstart       lever      at (16,11)  -> f_access
+  D  w_left       door       at (25,9)  1x3  <- left, Eleft (needs 2)  latch
+  l  Wleft        lever      at (29,11)  -> a_pulse
+  D  w_end        door       at (35,9)  1x3  <- right, Eright (needs 2)  latch
+  *  gem_18       gem        at (37,11)  water
+  X  exit_19      exit       at (38,10)  water
+  D  e_left       door       at (7,13)  1x3  <- pulse1, Eleft
+  l  Eleft        lever      at (3,15)  -> e_left, f_access, w_left
+  D  e_right      door       at (34,13)  1x3  <- Eright, pulse2
+  l  Eright       lever      at (36,15)  -> e_right, f_end, w_end
+  *  gem_24       gem        at (37,15)  earth
+  X  exit_25      exit       at (38,14)  earth
+  l  Astart       lever      at (3,20)  -> w_start
+  D  a_pulse      door       at (18,18)  1x3  <- left, Wleft (needs 2)  latch
+  b  pulse2       button     at (23,20)  -> e_right  mode timed  duration 660
+  D  a_end        door       at (32,18)  1x3  <- right, Fcert (needs 2)  latch
+  *  gem_30       gem        at (36,20)  air
+  X  exit_31      exit       at (38,19)  air
+```

@@ -6729,6 +6729,47 @@
   ]
  },
  {
+  "id": "upstream_dispatch",
+  "name": "Upstream Dispatch",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7020,
+  "dark": false,
+  "challenge": "motor",
+  "core": "opposing-runner-and-cargo-shared-reversible-current",
+  "ideas": [
+   "hop-beats-belt",
+   "belt-reverse",
+   "two-stops-no-middle",
+   "timed-window",
+   "twist-undo"
+  ],
+  "order": 340,
+  "line": "One selector reverses both an isolated cargo belt and the runner's conveyor. The cargo grants the other operators' permissions, but its current opposes the runner's next journey.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:button",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:blocks-fire-water",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:button-timed",
+   "opt:button:timed",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "wellspring",
   "name": "Wellspring",
   "source": "mine",

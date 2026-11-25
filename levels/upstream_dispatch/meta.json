@@ -1,0 +1,12 @@
+{
+  "order": 340,
+  "challenge": "motor",
+  "core": "opposing-runner-and-cargo-shared-reversible-current",
+  "ideas": [
+    "hop-beats-belt",
+    "belt-reverse",
+    "two-stops-no-middle",
+    "timed-window",
+    "twist-undo"
+  ]
+}
