@@ -1,7 +1,7 @@
 {
   "id": "pulse_exchange",
   "name": "Pulse Exchange",
-  "order": 208,
+  "order": 217,
   "description": "The only power source is a moving stone: pass the relays, reverse the current, then catch its return pulse.",
   "supports": [
     [

@@ -35,6 +35,61 @@ for (const id of ids) {
 
 levels.sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0) || a.id.localeCompare(b.id));
 
+// ---- dates ----------------------------------------------------------------
+// When a level first appeared and when it last changed, read from git. Only the
+// authored files count: replays, play links and packed files are rewritten by
+// every `check`, so they would make every level look edited today.
+
+const AUTHORED = new Set(['level.json', 'solution.mjs', 'meta.json', 'NOTES.md']);
+
+/** id -> { created, updated } as ISO days, from one pass over the git log. */
+function levelDates() {
+  const dates = new Map();
+  let log;
+  try {
+    log = execFileSync('git', ['log', '--format=%x01%aI', '--name-only', '--', 'levels'],
+                       { cwd: ROOT, encoding: 'utf8', maxBuffer: 1 << 28 });
+  } catch {
+    return dates;                                    // not a checkout: fall back to mtimes
+  }
+  for (const entry of log.split('\u0001').slice(1)) {
+    const [stamp, ...paths] = entry.split('\n');
+    const day = stamp.slice(0, 10);
+    for (const line of paths) {
+      const m = /^levels\/([^/]+)\/(.+)$/.exec(line.trim());
+      if (!m || !AUTHORED.has(m[2])) continue;
+      const d = dates.get(m[1]);
+      if (!d) dates.set(m[1], { created: day, updated: day });
+      else d.created = day;             // the log runs newest first, so the last wins
+    }
+  }
+  return dates;
+}
+
+const DATES = levelDates();
+
+/** Authored files changed in the working tree: those count as edited today. */
+function dirtyLevels() {
+  const dirty = new Set();
+  try {
+    const out = execFileSync('git', ['status', '--porcelain', '--', 'levels'],
+                             { cwd: ROOT, encoding: 'utf8', maxBuffer: 1 << 26 });
+    for (const line of out.split('\n')) {
+      const m = /^.{2} (?:.* -> )?"?levels\/([^/]+)\/([^"]+)"?$/.exec(line);
+      if (m && AUTHORED.has(m[2])) dirty.add(m[1]);
+    }
+  } catch { /* not a checkout */ }
+  return dirty;
+}
+
+const DIRTY = dirtyLevels();
+const TODAY = new Date().toISOString().slice(0, 10);
+for (const l of levels) {
+  // A level only in the working tree, or edited since its last commit, is dated today.
+  const git = DATES.get(l.id) ?? { created: TODAY, updated: TODAY };
+  l.dates = { created: git.created, updated: DIRTY.has(l.id) ? TODAY : git.updated };
+}
+
 // ---- thumbnails -----------------------------------------------------------
 // One SVG map per level, drawn straight from its tiles and entities. Runs of
 // identical tiles are merged into single rects to keep the files small.
@@ -113,6 +168,8 @@ for (const l of levels) {
 }
 
 
+const day = (iso) => new Date(`${iso}T12:00:00Z`)
+  .toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 const esc = (s) => String(s).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
 const seconds = (t) => `${Math.round((t ?? 3600) / 60)} s`;
 const sizeOf = (l) => l.supports[0].length;
@@ -126,6 +183,8 @@ function card(l) {
           <p class="who">${group.map((e) => `<span class="el ${e}" title="${e}">${ELEMENT_ICON[e]}</span>`).join('')}</p>
         </header>
         <img class="map" src="thumbs/${esc(l.id)}.svg" alt="Map of ${esc(l.name)}" width="40" height="${22 - l.thumbTop}" loading="lazy" decoding="async">
+        <p class="dates">Added <time datetime="${l.dates.created}">${day(l.dates.created)}</time>${
+          l.dates.updated === l.dates.created ? '' : ` · updated <time datetime="${l.dates.updated}">${day(l.dates.updated)}</time>`}</p>
         <p class="tags"><span class="tag ${l.meta.challenge === 'motor' ? 'motor' : 'mind'}" title="${esc(ch.note)}">${ch.label}</span><span class="tag par">par ${seconds(l.parTicks)}</span></p>
         <p class="links"><a class="play" href="${esc(l.link)}" target="_blank" rel="noopener">Play</a><a class="file" href="packed/${esc(l.id)}.elementals.json" download>level file</a></p>
       </article>`;
@@ -190,6 +249,8 @@ h3 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
 .who { margin: 0; font-size: 15px; white-space: nowrap; letter-spacing: 1px; }
 .map { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); background: #17150f; }
 .tags { margin: 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.dates { color: var(--muted); font-size: 12px; margin: 0; }
+.dates time { white-space: nowrap; }
 .tag { font-size: 12px; border-radius: 999px; padding: 2px 9px; border: 1px solid transparent; }
 .tag.mind { color: var(--mind); background: var(--mind-bg); }
 .tag.motor { color: var(--motor); background: var(--motor-bg); }

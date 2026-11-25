@@ -24,6 +24,9 @@ Work on `main`.
   `<head>` and header that use it live in `tools/build.mjs`, not in `index.html`.
 - After `kit.mjs check` passes, run `node tools/build.mjs` **and** `node tools/catalog.mjs`, or the
   level is invisible to the page and to the next novelty check.
+- The page dates every level (**Added** / **updated**) from the git history of its `level.json`,
+  `solution.mjs`, `meta.json` and `NOTES.md`, so run `tools/build.mjs` in the same commit as a level
+  change, not one commit later, and never hand-edit `index.html`.
 - After any kit update, run `node tools/physics.mjs` and commit the result: `catalog/PHYSICS.md`
   is measured from the simulation, so a kit change can silently invalidate it.
   `node tools/physics.mjs --check` fails when it no longer matches.

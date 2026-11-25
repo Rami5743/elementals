@@ -54,18 +54,18 @@ together. `invert-door`×5, `hold-switch`×5, `twist-undo`×4, `object-as-perman
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-filter + stand-aside-is-the-switch
-- belt-filter + glide-passenger
-- belt-filter + counterweight-you-must-remove
-- freeze-bridge + lift-sorts-by-weight
-- belt-filter + switch-in-mid-flight
-- freeze-bridge + lock-per-element
-- belt-filter + freeze-bridge
-- pound-to-move + two-in-the-air-at-once
-- hold-switch + two-in-the-air-at-once
-- belt-filter + machine-strands-operator
-- crate-step + pound-to-move
-- belt-filter + one-way-press
+- hop-beats-belt + turbine-out-of-reach
+- dive-ahead-of-the-runaway + low-roof-no-jump
+- lift-press + pound-to-move
+- lift-corner-path + low-roof-no-jump
+- door-pushes-you-through + hop-beats-belt
+- hop-beats-belt + tower-presses-a-column
+- hop-beats-belt + lock-per-element
+- lift-as-floor + low-roof-no-jump
+- shared-switch-two-gates + trip-plate-in-the-shaft
+- hop-beats-belt + twist-two-clocks
+- low-roof-no-jump + trip-plate-in-the-shaft
+- lift-loop + low-roof-no-jump
 
 ## This repo's 2-player levels
 

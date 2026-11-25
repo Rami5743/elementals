@@ -3714,7 +3714,7 @@
    "belt-cargo",
    "timed-window"
   ],
-  "order": 208,
+  "order": 217,
   "line": "A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.",
   "tokens": [
    "ent:belt",

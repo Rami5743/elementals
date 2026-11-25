@@ -274,10 +274,6 @@ Totals: 79 campaign levels, 52 in this repo, of which 11 now ship in the campaig
   - idea: a gate that wants two plates down at the same time, so neither of them can be a player — both have to be held by something that stays.
   - ideas: object-as-permanent-switch, quorum
   - features: ent:boulder ent:box ent:door ent:firewall ent:ice ent:plate opt:heavy-plate opt:required:2 tile:water
-- **Pulse Exchange** `pulse_exchange` (3p: fire+water+earth) core=`cargo-clock-relay-exchange` challenge=motor par=7020
-  - idea: A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.
-  - ideas: cargo-as-clock-contact, belt-cargo, timed-window
-  - features: ent:belt ent:boulder ent:button ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2
 - **Gangway** `gangway` (3p: fire+earth+air) core=`the-lift-is-the-floor` challenge=mind shipped in the campaign as `l81_gangway` (#41, map edited there) par=3000
   - idea: Every other lift in the game is a thing you wait for. This one is the ground you are standing on. Sending it up is not free — it takes the road away, so whoever is going to need that road has to be on the right side of it first, and whoever is going up has to already be aboard.
   - ideas: lift-as-floor, twist-self-block
@@ -310,6 +306,10 @@ Totals: 79 campaign levels, 52 in this repo, of which 11 now ship in the campaig
   - idea: a plate under an exit — standing in your own front door is a switch, so the first player home is not finished but *employed*: the draught that carries everybody else up is powered by a body in a doorway, and that body can never step out again.
   - ideas: threshold-is-a-switch, fan-passenger, hold-switch, machine-strands-operator, twist-order
   - features: ent:button ent:door ent:fan ent:plate ent:torch opt:button:hold opt:fan:hang-time opt:heavy-plate opt:required:2 tile:lava tile:one-way
+- **Pulse Exchange** `pulse_exchange` (3p: fire+water+earth) core=`cargo-clock-relay-exchange` challenge=motor par=7020
+  - idea: A single boulder is a moving electrical contact: send it to opposite ends to dispatch two relay chains, then jump through the short contact pulse on its return.
+  - ideas: cargo-as-clock-contact, belt-cargo, timed-window
+  - features: ent:belt ent:boulder ent:button ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:button-timed opt:button:timed opt:heavy-plate opt:latch opt:required:2
 
 ## 3 players — campaign (30)
 

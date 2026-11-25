@@ -191,5 +191,13 @@ git add -A && git commit && git push -u origin main
 rebuilds `catalog/LEVELS.md`, `catalog/MAPS.md` and `catalog/levels.json`. Both must be run, or the
 level is invisible to the page and to the next novelty check.
 
+Each card on the page carries **Added** and, when they differ, **updated** — the day the level's
+`level.json`, `solution.mjs`, `meta.json` or `NOTES.md` first appeared in the git history and the
+day one of them last changed. `tools/build.mjs` reads both from `git log`, and dates a level that is
+new or edited in the working tree today, so the dates are right exactly when the page is rebuilt in
+the same breath as the change. Two things keep that true: run `tools/build.mjs` in the commit that
+changes a level, never one commit later, and never hand-edit `index.html` — it is generated, and the
+next build silently throws the edit away.
+
 Tell the user the level's name, its core in one line, its play link
 (`levels/<id>/play-link.txt`), and what the novelty check said.

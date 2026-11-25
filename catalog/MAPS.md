@@ -1233,69 +1233,6 @@ Entities:
   X  exit_15      exit       at (30,18)  fire
 ```
 
-## Pulse Exchange (`pulse_exchange`) — 3p, core `cargo-clock-relay-exchange`
-
-```
-Pulse Exchange (pulse_exchange) for fire+water+earth
-    0         1         2         3         
-    0123456789012345678901234567890123456789
- 0  ########################################
- 1  ##....................................##
- 2  ##ppp..........ppppppppp...........ppp##
- 3  ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>##
- 4  #........D.........D.........D.........#
- 5  #........D.........D.........D.......X.#
- 6  #..@.....D....l....D...l.b...D.....*bX.#
- 7  ########################################
- 8  ########################################
- 9  ########################################
-10  #.........D.........D.........D........#
-11  #.X.......D.........D.........D........#
-12  #.X.*.....D.....l...D....l....D.....@..#
-13  ########################################
-14  ########################################
-15  ########################################
-16  #........D.........D.........D.........#
-17  #........D.........D.........D.......X.#
-18  #..@.....D....l....D...l.....D.....*.X.#
-19  ###########################..###########
-20  ###########################..###########
-21  ########################################
-
-Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
-Spawns (@): fire (3,6)  water (36,12)  earth (3,18)
-Entities:
-  >  carriage     belt       at (2,3)  36x1  <- dispatch, repeat_near, repeat_far  mode reverse  speed 2
-  O  token        boulder    at (2,2)
-  p  left_contact plate      at (2,2)  3x1  -> g0_1, g1_1, g2_1  weight heavy
-  p  right_contact plate      at (35,2)  3x1  -> g0_0, g1_0, g2_0  weight heavy
-  p  pulse_contact plate      at (15,2)  9x1  -> g0_2, g1_2, g2_2  weight heavy
-  D  g0_0         door       at (9,4)  1x3  <- right_contact  latch
-  D  g0_1         door       at (19,4)  1x3  <- left_contact, r2_0 (needs 2)  latch
-  D  g0_2         door       at (29,4)  1x3  <- pulse_contact, r2_1 (needs 2)
-  l  r0_0         lever      at (14,6)  -> g1_0
-  l  r0_1         lever      at (23,6)  -> g1_1
-  X  exit_10      exit       at (37,5)  fire
-  *  gem_11       gem        at (35,6)  fire
-  D  g1_0         door       at (30,10)  1x3  <- right_contact, r0_0 (needs 2)  latch
-  D  g1_1         door       at (20,10)  1x3  <- left_contact, r0_1 (needs 2)  latch
-  D  g1_2         door       at (10,10)  1x3  <- pulse_contact, r2_1 (needs 2)
-  l  r1_0         lever      at (25,12)  -> g2_0
-  l  r1_1         lever      at (16,12)  -> g2_1
-  X  exit_17      exit       at (2,11)  water
-  *  gem_18       gem        at (4,12)  water
-  D  g2_0         door       at (9,16)  1x3  <- right_contact, r1_0 (needs 2)  latch
-  D  g2_1         door       at (19,16)  1x3  <- left_contact, r1_1 (needs 2)  latch
-  D  g2_2         door       at (29,16)  1x3  <- pulse_contact, r2_1 (needs 2)
-  l  r2_0         lever      at (14,18)  -> g0_1
-  l  r2_1         lever      at (23,18)  -> g0_2, g1_2, g2_2
-  X  exit_24      exit       at (37,17)  earth
-  *  gem_25       gem        at (35,18)  earth
-  b  dispatch     button     at (3,6)  -> carriage  mode timed  duration 1350
-  b  repeat_near  button     at (25,6)  -> carriage  mode timed  duration 1350
-  b  repeat_far   button     at (36,6)  -> carriage  mode timed  duration 1350
-```
-
 ## Gangway (`gangway`) — 3p, core `the-lift-is-the-floor`
 
 ```
@@ -1694,6 +1631,69 @@ Entities:
   !  checkpoint_16 checkpoint at (5,18)
   "  sign_17      sign       at (10,15)  "The draught is dead until somebody is home."
   "  sign_18      sign       at (19,17)  "The hatch takes a weight and a hand."
+```
+
+## Pulse Exchange (`pulse_exchange`) — 3p, core `cargo-clock-relay-exchange`
+
+```
+Pulse Exchange (pulse_exchange) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ##....................................##
+ 2  ##ppp..........ppppppppp...........ppp##
+ 3  ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>##
+ 4  #........D.........D.........D.........#
+ 5  #........D.........D.........D.......X.#
+ 6  #..@.....D....l....D...l.b...D.....*bX.#
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  #.........D.........D.........D........#
+11  #.X.......D.........D.........D........#
+12  #.X.*.....D.....l...D....l....D.....@..#
+13  ########################################
+14  ########################################
+15  ########################################
+16  #........D.........D.........D.........#
+17  #........D.........D.........D.......X.#
+18  #..@.....D....l....D...l.....D.....*.X.#
+19  ###########################..###########
+20  ###########################..###########
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,6)  water (36,12)  earth (3,18)
+Entities:
+  >  carriage     belt       at (2,3)  36x1  <- dispatch, repeat_near, repeat_far  mode reverse  speed 2
+  O  token        boulder    at (2,2)
+  p  left_contact plate      at (2,2)  3x1  -> g0_1, g1_1, g2_1  weight heavy
+  p  right_contact plate      at (35,2)  3x1  -> g0_0, g1_0, g2_0  weight heavy
+  p  pulse_contact plate      at (15,2)  9x1  -> g0_2, g1_2, g2_2  weight heavy
+  D  g0_0         door       at (9,4)  1x3  <- right_contact  latch
+  D  g0_1         door       at (19,4)  1x3  <- left_contact, r2_0 (needs 2)  latch
+  D  g0_2         door       at (29,4)  1x3  <- pulse_contact, r2_1 (needs 2)
+  l  r0_0         lever      at (14,6)  -> g1_0
+  l  r0_1         lever      at (23,6)  -> g1_1
+  X  exit_10      exit       at (37,5)  fire
+  *  gem_11       gem        at (35,6)  fire
+  D  g1_0         door       at (30,10)  1x3  <- right_contact, r0_0 (needs 2)  latch
+  D  g1_1         door       at (20,10)  1x3  <- left_contact, r0_1 (needs 2)  latch
+  D  g1_2         door       at (10,10)  1x3  <- pulse_contact, r2_1 (needs 2)
+  l  r1_0         lever      at (25,12)  -> g2_0
+  l  r1_1         lever      at (16,12)  -> g2_1
+  X  exit_17      exit       at (2,11)  water
+  *  gem_18       gem        at (4,12)  water
+  D  g2_0         door       at (9,16)  1x3  <- right_contact, r1_0 (needs 2)  latch
+  D  g2_1         door       at (19,16)  1x3  <- left_contact, r1_1 (needs 2)  latch
+  D  g2_2         door       at (29,16)  1x3  <- pulse_contact, r2_1 (needs 2)
+  l  r2_0         lever      at (14,18)  -> g0_1
+  l  r2_1         lever      at (23,18)  -> g0_2, g1_2, g2_2
+  X  exit_24      exit       at (37,17)  earth
+  *  gem_25       gem        at (35,18)  earth
+  b  dispatch     button     at (3,6)  -> carriage  mode timed  duration 1350
+  b  repeat_near  button     at (25,6)  -> carriage  mode timed  duration 1350
+  b  repeat_far   button     at (36,6)  -> carriage  mode timed  duration 1350
 ```
 
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`

@@ -58,18 +58,18 @@ together. `lock-per-element`×4, `twist-order`×4, `machine-strands-operator`×4
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- boulder-carry + twist-two-clocks
-- boulder-float + lift-as-floor
-- lock-per-element + pound-to-move
-- fan-passenger + turbine-out-of-reach
-- one-way-drop + reversible-switch-maze
-- glide-passenger + turbine-out-of-reach
-- lock-per-element + twist-stranding
-- lift-corner-path + turbine-out-of-reach
-- fan-band + twist-stranding
-- dive-ahead-of-the-runaway + lock-per-element
-- lift-press + lock-per-element
-- crate-step + fan-band
+- belt-filter + glide-dismount
+- boulder-carry + one-way-drop
+- freeze-bridge + liquid-lane
+- low-roof-no-jump + one-way-drop
+- boulder-carry + dive-ahead-of-the-runaway
+- boulder-carry + twist-setup
+- lift-corner-path + low-roof-no-jump
+- boulder-carry + freeze-invert
+- turbine-out-of-reach + two-stops-no-middle
+- fan-passenger + freeze-bridge
+- boulder-carry + liquid-lane
+- glide-dismount + low-roof-no-jump
 
 ## This repo's 4-player levels
 
