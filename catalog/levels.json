@@ -4356,6 +4356,45 @@
   ]
  },
  {
+  "id": "falling_ledger",
+  "name": "Falling Ledger",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+earth"
+  ],
+  "parTicks": 9420,
+  "dark": false,
+  "challenge": "mind",
+  "core": "fall-rewires-cargo-permissions",
+  "ideas": [
+   "drop-reconfigures-circuit",
+   "belt-reverse",
+   "twist-undo"
+  ],
+  "order": 151,
+  "line": "the same heavy object switches circuits permanently by falling through its floor, changing a stationary permit into a reversible two-position register.",
+  "tokens": [
+   "ent:belt",
+   "ent:boulder",
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:belt:reverse",
+   "opt:belt:walkable",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "finale",
   "name": "Finale",
   "source": "mine",

@@ -1,0 +1,250 @@
+{
+  "id": "falling_ledger",
+  "name": "Falling Ledger",
+  "order": 151,
+  "description": "A stone is an upper permit until its floor breaks. Its lower conveyor positions are a different register; record the initial permission before changing circuits.",
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###############.........################",
+    "#.......................################",
+    "#.......................################",
+    "#................===#==................#",
+    "#...................#..................#",
+    "#...................#..................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "supports": [
+    [
+      "fire",
+      "earth"
+    ]
+  ],
+  "spawns": {
+    "earth": [
+      32,
+      3
+    ],
+    "fire": [
+      4,
+      14
+    ]
+  },
+  "entities": [
+    {
+      "type": "cracked",
+      "id": "slab",
+      "x": 15,
+      "y": 4,
+      "w": 9,
+      "h": 1
+    },
+    {
+      "type": "boulder",
+      "id": "token",
+      "x": 16,
+      "y": 3
+    },
+    {
+      "type": "plate",
+      "id": "upper",
+      "x": 16,
+      "y": 3,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "f_access",
+        "f_inverse"
+      ]
+    },
+    {
+      "type": "belt",
+      "id": "belt",
+      "x": 1,
+      "y": 9,
+      "w": 19,
+      "speed": -0.55,
+      "mode": "reverse"
+    },
+    {
+      "type": "plate",
+      "id": "west",
+      "x": 1,
+      "y": 8,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "f_west",
+        "f_exit",
+        "e_exit"
+      ]
+    },
+    {
+      "type": "plate",
+      "id": "east",
+      "x": 17,
+      "y": 8,
+      "w": 3,
+      "weight": "heavy",
+      "targets": [
+        "e_east"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "e_access",
+      "x": 25,
+      "y": 1,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "type": "door",
+      "id": "e_east",
+      "x": 30,
+      "y": 7,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Ecert",
+      "x": 34,
+      "y": 9,
+      "targets": [
+        "f_exit",
+        "f_late"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "e_exit",
+      "x": 37,
+      "y": 7,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "door",
+      "id": "f_access",
+      "x": 10,
+      "y": 12,
+      "h": 3
+    },
+    {
+      "type": "lever",
+      "id": "Fpre",
+      "x": 15,
+      "y": 14,
+      "targets": [
+        "e_access"
+      ]
+    },
+    {
+      "type": "lever",
+      "id": "reverse",
+      "x": 18,
+      "y": 14,
+      "targets": [
+        "belt"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_inverse",
+      "x": 21,
+      "y": 12,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "type": "door",
+      "id": "f_west",
+      "x": 24,
+      "y": 12,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Fwest",
+      "x": 28,
+      "y": 14,
+      "targets": [
+        "e_east"
+      ]
+    },
+    {
+      "type": "door",
+      "id": "f_exit",
+      "x": 35,
+      "y": 12,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 34,
+      "y": 9
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 13
+    },
+    {
+      "type": "door",
+      "id": "f_late",
+      "x": 31,
+      "y": 12,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "lever",
+      "id": "Flast",
+      "x": 33,
+      "y": 14,
+      "targets": [
+        "f_exit",
+        "e_exit"
+      ]
+    }
+  ],
+  "parTicks": 9420,
+  "hints": [
+    "Authorize the release while the upper contact still holds.",
+    "Visit the western register before reversing to the east.",
+    "After the eastern certificate, return the stone west."
+  ]
+}

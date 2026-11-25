@@ -2756,6 +2756,63 @@ Entities:
   X  exit_23      exit       at (1,12)  fire
 ```
 
+## Falling Ledger (`falling_ledger`) — 2p, core `fall-rewires-cargo-permissions`
+
+```
+Falling Ledger (falling_ledger) for fire+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #........................D.............#
+ 2  #........................D.............#
+ 3  #...............pp.......D......@......#
+ 4  ###############ccccccccc################
+ 5  #.......................################
+ 6  #.......................################
+ 7  #................===#==.......D......D.#
+ 8  #ppp.............ppp#.........D......DX#
+ 9  #<<<<<<<<<<<<<<<<<<<#.........D...*..DX#
+10  ########################################
+11  ########################################
+12  #.........D..........D..D......D...D...#
+13  #.........D..........D..D......D...D..X#
+14  #...@.....D....l..l..D..D...l..D.l.D.*X#
+15  ########################################
+16  ########################################
+17  ########################################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (32,3)  fire (4,14)
+Entities:
+  c  slab         cracked    at (15,4)  9x1
+  O  token        boulder    at (16,3)
+  p  upper        plate      at (16,3)  2x1  -> f_access, f_inverse  weight heavy
+  >  belt         belt       at (1,9)  19x1  <- reverse  mode reverse  speed -0.55
+  p  west         plate      at (1,8)  3x1  -> f_west, f_exit, e_exit  weight heavy
+  p  east         plate      at (17,8)  3x1  -> e_east  weight heavy
+  D  e_access     door       at (25,1)  1x3  <- Fpre  latch
+  D  e_east       door       at (30,7)  1x3  <- east, Fwest (needs 2)  latch
+  l  Ecert        lever      at (34,9)  -> f_exit, f_late
+  D  e_exit       door       at (37,7)  1x3  <- west, Flast (needs 2)
+  D  f_access     door       at (10,12)  1x3  <- upper
+  l  Fpre         lever      at (15,14)  -> e_access
+  l  reverse      lever      at (18,14)  -> belt
+  D  f_inverse    door       at (21,12)  1x3  <- upper  invert
+  D  f_west       door       at (24,12)  1x3  <- west  latch
+  l  Fwest        lever      at (28,14)  -> e_east
+  D  f_exit       door       at (35,12)  1x3  <- west, Ecert, Flast (needs 3)  latch
+  *  gem_17       gem        at (34,9)  earth
+  X  exit_18      exit       at (38,8)  earth
+  *  gem_19       gem        at (37,14)  fire
+  X  exit_20      exit       at (38,13)  fire
+  D  f_late       door       at (31,12)  1x3  <- Ecert  latch
+  l  Flast        lever      at (33,14)  -> f_exit, e_exit
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

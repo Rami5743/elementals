@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 152 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 153 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (50)
+## 2 players — this repo (51)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -227,6 +227,10 @@ Totals: 79 campaign levels, 152 in this repo, of which 11 now ship in the campai
   - idea: a floating causeway is both the three-crossing physical floor and the persistent veto on the inspector's road. Adapted from the distinct three-player Stone Causeway, as allowed by the player-count-specific novelty rule.
   - ideas: causeway-as-veto, boulder-float, twist-undo
   - features: ent:boulder ent:door ent:lever ent:plate opt:heavy-plate opt:invert:door opt:latch opt:required:2 tile:sludge
+- **Falling Ledger** `falling_ledger` (2p: fire+earth) core=`fall-rewires-cargo-permissions` challenge=mind par=9420
+  - idea: the same heavy object switches circuits permanently by falling through its floor, changing a stationary permit into a reversible two-position register.
+  - ideas: drop-reconfigures-circuit, belt-reverse, twist-undo
+  - features: ent:belt ent:boulder ent:cracked ent:door ent:lever ent:plate opt:belt:reverse opt:belt:walkable opt:heavy-plate opt:invert:door opt:latch opt:required:1 opt:required:2 opt:required:3 tile:one-way
 
 ## 2 players — campaign (34)
 
