@@ -3107,3 +3107,75 @@ Entities:
   p  p3_2         plate      at (20,19)  -> g2_2
   p  p3_3         plate      at (12,19)  -> g1_1
 ```
+
+## Rope Palindrome (`rope_palindrome`) — 4p, core `four-operator-height-memory`
+
+```
+Rope Palindrome (rope_palindrome) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ####..##........D....D...#..D...D.D....#
+ 2  ####..##........D....D.X.#..D...D.D..X.#
+ 3  ####..##.@......D..l.D*X.#@.D.l.D.D.*X.#
+ 4  ####uu##################################
+ 5  ########################################
+ 6  #......D.......D.................D.....#
+ 7  #.X....D.......D.................D.....#
+ 8  #.X.*..D.....@.D..............p..D..l..#
+ 9  ###########EE###############uuu#########
+10  ###########..###############...#########
+11  ###########..###############...#########
+12  #......................................#
+13  #......................................#
+14  #..............l..............p........#
+15  ###########..###############...#########
+16  ###########..###############...#########
+17  #..........D...........D...D..D...D.D..#
+18  #..........D...........D...D..D...D.DX.#
+19  #....@.....D...l.......D...D..D.l.DlDX.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (13,8)  water (5,19)  earth (9,3)  air (26,3)
+Entities:
+  u  balance      pulley     at (28,9)  3x1  <- a, b, d (needs 3)  range 6  ratio 2  invert  second platform at (4,4)  platforms weigh 0 and 6
+  E  recall       elevator   at (11,9)  2x1  mode loop  speed 2  pause 300  path (11,9)-(11,15)
+  O  stone        boulder    at (30,8)
+  p  high         plate      at (30,8)  -> w_second, w_finish, e2, w_high  weight heavy
+  p  low          plate      at (30,14)  -> w_first, w_final  weight heavy
+  l  a            lever      at (9,3)  -> f_upper, balance, w_invert
+  l  b            lever      at (15,19)  -> f_right, balance, e_inv
+  l  f1           lever      at (15,14)  -> w_second, e1, air_start
+  l  f2           lever      at (36,8)  -> w_final
+  l  c            lever      at (32,19)  -> e2
+  D  f_upper      door       at (15,6)  1x3  <- a
+  D  f_right      door       at (33,6)  1x3  <- b
+  D  f_exit       door       at (7,6)  1x3  <- e_end
+  D  w_first      door       at (11,17)  1x3  <- low  latch
+  D  w_second     door       at (23,17)  1x3  <- high, f1 (needs 2)  latch
+  D  w_invert     door       at (27,17)  1x3  <- a  invert
+  D  w_final      door       at (30,17)  1x3  <- low, f2, e_key (needs 3)  latch
+  D  w_finish     door       at (36,17)  1x3  <- high, e_end (needs 2)
+  *  gem_18       gem        at (4,8)  fire
+  *  gem_19       gem        at (37,19)  water
+  X  exit_20      exit       at (2,7)  fire
+  X  exit_21      exit       at (37,18)  water
+  "  sign_22      sign       at (15,17)  "B"
+  D  e1           door       at (16,1)  1x3  <- f1  latch
+  l  e_key        lever      at (19,3)  -> w_final
+  D  e2           door       at (34,1)  1x3  <- high, c, w_ack (needs 3)  latch
+  D  e_inv        door       at (32,1)  1x3  <- b, d  invert
+  D  w_high       door       at (34,17)  1x3  <- high
+  l  w_ack        lever      at (35,19)  -> e2
+  l  e_end        lever      at (36,3)  -> w_finish, f_exit, e_exit
+  *  gem_30       gem        at (22,3)  earth
+  X  exit_31      exit       at (23,2)  earth
+  "  sign_32      sign       at (9,1)  "A"
+  D  e_exit       door       at (21,1)  1x3  <- e_end
+  D  air_start    door       at (28,1)  1x3  <- f1  latch
+  l  d            lever      at (30,3)  -> balance, e_inv
+  *  gem_36       gem        at (36,3)  air
+  X  exit_37      exit       at (37,2)  air
+```

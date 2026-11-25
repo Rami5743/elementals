@@ -4023,6 +4023,45 @@
   ]
  },
  {
+  "id": "rope_palindrome",
+  "name": "Rope Palindrome",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6360,
+  "dark": false,
+  "challenge": "mind",
+  "core": "four-operator-height-memory",
+  "ideas": [
+   "balanced-rope-memory",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 318,
+  "line": "A four-operator mechanical memory: the same balanced ratio retains the last written height, while three independent operators must cooperate to erase it.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:elevator:loop",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:invert:pulley",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "rope_register",
   "name": "Rope Register",
   "source": "mine",

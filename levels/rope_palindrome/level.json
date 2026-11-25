@@ -1,0 +1,395 @@
+{
+  "id": "rope_palindrome",
+  "name": "Rope Palindrome",
+  "order": 318,
+  "description": "A balanced rope remembers its height. Add your weight to write it, remove mechanical advantage to erase it.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 6360,
+  "tiles": [
+    "########################################",
+    "####..##.................#.............#",
+    "####..##.................#.............#",
+    "####..##.................#.............#",
+    "####..##################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###########..###############...#########",
+    "###########..###############...#########",
+    "###########..###############...#########",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###########..###############...#########",
+    "###########..###############...#########",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      13,
+      8
+    ],
+    "water": [
+      5,
+      19
+    ],
+    "earth": [
+      9,
+      3
+    ],
+    "air": [
+      26,
+      3
+    ]
+  },
+  "entities": [
+    {
+      "id": "balance",
+      "type": "pulley",
+      "x": 28,
+      "y": 9,
+      "w": 3,
+      "to": [
+        4,
+        4,
+        2
+      ],
+      "range": 6,
+      "ratio": 2,
+      "weights": [
+        0,
+        6
+      ],
+      "required": 3,
+      "invert": true
+    },
+    {
+      "id": "recall",
+      "type": "elevator",
+      "x": 11,
+      "y": 9,
+      "w": 2,
+      "path": [
+        [
+          11,
+          9
+        ],
+        [
+          11,
+          15
+        ]
+      ],
+      "mode": "loop",
+      "pause": 300,
+      "speed": 2
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 30,
+      "y": 8
+    },
+    {
+      "id": "high",
+      "type": "plate",
+      "x": 30,
+      "y": 8,
+      "weight": "heavy",
+      "targets": [
+        "w_second",
+        "w_finish",
+        "e2",
+        "w_high"
+      ]
+    },
+    {
+      "id": "low",
+      "type": "plate",
+      "x": 30,
+      "y": 14,
+      "weight": "heavy",
+      "targets": [
+        "w_first",
+        "w_final"
+      ]
+    },
+    {
+      "id": "a",
+      "type": "lever",
+      "x": 9,
+      "y": 3,
+      "targets": [
+        "f_upper",
+        "balance",
+        "w_invert"
+      ]
+    },
+    {
+      "id": "b",
+      "type": "lever",
+      "x": 15,
+      "y": 19,
+      "targets": [
+        "f_right",
+        "balance",
+        "e_inv"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "lever",
+      "x": 15,
+      "y": 14,
+      "targets": [
+        "w_second",
+        "e1",
+        "air_start"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "lever",
+      "x": 36,
+      "y": 8,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "c",
+      "type": "lever",
+      "x": 32,
+      "y": 19,
+      "targets": [
+        "e2"
+      ]
+    },
+    {
+      "id": "f_upper",
+      "type": "door",
+      "x": 15,
+      "y": 6,
+      "h": 3
+    },
+    {
+      "id": "f_right",
+      "type": "door",
+      "x": 33,
+      "y": 6,
+      "h": 3
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 7,
+      "y": 6,
+      "h": 3
+    },
+    {
+      "id": "w_first",
+      "type": "door",
+      "x": 11,
+      "y": 17,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w_second",
+      "type": "door",
+      "x": 23,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w_invert",
+      "type": "door",
+      "x": 27,
+      "y": 17,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 30,
+      "y": 17,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "w_finish",
+      "type": "door",
+      "x": 36,
+      "y": 17,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 4,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 37,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 2,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 37,
+      "y": 18
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 17,
+      "text": "B"
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 16,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_key",
+      "type": "lever",
+      "x": 19,
+      "y": 3,
+      "targets": [
+        "w_final"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 34,
+      "y": 1,
+      "h": 3,
+      "required": 3,
+      "latch": true
+    },
+    {
+      "id": "e_inv",
+      "type": "door",
+      "x": 32,
+      "y": 1,
+      "h": 3,
+      "invert": true,
+      "required": 1
+    },
+    {
+      "id": "w_high",
+      "type": "door",
+      "x": 34,
+      "y": 17,
+      "h": 3
+    },
+    {
+      "id": "w_ack",
+      "type": "lever",
+      "x": 35,
+      "y": 19,
+      "targets": [
+        "e2"
+      ]
+    },
+    {
+      "id": "e_end",
+      "type": "lever",
+      "x": 36,
+      "y": 3,
+      "targets": [
+        "w_finish",
+        "f_exit",
+        "e_exit"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 22,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 23,
+      "y": 2
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 1,
+      "text": "A"
+    },
+    {
+      "id": "e_exit",
+      "type": "door",
+      "x": 21,
+      "y": 1,
+      "h": 3
+    },
+    {
+      "id": "air_start",
+      "type": "door",
+      "x": 28,
+      "y": 1,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "d",
+      "type": "lever",
+      "x": 30,
+      "y": 3,
+      "targets": [
+        "balance",
+        "e_inv"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 36,
+      "y": 3
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 37,
+      "y": 2
+    }
+  ],
+  "hints": [
+    "The rope stores a height while balanced.",
+    "Fire writes the low position; A, B and D together erase it.",
+    "Air must release D after Fire unloads at the high position."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "order": 318,
+  "challenge": "mind",
+  "core": "four-operator-height-memory",
+  "ideas": [
+    "balanced-rope-memory",
+    "twist-undo",
+    "quorum"
+  ]
+}
