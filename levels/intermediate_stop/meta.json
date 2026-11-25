@@ -1,0 +1,10 @@
+{
+  "order": 127,
+  "challenge": "mind",
+  "core": "obstructed-hoist-three-stable-stops",
+  "ideas": [
+    "obstruction-as-third-state",
+    "lift-press",
+    "twist-undo"
+  ]
+}

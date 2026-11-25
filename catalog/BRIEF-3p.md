@@ -54,23 +54,24 @@ together. `twist-undo`×10, `quorum`×8, `twist-order`×7, `machine-strands-oper
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `cargo-power-cascade` — A physical cargo contact supplies another independently enabled cargo lift. Raising the upstream load cuts power to the downstream lift, and lowering the upstream load automatically restarts it. The alternating high and low contacts become different permissions.
+- `obstruction-as-third-state` — A retractable obstruction deliberately stalls a powered cargo hoist at an intermediate sensor. Releasing the obstruction, without changing the lift command, resumes its travel. The binary command becomes a three-state machine.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- stand-aside-is-the-switch + timed-window
-- fan-band + invert-door
-- stock-before-it-seals + twist-self-block
-- liquid-lane + twist-order
-- twist-order + twist-sacrifice
-- belt-reverse + lift-corner-path
-- counterweight-you-must-remove + stock-before-it-seals
-- seesaw-balance + twist-self-block
-- glide-passenger + invert-door
-- fan-passenger + hop-beats-belt
-- lift-sorts-by-weight + object-as-permanent-switch
-- stand-aside-is-the-switch + twist-self-block
+- machine-strands-operator + sink-as-a-timer
+- object-as-permanent-switch + switch-in-mid-flight
+- feed-the-engine-mid-ride + object-as-permanent-switch
+- lock-per-element + timed-window
+- liquid-lane + machine-strands-operator
+- invert-door + lift-sorts-by-weight
+- lift-corner-path + mass-adds-on-the-beam
+- lift-corner-path + wide-door
+- invert-door + two-in-the-air-at-once
+- belt-filter + machine-strands-operator
+- lift-corner-path + lift-sorts-by-weight
+- belt-filter + lift-corner-path
 
 ## This repo's 3-player levels
 

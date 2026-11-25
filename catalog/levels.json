@@ -3678,6 +3678,38 @@
   ]
  },
  {
+  "id": "intermediate_stop",
+  "name": "Intermediate Stop",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 7980,
+  "dark": false,
+  "challenge": "mind",
+  "core": "obstructed-hoist-three-stable-stops",
+  "ideas": [
+   "obstruction-as-third-state",
+   "lift-press",
+   "twist-undo"
+  ],
+  "order": 127,
+  "line": "A binary hoist can be made into a three-state machine by deliberately blocking its upward travel with a retractable ceiling. The obstruction is not a failure: it provides a stable middle reading that a passing stone cannot maintain.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "jackshaft",
   "name": "Jackshaft",
   "source": "mine",

@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 80 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 81 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (26)
+## 2 players — this repo (27)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -133,6 +133,10 @@ Totals: 79 campaign levels, 80 in this repo, of which 11 now ship in the campaig
 - **Cascade Relay** `cascade_relay` (2p: fire+water) core=`dependent-cargo-power-cascade` challenge=mind par=6540
   - idea: One cargo lift draws power from a contact on the other lift. Raising A removes power from B even while B's control remains on; restoring A's low position restarts B automatically.
   - ideas: cargo-power-cascade, twist-undo, quorum
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate opt:heavy-plate opt:latch opt:required:2
+- **Intermediate Stop** `intermediate_stop` (2p: fire+water) core=`obstructed-hoist-three-stable-stops` challenge=mind par=7980
+  - idea: A binary hoist can be made into a three-state machine by deliberately blocking its upward travel with a retractable ceiling. The obstruction is not a failure: it provides a stable middle reading that a passing stone cannot maintain.
+  - ideas: obstruction-as-third-state, lift-press, twist-undo
   - features: ent:boulder ent:door ent:elevator ent:lever ent:plate opt:heavy-plate opt:latch opt:required:2
 
 ## 2 players — campaign (34)

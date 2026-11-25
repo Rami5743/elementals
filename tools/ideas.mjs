@@ -171,3 +171,5 @@ Object.assign(IDEAS, { "shuttle-strips-cargo-to-belt": {kind:'spine',note:"An ov
 Object.assign(IDEAS, { "wind-off-enables-descent": {kind:'spine',note:"A running upward fan prevents reaching a side balcony; temporarily disable it, then restore it for return ascent."} });
 
 Object.assign(IDEAS, { "cargo-power-cascade": {kind:'spine',note:"A physical cargo contact supplies another independently enabled cargo lift. Raising the upstream load cuts power to the downstream lift, and lowering the upstream load automatically restarts it. The alternating high and low contacts become different permissions."} });
+
+Object.assign(IDEAS, { "obstruction-as-third-state": {kind:'spine',note:"A retractable obstruction deliberately stalls a powered cargo hoist at an intermediate sensor. Releasing the obstruction, without changing the lift command, resumes its travel. The binary command becomes a three-state machine."} });

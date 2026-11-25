@@ -53,23 +53,24 @@ together. `twist-undo`×10, `quorum`×9, `twist-order`×5, `lock-per-element`×4
 - `dive-ahead-of-the-runaway` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so once it is loose it can never be caught from behind: whoever is going to stop it has to already be standing in its path. And the one switch that looses it is the same switch that opens the only way down to that path, so nobody can be waiting there in advance — the way to get in front of the stone is to let it go first and then throw yourself down after it, arriving by falling because falling beats any road.
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
 - `cargo-power-cascade` — A physical cargo contact supplies another independently enabled cargo lift. Raising the upstream load cuts power to the downstream lift, and lowering the upstream load automatically restarts it. The alternating high and low contacts become different permissions.
+- `obstruction-as-third-state` — A retractable obstruction deliberately stalls a powered cargo hoist at an intermediate sensor. Releasing the obstruction, without changing the lift command, resumes its travel. The binary command becomes a three-state machine.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- head-stack + stand-aside-is-the-switch
-- hop-beats-belt + position-as-volatile-key
-- hop-beats-belt + two-in-the-air-at-once
-- reversible-switch-maze + wide-door
-- crate-step + reversible-switch-maze
-- dive-ahead-of-the-runaway + freeze-bridge
-- crate-step + fan-band
-- dark + lock-per-element
-- fan-passenger + lock-per-element
-- boulder-float + pound-to-move
-- head-stack + single-file-stone
-- feed-the-engine-mid-ride + lock-per-element
+- lift-as-floor + lock-per-element
+- boulder-float + single-file-stone
+- mass-adds-on-the-beam + turbine-out-of-reach
+- boulder-float + mass-adds-on-the-beam
+- lift-corner-path + lock-per-element
+- counterweight-you-must-remove + low-roof-no-jump
+- hop-beats-belt + object-as-permanent-switch
+- pound-chain + seesaw-balance
+- boulder-carry + crate-step
+- liquid-lane + lock-per-element
+- freeze-bridge + threshold-is-a-switch
+- boulder-float + counterweight-you-must-remove
 
 ## This repo's 4-player levels
 

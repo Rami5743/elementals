@@ -1361,6 +1361,66 @@ Entities:
   X  exit_26      exit       at (2,18)  water
 ```
 
+## Intermediate Stop (`intermediate_stop`) — 2p, core `obstructed-hoist-three-stable-stops`
+
+```
+Intermediate Stop (intermediate_stop) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #######D################################
+ 2  #######p################################
+ 3  #######p################################
+ 4  #######.################################
+ 5  #######.################################
+ 6  #######p################################
+ 7  #######E################################
+ 8  ########################################
+ 9  #........D.........D........D......D...#
+10  #........D.........D........D......D..X#
+11  #..@.....D....l....D....l...D...l..D.*X#
+12  ########################################
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #....D.....D.......D.........D.........#
+18  #.X..D.....D.......D.........D.........#
+19  #.X*.D..l..D..l....D....l....D.....l.@.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,11)  water (37,19)
+Entities:
+  E  hoist        elevator   at (7,7)  <- up  speed 6  path (7,7)-(7,3)
+  O  stone        boulder    at (7,6)
+  D  stop         door       at (7,1)  1x2  <- clear
+  p  low          plate      at (7,6)  -> f3, w4  weight heavy
+  p  mid          plate      at (7,3)  -> f1, w2, f4  weight heavy
+  p  high         plate      at (7,2)  -> w1, f2, w3  weight heavy
+  l  up           lever      at (3,11)  -> hoist
+  l  clear        lever      at (35,19)  -> stop
+  l  f_key1       lever      at (14,11)  -> w1
+  l  w_key1       lever      at (24,19)  -> f2
+  l  f_key2       lever      at (24,11)  -> w2, f3
+  l  w_key2       lever      at (14,19)  -> w3, w2
+  l  f_key3       lever      at (32,11)  -> w4
+  l  w_key3       lever      at (8,19)  -> f4
+  D  f1           door       at (9,9)  1x3  <- mid  latch
+  D  f2           door       at (19,9)  1x3  <- high, w_key1 (needs 2)  latch
+  D  f3           door       at (28,9)  1x3  <- low, f_key2 (needs 2)  latch
+  D  f4           door       at (35,9)  1x3  <- mid, w_key3 (needs 2)
+  D  w1           door       at (29,17)  1x3  <- high, f_key1 (needs 2)  latch
+  D  w2           door       at (19,17)  1x3  <- mid, f_key2, w_key2 (needs 2)
+  D  w3           door       at (11,17)  1x3  <- high, w_key2 (needs 2)  latch
+  D  w4           door       at (5,17)  1x3  <- low, f_key3 (needs 2)  latch
+  *  gem_22       gem        at (37,11)  fire
+  X  exit_23      exit       at (38,10)  fire
+  *  gem_24       gem        at (3,19)  water
+  X  exit_25      exit       at (2,18)  water
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```
