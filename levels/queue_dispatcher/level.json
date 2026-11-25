@@ -1,0 +1,274 @@
+{
+  "id": "queue_dispatcher",
+  "name": "Queue Dispatcher",
+  "order": 240,
+  "description": "Two travelers reverse their order in a one-body throat; a third dispatcher must withdraw the route permission to certify the first exchange, then restore it for the next.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "##.....................................#",
+    "##.....................................#",
+    "##.....................................#",
+    "#####...####################...#########",
+    "#####...####################...#########",
+    "#####...#..................#...#########",
+    "#####...#..................#...#########",
+    "#####...#..................#...#########",
+    "#####...####################...#########",
+    "#####...####################...#########",
+    "#####...####################...#########",
+    "#####...####################...#########",
+    "#####...####################...#########",
+    "#........##################............#",
+    "#........##################............#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      5,
+      18
+    ],
+    "air": [
+      7,
+      18
+    ],
+    "water": [
+      10,
+      10
+    ]
+  },
+  "entities": [
+    {
+      "id": "gate",
+      "type": "door",
+      "x": 24,
+      "y": 18,
+      "h": 1,
+      "required": 2
+    },
+    {
+      "id": "west_plate",
+      "type": "plate",
+      "x": 12,
+      "y": 18,
+      "targets": [
+        "gate"
+      ]
+    },
+    {
+      "id": "east_plate",
+      "type": "plate",
+      "x": 37,
+      "y": 18,
+      "targets": [
+        "gate"
+      ]
+    },
+    {
+      "id": "fan",
+      "type": "fan",
+      "x": 28,
+      "y": 3,
+      "w": 3,
+      "h": 16,
+      "strength": 1.5
+    },
+    {
+      "id": "Astart",
+      "type": "lever",
+      "x": 31,
+      "y": 18,
+      "targets": [
+        "fan",
+        "upper_first"
+      ]
+    },
+    {
+      "id": "upper_first",
+      "type": "door",
+      "x": 16,
+      "y": 3,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "A1",
+      "type": "lever",
+      "x": 8,
+      "y": 5,
+      "targets": [
+        "fire_work",
+        "w_access"
+      ]
+    },
+    {
+      "id": "fire_work",
+      "type": "door",
+      "x": 34,
+      "y": 16,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 36,
+      "y": 18,
+      "targets": [
+        "upper_second"
+      ]
+    },
+    {
+      "id": "upper_second",
+      "type": "door",
+      "x": 34,
+      "y": 3,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "A2",
+      "type": "lever",
+      "x": 35,
+      "y": 5,
+      "targets": [
+        "west_work"
+      ]
+    },
+    {
+      "id": "west_work",
+      "type": "door",
+      "x": 4,
+      "y": 16,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 2,
+      "y": 18,
+      "targets": [
+        "upper_final"
+      ]
+    },
+    {
+      "id": "upper_final",
+      "type": "door",
+      "x": 36,
+      "y": 3,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "f_gem",
+      "type": "gem",
+      "x": 2,
+      "y": 18,
+      "element": "fire"
+    },
+    {
+      "id": "f_exit",
+      "type": "exit",
+      "x": 1,
+      "y": 17,
+      "element": "fire"
+    },
+    {
+      "id": "a_gem",
+      "type": "gem",
+      "x": 37,
+      "y": 5,
+      "element": "air"
+    },
+    {
+      "id": "a_exit",
+      "type": "exit",
+      "x": 38,
+      "y": 4,
+      "element": "air"
+    },
+    {
+      "id": "permit",
+      "type": "lever",
+      "x": 11,
+      "y": 10,
+      "targets": [
+        "gate",
+        "w_inverse"
+      ]
+    },
+    {
+      "id": "w_access",
+      "type": "door",
+      "x": 16,
+      "y": 8,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w_inverse",
+      "type": "door",
+      "x": 18,
+      "y": 8,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 21,
+      "y": 10,
+      "targets": [
+        "fire_work"
+      ]
+    },
+    {
+      "id": "w_end",
+      "type": "door",
+      "x": 24,
+      "y": 8,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "A3",
+      "type": "lever",
+      "x": 37,
+      "y": 5,
+      "targets": [
+        "w_end"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 25,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 26,
+      "y": 9
+    }
+  ],
+  "parTicks": 7620,
+  "hints": [
+    "Air leads through the narrow throat while Fire holds a plate and Water grants permission.",
+    "After Air returns, Water must close the throat to inspect the first exchange. Restore permission for Fire.",
+    "Air must withdraw into the west yard before Fire can return; the dispatcher cannot go home until Air completes the last trip."
+  ]
+}

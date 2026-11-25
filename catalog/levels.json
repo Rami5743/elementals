@@ -5207,6 +5207,39 @@
   ]
  },
  {
+  "id": "queue_dispatcher",
+  "name": "Queue Dispatcher",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+air"
+  ],
+  "parTicks": 7620,
+  "dark": false,
+  "challenge": "mind",
+  "core": "queue-exchange-with-revocable-dispatch-permit",
+  "ideas": [
+   "no-overtaking",
+   "send-one-through",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 240,
+  "line": "The single-file throat needs both a traveler holding a plate and a third player's dispatch permission. The dispatcher cannot certify the first exchange without withdrawing that permission.",
+  "tokens": [
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "ent:plate",
+   "opt:fan:hang-time",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "queue_reversal",
   "name": "Queue Reversal",
   "source": "mine",

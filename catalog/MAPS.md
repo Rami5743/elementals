@@ -4581,6 +4581,66 @@ Entities:
   X  exit_47      exit       at (38,2)  earth
 ```
 
+## Queue Dispatcher (`queue_dispatcher`) — 3p, core `queue-exchange-with-revocable-dispatch-permit`
+
+```
+Queue Dispatcher (queue_dispatcher) for fire+water+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ##..............D...........^^^...D.D..#
+ 4  ##..............D...........^^^...D.D.X#
+ 5  ##......l.......D...........^^^...DlDlX#
+ 6  #####...####################^^^#########
+ 7  #####...####################^^^#########
+ 8  #####...#.......D.D.....D..#^^^#########
+ 9  #####...#.......D.D.....D.X#^^^#########
+10  #####...#.@l....D.D..l..D*X#^^^#########
+11  #####...####################^^^#########
+12  #####...####################^^^#########
+13  #####...####################^^^#########
+14  #####...####################^^^#########
+15  #####...####################^^^#########
+16  #...D....##################.^^^...D....#
+17  #X..D....##################.^^^...D....#
+18  #X*.D@.@....p...........D...^^^l..D.lp.#
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (5,18)  air (7,18)  water (10,10)
+Entities:
+  D  gate         door       at (24,18)  <- west_plate, east_plate, permit (needs 2)
+  p  west_plate   plate      at (12,18)  -> gate
+  p  east_plate   plate      at (37,18)  -> gate
+  ^  fan          fan        at (28,3)  3x16  <- Astart  strength 1.5
+  l  Astart       lever      at (31,18)  -> fan, upper_first
+  D  upper_first  door       at (16,3)  1x3  <- Astart  latch
+  l  A1           lever      at (8,5)  -> fire_work, w_access
+  D  fire_work    door       at (34,16)  1x3  <- A1, W1 (needs 2)  latch
+  l  F1           lever      at (36,18)  -> upper_second
+  D  upper_second door       at (34,3)  1x3  <- F1  latch
+  l  A2           lever      at (35,5)  -> west_work
+  D  west_work    door       at (4,16)  1x3  <- A2  latch
+  l  F2           lever      at (2,18)  -> upper_final
+  D  upper_final  door       at (36,3)  1x3  <- F2  latch
+  *  f_gem        gem        at (2,18)  fire
+  X  f_exit       exit       at (1,17)  fire
+  *  a_gem        gem        at (37,5)  air
+  X  a_exit       exit       at (38,4)  air
+  l  permit       lever      at (11,10)  -> gate, w_inverse
+  D  w_access     door       at (16,8)  1x3  <- A1  latch
+  D  w_inverse    door       at (18,8)  1x3  <- permit  invert
+  l  W1           lever      at (21,10)  -> fire_work
+  D  w_end        door       at (24,8)  1x3  <- A3  latch
+  l  A3           lever      at (37,5)  -> w_end
+  *  gem_24       gem        at (25,10)  water
+  X  exit_25      exit       at (26,9)  water
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

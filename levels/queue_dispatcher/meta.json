@@ -1,0 +1,11 @@
+{
+  "order": 240,
+  "challenge": "mind",
+  "core": "queue-exchange-with-revocable-dispatch-permit",
+  "ideas": [
+    "no-overtaking",
+    "send-one-through",
+    "twist-undo",
+    "quorum"
+  ]
+}
