@@ -58,18 +58,18 @@ together. `twist-undo`×13, `quorum`×11, `twist-order`×7, `machine-strands-ope
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- belt-filter + dive-ahead-of-the-runaway
-- lift-corner-path + lift-sorts-by-weight
-- timed-window + wide-door
-- timed-window + trigger-from-above
-- boulder-carry + object-as-permanent-switch
-- single-file-stone + twist-order
-- lift-corner-path + partner-builds-your-landing
-- lift-corner-path + switch-in-mid-flight
-- glide-passenger + object-as-permanent-switch
-- pound-to-move + twist-two-clocks
-- belt-filter + twist-self-block
-- belt-reverse + lift-corner-path
+- lock-per-element + timed-window
+- counterweight-you-must-remove + single-file-stone
+- fan-band + twist-two-clocks
+- partner-builds-your-landing + twist-order
+- counterweight-you-must-remove + wide-door
+- boulder-float + machine-strands-operator
+- lift-corner-path + low-roof-no-jump
+- fan-band + fan-passenger
+- object-as-permanent-switch + send-one-through
+- door-pushes-you-through + machine-strands-operator
+- machine-strands-operator + sink-as-a-timer
+- fan-band + lift-corner-path
 
 ## This repo's 3-player levels
 

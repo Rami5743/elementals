@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 86 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 87 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (28)
@@ -531,7 +531,7 @@ Totals: 79 campaign levels, 86 in this repo, of which 11 now ship in the campaig
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (28)
+## 4 players — this repo (29)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -644,6 +644,10 @@ Totals: 79 campaign levels, 86 in this repo, of which 11 now ship in the campaig
 - **Cascade Quorum** `cascade_quorum` (4p: fire+water+earth+air) core=`dual-control-cargo-supply-cycle` challenge=mind par=7200
   - idea: Two independent operators share a supply hoist, whose low cargo contact powers the second hoist. The fourth operator owns the reversible half of the supply quorum.
   - ideas: cargo-power-cascade, twist-undo, quorum
+  - features: ent:boulder ent:door ent:elevator ent:lever ent:plate opt:heavy-plate opt:latch opt:required:2 opt:required:4
+- **Ceiling Committee** `ceiling_committee` (4p: fire+water+earth+air) core=`joint-ceiling-intermediate-hoist-state` challenge=mind par=6600
+  - idea: A binary hoist obtains an extra stable position from a retractable obstruction controlled by two independent operators.
+  - ideas: obstruction-as-third-state, twist-undo, quorum
   - features: ent:boulder ent:door ent:elevator ent:lever ent:plate opt:heavy-plate opt:latch opt:required:2 opt:required:4
 
 ## 4 players — campaign (23)

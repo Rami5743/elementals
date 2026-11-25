@@ -47,18 +47,18 @@ together. `twist-undo`×14, `invert-door`×5, `hold-switch`×5, `quorum`×5, `ob
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- dive-ahead-of-the-runaway + invert-door
-- hold-switch + two-stops-no-middle
+- freeze-invert + send-one-through
+- glide-dismount + no-overtaking
+- glide-dismount + two-is-not-heavy
+- head-stack + pound-chain
+- glide-dismount + torch-bridge
 - plank-sums-plate-maxes + shared-switch-two-gates
-- pound-chain + shared-switch-two-gates
-- lift-sheds-its-load + twist-order
-- send-one-through + twist-undo
-- belt-filter + one-way-press
-- dive-ahead-of-the-runaway + freeze-invert
-- hold-switch + lift-as-floor
-- lift-as-floor + liquid-lane
-- hold-switch + seesaw-balance
-- freeze-bridge + lift-as-floor
+- glide-dismount + seesaw-balance
+- hop-beats-belt + pound-chain
+- head-stack + seesaw-balance
+- door-pushes-you-through + glide-dismount
+- belt-filter + low-roof-no-jump
+- low-roof-no-jump + two-stops-no-middle
 
 ## This repo's 2-player levels
 

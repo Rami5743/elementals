@@ -4885,3 +4885,80 @@ Entities:
   *  gem_43       gem        at (37,16)  air
   X  exit_44      exit       at (38,15)  air
 ```
+
+## Ceiling Committee (`ceiling_committee`) — 4p, core `joint-ceiling-intermediate-hoist-state`
+
+```
+Ceiling Committee (ceiling_committee) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #######D################################
+ 2  #######p################################
+ 3  #######p################################
+ 4  #######.################################
+ 5  #######.################################
+ 6  #######p################################
+ 7  #######E################################
+ 8  ########################################
+ 9  #........D.........D........D......D..X#
+10  #..@.....D....l....D....l...D...l..D.*X#
+11  ########################################
+12  #.......D..........D........D......D..X#
+13  #..@....D.....l....D....l...D...l..D.*X#
+14  ########################################
+15  #.......D..........D........D......D..X#
+16  #..@....D.....l....D....l...D...l..D.*X#
+17  ########################################
+18  #.X..D.....D.......D.........D.........#
+19  #.X*.D..l..D..l....D....l....D.......@.#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,10)  water (37,19)  earth (3,13)  air (3,16)
+Entities:
+  E  hoist        elevator   at (7,7)  <- up  speed 6  path (7,7)-(7,3)
+  O  stone        boulder    at (7,6)
+  D  stop         door       at (7,1)  1x2  <- clear, a_control (needs 2)
+  p  low          plate      at (7,6)  -> f3, w4  weight heavy
+  p  mid          plate      at (7,3)  -> f1, w2, f4, e3, e4, a3, a4  weight heavy
+  p  high         plate      at (7,2)  -> w1, f2, w3, e2, a2  weight heavy
+  l  up           lever      at (3,10)  -> hoist
+  l  clear        lever      at (14,13)  -> stop
+  l  f_key1       lever      at (14,10)  -> w1, e1, a1
+  l  w_key1       lever      at (24,19)  -> f2, e2, a2
+  l  f_key2       lever      at (24,10)  -> w2, f3
+  l  w_key2       lever      at (14,19)  -> w3, e3, w2, a3
+  l  f_key3       lever      at (32,10)  -> w4
+  l  w_key3       lever      at (8,19)  -> f4, e4, a4
+  D  f1           door       at (9,9)  1x2  <- mid  latch
+  D  f2           door       at (19,9)  1x2  <- high, w_key1 (needs 2)  latch
+  D  f3           door       at (28,9)  1x2  <- low, f_key2 (needs 2)  latch
+  D  f4           door       at (35,9)  1x2  <- mid, w_key3, e_key2, a_key2 (needs 4)
+  D  w1           door       at (29,18)  1x2  <- high, f_key1 (needs 2)  latch
+  D  w2           door       at (19,18)  1x2  <- mid, f_key2, w_key2, e_key1, a_key1 (needs 4)
+  D  w3           door       at (11,18)  1x2  <- high, w_key2 (needs 2)  latch
+  D  w4           door       at (5,18)  1x2  <- low, f_key3 (needs 2)  latch
+  *  gem_22       gem        at (37,10)  fire
+  X  exit_23      exit       at (38,9)  fire
+  *  gem_24       gem        at (3,19)  water
+  X  exit_25      exit       at (2,18)  water
+  D  e1           door       at (8,12)  1x2  <- f_key1  latch
+  D  e2           door       at (19,12)  1x2  <- high, w_key1 (needs 2)  latch
+  D  e3           door       at (28,12)  1x2  <- mid, w_key2 (needs 2)  latch
+  D  e4           door       at (35,12)  1x2  <- mid, w_key3 (needs 2)
+  l  e_key1       lever      at (24,13)  -> w2
+  l  e_key2       lever      at (32,13)  -> f4
+  *  gem_32       gem        at (37,13)  earth
+  X  exit_33      exit       at (38,12)  earth
+  D  a1           door       at (8,15)  1x2  <- f_key1  latch
+  D  a2           door       at (19,15)  1x2  <- high, w_key1 (needs 2)  latch
+  D  a3           door       at (28,15)  1x2  <- mid, w_key2 (needs 2)  latch
+  D  a4           door       at (35,15)  1x2  <- mid, w_key3 (needs 2)
+  l  a_control    lever      at (14,16)  -> stop
+  l  a_key1       lever      at (24,16)  -> w2
+  l  a_key2       lever      at (32,16)  -> f4
+  *  gem_41       gem        at (37,16)  air
+  X  exit_42      exit       at (38,15)  air
+```

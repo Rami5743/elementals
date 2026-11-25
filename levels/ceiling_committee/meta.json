@@ -1,0 +1,10 @@
+{
+  "order": 327,
+  "challenge": "mind",
+  "core": "joint-ceiling-intermediate-hoist-state",
+  "ideas": [
+    "obstruction-as-third-state",
+    "twist-undo",
+    "quorum"
+  ]
+}

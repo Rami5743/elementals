@@ -3028,6 +3028,39 @@
   ]
  },
  {
+  "id": "ceiling_committee",
+  "name": "Ceiling Committee",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 6600,
+  "dark": false,
+  "challenge": "mind",
+  "core": "joint-ceiling-intermediate-hoist-state",
+  "ideas": [
+   "obstruction-as-third-state",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 327,
+  "line": "A binary hoist obtains an extra stable position from a retractable obstruction controlled by two independent operators.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:lever",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "cistern",
   "name": "Cistern",
   "source": "mine",

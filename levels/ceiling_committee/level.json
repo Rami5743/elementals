@@ -1,0 +1,451 @@
+{
+  "id": "ceiling_committee",
+  "name": "Ceiling Committee",
+  "order": 327,
+  "description": "A binary hoist has three stable stops; two independent controls must agree to remove the middle obstruction.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#######.################################",
+    "#######.################################",
+    "#######.################################",
+    "#######.################################",
+    "#######.################################",
+    "#######.################################",
+    "#######.################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      10
+    ],
+    "water": [
+      37,
+      19
+    ],
+    "earth": [
+      3,
+      13
+    ],
+    "air": [
+      3,
+      16
+    ]
+  },
+  "entities": [
+    {
+      "id": "hoist",
+      "type": "elevator",
+      "x": 7,
+      "y": 7,
+      "w": 1,
+      "path": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "speed": 6
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "id": "stop",
+      "type": "door",
+      "x": 7,
+      "y": 1,
+      "h": 2,
+      "required": 2
+    },
+    {
+      "id": "low",
+      "type": "plate",
+      "x": 7,
+      "y": 6,
+      "weight": "heavy",
+      "targets": [
+        "f3",
+        "w4"
+      ]
+    },
+    {
+      "id": "mid",
+      "type": "plate",
+      "x": 7,
+      "y": 3,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "w2",
+        "f4",
+        "e3",
+        "e4",
+        "a3",
+        "a4"
+      ]
+    },
+    {
+      "id": "high",
+      "type": "plate",
+      "x": 7,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "f2",
+        "w3",
+        "e2",
+        "a2"
+      ]
+    },
+    {
+      "id": "up",
+      "type": "lever",
+      "x": 3,
+      "y": 10,
+      "targets": [
+        "hoist"
+      ]
+    },
+    {
+      "id": "clear",
+      "type": "lever",
+      "x": 14,
+      "y": 13,
+      "targets": [
+        "stop"
+      ]
+    },
+    {
+      "id": "f_key1",
+      "type": "lever",
+      "x": 14,
+      "y": 10,
+      "targets": [
+        "w1",
+        "e1",
+        "a1"
+      ]
+    },
+    {
+      "id": "w_key1",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f2",
+        "e2",
+        "a2"
+      ]
+    },
+    {
+      "id": "f_key2",
+      "type": "lever",
+      "x": 24,
+      "y": 10,
+      "targets": [
+        "w2",
+        "f3"
+      ]
+    },
+    {
+      "id": "w_key2",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "w3",
+        "e3",
+        "w2",
+        "a3"
+      ]
+    },
+    {
+      "id": "f_key3",
+      "type": "lever",
+      "x": 32,
+      "y": 10,
+      "targets": [
+        "w4"
+      ]
+    },
+    {
+      "id": "w_key3",
+      "type": "lever",
+      "x": 8,
+      "y": 19,
+      "targets": [
+        "f4",
+        "e4",
+        "a4"
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 9,
+      "y": 9,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 19,
+      "y": 9,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 28,
+      "y": 9,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f4",
+      "type": "door",
+      "x": 35,
+      "y": 9,
+      "h": 2,
+      "required": 4,
+      "latch": false
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 29,
+      "y": 18,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 18,
+      "h": 2,
+      "required": 4,
+      "latch": false
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 18,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w4",
+      "type": "door",
+      "x": 5,
+      "y": 18,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "id": "e1",
+      "type": "door",
+      "x": 8,
+      "y": 12,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "e2",
+      "type": "door",
+      "x": 19,
+      "y": 12,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e3",
+      "type": "door",
+      "x": 28,
+      "y": 12,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "e4",
+      "type": "door",
+      "x": 35,
+      "y": 12,
+      "h": 2,
+      "required": 2
+    },
+    {
+      "id": "e_key1",
+      "type": "lever",
+      "x": 24,
+      "y": 13,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "e_key2",
+      "type": "lever",
+      "x": 32,
+      "y": 13,
+      "targets": [
+        "f4"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 37,
+      "y": 13
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 12
+    },
+    {
+      "id": "a1",
+      "type": "door",
+      "x": 8,
+      "y": 15,
+      "h": 2,
+      "latch": true
+    },
+    {
+      "id": "a2",
+      "type": "door",
+      "x": 19,
+      "y": 15,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a3",
+      "type": "door",
+      "x": 28,
+      "y": 15,
+      "h": 2,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "a4",
+      "type": "door",
+      "x": 35,
+      "y": 15,
+      "h": 2,
+      "required": 2
+    },
+    {
+      "id": "a_control",
+      "type": "lever",
+      "x": 14,
+      "y": 16,
+      "targets": [
+        "stop"
+      ]
+    },
+    {
+      "id": "a_key1",
+      "type": "lever",
+      "x": 24,
+      "y": 16,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "a_key2",
+      "type": "lever",
+      "x": 32,
+      "y": 16,
+      "targets": [
+        "f4"
+      ]
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 37,
+      "y": 16
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 15
+    }
+  ],
+  "parTicks": 6600,
+  "hints": [
+    "With the roof shut, the rising stone stops at the middle contact.",
+    "Open the roof to reach the high contact; turn off the hoist to reset the stone.",
+    "Do not mistake an open permission for a completed delivery."
+  ]
+}
