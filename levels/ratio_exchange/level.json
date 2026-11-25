@@ -1,0 +1,316 @@
+{
+  "id": "ratio_exchange",
+  "name": "Ratio Exchange",
+  "order": 133,
+  "supports": [
+    [
+      "fire",
+      "water"
+    ]
+  ],
+  "spawns": {
+    "fire": [
+      3,
+      12
+    ],
+    "water": [
+      31,
+      19
+    ]
+  },
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################"
+  ],
+  "parTicks": 6480,
+  "entities": [
+    {
+      "id": "rope",
+      "type": "pulley",
+      "x": 7,
+      "y": 3,
+      "w": 1,
+      "to": [
+        31,
+        8,
+        1
+      ],
+      "range": 4,
+      "ratio": 2,
+      "weights": [
+        0,
+        1
+      ],
+      "speed": 1.5,
+      "required": 2
+    },
+    {
+      "id": "aStone",
+      "type": "boulder",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "id": "bStone",
+      "type": "boulder",
+      "x": 31,
+      "y": 7
+    },
+    {
+      "id": "a",
+      "type": "lever",
+      "x": 3,
+      "y": 12,
+      "targets": [
+        "rope"
+      ]
+    },
+    {
+      "id": "b",
+      "type": "lever",
+      "x": 30,
+      "y": 19,
+      "targets": [
+        "rope"
+      ]
+    },
+    {
+      "id": "AH",
+      "type": "plate",
+      "x": 7,
+      "y": 2,
+      "weight": "heavy",
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "AL",
+      "type": "plate",
+      "x": 7,
+      "y": 6,
+      "weight": "heavy",
+      "targets": [
+        "f1",
+        "f3",
+        "fexit"
+      ]
+    },
+    {
+      "id": "BH",
+      "type": "plate",
+      "x": 31,
+      "y": 5,
+      "weight": "heavy",
+      "targets": [
+        "w1",
+        "w3",
+        "wexit"
+      ]
+    },
+    {
+      "id": "BL",
+      "type": "plate",
+      "x": 31,
+      "y": 7,
+      "weight": "heavy",
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "fexit",
+      "type": "door",
+      "x": 35,
+      "y": 10,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "id": "wexit",
+      "type": "door",
+      "x": 5,
+      "y": 17,
+      "h": 3,
+      "required": 3
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 2,
+      "y": 18
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 12
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 19
+    },
+    {
+      "id": "f1",
+      "type": "door",
+      "x": 9,
+      "y": 10,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "f2",
+      "type": "door",
+      "x": 19,
+      "y": 10,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "f3",
+      "type": "door",
+      "x": 28,
+      "y": 10,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "w1",
+      "type": "door",
+      "x": 29,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "w2",
+      "type": "door",
+      "x": 19,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": false
+    },
+    {
+      "id": "w3",
+      "type": "door",
+      "x": 11,
+      "y": 17,
+      "h": 3,
+      "required": 2,
+      "latch": true
+    },
+    {
+      "id": "wback",
+      "type": "door",
+      "x": 32,
+      "y": 17,
+      "h": 3,
+      "required": 1,
+      "latch": true
+    },
+    {
+      "id": "fkey1",
+      "type": "lever",
+      "x": 14,
+      "y": 12,
+      "targets": [
+        "w2"
+      ]
+    },
+    {
+      "id": "wkey1",
+      "type": "lever",
+      "x": 24,
+      "y": 19,
+      "targets": [
+        "f2"
+      ]
+    },
+    {
+      "id": "fkey2",
+      "type": "lever",
+      "x": 24,
+      "y": 12,
+      "targets": [
+        "w3"
+      ]
+    },
+    {
+      "id": "wkey2",
+      "type": "lever",
+      "x": 14,
+      "y": 19,
+      "targets": [
+        "f3"
+      ]
+    },
+    {
+      "id": "fkey3",
+      "type": "lever",
+      "x": 32,
+      "y": 12,
+      "targets": [
+        "wexit"
+      ]
+    },
+    {
+      "id": "wkey3",
+      "type": "lever",
+      "x": 8,
+      "y": 19,
+      "targets": [
+        "fexit",
+        "wback"
+      ]
+    },
+    {
+      "id": "wkey4",
+      "type": "lever",
+      "x": 35,
+      "y": 19,
+      "targets": [
+        "wexit",
+        "fexit"
+      ]
+    }
+  ],
+  "description": "Two cargo pans, one rope: mechanical advantage reverses the heavier side. One stone travels twice as far as the other, and the two paired contact states must alternate.",
+  "hints": [
+    "Both operators engage the block to make the left stone heavier than the right.",
+    "Disengage one input to reverse the load. The two stones now make the opposite pair of contacts.",
+    "The low-state workshop must be revisited before the last high-state delivery."
+  ]
+}

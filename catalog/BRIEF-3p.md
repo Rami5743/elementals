@@ -50,23 +50,24 @@ together. `twist-undo`×14, `quorum`×13, `twist-order`×7, `machine-strands-ope
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `two-in-the-air-at-once` — A lock that counts bodies off the ground: its plates hang in a draught where nobody can stand, one above the other, so each is on only while somebody is in flight inside it, and the door wants both at the same moment. Nobody can be in two of them, so the party has to launch together on a count — and because a draught turns a jump from half a second into a slow sail, their overlap is a window a fourth player can walk through. The weight that starts the draught is the one body the draught will never lift, so the player who needs the door is the player who can never be one of the two in the air.
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `ratio-reverses-paired-cargo` — Fixed cargo on both rope pans is unequal in weight. A selectable snatch block reverses which pan is heavier, producing two complementary pairs of stationary sensor permissions with unequal excursions; no rider or balance memory is needed.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lift-corner-path + unload-the-pan-you-ride
-- dark + machine-strands-operator
-- fan-passenger + lift-sorts-by-weight
-- counterweight-you-must-remove + crate-step
-- counterweight-you-must-remove + fan-band
-- twist-order + unload-the-pan-you-ride
-- object-as-permanent-switch + plank-sums-plate-maxes
-- fan-passenger + glide-passenger
-- hop-beats-belt + lift-corner-path
-- send-one-through + twist-stranding
-- invert-door + switch-in-mid-flight
-- fan-passenger + wide-door
+- invert-door + two-in-the-air-at-once
+- counterweight-you-must-remove + dark
+- stand-aside-is-the-switch + twist-two-clocks
+- counterweight-you-must-remove + wide-door
+- belt-cargo + hop-beats-belt
+- lift-sorts-by-weight + timed-window
+- lift-corner-path + mass-adds-on-the-beam
+- lift-corner-path + ratio-reverses-paired-cargo
+- ratio-reverses-paired-cargo + twist-two-clocks
+- machine-strands-operator + twist-sacrifice
+- boulder-float + lift-corner-path
+- glide-passenger + lift-corner-path
 
 ## This repo's 3-player levels
 

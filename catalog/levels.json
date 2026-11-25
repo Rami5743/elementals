@@ -4724,6 +4724,41 @@
   ]
  },
  {
+  "id": "ratio_exchange",
+  "name": "Ratio Exchange",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6480,
+  "dark": false,
+  "challenge": "mind",
+  "core": "paired-counterweight-ratio-reversal",
+  "ideas": [
+   "ratio-reverses-paired-cargo",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 133,
+  "line": "Changing the mechanical advantage reverses which of two loaded pans is heavier; each direction produces a different pair of simultaneous, permanent-until-reversed cargo contacts.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "ent:pulley",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:1",
+   "opt:required:2",
+   "opt:required:3",
+   "opt:seesaw-range"
+  ]
+ },
+ {
   "id": "relay_ferry",
   "name": "Relay Ferry",
   "source": "mine",

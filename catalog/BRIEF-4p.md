@@ -49,23 +49,24 @@ together. `twist-undo`×14, `quorum`×14, `twist-order`×5, `lock-per-element`×
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `two-stops-no-middle` — A conveyor with no off switch, only a direction: the one load it carries is always being driven against one buffer stop or the other and is never anywhere in between. Each stop is a switch, so the two machines wired to them can never both be powered — the lever does not turn anything on, it decides which end of the level has power. Everything one end owes has to be finished before the stone can be spent on the other, and the end the level has to finish in is not the end it has to be worked in.
 - `threshold-is-a-switch` — A plate under an exit, so standing in your own front door is a switch. Arriving home is not the end of a player's job but the start of it: the one machine in the level is powered by a body in a doorway, that body can never step out again, and the party has to work out who is going to spend the level being the power supply — and has to get that player to that doorway by a route only they can take before anybody else can move at all. Turned round at the end: the last thing to do is to give up the switch holding a partner's gate open, because a door that shuts on somebody already standing in their own exit costs nothing.
+- `ratio-reverses-paired-cargo` — Fixed cargo on both rope pans is unequal in weight. A selectable snatch block reverses which pan is heavier, producing two complementary pairs of stationary sensor permissions with unequal excursions; no rider or balance memory is needed.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- invert-door + twist-self-block
-- hop-beats-belt + low-roof-no-jump
-- single-file-stone + turbine-out-of-reach
-- door-pushes-you-through + lock-per-element
-- feed-the-engine-mid-ride + lock-per-element
-- torch-bridge + turbine-out-of-reach
-- climb-then-steer + lock-per-element
-- turbine-out-of-reach + wide-door
-- hoist-one-way-for-cargo + turbine-out-of-reach
-- stock-before-it-seals + turbine-out-of-reach
-- freeze-bridge + hop-beats-belt
-- freeze-bridge + glide-dismount
+- glide-dismount + invert-door
+- low-roof-no-jump + two-stops-no-middle
+- freeze-bridge + unload-the-pan-you-ride
+- freeze-bridge + glide-passenger
+- freeze-bridge + freeze-invert
+- lock-per-element + stand-aside-is-the-switch
+- freeze-bridge + liquid-lane
+- boulder-carry + glide-passenger
+- crate-step + lock-per-element
+- boulder-carry + freeze-invert
+- freeze-bridge + stand-aside-is-the-switch
+- glide-dismount + lock-per-element
 
 ## This repo's 4-player levels
 

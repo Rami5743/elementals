@@ -177,3 +177,5 @@ Object.assign(IDEAS, { "obstruction-as-third-state": {kind:'spine',note:"A retra
 Object.assign(IDEAS, { "brake-makes-transit-contact-stable": {kind:'spine',note:"A controllable loop shuttle with a heavy cargo must be braked in two intermediate contact zones. Gates require both braking and the contact, so merely passing through is useless. The final complementary gate demands releasing the second parked state."} });
 
 Object.assign(IDEAS, { "convergent-belt-seam": {kind:'spine',note:"Independent reversible conveyors meet at a seam. Inward currents gather one cargo token at the seam, outward currents retain its previous endpoint, and aligned currents transfer it to the opposite endpoint."} });
+
+Object.assign(IDEAS, { "ratio-reverses-paired-cargo": {kind:'spine',note:"Fixed cargo on both rope pans is unequal in weight. A selectable snatch block reverses which pan is heavier, producing two complementary pairs of stationary sensor permissions with unequal excursions; no rider or balance memory is needed."} });

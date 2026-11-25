@@ -1695,6 +1695,69 @@ Entities:
   !  checkpoint_18 checkpoint at (12,10)
 ```
 
+## Ratio Exchange (`ratio_exchange`) — 2p, core `paired-counterweight-ratio-reversal`
+
+```
+Ratio Exchange (ratio_exchange) for fire+water
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #......................................#
+ 2  #......p...............................#
+ 3  #......u...............................#
+ 4  #......................................#
+ 5  #..............................p.......#
+ 6  #......p...............................#
+ 7  #..............................p.......#
+ 8  #..............................u.......#
+ 9  ########################################
+10  #........D.........D........D......D...#
+11  #........D.........D........D......D..X#
+12  #..@.....D....l....D....l...D...l..D.*X#
+13  ########################################
+14  ########################################
+15  ########################################
+16  ########################################
+17  #....D.....D.......D.........D..D......#
+18  #.X..D.....D.......D.........D..D......#
+19  #.X*.D..l..D..l....D....l....Dl@D..l...#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,12)  water (31,19)
+Entities:
+  u  rope         pulley     at (7,3)  <- a, b (needs 2)  speed 1.5  range 4  ratio 2  second platform at (31,8)  platforms weigh 0 and 1
+  O  aStone       boulder    at (7,2)
+  O  bStone       boulder    at (31,7)
+  l  a            lever      at (3,12)  -> rope
+  l  b            lever      at (30,19)  -> rope
+  p  AH           plate      at (7,2)  -> f2  weight heavy
+  p  AL           plate      at (7,6)  -> f1, f3, fexit  weight heavy
+  p  BH           plate      at (31,5)  -> w1, w3, wexit  weight heavy
+  p  BL           plate      at (31,7)  -> w2  weight heavy
+  D  fexit        door       at (35,10)  1x3  <- AL, wkey3, wkey4 (needs 3)
+  D  wexit        door       at (5,17)  1x3  <- BH, fkey3, wkey4 (needs 3)
+  X  exit_11      exit       at (38,11)  fire
+  X  exit_12      exit       at (2,18)  water
+  *  gem_13       gem        at (37,12)  fire
+  *  gem_14       gem        at (3,19)  water
+  D  f1           door       at (9,10)  1x3  <- AL  latch
+  D  f2           door       at (19,10)  1x3  <- AH, wkey1 (needs 2)  latch
+  D  f3           door       at (28,10)  1x3  <- AL, wkey2 (needs 2)  latch
+  D  w1           door       at (29,17)  1x3  <- BH  latch
+  D  w2           door       at (19,17)  1x3  <- BL, fkey1 (needs 2)
+  D  w3           door       at (11,17)  1x3  <- BH, fkey2 (needs 2)  latch
+  D  wback        door       at (32,17)  1x3  <- wkey3  latch
+  l  fkey1        lever      at (14,12)  -> w2
+  l  wkey1        lever      at (24,19)  -> f2
+  l  fkey2        lever      at (24,12)  -> w3
+  l  wkey2        lever      at (14,19)  -> f3
+  l  fkey3        lever      at (32,12)  -> wexit
+  l  wkey3        lever      at (8,19)  -> fexit, wback
+  l  wkey4        lever      at (35,19)  -> wexit, fexit
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

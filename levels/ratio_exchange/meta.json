@@ -1,0 +1,10 @@
+{
+  "order": 133,
+  "challenge": "mind",
+  "core": "paired-counterweight-ratio-reversal",
+  "ideas": [
+    "ratio-reverses-paired-cargo",
+    "quorum",
+    "twist-undo"
+  ]
+}
