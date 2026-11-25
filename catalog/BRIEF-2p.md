@@ -29,18 +29,18 @@ together. `twist-undo`×29, `invert-door`×6, `twist-order`×6, `twist-stranding
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- twist-backwards + two-is-not-heavy
-- freeze-invert + plank-sums-plate-maxes
-- boulder-carry + transport-power-excludes-workshop
-- boulder-float + lift-loop
-- boulder-float + shutter-floor-wall-duality
-- boulder-float + sink-as-a-timer
-- door-pushes-you-through + stock-before-it-seals
-- door-pushes-you-through + twist-order
-- boulder-float + stock-before-it-seals
-- lock-per-element + twist-backwards
-- lift-sorts-by-weight + twist-setup
-- lock-per-element + transport-power-excludes-workshop
+- boulder-float + glide-dismount
+- one-way-drop + two-stage-piston-handoff
+- glide-dismount + lock-per-element
+- boulder-carry + hop-beats-belt
+- one-way-drop + trigger-from-above
+- door-pushes-you-through + shared-switch-two-gates
+- glide-passenger + tower-presses-a-column
+- boulder-float + twist-self-block
+- belt-cargo + door-pushes-you-through
+- fan-passenger + two-is-not-heavy
+- low-roof-no-jump + tower-presses-a-column
+- invert-door + lock-per-element
 
 ## This repo's 2-player levels
 

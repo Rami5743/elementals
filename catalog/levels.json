@@ -5969,6 +5969,37 @@
   ]
  },
  {
+  "id": "sealed_descent",
+  "name": "Sealed Descent",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 8640,
+  "dark": false,
+  "challenge": "mind",
+  "core": "exclusive-inspector-seal-for-cracked-descents",
+  "ideas": [
+   "pound-chain",
+   "twist-sacrifice",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 245,
+  "line": "A cracked-floor descent requires two independent authorizations. The inspector's one reversible seal enables the first hatch approach but blocks the second, and cannot remain in place after the first floor has been spent.",
+  "tokens": [
+   "ent:cracked",
+   "ent:door",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "selective_draught",
   "name": "Selective Draught",
   "source": "mine",

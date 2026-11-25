@@ -5242,6 +5242,77 @@ Entities:
   X  exit_25      exit       at (38,18)  water
 ```
 
+## Sealed Descent (`sealed_descent`) — 3p, core `exclusive-inspector-seal-for-cracked-descents`
+
+```
+Sealed Descent (sealed_descent) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  #.......D...............D..............#
+ 2  #.......D...............D..............#
+ 3  #.......D...@...........D...........l..#
+ 4  ###ccc##################################
+ 5  #.....................D.......D..D.....#
+ 6  #.....................D.......D..D.....#
+ 7  #......l..............D..l....D..D.....#
+ 8  ###################################ccc##
+ 9  #....................................D.#
+10  #....................................DX#
+11  #..*.................................DX#
+12  ########################################
+13  #.D.......D...D........D...D.D.......D.#
+14  #.D.......D...D........D...D.D.......DX#
+15  #*D.@.....D...D...l....D...D.D....l..DX#
+16  ########################################
+17  ########################################
+18  #.D.....D............D..............D..#
+19  #.D.....D............D..............D.X#
+20  #*D@....D.....l......D......l.......D.X#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (12,3)  water (4,15)  fire (3,20)
+Entities:
+  D  e_east1      door       at (24,1)  1x3  <- W1
+  l  E1           lever      at (36,3)  -> w2access, f_access
+  D  e_west1      door       at (8,1)  1x3  <- W2, seal (needs 2)
+  c  hatch1       cracked    at (3,4)  3x1
+  l  E2           lever      at (7,7)  -> w3access
+  D  e_east2      door       at (22,5)  1x3  <- W3
+  l  E3           lever      at (25,7)  -> hatch_access, f_west
+  D  hatch_access door       at (30,5)  1x3  <- E3  latch
+  D  e_hatch2     door       at (33,5)  1x3  <- seal  invert
+  c  hatch2       cracked    at (35,8)  3x1
+  l  E4           lever      at (3,11)  -> w_west
+  D  e_final      door       at (37,9)  1x3  <- W4  latch
+  l  E5           lever      at (38,11)  -> w_final, f_final
+  l  W1           lever      at (4,15)  -> e_east1, w_inv1
+  D  w_inv1       door       at (10,13)  1x3  <- W1  invert
+  D  w2access     door       at (14,13)  1x3  <- E1  latch
+  l  W2           lever      at (18,15)  -> e_west1, w_inv2
+  D  w_inv2       door       at (23,13)  1x3  <- W2  invert
+  D  w3access     door       at (27,13)  1x3  <- E2, F1 (needs 2)  latch
+  l  W3           lever      at (34,15)  -> e_east2, w_inv3
+  D  w_inv3       door       at (29,13)  1x3  <- W3  invert
+  D  w_west       door       at (2,13)  1x3  <- E4, F2 (needs 2)  latch
+  l  W4           lever      at (1,15)  -> e_final
+  D  w_final      door       at (37,13)  1x3  <- E5  latch
+  D  f_access     door       at (8,18)  1x3  <- E1  latch
+  l  seal         lever      at (14,20)  -> e_west1, e_hatch2, f_inverse
+  D  f_inverse    door       at (21,18)  1x3  <- seal  invert
+  l  F1           lever      at (28,20)  -> w3access
+  D  f_west       door       at (2,18)  1x3  <- E3  latch
+  l  F2           lever      at (1,20)  -> w_west
+  D  f_final      door       at (36,18)  1x3  <- E5  latch
+  *  gem_31       gem        at (3,11)  earth
+  X  exit_32      exit       at (38,10)  earth
+  *  gem_33       gem        at (1,15)  water
+  X  exit_34      exit       at (38,14)  water
+  *  gem_35       gem        at (1,20)  fire
+  X  exit_36      exit       at (38,19)  fire
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

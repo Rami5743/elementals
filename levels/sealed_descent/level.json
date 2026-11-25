@@ -1,0 +1,363 @@
+{
+  "id": "sealed_descent",
+  "name": "Sealed Descent",
+  "order": 245,
+  "description": "Before Earth can spend a floor hatch, Water must authorize the route and Fire must set the seal. One seal opens the first hatch approach and closes the second; it must be withdrawn between descents.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "tiles": [
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###...##################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "###################################...##",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################"
+  ],
+  "spawns": {
+    "earth": [
+      12,
+      3
+    ],
+    "water": [
+      4,
+      15
+    ],
+    "fire": [
+      3,
+      20
+    ]
+  },
+  "entities": [
+    {
+      "id": "e_east1",
+      "type": "door",
+      "x": 24,
+      "y": 1,
+      "h": 3
+    },
+    {
+      "id": "E1",
+      "type": "lever",
+      "x": 36,
+      "y": 3,
+      "targets": [
+        "w2access",
+        "f_access"
+      ]
+    },
+    {
+      "id": "e_west1",
+      "type": "door",
+      "x": 8,
+      "y": 1,
+      "h": 3,
+      "required": 2
+    },
+    {
+      "id": "hatch1",
+      "type": "cracked",
+      "x": 3,
+      "y": 4,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "id": "E2",
+      "type": "lever",
+      "x": 7,
+      "y": 7,
+      "targets": [
+        "w3access"
+      ]
+    },
+    {
+      "id": "e_east2",
+      "type": "door",
+      "x": 22,
+      "y": 5,
+      "h": 3
+    },
+    {
+      "id": "E3",
+      "type": "lever",
+      "x": 25,
+      "y": 7,
+      "targets": [
+        "hatch_access",
+        "f_west"
+      ]
+    },
+    {
+      "id": "hatch_access",
+      "type": "door",
+      "x": 30,
+      "y": 5,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "e_hatch2",
+      "type": "door",
+      "x": 33,
+      "y": 5,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "hatch2",
+      "type": "cracked",
+      "x": 35,
+      "y": 8,
+      "w": 3,
+      "h": 1
+    },
+    {
+      "id": "E4",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "e_final",
+      "type": "door",
+      "x": 37,
+      "y": 9,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "E5",
+      "type": "lever",
+      "x": 38,
+      "y": 11,
+      "targets": [
+        "w_final",
+        "f_final"
+      ]
+    },
+    {
+      "id": "W1",
+      "type": "lever",
+      "x": 4,
+      "y": 15,
+      "targets": [
+        "e_east1",
+        "w_inv1"
+      ]
+    },
+    {
+      "id": "w_inv1",
+      "type": "door",
+      "x": 10,
+      "y": 13,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w2access",
+      "type": "door",
+      "x": 14,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "W2",
+      "type": "lever",
+      "x": 18,
+      "y": 15,
+      "targets": [
+        "e_west1",
+        "w_inv2"
+      ]
+    },
+    {
+      "id": "w_inv2",
+      "type": "door",
+      "x": 23,
+      "y": 13,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w3access",
+      "type": "door",
+      "x": 27,
+      "y": 13,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "W3",
+      "type": "lever",
+      "x": 34,
+      "y": 15,
+      "targets": [
+        "e_east2",
+        "w_inv3"
+      ]
+    },
+    {
+      "id": "w_inv3",
+      "type": "door",
+      "x": 29,
+      "y": 13,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "w_west",
+      "type": "door",
+      "x": 2,
+      "y": 13,
+      "h": 3,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "W4",
+      "type": "lever",
+      "x": 1,
+      "y": 15,
+      "targets": [
+        "e_final"
+      ]
+    },
+    {
+      "id": "w_final",
+      "type": "door",
+      "x": 37,
+      "y": 13,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "f_access",
+      "type": "door",
+      "x": 8,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "seal",
+      "type": "lever",
+      "x": 14,
+      "y": 20,
+      "targets": [
+        "e_west1",
+        "e_hatch2",
+        "f_inverse"
+      ]
+    },
+    {
+      "id": "f_inverse",
+      "type": "door",
+      "x": 21,
+      "y": 18,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "F1",
+      "type": "lever",
+      "x": 28,
+      "y": 20,
+      "targets": [
+        "w3access"
+      ]
+    },
+    {
+      "id": "f_west",
+      "type": "door",
+      "x": 2,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "F2",
+      "type": "lever",
+      "x": 1,
+      "y": 20,
+      "targets": [
+        "w_west"
+      ]
+    },
+    {
+      "id": "f_final",
+      "type": "door",
+      "x": 36,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 1,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 1,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 38,
+      "y": 19
+    }
+  ],
+  "parTicks": 8640,
+  "hints": [
+    "Record Earth's upper east certificate and return before withdrawing Water's first permission.",
+    "The Fire seal authorizes the first hatch, but closes the second hatch and Fire's own next workshop.",
+    "After the first descent, withdraw both old permissions and record the second authorization. Earth must not leave a certificate above a hatch."
+  ]
+}
