@@ -10250,3 +10250,75 @@ Entities:
   X  exit_22      exit       at (38,3)  air
   D  lower_cert_gate door       at (2,10)  1x9  <- Wreceipt  latch
 ```
+
+## Shutter Authority (`shutter_authority`) — 4p, core `simultaneous-floor-and-passage-permits`
+
+```
+Shutter Authority (shutter_authority) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  #.D.D...............................D..#
+ 5  #XD.D...............................D..#
+ 6  #XDlD...@..........l.............l..D*.#
+ 7  ######===#DDDDDD########DDDDDD##########
+ 8  #....D....DDDDDD........DDDDDD..D....D.#
+ 9  #....D===.DDDDDD........DDDDDD..D....D.#
+10  #....D....DDDDDD........DDDDDD..D....DX#
+11  #..*.D==@.DDDDDD...l....DDDDDD..D..l.Dp#
+12  ########################################
+13  ########################################
+14  #......D............D...D.D........D...#
+15  #......D............D...D.D........D..X#
+16  #.@....D....l.......D...D.D.*......D..X#
+17  ########################################
+18  #......D............D...D.D........D...#
+19  #......D............D...D.D........D..X#
+20  #.@....D....l.......D...D.D.*......D..X#
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (8,6)  water (8,11)  earth (2,16)  air (2,20)
+Entities:
+  D  shutterA     door       at (10,7)  6x5  <- Econtrol
+  D  shutterB     door       at (24,7)  6x5  <- Acontrol  invert
+  l  upper        lever      at (19,6)  -> Estart
+  l  lower        lever      at (19,11)  -> Astart
+  l  f_far        lever      at (33,6)  -> w_far_gate, AreceiptGate
+  D  w_far_gate   door       at (32,8)  1x4  <- f_far  latch
+  l  w_far        lever      at (35,11)  -> f_left_gate, w_left_gate, EreceiptGate
+  D  f_left_gate  door       at (4,4)  1x3  <- w_far  latch
+  D  w_left_gate  door       at (5,8)  1x4  <- w_far  latch
+  l  f_left       lever      at (3,6)  -> f_final_gate
+  l  w_left       lever      at (3,11)  -> f_final_gate
+  D  f_final_gate door       at (36,4)  1x3  <- f_left, w_left, Ereceipt, Areceipt (needs 4)  latch
+  l  f_final      lever      at (37,6)  -> w_final_gate, Eend, Aend, Eother, Aother
+  D  w_final_gate door       at (37,8)  1x4  <- f_final  latch
+  X  exit_14      exit       at (1,5)  fire
+  *  gem_15       gem        at (37,6)  fire
+  X  exit_16      exit       at (38,10)  water
+  *  gem_17       gem        at (3,11)  water
+  p  exit_contact plate      at (38,11)  -> f_exit
+  D  f_exit       door       at (2,4)  1x3  <- exit_contact  latch
+  D  Estart       door       at (7,14)  1x3  <- upper  latch
+  D  Astart       door       at (7,18)  1x3  <- lower  latch
+  l  Econtrol     lever      at (12,16)  -> shutterA, Eoff, Aother
+  l  Acontrol     lever      at (12,20)  -> shutterB, Aoff, Eother
+  D  Eoff         door       at (20,14)  1x3  <- Econtrol  invert
+  D  Aoff         door       at (20,18)  1x3  <- Acontrol  invert
+  D  EreceiptGate door       at (24,14)  1x3  <- w_far  latch
+  D  AreceiptGate door       at (24,18)  1x3  <- f_far  latch
+  l  Ereceipt     lever      at (28,16)  -> f_final_gate
+  l  Areceipt     lever      at (28,20)  -> f_final_gate
+  D  Eend         door       at (35,14)  1x3  <- f_final  latch
+  D  Aend         door       at (35,18)  1x3  <- f_final  latch
+  *  gem_32       gem        at (28,16)  earth
+  *  gem_33       gem        at (28,20)  air
+  X  exit_34      exit       at (38,15)  earth
+  X  exit_35      exit       at (38,19)  air
+  D  Aother       door       at (26,18)  1x3  <- f_final, Econtrol
+  D  Eother       door       at (26,14)  1x3  <- f_final, Acontrol
+```

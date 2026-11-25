@@ -7090,6 +7090,39 @@
   ]
  },
  {
+  "id": "shutter_authority",
+  "name": "Shutter Authority",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 8400,
+  "dark": false,
+  "challenge": "mind",
+  "core": "simultaneous-floor-and-passage-permits",
+  "ideas": [
+   "wide-door",
+   "shutter-floor-wall-duality",
+   "twist-undo",
+   "quorum"
+  ],
+  "order": 354,
+  "line": "Independent wide shutters create two additional physical states that complementary shutters cannot: both bridges present and both lower passages open. Each state is a key to one of the controller's certificates.",
+  "tokens": [
+   "ent:door",
+   "ent:lever",
+   "ent:plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:4",
+   "opt:wide-door",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "shutter_council",
   "name": "Shutter Council",
   "source": "mine",

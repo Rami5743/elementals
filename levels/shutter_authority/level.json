@@ -1,0 +1,375 @@
+{
+  "id": "shutter_authority",
+  "name": "Shutter Authority",
+  "order": 354,
+  "description": "Independent shutters can both become floors or both become open passages. Each of these otherwise impossible configurations releases a different controller's certificate.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 8400,
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "######===#......########......##########",
+    "#......................................#",
+    "#.....===..............................#",
+    "#......................................#",
+    "#.....===..............................#",
+    "########################################",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################",
+    "#......................................#",
+    "#......................................#",
+    "#......................................#",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      8,
+      6
+    ],
+    "water": [
+      8,
+      11
+    ],
+    "earth": [
+      2,
+      16
+    ],
+    "air": [
+      2,
+      20
+    ]
+  },
+  "entities": [
+    {
+      "id": "shutterA",
+      "type": "door",
+      "x": 10,
+      "y": 7,
+      "w": 6,
+      "h": 5
+    },
+    {
+      "id": "shutterB",
+      "type": "door",
+      "x": 24,
+      "y": 7,
+      "w": 6,
+      "h": 5,
+      "invert": true
+    },
+    {
+      "id": "upper",
+      "type": "lever",
+      "x": 19,
+      "y": 6,
+      "targets": [
+        "Estart"
+      ]
+    },
+    {
+      "id": "lower",
+      "type": "lever",
+      "x": 19,
+      "y": 11,
+      "targets": [
+        "Astart"
+      ]
+    },
+    {
+      "id": "f_far",
+      "type": "lever",
+      "x": 33,
+      "y": 6,
+      "targets": [
+        "w_far_gate",
+        "AreceiptGate"
+      ]
+    },
+    {
+      "id": "w_far_gate",
+      "type": "door",
+      "x": 32,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "id": "w_far",
+      "type": "lever",
+      "x": 35,
+      "y": 11,
+      "targets": [
+        "f_left_gate",
+        "w_left_gate",
+        "EreceiptGate"
+      ]
+    },
+    {
+      "id": "f_left_gate",
+      "type": "door",
+      "x": 4,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "w_left_gate",
+      "type": "door",
+      "x": 5,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "id": "f_left",
+      "type": "lever",
+      "x": 3,
+      "y": 6,
+      "targets": [
+        "f_final_gate"
+      ]
+    },
+    {
+      "id": "w_left",
+      "type": "lever",
+      "x": 3,
+      "y": 11,
+      "targets": [
+        "f_final_gate"
+      ]
+    },
+    {
+      "id": "f_final_gate",
+      "type": "door",
+      "x": 36,
+      "y": 4,
+      "h": 3,
+      "required": 4,
+      "latch": true
+    },
+    {
+      "id": "f_final",
+      "type": "lever",
+      "x": 37,
+      "y": 6,
+      "targets": [
+        "w_final_gate",
+        "Eend",
+        "Aend",
+        "Eother",
+        "Aother"
+      ]
+    },
+    {
+      "id": "w_final_gate",
+      "type": "door",
+      "x": 37,
+      "y": 8,
+      "h": 4,
+      "latch": true
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 1,
+      "y": 5
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 37,
+      "y": 6
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 38,
+      "y": 10
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 3,
+      "y": 11
+    },
+    {
+      "id": "exit_contact",
+      "type": "plate",
+      "x": 38,
+      "y": 11,
+      "targets": [
+        "f_exit"
+      ]
+    },
+    {
+      "id": "f_exit",
+      "type": "door",
+      "x": 2,
+      "y": 4,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Estart",
+      "type": "door",
+      "x": 7,
+      "y": 14,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Astart",
+      "type": "door",
+      "x": 7,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Econtrol",
+      "type": "lever",
+      "x": 12,
+      "y": 16,
+      "targets": [
+        "shutterA",
+        "Eoff",
+        "Aother"
+      ]
+    },
+    {
+      "id": "Acontrol",
+      "type": "lever",
+      "x": 12,
+      "y": 20,
+      "targets": [
+        "shutterB",
+        "Aoff",
+        "Eother"
+      ]
+    },
+    {
+      "id": "Eoff",
+      "type": "door",
+      "x": 20,
+      "y": 14,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "Aoff",
+      "type": "door",
+      "x": 20,
+      "y": 18,
+      "h": 3,
+      "invert": true
+    },
+    {
+      "id": "EreceiptGate",
+      "type": "door",
+      "x": 24,
+      "y": 14,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "AreceiptGate",
+      "type": "door",
+      "x": 24,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Ereceipt",
+      "type": "lever",
+      "x": 28,
+      "y": 16,
+      "targets": [
+        "f_final_gate"
+      ]
+    },
+    {
+      "id": "Areceipt",
+      "type": "lever",
+      "x": 28,
+      "y": 20,
+      "targets": [
+        "f_final_gate"
+      ]
+    },
+    {
+      "id": "Eend",
+      "type": "door",
+      "x": 35,
+      "y": 14,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "id": "Aend",
+      "type": "door",
+      "x": 35,
+      "y": 18,
+      "h": 3,
+      "latch": true
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 28,
+      "y": 16
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 28,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 38,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 38,
+      "y": 19
+    },
+    {
+      "id": "Aother",
+      "type": "door",
+      "x": 26,
+      "y": 18,
+      "h": 3
+    },
+    {
+      "id": "Eother",
+      "type": "door",
+      "x": 26,
+      "y": 14,
+      "h": 3
+    }
+  ],
+  "hints": [
+    "Fire crosses the first shutter above; Water crosses it below. Earth controls that shutter.",
+    "Air's receipt requires both shutters open; Earth's requires both closed. Return to the controls before changing the shared configuration.",
+    "The travellers must return for the left-hand keys before the final exchange."
+  ]
+}
