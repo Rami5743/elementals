@@ -38,26 +38,25 @@ which is exactly the `berth` plate.
 
 ## What passes
 
-- `node kit.mjs check chockstone` reports **no problems**: solved in 10.5 s, 3/3 gems, no deaths,
-  all three co-op idle tests pass, and both shortcut scripts fail with the wicket never latching.
+`node kit.mjs check chockstone` reports **no problems**:
+
+- solved in **22.2 s** (par 100 s), 3/3 gems, no deaths;
+- all three co-op idle tests pass;
+- shortcut "No brake: Earth looses the stone and sprints for the hatch" fails with
+  `earth timed out waiting for the anvil at tick 4818 (at 8.31)` — Earth stuck outside the closed
+  hatch, which is the thing that was blocked;
+- shortcut "Earth brakes the stone and presses the high berth with its own body" fails with the
+  wicket never latching (nobody can be on the anvil);
+- shortcut "Water brakes at the low berth only, skipping the hatch" fails with the wicket never
+  latching.
 
 ## What fails
 
-- **Too small.** 10.5 s against the skill's 20 s floor (30 s is the mark). One mechanism plus a
-  three-way contact is not enough; it needs a second phase, not a longer walk.
-- The no-brake shortcut is currently blocked only by *distance* (Earth's walk back to the anvil is
-  about 150 ticks against the stone's 70 to the berth). That is a timing argument, and brittle.
+- Nothing. 22.2 s clears the 20 s floor but is short of the 30 s mark; the bar's other eight
+  requirements are all met (four map states, two interacting machines, Earth sealed in the bay for
+  good, the give-up-the-high-berth twist, one stone with two claims on it).
 
 ## Next thing to try
 
-Two berths instead of one, and a structural block in place of the distance argument:
-
-- `berthHigh` (high on the hill) drives a `hatch` on the shelf with **no latch** — open only while
-  the stone is actually held there, which an eight-tick rolling press can never do for long enough
-  to walk through.
-- Behind the hatch is the anvil bay, with the anvil and **Earth's own exit** in it. Earth walks in
-  while the stone is held high and can never come out — so the anvil can never be pressed during a
-  free roll, which kills the rolling-pass shortcut structurally.
-- The brake then walks the stone *down* the hill to `berthLow`, which the stone never touches on a
-  free roll (it would have had to stop at berthHigh first), and `wicket` latches on
-  berthLow + anvil + grip.
+`meta.json`, `node tools/novelty.mjs chockstone` with the coined key `stone-held-from-below`,
+then `tools/build.mjs` and `tools/catalog.mjs` in the same commit.

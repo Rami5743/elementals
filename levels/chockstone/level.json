@@ -10,31 +10,33 @@
       "earth"
     ]
   ],
-  "parTicks": 4200,
+  "parTicks": 6000,
   "hints": [
+    "The stone is at the bottom of the hill, and only Earth can shift a boulder a single pixel.",
     "Nothing in the game runs faster than a rolling boulder. You cannot get in front of it afterwards.",
-    "The plate over the walkway is heavy, and it hangs a tile above the ground. No body can press it.",
-    "A stone stopped by somebody comes to rest just uphill of them."
+    "Both plates over the hill are heavy and hang a tile above the walkway. No body can press one.",
+    "A stone stopped by somebody rests just uphill of them, and follows them down if they move.",
+    "The hatch is only open while the stone is genuinely standing still up there."
   ],
   "tiles": [
     "########################################",
     "########################################",
     "########################################",
-    "#............###########################",
-    "#.............##########################",
     "#..............#########################",
-    "############\\...########################",
-    "#############\\...#######################",
+    "#...............########################",
+    "#................#######################",
     "##############\\...######################",
     "###############\\...#####################",
     "################\\...####################",
     "#################\\...###################",
     "##################\\...##################",
-    "###################\\...................#",
-    "####################\\..................#",
-    "#####################\\.................#",
-    "########################################",
-    "########################################",
+    "###################\\...#################",
+    "####################\\...################",
+    "#####################\\...###############",
+    "######################\\...##############",
+    "#######################\\...............#",
+    "########################\\..............#",
+    "#########################\\.............#",
     "########################################",
     "########################################",
     "########################################",
@@ -42,19 +44,15 @@
   ],
   "spawns": {
     "fire": [
-      7,
-      5
-    ],
-    "water": [
-      9,
-      5
-    ],
-    "earth": [
       8,
       5
     ],
-    "air": [
-      6,
+    "water": [
+      10,
+      5
+    ],
+    "earth": [
+      9,
       5
     ]
   },
@@ -62,35 +60,33 @@
     {
       "id": "stone",
       "type": "boulder",
-      "x": 11,
-      "y": 5,
+      "x": 28,
+      "y": 17,
       "rolls": true
     },
     {
-      "id": "grip",
-      "type": "button",
-      "mode": "hold",
-      "x": 2,
-      "y": 5,
-      "targets": [
-        "wicket"
-      ]
-    },
-    {
-      "id": "anvil",
-      "type": "plate",
-      "x": 5,
-      "y": 5,
-      "weight": "heavy",
-      "targets": [
-        "wicket"
-      ]
-    },
-    {
-      "id": "berth",
+      "id": "berthHigh",
       "type": "plate",
       "x": 16,
-      "y": 9,
+      "y": 7,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "hatch"
+      ]
+    },
+    {
+      "id": "hatch",
+      "type": "door",
+      "x": 5,
+      "y": 3,
+      "h": 3
+    },
+    {
+      "id": "berthLow",
+      "type": "plate",
+      "x": 22,
+      "y": 13,
       "w": 2,
       "weight": "heavy",
       "targets": [
@@ -98,62 +94,82 @@
       ]
     },
     {
+      "id": "anvil",
+      "type": "plate",
+      "x": 1,
+      "y": 5,
+      "weight": "heavy",
+      "targets": [
+        "wicket"
+      ]
+    },
+    {
+      "id": "grip",
+      "type": "button",
+      "mode": "hold",
+      "x": 7,
+      "y": 5,
+      "targets": [
+        "wicket"
+      ]
+    },
+    {
       "id": "wicket",
       "type": "door",
-      "x": 31,
-      "y": 13,
+      "x": 33,
+      "y": 15,
       "h": 3,
       "required": 3,
       "latch": true
     },
     {
       "type": "gem",
-      "element": "fire",
-      "x": 3,
+      "element": "earth",
+      "x": 1,
       "y": 5
     },
     {
       "type": "gem",
-      "element": "earth",
-      "x": 5,
+      "element": "fire",
+      "x": 7,
       "y": 5
     },
     {
       "type": "gem",
       "element": "water",
       "x": 17,
-      "y": 10
+      "y": 8
     },
     {
       "type": "exit",
       "element": "earth",
-      "x": 33,
-      "y": 14
+      "x": 3,
+      "y": 4
     },
     {
       "type": "exit",
       "element": "fire",
       "x": 35,
-      "y": 14
+      "y": 16
     },
     {
       "type": "exit",
       "element": "water",
       "x": 37,
-      "y": 14
+      "y": 16
     },
     {
       "id": "sign1",
       "type": "sign",
-      "x": 2,
+      "x": 1,
       "y": 3,
-      "text": "Hold here"
+      "text": "Anvil"
     },
     {
       "id": "sign2",
       "type": "sign",
-      "x": 22,
-      "y": 13,
+      "x": 26,
+      "y": 15,
       "text": "Spoil run"
     }
   ]
