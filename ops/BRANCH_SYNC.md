@@ -65,13 +65,14 @@ Otherwise:
    pushed: reset to where you were (`git merge --abort`, or `git reset --hard origin/main` if the
    merge is already committed and unpushed), and report which level failed and what it printed.
 
-3. **Look for an `order` collision** among the new levels:
+3. **Report `order` collisions; do not fix them.**
    ```bash
    for f in levels/*/meta.json; do node -e "console.log(require('./$f').order)"; done | sort -n | uniq -d
    ```
-   Three duplicates predate this task (202, 301, 302) and are left alone. A *new* duplicate is
-   fixed by moving the newly merged level to the next free number of its hundred, in **both**
-   `meta.json` and `level.json`, then `node kit.mjs pack <id>`.
+   The page runs oldest first from the git history, so a duplicate `order` changes nothing a player
+   sees; it only breaks a tie in the catalogue. Editing another agent's level to renumber it costs
+   a repack and risks a conflict with whatever that agent is doing next. So list the duplicates in
+   the report and move on. (202, 301 and 302 predate this task; do not mention them.)
 
 4. **Regenerate and verify:**
    ```bash
@@ -99,6 +100,24 @@ Otherwise:
 One short paragraph: the levels merged and that they passed, anything that did not pass and was
 therefore left unpushed, any `order` you moved, and the commit both branches now point at. When
 there was nothing to do, one line.
+
+## When a batch is streaming
+
+The other agent sometimes commits a numbered batch — `Batch-90 07/90: Add ...` — over many hours.
+Then:
+
+- **Keep the hourly cadence.** Do not chase the stream with extra passes: whatever is on
+  `origin/gpt` when the hour fires is what this pass merges, and the rest lands next hour.
+- **Let the pass take as long as it needs.** Checking twenty levels is minutes of simulation, not
+  one command, and that check is the only thing standing between a broken level and `main`. Never
+  shorten it by sampling, and never push a level that was not checked.
+- **One bad level does not block the rest.** If a level fails, do not abandon the merge: reset,
+  merge `origin/gpt` again, and `git checkout` the failing level's directory back to its state on
+  `main` (or, if it is new, remove it from the merge with `git rm -r --cached` and delete the
+  working copy) so the good ones can land. Say in the report which level was held back and what it
+  printed. The next hour will try it again once the other agent has fixed it.
+- `git push origin main:gpt` is a fast-forward only while `gpt` is an ancestor of `main`. While the
+  batch is streaming it usually is not: skip that push, say so, and never force it.
 
 ## Notes
 
