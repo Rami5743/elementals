@@ -3620,6 +3620,35 @@
   ]
  },
  {
+  "id": "living_register",
+  "name": "Living Register",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 11220,
+  "dark": false,
+  "challenge": "mind",
+  "core": "occupancy-latches-4",
+  "ideas": [
+   "position-as-volatile-key",
+   "quorum",
+   "twist-undo"
+  ],
+  "order": 317,
+  "line": "Four players trade temporary spatial keys for remembered permissions, so a simultaneous meeting can remain useful even when its participants have to leave.",
+  "tokens": [
+   "ent:door",
+   "ent:plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2"
+  ]
+ },
+ {
   "id": "lofts",
   "name": "Lofts",
   "source": "mine",

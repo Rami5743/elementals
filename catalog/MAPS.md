@@ -3035,3 +3035,75 @@ Entities:
   "  sign_13      sign       at (2,5)  "Boulder 3.  Earth 2.  Fire, Water, Air 1 each."
   "  sign_14      sign       at (2,6)  "Level only when both ends weigh the same."
 ```
+
+## Living Register (`living_register`) — 4p, core `occupancy-latches-4`
+
+```
+Living Register (living_register) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  #......D.......D.......D.......D......##
+ 3  #......D.......D.......D.......D.....X##
+ 4  #..@...D...p...D...p...D...p...D...*.X##
+ 5  ########################################
+ 6  ########################################
+ 7  ##......D.......D.......D.......D......#
+ 8  ##X.....D.......D.......D.......D......#
+ 9  ##X.*...D...p...D...p...D.......D...@..#
+10  ########################################
+11  ########################################
+12  #......D.......D.......D.......D......##
+13  #......D.......D.......D.......D.....X##
+14  #..@...D.......D...p...D...p...D...*.X##
+15  ########################################
+16  ########################################
+17  ##......D.......D.......D.......D......#
+18  ##X.....D.......D.......D.......D......#
+19  ##X.*...D...p...D...p...D...p...D...@..#
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (3,4)  water (36,9)  earth (3,14)  air (36,19)
+Entities:
+  D  g0_0         door       at (7,2)  1x3  <- p3_0, p3_1  invert
+  D  g0_1         door       at (15,2)  1x3  <- p1_3, p2_3 (needs 2)
+  D  g0_2         door       at (23,2)  1x3  <- p1_2  invert
+  D  g0_3         door       at (31,2)  1x3  <- p0_3, p1_0 (needs 2)  latch
+  X  exit_4       exit       at (37,3)  fire
+  *  gem_5        gem        at (35,4)  fire
+  D  g1_0         door       at (32,7)  1x3  <- p2_2
+  D  g1_1         door       at (24,7)  1x3  <- p3_3
+  D  g1_2         door       at (16,7)  1x3  <- p1_2, p2_0 (needs 2)  latch
+  D  g1_3         door       at (8,7)  1x3  <- p0_2
+  X  exit_10      exit       at (2,8)  water
+  *  gem_11       gem        at (4,9)  water
+  D  g2_0         door       at (7,12)  1x3  <- p0_1
+  D  g2_1         door       at (15,12)  1x3  <- p0_0, p3_1 (needs 2)
+  D  g2_2         door       at (23,12)  1x3  <- p3_2
+  D  g2_3         door       at (31,12)  1x3  <- p0_2
+  X  exit_16      exit       at (37,13)  earth
+  *  gem_17       gem        at (35,14)  earth
+  D  g3_0         door       at (32,17)  1x3  <- p0_0, p3_0 (needs 2)  latch
+  D  g3_1         door       at (24,17)  1x3  <- p0_3, p2_2 (needs 2)  invert
+  D  g3_2         door       at (16,17)  1x3  <- p2_3
+  D  g3_3         door       at (8,17)  1x3  <- p0_1, p3_1 (needs 2)  latch
+  X  exit_22      exit       at (2,18)  air
+  *  gem_23       gem        at (4,19)  air
+  p  p0_0         plate      at (3,4)  -> g2_1, g3_0
+  p  p0_1         plate      at (11,4)  -> g2_0, g3_3
+  p  p0_2         plate      at (19,4)  -> g1_3, g2_3
+  p  p0_3         plate      at (27,4)  -> g0_3, g3_1
+  p  p1_0         plate      at (36,9)  -> g0_3
+  p  p1_2         plate      at (20,9)  -> g0_2, g1_2
+  p  p1_3         plate      at (12,9)  -> g0_1
+  p  p2_0         plate      at (3,14)  -> g1_2
+  p  p2_2         plate      at (19,14)  -> g1_0, g3_1
+  p  p2_3         plate      at (27,14)  -> g0_1, g3_2
+  p  p3_0         plate      at (36,19)  -> g0_0, g3_0
+  p  p3_1         plate      at (28,19)  -> g0_0, g2_1, g3_3
+  p  p3_2         plate      at (20,19)  -> g2_2
+  p  p3_3         plate      at (12,19)  -> g1_1
+```
