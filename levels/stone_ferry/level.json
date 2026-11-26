@@ -1,0 +1,202 @@
+{
+  "id": "stone_ferry",
+  "name": "Stone Ferry",
+  "order": 356,
+  "description": "One stone, one seat, one way across the sludge. Only Earth can bring it back, and only Air can let it go.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth",
+      "air"
+    ]
+  ],
+  "parTicks": 9000,
+  "hints": [
+    "The stone is the only boat. It carries one rider, and only ever downhill.",
+    "Air's turbine opens the trapdoor in the gallery and shuts the gate on the slope. Letting go of it launches the stone.",
+    "Only Earth can push the stone. Someone on the far bank has to hold the lift up while Earth rolls it off.",
+    "Whoever drops the stones has to cross last. Spin, run, jump aboard before the turbine stops."
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "######.................#################",
+    "######.................#################",
+    "#######.####.######.===#################",
+    "#######.####.######....................#",
+    "#######.####.######.===................#",
+    "#............######....................#",
+    "#.............#####.===................#",
+    "#.............#####....................#",
+    "############\\..####.===................#",
+    "#############\\..###....................#",
+    "##############\\.....===................#",
+    "###############\\.......................#",
+    "################SSS=####################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      10,
+      11
+    ],
+    "water": [
+      8,
+      11
+    ],
+    "air": [
+      3,
+      11
+    ],
+    "earth": [
+      21,
+      5
+    ]
+  },
+  "entities": [
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 12,
+      "y": 5,
+      "rolls": true
+    },
+    {
+      "id": "trap",
+      "type": "door",
+      "x": 12,
+      "y": 6,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "id": "spin",
+      "type": "turbine",
+      "x": 2,
+      "y": 11,
+      "duration": 200,
+      "targets": [
+        "trap",
+        "gate"
+      ]
+    },
+    {
+      "id": "gate",
+      "type": "door",
+      "x": 15,
+      "y": 13,
+      "h": 2,
+      "invert": true
+    },
+    {
+      "id": "chock",
+      "type": "door",
+      "x": 14,
+      "y": 12,
+      "h": 2,
+      "latch": true,
+      "required": 2
+    },
+    {
+      "id": "seat",
+      "type": "plate",
+      "x": 13,
+      "y": 11,
+      "targets": [
+        "chock"
+      ]
+    },
+    {
+      "id": "berth",
+      "type": "plate",
+      "x": 13,
+      "y": 12,
+      "weight": "heavy",
+      "targets": [
+        "chock"
+      ]
+    },
+    {
+      "id": "hoist",
+      "type": "elevator",
+      "x": 19,
+      "y": 16,
+      "w": 1,
+      "path": [
+        [
+          19,
+          16
+        ],
+        [
+          19,
+          6
+        ]
+      ],
+      "speed": 2.5
+    },
+    {
+      "id": "call",
+      "type": "plate",
+      "x": 27,
+      "y": 15,
+      "targets": [
+        "hoist"
+      ]
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 33,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 34,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 35,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "element": "air",
+      "x": 36,
+      "y": 14
+    },
+    {
+      "type": "gem",
+      "element": "air",
+      "x": 5,
+      "y": 9
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 16,
+      "y": 5
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 24,
+      "y": 15
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 30,
+      "y": 15
+    }
+  ]
+}
