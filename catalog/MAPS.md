@@ -6571,6 +6571,59 @@ Entities:
   l  Wfinal_receipt lever      at (36,6)  -> fire_final
 ```
 
+## Drawbridge (`drawbridge`) — 3p, core `weight-on-the-mark-eats-the-bridge-back-from-its-far-end`
+
+```
+Drawbridge (drawbridge) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  #..D..........ppppppppppppppppp..#.D...#
+ 7  #..D....!.....ppppppppppppppppp..#.DXXX#
+ 8  #@OD.@.@!.....pppppppppp*pppp*pl...DXXX#
+ 9  #########DDDDDDDDDDDDDDDDDDDDDD##=######
+10  #########..............................#
+11  #########..............................#
+12  #########..............................#
+13  #########..............................#
+14  #########..............................#
+15  #########..............................#
+16  #########..............................#
+17  #########..............................#
+18  #########..............................#
+19  #########f.................*.pp##E######
+20  ##########WWWWWWWWWWWWWWWWW#############
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (1,8)  water (5,8)  fire (7,8)
+Entities:
+  D  bridge       door       at (9,9)  22x1  <- mark, mark_mid, mark_top
+  p  mark         plate      at (14,8)  17x1  -> bridge  weight heavy
+  p  mark_mid     plate      at (14,7)  17x1  -> bridge  weight heavy
+  p  mark_top     plate      at (14,6)  17x1  -> bridge  weight heavy
+  O  stone        boulder    at (2,8)
+  D  stall        door       at (3,6)  1x3  <- winch
+  W  pool         pool       at (10,20)  17x1  <- pad  duration 300
+  f  pad          freezepad  at (9,19)  -> pool
+  p  weigh        plate      at (29,19)  2x1  -> gate  weight heavy
+  D  gate         door       at (35,6)  1x3  <- weigh
+  l  winch        lever      at (31,8)  -> hoist, stall
+  E  hoist        elevator   at (33,19)  <- winch  mode powered  speed 1.2  path (33,19)-(33,9)
+  X  exit_12      exit       at (36,7)  fire
+  X  exit_13      exit       at (37,7)  water
+  X  exit_14      exit       at (38,7)  earth
+  !  checkpoint_15 checkpoint at (8,7)
+  *  gem_16       gem        at (24,8)  fire
+  *  gem_17       gem        at (29,8)  water
+  *  gem_18       gem        at (27,19)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

@@ -22,23 +22,24 @@ together. `twist-undo`×35, `invert-door`×8, `timed-window`×8, `quorum`×8, `t
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `stone-held-from-below` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so the only thing that ever stops one is a body already standing in its path — and it comes to rest in the cell immediately UPHILL of that body, one row up, never on their head. A heavy plate hung in that cell is therefore an unforgeable key: the body standing under it is too light to press it and cannot climb to it, and the one who pushed the stone can never park it there, because you push from above and hold from below and nobody can be both. The eight ticks a free-rolling stone spends crossing the cell are far too few for anything that has to stay open long enough to walk through. And because the stone rolls on the instant the brake steps aside, and follows the brake downhill, one stone can be walked from a high berth to a lower one but never back up without Earth: gravity fixes the order of the berths, and giving up the high one is the price of the low.
+- `drawbridge-eaten-back-to-the-mark` — A wide door used as a drawbridge opens by being eaten from its free end back towards its hinge at 4 px a tick, faster than anyone runs, and closes by sliding back out and carrying whoever stands on it. Hang a curtain of heavy plates over its far part and it becomes a cut: anything heavy past the mark keeps the far end vanishing until that weight has fallen through, so everything beyond the mark drops in order of distance and everything short of it stays. The weight can never cross, whoever pushed it there has to get right off the bridge before it slides back out and carries them into the mark, and a light partner standing at the far end is thrown into whatever lies below.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- grating-memory-with-erase + lift-sorts-by-weight
-- twist-order + two-is-not-heavy
-- plank-sums-plate-maxes + single-file-stone
-- one-way-press + tower-presses-a-column
+- plank-sums-plate-maxes + stock-before-it-seals
+- fan-passenger + lock-per-element
 - lift-sorts-by-weight + twist-sacrifice
-- glide-passenger + stone-held-from-below
-- object-as-permanent-switch + two-is-not-heavy
-- freeze-bridge + plank-sums-plate-maxes
-- lock-per-element + twist-sacrifice
-- door-pushes-you-through + glide-passenger
-- stone-held-from-below + trigger-from-above
-- lift-sorts-by-weight + partner-builds-your-landing
+- plank-sums-plate-maxes + twist-self-block
+- belt-cargo + lock-per-element
+- glide-passenger + lock-per-element
+- fan-band + lock-per-element
+- plank-sums-plate-maxes + twist-setup
+- drawbridge-eaten-back-to-the-mark + no-hands-for-cargo
+- drawbridge-eaten-back-to-the-mark + glide-passenger
+- drawbridge-eaten-back-to-the-mark + twist-sacrifice
+- fan-passenger + two-is-not-heavy
 
 ## This repo's 2-player levels
 

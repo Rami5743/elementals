@@ -28,23 +28,24 @@ together. `twist-undo`×35, `quorum`×33, `timed-window`×8, `twist-order`×8, `
 - `unload-the-pan-you-ride` — A seesaw used as the only route between three storeys, one flush with each of its positions. Only the heavier pan is ever at floor level, so the far pan can never be loaded from below: a weight has to be put on your OWN pan to send theirs up to the storey where it can be loaded at all, and that same weight has to be shed again before your pan will carry you anywhere. You rise by what is taken off, never by what is added. (The campaign's scales — Assay, Counterpoise — sum weights too, but to balance a pan under a floating plate or to hoist cargo past a ledge; here the sum decides which storey each of you can reach, and the beam has no switch and no wiring at all.)
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
 - `stone-held-from-below` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so the only thing that ever stops one is a body already standing in its path — and it comes to rest in the cell immediately UPHILL of that body, one row up, never on their head. A heavy plate hung in that cell is therefore an unforgeable key: the body standing under it is too light to press it and cannot climb to it, and the one who pushed the stone can never park it there, because you push from above and hold from below and nobody can be both. The eight ticks a free-rolling stone spends crossing the cell are far too few for anything that has to stay open long enough to walk through. And because the stone rolls on the instant the brake steps aside, and follows the brake downhill, one stone can be walked from a high berth to a lower one but never back up without Earth: gravity fixes the order of the berths, and giving up the high one is the price of the low.
+- `drawbridge-eaten-back-to-the-mark` — A wide door used as a drawbridge opens by being eaten from its free end back towards its hinge at 4 px a tick, faster than anyone runs, and closes by sliding back out and carrying whoever stands on it. Hang a curtain of heavy plates over its far part and it becomes a cut: anything heavy past the mark keeps the far end vanishing until that weight has fallen through, so everything beyond the mark drops in order of distance and everything short of it stays. The weight can never cross, whoever pushed it there has to get right off the bridge before it slides back out and carries them into the mark, and a light partner standing at the far end is thrown into whatever lies below.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- reversible-switch-maze + tower-presses-a-column
-- freeze-bridge + stand-aside-is-the-switch
-- head-stack + mass-adds-on-the-beam
-- boulder-carry + unload-the-pan-you-ride
-- fan-passenger + wide-door
-- glide-dismount + lock-per-element
-- head-stack + single-file-stone
-- balanced-rope-memory + fan-passenger
-- partner-builds-your-landing + turbine-out-of-reach
-- boulder-float + mass-adds-on-the-beam
-- fan-passenger + lock-per-element
-- fan-band + stand-aside-is-the-switch
+- quorum + stone-held-from-below
+- fan-passenger + low-roof-no-jump
+- pound-chain + unload-the-pan-you-ride
+- invert-door + unload-the-pan-you-ride
+- pound-chain + stone-held-from-below
+- glide-dismount + twist-undo
+- fan-band + single-file-stone
+- dark + low-roof-no-jump
+- tower-presses-a-column + twist-undo
+- pound-chain + stand-aside-is-the-switch
+- belt-reverse + partner-builds-your-landing
+- liquid-lane + twist-undo
 
 ## This repo's 4-player levels
 
