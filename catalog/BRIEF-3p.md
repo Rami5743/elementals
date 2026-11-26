@@ -28,23 +28,25 @@ together. `twist-undo`×34, `quorum`×27, `twist-order`×10, `timed-window`×8, 
 - `feed-the-engine-mid-ride` — A machine that runs only for a moment after each touch, so the rider has to keep leaving it and coming back to keep it going. (Campaign: Keep It Spinning.)
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `stone-ferry` — A rolling boulder is a boat: liquids are floors to it and its rider goes with it, so it is the one thing that carries anybody over sludge nobody can cross. It seats one (a low roof scrapes a second rider off), it only ever travels downhill, and it stops where its run-out puts it, so every crossing spends it and somebody has to haul it back up before the next.
+- `turbine-self-timer` — A turbine stays on for its duration after Air leaves, so a machine that needs a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
+- invert-door + turbine-self-timer
+- stone-ferry + torch-bridge
+- plank-sums-plate-maxes + timed-window
+- freeze-bridge + liquid-lane
+- stone-ferry + twist-self-block
+- dark + fan-passenger
+- counterweight-you-must-remove + wide-door
 - low-roof-no-jump + one-way-press
-- lift-sorts-by-weight + twist-backwards
-- counterweight-you-must-remove + door-pushes-you-through
-- low-roof-no-jump + quorum
-- lift-press + lift-sorts-by-weight
-- boulder-carry + twist-stranding
-- glide-passenger + machine-strands-operator
-- plank-sums-plate-maxes + twist-stranding
-- one-way-press + partner-builds-your-landing
-- door-pushes-you-through + lift-as-floor
-- lock-per-element + one-way-press
-- lift-corner-path + lock-per-element
+- glide-passenger + twist-two-clocks
+- cargo-as-clock-contact + glide-passenger
+- invert-door + lift-sorts-by-weight
+- low-roof-no-jump + one-way-drop
 
 ## This repo's 3-player levels
 

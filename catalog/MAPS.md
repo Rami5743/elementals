@@ -10384,3 +10384,57 @@ Entities:
   l  Afinal       lever      at (37,8)  -> Wend
   D  Wend         door       at (37,14)  1x3  <- Afinal  latch
 ```
+
+## Stone Ferry (`stone_ferry`) — 4p, core `downhill-one-seat-stone-ferry-air-rows-last`
+
+```
+Stone Ferry (stone_ferry) for fire+water+earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ######........###.......################
+ 4  ######..................################
+ 5  #######.####O...*....@./################
+ 6  #######.####D#####=.===#################
+ 7  #######.####.#####..===................#
+ 8  #######.####.#####.....................#
+ 9  #....*.......#####..===................#
+10  #.....!......p####.....................#
+11  #.T@..!.@.@...D###..===................#
+12  ##=#########\pD###.....................#
+13  ##.##########\DD##..===..!.......XXXX..#
+14  ##.###########\D........*!.p..*..XXXX..#
+15  ##.############\...p####=###############
+16  ##.#############SSSE####.###############
+17  ##.#####################=###############
+18  ##.......................###############
+19  ##MMMMMMMMMMMMMMMMMMMMMMM###############
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (10,11)  water (8,11)  air (3,11)  earth (21,5)
+Entities:
+  O  stone        boulder    at (12,5)
+  D  trap         door       at (12,6)  <- spin
+  T  spin         turbine    at (2,11)  -> trap, gate  duration 200
+  D  gate         door       at (15,13)  1x2  <- spin, landing, call  invert
+  p  landing      plate      at (19,15)  -> gate
+  D  chock        door       at (14,11)  1x3  <- seat, berth (needs 2)  latch
+  p  seat         plate      at (13,10)  -> chock
+  p  berth        plate      at (13,12)  -> chock  weight heavy
+  E  hoist        elevator   at (19,16)  <- call  speed 8  path (19,16)-(19,6)
+  p  call         plate      at (27,14)  -> hoist, gate
+  X  exit_10      exit       at (36,13)  fire
+  X  exit_11      exit       at (35,13)  water
+  X  exit_12      exit       at (34,13)  earth
+  X  exit_13      exit       at (33,13)  air
+  !  checkpoint_14 checkpoint at (6,10)
+  !  checkpoint_15 checkpoint at (25,13)
+  *  gem_16       gem        at (5,9)  air
+  *  gem_17       gem        at (16,5)  earth
+  *  gem_18       gem        at (24,14)  fire
+  *  gem_19       gem        at (30,14)  water
+```

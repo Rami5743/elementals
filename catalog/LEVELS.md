@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 172 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 173 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (56)
@@ -749,7 +749,7 @@ Totals: 79 campaign levels, 172 in this repo, of which 11 now ship in the campai
   - hints: Each gate wants all three switches in front of it pressed at once: one at the floor, one above it, one above that. Only a tower of all three of you reaches them. / The floor of each gateway is a liquid, so whoever is at the bottom has to be able to stand in it. The heavy switch has to be pressed by Earth. / First Fire carries Water, with Earth on top. Then Water carries Earth, with Fire on top. Walk the tower through as the gate opens.
   - features: ent:door ent:plate opt:heavy-plate opt:required:3 tile:lava tile:water
 
-## 4 players — this repo (58)
+## 4 players — this repo (59)
 
 - **Quartet** `quartet` (4p: fire+water+earth+air) core=`one-lock-per-element` challenge=motor par=3600
   - idea: four locks and one tower. Each element opens exactly one of the four, and the one that is not an ability is a three-player boost.
@@ -976,6 +976,10 @@ Totals: 79 campaign levels, 172 in this repo, of which 11 now ship in the campai
   - idea: A timed launch that removes the operator's floor, and must be rearmed for a second crossing after the first traveller's receipt changes who is authorized to use that same clock.
   - ideas: twist-self-block, timed-window, twist-undo, quorum
   - features: ent:button ent:door ent:elevator ent:lever opt:button-timed opt:button:timed opt:elevator:loop opt:invert:door opt:latch opt:required:2 opt:wide-door
+- **Stone Ferry** `stone_ferry` (4p: fire+water+earth+air) core=`downhill-one-seat-stone-ferry-air-rows-last` challenge=motor par=7200
+  - idea: a rolling boulder as a one-seat boat over sludge (`stone-ferry`), and a turbine's run-down as the self-timer that lets the last operator also be the passenger (`turbine-self-timer`).
+  - ideas: stone-ferry, turbine-self-timer, machine-strands-operator
+  - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:heavy-plate opt:invert:door opt:latch opt:required:2 opt:rolling-boulder opt:turbine-timed tile:mud tile:one-way tile:slope tile:sludge
 
 ## 4 players — campaign (23)
 

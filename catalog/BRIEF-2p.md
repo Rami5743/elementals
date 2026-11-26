@@ -22,23 +22,25 @@ together. `twist-undo`×35, `invert-door`×8, `timed-window`×8, `quorum`×8, `t
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `stone-held-from-below` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so the only thing that ever stops one is a body already standing in its path — and it comes to rest in the cell immediately UPHILL of that body, one row up, never on their head. A heavy plate hung in that cell is therefore an unforgeable key: the body standing under it is too light to press it and cannot climb to it, and the one who pushed the stone can never park it there, because you push from above and hold from below and nobody can be both. The eight ticks a free-rolling stone spends crossing the cell are far too few for anything that has to stay open long enough to walk through. And because the stone rolls on the instant the brake steps aside, and follows the brake downhill, one stone can be walked from a high berth to a lower one but never back up without Earth: gravity fixes the order of the berths, and giving up the high one is the price of the low.
+- `stone-ferry` — A rolling boulder is a boat: liquids are floors to it and its rider goes with it, so it is the one thing that carries anybody over sludge nobody can cross. It seats one (a low roof scrapes a second rider off), it only ever travels downhill, and it stops where its run-out puts it, so every crossing spends it and somebody has to haul it back up before the next.
+- `turbine-self-timer` — A turbine stays on for its duration after Air leaves, so a machine that needs a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- grating-memory-with-erase + lift-sorts-by-weight
-- twist-order + two-is-not-heavy
-- plank-sums-plate-maxes + single-file-stone
-- one-way-press + tower-presses-a-column
-- lift-sorts-by-weight + twist-sacrifice
-- glide-passenger + stone-held-from-below
+- lock-per-element + twist-setup
+- lift-sorts-by-weight + twist-undo
+- door-pushes-you-through + hop-beats-belt
+- door-pushes-you-through + object-as-permanent-switch
+- door-pushes-you-through + twist-sacrifice
+- freeze-invert + stone-ferry
 - object-as-permanent-switch + two-is-not-heavy
-- freeze-bridge + plank-sums-plate-maxes
-- lock-per-element + twist-sacrifice
-- door-pushes-you-through + glide-passenger
-- stone-held-from-below + trigger-from-above
-- lift-sorts-by-weight + partner-builds-your-landing
+- low-roof-no-jump + turbine-self-timer
+- invert-door + turbine-self-timer
+- tower-presses-a-column + twist-undo
+- door-pushes-you-through + twist-order
+- pound-to-move + two-is-not-heavy
 
 ## This repo's 2-player levels
 

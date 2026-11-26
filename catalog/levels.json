@@ -7585,6 +7585,45 @@
   ]
  },
  {
+  "id": "stone_ferry",
+  "name": "Stone Ferry",
+  "source": "mine",
+  "sizes": [
+   4
+  ],
+  "groups": [
+   "fire+water+earth+air"
+  ],
+  "parTicks": 7200,
+  "dark": false,
+  "challenge": "motor",
+  "core": "downhill-one-seat-stone-ferry-air-rows-last",
+  "ideas": [
+   "stone-ferry",
+   "turbine-self-timer",
+   "machine-strands-operator"
+  ],
+  "order": 356,
+  "line": "a rolling boulder as a one-seat boat over sludge (`stone-ferry`), and a turbine's run-down as the self-timer that lets the last operator also be the passenger (`turbine-self-timer`).",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:plate",
+   "ent:turbine",
+   "opt:heavy-plate",
+   "opt:invert:door",
+   "opt:latch",
+   "opt:required:2",
+   "opt:rolling-boulder",
+   "opt:turbine-timed",
+   "tile:mud",
+   "tile:one-way",
+   "tile:slope",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "strip_and_reload",
   "name": "Strip and Reload",
   "source": "mine",
