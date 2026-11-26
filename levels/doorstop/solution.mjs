@@ -1,55 +1,88 @@
-// Solution scripts: one generator per player, yielding that player's input bits once a tick.
-// They read the live game through `c` (see docs/SOLUTIONS.md). `node kit.mjs check <level>`
-// runs them and records the replays.
-import { IN_LEFT, IN_RIGHT, TILE, go, jump, runJump, until } from '../../kit.mjs';
+// Doorstop: solution scripts for Earth + Air, and the shortcuts that must fail.
+import { IN_LEFT, IN_RIGHT, IN_JUMP, TILE, go, holdAt, steerTo, until, interact, wait, waitFlag } from '../../kit.mjs';
 
-/** @type {import('../../kit.mjs').Script} */
-const fire = function* (c) {
-  yield* go(c, 20); // under the gem
-  yield* jump(c, 0); // straight up through it
-  // lean on the ice until it melts (Fire melts it by touching it)
-  yield* until(c, () => c.ent('ice').s.gone === 1, IN_LEFT, 600, 'the ice to melt');
-  yield* go(c, 37); // through the lava (safe for Fire), over Water and into the door
+/** A hopping walk to tile x: clears a boulder or crate in open ground. */
+function* bound(c, x, hold = 14, max = 900) {
+  const goal = x * TILE + TILE / 2;
+  let h = 0;
+  for (let t = 0; t < max; t++) {
+    const d = goal - c.cx;
+    if (Math.abs(d) < 10 && c.me.grounded === 1) return;
+    if (c.me.grounded === 1) h = hold;
+    yield (d > 0 ? IN_RIGHT : IN_LEFT) | (h-- > 0 ? IN_JUMP : 0);
+  }
+  throw new Error(`${c.me.element} could not bound to ${x} (at ${c.tx.toFixed(1)})`);
+}
+
+const tileOf = (c, id) => (c.ent(id).s.x + 15) / TILE; // centre of a boulder or crate, in tiles
+const stillFor = (c, id) => {
+  let last = c.ent(id).s.x, n = 0;
+  return () => { const x = c.ent(id).s.x; n = x === last ? n + 1 : 0; last = x; return n >= 20; };
 };
 
 /** @type {import('../../kit.mjs').Script} */
-const water = function* (c) {
-  yield* runJump(c, 23, 25, 29); // a running jump over the lava
-  // walk into the flames: Water puts them out
-  yield* until(c, () => c.ent('flames').s.gone === 1, IN_RIGHT, 600, 'the flames to go out');
-  yield* go(c, 30);
-  // stand still while Fire hops over (two players walking into each other both hop, and get stuck)
-  yield* until(c, () => c.player('fire').inDoor === 1, 0, 1500, 'Fire to get home');
-  yield* runJump(c, 31, 28, 24); // back over the lava
+const earth = function* (c) {
+  // 1. Earth's lever, in the mud tunnel: ON frees Air's crate (and shuts Earth's own outer door).
+  yield* go(c, 11);
+  yield* interact(c);
+  c.flag('crate_free');
+  // 2. Air wedges its door with the crate, throws its lever (the stone rolls out) and goes home.
+  yield* waitFlag(c, 'air_home');
+  yield* until(c, stillFor(c, 'stone'), 0, 900, 'the stone to roll out and stop');
+  // 3. Round the stone and roll it back west, down the mud tunnel, past the lever.
+  const sx = tileOf(c, 'stone');
+  yield* go(c, sx - 1.6);
+  yield* bound(c, sx + 1.4);
+  yield* until(c, () => tileOf(c, 'stone') <= 8.6, IN_LEFT, 1500, 'the stone into the tunnel');
+  // 4. The undo: Earth's outer door is shut while its lever is ON. Throw it back OFF.
+  yield* go(c, 11);
+  yield* interact(c);
+  yield* until(c, () => c.ent('outer_e').s.open >= 30, 0, 120, 'the outer door to open');
+  // 5. Push the stone into the doorway: it stops against the shut inner door, in the slot.
+  yield* until(c, () => tileOf(c, 'stone') <= 5.6, IN_LEFT, 900, 'the stone into the slot');
+  yield* wait(c, 10);
+  // 6. Lever ON again: the outer door shuts on the stone (30 px) and the inner door opens.
+  yield* go(c, 11);
+  yield* interact(c);
+  yield* until(c, () => c.ent('inner_e').s.open >= 30, 0, 200, 'the inner door to open');
+  // 7. Push the stone home ahead of you.
   yield* go(c, 2);
 };
 
-// Shortcuts: ways to cheat that must NOT work. `check` runs each one and reports a problem if it
-// finishes the level. Write one for every shortcut you blocked, and make it try as hard as it can.
 /** @type {import('../../kit.mjs').Script} */
-const fireStraightHome = function* (c) {
-  yield* go(c, 37); // the flames are in the way
-};
-/** @type {import('../../kit.mjs').Script} */
-const waterStraightHome = function* (c) {
-  // let Fire hop past first, so they don't block each other: the shortcut must fail at the ice, not here
-  yield* until(c, () => c.player('fire').x > c.me.x + 2 * TILE, 0, 600, 'Fire to go past');
-  yield* go(c, 2); // the ice is in the way
+const air = function* (c) {
+  yield* waitFlag(c, 'crate_free');
+  // ride the draught up to Air's floor
+  yield* go(c, 20);
+  yield* holdAt(c, 20, () => c.me.y < 7 * TILE, 400, 'the draught');
+  yield* steerTo(c, 22);
+  // push the crate along the mist tunnel until it stops against the shut inner door
+  yield* go(c, 26);
+  yield* until(c, () => c.ent('crate').s.x >= 34 * TILE, IN_RIGHT, 900, 'the crate into the slot');
+  yield* wait(c, 10);
+  // back to Air's lever: ON frees the stone and shuts the outer door on the crate (28 px)
+  yield* go(c, 23);
+  yield* interact(c);
+  yield* until(c, () => c.ent('inner_a').s.open >= 28, 0, 200, 'the inner door to open');
+  // push the crate home ahead of you
+  yield* go(c, 37);
+  yield* until(c, () => c.me.inDoor === 1, 0, 60, 'Air home');
+  c.flag('air_home');
 };
 
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
   sets: [
     {
-      elements: ['fire', 'water'],
-      scripts: { fire, water },
-      shortcuts: [{ name: 'each walks straight home without helping', scripts: { fire: fireStraightHome, water: waterStraightHome }, maxTicks: 1200 }],
+      elements: ['earth', 'air'],
+      scripts: { earth, air },
+      shortcuts: [],
     },
   ],
   roles: {
-    'fire,water': {
-      fire: 'Melts the ice in front of Water\'s door.',
-      water: 'Jumps the lava and puts out the flames in front of Fire\'s door.',
+    'earth,air': {
+      earth: 'Frees the crate with its lever, then undoes it, wedges its own outer door with the stone and pushes it home.',
+      air: 'Rides the draught, wedges its outer door with the crate, frees the stone with its lever and pushes the crate home.',
     },
   },
 };

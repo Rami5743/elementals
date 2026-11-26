@@ -5,10 +5,10 @@ so you shut the outer door on your wedge on purpose and push it home ahead of yo
 Earth's door at 30 px, the crate holds Air's at 28. Each lever frees the partner's wedge (Y, Z), so
 the levers must be thrown, undone and thrown again in a forced order.
 
-**Passes:** design written (NOTES.md). Probes (scratchpad) confirmed: door rests on crate at 28 /
+**Passes:** level.json validates; the solution script runs and `check` says No problems (26.5 s, 2/2 gems, both necessary).
 boulder at 30; Air pushes a wedged crate, Earth a wedged boulder; Earth cannot pass a crate wedge;
 Air cannot push a boulder; objects ride mud/mist floors.
 
-**Fails:** level.json not written yet.
+**Fails:** nothing yet; no shortcut scripts, solve time under 30 s, par 9000 too generous, NOTES not final.
 
-**Next:** write the generator (scratchpad a80b/gen.mjs), produce level.json, `node kit.mjs show doorstop`.
+**Next:** write shortcut scripts (wrong wedge, no wedge, no undo), lengthen if possible, set par, final NOTES + meta + ideas key.
