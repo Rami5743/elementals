@@ -29,23 +29,25 @@ together. `twist-undo`×34, `quorum`×27, `twist-order`×11, `timed-window`×8, 
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `airlock-with-no-room` — Two doors back to back with no room between them: the outer one is open only while the inner one is shut, so nobody can ever stand between them and nobody can hold either one open for a partner. The only way through is to shut the outer door on purpose on something lying in its doorway and push that thing ahead of you when the inner door opens — and a door that closes on something stops at its height: a boulder's 30 px lets Earth under, a crate's 28 px only Air, and only someone who fits under it can push the wedge on. The shut inner door is also the stop that keeps the wedge from being pushed too far in.
+- `stone-ferry` — A rolling boulder is a boat: liquids are floors to it and its rider goes with it, so it is the one thing that carries anybody over sludge nobody can cross. It seats one (a low roof scrapes a second rider off), it only ever travels downhill, and it stops where its run-out puts it, so every crossing spends it and somebody has to haul it back up before the next.
+- `turbine-self-timer` — A turbine stays on for its duration after Air leaves, so a machine that needs a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- dark + head-stack
-- fan-passenger + trigger-from-above
-- feed-the-engine-mid-ride + lift-as-floor
-- airlock-with-no-room + counterweight-you-must-remove
-- partner-builds-your-landing + twist-stranding
-- lock-per-element + torch-bridge
-- fan-passenger + glide-passenger
-- fan-passenger + partner-builds-your-landing
-- freeze-bridge + glide-passenger
-- door-pushes-you-through + machine-strands-operator
-- liquid-lane + twist-order
-- feed-the-engine-mid-ride + twist-stranding
+- balanced-rope-memory + glide-passenger
+- reversible-switch-maze + turbine-self-timer
+- feed-the-engine-mid-ride + one-way-press
+- door-pushes-you-through + reversible-switch-maze
+- partner-builds-your-landing + reversible-switch-maze
+- airlock-with-no-room + reversible-switch-maze
+- boulder-carry + twist-undo
+- lift-as-floor + low-roof-no-jump
+- lift-as-floor + lift-sorts-by-weight
+- lift-as-floor + lock-per-element
+- quorum + trigger-from-above
+- lift-corner-path + liquid-lane
 
 ## This repo's 3-player levels
 

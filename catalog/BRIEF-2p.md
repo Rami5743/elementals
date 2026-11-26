@@ -23,23 +23,25 @@ together. `twist-undo`×36, `invert-door`×8, `twist-order`×8, `timed-window`×
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
 - `stone-held-from-below` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so the only thing that ever stops one is a body already standing in its path — and it comes to rest in the cell immediately UPHILL of that body, one row up, never on their head. A heavy plate hung in that cell is therefore an unforgeable key: the body standing under it is too light to press it and cannot climb to it, and the one who pushed the stone can never park it there, because you push from above and hold from below and nobody can be both. The eight ticks a free-rolling stone spends crossing the cell are far too few for anything that has to stay open long enough to walk through. And because the stone rolls on the instant the brake steps aside, and follows the brake downhill, one stone can be walked from a high berth to a lower one but never back up without Earth: gravity fixes the order of the berths, and giving up the high one is the price of the low.
 - `drawbridge-eaten-back-to-the-mark` — A wide door used as a drawbridge opens by being eaten from its free end back towards its hinge at 4 px a tick, faster than anyone runs, and closes by sliding back out and carrying whoever stands on it. Hang a curtain of heavy plates over its far part and it becomes a cut: anything heavy past the mark keeps the far end vanishing until that weight has fallen through, so everything beyond the mark drops in order of distance and everything short of it stays. The weight can never cross, whoever pushed it there has to get right off the bridge before it slides back out and carries them into the mark, and a light partner standing at the far end is thrown into whatever lies below.
+- `stone-ferry` — A rolling boulder is a boat: liquids are floors to it and its rider goes with it, so it is the one thing that carries anybody over sludge nobody can cross. It seats one (a low roof scrapes a second rider off), it only ever travels downhill, and it stops where its run-out puts it, so every crossing spends it and somebody has to haul it back up before the next.
+- `turbine-self-timer` — A turbine stays on for its duration after Air leaves, so a machine that needs a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- liquid-lane + stone-held-from-below
-- lift-sorts-by-weight + stand-aside-is-the-switch
-- door-pushes-you-through + twist-undo
-- drawbridge-eaten-back-to-the-mark + glide-dismount
-- belt-cargo + door-pushes-you-through
-- invert-door + stone-held-from-below
-- lock-per-element + twist-sacrifice
-- lift-sorts-by-weight + twist-self-block
-- stone-held-from-below + twist-stranding
-- drawbridge-eaten-back-to-the-mark + shared-switch-two-gates
-- door-pushes-you-through + fan-passenger
-- head-stack + tower-presses-a-column
+- lock-per-element + shared-switch-two-gates
+- lift-press + lock-per-element
+- freeze-invert + stone-ferry
+- turbine-self-timer + twist-order
+- glide-dismount + tower-presses-a-column
+- fan-passenger + stone-held-from-below
+- drawbridge-eaten-back-to-the-mark + twist-stranding
+- belt-cargo + lift-sorts-by-weight
+- invert-door + stone-ferry
+- tower-presses-a-column + twist-undo
+- belt-cargo + drawbridge-eaten-back-to-the-mark
+- fan-passenger + lift-sorts-by-weight
 
 ## This repo's 2-player levels
 
