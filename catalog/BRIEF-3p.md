@@ -28,23 +28,24 @@ together. `twist-undo`×34, `quorum`×27, `twist-order`×11, `timed-window`×8, 
 - `feed-the-engine-mid-ride` — A machine that runs only for a moment after each touch, so the rider has to keep leaving it and coming back to keep it going. (Campaign: Keep It Spinning.)
 - `lift-sorts-by-weight` — A lift that can be told to stop for heavy loads and carry light ones past, so who gets off where is a setting rather than a choice. (Campaign: Weighbridge.)
 - `plank-sums-plate-maxes` — The game's two weighing machines disagree about what a crowd weighs. A heavy plate reads max(mass) and ignores riders, so two light players on it are worth one light player; a balance plank reads the sum of each half, recursively through heads, so two of them weigh exactly what Earth weighs and three outweigh Earth. The same bodies are therefore interchangeable with the stone on the scales and worthless on the lock, which decides which of the two jobs the one heavy player has to do in person. And because inequality gives the same full swing whatever the margin, the plank has only three states, of which 'level' is an exact arithmetic coincidence rather than anything a switch can cause.
+- `airlock-with-no-room` — Two doors back to back with no room between them: the outer one is open only while the inner one is shut, so nobody can ever stand between them and nobody can hold either one open for a partner. The only way through is to shut the outer door on purpose on something lying in its doorway and push that thing ahead of you when the inner door opens — and a door that closes on something stops at its height: a boulder's 30 px lets Earth under, a crate's 28 px only Air, and only someone who fits under it can push the wedge on. The shut inner door is also the stop that keeps the wedge from being pushed too far in.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- dark + lift-corner-path
-- boulder-carry + twist-two-clocks
-- counterweight-you-must-remove + dark
-- low-roof-no-jump + timed-window
-- glide-passenger + twist-order
-- plank-sums-plate-maxes + twist-order
-- glide-passenger + machine-strands-operator
-- glide-passenger + transport-power-excludes-workshop
-- door-pushes-you-through + freeze-bridge
-- lift-as-floor + liquid-lane
-- glide-passenger + lift-as-floor
-- glide-passenger + reversible-switch-maze
+- dark + head-stack
+- fan-passenger + trigger-from-above
+- feed-the-engine-mid-ride + lift-as-floor
+- airlock-with-no-room + counterweight-you-must-remove
+- partner-builds-your-landing + twist-stranding
+- lock-per-element + torch-bridge
+- fan-passenger + glide-passenger
+- fan-passenger + partner-builds-your-landing
+- freeze-bridge + glide-passenger
+- door-pushes-you-through + machine-strands-operator
+- liquid-lane + twist-order
+- feed-the-engine-mid-ride + twist-stranding
 
 ## This repo's 3-player levels
 

@@ -25,10 +25,10 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 173 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 174 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
-## 2 players — this repo (56)
+## 2 players — this repo (57)
 
 - **Dismount** `dismount` (2p: fire+air) core=`one-lever-that-must-be-thrown-twice-to-get-anyone-out` challenge=motor par=3600
   - idea: a jump taken from a partner's head in mid-flight, a lava channel only Fire can wade, and one lever that has to be thrown *and then thrown back*, because it drives two things that are never both useful at once.
@@ -251,6 +251,10 @@ Totals: 79 campaign levels, 173 in this repo, of which 11 now ship in the campai
   - idea: boulder-carry as a courier credential, rather than as a final exit key. The swimmer deposits the stone using a low ceiling, then the pusher gains access to a clock above the river. Two distinct timed deliveries are required, with a round-trip authorization between them.
   - ideas: boulder-carry, timed-window, twist-order
   - features: ent:boulder ent:button ent:door ent:elevator ent:lever ent:plate opt:button-timed opt:button:timed opt:elevator:loop opt:heavy-plate opt:latch opt:required:2 tile:water
+- **Doorstop** `doorstop` (2p: earth+air) core=`shut-the-outer-door-on-your-wedge` challenge=mind par=4200
+  - idea: an airlock with no room in it. Each home is behind two doors back to back: the outer one is open only while your lever is off, the inner one only while both levers are on, so the two are never open together and nobody can stand between them. The only way through is to shut the outer door on purpose on something lying in its doorway, and push that thing home ahead of you. A door that shuts on something stops at its height: the stone (30 px) lets Earth under it, the crate (28 px) only Air.
+  - ideas: airlock-with-no-room, twist-undo, twist-order
+  - features: ent:boulder ent:box ent:door ent:fan ent:lever opt:invert:door opt:required:2 opt:rolling-boulder tile:mist tile:mud tile:slope
 
 ## 2 players — campaign (34)
 
