@@ -4404,6 +4404,43 @@
   ]
  },
  {
+  "id": "drawbridge",
+  "name": "Drawbridge",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 7200,
+  "dark": false,
+  "challenge": "motor",
+  "core": "weight-on-the-mark-eats-the-bridge-back-from-its-far-end",
+  "ideas": [
+   "drawbridge-eaten-back-to-the-mark",
+   "twist-order",
+   "shared-switch-two-gates"
+  ],
+  "order": 257,
+  "line": "a drawbridge that is eaten from its far end back towards its hinge, faster than anyone runs, whenever anything heavy is past the mark. So the weight can never cross, everything beyond the mark is thrown into the hall in order of distance, and the bridge then slides back out carrying whoever stands on it.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:elevator",
+   "ent:freezepad",
+   "ent:lever",
+   "ent:plate",
+   "ent:pool",
+   "opt:elevator:powered",
+   "opt:heavy-plate",
+   "opt:pool-timed",
+   "opt:wide-door",
+   "tile:one-way",
+   "tile:water"
+  ]
+ },
+ {
   "id": "drill",
   "name": "Drill",
   "source": "mine",
