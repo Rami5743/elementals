@@ -9,9 +9,9 @@ onto the gate plate, and ride the one-way hoist up to the keep with Water while 
 
 **Group:** Fire + Water + Earth. Motor on: Earth backing off the mark before the edge reaches it.
 
-**Passes:** nothing yet: design only (milestone 1).
+**Passes:** level.json validates; every spawn point is safe (milestone 2).
 
-**Fails:** n/a.
+**Fails:** solution.mjs has no scripts for fire+water+earth yet.
 
 **Next:** write the generator (`/tmp/.../scratchpad/gen.mjs`), probe (1) stone on the mark drops
 and the bridge regrows, (2) a floating stone on a frozen pool can be pushed to dry floor, (3) a lift
