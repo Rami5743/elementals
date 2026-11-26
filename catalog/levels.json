@@ -4199,6 +4199,41 @@
   ]
  },
  {
+  "id": "doorstop",
+  "name": "Doorstop",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "earth+air"
+  ],
+  "parTicks": 4200,
+  "dark": false,
+  "challenge": "mind",
+  "core": "shut-the-outer-door-on-your-wedge",
+  "ideas": [
+   "airlock-with-no-room",
+   "twist-undo",
+   "twist-order"
+  ],
+  "order": 156,
+  "line": "an airlock with no room in it. Each home is behind two doors back to back: the outer one is open only while your lever is off, the inner one only while both levers are on, so the two are never open together and nobody can stand between them. The only way through is to shut the outer door on purpose on something lying in its doorway, and push that thing home ahead of you. A door that shuts on something stops at its height: the stone (30 px) lets Earth under it, the crate (28 px) only Air.",
+  "tokens": [
+   "ent:boulder",
+   "ent:box",
+   "ent:door",
+   "ent:fan",
+   "ent:lever",
+   "opt:invert:door",
+   "opt:required:2",
+   "opt:rolling-boulder",
+   "tile:mist",
+   "tile:mud",
+   "tile:slope"
+  ]
+ },
+ {
   "id": "double_deck",
   "name": "Double Deck",
   "source": "mine",

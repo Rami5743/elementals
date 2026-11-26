@@ -3074,6 +3074,57 @@ Entities:
   p  far_receipt  plate      at (38,19)  -> e_exit
 ```
 
+## Doorstop (`doorstop`) — 2p, core `shut-the-outer-door-on-your-wedge`
+
+```
+Doorstop (doorstop) for earth+air
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ####################^.....##########...#
+ 7  ####################^.....##########.X.#
+ 8  ####################^.....DDlx.*..DD.X.#
+ 9  ####################^#####VVVVVVVV######
+10  ####################^###################
+11  ####################^###################
+12  ####################^###################
+13  ############........^.D..D....##########
+14  #...########........^.D..D.O/###########
+15  #.X.########........^.D..D./############
+16  #.X.DD..*..l..@..@..^.D..D/#############
+17  ######MMMMMM############################
+18  ########################################
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): earth (14,16)  air (17,16)
+Entities:
+  l  lever_e      lever      at (11,16)  -> outer_e, inner_e, inner_a, pen_crate, pen_stone_e
+  D  outer_e      door       at (5,16)  <- lever_e  invert
+  D  inner_e      door       at (4,16)  <- lever_e, lever_a (needs 2)
+  X  exit_e       exit       at (2,15)  earth
+  *  gem_e        gem        at (8,16)  earth
+  D  pen_stone_e  door       at (22,13)  1x4  <- lever_e  invert
+  D  pen_stone    door       at (25,13)  1x4  <- lever_a
+  O  stone        boulder    at (27,14)
+  ^  draught      fan        at (20,6)  1x11
+  l  lever_a      lever      at (28,8)  -> outer_a, inner_a, inner_e, pen_stone, pen_crate_a
+  D  pen_crate_a  door       at (26,8)  <- lever_a  invert
+  D  pen_crate    door       at (27,8)  <- lever_e
+  x  crate        box        at (29,8)
+  D  outer_a      door       at (34,8)  <- lever_a  invert
+  D  inner_a      door       at (35,8)  <- lever_e, lever_a (needs 2)
+  X  exit_a       exit       at (37,7)  air
+  *  gem_a        gem        at (31,8)  air
+```
+
 ## The Crossing (`the_crossing`) — 3p, core `shuttle-whose-path-turns-a-corner`
 
 ```

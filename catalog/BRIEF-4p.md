@@ -27,24 +27,25 @@ together. `twist-undo`×35, `quorum`×33, `timed-window`×8, `twist-order`×8, `
 - `stand-aside-is-the-switch` — In a corridor where nobody can pass anybody, the one place to get out of the walking line is a shelf above it — and that shelf is the switch, so standing aside and holding the far door open are the same act, and whoever does it cannot be the one who goes.
 - `unload-the-pan-you-ride` — A seesaw used as the only route between three storeys, one flush with each of its positions. Only the heavier pan is ever at floor level, so the far pan can never be loaded from below: a weight has to be put on your OWN pan to send theirs up to the storey where it can be loaded at all, and that same weight has to be shed again before your pan will carry you anywhere. You rise by what is taken off, never by what is added. (The campaign's scales — Assay, Counterpoise — sum weights too, but to balance a pan under a floating plate or to hoist cargo past a ledge; here the sum decides which storey each of you can reach, and the beam has no switch and no wiring at all.)
 - `mass-adds-on-the-beam` — A seesaw compares the SUM of everything on each pan — bodies, cargo, riders standing on other riders — while a heavy plate reads only max(mass), the heaviest single thing on it. The same two bodies are worth 3 to the beam and 2 to the plate; two crates weigh exactly what Earth weighs; and the stone that is merely one side of a sum on the beam is an unforgeable key on the pad. (Campaign: Assay, Counterpoise.)
+- `airlock-with-no-room` — Two doors back to back with no room between them: the outer one is open only while the inner one is shut, so nobody can ever stand between them and nobody can hold either one open for a partner. The only way through is to shut the outer door on purpose on something lying in its doorway and push that thing ahead of you when the inner door opens — and a door that closes on something stops at its height: a boulder's 30 px lets Earth under, a crate's 28 px only Air, and only someone who fits under it can push the wedge on. The shut inner door is also the stop that keeps the wedge from being pushed too far in.
 - `stone-held-from-below` — A rolling boulder holds 4 px a tick and nobody runs faster than 3.4, so the only thing that ever stops one is a body already standing in its path — and it comes to rest in the cell immediately UPHILL of that body, one row up, never on their head. A heavy plate hung in that cell is therefore an unforgeable key: the body standing under it is too light to press it and cannot climb to it, and the one who pushed the stone can never park it there, because you push from above and hold from below and nobody can be both. The eight ticks a free-rolling stone spends crossing the cell are far too few for anything that has to stay open long enough to walk through. And because the stone rolls on the instant the brake steps aside, and follows the brake downhill, one stone can be walked from a high berth to a lower one but never back up without Earth: gravity fixes the order of the berths, and giving up the high one is the price of the low.
 
 ## Pairings not yet seen at this count
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- reversible-switch-maze + tower-presses-a-column
-- freeze-bridge + stand-aside-is-the-switch
-- head-stack + mass-adds-on-the-beam
-- boulder-carry + unload-the-pan-you-ride
-- fan-passenger + wide-door
-- glide-dismount + lock-per-element
-- head-stack + single-file-stone
-- balanced-rope-memory + fan-passenger
-- partner-builds-your-landing + turbine-out-of-reach
-- boulder-float + mass-adds-on-the-beam
-- fan-passenger + lock-per-element
-- fan-band + stand-aside-is-the-switch
+- fan-passenger + ratio-reverses-paired-cargo
+- machine-strands-operator + tower-presses-a-column
+- door-pushes-you-through + lift-loop
+- glide-passenger + trip-plate-in-the-shaft
+- glide-dismount + lift-loop
+- glide-passenger + quorum
+- boulder-carry + stand-aside-is-the-switch
+- belt-reverse + stone-held-from-below
+- tower-presses-a-column + twist-order
+- stand-aside-is-the-switch + timed-window
+- door-pushes-you-through + lock-per-element
+- low-roof-no-jump + tower-presses-a-column
 
 ## This repo's 4-player levels
 
