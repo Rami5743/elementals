@@ -31,28 +31,34 @@ const fire = function* (c) {
   c.flag('fire-across');
   yield* waitFlag(c, 'stone-home');
   yield* interact(c); // winch off: the hoist goes back down to the hall (the stall shuts, harmlessly)
-  yield* waitFlag(c, 'aboard');
-  yield* interact(c); // winch on: the hoist rises through the grating with both of them
-  yield* go(c, 38); // the gate is already open: the stone is on its plate
+  yield* waitFlag(c, 'earth-aboard');
+  yield* interact(c); // winch on: the hoist carries Earth up through the grating
+  yield* until(c, () => c.player('earth').x > 34.5 * TILE, 0, 900, 'Earth to step off the hoist');
+  yield* interact(c); // winch off: the hoist goes down empty for Water (it only ever delivers upward)
+  yield* waitFlag(c, 'water-aboard');
+  yield* interact(c); // winch on: up again with Water
+  yield* until(c, () => c.player('water').x > 34.5 * TILE, 0, 900, 'Water to step off the hoist');
+  yield* go(c, 36); // the gate is already open: the stone is on its plate
 };
 
 /** @type {import('../../kit.mjs').Script} */
 const water = function* (c) {
   yield* until(c, () => c.player('fire').x > c.me.x + 2 * TILE, 0, 600, 'Fire to go past');
-  yield* go(c, 22); // out beyond the mark, over the stone
+  yield* go(c, 29); // right out to the far end, where the gem is: the first to fall
   c.flag('water-out');
-  yield* landInHall(c, 'Water to be dropped into the pool');
-  yield* go(c, 19); // the gem over the pool
-  yield* go(c, 9); // the freeze pad
+  yield* landInHall(c, 'Water to be dropped into the hall');
+  yield* go(c, 9); // back the length of the hall, through the water, to the freeze pad
   yield* until(c, () => c.ent('pool').s.on === 1, 0, 60, 'the pool to freeze');
   c.flag('frozen');
   yield* waitFlag(c, 'earth-aboard');
   yield* bound(c, 26); // over the ice
-  yield* bound(c, 32); // over the stone on its plate and up the step
-  yield* go(c, 33); // on to the hoist beside Earth
-  c.flag('aboard');
+  yield* bound(c, 31); // over the stone on its plate and up the step, clear of the shaft
+  yield* until(c, () => c.player('earth').x > 34.5 * TILE, 0, 900, 'Earth to be up');
+  yield* until(c, () => c.ent('hoist').s.d === 0, 0, 900, 'the hoist to come back down');
+  yield* go(c, 33); // on to the hoist
+  c.flag('water-aboard');
   yield* until(c, () => c.ent('hoist').s.d >= 10 * TILE - 1, 0, 900, 'the hoist to reach the keep');
-  yield* go(c, 36);
+  yield* go(c, 37);
 };
 
 /** @type {import('../../kit.mjs').Script} */
@@ -79,10 +85,10 @@ const earth = function* (c) {
   yield* wait(c, 10);
   yield* bound(c, 31); // over the stone and up the step, clear of the hoist's shaft
   yield* until(c, () => c.ent('hoist').s.d === 0, 0, 900, 'the hoist to come back down');
-  yield* go(c, 34); // on to the hoist, far side
+  yield* go(c, 33); // on to the hoist: it takes one
   c.flag('earth-aboard');
   yield* until(c, () => c.ent('hoist').s.d >= 10 * TILE - 1, 0, 900, 'the hoist to reach the keep');
-  yield* go(c, 37);
+  yield* go(c, 38);
 };
 
 /** @type {import('../../kit.mjs').Solutions} */

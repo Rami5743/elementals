@@ -9,12 +9,12 @@ gate plate and rides the one-way hoist up with Water while Fire works the lever.
 
 **Group:** Fire + Water + Earth. Motor on: Earth getting off the bridge before it grows back.
 
-**Passes:** check: No problems, 37.5 s (curtain mark over the whole far part, stall on the winch).
+**Passes:** check: No problems, 43.4 s, par 120 s (one-rider hoist, lintel over its top stop).
 
 **Fails:** nothing in check. Still to do: the skill wants 40 s or more (add a phase, not a walk);
 shortcut scripts; NOTES.md final; meta.json; ideas.mjs key; novelty; build; catalog.
 
-**Next:** add a phase. Generator is kept in the scratchpad as gen.mjs (copy below if lost: the
+**Next:** shortcut scripts (Earth walks or hops across, Earth follows the stone down early, Water rides on Earth), then NOTES, meta, ideas key, novelty, build, catalog.
 level.json itself is the source of truth).
 
 Facts measured here: a plate senses only an 8 px strip at the bottom of its tile, whatever `h`
