@@ -67,9 +67,27 @@
    "id": "mark",
    "type": "plate",
    "x": 14,
+   "y": 8,
+   "weight": "heavy",
+   "targets": [
+    "bridge"
+   ]
+  },
+  {
+   "id": "mark_mid",
+   "type": "plate",
+   "x": 14,
+   "y": 7,
+   "weight": "heavy",
+   "targets": [
+    "bridge"
+   ]
+  },
+  {
+   "id": "mark_top",
+   "type": "plate",
+   "x": 14,
    "y": 6,
-   "w": 1,
-   "h": 3,
    "weight": "heavy",
    "targets": [
     "bridge"
@@ -146,19 +164,19 @@
   {
    "type": "exit",
    "element": "fire",
-   "x": 36,
+   "x": 38,
    "y": 7
   },
   {
    "type": "exit",
    "element": "water",
-   "x": 37,
+   "x": 36,
    "y": 7
   },
   {
    "type": "exit",
    "element": "earth",
-   "x": 38,
+   "x": 37,
    "y": 7
   },
   {

@@ -1,18 +1,21 @@
 # Drawbridge: where the work stands
 
-**Design.** A drawbridge (a wide door) with a heavy "mark" plate across its full headroom: anything
-heavy on the mark makes the bridge retract from its free end back toward its hinge at 4 px a tick,
-faster than anyone runs, until the weight falls through, so everything beyond the mark drops into
-the flooded hall below and everything short of it stays. Only Water survives the water, so Water
-has to ride the first drop down to freeze the pool before Earth can follow the stone down, push it
-onto the gate plate, and ride the one-way hoist up to the keep with Water while Fire works the lever.
+**Design.** A drawbridge (a wide door) with a heavy "mark" (three heavy plates hung in one column)
+across its headroom: anything heavy on the mark makes the bridge retract from its free end back to
+its hinge at 4 px a tick until the weight falls through, and when it grows back it slides out and
+carries whoever is on it into the mark again. Only Water survives the flooded hall, so Water rides
+the first drop down and freezes the pool; then Earth follows the stone down, pushes it on to the
+gate plate and rides the one-way hoist up with Water while Fire works the lever.
 
-**Group:** Fire + Water + Earth. Motor on: Earth backing off the mark before the edge reaches it.
+**Group:** Fire + Water + Earth. Motor on: Earth getting off the bridge before it grows back.
 
-**Passes:** level.json validates; every spawn point is safe (milestone 2).
+**Passes:** `node kit.mjs check drawbridge`: No problems. Solved in 33.8 s, par 120 s, 3/3 gems.
 
-**Fails:** solution.mjs has no scripts for fire+water+earth yet.
+**Fails:** nothing in check. Still to do: the skill wants 40 s or more (add a phase, not a walk);
+shortcut scripts; NOTES.md final; meta.json; ideas.mjs key; novelty; build; catalog.
 
-**Next:** write the generator (`/tmp/.../scratchpad/gen.mjs`), probe (1) stone on the mark drops
-and the bridge regrows, (2) a floating stone on a frozen pool can be pushed to dry floor, (3) a lift
-whose top stop is a one-way grating row.
+**Next:** add a phase. Generator is kept in the scratchpad as gen.mjs (copy below if lost: the
+level.json itself is the source of truth).
+
+Facts measured here: a plate senses only an 8 px strip at the bottom of its tile, whatever `h`
+says; a closing wide door carries riders outward at 4 px a tick, an opening one leaves them.
