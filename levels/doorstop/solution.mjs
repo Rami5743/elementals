@@ -26,19 +26,19 @@ const earth = function* (c) {
   yield* go(c, 11);
   yield* interact(c);
   c.flag('crate_free');
-  // 2. Air wedges its door with the crate, throws its lever (the stone rolls out) and goes home.
+  // 2. Air wedges its door with the crate, throws its lever (its inner door opens) and goes home.
   yield* waitFlag(c, 'air_home');
+  // 3. The undo: Earth's lever back OFF. The stone's second gate opens (Air's lever is ON) and so
+  //    does Earth's own outer door.
+  yield* interact(c);
+  yield* until(c, () => c.ent('outer_e').s.open >= 30, 0, 120, 'the outer door to open');
+  yield* until(c, () => c.ent('stone').s.x < 25 * TILE, 0, 300, 'the stone to leave its pen');
   yield* until(c, stillFor(c, 'stone'), 0, 900, 'the stone to roll out and stop');
-  // 3. Round the stone and roll it back west, down the mud tunnel, past the lever.
+  // 4. Round the stone and roll it back west, down the mud tunnel, past the lever.
   const sx = tileOf(c, 'stone');
   yield* go(c, sx - 1.6);
   yield* bound(c, sx + 1.4);
-  yield* until(c, () => tileOf(c, 'stone') <= 8.6, IN_LEFT, 1500, 'the stone into the tunnel');
-  // 4. The undo: Earth's outer door is shut while its lever is ON. Throw it back OFF.
-  yield* go(c, 11);
-  yield* interact(c);
-  yield* until(c, () => c.ent('outer_e').s.open >= 30, 0, 120, 'the outer door to open');
-  // 5. Push the stone into the doorway: it stops against the shut inner door, in the slot.
+  // 5. Push it into the doorway: it stops against the shut inner door, in the slot.
   yield* until(c, () => tileOf(c, 'stone') <= 5.6, IN_LEFT, 900, 'the stone into the slot');
   yield* wait(c, 10);
   // 6. Lever ON again: the outer door shuts on the stone (30 px) and the inner door opens.
@@ -57,11 +57,11 @@ const air = function* (c) {
   yield* holdAt(c, 20, () => c.me.y < 7 * TILE, 400, 'the draught');
   yield* steerTo(c, 22);
   // push the crate along the mist tunnel until it stops against the shut inner door
-  yield* go(c, 26);
+  yield* go(c, 28);
   yield* until(c, () => c.ent('crate').s.x >= 34 * TILE, IN_RIGHT, 900, 'the crate into the slot');
   yield* wait(c, 10);
-  // back to Air's lever: ON frees the stone and shuts the outer door on the crate (28 px)
-  yield* go(c, 23);
+  // back to Air's lever, inside the tunnel: ON shuts the outer door on the crate (28 px)
+  yield* go(c, 28);
   yield* interact(c);
   yield* until(c, () => c.ent('inner_a').s.open >= 28, 0, 200, 'the inner door to open');
   // push the crate home ahead of you

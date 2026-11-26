@@ -1,14 +1,16 @@
 # Resume — Doorstop (order 156, Earth + Air, motor off)
 
-**Design:** each home is behind a zero-room airlock (outer door open only while the inner is shut),
-so you shut the outer door on your wedge on purpose and push it home ahead of you — the boulder holds
-Earth's door at 30 px, the crate holds Air's at 28. Each lever frees the partner's wedge (Y, Z), so
-the levers must be thrown, undone and thrown again in a forced order.
+**Design:** each home is behind a zero-room airlock (outer door open only while the inner is shut,
+inner only while both levers are ON), so you shut the outer door on your wedge on purpose and push it
+home ahead of you — the stone holds Earth's door at 30 px, the crate holds Air's at 28. The crate's
+pen opens only with Earth ON + Air OFF, the stone's only with Air ON + Earth OFF, forcing E:ON, A:ON,
+E:OFF, E:ON.
 
-**Passes:** level.json validates; the solution script runs and `check` says No problems (26.5 s, 2/2 gems, both necessary).
-boulder at 30; Air pushes a wedged crate, Earth a wedged boulder; Earth cannot pass a crate wedge;
-Air cannot push a boulder; objects ride mud/mist floors.
+**Passes:** `check` says No problems (23.8 s, 2/2 gems, both necessary). Generator lives in the
+scratchpad (a80b/gen.mjs); level.json is the source of truth if that is gone.
 
-**Fails:** nothing yet; no shortcut scripts, solve time under 30 s, par 9000 too generous, NOTES not final.
+**Fails:** nothing; still to do: shortcut scripts, par (9000 is too generous), final NOTES.md,
+meta.json, the new idea key in tools/ideas.mjs, novelty, build, catalog.
 
-**Next:** write shortcut scripts (wrong wedge, no wedge, no undo), lengthen if possible, set par, final NOTES + meta + ideas key.
+**Next:** shortcuts — Earth as its own doorstop; throw without a wedge; Earth pushes the stone in with
+its lever still ON; then the publishing steps.

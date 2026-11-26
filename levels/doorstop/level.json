@@ -60,7 +60,8 @@
     "outer_e",
     "inner_e",
     "inner_a",
-    "pen_crate"
+    "pen_crate",
+    "pen_stone_e"
    ]
   },
   {
@@ -96,6 +97,15 @@
    "y": 16
   },
   {
+   "id": "pen_stone_e",
+   "type": "door",
+   "x": 22,
+   "y": 13,
+   "w": 1,
+   "h": 4,
+   "invert": true
+  },
+  {
    "id": "pen_stone",
    "type": "door",
    "x": 25,
@@ -121,14 +131,24 @@
   {
    "id": "lever_a",
    "type": "lever",
-   "x": 23,
+   "x": 28,
    "y": 8,
    "targets": [
     "outer_a",
     "inner_a",
     "inner_e",
-    "pen_stone"
+    "pen_stone",
+    "pen_crate_a"
    ]
+  },
+  {
+   "id": "pen_crate_a",
+   "type": "door",
+   "x": 26,
+   "y": 8,
+   "w": 1,
+   "h": 1,
+   "invert": true
   },
   {
    "id": "pen_crate",
@@ -141,7 +161,7 @@
   {
    "id": "crate",
    "type": "box",
-   "x": 28,
+   "x": 29,
    "y": 8
   },
   {
