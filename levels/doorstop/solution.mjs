@@ -70,13 +70,69 @@ const air = function* (c) {
   c.flag('air_home');
 };
 
+// ---- Shortcuts that must fail ---------------------------------------------------------------
+
+/** A: Earth is its own doorstop, and Air goes to throw Earth's lever. The lever is in the mud. */
+const earthInItsDoorway = function* (c) {
+  yield* go(c, 5); // into its own outer doorway (open while its lever is OFF)
+  yield* wait(c, 1800);
+  yield* go(c, 2);
+};
+const airThrowsEarthsLever = function* (c) {
+  yield* wait(c, 120);
+  yield* go(c, 11); // Earth's lever, six tiles down the mud tunnel
+  yield* interact(c);
+  yield* interact(c);
+};
+
+/** B: Earth throws its lever back ON with nothing in the doorway, and walks home. */
+const earthNoWedge = function* (c) {
+  yield* go(c, 11);
+  yield* interact(c);
+  c.flag('crate_free');
+  yield* waitFlag(c, 'air_home');
+  yield* interact(c); // OFF
+  yield* until(c, stillFor(c, 'stone'), 0, 900, 'the stone to stop');
+  yield* wait(c, 60);
+  yield* interact(c); // ON again, but the doorway is empty
+  yield* until(c, () => c.ent('inner_e').s.open >= 30, 0, 200, 'the inner door to open');
+  yield* go(c, 2); // the outer door is shut
+};
+
+/** C: Air is its own doorstop, and Earth tries the draught to reach Air's lever. */
+const earthFreesCrate = function* (c) {
+  yield* go(c, 11);
+  yield* interact(c);
+  c.flag('crate_free');
+  yield* waitFlag(c, 'air_in_doorway');
+  yield* go(c, 20);
+  yield* holdAt(c, 20, () => c.me.y < 7 * TILE, 600, "the draught up to Air's floor");
+  yield* steerTo(c, 28);
+  yield* interact(c);
+};
+const airInItsDoorway = function* (c) {
+  yield* waitFlag(c, 'crate_free');
+  yield* go(c, 20);
+  yield* holdAt(c, 20, () => c.me.y < 7 * TILE, 400, 'the draught');
+  yield* steerTo(c, 22);
+  yield* go(c, 28);
+  yield* until(c, () => c.ent('crate').s.x >= 33 * TILE, IN_RIGHT, 900, 'the crate to the end');
+  c.flag('air_in_doorway');
+  yield* wait(c, 1800);
+  yield* go(c, 37);
+};
+
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
   sets: [
     {
       elements: ['earth', 'air'],
       scripts: { earth, air },
-      shortcuts: [],
+      shortcuts: [
+        { name: "Earth stands in its own doorway; Air goes to throw Earth's lever", scripts: { earth: earthInItsDoorway, air: airThrowsEarthsLever }, maxTicks: 3000 },
+        { name: 'Earth throws its lever back on with nothing in the doorway', scripts: { earth: earthNoWedge, air }, maxTicks: 4000 },
+        { name: "Air waits in its own doorway; Earth tries the draught to Air's lever", scripts: { earth: earthFreesCrate, air: airInItsDoorway }, maxTicks: 3000 },
+      ],
     },
   ],
   roles: {
