@@ -18,17 +18,21 @@ function* stoneSettles(c, still = 12, max = 4000) {
   }
 }
 
-/** From the slope just uphill of the stone, hop onto it and stand on top. */
-function* board(c) {
+/** From the slope just uphill of the stone, hop onto it and stand on top (retrying short hops). */
+function* board(c, hold = 8) {
   const target = () => stone(c).x + TILE / 2;
+  let h = 0, settled = 0;
   for (let t = 0; ; t++) {
     const d = target() - c.cx;
     const on = c.me.grounded === 1 && Math.abs(c.bottom - stone(c).y) <= 2 && Math.abs(d) < 12;
-    if (on && t > 4) return;
-    let bits = t < 12 ? IN_JUMP : 0;
+    settled = on ? settled + 1 : 0;
+    if (settled >= 4) return;
+    if (c.me.grounded === 1 && !on && h <= -6) h = hold;
+    let bits = h > 0 ? IN_JUMP : 0;
+    h--;
     if (Math.abs(d) > 3) bits |= d > 0 ? IN_RIGHT : IN_LEFT;
     yield bits;
-    if (t > 300) throw new Error(`${c.me.element} could not board the stone (at ${c.tx.toFixed(2)}, bottom ${c.bottom}, stone ${stoneTx(c).toFixed(2)},${stone(c).y})`);
+    if (t > 400) throw new Error(`${c.me.element} could not board the stone (at ${c.tx.toFixed(2)}, bottom ${c.bottom}, stone ${stoneTx(c).toFixed(2)},${stone(c).y})`);
   }
 }
 
@@ -75,8 +79,10 @@ const fire = function* (c) {
   yield* until(c, () => stoneTx(c) > 12.5 && stone(c).y > 11 * TILE, 0, 2000, 'the first stone');
   yield* stoneSettles(c);
   yield* go(c, 12, { tol: 6 });
-  yield* board(c);
+  yield* board(c); // stepping on unlatches the chock: the stone rolls on to the gate
   yield* stoneSettles(c);
+  yield* until(c, () => c.me.grounded === 1, 0, 120, 'landing');
+  if (Math.abs(c.bottom - stone(c).y) > 2) yield* board(c);
   c.flag('fire-aboard');
   yield* ride(c);
   yield* go(c, 24); // gem
@@ -96,8 +102,8 @@ const water = function* (c) {
   yield* ride(c);
   yield* go(c, 27);
   c.flag('lift-2');
-  yield* go(c, 30); // gem, after the lift is up
   yield* until(c, () => c.has('stone-off-3'), 0, 3000, 'Earth to take the stone');
+  yield* go(c, 30); // gem
   yield* go(c, 35);
 };
 
@@ -105,9 +111,17 @@ const water = function* (c) {
 function* haul(c, n) {
   yield* until(c, () => stone(c).y < 6 * TILE && stoneTx(c) > 18.5, 0, 4000, `stone ${n} to come up`);
   yield* until(c, () => c.ent('hoist').s.y <= 6 * TILE, 0, 600, 'the lift to stop');
-  yield* until(c, () => stoneTx(c) <= 12.02, IN_LEFT, 1200, `Earth to push stone ${n} to the trapdoor`);
+  // push until the stone stops against the step over the trapdoor
+  let last = -1, still = 0;
+  for (let t = 0; still < 10; t++) {
+    yield IN_LEFT;
+    still = stone(c).x === last && stoneTx(c) < 17 ? still + 1 : 0;
+    last = stone(c).x;
+    if (t > 1500) throw new Error(`Earth could not push stone ${n} to the trapdoor`);
+  }
+  if (Math.abs(stoneTx(c) - 12) > 0.02) throw new Error(`stone ${n} stopped at ${stoneTx(c)}`);
+  yield* go(c, 21); // back over the shaft before the lift goes down
   c.flag(`stone-off-${n}`);
-  yield* go(c, 21);
 }
 
 const earth = function* (c) {
