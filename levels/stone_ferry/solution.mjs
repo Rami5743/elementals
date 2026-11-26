@@ -1,7 +1,7 @@
 // Stone Ferry: the stone is the only boat. Air drops it and holds it, the rider boards, Air lets
 // go and the turbine's run-down launches it; whoever has just landed holds the lift up while Earth
 // rolls the stone back to the trapdoor. Air crosses last: spin, run, jump aboard before it stops.
-import { IN_JUMP, IN_LEFT, IN_RIGHT, TILE, go, until, wait, waitFlag } from '../../kit.mjs';
+import { IN_JUMP, IN_LEFT, IN_RIGHT, TILE, go, jump, until, waitFlag } from '../../kit.mjs';
 
 const stone = (c) => c.ent('stone').s;
 const stoneTx = (c) => stone(c).x / TILE;
@@ -50,10 +50,7 @@ function* spin(c) {
 const air = function* (c) {
   // trip 1: drop the stone for Fire
   yield* go(c, 5);
-  yield* until(c, () => c.me.grounded === 1, 0, 60, 'landing');
-  yield* wait(c, 1, IN_JUMP); // the gem overhead
-  yield* wait(c, 20);
-  yield* until(c, () => c.me.grounded === 1, 0, 120, 'landing');
+  yield* jump(c, 0); // the gem overhead
   yield* spin(c);
   yield* waitFlag(c, 'fire-aboard');
   yield* stoneSettles(c);

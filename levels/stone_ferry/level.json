@@ -153,25 +153,25 @@
     {
       "type": "exit",
       "element": "fire",
-      "x": 33,
+      "x": 36,
       "y": 14
     },
     {
       "type": "exit",
       "element": "water",
-      "x": 34,
-      "y": 14
-    },
-    {
-      "type": "exit",
-      "element": "earth",
       "x": 35,
       "y": 14
     },
     {
       "type": "exit",
+      "element": "earth",
+      "x": 34,
+      "y": 14
+    },
+    {
+      "type": "exit",
       "element": "air",
-      "x": 36,
+      "x": 33,
       "y": 14
     },
     {
