@@ -40,6 +40,9 @@ function* board(c, hold = 8) {
 function* ride(c) {
   yield* until(c, () => stoneTx(c) > 18.5, 0, 2000, 'the stone to cross');
   yield* stoneSettles(c, 10);
+  // the bank is a tile above the landing notch: hop up off the stone
+  for (let t = 0; t < 8; t++) yield IN_RIGHT | IN_JUMP;
+  yield* until(c, () => c.me.grounded === 1 && c.tx > 20.2, IN_RIGHT, 120, 'the hop onto the bank');
 }
 
 /** Air: stand in the turbine (it holds the gate shut and the trapdoor open). */
