@@ -9,7 +9,7 @@ gate plate and rides the one-way hoist up with Water while Fire works the lever.
 
 **Group:** Fire + Water + Earth. Motor on: Earth getting off the bridge before it grows back.
 
-**Passes:** `node kit.mjs check drawbridge`: No problems. Solved in 33.8 s, par 120 s, 3/3 gems.
+**Passes:** check: No problems, 37.5 s (curtain mark over the whole far part, stall on the winch).
 
 **Fails:** nothing in check. Still to do: the skill wants 40 s or more (add a phase, not a walk);
 shortcut scripts; NOTES.md final; meta.json; ideas.mjs key; novelty; build; catalog.

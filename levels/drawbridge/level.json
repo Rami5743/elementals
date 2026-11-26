@@ -42,15 +42,15 @@
  ],
  "spawns": {
   "earth": [
-   2,
-   8
-  ],
-  "fire": [
-   4,
+   1,
    8
   ],
   "water": [
-   6,
+   5,
+   8
+  ],
+  "fire": [
+   7,
    8
   ]
  },
@@ -68,6 +68,7 @@
    "type": "plate",
    "x": 14,
    "y": 8,
+   "w": 17,
    "weight": "heavy",
    "targets": [
     "bridge"
@@ -78,6 +79,7 @@
    "type": "plate",
    "x": 14,
    "y": 7,
+   "w": 17,
    "weight": "heavy",
    "targets": [
     "bridge"
@@ -88,6 +90,7 @@
    "type": "plate",
    "x": 14,
    "y": 6,
+   "w": 17,
    "weight": "heavy",
    "targets": [
     "bridge"
@@ -96,8 +99,15 @@
   {
    "id": "stone",
    "type": "boulder",
-   "x": 10,
+   "x": 2,
    "y": 8
+  },
+  {
+   "id": "stall",
+   "type": "door",
+   "x": 3,
+   "y": 6,
+   "h": 3
   },
   {
    "id": "pool",
@@ -140,7 +150,8 @@
    "x": 31,
    "y": 8,
    "targets": [
-    "hoist"
+    "hoist",
+    "stall"
    ]
   },
   {
@@ -181,7 +192,7 @@
   },
   {
    "type": "checkpoint",
-   "x": 1,
+   "x": 8,
    "y": 7
   },
   {

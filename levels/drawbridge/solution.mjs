@@ -27,9 +27,12 @@ function* landInHall(c, what) {
 const fire = function* (c) {
   yield* go(c, 24); // across the bridge (the mark ignores a light player), past the gem
   yield* go(c, 31); // to the winch lever in the keep
+  yield* interact(c); // winch on: the stall in the gatehouse opens, and the hoist comes up empty
   c.flag('fire-across');
+  yield* waitFlag(c, 'stone-home');
+  yield* interact(c); // winch off: the hoist goes back down to the hall (the stall shuts, harmlessly)
   yield* waitFlag(c, 'aboard');
-  yield* interact(c); // the hoist rises through the grating
+  yield* interact(c); // winch on: the hoist rises through the grating with both of them
   yield* go(c, 38); // the gate is already open: the stone is on its plate
 };
 
@@ -55,6 +58,8 @@ const water = function* (c) {
 /** @type {import('../../kit.mjs').Script} */
 const earth = function* (c) {
   yield* waitFlag(c, 'fire-across');
+  yield* until(c, () => c.ent('stall').s.open >= 3 * TILE, 0, 300, 'the stall to open');
+  yield* until(c, () => c.tx >= 9, IN_RIGHT, 600, 'the stone to be out on the bridge');
   yield* waitFlag(c, 'water-out');
   // shunt the stone east until it is on the mark
   yield* until(c, () => c.ent('mark').s.on === 1, IN_RIGHT, 600, 'the stone to reach the mark');
@@ -70,8 +75,10 @@ const earth = function* (c) {
   yield* landInHall(c, 'Earth to land on the ice');
   yield* bound(c, 12); // back over the stone, to its west side
   yield* until(c, () => c.ent('weigh').s.on === 1, IN_RIGHT, 900, 'the stone to reach the gate plate');
+  c.flag('stone-home');
   yield* wait(c, 10);
-  yield* bound(c, 32); // over the stone and up the step
+  yield* bound(c, 31); // over the stone and up the step, clear of the hoist's shaft
+  yield* until(c, () => c.ent('hoist').s.d === 0, 0, 900, 'the hoist to come back down');
   yield* go(c, 34); // on to the hoist, far side
   c.flag('earth-aboard');
   yield* until(c, () => c.ent('hoist').s.d >= 10 * TILE - 1, 0, 900, 'the hoist to reach the keep');
