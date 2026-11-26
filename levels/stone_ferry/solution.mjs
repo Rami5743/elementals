@@ -138,13 +138,132 @@ const earth = function* (c) {
   yield* go(c, 34);
 };
 
+
+// ---- Shortcuts that must fail ---------------------------------------------------------------
+
+/** Run right from tile `from` and leap, holding Jump the whole way (Air glides). */
+function* leapTheMoat(c, from) {
+  yield* go(c, from, { noHop: true });
+  for (let t = 0; t < 240; t++) {
+    yield IN_RIGHT | IN_JUMP;
+    if (t > 10 && c.me.grounded === 1) break;
+  }
+  if (c.tx < 19.2) throw new Error(`${c.me.element} came down at ${c.tx.toFixed(2)}, short of the bank`);
+}
+
+/** Air does trips 1 and 2 as usual, then glides for it instead of dropping and riding the last stone. */
+const airGlides = (from) => function* (c) {
+  yield* spin(c);
+  yield* waitFlag(c, 'fire-aboard');
+  yield* stoneSettles(c);
+  yield* go(c, 5);
+  yield* waitFlag(c, 'stone-home-2');
+  yield* spin(c);
+  yield* waitFlag(c, 'water-aboard');
+  yield* stoneSettles(c);
+  yield* go(c, 5);
+  yield* waitFlag(c, 'stone-home-3');
+  yield* until(c, () => c.ent('gate').s.open >= 60, 0, 600, 'the gate to open');
+  yield* leapTheMoat(c, from);
+  yield* go(c, 33);
+};
+
+/** Water jumps the moat while the gate stands open between trips, instead of riding. */
+const waterJumps = function* (c) {
+  yield* waitFlag(c, 'stone-off-2');
+  yield* until(c, () => c.ent('gate').s.open >= 60, 0, 1200, 'the gate to open');
+  c.flag('water-tried');
+  yield* leapTheMoat(c, 15);
+  c.flag('water-aboard'); // Air lets the second stone go empty
+  yield* until(c, () => stoneTx(c) > 18.5 && stone(c).y > 14 * TILE, 0, 4000, 'the empty stone');
+  yield* stoneSettles(c);
+  yield* go(c, 27);
+  c.flag('lift-2');
+  yield* until(c, () => c.has('stone-off-3'), 0, 3000, 'Earth to take the stone');
+  yield* go(c, 30);
+  yield* go(c, 35);
+};
+/** Air as usual, but holds back trip 2 until Water has made her jump. */
+const airWaitsForWater = function* (c) {
+  yield* spin(c);
+  yield* waitFlag(c, 'fire-aboard');
+  yield* stoneSettles(c);
+  yield* go(c, 5);
+  yield* waitFlag(c, 'water-aboard'); // only once Water has made her jump
+  yield* waitFlag(c, 'stone-home-2');
+  yield* spin(c);
+  yield* waitFlag(c, 'water-aboard');
+  yield* stoneSettles(c);
+  yield* go(c, 5);
+  yield* waitFlag(c, 'stone-home-3');
+  yield* spin(c);
+  yield* until(c, () => stoneTx(c) > 13.5 && stone(c).y > 12 * TILE, 0, 600, 'the stone to reach the gate');
+  yield* stoneSettles(c);
+  yield* go(c, 13, { tol: 6 });
+  yield* board(c);
+  yield* ride(c);
+  yield* go(c, 33);
+};
+
+/** Earth hauls once (the stacked pair came over together), then goes home after Air. */
+const earthTwoHauls = function* (c) {
+  yield* haul(c, 2);
+  yield* until(c, () => c.ent('hoist').s.y >= 16 * TILE - 1, 0, 1200, 'the lift to go down');
+  c.flag('stone-home-2');
+  yield* until(c, () => c.player('air').x > 19 * TILE, 0, 6000, 'Air to cross');
+  yield* go(c, 22);
+  for (let i = 0; i < 5; i++) {
+    for (let t = 0; t < 8; t++) yield 8;
+    yield* until(c, () => c.me.grounded === 1, 0, 120, 'a ledge');
+  }
+  yield* go(c, 34);
+};
+
+/** Water climbs onto Fire's head on the first stone: two across on one trip. */
+const waterStacks = function* (c) {
+  yield* waitFlag(c, 'fire-aboard');
+  yield* go(c, 12, { tol: 6 });
+  for (let t = 0; t < 300; t++) {
+    const f = c.player('fire');
+    const d = f.x + 11 - c.cx;
+    const on = c.me.grounded === 1 && Math.abs(c.bottom - f.y) <= 2;
+    if (on && t > 10) break;
+    yield ((t % 30) < 8 ? IN_JUMP : 0) | (Math.abs(d) > 3 ? (d > 0 ? IN_RIGHT : IN_LEFT) : 0);
+  }
+  c.flag('water-aboard');
+  yield* until(c, () => stoneTx(c) > 18.5, 0, 2000, 'the stone to cross');
+  yield* stoneSettles(c, 10);
+  if (c.tx < 19.2) throw new Error(`water was left behind at x=${c.tx.toFixed(2)}, y=${(c.me.y / TILE).toFixed(2)}: the roof took her off Fire's head`);
+  yield* go(c, 30);
+  yield* go(c, 35);
+};
+const airStack = function* (c) {
+  yield* spin(c);
+  yield* waitFlag(c, 'water-aboard');
+  for (let t = 0; t < 30; t++) yield 0;
+  yield* go(c, 5);
+  yield* waitFlag(c, 'stone-home-2');
+  yield* spin(c);
+  yield* until(c, () => stoneTx(c) > 13.5 && stone(c).y > 12 * TILE, 0, 600, 'the stone to reach the gate');
+  yield* stoneSettles(c);
+  yield* go(c, 13, { tol: 6 });
+  yield* board(c);
+  yield* ride(c);
+  yield* go(c, 33);
+};
+
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
   sets: [
     {
       elements: ['fire', 'water', 'earth', 'air'],
       scripts: { fire, water, earth, air },
-      shortcuts: [],
+      shortcuts: [
+        { name: 'Air glides the moat from the top of the slope', scripts: { fire, water, earth, air: airGlides(13) } },
+        { name: 'Air glides the moat from the gate', scripts: { fire, water, earth, air: airGlides(15) } },
+        { name: 'Water jumps the moat while the gate stands open', scripts: { fire, water: waterJumps, earth, air: airWaitsForWater } },
+        { name: "Water rides across on Fire's head", scripts: { fire, water: waterStacks, earth: earthTwoHauls, air: airStack } },
+      ],
     },
   ],
   roles: {
