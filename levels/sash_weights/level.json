@@ -75,6 +75,13 @@
    "y": 14
   },
   {
+   "id": "gem_landing",
+   "type": "gem",
+   "element": "fire",
+   "x": 26,
+   "y": 10
+  },
+  {
    "type": "exit",
    "element": "fire",
    "x": 26,
