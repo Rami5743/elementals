@@ -6766,6 +6766,57 @@ Entities:
   X  exit_earth   exit       at (35,16)  earth
 ```
 
+## Caryatid (`caryatid`) — 3p, core `the-lift-only-comes-down-onto-a-heavy-load-at-shoulder-height`
+
+```
+Caryatid (caryatid) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  #.....D......................###########
+ 6  #.....D......................###########
+ 7  #.XXX.D......................###########
+ 8  #.XXX.D.........@@@..x....x..###########
+ 9  ######S#====###=########EE##############
+10  ########....##p.*#######..##############
+11  ########====############..##############
+12  ########....############..##############
+13  ########====############.*##############
+14  ########....############..##############
+15  ########====###########...D.############
+16  ########....###########p..Dp############
+17  ########====############pp##############
+18  ########.................O##############
+19  ########################==##############
+20  ########################.*##############
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (18,8)  water (16,8)  earth (17,8)
+Entities:
+  E  lift         elevator   at (24,9)  2x1  <- call  speed 2  path (24,9)-(24,18)
+  p  call         plate      at (24,17)  2x1  -> lift  weight heavy
+  p  plateW       plate      at (23,16)  -> gate
+  p  plateE       plate      at (27,16)  -> gate
+  D  door         door       at (26,15)  1x2  <- weight
+  p  weight       plate      at (14,10)  -> door  weight heavy
+  D  gate         door       at (6,5)  1x4  <- plateW, plateE (needs 2)
+  O  stone        boulder    at (25,18)
+  x  crateA       box        at (21,8)
+  x  crateB       box        at (26,8)
+  *  gem_10       gem        at (25,13)  fire
+  *  gem_11       gem        at (25,20)  water
+  *  gem_12       gem        at (16,10)  earth
+  "  sign_13      sign       at (9,5)  "The lift comes down for weight on shoulders."
+  X  exit_14      exit       at (2,7)  fire
+  X  exit_15      exit       at (3,7)  water
+  X  exit_16      exit       at (4,7)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```

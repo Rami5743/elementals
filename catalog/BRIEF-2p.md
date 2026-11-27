@@ -26,6 +26,7 @@ together. `twist-undo`×36, `twist-order`×9, `invert-door`×8, `timed-window`×
 - `seam-is-two-keys` — A plate senses whatever overlaps it, and its sensor stops 2 px short of each edge of its tile, so anybody (or any crate or boulder) standing over the join of two adjacent plates presses both. A lock that counts presses therefore counts feet, not people: four keys can be held by two bodies, and a lock that looks as if it needs everybody on it lets someone through. A heavy plate beside a light one is two keys only for Earth or a stone and one for anyone else, so the same seam deals out keys by weight.
 - `stone-ferry` — A rolling boulder is a boat: liquids are floors to it and its rider goes with it, so it is the one thing that carries anybody over sludge nobody can cross. It seats one (a low roof scrapes a second rider off), it only ever travels downhill, and it stops where its run-out puts it, so every crossing spends it and somebody has to haul it back up before the next.
 - `turbine-self-timer` — A turbine stays on for its duration after Air leaves, so a machine thatneeds a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops.
+- `lift-lands-on-its-caller` — A lift that comes down only while something heavy is held at shoulder height in its shaft (a heavy plate hangs there), and that never crushes, so it settles on whatever called it: the caller is always underneath and can never ride, and the lift stops exactly one load above the floor and nowhere else, so it is never passing a ledge while uncalled. Earth on somebody's shoulders calls it, Earth standing on the stone calls it, and so does the stone riding on somebody's head, which is the only way the one heavy player can be somewhere else while it comes down.
 
 ## Pairings not yet seen at this count
 
@@ -34,6 +35,7 @@ target.
 - door-pushes-you-through + glide-dismount
 - machine-strands-operator + two-is-not-heavy
 - boulder-carry + lock-per-element
+- lift-lands-on-its-caller + trigger-from-above
 - drawbridge-eaten-back-to-the-mark + low-roof-no-jump
 - twist-setup + two-is-not-heavy
 - counterweight-you-must-remove + plank-sums-plate-maxes
@@ -42,7 +44,6 @@ target.
 - pound-to-move + two-is-not-heavy
 - door-pushes-you-through + freeze-bridge
 - lift-sorts-by-weight + object-as-permanent-switch
-- lock-per-element + twist-backwards
 
 ## This repo's 2-player levels
 

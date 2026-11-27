@@ -1,0 +1,191 @@
+{
+  "id": "caryatid",
+  "name": "Caryatid",
+  "order": 259,
+  "description": "The lift only comes down onto something heavy carried on somebody's shoulders.",
+  "supports": [
+    [
+      "fire",
+      "water",
+      "earth"
+    ]
+  ],
+  "parTicks": 5400,
+  "hints": [
+    "The plate hanging in the shaft is heavy, and it is at shoulder height. The lift comes down while it is pressed, and stops on whoever is underneath.",
+    "Earth standing on the stone, or on Water's shoulders, calls the lift. Fire rides down with a crate and pushes it off into a niche.",
+    "The east door needs Earth on the plate upstairs. Something else heavy has to call the lift: jump up under the stone on the grating and carry it."
+  ],
+  "tiles": [
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "########################################",
+    "#............................###########",
+    "#............................###########",
+    "#............................###########",
+    "#............................###########",
+    "######S#====###=########..##############",
+    "########....##...#######..##############",
+    "########====############..##############",
+    "########....############..##############",
+    "########====############..##############",
+    "########....############..##############",
+    "########====###########.....############",
+    "########....###########.....############",
+    "########====############..##############",
+    "########..................##############",
+    "########################==##############",
+    "########################..##############",
+    "########################################"
+  ],
+  "spawns": {
+    "fire": [
+      18,
+      8
+    ],
+    "water": [
+      16,
+      8
+    ],
+    "earth": [
+      17,
+      8
+    ]
+  },
+  "entities": [
+    {
+      "id": "lift",
+      "type": "elevator",
+      "x": 24,
+      "y": 9,
+      "w": 2,
+      "path": [
+        [
+          24,
+          9
+        ],
+        [
+          24,
+          18
+        ]
+      ],
+      "speed": 2
+    },
+    {
+      "id": "call",
+      "type": "plate",
+      "x": 24,
+      "y": 17,
+      "w": 2,
+      "weight": "heavy",
+      "targets": [
+        "lift"
+      ]
+    },
+    {
+      "id": "plateW",
+      "type": "plate",
+      "x": 23,
+      "y": 16,
+      "targets": [
+        "gate"
+      ]
+    },
+    {
+      "id": "plateE",
+      "type": "plate",
+      "x": 27,
+      "y": 16,
+      "targets": [
+        "gate"
+      ]
+    },
+    {
+      "id": "door",
+      "type": "door",
+      "x": 26,
+      "y": 15,
+      "h": 2
+    },
+    {
+      "id": "weight",
+      "type": "plate",
+      "x": 14,
+      "y": 10,
+      "weight": "heavy",
+      "targets": [
+        "door"
+      ]
+    },
+    {
+      "id": "gate",
+      "type": "door",
+      "x": 6,
+      "y": 5,
+      "h": 4,
+      "required": 2
+    },
+    {
+      "id": "stone",
+      "type": "boulder",
+      "x": 25,
+      "y": 18
+    },
+    {
+      "id": "crateA",
+      "type": "box",
+      "x": 21,
+      "y": 8
+    },
+    {
+      "id": "crateB",
+      "type": "box",
+      "x": 26,
+      "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 25,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 25,
+      "y": 20
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 16,
+      "y": 10
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 5,
+      "text": "The lift comes down for weight on shoulders."
+    },
+    {
+      "type": "exit",
+      "element": "fire",
+      "x": 2,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "water",
+      "x": 3,
+      "y": 7
+    },
+    {
+      "type": "exit",
+      "element": "earth",
+      "x": 4,
+      "y": 7
+    }
+  ]
+}

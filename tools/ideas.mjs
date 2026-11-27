@@ -229,3 +229,8 @@ Object.assign(IDEAS, {
 Object.assign(IDEAS, {
   'first-grating-catches-the-counterweight': { kind: 'spine', note: "A pulley platform sinking through a one-way grating leaves whatever it carries on top, so a counterweight running in a shaft of gratings sheds its load on the FIRST grating it meets going down — and a crate left on a grating stops the rising counterweight from below, so the lift opposite stops at the matching floor. The crate can only ever be put down one way and never pushed: to move it up a grating, enough riders on the lift must outweigh counterweight and crate together (the counterweight then picks it up as it rises), and then one of them must get off so that it comes back down and the higher grating catches it. Nobody can carry it down again." },
 });
+
+// Coined while building Caryatid (2026-11-27).
+Object.assign(IDEAS, {
+  'lift-lands-on-its-caller': { kind: 'spine', note: "A lift that comes down only while something heavy is held at shoulder height in its shaft (a heavy plate hangs there), and that never crushes, so it settles on whatever called it: the caller is always underneath and can never ride, and the lift stops exactly one load above the floor and nowhere else, so it is never passing a ledge while uncalled. Earth on somebody's shoulders calls it, Earth standing on the stone calls it, and so does the stone riding on somebody's head, which is the only way the one heavy player can be somewhere else while it comes down." },
+});
