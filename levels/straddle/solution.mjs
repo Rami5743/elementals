@@ -1,55 +1,100 @@
-// Solution scripts: one generator per player, yielding that player's input bits once a tick.
-// They read the live game through `c` (see docs/SOLUTIONS.md). `node kit.mjs check <level>`
-// runs them and records the replays.
-import { IN_LEFT, IN_RIGHT, TILE, go, jump, runJump, until } from '../../kit.mjs';
+// Straddle: one body standing on the join of two plates presses both.
+// Door A wants four presses. The stone starts across the crawl pair (two of them). Dropping the
+// stone into its slot arms the latched exit, but takes those two away, so every later crossing of
+// A is paid for by people standing on seams: Fire on the home pair, Water on the crawl pair the
+// stone left, and Earth on the heavy|light pair, which only Earth counts twice.
+import { IN_RIGHT, TILE, go, jump, until, waitFlag } from '../../kit.mjs';
+
+const doorOpen = (c, id) => c.ent(id).s.open >= 3 * TILE - 2;
+const doorShut = (c, id) => c.ent(id).s.open === 0;
+
+/** Climb from the hall floor onto the pedestal mouth (x22), then into the crawl. */
+function* intoCrawl(c, x) {
+  yield* go(c, 21);
+  yield* jump(c, 1, { steerUntil: 22 });
+  yield* go(c, x, { noHop: true });
+}
+
+/** Out of the crawl east: over the stone in its slot and down into the east hall. */
+function* overTheSlot(c) {
+  yield* go(c, 26, { noHop: true });
+  yield* jump(c, 1, { steerUntil: 28.5 });
+}
 
 /** @type {import('../../kit.mjs').Script} */
 const fire = function* (c) {
-  yield* go(c, 20); // under the gem
-  yield* jump(c, 0); // straight up through it
-  // lean on the ice until it melts (Fire melts it by touching it)
-  yield* until(c, () => c.ent('ice').s.gone === 1, IN_LEFT, 600, 'the ice to melt');
-  yield* go(c, 37); // through the lava (safe for Fire), over Water and into the door
+  // 1. Hold the home pair: two presses, plus the stone's two, opens A.
+  yield* go(c, 8.5);
+  c.flag('homeHeld');
+  // Stay until Earth is standing on the heavy|light pair and Water on the crawl pair.
+  yield* waitFlag(c, 'earthOnStep');
+  // 6. Out through A, past Earth, and wait at the foot of the pedestal for Water to leave the crawl.
+  yield* go(c, 17);
+  c.flag('fireOut');
+  yield* until(c, () => c.player('water').x > 26.5 * TILE, 0, 2000, 'Water to leave the crawl');
+  yield* intoCrawl(c, 25);
+  yield* overTheSlot(c);
+  yield* go(c, 36);
 };
 
 /** @type {import('../../kit.mjs').Script} */
 const water = function* (c) {
-  yield* runJump(c, 23, 25, 29); // a running jump over the lava
-  // walk into the flames: Water puts them out
-  yield* until(c, () => c.ent('flames').s.gone === 1, IN_RIGHT, 600, 'the flames to go out');
-  yield* go(c, 30);
-  // stand still while Fire hops over (two players walking into each other both hop, and get stuck)
-  yield* until(c, () => c.player('fire').inDoor === 1, 0, 1500, 'Fire to get home');
-  yield* runJump(c, 31, 28, 24); // back over the lava
-  yield* go(c, 2);
+  // 2. Slip through A while the stone and Fire hold it, and wait in the middle hall.
+  yield* waitFlag(c, 'homeHeld');
+  yield* until(c, () => doorOpen(c, 'A'), 0, 600, 'A to open');
+  yield* go(c, 17);
+  // 3. Once the stone has dropped and Earth is back out of the crawl, take the stone's place.
+  yield* waitFlag(c, 'earthBackInHall');
+  yield* intoCrawl(c, 24.5);
+  c.flag('waterOnCrawlPair');
+  // 7. Leave when Fire is out of the home room.
+  yield* waitFlag(c, 'fireOut');
+  yield* overTheSlot(c);
+  yield* go(c, 37);
 };
 
-// Shortcuts: ways to cheat that must NOT work. `check` runs each one and reports a problem if it
-// finishes the level. Write one for every shortcut you blocked, and make it try as hard as it can.
 /** @type {import('../../kit.mjs').Script} */
-const fireStraightHome = function* (c) {
-  yield* go(c, 37); // the flames are in the way
-};
-/** @type {import('../../kit.mjs').Script} */
-const waterStraightHome = function* (c) {
-  // let Fire hop past first, so they don't block each other: the shortcut must fail at the ice, not here
-  yield* until(c, () => c.player('fire').x > c.me.x + 2 * TILE, 0, 600, 'Fire to go past');
-  yield* go(c, 2); // the ice is in the way
+const earth = function* (c) {
+  yield* waitFlag(c, 'homeHeld');
+  yield* until(c, () => doorOpen(c, 'A'), 0, 600, 'A to open');
+  // 2. Into the crawl, and push the stone east until it drops into its slot.
+  yield* intoCrawl(c, 23);
+  yield* until(c, () => c.ent('stone').s.y >= 18 * TILE - 2, IN_RIGHT, 900, 'the stone to drop into the slot');
+  // A is shut again now: the stone's two presses are gone.
+  // 3. Back out of the crawl, and wait by A for Water to take the crawl pair.
+  yield* go(c, 21, { noHop: true });
+  yield* go(c, 15.5);
+  c.flag('earthBackInHall');
+  yield* waitFlag(c, 'waterOnCrawlPair');
+  yield* until(c, () => doorOpen(c, 'A'), 0, 600, 'A to open for the way home');
+  // 4. Home, onto the heavy plate: with the stone in its slot the exit latches open.
+  yield* go(c, 1);
+  yield* until(c, () => c.ent('F').s.open > 0, 0, 300, 'the exit to latch');
+  // 5. Back out and onto the heavy|light pair: Earth counts twice there.
+  yield* go(c, 19.5);
+  c.flag('earthOnStep');
+  // 8. Last through, once Fire is past.
+  yield* waitFlag(c, 'fireOut');
+  yield* until(c, () => c.player('fire').x > 27 * TILE, 0, 2000, 'Fire to cross the slot');
+  yield* intoCrawl(c, 25);
+  yield* overTheSlot(c);
+  yield* go(c, 35);
 };
 
 /** @type {import('../../kit.mjs').Solutions} */
 export const solutions = {
   sets: [
     {
-      elements: ['fire', 'water'],
-      scripts: { fire, water },
-      shortcuts: [{ name: 'each walks straight home without helping', scripts: { fire: fireStraightHome, water: waterStraightHome }, maxTicks: 1200 }],
+      elements: ['fire', 'water', 'earth'],
+      scripts: { fire, water, earth },
+      shortcuts: [],
     },
   ],
   roles: {
-    'fire,water': {
-      fire: 'Melts the ice in front of Water\'s door.',
-      water: 'Jumps the lava and puts out the flames in front of Fire\'s door.',
+    'fire,water,earth': {
+      fire: 'Holds the home pair on its seam the whole time, and is the last one let out.',
+      water: 'Takes the stone\'s place on the crawl pair once the stone has gone into its slot.',
+      earth: 'Drops the stone into its slot, walks home to the heavy plate, then counts twice on the heavy|light pair.',
     },
   },
 };

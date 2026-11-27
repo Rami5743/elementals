@@ -16,7 +16,8 @@ Layout plan (3p Fire+Water+Earth, rows: floor 19, hall rows 16-18, roof 15):
 - Slot x27 (1x1 pit) with heavy plate `h` (F). M-east x28-38 floor row 18, door F x33 (latch, h+l).
 
 ## Status
-- Milestone 1: design written, no JSON yet.
+- Milestone 1: design written.
+- Milestones 2-4: level.json validates; solution runs; `check` reports No problems (23.8 s, 3/3 gems, every player needed).
 
 ## Next
-Write generator in scratchpad, produce level.json, `node kit.mjs show straddle`.
+Add shortcut scripts (Water on the step instead of Earth; Earth last out of home), meta.json, NOTES.md; consider lengthening toward 30 s; novelty, build, catalog.
