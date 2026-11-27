@@ -41,7 +41,7 @@ for (const id of ids) {
 const AUTHORED = new Set(['level.json', 'solution.mjs', 'meta.json', 'NOTES.md']);
 const GPT_AUTHOR = '107263736+Rami5743@users.noreply.github.com';
 
-/** id -> { created, updated } as ISO days, plus `seq`: how many commits back the first one is. */
+/** id -> { created, updated } as ISO days, plus `at`: the exact stamp of the first commit. */
 function levelDates() {
   const dates = new Map();
   let log;
@@ -51,17 +51,17 @@ function levelDates() {
   } catch {
     return dates;                                    // not a checkout: fall back to mtimes
   }
-  const entries = log.split('\u0001').slice(1);
-  for (const [i, entry] of entries.entries()) {
+  for (const entry of log.split('\u0001').slice(1)) {
     const [stamp, ...paths] = entry.split('\n');
-    const day = stamp.slice(0, 10);
+    const when = stamp.slice(0, stamp.indexOf(' '));       // the commit's own author date
+    const day = when.slice(0, 10);
     const email = stamp.slice(stamp.indexOf(' ') + 1).trim();
     for (const line of paths) {
       const m = /^levels\/([^/]+)\/(.+)$/.exec(line.trim());
       if (!m || !AUTHORED.has(m[2])) continue;
       const d = dates.get(m[1]);
-      if (!d) dates.set(m[1], { created: day, updated: day, seq: i, by: email });
-      else { d.created = day; d.seq = i; d.by = email; }   // newest first: the last wins
+      if (!d) dates.set(m[1], { created: day, updated: day, at: when, by: email });
+      else { d.created = day; d.at = when; d.by = email; }  // newest first: the last wins
     }
   }
   return dates;
@@ -87,17 +87,23 @@ const DIRTY = dirtyLevels();
 const TODAY = new Date().toISOString().slice(0, 10);
 for (const l of levels) {
   // A level only in the working tree, or edited since its last commit, is dated today.
-  const git = DATES.get(l.id) ?? { created: TODAY, updated: TODAY, seq: -1, by: '' };
+  const git = DATES.get(l.id) ?? { created: TODAY, updated: TODAY, at: '', by: '' };
   l.dates = { created: git.created, updated: DIRTY.has(l.id) ? TODAY : git.updated };
-  l.seq = git.seq;                     // a bigger seq is further back in the history
+  // When the level was first committed, in epoch ms; a level not in git yet sorts last.
+  l.madeAt = git.at ? Date.parse(git.at) : Infinity;
   // Levels built by the other agent arrive on the `gpt` branch, committed under the account's
   // own GitHub identity; this repo's own levels are committed as Claude.
   l.fromGpt = git.by === GPT_AUTHOR;
 }
 
-// The page runs oldest level first within each player count. `order` in meta.json orders the
-// catalogue, not the page: it only breaks a tie between levels that arrived in the same commit.
-levels.sort((a, b) => b.seq - a.seq || (a.meta.order ?? 0) - (b.meta.order ?? 0)
+// The page runs oldest level first within each player count, by the time of the commit that
+// introduced the level. `order` in meta.json orders the catalogue, not the page: here it only
+// breaks a tie between levels that arrived in the same commit.
+//
+// Sorting by the commit's own timestamp rather than by its position in `git log` is what makes
+// this reproducible: log position depends on how the branches interleave, so two clones could
+// order the same levels differently and each rewrite index.html to undo the other.
+levels.sort((a, b) => a.madeAt - b.madeAt || (a.meta.order ?? 0) - (b.meta.order ?? 0)
                       || a.id.localeCompare(b.id));
 
 // ---- thumbnails -----------------------------------------------------------

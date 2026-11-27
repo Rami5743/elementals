@@ -36,18 +36,18 @@ together. `twist-undo`×34, `quorum`×27, `twist-order`×11, `timed-window`×8, 
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- balanced-rope-memory + glide-passenger
-- reversible-switch-maze + turbine-self-timer
-- feed-the-engine-mid-ride + one-way-press
-- door-pushes-you-through + reversible-switch-maze
-- partner-builds-your-landing + reversible-switch-maze
-- airlock-with-no-room + reversible-switch-maze
-- boulder-carry + twist-undo
-- lift-as-floor + low-roof-no-jump
-- lift-as-floor + lift-sorts-by-weight
-- lift-as-floor + lock-per-element
-- quorum + trigger-from-above
-- lift-corner-path + liquid-lane
+- boulder-carry + climb-then-steer
+- dark + twist-self-block
+- freeze-bridge + partner-builds-your-landing
+- door-pushes-you-through + twist-backwards
+- glide-passenger + stand-aside-is-the-switch
+- boulder-carry + machine-strands-operator
+- climb-then-steer + liquid-lane
+- freeze-bridge + liquid-lane
+- feed-the-engine-mid-ride + one-way-drop
+- counterweight-you-must-remove + lift-sorts-by-weight
+- glide-passenger + sink-as-a-timer
+- airlock-with-no-room + one-way-press
 
 ## This repo's 3-player levels
 

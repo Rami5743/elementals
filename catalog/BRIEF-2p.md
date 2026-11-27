@@ -30,18 +30,18 @@ together. `twist-undo`×36, `invert-door`×8, `twist-order`×8, `timed-window`×
 
 Candidates only, and a rolled sample — inventing something the vocabulary cannot name is still the
 target. 
-- lock-per-element + shared-switch-two-gates
-- lift-press + lock-per-element
-- freeze-invert + stone-ferry
-- turbine-self-timer + twist-order
-- glide-dismount + tower-presses-a-column
-- fan-passenger + stone-held-from-below
+- dark + stone-ferry
+- machine-strands-operator + plank-sums-plate-maxes
 - drawbridge-eaten-back-to-the-mark + twist-stranding
-- belt-cargo + lift-sorts-by-weight
-- invert-door + stone-ferry
-- tower-presses-a-column + twist-undo
-- belt-cargo + drawbridge-eaten-back-to-the-mark
-- fan-passenger + lift-sorts-by-weight
+- glide-passenger + stone-held-from-below
+- glide-dismount + turbine-self-timer
+- expiry-order-is-key + lift-sorts-by-weight
+- pound-to-move + two-is-not-heavy
+- pound-to-move + stone-held-from-below
+- lift-sorts-by-weight + twist-undo
+- hold-switch + two-is-not-heavy
+- lift-press + lock-per-element
+- mass-adds-on-the-beam + two-is-not-heavy
 
 ## This repo's 2-player levels
 
