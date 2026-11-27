@@ -3187,6 +3187,39 @@
   ]
  },
  {
+  "id": "caryatid",
+  "name": "Caryatid",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 5400,
+  "dark": false,
+  "challenge": "mind",
+  "core": "the-lift-only-comes-down-onto-a-heavy-load-at-shoulder-height",
+  "ideas": [
+   "lift-lands-on-its-caller",
+   "boulder-carry",
+   "object-as-permanent-switch"
+  ],
+  "order": 259,
+  "line": "a lift that comes down only while something heavy is held at shoulder height in its shaft, and that settles on whatever called it. A heavy plate hangs in the shaft one body above the grating at its foot, so nothing standing on the grating reaches it. Something heavy on top of something else does: Earth on a partner's shoulders, Earth standing on the stone, or the stone riding on somebody's head. A lift never crushes, so it stops on that load. The caller is always underneath it and can never be the one who rides.",
+  "tokens": [
+   "ent:boulder",
+   "ent:box",
+   "ent:door",
+   "ent:elevator",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:required:2",
+   "tile:one-way",
+   "tile:sludge"
+  ]
+ },
+ {
   "id": "cascade_quorum",
   "name": "Cascade Quorum",
   "source": "mine",
