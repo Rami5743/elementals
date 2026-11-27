@@ -25,7 +25,7 @@ against every level that already exists. Read it before designing anything.
   `catalog/MAPS.md`.
 - Entity counts ignore gems, exits, signs and checkpoints — every level has those.
 
-Totals: 79 campaign levels, 175 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
+Totals: 79 campaign levels, 176 in this repo, of which 11 now ship in the campaign too (listed once, under this repo, with their campaign id).
 
 
 ## 2 players — this repo (57)
@@ -397,7 +397,7 @@ Totals: 79 campaign levels, 175 in this repo, of which 11 now ship in the campai
   - hints: Each turbine runs the lift for a couple of seconds after Air touches it. When they all stop, the lift sinks back down. / Ride up with Earth. Air jumps off the rising lift to touch the next turbine, and lands back on. Touch each one late, or touch it again: the clock starts from the last touch. / At the top, the gate wants the boulder on the heavy plate, so that Earth is free to go to its door.
   - features: ent:boulder ent:door ent:elevator ent:plate ent:turbine opt:elevator:powered opt:heavy-plate opt:turbine-timed
 
-## 3 players — this repo (59)
+## 3 players — this repo (60)
 
 - **The Crossing** `the_crossing` (3p: fire+water+earth) core=`shuttle-whose-path-turns-a-corner` challenge=mind par=3600
   - idea: a shuttle whose path turns a corner. It runs along the floor of the hall, out over the sludge, and only then climbs — so it is the bridge and the lift at the same time, and the berth it waits at is the one tile of floor past which there is nothing.
@@ -632,6 +632,10 @@ Totals: 79 campaign levels, 175 in this repo, of which 11 now ship in the campai
   - idea: a drawbridge that is eaten from its far end back towards its hinge, faster than anyone runs, whenever anything heavy is past the mark. So the weight can never cross, everything beyond the mark is thrown into the hall in order of distance, and the bridge then slides back out carrying whoever stands on it.
   - ideas: drawbridge-eaten-back-to-the-mark, twist-order, shared-switch-two-gates
   - features: ent:boulder ent:door ent:elevator ent:freezepad ent:lever ent:plate ent:pool opt:elevator:powered opt:heavy-plate opt:pool-timed opt:wide-door tile:one-way tile:water
+- **Straddle** `straddle` (3p: fire+water+earth) core=`one-body-on-the-join-of-two-plates-is-two-keys` challenge=mind par=6000
+  - idea: a plate is pressed by anything that overlaps it, and its sensor stops 2 px short of each edge of its tile, so one body standing on the join of two adjacent plates presses both. A door that counts presses counts feet, not people: here a four-key door is held by two bodies, the stone starts out as two of the keys, and a heavy plate beside a light one is two keys for Earth and one for anybody else.
+  - ideas: seam-is-two-keys, counterweight-you-must-remove, quorum
+  - features: ent:boulder ent:door ent:plate opt:heavy-plate opt:latch opt:required:2 opt:required:4
 
 ## 3 players — campaign (30)
 

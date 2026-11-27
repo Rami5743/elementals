@@ -214,8 +214,13 @@ Object.assign(IDEAS, {
   'drawbridge-eaten-back-to-the-mark': { kind: 'spine', note: "A wide door used as a drawbridge opens by being eaten from its free end back towards its hinge at 4 px a tick, faster than anyone runs, and closes by sliding back out and carrying whoever stands on it. Hang a curtain of heavy plates over its far part and it becomes a cut: anything heavy past the mark keeps the far end vanishing until that weight has fallen through, so everything beyond the mark drops in order of distance and everything short of it stays. The weight can never cross, whoever pushed it there has to get right off the bridge before it slides back out and carries them into the mark, and a light partner standing at the far end is thrown into whatever lies below." },
 });
 
+// Coined while building Straddle (2026-11-27).
+Object.assign(IDEAS, {
+  'seam-is-two-keys': { kind: 'spine', note: "A plate senses whatever overlaps it, and its sensor stops 2 px short of each edge of its tile, so anybody (or any crate or boulder) standing over the join of two adjacent plates presses both. A lock that counts presses therefore counts feet, not people: four keys can be held by two bodies, and a lock that looks as if it needs everybody on it lets someone through. A heavy plate beside a light one is two keys only for Earth or a stone and one for anyone else, so the same seam deals out keys by weight." },
+});
+
 // Coined while building Stone Ferry (2026-11-26).
 Object.assign(IDEAS, {
   'stone-ferry': { kind: 'spine', note: "A rolling boulder is a boat: liquids are floors to it and its rider goes with it, so it is the one thing that carries anybody over sludge nobody can cross. It seats one (a low roof scrapes a second rider off), it only ever travels downhill, and it stops where its run-out puts it, so every crossing spends it and somebody has to haul it back up before the next." },
-  'turbine-self-timer': { kind: 'spine', note: "A turbine stays on for its duration after Air leaves, so a machine that needs a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops." },
+  'turbine-self-timer': { kind: 'spine', note: "A turbine stays on for its duration after Air leaves, so a machine thatneeds a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops." },
 });

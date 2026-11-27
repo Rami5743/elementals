@@ -7696,6 +7696,37 @@
   ]
  },
  {
+  "id": "straddle",
+  "name": "Straddle",
+  "source": "mine",
+  "sizes": [
+   3
+  ],
+  "groups": [
+   "fire+water+earth"
+  ],
+  "parTicks": 6000,
+  "dark": false,
+  "challenge": "mind",
+  "core": "one-body-on-the-join-of-two-plates-is-two-keys",
+  "ideas": [
+   "seam-is-two-keys",
+   "counterweight-you-must-remove",
+   "quorum"
+  ],
+  "order": 258,
+  "line": "a plate is pressed by anything that overlaps it, and its sensor stops 2 px short of each edge of its tile, so one body standing on the join of two adjacent plates presses both. A door that counts presses counts feet, not people: here a four-key door is held by two bodies, the stone starts out as two of the keys, and a heavy plate beside a light one is two keys for Earth and one for anybody else.",
+  "tokens": [
+   "ent:boulder",
+   "ent:door",
+   "ent:plate",
+   "opt:heavy-plate",
+   "opt:latch",
+   "opt:required:2",
+   "opt:required:4"
+  ]
+ },
+ {
   "id": "strip_and_reload",
   "name": "Strip and Reload",
   "source": "mine",
