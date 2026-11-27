@@ -1,0 +1,103 @@
+{
+ "id": "sash_weights",
+ "name": "Sash Weights",
+ "order": 157,
+ "description": "The lift hangs on a counterweight that runs through two gratings. Whatever the counterweight drops, the first grating keeps.",
+ "supports": [
+  [
+   "fire",
+   "water"
+  ]
+ ],
+ "parTicks": 6000,
+ "hints": [
+  "The lift stops wherever the counterweight is stopped: by the crate standing on a grating in its shaft.",
+  "One of you is not heavy enough to lift the crate off its grating. Two of you are.",
+  "Whatever rides the counterweight down is put off on the first grating it meets.",
+  "Ride down together, and let one of you get off at the bottom."
+ ],
+ "tiles": [
+  "########################################",
+  "########################################",
+  "########################################",
+  "########################################",
+  "##############################.........#",
+  "##.###########################.........#",
+  "##.###########################.........#",
+  "##.###########################..#======#",
+  "##.###################.......#..#......#",
+  "##.###################.......#..#...===#",
+  "##.###################..........#......#",
+  "##=###################.#######..#==....#",
+  "##.###################.#.....#..#......#",
+  "##.###################.#.....#..#...===#",
+  "##.###################.#........#......#",
+  "##=###################.##.####..#==....#",
+  "##.#...................................#",
+  "##.#................................===#",
+  "##.#...................................#",
+  "##.###########################==########",
+  "########################################",
+  "########################################"
+ ],
+ "spawns": {
+  "fire": [
+   6,
+   18
+  ],
+  "water": [
+   8,
+   18
+  ]
+ },
+ "entities": [
+  {
+   "id": "rope",
+   "type": "pulley",
+   "x": 30,
+   "y": 7,
+   "w": 2,
+   "to": [
+    2,
+    19,
+    1
+   ],
+   "range": 12,
+   "weights": [
+    0,
+    0.5
+   ]
+  },
+  {
+   "id": "sash",
+   "type": "box",
+   "x": 2,
+   "y": 14
+  },
+  {
+   "id": "gem_landing",
+   "type": "gem",
+   "element": "fire",
+   "x": 26,
+   "y": 10
+  },
+  {
+   "type": "exit",
+   "element": "fire",
+   "x": 26,
+   "y": 13
+  },
+  {
+   "type": "exit",
+   "element": "water",
+   "x": 28,
+   "y": 13
+  },
+  {
+   "type": "sign",
+   "x": 5,
+   "y": 16,
+   "text": "Two weigh more than the crate. One does not."
+  }
+ ]
+}

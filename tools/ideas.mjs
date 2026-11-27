@@ -224,3 +224,8 @@ Object.assign(IDEAS, {
   'stone-ferry': { kind: 'spine', note: "A rolling boulder is a boat: liquids are floors to it and its rider goes with it, so it is the one thing that carries anybody over sludge nobody can cross. It seats one (a low roof scrapes a second rider off), it only ever travels downhill, and it stops where its run-out puts it, so every crossing spends it and somebody has to haul it back up before the next." },
   'turbine-self-timer': { kind: 'spine', note: "A turbine stays on for its duration after Air leaves, so a machine thatneeds a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops." },
 });
+
+// Coined while building Sash Weights (2026-11-27).
+Object.assign(IDEAS, {
+  'first-grating-catches-the-counterweight': { kind: 'spine', note: "A pulley platform sinking through a one-way grating leaves whatever it carries on top, so a counterweight running in a shaft of gratings sheds its load on the FIRST grating it meets going down — and a crate left on a grating stops the rising counterweight from below, so the lift opposite stops at the matching floor. The crate can only ever be put down one way and never pushed: to move it up a grating, enough riders on the lift must outweigh counterweight and crate together (the counterweight then picks it up as it rises), and then one of them must get off so that it comes back down and the higher grating catches it. Nobody can carry it down again." },
+});

@@ -6974,6 +6974,34 @@
   ]
  },
  {
+  "id": "sash_weights",
+  "name": "Sash Weights",
+  "source": "mine",
+  "sizes": [
+   2
+  ],
+  "groups": [
+   "fire+water"
+  ],
+  "parTicks": 6000,
+  "dark": false,
+  "challenge": "mind",
+  "core": "two-riders-lift-the-crate-one-steps-off-so-the-higher-grating-catches-it",
+  "ideas": [
+   "first-grating-catches-the-counterweight",
+   "twist-backwards",
+   "twist-order"
+  ],
+  "order": 157,
+  "line": "a counterweight that drops its load on the first grating it meets. The two-seat lift on the right hangs on one rope against a counterweight running in a sealed one-tile shaft on the left, through two one-way gratings. Whatever rides the counterweight down is put off on the first grating it passes, and the crate standing on a grating stops the rising counterweight — so the lift opposite stops at the matching floor. Nobody can ever touch the crate: the only way to move it is to out-weigh it.",
+  "tokens": [
+   "ent:box",
+   "ent:pulley",
+   "opt:seesaw-range",
+   "tile:one-way"
+  ]
+ },
+ {
   "id": "scale_interlock",
   "name": "Scale Interlock",
   "source": "mine",
