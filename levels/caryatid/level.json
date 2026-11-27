@@ -10,7 +10,7 @@
       "earth"
     ]
   ],
-  "parTicks": 9000,
+  "parTicks": 5400,
   "hints": [
     "The plate hanging in the shaft is heavy, and it is at shoulder height. The lift comes down while it is pressed, and stops on whoever is underneath.",
     "Earth on Water's shoulders calls the lift. Fire rides down with a crate and pushes it off into a tunnel.",
@@ -144,6 +144,30 @@
       "type": "box",
       "x": 26,
       "y": 8
+    },
+    {
+      "type": "gem",
+      "element": "fire",
+      "x": 25,
+      "y": 13
+    },
+    {
+      "type": "gem",
+      "element": "water",
+      "x": 25,
+      "y": 20
+    },
+    {
+      "type": "gem",
+      "element": "earth",
+      "x": 16,
+      "y": 10
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 5,
+      "text": "The lift comes down for weight on shoulders."
     },
     {
       "type": "exit",
