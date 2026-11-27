@@ -6675,6 +6675,57 @@ Entities:
   *  gem_18       gem        at (27,19)  earth
 ```
 
+## Straddle (`straddle`) — 3p, core `one-body-on-the-join-of-two-plates-is-two-keys`
+
+```
+Straddle (straddle) for fire+water+earth
+    0         1         2         3         
+    0123456789012345678901234567890123456789
+ 0  ########################################
+ 1  ########################################
+ 2  ########################################
+ 3  ########################################
+ 4  ########################################
+ 5  ########################################
+ 6  ########################################
+ 7  ########################################
+ 8  ########################################
+ 9  ########################################
+10  ########################################
+11  ########################################
+12  ########################################
+13  ########################################
+14  ########################################
+15  ##########################.......D.....#
+16  #.............D........###.......D.XXX.#
+17  #.............D........*pp....*..D.XXX.#
+18  #p*.....pp.@@@D....pp.#####p############
+19  ########################################
+20  ########################################
+21  ########################################
+
+Tiles: # rock  / \ slopes  = one-way ledge  L lava  W water  M mud  V mist  S sludge  . air   (40x22, x right, y down)
+Spawns (@): fire (11,18)  water (12,18)  earth (13,18)
+Entities:
+  D  A            door       at (14,16)  1x3  <- w1, w2, s1, s2, m1, m2 (needs 4)
+  D  F            door       at (33,15)  1x3  <- home, slot (needs 2)  latch
+  p  home         plate      at (1,18)  -> F  weight heavy
+  p  w1           plate      at (8,18)  -> A
+  p  w2           plate      at (9,18)  -> A
+  p  s1           plate      at (19,18)  -> A  weight heavy
+  p  s2           plate      at (20,18)  -> A
+  p  m1           plate      at (24,17)  -> A
+  p  m2           plate      at (25,17)  -> A
+  p  slot         plate      at (27,18)  -> F  weight heavy
+  O  stone        boulder    at (24.5,17)
+  *  gem_earth    gem        at (2,18)  earth
+  *  gem_water    gem        at (23,17)  water
+  *  gem_fire     gem        at (30,17)  fire
+  X  exit_fire    exit       at (36,16)  fire
+  X  exit_water   exit       at (37,16)  water
+  X  exit_earth   exit       at (35,16)  earth
+```
+
 ## Quartet (`quartet`) — 4p, core `one-lock-per-element`
 
 ```
