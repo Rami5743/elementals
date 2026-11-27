@@ -28,7 +28,37 @@ layout or start** (energy argument: passengers only rise when counterweight fall
 comes back up). Now searching a variant with an Air-only updraft that can carry Fire or Water (not
 Earth) back up to the counterweight loft.
 
+## Status when the session stopped (budget exhausted)
+
+**NOT FINISHED. Do not publish.** `level.json` and `solution.mjs` are still the untouched
+`kit.mjs new` scaffold (a small Fire + Water level); nothing of the design has been built, so
+`tools/build.mjs` and `tools/catalog.mjs` were deliberately not run and `meta.json` does not exist.
+
+What passes: nothing of the design. What fails: the abstract model itself has no solution yet.
+
+- `probes/solve.mjs` is a BFS over the abstract puzzle (pockets `C0 C4 C8` beside the counter pan,
+  `L0 L4 L8` beside the launch pan, `L8` = launch tunnel; walking on/off a flush pan, dropping onto
+  a lower pan, walking across at level, Earth pushing the boulder (3), anyone pushing crates (1),
+  Air gliding with one rider from the launch pan at 8, Air returning to `ret`, optional Air-only
+  draught `fan: [from, to]` that can carry Fire or Water but not Earth).
+- `probes/search2.mjs` (no draught, one crate, every pocket subset, every start): **0 solutions**.
+- Hand-picked layouts with the draught `C0 -> C8` and `ret` in `L8 / C0 / C8 / L0`: 0 solutions.
+- `probes/search3.mjs` (draught variants, full sweep) was too slow to finish; stopped.
+
+Why it is stuck: the passengers must end up on the launch pan at its top, a pan only rises when the
+other side outweighs it, and nothing re-raises fallen counterweight except Air. Earth's own flight
+needs boulder + one more on the counter pan, and that extra weight is then stranded at the bottom.
+Also nobody can ever reach the launch side at all unless somebody starts there (the first body on a
+level pan tips it).
+
 ## Next thing to try
 
-Read probes/out3.txt (search with the draught). If a long forced solution exists, build it; if not,
-the idea cannot be made to pass in the time left and this branch should say so.
+1. Seed the launch side: start one light player in `L4` (flush with the level pan) and rerun
+   `node probes/t1.mjs '<cfg json>'` on a few layouts; add `L4`/`C4` starts to `search3.mjs` and
+   restrict it to one pocket set so it finishes.
+2. If the model still has no long forced solution, drop the seesaw for a pulley (Air weighs 1/2 on
+   a rope, balanced pans stay put, `weights` can make a pan sink back) — it gives the memory the
+   seesaw lacks.
+3. Only once a forced solution of 10+ moves exists: lay out the map (range 8 so nobody jumps
+   between storeys; 2-tile launch tunnel with a roof overhang so nobody jumps out of it; check head
+   boosts from the pans), then write the scripts.
