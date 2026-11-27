@@ -31,6 +31,7 @@ together. `twist-undo`×34, `quorum`×27, `twist-order`×11, `timed-window`×8, 
 - `airlock-with-no-room` — Two doors back to back with no room between them: the outer one is open only while the inner one is shut, so nobody can ever stand between them and nobody can hold either one open for a partner. The only way through is to shut the outer door on purpose on something lying in its doorway and push that thing ahead of you when the inner door opens — and a door that closes on something stops at its height: a boulder's 30 px lets Earth under, a crate's 28 px only Air, and only someone who fits under it can push the wedge on. The shut inner door is also the stop that keeps the wedge from being pushed too far in.
 - `stone-ferry` — A rolling boulder is a boat: liquids are floors to it and its rider goes with it, so it is the one thing that carries anybody over sludge nobody can cross. It seats one (a low roof scrapes a second rider off), it only ever travels downhill, and it stops where its run-out puts it, so every crossing spends it and somebody has to haul it back up before the next.
 - `turbine-self-timer` — A turbine stays on for its duration after Air leaves, so a machine that needs a hand on it can be launched by somebody who is no longer there: wired backwards, spinning it HOLDS the load and letting go releases it a few seconds later. That run-down is the only way the last operator can also be the passenger: wind it, run, be aboard before it stops.
+- `first-grating-catches-the-counterweight` — A pulley platform sinking through a one-way grating leaves whatever it carries on top, so a counterweight running in a shaft of gratings sheds its load on the FIRST grating it meets going down — and a crate left on a grating stops the rising counterweight from below, so the lift opposite stops at the matching floor. The crate can only ever be put down one way and never pushed: to move it up a grating, enough riders on the lift must outweigh counterweight and crate together (the counterweight then picks it up as it rises), and then one of them must get off so that it comes back down and the higher grating catches it. Nobody can carry it down again.
 
 ## Pairings not yet seen at this count
 
@@ -44,8 +45,8 @@ target.
 - boulder-carry + machine-strands-operator
 - climb-then-steer + liquid-lane
 - freeze-bridge + liquid-lane
-- feed-the-engine-mid-ride + one-way-drop
 - counterweight-you-must-remove + lift-sorts-by-weight
+- first-grating-catches-the-counterweight + quorum
 - glide-passenger + sink-as-a-timer
 - airlock-with-no-room + one-way-press
 

@@ -27,13 +27,17 @@ counterweight (1 < 1.5); two riders can (2 > 1.5); two crates on the counterweig
 
 ## Status
 
-- [x] Design written (this file).
-- [x] level.json validates (generator: scratchpad gen_level.mjs).
+- [x] Design written.
+- [x] level.json validates (generator: scratchpad gen_level.mjs; not kept in the repo).
 - [x] solution runs.
-- [x] check passes: No problems, solved in 28.3 s (par 100 s). No shortcut scripts yet.
+- [x] `node kit.mjs check sash_weights`: No problems — solved in 39.4 s (par 100 s), 1/1 gems,
+      co-op enforced both ways, two shortcut scripts fail for the intended reasons.
+- [x] NOTES.md, meta.json (order 157, mind, ideas: first-grating-catches-the-counterweight,
+      twist-backwards, twist-order); new key added to tools/ideas.mjs.
+- [x] `node tools/novelty.mjs sash_weights`: PASS (invented).
+- [x] `node tools/build.mjs` and `node tools/catalog.mjs` run.
 
-## Next
+## Done
 
-Shortcut scripts (a lone rider never reaches the first floor; slipping off the moving lift into a
-landing slot; stacking from the lift at a landing). Consider a longer solve (aim 30 s+). Then
-NOTES.md, meta.json, novelty, build, catalog.
+Nothing left. Known accepted variant: both riding down and leaning into the first-floor slot as
+the lift passes it also solves it (same insight, skips the walk back); see NOTES.md.
