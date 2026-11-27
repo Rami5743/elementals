@@ -19,7 +19,8 @@ both crates sit on their plates.
   its head (58 px) does not, so cargo reaches the tunnels only on the lift.
 
 ## Status
-- Milestone 1: design written, no JSON yet.
+- Milestone 1: design written.
+- Milestone 2: level.json validates (generator kept in levels/caryatid/tools/gen.mjs).
 
 ## Next
 - Generator script in the scratchpad -> level.json; validate with `node kit.mjs show caryatid`.
