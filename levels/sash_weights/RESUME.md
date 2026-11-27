@@ -29,10 +29,11 @@ counterweight (1 < 1.5); two riders can (2 > 1.5); two crates on the counterweig
 
 - [x] Design written (this file).
 - [x] level.json validates (generator: scratchpad gen_level.mjs).
-- [ ] solution runs.
-- [ ] check passes.
+- [x] solution runs.
+- [x] check passes: No problems, solved in 28.3 s (par 100 s). No shortcut scripts yet.
 
 ## Next
 
-Write solution.mjs; probe that the lift is flush at each stop, that a one-tile slot can be walked
-into from a stopped lift, and the climb to the top landing (through the one-way top floor).
+Shortcut scripts (a lone rider never reaches the first floor; slipping off the moving lift into a
+landing slot; stacking from the lift at a landing). Consider a longer solve (aim 30 s+). Then
+NOTES.md, meta.json, novelty, build, catalog.

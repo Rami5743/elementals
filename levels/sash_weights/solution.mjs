@@ -5,20 +5,27 @@
 import { IN_LEFT, IN_RIGHT, TILE, go, leap, until, wait } from '../../kit.mjs';
 
 const rope = (c) => c.ent('rope').s;
-/** Row the lift platform is standing at (its top edge, in tiles). */
-const liftRow = (c) => rope(c).y / TILE;
+/** Row the lift platform is standing at (its top edge, in tiles). The rope's state follows the
+ * counterweight (bottom stop row 19), and the lift is its mirror image (top stop row 7). */
+const liftRow = (c) => 7 + (19 * TILE - rope(c).y) / TILE;
 
 /** Stand still until the lift has not moved for `still` ticks. */
 function* liftSettles(c, still = 20, max = 3000) {
+  // A counterweight held up by the crate on a grating wobbles by a pixel or two: allow 3.
   let last = null, n = 0;
   for (let t = 0; t < max; t++) {
     const y = rope(c).y;
-    n = y === last ? n + 1 : 0;
-    last = y;
+    if (last === null || Math.abs(y - last) > 3) { last = y; n = 0; } else n++;
     if (n >= still) return;
     yield 0;
   }
   throw new Error(`${c.me.element}: the lift never settled (row ${liftRow(c).toFixed(2)})`);
+}
+
+/** Walk left off the top landing onto the lift, and stand on its left half. */
+function* boardLift(c) {
+  yield* until(c, () => c.tx <= 30.9, IN_LEFT, 400, 'stepping onto the lift');
+  yield* wait(c, 2);
 }
 
 /** From the hall floor up the one-way ledges on the right to the top landing. */
@@ -38,7 +45,7 @@ const fire = function* (c) {
   yield* climb(c);
   // Alone, the lift takes Fire only as far as the upper landing: the crate on the lower grating
   // stops the counterweight.
-  yield* go(c, 30.5);
+  yield* boardLift(c);
   yield* liftSettles(c);
   if (Math.abs(liftRow(c) - 11) > 0.1) throw new Error(`fire: lift stopped at row ${liftRow(c)}, not the upper landing`);
   c.flag('fire-at-upper-landing');
@@ -71,7 +78,7 @@ const water = function* (c) {
   // The lift has come back to the top on its own once Fire stepped off.
   yield* until(c, () => c.player('fire').inDoor === 1, 0, 2000, 'Fire to get home');
   yield* until(c, () => liftRow(c) < 7.1, 0, 2000, 'the empty lift to come back up');
-  yield* go(c, 30.5);
+  yield* boardLift(c);
   yield* liftSettles(c);
   if (Math.abs(liftRow(c) - 15) > 0.1) throw new Error(`water: lift stopped at row ${liftRow(c)}, not the first floor`);
   yield* go(c, 28);
