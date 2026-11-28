@@ -193,7 +193,7 @@ const sizeOf = (l) => l.supports[0].length;
 function card(l) {
   const group = l.supports[0];
   const ch = CHALLENGE[l.meta.challenge === 'motor' ? 'motor' : 'mind'];
-  return `      <article class="level">
+  return `      <article class="level" data-players="${group.length}" data-ext="${l.fromGpt ? 'yes' : 'no'}" data-motor="${l.meta.challenge === 'motor' ? 'yes' : 'no'}">
         <header>
           <h3>${esc(l.name)}</h3>
           <p class="who">${group.map((e) => `<span class="el ${e}" title="${e}">${ELEMENT_ICON[e]}</span>`).join('')}</p>
@@ -201,7 +201,7 @@ function card(l) {
         <img class="map" src="thumbs/${esc(l.id)}.svg" alt="Map of ${esc(l.name)}" width="40" height="${22 - l.thumbTop}" loading="lazy" decoding="async">
         <p class="dates">Added <time datetime="${l.dates.created}">${day(l.dates.created)}</time>${
           l.dates.updated === l.dates.created ? '' : ` · updated <time datetime="${l.dates.updated}">${day(l.dates.updated)}</time>`}</p>
-        <p class="tags"><span class="tag ${l.meta.challenge === 'motor' ? 'motor' : 'mind'}" title="${esc(ch.note)}">${ch.label}</span><span class="tag par">par ${seconds(l.parTicks)}</span>${l.fromGpt ? '<span class="tag src" title="Built on the gpt branch">gpt</span>' : ''}</p>
+        <p class="tags"><span class="tag ${l.meta.challenge === 'motor' ? 'motor' : 'mind'}" title="${esc(ch.note)}">${ch.label}</span><span class="tag par">par ${seconds(l.parTicks)}</span>${l.fromGpt ? '<span class="tag src" title="Built outside this repository, on the ext branch">ext</span>' : ''}</p>
         <p class="links"><a class="play" href="${esc(l.link)}" target="_blank" rel="noopener">Play</a><a class="file" href="packed/${esc(l.id)}.elementals.json" download>level file</a></p>
       </article>`;
 }
@@ -265,6 +265,18 @@ h3 { font-size: 17px; margin: 0; letter-spacing: -0.01em; }
 .who { margin: 0; font-size: 15px; white-space: nowrap; letter-spacing: 1px; }
 .map { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); background: #17150f; }
 .tags { margin: 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin: 0 0 30px; }
+.fgroup { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.flabel { font-size: 13px; color: var(--muted); }
+.filters button {
+  font: inherit; font-size: 13px; line-height: 1; padding: 7px 13px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer;
+}
+.filters button:hover { border-color: var(--accent); }
+.filters button.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.fcount { margin: 0 0 0 auto; font-size: 13px; color: var(--muted); }
+.level[hidden], section[hidden] { display: none; }
+.empty { color: var(--muted); }
 .dates { color: var(--muted); font-size: 12px; margin: 0; }
 .dates time { white-space: nowrap; }
 .tag { font-size: 12px; border-radius: 999px; padding: 2px 9px; border: 1px solid transparent; }
@@ -295,6 +307,28 @@ footer a { color: inherit; }
       <li>Links accumulate: open several and they all stay in <em>My Levels</em>.</li>
     </ol>
   </header>
+  <nav class="filters" aria-label="Filter the levels">
+    <div class="fgroup" role="group" aria-label="Players">
+      <span class="flabel">Players</span>
+      <button type="button" data-f="players" data-v="all" class="on">All</button>
+      <button type="button" data-f="players" data-v="2">2</button>
+      <button type="button" data-f="players" data-v="3">3</button>
+      <button type="button" data-f="players" data-v="4">4</button>
+    </div>
+    <div class="fgroup" role="group" aria-label="Source">
+      <span class="flabel">Source</span>
+      <button type="button" data-f="ext" data-v="all" class="on">All</button>
+      <button type="button" data-f="ext" data-v="no">Here</button>
+      <button type="button" data-f="ext" data-v="yes">ext</button>
+    </div>
+    <div class="fgroup" role="group" aria-label="Challenge">
+      <span class="flabel">Challenge</span>
+      <button type="button" data-f="motor" data-v="all" class="on">All</button>
+      <button type="button" data-f="motor" data-v="no">Puzzle</button>
+      <button type="button" data-f="motor" data-v="yes">Puzzle + hands</button>
+    </div>
+    <p class="fcount" aria-live="polite"></p>
+  </nav>
 ${[2, 3, 4].map(section).filter(Boolean).join('\n')}
   <footer>
     <p><span class="tag mind">Puzzle</span> is solved by thinking; the moves are comfortable.
@@ -302,6 +336,47 @@ ${[2, 3, 4].map(section).filter(Boolean).join('\n')}
     <p>Built with the Elementals Level Kit. Sources, design notes and solution scripts are in this repository.</p>
   </footer>
 </div>
+<script>
+(() => {
+  const state = { players: 'all', ext: 'all', motor: 'all' };
+  const cards = [...document.querySelectorAll('article.level')];
+  const sections = [...document.querySelectorAll('section')];
+  const tally = document.querySelector('.fcount');
+  const empty = document.createElement('p');
+  empty.className = 'empty';
+  empty.hidden = true;
+  empty.textContent = 'No level matches all three filters.';
+  tally.after(empty);
+
+  const keeps = (c) =>
+    (state.players === 'all' || c.dataset.players === state.players) &&
+    (state.ext === 'all' || c.dataset.ext === state.ext) &&
+    (state.motor === 'all' || c.dataset.motor === state.motor);
+
+  function apply() {
+    let shown = 0;
+    for (const c of cards) { const ok = keeps(c); c.hidden = !ok; if (ok) shown++; }
+    for (const s of sections) {
+      const n = [...s.querySelectorAll('article.level')].filter((c) => !c.hidden).length;
+      s.hidden = n === 0;
+      s.querySelector('.count').textContent = n;
+    }
+    tally.textContent = shown === cards.length
+      ? cards.length + ' levels'
+      : shown + ' of ' + cards.length + ' levels';
+    empty.hidden = shown > 0;
+  }
+
+  for (const b of document.querySelectorAll('.filters button')) {
+    b.addEventListener('click', () => {
+      state[b.dataset.f] = b.dataset.v;
+      for (const sib of b.parentElement.querySelectorAll('button')) sib.classList.toggle('on', sib === b);
+      apply();
+    });
+  }
+  apply();
+})();
+</script>
 </body>
 </html>
 `;
