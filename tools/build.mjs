@@ -295,6 +295,7 @@ a.file:hover { color: var(--ink); }
 footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 footer a { color: inherit; }
 </style>
+<script async src="https://rami5743.github.io/count.js"></script>
 </head>
 <body>
 <div class="wrap">
